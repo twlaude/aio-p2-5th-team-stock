@@ -38,7 +38,7 @@ aio-p2-5th-team-stock/
 ├─ db/
 │  ├─ schema.sql
 │  └─ seed.sql
-└─ gide/
+└─ guide/
 ```
 
 현재 구조는 각 컴포넌트가 별도의 `.env.example`과 `requirements.txt`를 가지므로, 팀원별 컴퓨터에서 독립적으로 실행할 수 있는 방향을 반영하고 있다.
@@ -447,7 +447,7 @@ aio-p2-5th-team-stock/
 ├─ infra/                    # Redis·PostgreSQL 실행 방식에 따라 추가
 │  ├─ postgres/
 │  └─ redis/
-└─ gide/
+└─ guide/
 ```
 
 ## 12. 지금 바로 만들 필요가 없는 폴더
