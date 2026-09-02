@@ -78,10 +78,11 @@ COMMUNITY_RESULT_LIMIT=100
 ## 실행법
 
 ```bash
-python3 -m venv /root/.venvs/community-mcp
-/root/.venvs/community-mcp/bin/pip install -r mcp_servers/community_mcp/requirements.txt
 cd mcp_servers/community_mcp
-COMMUNITY_MOCK=1 /root/.venvs/community-mcp/bin/python server.py
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env            # COMMUNITY_API_TOKEN 비우면 Mock 응답, 채우면 실데이터
+python server.py
 curl http://127.0.0.1:8023/health
 ```
 
