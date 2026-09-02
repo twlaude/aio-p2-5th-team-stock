@@ -87,6 +87,8 @@ DB에는 원문 비밀번호가 아니라 해시를 저장한다. `Demo1234!`는
 
 정확한 20개 기업 데이터는 KRX 공식 자료를 내려받아 별도 Mock/Seed 데이터로 고정한다. 우선주·ETF·REIT는 제외하고 보통주 기업만 순위를 다시 매긴다.
 
+확정 목록은 `shared/supported_companies.json`이다(2026-09-02 확정, 20개). Backend Seed, Disclosure MCP 임베딩 대상, Community MCP 지원 종목, Price MCP 조회 대상은 모두 이 파일을 기준으로 한다.
+
 ## 종목 분석 요청
 
 ```json

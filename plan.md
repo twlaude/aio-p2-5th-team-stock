@@ -246,6 +246,8 @@ Tool Result가 Model에 다시 전달되고, Agent가 추가 Tool 또는 최종 
 
 정확한 20개 기업명과 종목 코드는 KRX 공식 자료를 내려받아 Seed/Mock 데이터로 고정하는 데이터 준비 작업으로 남긴다. 이는 기능 결정이 아니라 자료 입력 작업이다.
 
+→ 2026-09-02 확정: `shared/supported_companies.json` (20개, 종목 코드·순위 포함).
+
 ## 12. 이번 프로젝트에서 보류할 항목
 
 - 여러 LLM Agent를 사용하는 Multi-Agent Orchestration
