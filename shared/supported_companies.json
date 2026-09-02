@@ -1,0 +1,149 @@
+{
+  "snapshot_date": "2026-09-01",
+  "market": "KOSPI",
+  "criteria": "2026-09-01 종가 기준 KOSPI 시가총액 상위 20개 보통주 기업. 우선주(삼성전자우 등)·ETF·REIT 제외 후 다시 순위.",
+  "source": "네이버 금융 시세(상장주식수 × 2026-09-01 종가)로 산출, 2026-09-02 확정. 12~14위는 시총 차이 0.1조 이내라 KRX 공식 자료와 순서가 바뀔 수 있으나 20개 구성은 동일(20위 37.7조 vs 21위 LG전자 33.6조).",
+  "excluded_note": "NAVER(035420)는 22위로 미포함. 삼성전자우(005935)는 우선주라 제외.",
+  "companies": [
+    {
+      "rank": 1,
+      "company_name": "삼성전자",
+      "stock_code": "005930",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 1525.9
+    },
+    {
+      "rank": 2,
+      "company_name": "SK하이닉스",
+      "stock_code": "000660",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 1236.7
+    },
+    {
+      "rank": 3,
+      "company_name": "SK스퀘어",
+      "stock_code": "402340",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 140.8
+    },
+    {
+      "rank": 4,
+      "company_name": "삼성전기",
+      "stock_code": "009150",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 106.8
+    },
+    {
+      "rank": 5,
+      "company_name": "LG에너지솔루션",
+      "stock_code": "373220",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 85.9
+    },
+    {
+      "rank": 6,
+      "company_name": "현대차",
+      "stock_code": "005380",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 82.0
+    },
+    {
+      "rank": 7,
+      "company_name": "삼성바이오로직스",
+      "stock_code": "207940",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 70.4
+    },
+    {
+      "rank": 8,
+      "company_name": "삼성물산",
+      "stock_code": "028260",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 63.3
+    },
+    {
+      "rank": 9,
+      "company_name": "삼성생명",
+      "stock_code": "032830",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 61.9
+    },
+    {
+      "rank": 10,
+      "company_name": "KB금융",
+      "stock_code": "105560",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 60.7
+    },
+    {
+      "rank": 11,
+      "company_name": "한화에어로스페이스",
+      "stock_code": "012450",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 54.6
+    },
+    {
+      "rank": 12,
+      "company_name": "신한지주",
+      "stock_code": "055550",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 52.2
+    },
+    {
+      "rank": 13,
+      "company_name": "두산에너빌리티",
+      "stock_code": "034020",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 52.1
+    },
+    {
+      "rank": 14,
+      "company_name": "기아",
+      "stock_code": "000270",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 51.2
+    },
+    {
+      "rank": 15,
+      "company_name": "HD현대중공업",
+      "stock_code": "329180",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 47.5
+    },
+    {
+      "rank": 16,
+      "company_name": "삼성SDI",
+      "stock_code": "006400",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 45.9
+    },
+    {
+      "rank": 17,
+      "company_name": "셀트리온",
+      "stock_code": "068270",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 43.7
+    },
+    {
+      "rank": 18,
+      "company_name": "SK",
+      "stock_code": "034730",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 42.5
+    },
+    {
+      "rank": 19,
+      "company_name": "현대모비스",
+      "stock_code": "012330",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 39.8
+    },
+    {
+      "rank": 20,
+      "company_name": "하나금융지주",
+      "stock_code": "086790",
+      "market": "KOSPI",
+      "market_cap_trillion_krw": 37.7
+    }
+  ]
+}
