@@ -22,11 +22,13 @@
 - 긍정·부정·중립 반응 집계
 - 많이 언급된 주제 추출
 - 분석 기간과 표본 수 반환
+- 15분 공포탐욕 지수 반환
 
 ## 확정 Tool
 
 ```text
 get_community_reaction
+get_fear_greed_index
 ```
 
 입출력은 `shared/contracts/community/README.md`를 따른다. 게시글 검색과 주제 추출은 Community MCP 내부 Service가 담당하며 원문 조회 Tool로 외부에 노출하지 않는다.
@@ -43,6 +45,7 @@ top_topics
 representative_posts
 source
 collected_at
+fgi_latest
 ```
 
 ## 환경변수 계획
@@ -74,6 +77,7 @@ COMMUNITY_RESULT_LIMIT=100
 3. 의견과 사실을 구분한다.
 4. 원본 서버 장애 상태를 반환한다.
 5. MCP Client가 다른 MCP 결과와 함께 사용할 수 있는 공통 형식을 따른다.
+6. `get_fear_greed_index`가 최신 15분 공포탐욕 지수와 표본 부족 경고를 반환한다.
 
 ## 실행법
 
@@ -86,4 +90,4 @@ python server.py
 curl http://127.0.0.1:8023/health
 ```
 
-MCP Client는 `http://127.0.0.1:8023/mcp`로 접속해 `get_community_reaction`을 호출한다.
+MCP Client는 `http://127.0.0.1:8023/mcp`로 접속해 `get_community_reaction`과 `get_fear_greed_index`를 호출한다.

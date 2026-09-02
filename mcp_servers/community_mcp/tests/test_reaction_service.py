@@ -35,6 +35,7 @@ def test_success_sufficient_mapping_preserves_contract_fields():
         "source_name": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
         "collected_at": "2026-09-02T09:06:59Z",
         "fgi_mean": 41.02,
+        "fgi_latest": {"fgi": 41.02, "label": "공포", "as_of": "2026-09-02T09:00:00Z", "post_count": 100, "valence_percentile": 0.22},
         "note": "원문은 포함하지 않는다.",
     }
     result = fetch_community_reaction(_request(), _config(), _client(lambda request: httpx.Response(200, json=upstream)))
@@ -44,6 +45,7 @@ def test_success_sufficient_mapping_preserves_contract_fields():
     assert result["source_name"] == "태웅님 커뮤니티 서버"
     assert result["source_detail"] == upstream["source_name"]
     assert result["fgi_mean"] == 41.02
+    assert result["fgi_latest"] == upstream["fgi_latest"]
     assert result["note"] == upstream["note"]
 
 
@@ -63,6 +65,7 @@ def test_success_insufficient_sample_mapping():
     assert result["status"] == "success"
     assert result["sample_status"] == "insufficient_sample"
     assert result["sample_size"] == 5
+    assert result["fgi_latest"] is None
 
 
 def test_no_data_and_unsupported_company_are_passthrough_statuses():

@@ -1,6 +1,7 @@
 from typing import Any, Literal, TypedDict
 
 Status = Literal["success", "partial_success", "no_data", "unsupported_company", "invalid_request", "unauthorized", "external_api_error", "timeout", "internal_error"]
+FGIStatus = Literal["success", "no_data", "unsupported_company", "error"]
 SampleStatus = Literal["sufficient", "insufficient_sample", "no_data"]
 
 
@@ -9,6 +10,11 @@ class ReactionRequest(TypedDict):
     stock_code: str
     lookback_days: int
     limit: int
+
+
+class FGIRequest(TypedDict):
+    company_name: str
+    stock_code: str
 
 
 class ErrorDetail(TypedDict):
@@ -33,7 +39,11 @@ class ReactionResponse(TypedDict, total=False):
     source_detail: str
     collected_at: str
     fgi_mean: float
+    fgi_latest: dict[str, Any] | None
     note: str
     supported_codes: list[str]
     mock: bool
     error: ErrorDetail
+
+
+FGIResponse = dict[str, Any]
