@@ -56,7 +56,7 @@ aio-p2-5th-team-stock/
 ├─ infra/                       # PostgreSQL·Redis 로컬 실행 설정
 ├─ tests/                       # 전체 연결 테스트 계획
 ├─ legacy/                      # 이전 단일 MCP 골격 보존
-├─ gide/                        # 프로젝트 설계 문서
+├─ guide/                        # 프로젝트 설계 문서
 └─ text/                        # 화면 이미지 생성 프롬프트와 결과
 ```
 
@@ -69,7 +69,7 @@ aio-p2-5th-team-stock/
 | 로그인·Mock 사용자 | `backend/AUTH_GUIDE.md` |
 | Memory | `backend/MEMORY_GUIDE.md` |
 | MCP Client | `mcp_client/GUIDE.md` |
-| Agent Workflow | `gide/07_AGENT_WORKFLOW_GUIDE.md` |
+| Agent Workflow | `guide/07_AGENT_WORKFLOW_GUIDE.md` |
 | MCP 서버 전체 | `mcp_servers/GUIDE.md` |
 | 주가 MCP | `mcp_servers/price_mcp/GUIDE.md` |
 | 뉴스 MCP | `mcp_servers/news_mcp/GUIDE.md` |
@@ -168,4 +168,4 @@ Backend는 `X-Demo-User-ID`와 같은 교육용 식별 방식으로 사용자를
 
 ## 10. 현재 문서의 의미
 
-기존 `gide/00`부터 `gide/05`까지는 아이디어를 정리하던 시점의 초안이다. 폴더 분리와 MCP 연결 구조가 충돌할 경우 이 문서와 각 폴더의 `GUIDE.md`를 최신 기준으로 사용한다.
+기존 `guide/00`부터 `guide/05`까지는 아이디어를 정리하던 시점의 초안이다. 폴더 분리와 MCP 연결 구조가 충돌할 경우 이 문서와 각 폴더의 `GUIDE.md`를 최신 기준으로 사용한다.

@@ -35,8 +35,8 @@ PostgreSQL + pgvector / Redis / 외부 데이터
 
 ## 주요 문서
 
-1. `gide/06_CONFIRMED_LOCAL_STRUCTURE.md`: 확정된 전체 구조
-2. `gide/07_AGENT_WORKFLOW_GUIDE.md`: 수업 내용을 적용한 Agent Workflow
+1. `guide/06_CONFIRMED_LOCAL_STRUCTURE.md`: 확정된 전체 구조
+2. `guide/07_AGENT_WORKFLOW_GUIDE.md`: 수업 내용을 적용한 Agent Workflow
 3. `발표.md`: 컴퓨터 분산 실행과 발표 구성
 4. `plan.md`: 단계별 개발 계획
 5. 각 최상위 폴더의 `GUIDE.md`: 영역별 책임과 구현 기준
@@ -55,7 +55,7 @@ shared/         서비스 간 공통 입출력 계약
 infra/          PostgreSQL·Redis와 Docker 실행 설정 영역
 tests/          계약·통합·시나리오 테스트 영역
 legacy/         이전 단일 MCP 골격 보존
-gide/           설계 문서
+guide/           설계 문서
 text/           화면 이미지 프롬프트와 결과
 ```
 
