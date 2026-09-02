@@ -2,8 +2,8 @@
 from typing import Any
 
 from app.core.config import get_config
-from app.schemas.reaction import ReactionRequest
-from app.services.reaction import error_response, fetch_community_reaction
+from app.schemas.reaction import FGIRequest, ReactionRequest
+from app.services.reaction import error_response, fetch_community_reaction, fetch_fear_greed_index
 
 
 def _invalid(message: str) -> dict[str, Any]:
@@ -43,5 +43,18 @@ def get_community_reaction(
     return fetch_community_reaction(request)
 
 
+def get_fear_greed_index(company_name: str, stock_code: str) -> dict[str, Any]:
+    """Return the latest 15-minute community fear-greed index for a stock."""
+    if not stock_code.isdigit() or len(stock_code) != 6:
+        return _invalid("stock_code는 6자리 숫자여야 합니다.")
+
+    request: FGIRequest = {
+        "company_name": company_name,
+        "stock_code": stock_code,
+    }
+    return fetch_fear_greed_index(request)
+
+
 def register_community_tools(mcp: Any) -> None:
     mcp.tool()(get_community_reaction)
+    mcp.tool()(get_fear_greed_index)
