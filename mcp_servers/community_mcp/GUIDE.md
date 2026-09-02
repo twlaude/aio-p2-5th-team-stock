@@ -74,3 +74,16 @@ COMMUNITY_RESULT_LIMIT=100
 3. 의견과 사실을 구분한다.
 4. 원본 서버 장애 상태를 반환한다.
 5. MCP Client가 다른 MCP 결과와 함께 사용할 수 있는 공통 형식을 따른다.
+
+## 실행법
+
+```bash
+cd mcp_servers/community_mcp
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env            # COMMUNITY_API_TOKEN 비우면 Mock 응답, 채우면 실데이터
+python server.py
+curl http://127.0.0.1:8023/health
+```
+
+MCP Client는 `http://127.0.0.1:8023/mcp`로 접속해 `get_community_reaction`을 호출한다.
