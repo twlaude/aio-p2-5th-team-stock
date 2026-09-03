@@ -74,7 +74,7 @@ Stock Analysis Agent
 ```text
 run_id
 goal
-question
+analysis_topic
 company_name
 stock_code
 status

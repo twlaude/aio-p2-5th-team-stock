@@ -9,15 +9,22 @@
 - 각 실행 영역의 폴더와 가이드 문서를 만들었다.
 - 기존 단일 MCP 골격은 `legacy/stock_mcp`에 보존했다.
 
-아직 구현하지 않은 내용:
+현재 `main`에 구현된 내용:
 
-- 새 MCP Client와 네 MCP 서버 실행 코드
+- Backend의 인증·프로필·분석·Memory 기본 코드
+- News MCP 실행 코드와 테스트
+- Community MCP 실행 코드와 테스트
+
+아직 구현하거나 통합해야 하는 내용:
+
+- MCP Client 실행 코드
+- Price MCP 실행 코드
+- Disclosure MCP와 기업보고서 RAG 실행 코드
+- React Frontend 화면과 Backend 연결
 - Dockerfile과 통합 Docker Compose
-- 실제 회원가입·로그인
 - 실제 PostgreSQL·Redis 연결
-- 실제 주가·뉴스·DART·커뮤니티 연결
-- 실제 Agent Runtime
-- Frontend 화면 구현
+- 실제 주가·DART 연결과 전체 서비스 통합
+- 실제 Agent Runtime과 OpenAI 연결
 
 ## 2. 확정된 기술 방향
 
@@ -28,8 +35,9 @@ Frontend → Backend → MCP Client → 네 MCP 서버
 ```
 
 - Frontend는 Backend만 호출한다.
-- Backend는 인증, Memory, 개인화를 담당한다.
+- Backend는 인증, Memory와 투자 성향 조회를 담당하고 성향 네 값만 MCP Client에 전달한다.
 - MCP Client는 독립 통합 서버다.
+- MCP Client는 공통 분석과 회원별 확인 포인트 생성을 담당한다.
 - MCP 서버는 Agent가 아니라 Tool 제공 서버다.
 - 초기에는 하나의 Stock Analysis Agent만 사용한다.
 - 전체 안전 순서는 결정적 Workflow가 통제한다.
@@ -220,21 +228,21 @@ Tool Result가 Model에 다시 전달되고, Agent가 추가 Tool 또는 최종 
 - 실제 API 실패용 Mock 모드
 - 20분 발표 순서와 데모 리허설
 
-## 10. 역할 배치 제안
+## 10. 확정 역할 분담
 
-현재까지 확인된 내용을 기준으로 한 제안이며 담당 확정표는 아니다.
+다음 표를 현재 개발 담당 기준으로 사용한다.
 
 | 팀원 | 우선 영역 | 함께 확인할 영역 |
 |---|---|---|
-| 오현님 | 전체 제품 방향, Frontend·Backend 연결 | 발표, 통합 계약, 개인화 |
-| 태웅님 | Community MCP와 원본 서버 | 커뮤니티 계약과 표본 규칙 |
-| 인혜님 | MCP Client와 Price·News MCP | Agent Workflow, 부분 실패 |
-| 기화님 | Disclosure MCP와 Database | DART RAG, pgvector |
+| 오현님 | MCP Client/Agent 전체, Price MCP 전체 | 전체 제품 방향, 통합 계약·테스트, 발표 |
+| 태웅님 | React Frontend 전체, Community MCP와 원본 서버 전체 | 화면 흐름, 커뮤니티 계약과 표본 규칙 |
+| 기화님 | Backend 전체, News MCP 전체 | 인증·Memory·투자 성향 전달, 뉴스 계약 |
+| 인혜님 | Disclosure MCP 전체 | DART, 기업보고서 처리, RAG·임베딩·pgvector |
 
 ## 11. 첫 구현 전 결정 결과
 
-1. Frontend: 현재 Streamlit 유지
-2. 포트: Frontend 8501, Backend 8000, MCP Client 8010, MCP 서버 8020~8023
+1. Frontend: React 기반으로 구현
+2. 포트: React Frontend 포트는 Frontend 설정에서 확정하고, Backend 8000, MCP Client 8010, MCP 서버 8020~8023을 사용
 3. 전송: Frontend·Backend·MCP Client는 REST/JSON, MCP 서버는 Streamable HTTP `/mcp`
 4. 요청·응답: `shared/CONNECTION_CONTRACT.md`와 하위 계약으로 확정
 5. 뉴스: NAVER API HUB 뉴스 검색 API
@@ -244,9 +252,7 @@ Tool Result가 Model에 다시 전달되고, Agent가 추가 Tool 또는 최종 
 9. Agent 최대 단계: 3
 10. 발표 종목: 2026년 9월 1일 기준 KOSPI 시가총액 상위 20개 보통주 기업
 
-정확한 20개 기업명과 종목 코드는 KRX 공식 자료를 내려받아 Seed/Mock 데이터로 고정하는 데이터 준비 작업으로 남긴다. 이는 기능 결정이 아니라 자료 입력 작업이다.
-
-→ 2026-09-02 확정: `shared/supported_companies.json` (20개, 종목 코드·순위 포함).
+20개 기업명과 종목 코드는 2026-09-02에 `shared/supported_companies.json`으로 확정했으며 종목 코드와 순위를 포함한다.
 
 ## 12. 이번 프로젝트에서 보류할 항목
 

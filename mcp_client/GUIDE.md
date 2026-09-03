@@ -58,6 +58,7 @@ Backend 요청 검증
 - Tool Result를 보고 추가 조회 또는 종료 선택
 - 근거의 일치·충돌 설명
 - 추천 없이 공통 분석 작성
+- Backend가 투자 성향을 전달한 회원 요청에만 개인화 확인 포인트 작성
 
 MCP 서버가 네 개여도 Agent는 하나다. 각 MCP는 Tool 제공 서버이며 독립적인 판단 주체가 아니다.
 
@@ -80,10 +81,11 @@ Backend 연결 주소와 전체 JSON은 `shared/contracts/analysis/README.md`를
 입력 핵심 필드:
 
 ```text
-company_name
-stock_code
-question
-date_range
+request_id
+company.company_name
+company.stock_code
+investment_profile 또는 null
+requested_at
 ```
 
 출력 핵심 필드:
@@ -100,6 +102,7 @@ one_line_summary
 news_summary
 disclosure_summary
 community_summary
+personalized_checkpoints 또는 null
 evidence
 sources
 partial_failures
@@ -146,7 +149,7 @@ WORKFLOW_TIMEOUT_SECONDS=60
 담당자는 다음 규칙을 지킨다.
 
 1. 뉴스는 중복을 제거한 뒤 핵심 기사 최대 5건만 LLM에 전달한다.
-2. 기업보고서는 질문과 관련된 검색 결과 3~5개 조각만 전달하고 보고서 전체를 넣지 않는다.
+2. 기업보고서는 MCP Client가 정한 분석 주제와 관련된 검색 결과 3~5개 조각만 전달하고 보고서 전체를 넣지 않는다.
 3. 커뮤니티 게시글 원문 최대 100개를 그대로 전달하지 않는다. Community MCP가 만든 반응 비율, 주요 기대·우려 주제, 대표 근거만 전달한다.
 4. 매 호출마다 네 MCP의 원본 응답 전체를 넣지 않고 공통 Schema에 맞게 필요한 필드만 추린다.
 5. LLM 출력은 자유로운 장문이 아니라 정해진 JSON Schema와 짧은 길이 제한을 사용한다.
@@ -161,7 +164,7 @@ OpenAI API Key는 `.env`에만 저장하고 Git에 올리지 않는다. `.env.ex
 
 - 회원가입과 로그인
 - 사용자 장기 Memory 저장
-- 사용자별 투자 성향 관리
+- 사용자별 투자 성향 저장·조회·수정
 - 공공데이터·NAVER·DART·커뮤니티 원본 API 직접 호출
 - 주가·뉴스·공시·커뮤니티 원본 저장
 - 사용자에게 직접 매수·매도 추천
@@ -176,3 +179,4 @@ OpenAI API Key는 `.env`에만 저장하고 Git에 올리지 않는다. `.env.ex
 5. 최대 단계와 종료 이유가 남는다.
 6. 출처와 수집 시각을 유지한다.
 7. 일부 MCP 실패를 구조화해서 반환한다.
+8. 회원 요청에는 투자 성향 네 값만 사용해 `personalized_checkpoints`를 만들고, 비회원 요청에는 `null`을 반환한다.

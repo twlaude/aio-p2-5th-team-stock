@@ -13,16 +13,16 @@ Frontend --REST/JSON--> Backend --REST/JSON--> MCP Client
 ```
 
 - Frontend는 Backend만 호출한다.
-- Backend는 지원 기업 여부, 로그인, 투자 성향, Memory와 개인화를 담당한다.
-- Backend는 사용자 정보 없이 MCP Client에 공통 종목 분석만 요청한다.
-- MCP Client는 네 MCP 서버를 관리·호출·취합하며 외부 원본 API는 직접 호출하지 않는다.
+- Backend는 지원 기업 여부, 로그인, 투자 성향과 Memory를 담당한다.
+- Backend는 정식 기업명·종목 코드와 선별한 투자 성향 네 값만 MCP Client에 전달한다. 비회원의 투자 성향은 `null`이다.
+- MCP Client는 네 MCP 서버를 관리·호출·취합하고 공통 분석과 회원별 확인 포인트를 생성한다. 외부 원본 API는 직접 호출하지 않는다.
 - 네 MCP 서버는 사용자 정보와 투자 성향을 받지 않는다.
 
 ## 확정 포트
 
 | 서비스 | 포트 | 상태 확인 | 주요 주소 |
 |---|---:|---|---|
-| Frontend | 8501 | 화면 접속 | `/` |
+| React Frontend | Frontend 설정값 | 화면 접속 | `/` |
 | Backend | 8000 | `GET /health` | `/api/v1` |
 | MCP Client | 8010 | `GET /health` | `/internal/v1` |
 | Price MCP | 8020 | `GET /health` | `/mcp` |

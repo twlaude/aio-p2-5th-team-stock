@@ -1,5 +1,7 @@
 # stock_insight 프로젝트 전체 방향 제안서
 
+> **보관용 초기 문서:** 자유 질문·Streamlit·초기 단일 MCP 구상이 포함되어 있다. 현재 개발 기준으로 사용하지 말고 루트 `README.md`, `shared/CONNECTION_CONTRACT.md`, `guide/06_CONFIRMED_LOCAL_STRUCTURE.md`를 따른다.
+
 > 이 문서는 팀 회의를 위한 설계 초안입니다. 아래 내용은 확정된 요구사항이 아니며, 실제 데이터 확보 가능성·개발 기간·팀 역할을 확인한 뒤 수정할 수 있습니다.
 
 ## 1. 우리가 만들려는 서비스

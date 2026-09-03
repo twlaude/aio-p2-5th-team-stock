@@ -19,11 +19,12 @@ Frontend
 Backend
   ├─ 로그인·사용자 구분
   ├─ 투자 성향·Memory
-  └─ 개인화 결과 조립
+  └─ 지원 종목 확인·성향 전달
        ↓ HTTP
 MCP Client 통합 서버
   ├─ 결정적 Workflow
   ├─ Single Stock Analysis Agent
+  ├─ 공통 분석·개인화 확인 포인트
   └─ Agent Runtime·Trace
        ↓ MCP
   ┌────┼────────┬────────┐
@@ -39,8 +40,8 @@ PostgreSQL / pgvector / Redis
 ```text
 aio-p2-5th-team-stock/
 ├─ frontend/                    # 사용자 화면
-├─ backend/                     # 인증, Memory, 개인화, Frontend API
-├─ mcp_client/                  # MCP 호출과 공통 종목 분석을 통괄하는 서버
+├─ backend/                     # 인증, Memory, 투자 성향 조회, Frontend API
+├─ mcp_client/                  # MCP 호출, 공통 분석과 개인화를 통괄하는 서버
 │  └─ app/
 │     ├─ workflows/             # 전체 순서와 통제 지점
 │     ├─ agents/                # Agent Goal·Instructions·Tool 권한
@@ -93,7 +94,8 @@ aio-p2-5th-team-stock/
 - 현재 사용자를 구분한다.
 - 투자 성향과 Memory를 관리한다.
 - MCP Client에 종목 분석을 요청한다.
-- 공통 분석에 사용자별 확인 포인트를 추가한다.
+- 회원이면 허용된 투자 성향 네 값을 MCP Client에 전달한다.
+- MCP Client 응답을 검증하고 Frontend에 전달한다.
 
 ### MCP Client
 
@@ -101,6 +103,7 @@ aio-p2-5th-team-stock/
 - 네 서버의 결과를 공통 규격으로 정리한다.
 - 외부 원본 API를 직접 호출하지 않는다.
 - 사용자 개인정보 없이 공통 종목 분석을 만든다.
+- Backend가 전달한 투자 성향 네 값으로 회원별 확인 포인트를 만든다.
 - 안전한 전체 순서는 Workflow가 통제한다.
 - 하나의 Stock Analysis Agent가 Goal과 State를 보고 추가 Tool 또는 종료를 판단한다.
 - Tool Allowlist, arguments 검증, 최대 단계, 종료 이유와 Trace를 관리한다.
@@ -147,7 +150,7 @@ Backend는 `X-Demo-User-ID`와 같은 교육용 식별 방식으로 사용자를
 └─ 커뮤니티 반응
 ```
 
-공통 종목 분석은 사용자마다 달라지지 않는다. Backend가 공통 분석을 받은 뒤 관련 Memory만 선택하여 `나를 위한 확인 포인트`를 별도로 만든다.
+공통 종목 분석은 사용자마다 달라지지 않는다. Backend는 관련 Memory에서 허용된 투자 성향 네 값만 선택해 MCP Client에 전달하고, MCP Client가 공통 분석과 구분된 `나를 위한 확인 포인트`를 만든다.
 
 ## 8. 구현 순서
 

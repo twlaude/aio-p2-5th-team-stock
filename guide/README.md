@@ -10,4 +10,4 @@
 6. `guide/06_CONFIRMED_LOCAL_STRUCTURE.md`
 7. `guide/07_AGENT_WORKFLOW_GUIDE.md`
 
-`guide/00`부터 `guide/05`까지는 아이디어와 구조를 잡는 과정에서 작성한 초기 문서다. 최신 문서 및 `shared` 계약과 충돌하면 루트 문서, `shared` 계약, `guide/06`, `guide/07` 순으로 우선한다.
+`guide/00`부터 `guide/05`까지는 아이디어와 구조를 잡는 과정에서 작성한 보관용 초기 문서이며 구현 지시서가 아니다. 자유 질문, Streamlit, 과거 역할처럼 현재 결정과 다른 내용이 남아 있으므로 개발에는 사용하지 않는다. 최신 기준의 우선순위는 `shared` 계약 → 각 실행 폴더의 `GUIDE.md` → 루트 문서 → `guide/06`, `guide/07`이다.

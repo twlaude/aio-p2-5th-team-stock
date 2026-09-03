@@ -1,5 +1,7 @@
 # Backend 개발 방향 제안서
 
+> **보관용 초기 문서:** Backend 내부 Agent와 자유 질문을 가정한 과거 초안이다. 현재 구현은 `backend/GUIDE.md`와 `shared/contracts/`를 따른다.
+
 > 이 문서는 팀 회의를 위한 Backend 설계 예시입니다. 실제 API 경로, 인증 방식, 폴더명은 팀 합의 후 확정합니다.
 
 ## 1. Backend의 역할

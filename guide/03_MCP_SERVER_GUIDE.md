@@ -1,5 +1,7 @@
 # MCP Server 개발 방향 제안서
 
+> **보관용 초기 문서:** 초기 Tool 후보와 자유 질문 기반 RAG 구상이 포함되어 있다. 현재 Tool과 입출력은 `mcp_servers/GUIDE.md`와 `shared/contracts/`를 따른다.
+
 > 이 문서는 팀 회의를 위한 MCP Server 설계 예시입니다. 실제 Tool 목록과 외부 데이터 제공처는 접근 가능성·비용·이용 조건을 확인한 뒤 확정합니다.
 
 ## 1. MCP Server의 역할

@@ -1,5 +1,7 @@
 # Frontend 개발 방향 제안서
 
+> **보관용 초기 문서:** Streamlit과 자유 질문 화면을 가정한 과거 초안이다. 현재 Frontend는 React 기반이며 `frontend/GUIDE.md`, `FE_화면_설계.md`, `shared/contracts/frontend_backend/README.md`를 따른다.
+
 > 이 문서는 팀 회의를 위한 Frontend 설계 예시입니다. 현재 Streamlit을 기준으로 작성했으며, 화면 구성과 컴포넌트 분리는 팀 합의 후 확정합니다.
 
 ## 1. Frontend의 목표

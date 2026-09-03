@@ -47,7 +47,7 @@ common_analysis
 personalized_checkpoints
 ```
 
-`common_analysis`는 MCP Client 결과이며 사용자와 관계없이 동일해야 한다. `personalized_checkpoints`는 Backend가 관련 Memory를 적용해 생성한다.
+`common_analysis`는 MCP Client가 만든 결과이며 사용자와 관계없이 동일해야 한다. `personalized_checkpoints`도 MCP Client가 만들지만, Backend가 전달한 투자 성향 네 값만 사용한다. Backend는 사용자와 Memory를 관리하고 MCP Client 응답을 검증해 Frontend에 전달한다.
 
 ## 오류 상태
 

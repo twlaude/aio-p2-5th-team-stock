@@ -279,7 +279,7 @@ Backend가 사용자 Memory 중 현재 요청과 관련된 정보만 사용해 �
 - 위험 요소
 - 공시 발표일
 - DART 접수번호 또는 원문 링크
-- 질문과 관련된 기업보고서 문장
+- MCP Client의 내부 분석 주제와 관련된 기업보고서 문장
 
 공식 자료와 AI의 해석을 시각적으로 구분해야 한다.
 
@@ -307,7 +307,7 @@ Tool Result에 없는 사실을 새로 만들어서는 안 된다.
 |---|---|---|---|
 | FE1 | 종목 검색 | 사용자·투자 성향 확인 | 아직 호출하지 않거나 분석 요청 준비 |
 | FE0 | 투자 성향 저장 | Memory 등록과 보류 종목 복원 | 호출하지 않음 |
-| FE2 | 분석 결과 요청 | MCP Client 호출과 개인화 | 네 MCP 결과 통합과 공통 분석 |
+| FE2 | 분석 결과 요청 | 지원 종목 확인, 투자 성향 전달, MCP Client 호출 | 네 MCP 결과 통합, 공통 분석과 개인화 확인 포인트 생성 |
 | FE2 Detail | 상세 근거 요청 | 사용자 권한과 결과 조회 | 네 MCP의 출처·상세 근거 제공 |
 
 전체 요청 흐름:
@@ -316,9 +316,9 @@ Tool Result에 없는 사실을 새로 만들어서는 안 된다.
 Frontend
   → Backend
   → MCP Client Workflow
-  → News·Disclosure·Community MCP
-  → 공통 분석
-  → Backend 개인화
+  → Price·News·Disclosure·Community MCP
+  → 공통 분석과 회원별 확인 포인트
+  → Backend 응답 검증
   → Frontend 표시
 ```
 
@@ -329,7 +329,7 @@ MCP Client에서는 결정적인 순서를 Workflow가 관리하고, 추가 조�
 ```text
 Workflow
 ├─ 요청 검증
-├─ 뉴스·공시·커뮤니티 기본 조회
+├─ 가격·뉴스·공시·커뮤니티 기본 조회
 ├─ Agent 실행
 ├─ 출처 검증
 └─ 응답 형식 검증
@@ -364,7 +364,7 @@ Single Agent
 - 커뮤니티 감성 분석 방식
 - 공시와 기업보고서 RAG 범위
 - 각 화면의 정확한 API 요청·응답 형식
-- Streamlit에서 구현할 수 있는 화면 범위
+- React에서 사용할 컴포넌트 구조와 상태 관리 방식
 
 ## 10. 팀원별로 이 문서를 보는 방법
 
@@ -387,7 +387,7 @@ Single Agent
 - 네 MCP 기본 조회
 - Agent State와 Tool Result
 - 부분 성공과 종료 이유
-- FE2에 필요한 공통 분석 형식
+- FE2에 필요한 공통 분석과 개인화 확인 포인트 형식
 
 ### MCP 서버 담당
 

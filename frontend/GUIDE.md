@@ -40,22 +40,24 @@ Frontend는 사용자가 직접 보는 화면을 담당한다. Backend만 호출
 
 핵심 기능이 완성된 뒤 진행한다.
 
-## 구현 시 목표 구조
+## React 구현 시 목표 구조
 
 ```text
 frontend/
-├─ pages/                 # 화면 단위
-├─ components/            # 재사용 UI
-├─ services/              # Backend API 호출
-├─ state/                 # 로그인 사용자·선택 종목·현재 단계
-├─ mocks/                 # Mock 사용자와 Mock 분석 결과
-├─ assets/                # 이미지와 아이콘
+├─ src/
+│  ├─ pages/              # 화면 단위
+│  ├─ components/         # 재사용 UI
+│  ├─ services/           # Backend API 호출
+│  ├─ state/              # 로그인 사용자·선택 종목·현재 단계
+│  ├─ mocks/              # Mock 사용자와 Mock 분석 결과
+│  ├─ assets/             # 이미지와 아이콘
+│  └─ App.*
+├─ public/
 ├─ .env.example
-├─ requirements.txt
-└─ app.py
+└─ package.json
 ```
 
-현재 Streamlit을 사용하므로 실제 디렉터리 이름은 Streamlit 페이지 구조에 맞게 조정할 수 있다.
+Frontend는 React 기반으로 구현한다. 세부 디렉터리 이름, 빌드 도구와 개발 서버 포트는 Frontend 담당자가 정하되 Backend API 계약은 변경하지 않는다.
 
 ## Frontend가 보관할 수 있는 임시 상태
 

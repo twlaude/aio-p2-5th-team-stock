@@ -1,5 +1,7 @@
 # Database 개발 방향 제안서
 
+> **보관용 초기 문서:** 자유 질문과 장기 대화 저장 후보가 포함된 과거 초안이다. 현재 범위는 `db/GUIDE.md`, `backend/MEMORY_GUIDE.md`, `shared/contracts/`를 따른다.
+
 > 이 문서는 팀 회의를 위한 Database 설계 예시입니다. 현재 `schema.sql`의 원칙을 유지하면서 필요한 데이터를 검토한 초안이며, 실제 테이블과 컬럼은 데이터 제공처 및 API 응답을 확인한 뒤 확정합니다.
 
 ## 1. DB 설계 핵심 원칙
