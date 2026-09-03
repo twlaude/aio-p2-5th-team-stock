@@ -1,0 +1,62 @@
+[
+  {
+    "user_id": "demo-001",
+    "username": "demo001",
+    "display_name": "안정형 장기 초보",
+    "profile": { "experience_level": "beginner", "risk_profile": "stable", "investment_horizon": "long", "preferred_evidence": "disclosure" }
+  },
+  {
+    "user_id": "demo-002",
+    "username": "demo002",
+    "display_name": "안정형 중기 투자자",
+    "profile": { "experience_level": "intermediate", "risk_profile": "stable", "investment_horizon": "mid", "preferred_evidence": "news" }
+  },
+  {
+    "user_id": "demo-003",
+    "username": "demo003",
+    "display_name": "안정형 단기 숙련자",
+    "profile": { "experience_level": "advanced", "risk_profile": "stable", "investment_horizon": "short", "preferred_evidence": "community" }
+  },
+  {
+    "user_id": "demo-004",
+    "username": "demo004",
+    "display_name": "균형형 장기 초보",
+    "profile": { "experience_level": "beginner", "risk_profile": "balanced", "investment_horizon": "long", "preferred_evidence": "disclosure" }
+  },
+  {
+    "user_id": "demo-005",
+    "username": "demo005",
+    "display_name": "균형형 중기 투자자",
+    "profile": { "experience_level": "intermediate", "risk_profile": "balanced", "investment_horizon": "mid", "preferred_evidence": "news" }
+  },
+  {
+    "user_id": "demo-006",
+    "username": "demo006",
+    "display_name": "균형형 단기 숙련자",
+    "profile": { "experience_level": "advanced", "risk_profile": "balanced", "investment_horizon": "short", "preferred_evidence": "community" }
+  },
+  {
+    "user_id": "demo-007",
+    "username": "demo007",
+    "display_name": "공격형 장기 초보",
+    "profile": { "experience_level": "beginner", "risk_profile": "aggressive", "investment_horizon": "long", "preferred_evidence": "disclosure" }
+  },
+  {
+    "user_id": "demo-008",
+    "username": "demo008",
+    "display_name": "공격형 중기 투자자",
+    "profile": { "experience_level": "intermediate", "risk_profile": "aggressive", "investment_horizon": "mid", "preferred_evidence": "news" }
+  },
+  {
+    "user_id": "demo-009",
+    "username": "demo009",
+    "display_name": "공격형 단기 숙련자",
+    "profile": { "experience_level": "advanced", "risk_profile": "aggressive", "investment_horizon": "short", "preferred_evidence": "community" }
+  },
+  {
+    "user_id": "demo-010",
+    "username": "demo010",
+    "display_name": "균형형 장기 투자자",
+    "profile": { "experience_level": "intermediate", "risk_profile": "balanced", "investment_horizon": "long", "preferred_evidence": "news" }
+  }
+]

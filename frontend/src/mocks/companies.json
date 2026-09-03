@@ -1,0 +1,22 @@
+[
+  { "rank": 1, "company_name": "삼성전자", "stock_code": "005930", "market": "KOSPI" },
+  { "rank": 2, "company_name": "SK하이닉스", "stock_code": "000660", "market": "KOSPI" },
+  { "rank": 3, "company_name": "SK스퀘어", "stock_code": "402340", "market": "KOSPI" },
+  { "rank": 4, "company_name": "삼성전기", "stock_code": "009150", "market": "KOSPI" },
+  { "rank": 5, "company_name": "LG에너지솔루션", "stock_code": "373220", "market": "KOSPI" },
+  { "rank": 6, "company_name": "현대차", "stock_code": "005380", "market": "KOSPI" },
+  { "rank": 7, "company_name": "삼성바이오로직스", "stock_code": "207940", "market": "KOSPI" },
+  { "rank": 8, "company_name": "삼성물산", "stock_code": "028260", "market": "KOSPI" },
+  { "rank": 9, "company_name": "삼성생명", "stock_code": "032830", "market": "KOSPI" },
+  { "rank": 10, "company_name": "KB금융", "stock_code": "105560", "market": "KOSPI" },
+  { "rank": 11, "company_name": "한화에어로스페이스", "stock_code": "012450", "market": "KOSPI" },
+  { "rank": 12, "company_name": "신한지주", "stock_code": "055550", "market": "KOSPI" },
+  { "rank": 13, "company_name": "두산에너빌리티", "stock_code": "034020", "market": "KOSPI" },
+  { "rank": 14, "company_name": "기아", "stock_code": "000270", "market": "KOSPI" },
+  { "rank": 15, "company_name": "HD현대중공업", "stock_code": "329180", "market": "KOSPI" },
+  { "rank": 16, "company_name": "삼성SDI", "stock_code": "006400", "market": "KOSPI" },
+  { "rank": 17, "company_name": "셀트리온", "stock_code": "068270", "market": "KOSPI" },
+  { "rank": 18, "company_name": "SK", "stock_code": "034730", "market": "KOSPI" },
+  { "rank": 19, "company_name": "현대모비스", "stock_code": "012330", "market": "KOSPI" },
+  { "rank": 20, "company_name": "하나금융지주", "stock_code": "086790", "market": "KOSPI" }
+]
