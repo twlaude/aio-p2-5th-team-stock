@@ -10,23 +10,28 @@
     },
     "price": {
       "current_price": 78500,
-      "change": 1200,
-      "change_rate": 1.55,
+      "change": 2450,
+      "change_rate": 3.2,
       "as_of": "2026-09-01T06:30:00Z"
     },
-    "one_line_summary": "AI 반도체 기대는 이어지지만 실적 확인이 같이 필요해요.",
+    "one_line_summary": "관심은 뜨겁지만, 공식적으로 확인된 재료는 조금 더 살펴봐야 해요.",
     "detail": null,
     "personalized_checkpoints": null
   },
   "member_detail": {
     "market_temperature": {
       "score": 82,
-      "label": "관심 높음",
-      "data_coverage": ["price", "news", "disclosure", "community"]
+      "label": "뜨거움",
+      "data_coverage": [
+        "price",
+        "news",
+        "disclosure",
+        "community"
+      ]
     },
     "evidence_level": {
-      "level": "high",
-      "reason": "최근 공식 공시와 주요 보도가 함께 확인돼요."
+      "level": "medium",
+      "reason": "최근 공시에서 메모리 투자 지속은 확인됐지만, 파운드리 수익성은 아직 확인되지 않았어요."
     },
     "news_summary": "반도체 업황 회복과 AI 메모리 수요가 뉴스 흐름의 중심이에요.",
     "disclosure_summary": "시설 투자와 실적 전망 관련 공시를 함께 확인해야 해요.",
@@ -71,47 +76,83 @@
   "member_profiles": {
     "conservative-long": {
       "personal_summary": "장기 관점에서는 실적 확인 뒤 천천히 비중을 살펴봐야 해요.",
-      "priority_checks": ["현금흐름과 배당 여력", "AI 메모리 매출 지속성", "분기 실적 변동 폭"],
+      "priority_checks": [
+        "현금흐름과 배당 여력",
+        "AI 메모리 매출 지속성",
+        "분기 실적 변동 폭"
+      ],
       "caution": "단기 급등 구간에서는 확인 없이 따라가기보다 발표 일정을 먼저 봐야 해요."
     },
     "conservative-medium": {
       "personal_summary": "중기 관점에서는 가격보다 실적 회복 속도를 먼저 확인해 보세요.",
-      "priority_checks": ["다음 분기 영업이익 흐름", "재고 조정 마무리 여부", "시장 기대와 실제 수주 차이"],
+      "priority_checks": [
+        "다음 분기 영업이익 흐름",
+        "재고 조정 마무리 여부",
+        "시장 기대와 실제 수주 차이"
+      ],
       "caution": "뉴스 기대만 커진 날은 변동성이 커질 수 있어요."
     },
     "conservative-short": {
       "personal_summary": "단기 확인은 가능하지만 손실 제한 기준을 먼저 정해야 해요.",
-      "priority_checks": ["당일 거래대금 변화", "외국인 수급 지속성", "주요 뉴스의 반복 여부"],
+      "priority_checks": [
+        "당일 거래대금 변화",
+        "외국인 수급 지속성",
+        "주요 뉴스의 반복 여부"
+      ],
       "caution": "짧은 흐름에서는 커뮤니티 반응을 사실처럼 보면 위험해요."
     },
     "balanced-long": {
       "personal_summary": "장기 핵심은 업황 회복과 가격 부담을 같이 보는 거예요.",
-      "priority_checks": ["CAPEX와 수익성 균형", "AI 메모리 고객 다변화", "주주환원 정책 변화"],
+      "priority_checks": [
+        "CAPEX와 수익성 균형",
+        "AI 메모리 고객 다변화",
+        "주주환원 정책 변화"
+      ],
       "caution": "장기 계좌라도 한 번에 판단하지 말고 실적 발표 전후를 나눠 봐야 해요."
     },
     "balanced-medium": {
       "personal_summary": "중기 균형형은 뉴스 모멘텀과 공시 숫자를 같이 확인해요.",
-      "priority_checks": ["목표 실적 대비 진행률", "제품 믹스 개선 여부", "가격 반영 속도"],
+      "priority_checks": [
+        "목표 실적 대비 진행률",
+        "제품 믹스 개선 여부",
+        "가격 반영 속도"
+      ],
       "caution": "이미 오른 가격에 기대가 얼마나 들어갔는지 확인이 필요해요."
     },
     "balanced-short": {
       "personal_summary": "단기 균형형은 수급과 근거 강도가 같은 방향인지 봐야 해요.",
-      "priority_checks": ["거래량 동반 여부", "뉴스 제목과 원문 차이", "다음 공시 일정"],
+      "priority_checks": [
+        "거래량 동반 여부",
+        "뉴스 제목과 원문 차이",
+        "다음 공시 일정"
+      ],
       "caution": "하루 반응만으로 기업 체력이 바뀐 것은 아니에요."
     },
     "aggressive-long": {
       "personal_summary": "장기 성장성을 보더라도 실적 가시성이 함께 올라오는지 확인해요.",
-      "priority_checks": ["신규 수요의 지속 기간", "경쟁사 증설 속도", "마진 개선 가능성"],
+      "priority_checks": [
+        "신규 수요의 지속 기간",
+        "경쟁사 증설 속도",
+        "마진 개선 가능성"
+      ],
       "caution": "성장 기대가 큰 만큼 실적 지연 뉴스에 흔들릴 수 있어요."
     },
     "aggressive-medium": {
       "personal_summary": "중기 공격형은 촉매가 실제 숫자로 이어지는 구간인지 봐야 해요.",
-      "priority_checks": ["수주와 매출 인식 시점", "기관 수급 변화", "업황 사이클 위치"],
+      "priority_checks": [
+        "수주와 매출 인식 시점",
+        "기관 수급 변화",
+        "업황 사이클 위치"
+      ],
       "caution": "촉매가 이미 가격에 반영됐는지 확인해야 해요."
     },
     "aggressive-short": {
       "personal_summary": "단기 공격형은 속도보다 되돌림 기준을 먼저 정하고 봐야 해요.",
-      "priority_checks": ["장중 고점 이후 거래량", "뉴스 재확산 여부", "커뮤니티 과열 신호"],
+      "priority_checks": [
+        "장중 고점 이후 거래량",
+        "뉴스 재확산 여부",
+        "커뮤니티 과열 신호"
+      ],
       "caution": "강한 움직임 뒤에는 같은 폭의 되돌림도 빠르게 올 수 있어요."
     }
   },
@@ -119,7 +160,11 @@
     "market_temperature": {
       "score": 70,
       "label": "일부 확인",
-      "data_coverage": ["price", "news", "disclosure"]
+      "data_coverage": [
+        "price",
+        "news",
+        "disclosure"
+      ]
     },
     "evidence_level": {
       "level": "medium",
