@@ -1,3 +1,119 @@
+/* motion 4a */
+@keyframes bob {
+  0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); }
+}
+
+@keyframes blink {
+  0%, 92%, 100% { transform: scaleY(1); } 96% { transform: scaleY(0.1); }
+}
+
+@keyframes glance {
+  0%, 40%, 100% { transform: translateX(0); } 50%, 80% { transform: translateX(6px); } 85%, 95% { transform: translateX(-6px); }
+}
+
+@keyframes track {
+  0%, 100% { transform: translate(-6px, 8px); } 50% { transform: translate(6px, 8px); }
+}
+
+@keyframes lean {
+  0%, 100% { transform: rotate(-3deg) translateY(4px); } 50% { transform: rotate(3deg) translateY(4px); }
+}
+
+@keyframes jump {
+  0% { transform: scale(1, 1) translateY(0); } 15% { transform: scale(1.15, 0.8) translateY(6px); } 35% { transform: scale(0.9, 1.15) translateY(-34px); } 55% { transform: scale(1, 1) translateY(-40px); } 75% { transform: scale(1.1, 0.9) translateY(0); } 85% { transform: scale(0.97, 1.03) translateY(-4px); } 100% { transform: scale(1, 1) translateY(0); }
+}
+
+@keyframes tilt {
+  0%, 100% { transform: rotate(-7deg); } 50% { transform: rotate(7deg); }
+}
+
+@keyframes lookup {
+  0%, 100% { transform: translate(4px, -6px); } 50% { transform: translate(-4px, -6px); }
+}
+
+@keyframes qfloat {
+  0% { opacity: 0; transform: translateY(6px) rotate(-10deg); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(-22px) rotate(10deg); }
+}
+
+@keyframes dots {
+  0%, 20% { opacity: 0.2; } 50% { opacity: 1; } 100% { opacity: 0.2; }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; } 60% { transform: scale(1.12); opacity: 1; } 80% { transform: scale(0.96); } 100% { transform: scale(1); }
+}
+
+@keyframes bubble {
+  0%, 20% { opacity: 0; transform: translateX(-10px) scale(0.9); } 40%, 90% { opacity: 1; transform: translateX(0) scale(1); } 100% { opacity: 0; }
+}
+
+@keyframes spark {
+  0%, 100% { opacity: 0; transform: scale(0.4); } 50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes peek {
+  0%, 100% { transform: translateY(46px); } 30%, 70% { transform: translateY(0); }
+}
+
+@keyframes lookdown {
+  0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); }
+}
+
+@keyframes winkA {
+  0%, 60%, 100% { opacity: 1; } 70%, 90% { opacity: 0; }
+}
+
+@keyframes winkB {
+  0%, 60%, 100% { opacity: 0; } 70%, 90% { opacity: 1; }
+}
+
+@keyframes blush {
+  0%, 60%, 100% { opacity: 1; } 75% { opacity: 0.72; }
+}
+
+@keyframes droop {
+  0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(6px) rotate(-3deg); }
+}
+
+@keyframes sweat {
+  0% { opacity: 0; transform: translateY(-4px); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(18px); }
+}
+
+@keyframes sproutwag {
+  0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-25deg); }
+}
+
+@keyframes cursor {
+  0%, 100% { opacity: 1; } 50% { opacity: 0; }
+}
+
+/* motion 4b-2 */
+@keyframes heroBlobA {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(48px, 28px, 0) scale(1.08); }
+}
+
+@keyframes heroBlobB {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(-38px, 42px, 0) scale(0.94); }
+}
+
+/* motion 4b-5 */
+@keyframes checkPop {
+  0% { transform: scale(0.6); opacity: 0; } 70% { transform: scale(1.1); opacity: 1; } 100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; }
+}
+
+/* motion 4b-15 */
+@keyframes searchShake {
+  0%, 100% { transform: translateX(0); } 20% { transform: translateX(-6px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); }
+}
+
+@keyframes noticeSlideDown {
+  0% { opacity: 0; transform: translateY(-14px); } 100% { opacity: 1; transform: translateY(0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
