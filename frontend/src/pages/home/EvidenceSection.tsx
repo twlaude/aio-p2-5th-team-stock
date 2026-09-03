@@ -13,7 +13,7 @@ import "./evidenceSection.css";
 type EvidenceTab = "gap" | "community" | "news" | "disclosure";
 
 const tabs = [
-  { key: "gap", id: "evidence-gap", label: "환호 vs 근거", Icon: Scale },
+  { key: "gap", id: "evidence-gap", label: "분위기 vs 근거", Icon: Scale },
   { key: "community", id: "evidence-community", label: "커뮤니티 반응", Icon: MessageCircle },
   { key: "news", id: "evidence-news", label: "최신 뉴스", Icon: Newspaper },
   { key: "disclosure", id: "evidence-disclosure", label: "기업보고서·공시", Icon: FileText },

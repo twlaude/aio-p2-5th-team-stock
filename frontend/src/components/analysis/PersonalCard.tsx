@@ -41,6 +41,10 @@ export function PersonalCard({ checkpoints }: PersonalCardProps) {
   const session = readAuthSession();
   const username = session?.user.username ?? "회원";
   const checks = checkpoints.priority_checks.slice(0, 3);
+  // 첫 문장 = 포인트(크게), 나머지 = 부연(작게). 형 지시(9/3): "포인트 의견은 크게하고, 부연의견은 작은글씨로"
+  const sentences = checkpoints.personal_summary.split(/(?<=[.!?])\s+/).filter(Boolean);
+  const point = sentences[0] ?? checkpoints.personal_summary;
+  const detail = sentences.slice(1).join(" ");
 
   return (
     // motion 4b-13
@@ -48,10 +52,11 @@ export function PersonalCard({ checkpoints }: PersonalCardProps) {
       <div className="analysis-personal-card__header">
         <User size={20} strokeWidth={1.8} />
         <div>
-          {username}님 성향({profileLabel(session)})엔 이게 걸려요
+          {username}님은 {profileLabel(session)} 투자자예요
         </div>
       </div>
-      <div className="analysis-personal-card__summary">{checkpoints.personal_summary}</div>
+      <div className="analysis-personal-card__summary">{point}</div>
+      {detail ? <p className="analysis-personal-card__detail">{detail}</p> : null}
       {checks.length > 0 ? (
         <div className="analysis-personal-card__checks">
           {checks.map((check, index) => (

@@ -56,10 +56,81 @@ interface TemplateAnalysis {
 
 const DEMO_PASSWORD = "Demo1234!";
 
+type GapState = "large" | "some" | "small" | "quiet";
+
+/** 한글 조사 선택: 받침 있으면 a, 없으면 b (영문·숫자로 끝나면 b) */
+function josa(word: string, a: string, b: string) {
+  const code = word.charCodeAt(word.length - 1);
+  if (code >= 0xac00 && code <= 0xd7a3) return `${word}${(code - 0xac00) % 28 ? a : b}`;
+  return `${word}${b}`;
+}
+
+const RISK_WORD: Record<DemoUser["risk_profile"], string> = { conservative: "손실을 피하는 걸 우선하는", balanced: "적당한 위험은 감수하는", aggressive: "큰 변동도 감수하는" };
+const HORIZON_WORD: Record<DemoUser["investment_horizon"], string> = { long: "오래 들고 가는", medium: "몇 달 보고 가는", short: "짧게 치고 빠지는" };
+
+function gapState(score: number, level: EvidenceLevel): GapState {
+  if (score >= 70 && level === "low") return "large";
+  if ((score >= 65 && level === "medium") || (score >= 78 && level !== "low")) return "some";
+  if (score < 50 && level === "high") return "quiet";
+  return "small";
+}
+
+/** 목 모드 개인화 — "당신은 ○○ 성향이고, 이 종목은 지금 ○○ 상태라서 ○○" 구조. 실서비스에선 MCP Client가 성향+공통 분석으로 생성. */
+function composePersonal(company: string, topic: string, score: number, level: EvidenceLevel, user: DemoUser): PersonalizedCheckpoints {
+  const state = gapState(score, level);
+  const you = `${RISK_WORD[user.risk_profile]} ${HORIZON_WORD[user.investment_horizon]} 편`;
+  // 첫 문장 = 포인트(크게), 뒷문장 = 부연(작게). 화면(PersonalCard)이 첫 문장에서 나눈다.
+  const C = josa(company, "은", "는");
+  const T = (a: string, b: string) => josa(topic, a, b);
+  const opinion: Record<GapState, Record<DemoUser["risk_profile"], string>> = {
+    large: {
+      conservative: `지금은 지켜보는 게 나아요. ${C} ${topic} 기대만 앞서 있고 공시로 확인된 건 거의 없어요. ${you}인 당신에겐 맞지 않는 구간이에요.`,
+      balanced: `지금 사면 비싸게 살 수 있어요. ${C} ${topic} 기대가 앞서 있어서, ${you}이라면 공시로 확인되는 걸 보고 나눠서 접근하는 게 맞아요.`,
+      aggressive: `들어간다면 나갈 기준부터 정하세요. ${C} ${topic} 기대만으로 움직이는 구간이라 크게 흔들릴 수 있어요. ${you}이라도 기준 없이 들어가면 위험해요.`,
+    },
+    some: {
+      conservative: `당신에겐 '아직'이에요. ${C} 관심은 뜨겁고 ${T("은", "는")} 절반쯤 확인됐어요. ${you}이라면 다음 실적으로 확인되고 나서 봐도 늦지 않아요.`,
+      balanced: `한 번에 말고 나눠서 보세요. ${C} ${topic} 중 확인된 절반은 볼 만하고 나머지는 기대예요. ${you}이라면 확인되는 만큼만 따라가는 게 맞아요.`,
+      aggressive: `해볼 만한 구간이에요. ${C} ${T("이", "가")} 절반은 확인됐어요. 다만 ${you}이라도 기대가 꺾이면 빠르게 되돌아올 수 있다는 걸 기억하세요.`,
+    },
+    small: {
+      conservative: `무리 없는 구간이에요. ${C} 관심과 확인된 재료가 비슷해요. ${you}인 당신은 ${topic} 실적 흐름만 꾸준히 보면 돼요.`,
+      balanced: `평소 기준대로 보면 돼요. ${C} 지금 앞서가는 신호가 없어요. ${you}이라면 ${T("을", "를")} 중심으로 차분히 접근해도 돼요.`,
+      aggressive: `급하게 움직일 이유는 없어요. ${C} ${topic} 대비 관심이 과하지 않아요. ${you}이라면 새 촉매가 나오는지 지켜보세요.`,
+    },
+    quiet: {
+      conservative: `당신에게 잘 맞는 편이에요. ${C} 조용하지만 ${T("이", "가")} 공식 자료로 탄탄해요. ${you}이라면 서두르지 않고 천천히 봐도 돼요.`,
+      balanced: `관심 가져볼 만해요. ${C} 관심이 낮아 가격 부담이 적고 ${T("은", "는")} 확인돼 있어요. ${you}이라면 지금 살펴보기 좋은 구간이에요.`,
+      aggressive: `기다릴지 먼저 정하세요. ${C} 아직 관심이 없어서 움직임이 느릴 수 있어요. ${you}이라면 촉매가 나올 때까지 지루할 수 있어요.`,
+    },
+  };
+  const horizonCheck: Record<DemoUser["investment_horizon"], string> = {
+    long: "배당·현금흐름이 유지되는지",
+    medium: "다음 분기 실적이 지난 분기보다 나아졌는지",
+    short: "하루 변동 폭과 거래량이 견딜 만한지",
+  };
+  const stateCheck: Record<GapState, string> = {
+    large: `${josa(topic, "이", "가")} 공시로 확인되는지 (지금은 기사뿐)`,
+    some: `${topic} 중 아직 확인 안 된 절반이 언제 확인되는지`,
+    small: `${topic} 관련 새 소식이 확인된 것인지`,
+    quiet: `${topic}에 시장이 언제 관심을 갖기 시작하는지`,
+  };
+  const caution: Record<DemoUser["risk_profile"], string> = {
+    conservative: "기대가 높을 땐 급하게 따라 사지 않아도 괜찮아요. 확인하고 들어가도 늦지 않아요.",
+    balanced: "뉴스와 커뮤니티가 같이 뜨거우면 한 박자 쉬어가도 돼요.",
+    aggressive: "뉴스만으로 오른 종목은 되돌림이 빨라요. 욕심보다 기준이 먼저예요.",
+  };
+  return {
+    personal_summary: opinion[state][user.risk_profile],
+    priority_checks: ["다음 실적 발표 날짜와 결과", stateCheck[state], horizonCheck[user.investment_horizon]],
+    caution: caution[user.risk_profile],
+  };
+}
+
 /** 목 모드 한줄 결론 — 실서비스에선 MCP Client의 LLM이 4개 재료(가격·뉴스·공시·커뮤니티)를 취합해 만든다. 여기선 같은 재료로 조합만. */
 function composeOneLiner(template: TemplateAnalysis): string {
   if (template.evidence_level === "low" && template.temperature_score >= 70) {
-    return `뉴스는 ${template.topic}로 시끄러운데, 공시로 확인된 건 거의 없어요. 기사만으로 띄우는 흐름일 수 있어요.`;
+    return `뉴스는 ${josa(template.topic, "으로", "로")} 시끄러운데, 공시로 확인된 건 거의 없어요. 기사만으로 띄우는 흐름일 수 있어요.`;
   }
   const news = `뉴스는 ${template.topic}에 쏠려 있고`;
   const disclosure =
@@ -139,9 +210,6 @@ function profileOf(user: DemoUser): UserProfile {
   };
 }
 
-function profileKey(user: DemoUser) {
-  return `${user.risk_profile}-${user.investment_horizon}`;
-}
 
 function unsupportedResponse(query: string): AnalysisResponse {
   return {
@@ -256,7 +324,7 @@ function buildTemplateResponse(company: Company, user: DemoUser, partial = false
       access_level: "member",
       requires_login: false,
       detail: partial ? samsung.partial_detail : samsung.member_detail,
-      personalized_checkpoints: samsung.member_profiles[profileKey(user)],
+      personalized_checkpoints: composePersonal("삼성전자", "HBM 메모리", samsung.member_detail.market_temperature.score, samsung.member_detail.evidence_level.level, user),
     });
   }
 
@@ -269,7 +337,7 @@ function buildTemplateResponse(company: Company, user: DemoUser, partial = false
     price: templatePrice(template),
     one_line_summary: composeOneLiner(template),
     detail: buildTemplateDetail(company, template, partial),
-    personalized_checkpoints: samsung.member_profiles[profileKey(user)],
+    personalized_checkpoints: composePersonal(company.company_name, template.topic, template.temperature_score, template.evidence_level, user),
   };
 }
 
@@ -311,7 +379,7 @@ function buildSamsungMember(user: DemoUser, partial = false): MemberAnalysisResp
     access_level: "member",
     requires_login: false,
     detail: partial ? clone(samsung.partial_detail) : clone(samsung.member_detail),
-    personalized_checkpoints: clone(samsung.member_profiles[profileKey(user)]),
+    personalized_checkpoints: composePersonal("삼성전자", "HBM 메모리", samsung.member_detail.market_temperature.score, samsung.member_detail.evidence_level.level, user),
   };
 }
 

@@ -207,7 +207,7 @@ export function evidenceLevelText(level: EvidenceLevel): EvidenceLevelView {
   return { text: "아직 조금", segments: 1 };
 }
 
-/** 환호 vs 근거 — 시장 관심(온도)과 공식 확인(공시·보고서)의 온도차 판정. 뉴스만 띄워 주가를 부양하는 흐름을 잡기 위한 화면용 휴리스틱.
+/** 분위기 vs 근거 — 시장 관심(온도)과 공식 확인(공시·보고서)의 온도차 판정. 뉴스만 띄워 주가를 부양하는 흐름을 잡기 위한 화면용 휴리스틱.
  *  실서비스에선 MCP Client의 공통 분석이 같은 판단을 계약 필드로 내려주는 게 맞다(팀 제안 예정). */
 export type GapLevel = "large" | "some" | "small" | "quiet";
 
