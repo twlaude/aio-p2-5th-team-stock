@@ -7,6 +7,7 @@ service와 rag/parser 계층에 둔다.
 from __future__ import annotations
 
 from io import BytesIO
+import re
 from typing import Any, cast
 from xml.etree import ElementTree
 from zipfile import BadZipFile, ZipFile
@@ -17,7 +18,9 @@ from app.core.config import DisclosureConfig, get_config
 from app.schemas.re import (
     DartCorpCode,
     DartDisclosureListResponse,
+    DartDisclosureRecord,
     DartDocument,
+    DartPeriodicReportType,
 )
 
 
@@ -137,6 +140,39 @@ class DartClient:
             "xml": self._get_zip_xml("/document.xml", {"rcept_no": receipt_number}),
         }
 
+    def get_periodic_reports(
+        self,
+        *,
+        corp_code: str,
+        begin_date: str,
+        end_date: str,
+        report_type: DartPeriodicReportType,
+    ) -> list[DartDisclosureRecord]:
+        """정기공시에서 사업·반기·분기보고서만 골라 반환한다.
+
+        DART에는 보고서 종류별 목록 API가 없으므로 정기공시(``pblntf_ty=A``)를
+        조회한 뒤 제목으로 분류한다. ``[기재정정]`` 같은 접두어도 허용한다.
+        """
+
+        report_names = {
+            "annual": "사업보고서",
+            "semi_annual": "반기보고서",
+            "quarterly": "분기보고서",
+        }
+        response = self.get_disclosures(
+            corp_code=corp_code,
+            begin_date=begin_date,
+            end_date=end_date,
+            page_count=100,
+            disclosure_type="A",
+        )
+        expected_name = report_names[report_type]
+        return [
+            record
+            for record in response.get("list", [])
+            if self._normalized_report_name(record["report_nm"]).startswith(expected_name)
+        ]
+
     def _get_json(
         self,
         path: str,
@@ -191,6 +227,15 @@ class DartClient:
         if status and status != "000":
             message = (root.findtext(".//message") or "DART 요청에 실패했습니다.").strip()
             raise DartApiError(status, message)
+
+    @staticmethod
+    def _normalized_report_name(report_name: str) -> str:
+        """DART 정정 공시 접두어를 제거해 원래 보고서명을 비교한다."""
+
+        normalized = report_name.strip()
+        while normalized.startswith("["):
+            normalized = re.sub(r"^\[[^\]]+\]\s*", "", normalized, count=1)
+        return normalized
 
     def _request(self, path: str, params: dict[str, Any]) -> httpx.Response:
         request_params = {"crtfc_key": self._config.dart_api_key, **params}

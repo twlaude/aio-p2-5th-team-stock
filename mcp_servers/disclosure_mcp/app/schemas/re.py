@@ -8,6 +8,7 @@ from typing import Literal, NotRequired, TypedDict
 
 
 DartStatus = Literal["000", "010", "011", "012", "013", "014", "020", "021", "100", "800", "900", "901"]
+DartPeriodicReportType = Literal["annual", "semi_annual", "quarterly"]
 
 
 class DartResponse(TypedDict):
