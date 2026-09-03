@@ -1,17 +1,56 @@
-import { useSearch } from "../../state/searchStore";
+import { useEffect, useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
 
-/** 영역 B 소유 — 공개 결과(가격·스파크라인·한줄결론·why)·비회원 게이트. 아래는 스텁. */
+import { GuestGate } from "../../components/stock/GuestGate";
+import { OneLiner } from "../../components/stock/OneLiner";
+import { PriceHeader } from "../../components/stock/PriceHeader";
+import { Sparkline } from "../../components/stock/Sparkline";
+import { WhyButton } from "../../components/stock/WhyButton";
+import { useSearch } from "../../state/searchStore";
+import "./result.css";
+
+/** 영역 B 소유 — 공개 결과(가격·스파크라인·한줄결론·why)·비회원 게이트. */
 export function ResultSection() {
-  const { result, status } = useSearch();
+  const { query, result, runId, status, submittedQuery } = useSearch();
+  const [gateOpen, setGateOpen] = useState(false);
+  const reducedMotion = useReducedMotion();
+
+  useEffect(() => {
+    setGateOpen(false);
+  }, [runId]);
+
   if (status !== "ready" || !result || result.status === "unsupported_company") {
     return null;
   }
+
+  const handleWhy = () => {
+    // motion 4b-9
+    if (result.access_level === "member") {
+      document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    setGateOpen(true);
+    requestAnimationFrame(() => {
+      document.getElementById("guest-gate")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
+
   return (
-    <section className="result">
-      <h2>{result.company.company_name} {result.company.stock_code}</h2>
-      <p>{result.price.current_price.toLocaleString()}원 ({result.price.change_rate}%)</p>
-      <p>{result.one_line_summary}</p>
-      <a href="#evidence">왜 이렇게 판단했나요?</a>
-    </section>
+    <motion.section
+      className="result-section"
+      key={runId}
+      initial={reducedMotion ? { opacity: 0 } : { opacity: 0, y: 24 }}
+      animate={reducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+    >
+      {/* motion 4b-4 */}
+      <PriceHeader company={result.company} price={result.price} />
+      <Sparkline stockCode={result.company.stock_code} changeRate={result.price.change_rate} />
+      <OneLiner text={result.one_line_summary} />
+      <WhyButton onClick={handleWhy} />
+      {result.access_level === "guest" && gateOpen
+        ? <GuestGate companyName={result.company.company_name} query={submittedQuery ?? query} />
+        : null}
+    </motion.section>
   );
 }
