@@ -9,6 +9,7 @@ from .search import (
     DisclosureDetailResponse,
     DisclosureItem,
     MatchedPassage,
+    PeriodicReportSearchRequest,
     RecentDisclosuresRequest,
     RecentDisclosuresResponse,
 )
@@ -38,6 +39,7 @@ __all__ = [
     "DisclosureDetailResponse",
     "DisclosureItem",
     "MatchedPassage",
+    "PeriodicReportSearchRequest",
     "RecentDisclosuresRequest",
     "RecentDisclosuresResponse",
 ]

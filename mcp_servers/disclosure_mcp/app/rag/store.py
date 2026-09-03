@@ -19,6 +19,7 @@ class StoredReport:
     id: int
     stock_code: str
     report_year: int
+    report_type: str
     report_name: str
     receipt_number: str
     published_at: datetime | None
@@ -40,25 +41,31 @@ class ReportStore:
             raise ValueError("database_url is required.")
         self._database_url = database_url
 
-    def get_report(self, stock_code: str, report_year: int | None = None) -> StoredReport | None:
+    def get_report(
+        self, stock_code: str, report_type: str, report_year: int | None = None
+    ) -> StoredReport | None:
         query = """
-            SELECT id, stock_code, report_year, report_name, receipt_number, published_at, source_url
+            SELECT id, stock_code, report_year, report_type, report_name, receipt_number, published_at, source_url
             FROM annual_reports
-            WHERE stock_code = %s
+            WHERE stock_code = %s AND report_type = %s
         """
-        params: tuple[object, ...] = (stock_code,)
+        params: tuple[object, ...] = (stock_code, report_type)
         if report_year is not None:
             query += " AND report_year = %s"
-            params = (stock_code, report_year)
+            params = (stock_code, report_type, report_year)
         query += " ORDER BY report_year DESC LIMIT 1"
         with psycopg.connect(self._database_url, row_factory=dict_row) as connection:
             row = connection.execute(query, params).fetchone()
         return StoredReport(**row) if row else None
 
-    def available_years(self, stock_code: str) -> list[int]:
-        query = "SELECT report_year FROM annual_reports WHERE stock_code = %s ORDER BY report_year DESC"
+    def available_years(self, stock_code: str, report_type: str) -> list[int]:
+        query = """
+            SELECT report_year FROM annual_reports
+            WHERE stock_code = %s AND report_type = %s
+            ORDER BY report_year DESC
+        """
         with psycopg.connect(self._database_url) as connection:
-            rows = connection.execute(query, (stock_code,)).fetchall()
+            rows = connection.execute(query, (stock_code, report_type)).fetchall()
         return [row[0] for row in rows]
 
     def replace_report(
@@ -66,6 +73,7 @@ class ReportStore:
         *,
         stock_code: str,
         report_year: int,
+        report_type: str,
         report_name: str,
         receipt_number: str,
         published_at: datetime,
@@ -96,20 +104,24 @@ class ReportStore:
         ]
         with psycopg.connect(self._database_url) as connection:
             connection.execute(
-                "DELETE FROM annual_reports WHERE stock_code = %s AND report_year = %s",
-                (stock_code, report_year),
+                """
+                DELETE FROM annual_reports
+                WHERE stock_code = %s AND report_year = %s AND report_type = %s
+                """,
+                (stock_code, report_year, report_type),
             )
             report_row = connection.execute(
                 """
                 INSERT INTO annual_reports (
-                    stock_code, report_year, report_name, receipt_number, published_at,
+                    stock_code, report_year, report_type, report_name, receipt_number, published_at,
                     source_url, chunk_count, content_hash
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
                 RETURNING id
                 """,
                 (
                     stock_code,
                     report_year,
+                    report_type,
                     report_name,
                     receipt_number,
                     published_at,
@@ -120,15 +132,16 @@ class ReportStore:
             ).fetchone()
             assert report_row is not None
             report_id = report_row[0]
-            connection.executemany(
-                """
-                INSERT INTO report_chunks (
-                    annual_report_id, chunk_index, section_title, content, content_hash,
-                    has_table, embedding, embedding_model, metadata
-                ) VALUES (%s, %s, %s, %s, %s, %s, %s::vector, %s, %s)
-                """,
-                [(report_id, *row) for row in vector_rows],
-            )
+            with connection.cursor() as cursor:
+                cursor.executemany(
+                    """
+                    INSERT INTO report_chunks (
+                        annual_report_id, chunk_index, section_title, content, content_hash,
+                        has_table, embedding, embedding_model, metadata
+                    ) VALUES (%s, %s, %s, %s, %s, %s, %s::vector, %s, %s)
+                    """,
+                    [(report_id, *row) for row in vector_rows],
+                )
 
     def search(
         self,

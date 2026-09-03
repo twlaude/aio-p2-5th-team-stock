@@ -7,6 +7,7 @@ import html
 import re
 from xml.etree import ElementTree
 
+from bs4 import BeautifulSoup
 
 @dataclass(frozen=True)
 class ParsedReportSection:
@@ -30,8 +31,14 @@ def parse_report_sections(xml: str) -> list[ParsedReportSection]:
 
     try:
         root = ElementTree.fromstring(html.unescape(xml))
-    except ElementTree.ParseError as error:
-        raise ReportParseError("DART 정기보고서 XML을 파싱하지 못했습니다.") from error
+    except ElementTree.ParseError:
+        # DART 원문에는 태그 불일치가 있는 HTML 혼합 문서가 존재한다.
+        # HTML 파서로 복구한 뒤 기존 섹션 선택·표 평탄화 로직을 재사용한다.
+        try:
+            soup = BeautifulSoup(html.unescape(xml), "html.parser")
+            root = ElementTree.fromstring(str(soup))
+        except ElementTree.ParseError as error:
+            raise ReportParseError("DART 정기보고서 XML을 파싱하지 못했습니다.") from error
 
     parsed: list[ParsedReportSection] = []
     for top_section in (item for item in root.iter() if _tag(item) == "SECTION-1"):

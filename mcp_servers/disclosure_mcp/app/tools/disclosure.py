@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from functools import lru_cache
-from typing import Any
+from typing import Any, Literal
 from uuid import uuid4
 
 from fastmcp import FastMCP
@@ -75,6 +75,33 @@ def register_disclosure_tools(mcp: FastMCP) -> None:
                     company_name=company_name,
                     top_k=top_k,
                     report_year=report_year,
+                )
+            )
+            result.update(_common_fields(stock_code=stock_code, company_name=company_name))
+            return result
+        except Exception as error:
+            return _tool_error(error)
+
+    @mcp.tool()
+    def search_periodic_report(
+        stock_code: str,
+        query: str,
+        report_type: Literal["annual", "semi_annual", "quarterly"],
+        company_name: str | None = None,
+        top_k: int = 5,
+        report_year: int | None = None,
+    ) -> dict[str, Any]:
+        """사업·반기·분기보고서 중 선택한 유형의 관련 원문을 검색한다."""
+
+        try:
+            result = dict(
+                _annual_service().search_periodic_report(
+                    stock_code=stock_code,
+                    query=query,
+                    company_name=company_name,
+                    top_k=top_k,
+                    report_year=report_year,
+                    report_type=report_type,
                 )
             )
             result.update(_common_fields(stock_code=stock_code, company_name=company_name))

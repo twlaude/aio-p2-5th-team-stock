@@ -49,6 +49,8 @@ CREATE TABLE IF NOT EXISTS annual_reports (
     id              BIGSERIAL PRIMARY KEY,
     stock_code      VARCHAR(6) NOT NULL REFERENCES companies(stock_code),
     report_year     SMALLINT NOT NULL,
+    report_type     TEXT NOT NULL DEFAULT 'annual'
+                    CHECK (report_type IN ('annual', 'semi_annual', 'quarterly')),
     report_name     TEXT NOT NULL,
     receipt_number  VARCHAR(14) NOT NULL UNIQUE,
     published_at    TIMESTAMPTZ,
@@ -57,7 +59,7 @@ CREATE TABLE IF NOT EXISTS annual_reports (
     content_hash    CHAR(64),
     indexed_at      TIMESTAMPTZ NOT NULL DEFAULT now(),
     updated_at      TIMESTAMPTZ NOT NULL DEFAULT now(),
-    UNIQUE (stock_code, report_year),
+    UNIQUE (stock_code, report_year, report_type),
     CHECK (receipt_number ~ '^[0-9]{14}$'),
     CHECK (report_year BETWEEN 2000 AND 2100)
 );

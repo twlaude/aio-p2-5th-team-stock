@@ -30,3 +30,11 @@ MCP Client에 공개하는 Tool만 정의한다. 기업 고유번호 조회는 `
 - `top_k`: 최대 5. 보고서 전체를 반환하지 않는다.
 
 자세한 JSON 필드와 예시는 `shared/contracts/disclosure/README.md`를 따른다.
+
+## `search_periodic_report`
+
+사업·반기·분기보고서를 공통으로 검색한다.
+
+- 입력: `stock_code`, `query`, `report_type` (`annual` | `semi_annual` | `quarterly`)
+- 선택 입력: `company_name`, `report_year`, `top_k`
+- 출력: 보고서 유형·연도·관련 원문 청크·DART 출처

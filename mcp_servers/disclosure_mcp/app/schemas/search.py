@@ -111,11 +111,22 @@ class AnnualReportSearchResponse(TypedDict, total=False):
     report_name: str
     receipt_number: str
     report_year: int
+    report_type: Literal["annual", "semi_annual", "quarterly"]
     matched_passages: list[MatchedPassage]
     available_years: list[int]
     source_url: str
     collected_at: str
     error: ErrorDetail
+
+
+class PeriodicReportSearchRequest(TypedDict):
+    """사업·반기·분기보고서 공통 검색 입력."""
+
+    company_name: str
+    stock_code: str
+    query: str
+    report_type: Literal["annual", "semi_annual", "quarterly"]
+    top_k: int
 
 
 class AnnualReportChunk(TypedDict):

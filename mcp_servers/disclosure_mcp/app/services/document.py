@@ -7,6 +7,7 @@ import re
 from datetime import datetime, timezone
 from xml.etree import ElementTree
 
+from bs4 import BeautifulSoup
 from app.clients.dart import DartClient
 from app.clients.repository import DisclosureRepository
 from app.schemas.search import DisclosureDetailResponse
@@ -73,8 +74,8 @@ def flatten_document_xml(xml: str) -> str:
 
     try:
         root = ElementTree.fromstring(html.unescape(xml))
-    except ElementTree.ParseError as error:
-        raise DocumentParseError("DART 공시 XML을 파싱하지 못했습니다.") from error
+    except ElementTree.ParseError:
+        return _flatten_html_document(xml)
 
     lines: list[str] = []
 
@@ -94,6 +95,35 @@ def flatten_document_xml(xml: str) -> str:
 
     if not lines:
         fallback = _normalize_whitespace(" ".join(root.itertext()))
+        if fallback:
+            lines.append(fallback)
+    return "\n".join(_deduplicate_adjacent(lines))
+
+
+def _flatten_html_document(document: str) -> str:
+    """태그 불일치가 있는 DART HTML 혼합 문서를 관대하게 평탄화한다."""
+
+    soup = BeautifulSoup(html.unescape(document), "html.parser")
+    lines: list[str] = []
+    for element in soup.find_all(["p", "title", "table"]):
+        if element.name in {"p", "title"}:
+            if element.find_parent("table") is None:
+                text = _normalize_whitespace(" ".join(element.stripped_strings))
+                if text:
+                    lines.append(text)
+            continue
+
+        for row in element.find_all("tr"):
+            cells = [
+                _normalize_whitespace(" ".join(cell.stripped_strings))
+                for cell in row.find_all(["td", "th", "te", "tu"], recursive=False)
+            ]
+            cells = [cell for cell in cells if cell]
+            if cells:
+                lines.append(" | ".join(cells))
+
+    if not lines:
+        fallback = _normalize_whitespace(" ".join(soup.stripped_strings))
         if fallback:
             lines.append(fallback)
     return "\n".join(_deduplicate_adjacent(lines))

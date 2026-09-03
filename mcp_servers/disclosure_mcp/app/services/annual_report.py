@@ -8,6 +8,7 @@ import re
 from app.clients.dart import DartApiError, DartClient
 from app.clients.embedding import OpenAIEmbeddingClient
 from app.rag import ReportStore, chunk_sections, parse_report_sections
+from app.schemas.re import DartPeriodicReportType
 from app.schemas.search import AnnualReportSearchResponse, MatchedPassage
 from app.services.company import CompanyResolver
 
@@ -32,24 +33,30 @@ class AnnualReportService:
         self._embedding_client = embedding_client
         self._report_store = report_store
 
-    def ingest_annual_report(self, *, stock_code: str, report_year: int) -> None:
-        """DART의 최신 정정본을 기준으로 한 기업·연도 보고서를 다시 색인한다."""
+    def ingest_periodic_report(
+        self,
+        *,
+        stock_code: str,
+        report_year: int,
+        report_type: DartPeriodicReportType,
+    ) -> None:
+        """DART의 최신 정정본을 기준으로 기업·연도 정기보고서를 다시 색인한다."""
 
         company = self._company_resolver.resolve(stock_code=stock_code)
         candidates = self._dart_client.get_periodic_reports(
             corp_code=company["corp_code"],
             begin_date=f"{report_year}0101",
             end_date=f"{report_year + 1}0630",
-            report_type="annual",
+            report_type=report_type,
         )
         candidates = [
             candidate
             for candidate in candidates
-            if _report_year(candidate["report_nm"]) == report_year
+            if _report_year(candidate["report_nm"], report_type) == report_year
         ]
         candidates.sort(key=lambda candidate: candidate["rcept_no"], reverse=True)
         if not candidates:
-            raise AnnualReportNotFoundError(f"{report_year} 사업보고서가 없습니다.")
+            raise AnnualReportNotFoundError(f"{report_year} {report_type} 보고서가 없습니다.")
 
         for candidate in candidates:
             try:
@@ -65,6 +72,7 @@ class AnnualReportService:
             self._report_store.replace_report(
                 stock_code=company["stock_code"],
                 report_year=report_year,
+                report_type=report_type,
                 report_name=candidate["report_nm"],
                 receipt_number=candidate["rcept_no"],
                 published_at=_published_at(candidate["rcept_dt"]),
@@ -75,6 +83,13 @@ class AnnualReportService:
             )
             return
         raise AnnualReportNotFoundError("원문을 내려받을 수 있는 사업보고서가 없습니다.")
+
+    def ingest_annual_report(self, *, stock_code: str, report_year: int) -> None:
+        """기존 호출부 호환용 사업보고서 색인 래퍼."""
+
+        self.ingest_periodic_report(
+            stock_code=stock_code, report_year=report_year, report_type="annual"
+        )
 
     def search_annual_report(
         self,
@@ -92,13 +107,47 @@ class AnnualReportService:
         company = self._company_resolver.resolve(
             stock_code=stock_code, company_name=company_name
         )
-        target_year = report_year or (datetime.now().year - 1)
-        report = self._report_store.get_report(company["stock_code"], target_year)
+        return self.search_periodic_report(
+            stock_code=company["stock_code"],
+            query=query,
+            company_name=company["company_name"],
+            top_k=top_k,
+            report_year=report_year,
+            report_type="annual",
+        )
+
+    def search_periodic_report(
+        self,
+        *,
+        stock_code: str,
+        query: str,
+        company_name: str | None = None,
+        top_k: int = 5,
+        report_year: int | None = None,
+        report_type: DartPeriodicReportType,
+    ) -> AnnualReportSearchResponse:
+        """사업·반기·분기보고서 중 지정한 유형의 관련 원문을 검색한다."""
+
+        if not query.strip():
+            raise ValueError("query는 비어 있을 수 없습니다.")
+        if not 1 <= top_k <= 5:
+            raise ValueError("top_k는 1~5여야 합니다.")
+        company = self._company_resolver.resolve(
+            stock_code=stock_code, company_name=company_name
+        )
+        target_year = report_year or _default_report_year(report_type)
+        report = self._report_store.get_report(
+            company["stock_code"], report_type, target_year
+        )
         if report is None:
-            self.ingest_annual_report(
-                stock_code=company["stock_code"], report_year=target_year
+            self.ingest_periodic_report(
+                stock_code=company["stock_code"],
+                report_year=target_year,
+                report_type=report_type,
             )
-            report = self._report_store.get_report(company["stock_code"], target_year)
+            report = self._report_store.get_report(
+                company["stock_code"], report_type, target_year
+            )
         assert report is not None
         query_embedding = self._embedding_client.embed([query])[0]
         hits = self._report_store.search(
@@ -118,15 +167,21 @@ class AnnualReportService:
             "report_name": report.report_name,
             "receipt_number": report.receipt_number,
             "report_year": report.report_year,
+            "report_type": report.report_type,
             "matched_passages": passages,
-            "available_years": self._report_store.available_years(company["stock_code"]),
+            "available_years": self._report_store.available_years(
+                company["stock_code"], report_type
+            ),
             "source_url": report.source_url,
             "collected_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         }
 
 
-def _report_year(report_name: str) -> int | None:
-    match = re.search(r"\((\d{4})\.12\)", report_name)
+def _report_year(
+    report_name: str, report_type: DartPeriodicReportType
+) -> int | None:
+    month = {"annual": "12", "semi_annual": "06", "quarterly": "03|09"}[report_type]
+    match = re.search(rf"\((\d{{4}})\.(?:{month})\)", report_name)
     return int(match.group(1)) if match else None
 
 
@@ -136,3 +191,12 @@ def _published_at(dart_date: str) -> datetime:
 
 def _source_url(receipt_number: str) -> str:
     return f"https://dart.fss.or.kr/dsaf001/main.do?rcptNo={receipt_number}"
+
+
+def _default_report_year(report_type: DartPeriodicReportType) -> int:
+    now = datetime.now()
+    if report_type == "annual":
+        return now.year - 1
+    if report_type == "semi_annual":
+        return now.year if now.month >= 8 else now.year - 1
+    return now.year if now.month >= 5 else now.year - 1
