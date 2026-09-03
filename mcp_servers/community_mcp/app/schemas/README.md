@@ -1,3 +1,3 @@
 # Community Schemas
 
-분석 기간, 표본 수, 감성 집계, 주요 주제와 원문 식별자 Schema가 들어갈 위치다.
+- `reaction.py`: Tool 입력(`ReactionRequest`, `FGIRequest`)과 출력(`ReactionResponse`, `FGIResponse`) TypedDict. 필드 이름은 `shared/contracts/community/README.md` 계약과 동일하게 맞춘다.
