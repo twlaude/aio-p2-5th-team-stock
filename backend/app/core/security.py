@@ -1,7 +1,13 @@
+from datetime import datetime, timedelta, timezone
 import hashlib
 import os
 
+import jwt
+
+from app.core.config import settings
+
 _PBKDF2_ITERATIONS = 200_000
+_JWT_ALGORITHM = "HS256"
 
 
 def hash_password(password: str, salt: bytes | None = None) -> str:
@@ -16,3 +22,17 @@ def verify_password(password: str, stored: str) -> bool:
         return False
     candidate = hash_password(password, bytes.fromhex(salt_hex))
     return candidate == stored
+
+
+def create_access_token(user_id: str) -> str:
+    expires_at = datetime.now(timezone.utc) + timedelta(minutes=settings.jwt_expires_minutes)
+    payload = {"sub": user_id, "exp": expires_at}
+    return jwt.encode(payload, settings.jwt_secret_key, algorithm=_JWT_ALGORITHM)
+
+
+def decode_access_token(token: str) -> str | None:
+    try:
+        payload = jwt.decode(token, settings.jwt_secret_key, algorithms=[_JWT_ALGORITHM])
+    except jwt.PyJWTError:
+        return None
+    return payload.get("sub")

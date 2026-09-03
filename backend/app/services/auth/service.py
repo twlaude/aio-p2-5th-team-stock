@@ -1,8 +1,8 @@
 from fastapi import Depends, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
-from app.core.security import verify_password
-from app.repositories import session_repository, user_repository
+from app.core.security import create_access_token, decode_access_token, verify_password
+from app.repositories import user_repository
 from app.schemas.profile import InvestmentProfile
 from app.schemas.user import AuthResponse, CurrentUser, UserPublic
 
@@ -11,7 +11,7 @@ _bearer_optional = HTTPBearer(auto_error=False)
 
 
 def _issue_auth_response(record) -> AuthResponse:
-    token = session_repository.issue_token(record.user_id)
+    token = create_access_token(record.user_id)
     return AuthResponse(
         status="success",
         access_token=token,
@@ -36,7 +36,7 @@ def signup(username: str, password: str, display_name: str, profile: InvestmentP
 
 
 def _resolve_user(token: str) -> CurrentUser:
-    user_id = session_repository.resolve_token(token)
+    user_id = decode_access_token(token)
     if user_id is None:
         raise HTTPException(status_code=401, detail="로그인이 필요하다.")
     record = user_repository.get_by_id(user_id)

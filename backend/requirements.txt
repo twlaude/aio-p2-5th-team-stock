@@ -8,3 +8,5 @@ openai
 httpx
 python-dotenv
 pytest
+pyjwt
+redis

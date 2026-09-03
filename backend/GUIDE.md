@@ -103,16 +103,18 @@ docker build -f backend/Dockerfile -t stock-backend .
 docker run -p 8000:8000 --env-file backend/.env stock-backend
 ```
 
-## 테스트 실행 전 PostgreSQL 필요
+## 테스트 실행 전 PostgreSQL·Redis 필요
 
-`app/repositories/user_repository.py`, `analysis_repository.py`가 실제 PostgreSQL을 사용한다(더 이상 메모리 저장이 아니다). 테스트나 로컬 실행 전에 DB를 먼저 띄운다.
+`user_repository.py`·`analysis_repository.py`는 PostgreSQL을, `clients/redis/client.py`는 Redis를 실제로 사용한다(메모리 저장 아님). 테스트나 로컬 실행 전에 둘 다 먼저 띄운다.
 
 ```bash
 cd infra
-docker compose up -d postgres
+docker compose up -d
 ```
 
-`DATABASE_URL` 기본값은 `infra/docker-compose.yml`의 기본 계정과 일치한다. Redis 단기 상태(`clients/redis/client.py`)와 로그인 토큰(`repositories/session_repository.py`)은 아직 메모리 그대로다 — 별도 작업으로 남겨둔다.
+`DATABASE_URL`·`REDIS_URL` 기본값은 `infra/docker-compose.yml`의 기본 계정과 일치한다.
+
+로그인 토큰은 메모리 매핑이 아니라 실제 JWT(HS256)다. `JWT_SECRET_KEY`를 배포 환경에서는 반드시 32바이트 이상의 무작위 값으로 바꾼다. `JWT_EXPIRES_MINUTES`(기본 1440 = 24시간)가 지나면 토큰이 만료되어 재로그인이 필요하다.
 
 ## 개인화는 MCP Client 책임
 
