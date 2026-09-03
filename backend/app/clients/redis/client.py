@@ -1,18 +1,28 @@
-"""단기 State 저장소. Redis 연결 전까지 프로세스 메모리로 대체한다(골격 단계)."""
+import json
 from typing import Any
 
-_STATE: dict[str, dict[str, Any]] = {}
+import redis
+
+from app.core.config import settings
+
+_client = redis.from_url(settings.redis_url, decode_responses=True)
+
+
+def _key(user_id: str) -> str:
+    return f"backend:short_term:{user_id}"
 
 
 def get_state(user_id: str) -> dict[str, Any]:
-    return dict(_STATE.get(user_id, {}))
+    raw = _client.get(_key(user_id))
+    return json.loads(raw) if raw else {}
 
 
 def set_state(user_id: str, **fields: Any) -> dict[str, Any]:
-    state = _STATE.setdefault(user_id, {})
+    state = get_state(user_id)
     state.update(fields)
-    return dict(state)
+    _client.set(_key(user_id), json.dumps(state), ex=settings.redis_ttl_seconds)
+    return state
 
 
 def clear_state(user_id: str) -> None:
-    _STATE.pop(user_id, None)
+    _client.delete(_key(user_id))

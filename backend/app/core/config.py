@@ -19,7 +19,8 @@ class Settings(BaseSettings):
 
     auth_mode: str = "demo"
     demo_user_id: str = "demo-user-a"
-    jwt_secret_key: str = "dev-secret-change-me"
+    jwt_secret_key: str = "dev-secret-change-me-please-32-bytes-min"
+    jwt_expires_minutes: int = 1440  # 24시간
 
     cors_allowed_origins: str = "http://localhost:5173"
 
