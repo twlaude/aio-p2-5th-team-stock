@@ -17,15 +17,15 @@ _HORIZON_LABEL = {"short": "단기", "medium": "중기", "long": "장기"}
 
 
 class MCPClientError(Exception):
+    """MCP Client 응답 자체는 받았지만(예: request_id 불일치) 신뢰할 수 없는 경우."""
+
+
+class MCPClientTimeout(Exception):
     pass
 
 
-class MCPClientTimeout(MCPClientError):
-    pass
-
-
-class MCPClientUnavailable(MCPClientError):
-    pass
+class MCPClientUnavailable(Exception):
+    """연결 실패·5xx 등 MCP Client에 도달하지 못했거나 정상 응답을 받지 못한 경우."""
 
 
 def _mock_personalized_checkpoints(profile: InvestmentProfile, one_line_summary: str) -> dict[str, Any]:
@@ -45,7 +45,7 @@ def _mock_personalized_checkpoints(profile: InvestmentProfile, one_line_summary:
 def _mock_common_analysis(
     company_name: str, stock_code: str, request_id: str, investment_profile: InvestmentProfile | None
 ) -> dict[str, Any]:
-    """mcp_client 통합 서버가 아직 없을 때 Backend 단독 실행을 확인하기 위한 표본 응답."""
+    """MCP_CLIENT_MODE=mock일 때 쓰는 표본 응답. mcp_client 없이도 Backend를 단독 실행할 수 있게 한다."""
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     one_line_summary = f"{company_name}의 최근 흐름을 뉴스·공시·커뮤니티 반응과 함께 정리했다(Mock)."
     result: dict[str, Any] = {
@@ -79,9 +79,11 @@ def _mock_common_analysis(
 
 
 def fetch_common_analysis(
-    company_name: str, stock_code: str, investment_profile: InvestmentProfile | None
+    company_name: str, stock_code: str, investment_profile: InvestmentProfile | None, request_id: str
 ) -> dict[str, Any]:
-    request_id = str(uuid4())
+    if settings.mcp_client_mode == "mock":
+        return _mock_common_analysis(company_name, stock_code, request_id, investment_profile)
+
     payload = {
         "request_id": request_id,
         "company": {"company_name": company_name, "stock_code": stock_code},
@@ -95,8 +97,12 @@ def fetch_common_analysis(
             timeout=settings.mcp_client_timeout_seconds,
         )
         response.raise_for_status()
-        return response.json()
     except httpx.TimeoutException:
         raise MCPClientTimeout() from None
-    except httpx.HTTPError:
-        return _mock_common_analysis(company_name, stock_code, request_id, investment_profile)
+    except httpx.HTTPError as exc:
+        raise MCPClientUnavailable() from exc
+
+    data = response.json()
+    if data.get("request_id") != request_id:
+        raise MCPClientError(f"request_id 불일치: 보낸 값 {request_id}, 받은 값 {data.get('request_id')}")
+    return data
