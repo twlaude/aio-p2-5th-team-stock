@@ -16,13 +16,13 @@ mcp_servers/
 
 ```text
 각_mcp/
+├─ server.py                # 진입점: FastMCP 생성 + Tool 등록만 (로직 없음). 실행 `python server.py`
 ├─ app/
 │  ├─ tools/                # MCP Tool 공개 규격
 │  ├─ services/             # 정제·검색·계산 규칙
 │  ├─ clients/              # 외부 API·DB 연결
 │  ├─ schemas/              # Tool 입력·출력 형식
-│  ├─ core/                 # 설정·로그
-│  └─ server.py
+│  └─ core/                 # 설정·로그
 ├─ tests/
 ├─ .env.example
 ├─ requirements.txt
@@ -36,6 +36,7 @@ mcp_servers/
 - `clients`: 주가 API, 뉴스 API, DART, 태웅님 서버, DB 등 각 서버의 실제 원본 연결
 - `schemas`: 필드 이름과 자료형
 - `core`: 환경변수, 포트, 로그, 공통 오류
+- `server.py`: 폴더 루트에 둔다. 교재 05장 MCP 예시와 FastMCP 공식 예시가 모두 루트 `server.py`이며, `python server.py`로 바로 실행된다. FastAPI 쪽 `app/main.py`와 달리 MCP는 앱 패키지 밖에 진입점을 둔다.
 
 ## 모든 MCP 응답에 필요한 정보
 

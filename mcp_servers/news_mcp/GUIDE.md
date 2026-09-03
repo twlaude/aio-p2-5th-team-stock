@@ -33,6 +33,23 @@ relevance
 collected_at
 ```
 
+## 목표 구조
+
+```text
+news_mcp/
+├─ server.py       # 진입점 (FastMCP 생성 + Tool 등록)
+├─ app/
+│  ├─ tools/       # MCP Tool
+│  ├─ services/    # 기사 정제·중복 제거·요약
+│  ├─ clients/     # 뉴스 API 연결
+│  ├─ schemas/     # Tool 입출력
+│  └─ core/        # 설정·로그
+├─ tests/
+├─ .env.example
+├─ requirements.txt
+└─ GUIDE.md
+```
+
 ## 환경변수 계획
 
 ```text
