@@ -33,23 +33,6 @@ relevance
 collected_at
 ```
 
-## 목표 구조
-
-```text
-news_mcp/
-├─ server.py       # 진입점 (FastMCP 생성 + Tool 등록)
-├─ app/
-│  ├─ tools/       # MCP Tool
-│  ├─ services/    # 기사 정제·중복 제거·요약
-│  ├─ clients/     # 뉴스 API 연결
-│  ├─ schemas/     # Tool 입출력
-│  └─ core/        # 설정·로그
-├─ tests/
-├─ .env.example
-├─ requirements.txt
-└─ GUIDE.md
-```
-
 ## 환경변수 계획
 
 ```text
@@ -77,8 +60,8 @@ NEWS_RESULT_LIMIT=10
 
 ```text
 news_mcp/
+├─ server.py                # 진입점: FastMCP 생성 + Tool 등록 + /health (로직 없음)
 ├─ app/
-│  ├─ server.py             # 진입점: FastMCP 생성 + Tool 등록 + /health (로직 없음)
 │  ├─ core/config.py        # .env → NewsConfig
 │  ├─ schemas/news.py       # Tool 입출력 TypedDict (계약 필드와 동일)
 │  ├─ clients/naver_news.py # NAVER API HUB 뉴스 검색 API 호출
@@ -111,7 +94,7 @@ cd mcp_servers/news_mcp
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env            # NAVER_NEWS_CLIENT_ID/SECRET 비우면 Mock 응답, 채우면 실데이터
-python -m app.server
+python server.py
 curl http://127.0.0.1:8021/health
 ```
 
