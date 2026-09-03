@@ -79,6 +79,30 @@ COMMUNITY_RESULT_LIMIT=100
 5. MCP Client가 다른 MCP 결과와 함께 사용할 수 있는 공통 형식을 따른다.
 6. `get_fear_greed_index`가 최신 15분 공포탐욕 지수와 표본 부족 경고를 반환한다.
 
+## 구조
+
+```text
+community_mcp/
+├─ app/
+│  ├─ server.py              # 진입점: FastMCP 생성 + Tool 등록 + /health (로직 없음)
+│  ├─ core/config.py         # .env → CommunityConfig
+│  ├─ schemas/reaction.py    # Tool 입출력 TypedDict (계약 필드와 동일)
+│  ├─ clients/fgi_api.py     # 태웅님 커뮤니티 서버 HTTP 호출 (/reaction, /fgi)
+│  ├─ services/reaction.py   # 원본 응답 → 계약 형식 변환, 오류·표본 상태 판정
+│  ├─ services/mock.py       # Token 없을 때 쓰는 표본 응답
+│  └─ tools/community.py     # Tool 2개 입력 검증 + register_community_tools
+├─ tests/                    # 가짜 client로 네트워크 없이 검증 (pytest)
+├─ .env.example
+└─ requirements.txt
+```
+
+요청 흐름: MCP Client → `tools/community.py`(입력 검증) → `services/reaction.py` → `clients/fgi_api.py` → 태웅님 서버. 응답은 역순으로 돌아오며 services에서 계약 형식으로 맞춘다.
+
+손대는 위치:
+- 계약 필드 추가 → `schemas/reaction.py` + `services/reaction.py`의 map 함수 + `shared/contracts/community/README.md`
+- 원본 서버 엔드포인트 변경 → `clients/fgi_api.py`만
+- Tool 추가 → `tools/community.py`에 함수 작성 후 `register_community_tools`에 한 줄 등록
+
 ## 실행법
 
 ```bash
@@ -86,7 +110,7 @@ cd mcp_servers/community_mcp
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env            # COMMUNITY_API_TOKEN 비우면 Mock 응답, 채우면 실데이터
-python server.py
+python -m app.server
 curl http://127.0.0.1:8023/health
 ```
 

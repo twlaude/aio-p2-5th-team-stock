@@ -1,3 +1,3 @@
 # Community MCP Tools
 
-종목 게시글 검색, 반응 집계와 주요 주제 조회 Tool Schema가 들어갈 위치다.
+- `community.py`: MCP Client에 공개하는 Tool 2개(`get_community_reaction`, `get_fear_greed_index`)의 입력 검증과 등록(`register_community_tools`). 로직은 services를 호출만 한다.
