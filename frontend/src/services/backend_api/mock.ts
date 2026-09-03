@@ -211,7 +211,13 @@ function buildTemplateDetail(company: Company, template: TemplateAnalysis, parti
     },
     evidence_level: {
       level: partial ? "medium" : template.evidence_level,
-      reason: partial ? "커뮤니티 반응을 제외하고 뉴스와 공시 중심으로 확인했어요." : `${template.topic} 관련 공개 자료를 함께 확인했어요.`,
+      reason: partial
+        ? "커뮤니티 반응을 제외하고 뉴스와 공시 중심으로 확인했어요."
+        : template.evidence_level === "low"
+          ? `${template.topic}은 뉴스로만 돌고 있고, 공시·보고서로 확인된 부분은 아직 적어요.`
+          : template.evidence_level === "high"
+            ? `${template.topic} 관련 내용이 공시·보고서로도 대부분 확인돼요.`
+            : `${template.topic} 관련 공개 자료를 함께 확인했어요. 일부는 아직 기대 단계예요.`,
     },
     news_summary: `${company.company_name} 관련 뉴스는 ${template.topic} 흐름을 중심으로 살펴봐야 해요.`,
     disclosure_summary: `${company.company_name}의 최근 공시는 실적과 투자 계획을 확인하는 데 초점이 있어요.`,
