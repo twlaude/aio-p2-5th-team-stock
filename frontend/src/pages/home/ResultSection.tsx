@@ -26,6 +26,14 @@ export function ResultSection() {
   }
 
   // 앰비언트 키워드: 회원=sources의 커뮤니티 주제, 비회원=mock 표시용 topics_preview(계약 밖 optional). 라이브 백엔드는 둘 다 없으면 미표시.
+  const sources = result.access_level === "member" ? result.detail?.sources ?? [] : [];
+  const materials = result.access_level === "member"
+    ? {
+        news: sources.filter((s) => s.type === "news").length,
+        disclosure: sources.filter((s) => s.type === "disclosure").length,
+        community: sources.find((s) => s.type === "community")?.meta?.samples as number | undefined,
+      }
+    : undefined;
   const ambientTopics = result.access_level === "member" ? deriveTopics(result.detail?.sources ?? []) : (result.topics_preview ?? []);
 
   const handleWhy = () => {
@@ -52,7 +60,7 @@ export function ResultSection() {
       <PriceHeader company={result.company} price={result.price} />
       <Sparkline stockCode={result.company.stock_code} changeRate={result.price.change_rate} />
       <ResultAmbient topics={ambientTopics} runId={runId}>
-        <OneLiner text={result.one_line_summary} />
+        <OneLiner text={result.one_line_summary} materials={materials} />
       </ResultAmbient>
       <WhyButton onClick={handleWhy} />
       {result.access_level === "guest" && gateOpen

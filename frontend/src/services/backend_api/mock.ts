@@ -55,6 +55,15 @@ interface TemplateAnalysis {
 }
 
 const DEMO_PASSWORD = "Demo1234!";
+
+/** 목 모드 한줄 결론 — 실서비스에선 MCP Client의 LLM이 4개 재료(가격·뉴스·공시·커뮤니티)를 취합해 만든다. 여기선 같은 재료로 조합만. */
+function composeOneLiner(template: TemplateAnalysis): string {
+  const news = `뉴스는 ${template.topic}에 쏠려 있고`;
+  const disclosure =
+    template.evidence_level === "high" ? "공시로도 대부분 확인돼요" : template.evidence_level === "medium" ? "공시로 확인된 건 절반쯤이에요" : "공식 확인은 아직 조금이에요";
+  const community = template.change >= 0 ? "커뮤니티는 기대가 앞서요" : "커뮤니티는 조심스러워요";
+  return `${news}, ${disclosure}. ${community}.`;
+}
 const SNAPSHOT_DATE = "2026-09-01";
 const TOKEN_PREFIX = "demo-token-";
 
@@ -247,7 +256,7 @@ function buildTemplateResponse(company: Company, user: DemoUser, partial = false
     requires_login: false,
     company: companyPayload(company),
     price: templatePrice(template),
-    one_line_summary: `${company.company_name}은 ${template.topic}을 중심으로 확인할 흐름이 보여요.`,
+    one_line_summary: composeOneLiner(template),
     detail: buildTemplateDetail(company, template, partial),
     personalized_checkpoints: samsung.member_profiles[profileKey(user)],
   };
@@ -276,7 +285,7 @@ function buildGuestResponse(company: Company): GuestAnalysisResponse {
           change_rate: 0,
           as_of: "2026-09-01T06:30:00Z",
         },
-    one_line_summary: template ? `${company.company_name}은 ${template.topic}을 중심으로 살펴봐야 해요.` : "공개 데이터로 확인할 내용을 정리했어요.",
+    one_line_summary: template ? composeOneLiner(template) : "공개 데이터로 확인할 내용을 정리했어요.",
     detail: null,
     personalized_checkpoints: null,
     topics_preview: template ? buildTemplateTopics(template) : undefined,

@@ -33,7 +33,8 @@ a {
 pre {
   margin: 0;
   white-space: pre-wrap;
-  word-break: break-word;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   font-family: var(--mono);
   font-size: 12px;
   line-height: 1.55;

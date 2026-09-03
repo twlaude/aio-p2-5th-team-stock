@@ -2,7 +2,7 @@
 .one-liner__caption { color: var(--c-primary); font-size: 15px; font-weight: 700; }
 .one-liner__bubble {
   width: 100%; padding: 28px 40px; border: 2px solid var(--c-ink); border-radius: var(--r-xl); background: var(--c-white);
-  font-size: 32px; font-weight: 700; letter-spacing: 0; line-height: 1.35; text-align: center; text-wrap: pretty;
+  font-size: 32px; font-weight: 700; letter-spacing: 0; line-height: 1.4; text-align: center; text-wrap: balance; word-break: keep-all;
 }
 .typewriter { display: inline; }
 .typewriter__cursor { display: inline-block; margin-left: 2px; animation: typewriter-blink 1s steps(2, jump-none) infinite; }
@@ -16,3 +16,9 @@
 @media (prefers-reduced-motion: reduce) {
   .typewriter__cursor { animation: none; }
 }
+
+/* 재료 취합 표시줄 — 가격·뉴스·공시·커뮤니티가 한 문장에 모였다는 신호 */
+.one-liner__materials { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 4px; }
+.one-liner__material { display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px; border-radius: var(--r-pill); background: var(--c-tint); color: var(--c-sub); font-size: 12px; font-weight: 600; }
+.one-liner__material svg { color: var(--c-primary-deep); }
+.one-liner__material strong { color: var(--c-ink); font-weight: 700; }
