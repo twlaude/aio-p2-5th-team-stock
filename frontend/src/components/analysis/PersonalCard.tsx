@@ -61,7 +61,9 @@ export function PersonalCard({ checkpoints }: PersonalCardProps) {
         <div className="analysis-personal-card__checks">
           {checks.map((check, index) => (
             <div key={`${index}-${check}`} className="analysis-personal-card__check" style={{ "--tile-delay": `${index * 90}ms` } as CSSProperties}>
-              <span>{index + 1}</span> · {check}
+              <span className="analysis-personal-card__check-no" aria-hidden="true">{index + 1}</span>
+              <span className="analysis-personal-card__check-label">먼저 볼 것</span>
+              <span className="analysis-personal-card__check-text">{check}</span>
             </div>
           ))}
         </div>
