@@ -166,7 +166,9 @@ async function guestShot(browser, gate) {
   await page.getByLabel("기업명 또는 종목코드 6자리").fill("삼성전자");
   await page.getByRole("button", { name: /살펴보기/ }).click();
   await page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).waitFor();
-  await page.waitForTimeout(950);
+  await page.waitForTimeout(1900);
+  const ambient = await page.locator(".result-ambient__topic").count();
+  if (ambient < 6) throw new Error(`${name} expected ambient topics around one-liner, got ${ambient}`);
   if (gate) {
     await page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).click();
     await page.getByText("회원가입이 필요합니다!").waitFor();
@@ -237,14 +239,8 @@ async function communityShot(browser) {
   await page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).click();
   await page.locator("#evidence-community").scrollIntoViewIfNeeded();
   await page.waitForTimeout(900);
-  const visibleTopics = await page.evaluate(() =>
-    Array.from(document.querySelectorAll(".analysis-ambient-topic")).filter((node) => {
-      const style = getComputedStyle(node);
-      const rect = node.getBoundingClientRect();
-      return style.display !== "none" && Number(style.opacity) > 0 && rect.width > 0 && rect.height > 0;
-    }).length,
-  );
-  if (visibleTopics < 8) throw new Error(`desktop-community expected visible ambient topics, got ${visibleTopics}`);
+  const topicChips = await page.locator(".analysis-evidence-topic").count();
+  if (topicChips < 8) throw new Error(`desktop-community expected topic chips, got ${topicChips}`);
   await saveViewport(page, "desktop-community");
   assertClean();
   await context.close();
@@ -258,7 +254,7 @@ async function assertMobileMember(page, label) {
       return node ? getComputedStyle(node).gridTemplateColumns.split(" ").filter(Boolean).length : 0;
     };
     const peek = document.querySelector(".analysis-peek-mascot");
-    const visibleTopics = Array.from(document.querySelectorAll(".analysis-ambient-topic")).filter((node) => getComputedStyle(node).display !== "none").length;
+    const visibleTopics = document.querySelectorAll(".result-ambient__topic").length;
     return { gauges: tracks(".sallae-evidence-section__gauges"), sections: document.querySelectorAll(".analysis-evidence-subsection").length, visibleTopics, peekWidth: peek ? Math.round(peek.getBoundingClientRect().width) : 0 };
   });
   if (layout.gauges !== 1 || layout.sections !== 3 || layout.visibleTopics > 6 || layout.peekWidth !== 64) {

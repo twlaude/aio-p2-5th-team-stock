@@ -16,7 +16,69 @@
     },
     "one_line_summary": "관심은 뜨겁지만, 공식적으로 확인된 재료는 조금 더 살펴봐야 해요.",
     "detail": null,
-    "personalized_checkpoints": null
+    "personalized_checkpoints": null,
+    "topics_preview": [
+      {
+        "text": "AI 메모리",
+        "sentiment": "positive",
+        "weight": 5
+      },
+      {
+        "text": "HBM 수요",
+        "sentiment": "positive",
+        "weight": 5
+      },
+      {
+        "text": "외국인 수급",
+        "sentiment": "positive",
+        "weight": 4
+      },
+      {
+        "text": "실적 발표",
+        "sentiment": "neutral",
+        "weight": 4
+      },
+      {
+        "text": "파운드리 마진",
+        "sentiment": "negative",
+        "weight": 4
+      },
+      {
+        "text": "단기 과열",
+        "sentiment": "negative",
+        "weight": 3
+      },
+      {
+        "text": "배당 기대",
+        "sentiment": "positive",
+        "weight": 3
+      },
+      {
+        "text": "환율 영향",
+        "sentiment": "neutral",
+        "weight": 2
+      },
+      {
+        "text": "차익 실현",
+        "sentiment": "negative",
+        "weight": 2
+      },
+      {
+        "text": "설비 투자",
+        "sentiment": "neutral",
+        "weight": 3
+      },
+      {
+        "text": "업황 회복",
+        "sentiment": "positive",
+        "weight": 4
+      },
+      {
+        "text": "밸류에이션 부담",
+        "sentiment": "negative",
+        "weight": 3
+      }
+    ]
   },
   "member_detail": {
     "market_temperature": {
@@ -37,15 +99,162 @@
     "disclosure_summary": "시설 투자와 실적 전망 관련 공시를 함께 확인해야 해요.",
     "community_summary": "커뮤니티는 기대와 단기 변동 우려가 섞인 시장 반응으로 보여요.",
     "sources": [
-      { "type": "news", "title": "삼성전자 AI 메모리 공급 확대 보도", "publisher": "Mock News", "published_at": "2026-09-01T01:30:00Z", "url": "https://example.com/samsung-news-1", "meta": { "issue_count": 3 } },
-      { "type": "news", "title": "반도체 업황 회복 기대 분석", "publisher": "Mock Market", "published_at": "2026-08-31T05:20:00Z", "url": "https://example.com/samsung-news-2" },
-      { "type": "news", "title": "HBM 수요 증가가 메모리 가격에 미치는 영향", "publisher": "Mock Economy", "published_at": "2026-08-31T02:10:00Z", "url": "https://example.com/samsung-news-3" },
-      { "type": "news", "title": "외국인 수급 반등과 대형 반도체주 흐름", "publisher": "Mock Securities", "published_at": "2026-08-30T07:40:00Z", "url": "https://example.com/samsung-news-4" },
-      { "type": "news", "title": "파운드리 회복 속도는 아직 확인 필요", "publisher": "Mock Tech", "published_at": "2026-08-30T03:15:00Z", "url": "https://example.com/samsung-news-5", "meta": { "issue_count": 2 } },
-      { "type": "disclosure", "title": "삼성전자 반기보고서 주요 재무 지표", "publisher": "Mock DART", "published_at": "2026-08-29T08:00:00Z", "url": "https://example.com/samsung-disclosure-1", "meta": { "receipt_no": "20260829000123", "confirmed": ["메모리 설비 투자 지속", "반기보고서 재무 지표 제출", "현금성 자산 규모"], "unconfirmed": ["파운드리 수익성 회복 시점", "AI 메모리 단가 지속성", "단기 주가 촉매"] } },
-      { "type": "disclosure", "title": "삼성전자 주요사항보고서 시설투자 진행", "publisher": "Mock DART", "published_at": "2026-08-20T08:00:00Z", "url": "https://example.com/samsung-disclosure-2", "meta": { "receipt_no": "20260820000456" } },
-      { "type": "disclosure", "title": "삼성전자 기업설명회 자료", "publisher": "Mock DART", "published_at": "2026-08-14T08:00:00Z", "url": "https://example.com/samsung-disclosure-3", "meta": { "receipt_no": "20260814000789" } },
-      { "type": "community", "title": "삼성전자 커뮤니티 시장 반응 표본", "publisher": "Mock Community", "published_at": "2026-09-01T04:00:00Z", "meta": { "samples": 480, "positive": 52, "neutral": 31, "negative": 17, "fgi": 68, "topics": [{ "text": "AI 메모리", "sentiment": "positive", "weight": 5 }, { "text": "HBM 수요", "sentiment": "positive", "weight": 5 }, { "text": "외국인 수급", "sentiment": "positive", "weight": 4 }, { "text": "실적 발표", "sentiment": "neutral", "weight": 4 }, { "text": "파운드리 마진", "sentiment": "negative", "weight": 3 }, { "text": "단기 과열", "sentiment": "negative", "weight": 3 }, { "text": "배당 기대", "sentiment": "positive", "weight": 2 }, { "text": "환율 영향", "sentiment": "neutral", "weight": 2 }, { "text": "재고 조정", "sentiment": "neutral", "weight": 3 }, { "text": "목표가 상향", "sentiment": "positive", "weight": 4 }, { "text": "차익 실현", "sentiment": "negative", "weight": 2 }, { "text": "업황 사이클", "sentiment": "neutral", "weight": 3 }] } }
+      {
+        "type": "news",
+        "title": "삼성전자 AI 메모리 공급 확대 보도",
+        "publisher": "Mock News",
+        "published_at": "2026-09-01T01:30:00Z",
+        "url": "https://example.com/samsung-news-1",
+        "meta": {
+          "issue_count": 3
+        }
+      },
+      {
+        "type": "news",
+        "title": "반도체 업황 회복 기대 분석",
+        "publisher": "Mock Market",
+        "published_at": "2026-08-31T05:20:00Z",
+        "url": "https://example.com/samsung-news-2"
+      },
+      {
+        "type": "news",
+        "title": "HBM 수요 증가가 메모리 가격에 미치는 영향",
+        "publisher": "Mock Economy",
+        "published_at": "2026-08-31T02:10:00Z",
+        "url": "https://example.com/samsung-news-3"
+      },
+      {
+        "type": "news",
+        "title": "외국인 수급 반등과 대형 반도체주 흐름",
+        "publisher": "Mock Securities",
+        "published_at": "2026-08-30T07:40:00Z",
+        "url": "https://example.com/samsung-news-4"
+      },
+      {
+        "type": "news",
+        "title": "파운드리 회복 속도는 아직 확인 필요",
+        "publisher": "Mock Tech",
+        "published_at": "2026-08-30T03:15:00Z",
+        "url": "https://example.com/samsung-news-5",
+        "meta": {
+          "issue_count": 2
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 반기보고서 주요 재무 지표",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-29T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-1",
+        "meta": {
+          "receipt_no": "20260829000123",
+          "confirmed": [
+            "메모리 설비 투자 지속",
+            "반기보고서 재무 지표 제출",
+            "현금성 자산 규모"
+          ],
+          "unconfirmed": [
+            "파운드리 수익성 회복 시점",
+            "AI 메모리 단가 지속성",
+            "단기 주가 촉매"
+          ]
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 주요사항보고서 시설투자 진행",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-20T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-2",
+        "meta": {
+          "receipt_no": "20260820000456"
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 기업설명회 자료",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-14T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-3",
+        "meta": {
+          "receipt_no": "20260814000789"
+        }
+      },
+      {
+        "type": "community",
+        "title": "삼성전자 커뮤니티 시장 반응 표본",
+        "publisher": "Mock Community",
+        "published_at": "2026-09-01T04:00:00Z",
+        "meta": {
+          "samples": 480,
+          "positive": 52,
+          "neutral": 31,
+          "negative": 17,
+          "fgi": 68,
+          "topics": [
+            {
+              "text": "AI 메모리",
+              "sentiment": "positive",
+              "weight": 5
+            },
+            {
+              "text": "HBM 수요",
+              "sentiment": "positive",
+              "weight": 5
+            },
+            {
+              "text": "외국인 수급",
+              "sentiment": "positive",
+              "weight": 4
+            },
+            {
+              "text": "실적 발표",
+              "sentiment": "neutral",
+              "weight": 4
+            },
+            {
+              "text": "파운드리 마진",
+              "sentiment": "negative",
+              "weight": 3
+            },
+            {
+              "text": "단기 과열",
+              "sentiment": "negative",
+              "weight": 3
+            },
+            {
+              "text": "배당 기대",
+              "sentiment": "positive",
+              "weight": 2
+            },
+            {
+              "text": "환율 영향",
+              "sentiment": "neutral",
+              "weight": 2
+            },
+            {
+              "text": "재고 조정",
+              "sentiment": "neutral",
+              "weight": 3
+            },
+            {
+              "text": "목표가 상향",
+              "sentiment": "positive",
+              "weight": 4
+            },
+            {
+              "text": "차익 실현",
+              "sentiment": "negative",
+              "weight": 2
+            },
+            {
+              "text": "업황 사이클",
+              "sentiment": "neutral",
+              "weight": 3
+            }
+          ]
+        }
+      }
     ]
   },
   "member_profiles": {
@@ -149,14 +358,87 @@
     "disclosure_summary": "공시에서는 설비 투자와 재무 지표를 함께 봐야 해요.",
     "community_summary": null,
     "sources": [
-      { "type": "news", "title": "삼성전자 AI 메모리 공급 확대 보도", "publisher": "Mock News", "published_at": "2026-09-01T01:30:00Z", "url": "https://example.com/samsung-news-1", "meta": { "issue_count": 3 } },
-      { "type": "news", "title": "반도체 업황 회복 기대 분석", "publisher": "Mock Market", "published_at": "2026-08-31T05:20:00Z", "url": "https://example.com/samsung-news-2" },
-      { "type": "news", "title": "HBM 수요 증가가 메모리 가격에 미치는 영향", "publisher": "Mock Economy", "published_at": "2026-08-31T02:10:00Z", "url": "https://example.com/samsung-news-3" },
-      { "type": "news", "title": "외국인 수급 반등과 대형 반도체주 흐름", "publisher": "Mock Securities", "published_at": "2026-08-30T07:40:00Z", "url": "https://example.com/samsung-news-4" },
-      { "type": "news", "title": "파운드리 회복 속도는 아직 확인 필요", "publisher": "Mock Tech", "published_at": "2026-08-30T03:15:00Z", "url": "https://example.com/samsung-news-5", "meta": { "issue_count": 2 } },
-      { "type": "disclosure", "title": "삼성전자 반기보고서 주요 재무 지표", "publisher": "Mock DART", "published_at": "2026-08-29T08:00:00Z", "url": "https://example.com/samsung-disclosure-1", "meta": { "receipt_no": "20260829000123", "confirmed": ["메모리 설비 투자 지속", "반기보고서 재무 지표 제출", "현금성 자산 규모"], "unconfirmed": ["파운드리 수익성 회복 시점", "AI 메모리 단가 지속성", "단기 주가 촉매"] } },
-      { "type": "disclosure", "title": "삼성전자 주요사항보고서 시설투자 진행", "publisher": "Mock DART", "published_at": "2026-08-20T08:00:00Z", "url": "https://example.com/samsung-disclosure-2", "meta": { "receipt_no": "20260820000456" } },
-      { "type": "disclosure", "title": "삼성전자 기업설명회 자료", "publisher": "Mock DART", "published_at": "2026-08-14T08:00:00Z", "url": "https://example.com/samsung-disclosure-3", "meta": { "receipt_no": "20260814000789" } }
+      {
+        "type": "news",
+        "title": "삼성전자 AI 메모리 공급 확대 보도",
+        "publisher": "Mock News",
+        "published_at": "2026-09-01T01:30:00Z",
+        "url": "https://example.com/samsung-news-1",
+        "meta": {
+          "issue_count": 3
+        }
+      },
+      {
+        "type": "news",
+        "title": "반도체 업황 회복 기대 분석",
+        "publisher": "Mock Market",
+        "published_at": "2026-08-31T05:20:00Z",
+        "url": "https://example.com/samsung-news-2"
+      },
+      {
+        "type": "news",
+        "title": "HBM 수요 증가가 메모리 가격에 미치는 영향",
+        "publisher": "Mock Economy",
+        "published_at": "2026-08-31T02:10:00Z",
+        "url": "https://example.com/samsung-news-3"
+      },
+      {
+        "type": "news",
+        "title": "외국인 수급 반등과 대형 반도체주 흐름",
+        "publisher": "Mock Securities",
+        "published_at": "2026-08-30T07:40:00Z",
+        "url": "https://example.com/samsung-news-4"
+      },
+      {
+        "type": "news",
+        "title": "파운드리 회복 속도는 아직 확인 필요",
+        "publisher": "Mock Tech",
+        "published_at": "2026-08-30T03:15:00Z",
+        "url": "https://example.com/samsung-news-5",
+        "meta": {
+          "issue_count": 2
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 반기보고서 주요 재무 지표",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-29T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-1",
+        "meta": {
+          "receipt_no": "20260829000123",
+          "confirmed": [
+            "메모리 설비 투자 지속",
+            "반기보고서 재무 지표 제출",
+            "현금성 자산 규모"
+          ],
+          "unconfirmed": [
+            "파운드리 수익성 회복 시점",
+            "AI 메모리 단가 지속성",
+            "단기 주가 촉매"
+          ]
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 주요사항보고서 시설투자 진행",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-20T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-2",
+        "meta": {
+          "receipt_no": "20260820000456"
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 기업설명회 자료",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-14T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-3",
+        "meta": {
+          "receipt_no": "20260814000789"
+        }
+      }
     ]
   },
   "error": {

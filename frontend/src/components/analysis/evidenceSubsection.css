@@ -56,17 +56,6 @@
 .analysis-disclosure-checks__panel:last-child h4 { color: var(--c-danger); }
 .analysis-disclosure-checks__panel ul { display: grid; gap: 8px; margin: 0; padding-left: 18px; color: var(--c-body); font-size: 14px; line-height: 1.45; }
 
-.analysis-ambient { position: absolute; inset: -60px -220px; z-index: 0; overflow: hidden; pointer-events: none; opacity: 0; transition: opacity 700ms ease-out; mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%); }
-.analysis-ambient--visible { opacity: 1; }
-.analysis-ambient-topic { --push-x: 0px; --push-y: 0px; position: absolute; left: var(--topic-x); top: var(--topic-y); padding: 8px 13px; border: 1px solid var(--c-line); border-radius: var(--r-pill); background: rgba(255, 255, 255, 0.64); color: var(--c-body); font-size: 13px; font-weight: 700; opacity: 0.56; transform: translate3d(var(--push-x), var(--push-y), 0) scale(var(--topic-scale)); animation: analysis-topic-float var(--topic-duration) ease-in-out var(--topic-delay) infinite alternate; white-space: nowrap; will-change: transform; }
-.analysis-ambient-topic--positive { border-color: var(--c-primary); color: var(--c-chip-fg); }
-.analysis-ambient-topic--negative { border-color: var(--c-danger); color: var(--c-danger); }
-.analysis-ambient-topic--neutral { border-color: var(--c-mute); color: var(--c-sub); }
-
-@keyframes analysis-topic-float {
-  0% { transform: translate3d(var(--push-x), var(--push-y), 0) scale(var(--topic-scale)); }
-  100% { transform: translate3d(calc(var(--topic-drift) + var(--push-x)), calc(var(--topic-float) + var(--push-y)), 0) scale(var(--topic-scale)); }
-}
 
 @keyframes analysis-section-dash-flow {
   from { background-position: 0 0; }
@@ -99,12 +88,9 @@
   .analysis-community-metrics { grid-template-columns: 1fr; }
   .analysis-community-metric__number { font-size: 30px; }
   .analysis-disclosure-checks { grid-template-columns: 1fr; }
-  .analysis-ambient { inset: -12px -20px; }
-  .analysis-ambient-topic:nth-child(n + 7) { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .analysis-evidence-subsection, .analysis-evidence-subsection--visible, .analysis-evidence-subsection--visible .analysis-community-metric__fill, .analysis-community-fgi__fill { transition: opacity 160ms ease; transform: none; }
-  .analysis-ambient-topic { animation: none; transform: translate3d(0, 0, 0) scale(var(--topic-scale)); }
   .analysis-evidence-subsection__failed-state, .analysis-evidence-subsection--shimmer .analysis-evidence-subsection__surface::after { animation: none; }
 }

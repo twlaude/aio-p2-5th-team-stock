@@ -1,5 +1,5 @@
 import { AlertCircle, CheckCircle2, ExternalLink, FileText, MessageCircle, Newspaper } from "lucide-react";
-import { useState, type CSSProperties, type MouseEvent } from "react";
+import { useState, type CSSProperties } from "react";
 
 import { type CommunityEvidence, type DisclosureChecks, type EvidenceItem, type TopicEvidence, fgiLabel } from "./deriveEvidence";
 import "./evidenceSubsection.css";
@@ -35,51 +35,6 @@ function metaText(kind: EvidenceKind, count: number, community: CommunityEvidenc
   return count > 0 ? `DART 30일 · ${count}건` : "DART 요약";
 }
 
-function updateAmbientPush(event: MouseEvent<HTMLElement>, reset = false) {
-  if (!reset && !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-  for (const bubble of event.currentTarget.querySelectorAll<HTMLElement>(".analysis-ambient-topic")) {
-    let pushX = "0px";
-    let pushY = "0px";
-    if (!reset) {
-      const rect = bubble.getBoundingClientRect();
-      const x = rect.left + rect.width / 2 - event.clientX;
-      const y = rect.top + rect.height / 2 - event.clientY;
-      const distance = Math.hypot(x, y);
-      if (distance > 0 && distance < 180) {
-        const strength = ((180 - distance) / 180) * 12;
-        pushX = `${((x / distance) * strength).toFixed(2)}px`;
-        pushY = `${((y / distance) * strength).toFixed(2)}px`;
-      }
-    }
-    bubble.style.setProperty("--push-x", pushX);
-    bubble.style.setProperty("--push-y", pushY);
-  }
-}
-
-function AmbientTopics({ topics, visible }: { topics: TopicEvidence[]; visible: boolean }) {
-  if (!topics.length) return null;
-  return (
-    <div className={classes("analysis-ambient", visible && "analysis-ambient--visible")} aria-hidden="true">
-      {topics.slice(0, 16).map((topic, index) => {
-        const weight = Math.max(1, Math.min(5, topic.weight));
-        const style = {
-          "--topic-x": `${4 + ((index * 17) % 84)}%`,
-          "--topic-y": `${8 + (index % 4) * 20 + ((index * 7) % 12)}%`,
-          "--topic-duration": `${18 + ((index * 5) % 23)}s`,
-          "--topic-delay": `${index * -1.7}s`,
-          "--topic-drift": `${index % 2 === 0 ? 16 + weight * 4 : -16 - weight * 4}px`,
-          "--topic-float": `${6 + ((index + weight) % 9)}px`,
-          "--topic-scale": 0.84 + weight * 0.08,
-        } as CSSProperties;
-        return (
-          <span className={`analysis-ambient-topic analysis-ambient-topic--${topic.sentiment}`} key={`${topic.text}-${index}`} style={style}>
-            {topic.text}
-          </span>
-        );
-      })}
-    </div>
-  );
-}
 
 function CommunityBody({ community, summary, visible }: { community: CommunityEvidence | null | undefined; summary: string | null; visible: boolean }) {
   const fgi = typeof community?.fgi === "number" ? Math.max(0, Math.min(100, community.fgi)) : null;
@@ -185,10 +140,7 @@ export function EvidenceSubsection({ id, kind, summary, count, community, items 
       ref={ref}
       className={classes("analysis-evidence-subsection", `analysis-evidence-subsection--${kind}`, inView && "analysis-evidence-subsection--visible", failed && "analysis-evidence-subsection--failed", shimmer && "analysis-evidence-subsection--shimmer")}
       style={{ "--subsection-delay": `${index * 80}ms` } as CSSProperties}
-      onMouseMove={kind === "community" ? (event) => updateAmbientPush(event) : undefined}
-      onMouseLeave={kind === "community" ? (event) => updateAmbientPush(event, true) : undefined}
     >
-      {kind === "community" ? <AmbientTopics topics={community?.topics ?? []} visible={inView} /> : null}
       <div className="analysis-evidence-subsection__surface">
         <header className="analysis-evidence-subsection__header">
           <div className="analysis-evidence-subsection__title"><Icon size={24} strokeWidth={1.9} /><h3>{copy[kind].title}</h3></div>

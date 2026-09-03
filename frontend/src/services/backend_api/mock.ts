@@ -21,6 +21,7 @@ import type {
   PersonalizedCheckpoints,
   PriceSnapshot,
   ProfileResponse,
+  TopicPreview,
   UserProfile,
 } from "./client";
 
@@ -155,7 +156,7 @@ function templatePrice(template: TemplateAnalysis): PriceSnapshot {
   };
 }
 
-function buildTemplateTopics(template: TemplateAnalysis) {
+function buildTemplateTopics(template: TemplateAnalysis): TopicPreview[] {
   return [
     { text: template.topic, sentiment: "positive", weight: 5 },
     { text: "실적 확인", sentiment: "neutral", weight: 4 },
@@ -278,6 +279,7 @@ function buildGuestResponse(company: Company): GuestAnalysisResponse {
     one_line_summary: template ? `${company.company_name}은 ${template.topic}을 중심으로 살펴봐야 해요.` : "공개 데이터로 확인할 내용을 정리했어요.",
     detail: null,
     personalized_checkpoints: null,
+    topics_preview: template ? buildTemplateTopics(template) : undefined,
   };
 }
 

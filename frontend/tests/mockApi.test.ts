@@ -4,7 +4,7 @@ import type { AnalysisResponse, GuestAnalysisResponse, MemberAnalysisResponse, U
 import { createMockClient } from "../src/services/backend_api/mock";
 
 function topLevelKeys(response: AnalysisResponse) {
-  return Object.keys(response).sort();
+  return Object.keys(response).filter((key) => key !== "topics_preview").sort();
 }
 
 function expectGuest(response: AnalysisResponse): asserts response is GuestAnalysisResponse {

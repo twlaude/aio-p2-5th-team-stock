@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
+import { deriveTopics } from "../../components/analysis/deriveEvidence";
 import { GuestGate } from "../../components/stock/GuestGate";
 import { OneLiner } from "../../components/stock/OneLiner";
 import { PriceHeader } from "../../components/stock/PriceHeader";
+import { ResultAmbient } from "../../components/stock/ResultAmbient";
 import { Sparkline } from "../../components/stock/Sparkline";
 import { WhyButton } from "../../components/stock/WhyButton";
 import { useSearch } from "../../state/searchStore";
@@ -22,6 +24,9 @@ export function ResultSection() {
   if (status !== "ready" || !result || result.status === "unsupported_company") {
     return null;
   }
+
+  // 앰비언트 키워드: 회원=sources의 커뮤니티 주제, 비회원=mock 표시용 topics_preview(계약 밖 optional). 라이브 백엔드는 둘 다 없으면 미표시.
+  const ambientTopics = result.access_level === "member" ? deriveTopics(result.detail?.sources ?? []) : (result.topics_preview ?? []);
 
   const handleWhy = () => {
     // motion 4b-9
@@ -46,7 +51,9 @@ export function ResultSection() {
       {/* motion 4b-4 */}
       <PriceHeader company={result.company} price={result.price} />
       <Sparkline stockCode={result.company.stock_code} changeRate={result.price.change_rate} />
-      <OneLiner text={result.one_line_summary} />
+      <ResultAmbient topics={ambientTopics} runId={runId}>
+        <OneLiner text={result.one_line_summary} />
+      </ResultAmbient>
       <WhyButton onClick={handleWhy} />
       {result.access_level === "guest" && gateOpen
         ? <GuestGate companyName={result.company.company_name} query={submittedQuery ?? query} />
