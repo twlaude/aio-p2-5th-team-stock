@@ -76,7 +76,8 @@ REDIS_URL
 REDIS_TTL_SECONDS
 
 MCP_CLIENT_URL
-MCP_CLIENT_TIMEOUT_SECONDS
+MCP_CLIENT_TIMEOUT_SECONDS=75
+MCP_CLIENT_MODE=mock   # mock | live. live에서 연결 실패는 Mock으로 숨기지 않고 오류로 반환한다.
 
 LLM_PROVIDER
 OPENAI_API_KEY
@@ -86,6 +87,8 @@ OPENAI_REASONING_EFFORT=low
 AUTH_MODE
 DEMO_USER_ID
 JWT_SECRET_KEY
+
+CORS_ALLOWED_ORIGINS=http://localhost:5173   # 콤마로 여러 origin 허용
 ```
 
 실제 값은 `.env`에만 두고 `.env.example`에는 키 이름과 예시 형식만 작성한다.

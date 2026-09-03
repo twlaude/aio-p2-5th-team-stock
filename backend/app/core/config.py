@@ -9,7 +9,8 @@ class Settings(BaseSettings):
     redis_ttl_seconds: int = 1800
 
     mcp_client_url: str = "http://localhost:8010"
-    mcp_client_timeout_seconds: float = 15.0
+    mcp_client_timeout_seconds: float = 75.0  # 공통 계약: Backend → MCP Client 75초
+    mcp_client_mode: str = "mock"  # "mock" | "live"
 
     llm_provider: str = "openai"
     openai_api_key: str = ""
@@ -19,6 +20,12 @@ class Settings(BaseSettings):
     auth_mode: str = "demo"
     demo_user_id: str = "demo-user-a"
     jwt_secret_key: str = "dev-secret-change-me"
+
+    cors_allowed_origins: str = "http://localhost:5173"
+
+    @property
+    def cors_allowed_origin_list(self) -> list[str]:
+        return [origin.strip() for origin in self.cors_allowed_origins.split(",") if origin.strip()]
 
 
 settings = Settings()

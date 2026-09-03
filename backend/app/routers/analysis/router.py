@@ -1,7 +1,9 @@
 from fastapi import APIRouter, Depends
+from fastapi.responses import JSONResponse
 
 from app.schemas.analysis import AnalysisRequest, AnalysisResponse, UnsupportedCompanyResponse
 from app.schemas.company import Company, CompanyListResponse
+from app.schemas.errors import STATUS_HTTP_CODE, ErrorResponse
 from app.schemas.user import CurrentUser
 from app.services.analysis import companies
 from app.services.analysis.service import run_analysis
@@ -22,5 +24,9 @@ def list_companies() -> CompanyListResponse:
 @router.post("/analyses")
 def create_analysis(
     body: AnalysisRequest, current_user: CurrentUser | None = Depends(get_optional_user)
-) -> AnalysisResponse | UnsupportedCompanyResponse:
-    return run_analysis(body.query, current_user)
+):
+    result = run_analysis(body.query, current_user)
+    if isinstance(result, ErrorResponse):
+        status_code = STATUS_HTTP_CODE.get(result.status, 500)
+        return JSONResponse(status_code=status_code, content=result.model_dump())
+    return result

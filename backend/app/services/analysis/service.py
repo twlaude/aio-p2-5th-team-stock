@@ -1,6 +1,10 @@
+import logging
 from datetime import datetime, timezone
+from uuid import uuid4
 
 from app.clients.mcp_client import client as mcp_client
+from app.clients.mcp_client.client import MCPClientError, MCPClientTimeout, MCPClientUnavailable
+from app.clients.redis import client as redis_client
 from app.repositories import analysis_repository
 from app.schemas.analysis import (
     AnalysisDetail,
@@ -12,9 +16,12 @@ from app.schemas.analysis import (
     PriceSnapshot,
     UnsupportedCompanyResponse,
 )
+from app.schemas.errors import ErrorDetail, ErrorResponse
 from app.schemas.user import CurrentUser
 from app.services.analysis import companies
 from app.services.profile import service as profile_service
+
+logger = logging.getLogger(__name__)
 
 UNSUPPORTED_MESSAGE = (
     "아직 이 기업의 분석 정보는 제공하지 않습니다. "
@@ -23,19 +30,63 @@ UNSUPPORTED_MESSAGE = (
 UNSUPPORTED_ACTIONS = ["지원 기업 20개 보기", "다른 종목 검색하기"]
 
 
+def _mcp_client_error_response(request_id: str, exc: Exception) -> ErrorResponse:
+    if isinstance(exc, MCPClientTimeout):
+        status, code, message, retryable = (
+            "timeout",
+            "MCP_CLIENT_TIMEOUT",
+            "분석 요청이 시간 초과되었습니다.",
+            True,
+        )
+    elif isinstance(exc, MCPClientUnavailable):
+        status, code, message, retryable = (
+            "external_api_error",
+            "MCP_CLIENT_UNAVAILABLE",
+            "분석 서버에 일시적으로 연결할 수 없습니다.",
+            True,
+        )
+    else:
+        status, code, message, retryable = (
+            "internal_error",
+            "MCP_CLIENT_INVALID_RESPONSE",
+            "분석 결과를 처리하지 못했습니다.",
+            False,
+        )
+    logger.warning("mcp_client 호출 실패 request_id=%s status=%s error=%s", request_id, status, exc)
+    return ErrorResponse(
+        request_id=request_id,
+        status=status,
+        error=ErrorDetail(service="mcp_client", code=code, message=message, retryable=retryable),
+    )
+
+
+def _remember_recent_search(user_id: str, company_name: str, stock_code: str, searched_at: datetime) -> None:
+    redis_client.set_state(
+        user_id,
+        recent_company_name=company_name,
+        recent_stock_code=stock_code,
+        searched_at=searched_at.isoformat().replace("+00:00", "Z"),
+    )
+
+
 def run_analysis(
     query: str, current_user: CurrentUser | None
-) -> AnalysisResponse | UnsupportedCompanyResponse:
+) -> AnalysisResponse | UnsupportedCompanyResponse | ErrorResponse:
     company = companies.resolve_company(query)
     if company is None:
         return UnsupportedCompanyResponse(message=UNSUPPORTED_MESSAGE, actions=UNSUPPORTED_ACTIONS)
 
     company_name = company["company_name"]
     stock_code = company["stock_code"]
+    request_id = str(uuid4())
 
     profile = profile_service.get_profile(current_user.user_id) if current_user else None
     requested_at = datetime.now(timezone.utc)
-    raw = mcp_client.fetch_common_analysis(company_name, stock_code, profile)
+    try:
+        raw = mcp_client.fetch_common_analysis(company_name, stock_code, profile, request_id)
+    except (MCPClientTimeout, MCPClientUnavailable, MCPClientError) as exc:
+        return _mcp_client_error_response(request_id, exc)
+
     common = raw["common_analysis"]
 
     response = AnalysisResponse(
@@ -61,6 +112,7 @@ def run_analysis(
         )
         if raw.get("personalized_checkpoints"):
             response.personalized_checkpoints = PersonalizedCheckpoints(**raw["personalized_checkpoints"])
+        _remember_recent_search(current_user.user_id, company_name, stock_code, requested_at)
 
     analysis_repository.save_run(
         request_id=response.request_id,
