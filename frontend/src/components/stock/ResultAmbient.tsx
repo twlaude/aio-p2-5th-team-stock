@@ -96,8 +96,8 @@ function layout(topics: TopicEvidence[], bounds: Bounds, seed: number): Placed[]
   if (mobile) {
     // 위 2개는 캡션 양옆(차트 안 건드림), 아래 2개는 why 버튼 아래 양옆
     const xTop = Math.min(bubble.halfW - 30, viewportHalf - chipHalfW - 6);
-    const xBottom = Math.max(60, bubble.halfW - 56);
-    points.push({ x: -xTop, y: -hostHalfH - 4 }, { x: xTop, y: -hostHalfH - 4 }, { x: -xBottom, y: hostHalfH + 98 }, { x: xBottom, y: hostHalfH + 98 });
+    const xBottom = Math.max(60, bubble.halfW - 40);
+    points.push({ x: -xTop, y: -hostHalfH + 16 }, { x: xTop, y: -hostHalfH + 16 }, { x: -xBottom, y: hostHalfH + 98 }, { x: xBottom, y: hostHalfH + 98 });
   } else {
     const count = 12;
     const rx = Math.min(bubble.halfW + 64, viewportHalf - chipHalfW - 10);
@@ -117,7 +117,7 @@ function layout(topics: TopicEvidence[], bounds: Bounds, seed: number): Placed[]
       }
       if (Math.sin(angle) > 0.85) {
         // 아래 중앙 근처: why 버튼(반폭 ~90)과 안 겹치게 바깥으로
-        x = Math.sign(x) * Math.max(Math.abs(x), 90 + chipHalfW + 14);
+        x = Math.sign(x) * Math.max(Math.abs(x), 150 + chipHalfW + 12);
       }
       points.push({ x, y });
     }
