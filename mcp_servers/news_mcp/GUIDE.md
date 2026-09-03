@@ -55,3 +55,45 @@ NEWS_RESULT_LIMIT=10
 3. 원문 URL이 포함된다.
 4. 결과 없음과 API 실패를 구분한다.
 5. 중복 기사 기준이 문서화된다.
+
+## 구조
+
+```text
+news_mcp/
+├─ app/
+│  ├─ server.py             # 진입점: FastMCP 생성 + Tool 등록 + /health (로직 없음)
+│  ├─ core/config.py        # .env → NewsConfig
+│  ├─ schemas/news.py       # Tool 입출력 TypedDict (계약 필드와 동일)
+│  ├─ clients/naver_news.py # NAVER API HUB 뉴스 검색 API 호출
+│  ├─ services/news.py      # 원본 응답 → 계약 형식 변환, 중복·비관련 기사 제거
+│  ├─ services/mock.py      # Client ID/Secret 없을 때 쓰는 표본 응답
+│  └─ tools/news.py         # search_news 입력 검증 + register_news_tools
+├─ tests/                   # 가짜 client/payload로 네트워크 없이 검증 (pytest)
+├─ .env.example
+└─ requirements.txt
+```
+
+요청 흐름: MCP Client → `tools/news.py`(입력 검증) → `services/news.py` → `clients/naver_news.py` → NAVER API HUB. 응답은 역순으로 돌아오며 services에서 중복 제거·관련성 필터링 후 계약 형식으로 맞춘다.
+
+중복·관련성 판단 기준:
+- 중복: `source_url`(없으면 제목)이 같은 기사는 첫 기사만 남긴다.
+- 관련성: 제목·요약에 `company_name`이 포함되지 않으면 낮음으로 보고 결과에서 제외한다.
+- 기간: `published_at`이 `lookback_days` 이전이면 제외한다.
+
+손대는 위치:
+- 계약 필드 추가 → `schemas/news.py` + `services/news.py`의 map 함수 + `shared/contracts/news/README.md`
+- 원본 API 변경 → `clients/naver_news.py`만
+- Tool 추가 → `tools/news.py`에 함수 작성 후 `register_news_tools`에 한 줄 등록
+
+## 실행법
+
+```bash
+cd mcp_servers/news_mcp
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env            # NAVER_NEWS_CLIENT_ID/SECRET 비우면 Mock 응답, 채우면 실데이터
+python -m app.server
+curl http://127.0.0.1:8021/health
+```
+
+MCP Client는 `http://127.0.0.1:8021/mcp`로 접속해 `search_news`를 호출한다.
