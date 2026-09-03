@@ -1,4 +1,4 @@
-import { motion, type Variants } from "motion/react";
+import { motion, useReducedMotion, type Variants } from "motion/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Mascot } from "../../components/mascot/Mascot";
@@ -39,13 +39,16 @@ const heroItem: Variants = {
 /** 영역 A 소유 — 검색 히어로(마스코트·검색바·칩·20종목 시트·로딩·미지원·에러). 아래는 스텁. */
 export function HeroSection() {
   const { error, query, result, status, submittedQuery, retry, setQuery, submit } = useSearch();
+  const reducedMotion = useReducedMotion();
   const [typing, setTyping] = useState(false);
   const [submitPulse, setSubmitPulse] = useState(false);
+  const [companiesError, setCompaniesError] = useState<string | null>(null);
   const pulseTimer = useRef<number | null>(null);
   const scenarioStarted = useRef(false);
 
   const unsupported = result?.status === "unsupported_company";
   const errored = status === "error";
+  const companiesErrored = Boolean(companiesError);
   const compressed = status !== "idle";
   const mascotState = submitPulse && status === "loading"
     ? "submit"
@@ -68,6 +71,7 @@ export function HeroSection() {
   const submitWithPulse = useCallback((nextQuery: string) => {
     startPulse();
     setTyping(false);
+    setCompaniesError(null);
     void submit(nextQuery);
   }, [startPulse, submit]);
 
@@ -85,7 +89,11 @@ export function HeroSection() {
     }
 
     const scenario = new URLSearchParams(window.location.search).get("scenario");
-    const scenarioQuery = scenario === "unsupported" ? "NAVER" : scenario === "slow" || scenario === "error" ? "삼성전자" : "";
+    const scenarioQuery = scenario === "unsupported"
+      ? "NAVER"
+      : scenario === "slow" || scenario === "error" || scenario === "partial"
+        ? "삼성전자"
+        : "";
     if (scenarioQuery) {
       scenarioStarted.current = true;
       submitWithPulse(scenarioQuery);
@@ -96,7 +104,7 @@ export function HeroSection() {
     "hero-shell",
     compressed ? "hero-shell--compressed" : "",
     unsupported ? "hero-shell--notice" : "",
-    errored ? "hero-shell--error" : "",
+    errored || companiesErrored ? "hero-shell--error" : "",
   ].filter(Boolean).join(" ");
 
   return (
@@ -104,7 +112,7 @@ export function HeroSection() {
       {/* motion 4b-2 */}
       <div className="hero__blob hero__blob--one" aria-hidden="true" />
       <div className="hero__blob hero__blob--two" aria-hidden="true" />
-      <motion.div className="hero__content" initial="hidden" animate="show" variants={heroContainer}>
+      <motion.div className="hero__content" initial={reducedMotion ? "show" : "hidden"} animate="show" variants={heroContainer}>
         <motion.div className="hero__mascot" variants={heroItem}>
           <Mascot state={mascotState} size={120} />
         </motion.div>
@@ -119,13 +127,14 @@ export function HeroSection() {
         </motion.div>
         {(status === "idle" || status === "loading") ? (
           <motion.div className="hero__chips" variants={heroItem}>
-            <CompanyChips onSelectCompany={submitWithPulse} />
+            <CompanyChips onSelectCompany={submitWithPulse} onError={setCompaniesError} />
           </motion.div>
         ) : null}
       </motion.div>
       {status === "loading" ? <LoadingBlock /> : null}
       {unsupported ? <UnsupportedNotice query={submittedQuery} message={result.message} onSelectCompany={submitWithPulse} /> : null}
       {errored ? <ErrorNotice message={error} onRetry={retryWithPulse} /> : null}
+      {companiesError ? <ErrorNotice message={companiesError} onRetry={() => setCompaniesError(null)} /> : null}
     </section>
   );
 }

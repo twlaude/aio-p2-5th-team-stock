@@ -62,6 +62,7 @@ pre {
 .nav__brand {
   font-size: 20px;
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .nav__brand-mark {

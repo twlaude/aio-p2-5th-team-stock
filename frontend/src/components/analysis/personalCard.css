@@ -2,7 +2,7 @@
 .analysis-personal-card::before { position: absolute; inset: 0; border-radius: inherit; content: ""; pointer-events: none; opacity: 0; background: linear-gradient(110deg, transparent 0 35%, rgba(31, 179, 94, 0.32) 48%, transparent 62% 100%); transform: translateX(-100%); }
 .analysis-personal-card--visible::before { animation: analysis-personal-sweep 1.2s linear 1; }
 .analysis-personal-card__header { display: flex; align-items: center; gap: 10px; color: var(--c-primary-deep); font-size: 14px; font-weight: 700; }
-.analysis-personal-card__summary { color: var(--c-ink); font-size: 26px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; text-wrap: pretty; }
+.analysis-personal-card__summary { color: var(--c-ink); font-size: 26px; font-weight: 700; letter-spacing: 0; line-height: 1.35; text-wrap: pretty; }
 .analysis-personal-card__checks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .analysis-personal-card__check { padding: 16px; border-radius: var(--r-md); background: var(--c-white); color: var(--c-ink); font-size: 14px; line-height: 1.5; opacity: 0; transform: translateY(10px); }
 .analysis-personal-card--visible .analysis-personal-card__check { opacity: 1; transform: translateY(0); transition: opacity 320ms ease-out var(--tile-delay), transform 320ms ease-out var(--tile-delay); }

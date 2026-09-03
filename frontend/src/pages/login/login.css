@@ -2,7 +2,7 @@
   display: flex; flex-direction: column; align-items: center; width: 100vw; min-height: calc(100vh - 83px); margin: -56px calc(50% - 50vw) -80px;
   padding: 72px 64px 80px; gap: 28px; background: var(--c-bg); text-align: center;
 }
-.login-page h1 { margin: 0; font-size: 36px; font-weight: 900; letter-spacing: -0.03em; }
+.login-page h1 { margin: 0; font-size: 36px; font-weight: 900; letter-spacing: 0; }
 .login-page__copy { max-width: 760px; margin: 0; color: var(--c-sub); font-size: 16px; line-height: 1.5; }
 .login-page__session { margin: -10px 0 0; color: var(--c-sub); font-size: 13px; }
 .login-page__users { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; width: 1000px; max-width: 100%; }
@@ -14,7 +14,7 @@
 .login-user-card:focus-visible, .login-page__submit:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
 .login-user-card__meta { display: flex; align-items: center; gap: 8px; color: var(--c-sub); font-size: 13px; }
 .login-user-card__meta svg { color: var(--c-primary-deep); }
-.login-user-card__name { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.35; }
+.login-user-card__name { font-size: 17px; font-weight: 700; letter-spacing: 0; line-height: 1.35; }
 .login-user-card__check {
   position: absolute; top: 16px; right: 16px; display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px;
   border-radius: var(--r-pill); background: var(--c-primary); color: var(--c-white);

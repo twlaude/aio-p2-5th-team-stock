@@ -1,9 +1,9 @@
 .price-header { display: flex; align-items: flex-end; justify-content: space-between; width: 880px; max-width: 100%; }
 .price-header__identity { display: flex; flex-direction: column; gap: 6px; }
 .price-header__market { color: var(--c-sub); font-size: 14px; }
-.price-header__name { font-size: 36px; font-weight: 700; letter-spacing: -0.02em; }
+.price-header__name { font-size: 36px; font-weight: 700; letter-spacing: 0; }
 .price-header__quote { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
-.price-header__value { font-size: 44px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+.price-header__value { font-size: 44px; font-weight: 700; letter-spacing: 0; line-height: 1; }
 .price-header__unit { color: var(--c-sub); font-size: 20px; font-weight: 500; }
 .price-header__change { font-size: 16px; font-weight: 700; transform-origin: right center; }
 .price-header__change--up { color: var(--c-up); }

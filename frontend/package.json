@@ -7,7 +7,9 @@
     "dev": "vite --host 0.0.0.0 --port 8501",
     "build": "tsc -b && vite build",
     "lint": "oxlint .",
-    "test": "vitest run"
+    "preview": "vite preview --host 0.0.0.0 --port 8501",
+    "test": "vitest run",
+    "shots": "node tests/shots.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.39.0",

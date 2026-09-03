@@ -6,11 +6,22 @@ import "./loadingBlock.css";
 
 const progressItems = ["가격", "뉴스", "공시", "커뮤니티"];
 
+function prefersReducedMotion() {
+  return typeof window !== "undefined"
+    && typeof window.matchMedia === "function"
+    && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 export function LoadingBlock() {
-  const [completedCount, setCompletedCount] = useState(0);
+  const [completedCount, setCompletedCount] = useState(() => (prefersReducedMotion() ? progressItems.length : 0));
 
   // motion 4b-5
   useEffect(() => {
+    if (prefersReducedMotion()) {
+      setCompletedCount(progressItems.length);
+      return undefined;
+    }
+
     setCompletedCount(0);
     const timers = progressItems.map((_, index) => window.setTimeout(() => setCompletedCount(index + 1), (index + 1) * 500));
     return () => timers.forEach((timer) => window.clearTimeout(timer));

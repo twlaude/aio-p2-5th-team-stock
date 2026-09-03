@@ -2,7 +2,7 @@
 .one-liner__caption { color: var(--c-primary); font-size: 15px; font-weight: 700; }
 .one-liner__bubble {
   width: 100%; padding: 28px 40px; border: 2px solid var(--c-ink); border-radius: var(--r-xl); background: var(--c-white);
-  font-size: 32px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.35; text-align: center; text-wrap: pretty;
+  font-size: 32px; font-weight: 700; letter-spacing: 0; line-height: 1.35; text-align: center; text-wrap: pretty;
 }
 .typewriter { display: inline; }
 .typewriter__cursor { display: inline-block; margin-left: 2px; animation: typewriter-blink 1s steps(2, jump-none) infinite; }

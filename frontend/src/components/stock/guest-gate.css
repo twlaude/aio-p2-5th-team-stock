@@ -10,7 +10,7 @@
 }
 .guest-gate__dummy-caption { color: var(--c-sub); font-size: 14px; }
 .guest-gate__dummy-score { display: flex; align-items: baseline; gap: 10px; }
-.guest-gate__dummy-score span { font-size: 56px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+.guest-gate__dummy-score span { font-size: 56px; font-weight: 700; letter-spacing: 0; line-height: 1; }
 .guest-gate__dummy-score strong { color: var(--c-primary); font-size: 16px; font-weight: 700; }
 .guest-gate__bar { height: 8px; overflow: hidden; border-radius: var(--r-pill); background: var(--c-pale); }
 .guest-gate__bar-fill { display: block; width: 82%; height: 8px; border-radius: var(--r-pill); background: var(--c-primary); }
@@ -22,7 +22,7 @@
   display: flex; flex-direction: column; align-items: center; gap: 16px; width: 520px; max-width: 100%; margin-top: -140px; padding: 36px;
   border: 2px solid var(--c-ink); border-radius: var(--r-xl); background: var(--c-white); box-shadow: var(--shadow-pop); text-align: center;
 }
-.guest-gate__card h2 { margin: 0; font-size: 24px; font-weight: 900; letter-spacing: -0.02em; }
+.guest-gate__card h2 { margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 0; }
 .guest-gate__card p { margin: 0; color: var(--c-sub); font-size: 15px; line-height: 1.5; }
 .guest-gate__card button {
   display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border: 0; border-radius: var(--r-pill);

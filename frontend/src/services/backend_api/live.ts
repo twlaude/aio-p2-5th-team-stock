@@ -10,14 +10,8 @@ import type {
   UserProfile,
 } from "./client";
 
-const DEFAULT_BACKEND_URL = "http://localhost:8000";
-
-function getBaseUrl() {
-  return (import.meta.env.VITE_BACKEND_URL ?? DEFAULT_BACKEND_URL).replace(/\/$/, "");
-}
-
 async function requestJson<T>(path: string, init: RequestInit = {}): Promise<T> {
-  const response = await fetch(`${getBaseUrl()}${path}`, {
+  const response = await fetch(path, {
     ...init,
     headers: {
       "Content-Type": "application/json",
