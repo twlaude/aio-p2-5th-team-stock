@@ -1,7 +1,7 @@
 import { User } from "lucide-react";
 import type { CSSProperties } from "react";
 
-import type { PersonalizedCheckpoints } from "../../services/backend_api/client";
+import type { PersonalizedCheckpoints, UserProfile } from "../../services/backend_api/client";
 import { readAuthSession } from "../../state/auth";
 import "./personalCard.css";
 import { useInView } from "./useInView";
@@ -10,8 +10,30 @@ interface PersonalCardProps {
   checkpoints: PersonalizedCheckpoints;
 }
 
-function profileLabel(displayName?: string) {
-  return displayName?.trim().split(/\s+/).filter(Boolean).join(" · ") || "성향 미설정";
+const riskLabels = {
+  conservative: "안정형",
+  balanced: "균형형",
+  aggressive: "공격형",
+} satisfies Record<UserProfile["risk_profile"], string>;
+
+const horizonLabels = {
+  short: "단기",
+  medium: "중기",
+  long: "장기",
+} satisfies Record<UserProfile["investment_horizon"], string>;
+
+const experienceLabels = {
+  beginner: "초보",
+  intermediate: "중급",
+  experienced: "숙련",
+} satisfies Record<UserProfile["experience_level"], string>;
+
+function profileLabel(session: ReturnType<typeof readAuthSession>) {
+  if (session?.profile) {
+    const { risk_profile: risk, investment_horizon: horizon, experience_level: experience } = session.profile;
+    return `${riskLabels[risk]} · ${horizonLabels[horizon]} · ${experienceLabels[experience]}`;
+  }
+  return session?.user.display_name?.trim() || "성향 미설정";
 }
 
 export function PersonalCard({ checkpoints }: PersonalCardProps) {
@@ -26,7 +48,7 @@ export function PersonalCard({ checkpoints }: PersonalCardProps) {
       <div className="analysis-personal-card__header">
         <User size={20} strokeWidth={1.8} />
         <div>
-          {username}님 성향({profileLabel(session?.user.display_name)})엔 이게 걸려요
+          {username}님 성향({profileLabel(session)})엔 이게 걸려요
         </div>
       </div>
       <div className="analysis-personal-card__summary">{checkpoints.personal_summary}</div>

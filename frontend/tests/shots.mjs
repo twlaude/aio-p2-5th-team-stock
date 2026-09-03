@@ -96,6 +96,12 @@ async function save(page, name) {
   log(`saved ${path.relative(process.cwd(), file)}`);
 }
 
+async function saveViewport(page, name) {
+  const file = path.join(SHOTS, `${name}.png`);
+  await page.screenshot({ path: file });
+  log(`saved ${path.relative(process.cwd(), file)}`);
+}
+
 async function assertNoOverflow(page, label) {
   const widths = await page.evaluate(() => ({
     client: document.documentElement.clientWidth,
@@ -121,9 +127,9 @@ async function loginContext(browser, viewport = DESKTOP, reducedMotion = "no-pre
 }
 
 async function revealCards(page) {
-  const cards = page.locator(".analysis-evidence-card");
-  for (let index = 0, count = await cards.count(); index < count; index += 1) {
-    await cards.nth(index).scrollIntoViewIfNeeded();
+  const sections = page.locator(".analysis-evidence-subsection");
+  for (let index = 0, count = await sections.count(); index < count; index += 1) {
+    await sections.nth(index).scrollIntoViewIfNeeded();
     await page.waitForTimeout(220);
   }
 }
@@ -196,6 +202,8 @@ async function memberShot(browser, viewport, name, pathname = "/") {
   await page.locator(".analysis-personal-card").scrollIntoViewIfNeeded();
   await page.waitForTimeout(1100);
   if (viewport.width === MOBILE.width) await assertMobileMember(page, name);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(120);
   await save(page, name);
   assertClean();
   await context.close();
@@ -211,7 +219,33 @@ async function partialShot(browser) {
   await revealCards(page);
   await page.locator(".analysis-personal-card").scrollIntoViewIfNeeded();
   await page.waitForTimeout(1100);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(120);
   await save(page, "desktop-partial");
+  assertClean();
+  await context.close();
+}
+
+async function communityShot(browser) {
+  const context = await loginContext(browser);
+  const page = await context.newPage();
+  page.setDefaultTimeout(12000);
+  const assertClean = watchErrors(page, "desktop-community");
+  await goto(page);
+  await page.getByLabel("기업명 또는 종목코드 6자리").fill("삼성전자");
+  await page.getByRole("button", { name: /살펴보기/ }).click();
+  await page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).click();
+  await page.locator("#evidence-community").scrollIntoViewIfNeeded();
+  await page.waitForTimeout(900);
+  const visibleTopics = await page.evaluate(() =>
+    Array.from(document.querySelectorAll(".analysis-ambient-topic")).filter((node) => {
+      const style = getComputedStyle(node);
+      const rect = node.getBoundingClientRect();
+      return style.display !== "none" && Number(style.opacity) > 0 && rect.width > 0 && rect.height > 0;
+    }).length,
+  );
+  if (visibleTopics < 8) throw new Error(`desktop-community expected visible ambient topics, got ${visibleTopics}`);
+  await saveViewport(page, "desktop-community");
   assertClean();
   await context.close();
 }
@@ -224,9 +258,10 @@ async function assertMobileMember(page, label) {
       return node ? getComputedStyle(node).gridTemplateColumns.split(" ").filter(Boolean).length : 0;
     };
     const peek = document.querySelector(".analysis-peek-mascot");
-    return { gauges: tracks(".sallae-evidence-section__gauges"), cards: tracks(".sallae-evidence-section__cards"), peekWidth: peek ? Math.round(peek.getBoundingClientRect().width) : 0 };
+    const visibleTopics = Array.from(document.querySelectorAll(".analysis-ambient-topic")).filter((node) => getComputedStyle(node).display !== "none").length;
+    return { gauges: tracks(".sallae-evidence-section__gauges"), sections: document.querySelectorAll(".analysis-evidence-subsection").length, visibleTopics, peekWidth: peek ? Math.round(peek.getBoundingClientRect().width) : 0 };
   });
-  if (layout.gauges !== 1 || layout.cards !== 1 || layout.peekWidth !== 64) {
+  if (layout.gauges !== 1 || layout.sections !== 3 || layout.visibleTopics > 6 || layout.peekWidth !== 64) {
     throw new Error(`${label} mobile layout mismatch: ${JSON.stringify(layout)}`);
   }
 }
@@ -301,6 +336,7 @@ async function main() {
     await guestShot(browser, true);
     await loginShot(browser);
     await memberShot(browser, DESKTOP, "desktop-member");
+    await communityShot(browser);
     await partialShot(browser);
     await idleShot(browser, MOBILE, "mobile-idle");
     await memberShot(browser, MOBILE, "mobile-member");

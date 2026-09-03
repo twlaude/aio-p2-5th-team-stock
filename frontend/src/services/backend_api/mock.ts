@@ -6,6 +6,7 @@ import type {
   AnalysisDetail,
   AnalysisRequest,
   AnalysisResponse,
+  AnalysisSource,
   BackendApiClient,
   CompaniesResponse,
   Company,
@@ -154,6 +155,37 @@ function templatePrice(template: TemplateAnalysis): PriceSnapshot {
   };
 }
 
+function buildTemplateTopics(template: TemplateAnalysis) {
+  return [
+    { text: template.topic, sentiment: "positive", weight: 5 },
+    { text: "실적 확인", sentiment: "neutral", weight: 4 },
+    { text: "수급 변화", sentiment: template.change >= 0 ? "positive" : "negative", weight: 4 },
+    { text: "가격 부담", sentiment: "negative", weight: 3 },
+    { text: "공시 일정", sentiment: "neutral", weight: 3 },
+    { text: "뉴스 반복", sentiment: "neutral", weight: 2 },
+    { text: "단기 변동", sentiment: "negative", weight: 2 },
+    { text: "시장 관심", sentiment: "positive", weight: 3 },
+  ];
+}
+
+function buildTemplateNewsSources(company: Company, template: TemplateAnalysis): AnalysisSource[] {
+  return [
+    { type: "news", title: `${company.company_name} ${template.topic} 관련 보도`, publisher: "Mock News", published_at: "2026-09-01T02:30:00Z", url: "https://example.com/mock-news-1", meta: { issue_count: 2 } },
+    { type: "news", title: `${company.company_name} 업종 수급 변화 분석`, publisher: "Mock Market", published_at: "2026-08-31T06:00:00Z", url: "https://example.com/mock-news-2" },
+    { type: "news", title: `${template.topic} 기대와 가격 부담 동시 점검`, publisher: "Mock Economy", published_at: "2026-08-31T03:10:00Z", url: "https://example.com/mock-news-3" },
+    { type: "news", title: `${company.company_name} 실적 발표 전 확인 포인트`, publisher: "Mock Securities", published_at: "2026-08-30T07:40:00Z", url: "https://example.com/mock-news-4" },
+    { type: "news", title: `${company.company_name} 단기 변동성 확대 가능성`, publisher: "Mock Daily", published_at: "2026-08-30T01:20:00Z", url: "https://example.com/mock-news-5" },
+  ];
+}
+
+function buildTemplateDisclosureSources(company: Company, template: TemplateAnalysis): AnalysisSource[] {
+  return [
+    { type: "disclosure", title: `${company.company_name} 주요사항보고서`, publisher: "Mock DART", published_at: "2026-08-29T08:00:00Z", url: "https://example.com/mock-disclosure-1", meta: { receipt_no: `20260829${company.stock_code}`, confirmed: [`${template.topic} 관련 공개 자료`, "최근 재무 지표 제출", "주요 사업 현황 공시"], unconfirmed: ["다음 분기 실적 반영 폭", "단기 가격 촉매 지속성", "시장 기대와 실제 숫자의 차이"] } },
+    { type: "disclosure", title: `${company.company_name} 반기보고서`, publisher: "Mock DART", published_at: "2026-08-20T08:00:00Z", url: "https://example.com/mock-disclosure-2", meta: { receipt_no: `20260820${company.stock_code}` } },
+    { type: "disclosure", title: `${company.company_name} 기업설명회 자료`, publisher: "Mock DART", published_at: "2026-08-14T08:00:00Z", url: "https://example.com/mock-disclosure-3", meta: { receipt_no: `20260814${company.stock_code}` } },
+  ];
+}
+
 function buildTemplateDetail(company: Company, template: TemplateAnalysis, partial = false): AnalysisDetail {
   const coverage: DataCoverage[] = partial ? ["price", "news", "disclosure"] : ["price", "news", "disclosure", "community"];
   return {
@@ -170,20 +202,8 @@ function buildTemplateDetail(company: Company, template: TemplateAnalysis, parti
     disclosure_summary: `${company.company_name}의 최근 공시는 실적과 투자 계획을 확인하는 데 초점이 있어요.`,
     community_summary: partial ? null : "커뮤니티 반응은 사실이 아닌 시장 반응으로만 참고해야 해요.",
     sources: [
-      {
-        type: "news",
-        title: `${company.company_name} ${template.topic} 관련 보도`,
-        publisher: "Mock News",
-        published_at: "2026-09-01T02:30:00Z",
-        url: "https://example.com/mock-news",
-      },
-      {
-        type: "disclosure",
-        title: `${company.company_name} 주요사항보고서`,
-        publisher: "Mock DART",
-        published_at: "2026-08-29T08:00:00Z",
-        url: "https://example.com/mock-disclosure",
-      },
+      ...buildTemplateNewsSources(company, template),
+      ...buildTemplateDisclosureSources(company, template),
       ...(partial
         ? []
         : [
@@ -197,6 +217,8 @@ function buildTemplateDetail(company: Company, template: TemplateAnalysis, parti
                 positive: 46,
                 neutral: 34,
                 negative: 20,
+                fgi: 59,
+                topics: buildTemplateTopics(template),
               },
             },
           ]),

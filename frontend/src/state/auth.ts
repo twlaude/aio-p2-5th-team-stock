@@ -1,4 +1,4 @@
-import type { LoginResponse } from "../services/backend_api/client";
+import type { LoginResponse, UserProfile } from "../services/backend_api/client";
 
 const AUTH_STORAGE_KEY = "sallae.auth.session";
 
@@ -7,6 +7,7 @@ export interface AuthSession {
   tokenType: "bearer";
   user: LoginResponse["user"];
   profileCompleted: boolean;
+  profile?: UserProfile;
 }
 
 function getStorage() {
@@ -32,12 +33,13 @@ export function readAuthSession(): AuthSession | null {
   }
 }
 
-export function saveAuthSession(response: LoginResponse): AuthSession {
+export function saveAuthSession(response: LoginResponse, profile?: UserProfile): AuthSession {
   const session: AuthSession = {
     token: response.access_token,
     tokenType: response.token_type,
     user: response.user,
     profileCompleted: response.profile_completed,
+    profile,
   };
 
   getStorage()?.setItem(AUTH_STORAGE_KEY, JSON.stringify(session));

@@ -90,7 +90,7 @@ export interface AnalysisSource {
   publisher?: string;
   published_at?: string;
   url?: string;
-  meta?: Record<string, string | number | boolean>;
+  meta?: Record<string, unknown>;
 }
 
 export interface AnalysisDetail {

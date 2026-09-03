@@ -4,15 +4,15 @@ import { Route, Routes } from "react-router-dom";
 import { Nav } from "./components/common/Nav";
 import { HomePage } from "./pages/home/HomePage";
 import { LoginPage } from "./pages/login/LoginPage";
-import type { LoginResponse } from "./services/backend_api/client";
+import type { LoginResponse, UserProfile } from "./services/backend_api/client";
 import { clearAuthSession, readAuthSession, saveAuthSession, type AuthSession } from "./state/auth";
 import { SearchProvider } from "./state/searchStore";
 
 export function App() {
   const [session, setSession] = useState<AuthSession | null>(() => readAuthSession());
 
-  const handleLogin = (response: LoginResponse) => {
-    const nextSession = saveAuthSession(response);
+  const handleLogin = (response: LoginResponse, profile?: UserProfile) => {
+    const nextSession = saveAuthSession(response, profile);
     setSession(nextSession);
   };
 

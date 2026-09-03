@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { Mascot } from "../../components/mascot/Mascot";
 import usersFixture from "../../mocks/users.json";
 import { apiClient } from "../../services/backend_api";
-import type { DemoUsersFixture, LoginResponse } from "../../services/backend_api/client";
+import type { DemoUsersFixture, LoginResponse, UserProfile } from "../../services/backend_api/client";
 import type { AuthSession } from "../../state/auth";
 import { readPendingQuery } from "../../state/search";
 import { UserCard } from "./UserCard";
@@ -15,7 +15,7 @@ import "./login.css";
 const demoUsers = (usersFixture as DemoUsersFixture).users;
 
 interface LoginPageProps {
-  onLogin: (response: LoginResponse) => void;
+  onLogin: (response: LoginResponse, profile?: UserProfile) => void;
   session: AuthSession | null;
 }
 
@@ -33,7 +33,8 @@ export function LoginPage({ onLogin, session }: LoginPageProps) {
     setError(null);
     try {
       const response = await apiClient.login({ username: selectedUser.username, password: "Demo1234!" });
-      onLogin(response);
+      const profile = await apiClient.getProfile(response.access_token).then((profileResponse) => profileResponse.profile).catch(() => undefined);
+      onLogin(response, profile);
       navigate("/");
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "로그인하지 못했어요.");

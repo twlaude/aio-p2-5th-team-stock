@@ -6,12 +6,29 @@ export interface CommunityEvidence {
   neutral: number;
   negative: number;
   fgi: number | null;
+  topics: TopicEvidence[];
 }
 
 export interface EvidenceItem {
   title: string;
   publisher?: string;
   publishedAtLabel: string;
+  url?: string;
+  issueCount?: number;
+  receiptNo?: string;
+}
+
+export type TopicSentiment = "positive" | "neutral" | "negative";
+
+export interface TopicEvidence {
+  text: string;
+  sentiment: TopicSentiment;
+  weight: 1 | 2 | 3 | 4 | 5;
+}
+
+export interface DisclosureChecks {
+  confirmed: string[];
+  unconfirmed: string[];
 }
 
 export interface EvidenceLevelView {
@@ -22,6 +39,59 @@ export interface EvidenceLevelView {
 function numberMeta(meta: AnalysisSource["meta"], key: string) {
   const value = meta?.[key];
   return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
+function stringMeta(meta: AnalysisSource["meta"], key: string) {
+  const value = meta?.[key];
+  return typeof value === "string" && value.trim() ? value.trim() : undefined;
+}
+
+function stringArrayMeta(meta: AnalysisSource["meta"], key: string) {
+  const value = meta?.[key];
+  if (!Array.isArray(value)) {
+    return [];
+  }
+  return value.filter((item): item is string => typeof item === "string" && item.trim().length > 0).map((item) => item.trim());
+}
+
+function isTopicSentiment(value: unknown): value is TopicSentiment {
+  return value === "positive" || value === "neutral" || value === "negative";
+}
+
+function topicWeight(value: unknown): TopicEvidence["weight"] | null {
+  if (typeof value !== "number" || !Number.isFinite(value)) {
+    return null;
+  }
+  const rounded = Math.round(value);
+  if (rounded < 1 || rounded > 5) {
+    return null;
+  }
+  return rounded as TopicEvidence["weight"];
+}
+
+export function deriveTopics(sources: AnalysisSource[]): TopicEvidence[] {
+  const source = sources.find((item) => item.type === "community");
+  const rawTopics = source?.meta?.topics;
+  if (!Array.isArray(rawTopics)) {
+    return [];
+  }
+
+  return rawTopics
+    .map((topic): TopicEvidence | null => {
+      if (!topic || typeof topic !== "object") {
+        return null;
+      }
+      const value = topic as Record<string, unknown>;
+      const text = typeof value.text === "string" ? value.text.trim() : "";
+      const sentiment = value.sentiment;
+      const weight = topicWeight(value.weight);
+      if (!text || !isTopicSentiment(sentiment) || weight === null) {
+        return null;
+      }
+      return { text, sentiment, weight };
+    })
+    .filter((topic): topic is TopicEvidence => topic !== null)
+    .slice(0, 16);
 }
 
 export function deriveCommunity(sources: AnalysisSource[]): CommunityEvidence | null {
@@ -44,6 +114,7 @@ export function deriveCommunity(sources: AnalysisSource[]): CommunityEvidence | 
     neutral,
     negative,
     fgi: numberMeta(source.meta, "fgi"),
+    topics: deriveTopics(sources),
   };
 }
 
@@ -72,16 +143,36 @@ export function publishedAtLabel(value?: string) {
 export function deriveItems(sources: AnalysisSource[], type: Exclude<SourceType, "community">): EvidenceItem[] {
   return sources
     .filter((source) => source.type === type)
-    .slice(0, 3)
+    .slice(0, type === "news" ? 5 : 3)
     .map((source) => ({
       title: source.title,
       publisher: source.publisher,
       publishedAtLabel: publishedAtLabel(source.published_at),
+      url: source.url,
+      issueCount: numberMeta(source.meta, "issue_count") ?? undefined,
+      receiptNo: stringMeta(source.meta, "receipt_no"),
     }));
 }
 
 export function countOf(sources: AnalysisSource[], type: SourceType) {
   return sources.filter((source) => source.type === type).length;
+}
+
+export function deriveDisclosureChecks(sources: AnalysisSource[]): DisclosureChecks {
+  const checks = sources
+    .filter((source) => source.type === "disclosure")
+    .reduce<DisclosureChecks>(
+      (acc, source) => ({
+        confirmed: [...acc.confirmed, ...stringArrayMeta(source.meta, "confirmed")],
+        unconfirmed: [...acc.unconfirmed, ...stringArrayMeta(source.meta, "unconfirmed")],
+      }),
+      { confirmed: [], unconfirmed: [] },
+    );
+
+  return {
+    confirmed: Array.from(new Set(checks.confirmed)),
+    unconfirmed: Array.from(new Set(checks.unconfirmed)),
+  };
 }
 
 export function fgiLabel(fgi: number | null | undefined) {
