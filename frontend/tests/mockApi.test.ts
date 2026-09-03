@@ -76,7 +76,7 @@ describe("mock backend api contract", () => {
     ]);
     expect(response.detail.market_temperature.data_coverage).toEqual(["price", "news", "disclosure", "community"]);
     expect(response.personalized_checkpoints.priority_checks).toHaveLength(3);
-    expect(response.personalized_checkpoints.personal_summary).toContain("단기");
+    expect(response.personalized_checkpoints.personal_summary).toContain("짧고 공격적으로");
   });
 
   it("returns the unsupported company contract fields", async () => {

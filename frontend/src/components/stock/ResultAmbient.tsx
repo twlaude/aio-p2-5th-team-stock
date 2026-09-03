@@ -58,6 +58,7 @@ interface BubbleRect {
 interface Bounds {
   mobile: boolean;
   viewportHalf: number;
+  hostHalfH: number;
   bubble: BubbleRect;
 }
 
@@ -77,57 +78,61 @@ function measureBubble(host: HTMLElement): BubbleRect | null {
 function boundsFor(host: HTMLElement, viewportWidth: number): Bounds | null {
   const bubble = measureBubble(host);
   if (!bubble) return null;
-  return { mobile: viewportWidth <= 480, viewportHalf: viewportWidth / 2, bubble };
+  return { mobile: viewportWidth <= 480, viewportHalf: viewportWidth / 2, hostHalfH: host.offsetHeight / 2, bubble };
 }
 
 /**
- * 슬롯 배치: 말풍선 위 가장자리 한 줄 + 아래 가장자리 한 줄. 위 줄은 캡션 자리(중앙), 아래 줄은 why 버튼 자리(중앙)를 비운다.
- * 어느 화면 폭에서도 같은 모양 — 랜덤은 ±6px 흔들림과 부유 리듬에만 쓴다.
+ * 링 배치: 캡션·말풍선·재료줄을 한 덩어리로 보고 그 바깥 타원 위에 키워드를 등간격(360°)으로 두른다.
+ * 형 지시(2026-09-03): "주변으로 간격 일정하게 360도로 두르게". 아래 중앙(why 버튼) 근처 점은 바깥으로 밀고, 화면이 좁아 옆구리가 안 나오면 그 점은 뺀다.
+ * 모바일은 네 귀퉁이만(위 2·아래 2). 랜덤은 부유 리듬에만.
  */
 function layout(topics: TopicEvidence[], bounds: Bounds, seed: number): Placed[] {
   const rand = mulberry32(seed);
-  const { bubble, mobile } = bounds;
-  const chipW = mobile ? 88 : 104; // 평균 칩 폭(간격 계산용)
-  const centerGapTop = mobile ? 96 : 170; // 캡션 자리
-  const centerGapBottom = mobile ? 118 : 200; // why 버튼+chevron 자리
-  const edgeInset = mobile ? 4 : 24;
-  const usableHalf = Math.min(bubble.halfW - edgeInset, bounds.viewportHalf - chipW / 2 - 8);
+  const { bubble, mobile, hostHalfH, viewportHalf } = bounds;
+  const chipHalfW = mobile ? 44 : 54;
+  const chipHalfH = 15;
+  const points: { x: number; y: number }[] = [];
 
-  const slotsFor = (gap: number, y: number, jitterY: number) => {
-    const segment = usableHalf - gap;
-    const perSide = Math.max(1, Math.min(mobile ? 1 : 3, Math.floor((segment + 20) / chipW)));
-    const slots: { x: number; y: number }[] = [];
-    for (let i = 0; i < perSide; i += 1) {
-      const t = perSide === 1 ? 0.5 : i / (perSide - 1);
-      const x = gap + chipW * 0.45 + t * (segment - chipW * 0.9);
-      slots.push({ x: -x, y: y + (rand() - 0.5) * jitterY }, { x, y: y + (rand() - 0.5) * jitterY });
+  if (mobile) {
+    // 위 2개는 캡션 양옆(차트 안 건드림), 아래 2개는 why 버튼 아래 양옆
+    const xTop = Math.min(bubble.halfW - 30, viewportHalf - chipHalfW - 6);
+    const xBottom = Math.max(60, bubble.halfW - 56);
+    points.push({ x: -xTop, y: -hostHalfH - 4 }, { x: xTop, y: -hostHalfH - 4 }, { x: -xBottom, y: hostHalfH + 98 }, { x: xBottom, y: hostHalfH + 98 });
+  } else {
+    const count = 12;
+    const rx = Math.min(bubble.halfW + 64, viewportHalf - chipHalfW - 10);
+    const ry = hostHalfH + 34;
+    const step = (Math.PI * 2) / count;
+    for (let i = 0; i < count; i += 1) {
+      const angle = -Math.PI / 2 + step / 2 + i * step; // 반 스텝 오프셋: 위·아래 정중앙은 비움
+      let x = Math.cos(angle) * rx;
+      const y = Math.sin(angle) * ry;
+      const bubbleMidY = (bubble.top + bubble.bottom) / 2;
+      const bubbleHalfH = (bubble.bottom - bubble.top) / 2;
+      if (Math.abs(y - bubbleMidY) < bubbleHalfH + chipHalfH) {
+        // 옆구리: 말풍선 테두리 바깥으로. 화면 밖이면 뺀다
+        const needX = bubble.halfW + chipHalfW + 10;
+        if (needX > viewportHalf - 8) continue;
+        x = Math.sign(x) * needX;
+      }
+      if (Math.sin(angle) > 0.85) {
+        // 아래 중앙 근처: why 버튼(반폭 ~90)과 안 겹치게 바깥으로
+        x = Math.sign(x) * Math.max(Math.abs(x), 90 + chipHalfW + 14);
+      }
+      points.push({ x, y });
     }
-    return slots;
-  };
-
-  const rowGap = mobile ? 26 : 34;
-  const slots = [
-    // 모바일은 캡션이 폭을 다 차지하므로 위 줄을 캡션 위쪽으로 올린다
-    ...slotsFor(mobile ? 72 : centerGapTop, mobile ? bubble.top - 50 : bubble.top - rowGap, 12),
-    ...slotsFor(centerGapBottom, bubble.bottom + rowGap, 12),
-  ];
-  if (!mobile && slots.length < 12) {
-    // 여유 있으면 아래 두 번째 줄(버튼 아래 바깥쪽)
-    slots.push(...slotsFor(centerGapBottom + 60, bubble.bottom + rowGap + 54, 10).slice(0, 12 - slots.length));
   }
-  // 바깥쪽부터 안쪽 순으로 정렬해 중앙에서 퍼질 때 먼 것이 먼저 출발
-  slots.sort((a, b) => Math.hypot(b.x, b.y) - Math.hypot(a.x, a.y));
 
-  const chosen = [...topics].sort((a, b) => b.weight - a.weight).slice(0, slots.length);
+  const chosen = [...topics].sort((a, b) => b.weight - a.weight).slice(0, points.length);
   return chosen.map((topic, index) => {
-    const slot = slots[index];
+    const slot = points[index];
     const weight = Math.max(1, Math.min(5, topic.weight));
     return {
       topic,
-      x: slot.x + (rand() - 0.5) * 8,
+      x: slot.x,
       y: slot.y,
       scale: 0.84 + weight * 0.06,
-      delay: 0.4 + index * 0.04,
+      delay: 0.4 + index * 0.045,
       floatDuration: 4.5 + rand() * 3.5,
       floatDelay: rand() * -6,
       ampX: (rand() > 0.5 ? 1 : -1) * (2 + rand() * 3),

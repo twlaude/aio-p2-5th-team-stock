@@ -320,3 +320,9 @@ pre {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .nav__caption { display: none; }
+  .nav { flex-wrap: nowrap; }
+  .nav__actions { gap: 8px; }
+}
