@@ -1,17 +1,19 @@
-import { MessageCircle, Newspaper, FileText } from "lucide-react";
+import { MessageCircle, Newspaper, FileText, Scale } from "lucide-react";
 import { useEffect, useState, type CSSProperties } from "react";
 
 import { EvidenceSubsection } from "../../components/analysis/EvidenceSubsection";
+import { GapCheckCard } from "../../components/analysis/GapCheckCard";
 import { GaugeCard } from "../../components/analysis/GaugeCard";
 import { PartialNotice } from "../../components/analysis/PartialNotice";
 import { PeekMascot } from "../../components/analysis/PeekMascot";
-import { countOf, deriveCommunity, deriveDisclosureChecks, deriveItems } from "../../components/analysis/deriveEvidence";
+import { countOf, deriveCommunity, deriveDisclosureChecks, deriveGapCheck, deriveItems } from "../../components/analysis/deriveEvidence";
 import { useSearch } from "../../state/searchStore";
 import "./evidenceSection.css";
 
-type EvidenceTab = "community" | "news" | "disclosure";
+type EvidenceTab = "gap" | "community" | "news" | "disclosure";
 
 const tabs = [
+  { key: "gap", id: "evidence-gap", label: "환호 vs 근거", Icon: Scale },
   { key: "community", id: "evidence-community", label: "커뮤니티 반응", Icon: MessageCircle },
   { key: "news", id: "evidence-news", label: "최신 뉴스", Icon: Newspaper },
   { key: "disclosure", id: "evidence-disclosure", label: "기업보고서·공시", Icon: FileText },
@@ -19,7 +21,7 @@ const tabs = [
 
 export function EvidenceSection() {
   const { result, status, retry } = useSearch();
-  const [activeTab, setActiveTab] = useState<EvidenceTab>("community");
+  const [activeTab, setActiveTab] = useState<EvidenceTab>("gap");
   const [navOffset, setNavOffset] = useState(0);
 
   useEffect(() => {
@@ -115,6 +117,16 @@ export function EvidenceSection() {
           </div>
         </nav>
         <div className="sallae-evidence-section__subsections">
+          <GapCheckCard
+            id="evidence-gap"
+            index={0}
+            gap={deriveGapCheck({
+              temperatureScore: detail.market_temperature.score,
+              evidenceLevel: detail.evidence_level.level,
+              sources,
+              changeRate: result.price.change_rate,
+            })}
+          />
           <EvidenceSubsection
             id="evidence-community"
             kind="community"

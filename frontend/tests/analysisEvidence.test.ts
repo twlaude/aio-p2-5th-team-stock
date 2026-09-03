@@ -53,3 +53,19 @@ describe("analysis evidence derivation", () => {
     });
   });
 });
+
+import { deriveGapCheck } from "../src/components/analysis/deriveEvidence";
+
+describe("deriveGapCheck — 환호 vs 근거", () => {
+  const news = (n: number, issue = 1) => Array.from({ length: n }, (_, i) => ({ type: "news" as const, title: `n${i}`, meta: { issue_count: issue } }));
+  it("관심 높고 공식 확인 낮으면 온도차 큼 + 반복 기사 신호", () => {
+    const gap = deriveGapCheck({ temperatureScore: 86, evidenceLevel: "low", sources: news(5, 3), changeRate: 4.2 });
+    expect(gap.level).toBe("large");
+    expect(gap.signals.some((s) => s.text.includes("반복"))).toBe(true);
+    expect(gap.signals.some((s) => s.text.includes("공시로 확인된 내용이 없어요"))).toBe(true);
+  });
+  it("관심 낮고 공식 확인 높으면 조용한 편", () => {
+    const gap = deriveGapCheck({ temperatureScore: 42, evidenceLevel: "high", sources: [], changeRate: 0.2 });
+    expect(gap.level).toBe("quiet");
+  });
+});

@@ -206,3 +206,59 @@ export function evidenceLevelText(level: EvidenceLevel): EvidenceLevelView {
   }
   return { text: "아직 조금", segments: 1 };
 }
+
+/** 환호 vs 근거 — 시장 관심(온도)과 공식 확인(공시·보고서)의 온도차 판정. 뉴스만 띄워 주가를 부양하는 흐름을 잡기 위한 화면용 휴리스틱.
+ *  실서비스에선 MCP Client의 공통 분석이 같은 판단을 계약 필드로 내려주는 게 맞다(팀 제안 예정). */
+export type GapLevel = "large" | "some" | "small" | "quiet";
+
+export interface GapSignal {
+  text: string;
+  tone: "warn" | "ok" | "info";
+}
+
+export interface GapCheck {
+  level: GapLevel;
+  heat: number; // 0~100
+  confirmSegments: 1 | 2 | 3;
+  verdict: string;
+  advice: string;
+  signals: GapSignal[];
+}
+
+export function deriveGapCheck(input: {
+  temperatureScore: number;
+  evidenceLevel: EvidenceLevel;
+  sources: AnalysisSource[];
+  changeRate: number;
+}): GapCheck {
+  const { temperatureScore: heat, evidenceLevel, sources, changeRate } = input;
+  const confirmSegments = evidenceLevelText(evidenceLevel).segments;
+  const news = sources.filter((s) => s.type === "news");
+  const disclosures = sources.filter((s) => s.type === "disclosure");
+  const community = deriveCommunity(sources);
+  const checks = deriveDisclosureChecks(sources);
+  const reprint = news.reduce((sum, s) => sum + (numberMeta(s.meta, "issue_count") ?? 1), 0);
+  const reprintRatio = news.length ? reprint / news.length : 0;
+  const positiveRatio = community && community.samples > 0 ? community.positive / community.samples : null;
+
+  const signals: GapSignal[] = [];
+  if (news.length >= 4) signals.push({ text: reprintRatio >= 1.8 ? `비슷한 기사가 반복돼요 (${news.length}건이 ${reprint}번 재게재)` : `뉴스 ${news.length}건이 짧은 기간에 몰렸어요`, tone: reprintRatio >= 1.8 ? "warn" : "info" });
+  if (disclosures.length === 0) signals.push({ text: "이 기간 공시로 확인된 내용이 없어요", tone: "warn" });
+  else if (checks.unconfirmed.length > checks.confirmed.length) signals.push({ text: `공시로 확인된 것(${checks.confirmed.length})보다 아직 아닌 것(${checks.unconfirmed.length})이 많아요`, tone: "warn" });
+  else if (checks.confirmed.length > 0) signals.push({ text: `공시·보고서로 확인된 항목 ${checks.confirmed.length}개`, tone: "ok" });
+  if (positiveRatio !== null && positiveRatio >= 0.6) signals.push({ text: `커뮤니티 긍정 ${Math.round(positiveRatio * 100)}% — 분위기가 앞서가요`, tone: heat >= 70 ? "warn" : "info" });
+  if (changeRate >= 3) signals.push({ text: `가격이 하루 ${changeRate.toFixed(1)}% 올랐어요`, tone: "info" });
+
+  let level: GapLevel = "small";
+  if (heat >= 70 && evidenceLevel === "low") level = "large";
+  else if ((heat >= 65 && evidenceLevel === "medium") || (heat >= 78 && evidenceLevel !== "low")) level = "some";
+  else if (heat < 50 && evidenceLevel === "high") level = "quiet";
+
+  const copy: Record<GapLevel, { verdict: string; advice: string }> = {
+    large: { verdict: "다들 환호하는데, 공식 자료로 확인된 건 거의 없어요.", advice: "기사와 커뮤니티가 앞서가는 구간이에요. 공시가 따라오는지 먼저 확인해 보세요." },
+    some: { verdict: "관심은 뜨겁고, 확인된 재료는 절반쯤이에요.", advice: "확인된 부분과 기대만 있는 부분을 나눠서 보세요." },
+    small: { verdict: "관심과 확인된 재료가 비슷한 온도예요.", advice: "특별히 앞서가는 신호는 없어요. 평소 기준대로 보면 돼요." },
+    quiet: { verdict: "조용하지만 공식 자료는 탄탄해요.", advice: "시장 관심이 아직 낮은 구간이에요. 왜 조용한지 한 번 살펴볼 만해요." },
+  };
+  return { level, heat, confirmSegments, verdict: copy[level].verdict, advice: copy[level].advice, signals };
+}

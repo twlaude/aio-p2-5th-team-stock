@@ -58,6 +58,9 @@ const DEMO_PASSWORD = "Demo1234!";
 
 /** 목 모드 한줄 결론 — 실서비스에선 MCP Client의 LLM이 4개 재료(가격·뉴스·공시·커뮤니티)를 취합해 만든다. 여기선 같은 재료로 조합만. */
 function composeOneLiner(template: TemplateAnalysis): string {
+  if (template.evidence_level === "low" && template.temperature_score >= 70) {
+    return `뉴스는 ${template.topic}로 시끄러운데, 공시로 확인된 건 거의 없어요. 기사만으로 띄우는 흐름일 수 있어요.`;
+  }
   const news = `뉴스는 ${template.topic}에 쏠려 있고`;
   const disclosure =
     template.evidence_level === "high" ? "공시로도 대부분 확인돼요" : template.evidence_level === "medium" ? "공시로 확인된 건 절반쯤이에요" : "공식 확인은 아직 조금이에요";
@@ -180,9 +183,9 @@ function buildTemplateTopics(template: TemplateAnalysis): TopicPreview[] {
 
 function buildTemplateNewsSources(company: Company, template: TemplateAnalysis): AnalysisSource[] {
   return [
-    { type: "news", title: `${company.company_name} ${template.topic} 관련 보도`, publisher: "Mock News", published_at: "2026-09-01T02:30:00Z", url: "https://example.com/mock-news-1", meta: { issue_count: 2 } },
-    { type: "news", title: `${company.company_name} 업종 수급 변화 분석`, publisher: "Mock Market", published_at: "2026-08-31T06:00:00Z", url: "https://example.com/mock-news-2" },
-    { type: "news", title: `${template.topic} 기대와 가격 부담 동시 점검`, publisher: "Mock Economy", published_at: "2026-08-31T03:10:00Z", url: "https://example.com/mock-news-3" },
+    { type: "news", title: `${company.company_name} ${template.topic} 관련 보도`, publisher: "Mock News", published_at: "2026-09-01T02:30:00Z", url: "https://example.com/mock-news-1", meta: { issue_count: template.evidence_level === "low" ? 4 : 2 } },
+    { type: "news", title: `${company.company_name} 업종 수급 변화 분석`, publisher: "Mock Market", published_at: "2026-08-31T06:00:00Z", url: "https://example.com/mock-news-2", meta: template.evidence_level === "low" ? { issue_count: 3 } : undefined },
+    { type: "news", title: `${template.topic} 기대와 가격 부담 동시 점검`, publisher: "Mock Economy", published_at: "2026-08-31T03:10:00Z", url: "https://example.com/mock-news-3", meta: template.evidence_level === "low" ? { issue_count: 3 } : undefined },
     { type: "news", title: `${company.company_name} 실적 발표 전 확인 포인트`, publisher: "Mock Securities", published_at: "2026-08-30T07:40:00Z", url: "https://example.com/mock-news-4" },
     { type: "news", title: `${company.company_name} 단기 변동성 확대 가능성`, publisher: "Mock Daily", published_at: "2026-08-30T01:20:00Z", url: "https://example.com/mock-news-5" },
   ];
@@ -190,7 +193,9 @@ function buildTemplateNewsSources(company: Company, template: TemplateAnalysis):
 
 function buildTemplateDisclosureSources(company: Company, template: TemplateAnalysis): AnalysisSource[] {
   return [
-    { type: "disclosure", title: `${company.company_name} 주요사항보고서`, publisher: "Mock DART", published_at: "2026-08-29T08:00:00Z", url: "https://example.com/mock-disclosure-1", meta: { receipt_no: `20260829${company.stock_code}`, confirmed: [`${template.topic} 관련 공개 자료`, "최근 재무 지표 제출", "주요 사업 현황 공시"], unconfirmed: ["다음 분기 실적 반영 폭", "단기 가격 촉매 지속성", "시장 기대와 실제 숫자의 차이"] } },
+    { type: "disclosure", title: `${company.company_name} 주요사항보고서`, publisher: "Mock DART", published_at: "2026-08-29T08:00:00Z", url: "https://example.com/mock-disclosure-1", meta: template.evidence_level === "low"
+        ? { receipt_no: `20260829${company.stock_code}`, confirmed: ["정기 재무 지표 제출"], unconfirmed: [`${template.topic} 관련 공식 공시`, "계약·수주 금액", "다음 분기 실적 반영 폭", "시장 기대와 실제 숫자의 차이"] }
+        : { receipt_no: `20260829${company.stock_code}`, confirmed: [`${template.topic} 관련 공개 자료`, "최근 재무 지표 제출", "주요 사업 현황 공시"], unconfirmed: ["다음 분기 실적 반영 폭", "단기 가격 촉매 지속성", "시장 기대와 실제 숫자의 차이"] } },
     { type: "disclosure", title: `${company.company_name} 반기보고서`, publisher: "Mock DART", published_at: "2026-08-20T08:00:00Z", url: "https://example.com/mock-disclosure-2", meta: { receipt_no: `20260820${company.stock_code}` } },
     { type: "disclosure", title: `${company.company_name} 기업설명회 자료`, publisher: "Mock DART", published_at: "2026-08-14T08:00:00Z", url: "https://example.com/mock-disclosure-3", meta: { receipt_no: `20260814${company.stock_code}` } },
   ];
