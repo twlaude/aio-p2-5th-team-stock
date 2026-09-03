@@ -49,6 +49,24 @@ source_url
 collected_at
 ```
 
+## 목표 구조
+
+```text
+disclosure_mcp/
+├─ server.py       # 진입점 (FastMCP 생성 + Tool 등록)
+├─ app/
+│  ├─ tools/       # MCP Tool
+│  ├─ services/    # 공시 정제·요약
+│  ├─ rag/         # 청킹·임베딩·검색
+│  ├─ clients/     # DART API·DB 연결
+│  ├─ schemas/     # Tool 입출력
+│  └─ core/        # 설정·로그
+├─ tests/
+├─ .env.example
+├─ requirements.txt
+└─ GUIDE.md
+```
+
 ## 환경변수 계획
 
 ```text

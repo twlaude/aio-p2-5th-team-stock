@@ -83,8 +83,8 @@ COMMUNITY_RESULT_LIMIT=100
 
 ```text
 community_mcp/
+├─ server.py                 # 진입점: FastMCP 생성 + Tool 등록 + /health (로직 없음)
 ├─ app/
-│  ├─ server.py              # 진입점: FastMCP 생성 + Tool 등록 + /health (로직 없음)
 │  ├─ core/config.py         # .env → CommunityConfig
 │  ├─ schemas/reaction.py    # Tool 입출력 TypedDict (계약 필드와 동일)
 │  ├─ clients/fgi_api.py     # 태웅님 커뮤니티 서버 HTTP 호출 (/reaction, /fgi)
@@ -110,7 +110,7 @@ cd mcp_servers/community_mcp
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env            # COMMUNITY_API_TOKEN 비우면 Mock 응답, 채우면 실데이터
-python -m app.server
+python server.py
 curl http://127.0.0.1:8023/health
 ```
 

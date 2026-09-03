@@ -35,13 +35,13 @@ get_price_activity_snapshot
 
 ```text
 price_mcp/
+├─ server.py       # 진입점 (FastMCP 생성 + Tool 등록)
 ├─ app/
 │  ├─ tools/       # MCP Tool
 │  ├─ services/    # 가격 정규화·활동도 계산·캐시
 │  ├─ clients/     # 공공데이터 API 연결
 │  ├─ schemas/     # Tool 입출력
-│  ├─ core/        # 설정·로그
-│  └─ server.py
+│  └─ core/        # 설정·로그
 ├─ tests/
 ├─ .env.example
 ├─ requirements.txt
