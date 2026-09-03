@@ -1,20 +1,44 @@
--- 데모용 시드 (사용자 1명 + 보유 1종목 + 투자 메모 샘플)
--- 메모 embedding은 NULL로 두고 backend/scripts/embed_chunks.py 가 채운다.
+-- 데모 시드 (회원 2명 + 투자 성향 + 분석 기록 예시 1건)
+-- 비밀번호는 발표용 데모 계정 공용 값 Demo1234!다(shared/contracts/frontend_backend).
+-- 해시는 backend/app/core/security.py의 PBKDF2(sha256, 200000회)와 같은 형식이다:
+--   "<salt hex>$<derived hex>"
+-- 실제 회원가입 시에는 여기 값이 아니라 Backend가 매번 새 salt로 생성한다.
 
-INSERT INTO users (username) VALUES ('demo')
-ON CONFLICT (username) DO NOTHING;
+INSERT INTO users (user_id, username, password_hash, display_name) VALUES
+    ('demo-001', 'demo001',
+     '81d89e604160f526e036414e10451207$1a2df8157004d874d39133836a8d5dad6cff4f2fd982c057b270a01752042c54',
+     '데모 사용자 1'),
+    ('demo-002', 'demo002',
+     '81d89e604160f526e036414e10451207$1a2df8157004d874d39133836a8d5dad6cff4f2fd982c057b270a01752042c54',
+     '데모 사용자 2')
+ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO positions (user_id, stock_code, stock_name, quantity, avg_price)
-SELECT id, '005930', '삼성전자', 10, 71000 FROM users WHERE username = 'demo'
-ON CONFLICT (user_id, stock_code) DO NOTHING;
+-- backend/app/repositories/user_repository.py의 seed 조합 중 1·2번째와 맞춘다.
+INSERT INTO user_profiles (user_id, experience_level, risk_profile, investment_horizon, preferred_evidence) VALUES
+    ('demo-001', 'beginner', 'conservative', 'long', 'news'),
+    ('demo-002', 'intermediate', 'balanced', 'medium', 'market')
+ON CONFLICT (user_id) DO NOTHING;
 
-INSERT INTO rag_chunks (user_id, stock_code, doc_type, title, content, content_hash, published_at)
-SELECT u.id, v.stock_code, 'user_note', v.title, v.content, md5(v.content), v.published_at
-FROM users u,
-     (VALUES
-        ('005930', '매수 근거', 'HBM 수요 확대로 메모리 업황 턴어라운드를 기대하고 매수. 경쟁사 대비 밸류에이션 매력 있다고 판단.', now() - interval '60 days'),
-        ('005930', '우려',      '파운드리 적자 지속이 부담. 대형 고객 수주 소식 없으면 비중 확대는 보류.', now() - interval '45 days'),
-        ('005930', '매도 조건', 'HBM 공급 과잉 신호가 나오거나 분기 영업이익이 시장 기대를 크게 하회하면 절반 정리.', now() - interval '45 days')
-     ) AS v(stock_code, title, content, published_at)
-WHERE u.username = 'demo'
-ON CONFLICT (doc_type, content_hash) DO NOTHING;
+INSERT INTO analysis_runs (
+    request_id, user_id, company_name, stock_code, access_level, status,
+    one_line_summary, sources, partial_failures, personalized_checkpoints,
+    requested_at, collected_at
+) VALUES (
+    'seed-demo-analysis-005930-001',
+    'demo-001',
+    '삼성전자',
+    '005930',
+    'member',
+    'success',
+    '삼성전자의 최근 흐름을 뉴스·공시·커뮤니티 반응과 함께 정리했다(Seed 예시).',
+    '[]'::jsonb,
+    '[]'::jsonb,
+    '{
+        "personal_summary": "장기 관점에서 보면: 삼성전자의 최근 흐름을 정리했다(Seed 예시).",
+        "priority_checks": ["최근 뉴스부터 확인해보자.", "conservative 성향에 맞는 변동성 수준인지 점검해보자."],
+        "caution": "이 확인 포인트는 매수·매도를 추천하지 않으며 참고용 설명이다."
+    }'::jsonb,
+    now() - interval '1 day',
+    now() - interval '1 day'
+)
+ON CONFLICT (request_id) DO NOTHING;
