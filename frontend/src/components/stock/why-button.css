@@ -1,0 +1,16 @@
+.why-button-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 8px; }
+.why-button {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; padding: 12px 22px; border: 0;
+  border-radius: var(--r-pill); background: var(--c-ink); color: var(--c-white); font-size: 15px; font-weight: 700; transition: transform 180ms ease;
+}
+.why-button::after { position: absolute; inset: 0; border: 1px solid var(--c-ink); border-radius: inherit; content: ""; animation: why-ring 2.4s ease-out infinite; }
+.why-button:hover { transform: scale(1.02); }
+.why-button:active { transform: scale(0.97); }
+.why-button:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
+.why-button-wrap__chevron { color: var(--c-ink); animation: why-nudge 1.4s ease-in-out infinite; }
+@keyframes why-ring { 0% { opacity: 0.35; transform: scale(1); } 100% { opacity: 0; transform: scale(1.35); } }
+@keyframes why-nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .why-button, .why-button::after, .why-button-wrap__chevron { animation: none; transition: opacity 180ms ease; }
+}
