@@ -48,76 +48,93 @@ function hashText(text: string) {
   return h >>> 0;
 }
 
+/** 결론 말풍선의 host 중심 기준 사각형(레이아웃 값, transform 무관) */
+interface BubbleRect {
+  halfW: number;
+  top: number; // host 중심 기준 y (음수)
+  bottom: number; // host 중심 기준 y (양수)
+}
+
 interface Bounds {
   mobile: boolean;
-  maxX: number;
-  maxY: number;
-  keepOutX: number;
-  keepOutY: number;
-  minGap: number;
-  count: number;
+  viewportHalf: number;
+  bubble: BubbleRect;
 }
 
-function boundsFor(hostWidth: number, viewportWidth: number): Bounds {
-  const mobile = viewportWidth <= 480;
-  if (mobile) {
-    return { mobile, maxX: viewportWidth / 2 - 54, maxY: 196, keepOutX: hostWidth / 2, keepOutY: 104, minGap: 56, count: 6 };
+function measureBubble(host: HTMLElement): BubbleRect | null {
+  const bubble = host.querySelector<HTMLElement>(".one-liner__bubble");
+  if (!bubble) return null;
+  let top = 0;
+  let node: HTMLElement | null = bubble;
+  while (node && node !== host) {
+    top += node.offsetTop;
+    node = node.offsetParent as HTMLElement | null;
   }
-  return { mobile, maxX: Math.min(viewportWidth / 2 - 76, 600), maxY: 212, keepOutX: Math.min(hostWidth / 2 + 10, 470), keepOutY: 112, minGap: 72, count: 12 };
+  const centerY = host.offsetHeight / 2;
+  return { halfW: bubble.offsetWidth / 2, top: top - centerY, bottom: top + bubble.offsetHeight - centerY };
 }
 
-/** 키워드가 앉을 수 있는 자리: 결론 말풍선 좌우 여백 + 말풍선 아래 띠(why 버튼 자리 제외). 그래프·가격 위로는 안 올라간다. */
-function sampleCandidate(rand: () => number, b: Bounds): { x: number; y: number } {
-  const lerp = (lo: number, hi: number) => lo + rand() * (hi - lo);
-  if (b.mobile) {
-    // 모바일: 말풍선 위 띠 / 아래 띠(why 버튼 중앙 제외)
-    if (rand() < 0.5) return { x: lerp(-b.maxX, b.maxX), y: lerp(-158, -b.keepOutY - 8) };
-    const x = lerp(-b.maxX, b.maxX);
-    const y = lerp(b.keepOutY + 8, b.maxY);
-    if (Math.abs(x) < 112 && y < b.keepOutY + 78) return { x: x < 0 ? x - 120 : x + 120, y };
-    return { x: Math.max(-b.maxX, Math.min(b.maxX, x)), y };
-  }
-  const roll = rand();
-  if (roll < 0.28) return { x: lerp(-b.maxX, -b.keepOutX - 12), y: lerp(-150, 150) };
-  if (roll < 0.56) return { x: lerp(b.keepOutX + 12, b.maxX), y: lerp(-150, 150) };
-  const x = lerp(-b.maxX + 40, b.maxX - 40);
-  const y = lerp(b.keepOutY + 14, b.maxY);
-  if (Math.abs(x) < 150 && y < b.keepOutY + 82) return { x: x < 0 ? x - 160 : x + 160, y };
-  return { x, y };
+function boundsFor(host: HTMLElement, viewportWidth: number): Bounds | null {
+  const bubble = measureBubble(host);
+  if (!bubble) return null;
+  return { mobile: viewportWidth <= 480, viewportHalf: viewportWidth / 2, bubble };
 }
 
+/**
+ * 슬롯 배치: 말풍선 위 가장자리 한 줄 + 아래 가장자리 한 줄. 위 줄은 캡션 자리(중앙), 아래 줄은 why 버튼 자리(중앙)를 비운다.
+ * 어느 화면 폭에서도 같은 모양 — 랜덤은 ±6px 흔들림과 부유 리듬에만 쓴다.
+ */
 function layout(topics: TopicEvidence[], bounds: Bounds, seed: number): Placed[] {
   const rand = mulberry32(seed);
-  const chosen = [...topics].sort((a, b) => b.weight - a.weight).slice(0, bounds.count);
-  const placed: Placed[] = [];
+  const { bubble, mobile } = bounds;
+  const chipW = mobile ? 88 : 104; // 평균 칩 폭(간격 계산용)
+  const centerGapTop = mobile ? 96 : 170; // 캡션 자리
+  const centerGapBottom = mobile ? 118 : 200; // why 버튼+chevron 자리
+  const edgeInset = mobile ? 4 : 24;
+  const usableHalf = Math.min(bubble.halfW - edgeInset, bounds.viewportHalf - chipW / 2 - 8);
 
-  chosen.forEach((topic, index) => {
-    let best: { x: number; y: number; score: number } | null = null;
-    for (let attempt = 0; attempt < 60; attempt += 1) {
-      const candidate = sampleCandidate(rand, bounds);
-      const x = Math.max(-bounds.maxX, Math.min(bounds.maxX, candidate.x));
-      const y = Math.max(-bounds.maxY, Math.min(bounds.maxY, candidate.y));
-      if (Math.abs(x) < bounds.keepOutX && Math.abs(y) < bounds.keepOutY) continue;
-      const nearest = placed.reduce((min, p) => Math.min(min, Math.hypot((p.x - x) * 0.7, p.y - y)), Infinity);
-      if (!best || nearest > best.score) best = { x, y, score: nearest };
-      if (nearest >= bounds.minGap) break;
+  const slotsFor = (gap: number, y: number, jitterY: number) => {
+    const segment = usableHalf - gap;
+    const perSide = Math.max(1, Math.min(mobile ? 1 : 3, Math.floor((segment + 20) / chipW)));
+    const slots: { x: number; y: number }[] = [];
+    for (let i = 0; i < perSide; i += 1) {
+      const t = perSide === 1 ? 0.5 : i / (perSide - 1);
+      const x = gap + chipW * 0.45 + t * (segment - chipW * 0.9);
+      slots.push({ x: -x, y: y + (rand() - 0.5) * jitterY }, { x, y: y + (rand() - 0.5) * jitterY });
     }
-    if (!best) return;
+    return slots;
+  };
+
+  const rowGap = mobile ? 26 : 34;
+  const slots = [
+    // 모바일은 캡션이 폭을 다 차지하므로 위 줄을 캡션 위쪽으로 올린다
+    ...slotsFor(mobile ? 72 : centerGapTop, mobile ? bubble.top - 50 : bubble.top - rowGap, 12),
+    ...slotsFor(centerGapBottom, bubble.bottom + rowGap, 12),
+  ];
+  if (!mobile && slots.length < 12) {
+    // 여유 있으면 아래 두 번째 줄(버튼 아래 바깥쪽)
+    slots.push(...slotsFor(centerGapBottom + 60, bubble.bottom + rowGap + 54, 10).slice(0, 12 - slots.length));
+  }
+  // 바깥쪽부터 안쪽 순으로 정렬해 중앙에서 퍼질 때 먼 것이 먼저 출발
+  slots.sort((a, b) => Math.hypot(b.x, b.y) - Math.hypot(a.x, a.y));
+
+  const chosen = [...topics].sort((a, b) => b.weight - a.weight).slice(0, slots.length);
+  return chosen.map((topic, index) => {
+    const slot = slots[index];
     const weight = Math.max(1, Math.min(5, topic.weight));
-    placed.push({
+    return {
       topic,
-      x: best.x,
-      y: best.y,
-      scale: 0.86 + weight * 0.07,
-      delay: 0.38 + index * 0.035,
-      floatDuration: 4 + rand() * 4,
+      x: slot.x + (rand() - 0.5) * 8,
+      y: slot.y,
+      scale: 0.84 + weight * 0.06,
+      delay: 0.4 + index * 0.04,
+      floatDuration: 4.5 + rand() * 3.5,
       floatDelay: rand() * -6,
-      ampX: (rand() > 0.5 ? 1 : -1) * (3 + rand() * 3),
-      ampY: (rand() > 0.5 ? 1 : -1) * (8 + rand() * 6),
-      rot: (rand() > 0.5 ? 1 : -1) * (1.5 + rand() * 1.5),
-    });
+      ampX: (rand() > 0.5 ? 1 : -1) * (2 + rand() * 3),
+      ampY: (rand() > 0.5 ? 1 : -1) * (6 + rand() * 5),
+      rot: (rand() > 0.5 ? 1 : -1) * (1 + rand() * 1.5),
+    };
   });
-  return placed;
 }
 
 function pushBubbles(host: HTMLElement, event: MouseEvent<HTMLElement> | null) {
@@ -147,8 +164,8 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
 
   useLayoutEffect(() => {
     const measure = () => {
-      const width = hostRef.current?.clientWidth ?? 880;
-      setBounds(boundsFor(width, window.innerWidth));
+      if (!hostRef.current) return;
+      setBounds(boundsFor(hostRef.current, window.innerWidth));
     };
     measure();
     window.addEventListener("resize", measure);
@@ -177,7 +194,7 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
               transition={
                 reducedMotion
                   ? { duration: 0.4, delay: 0.2 }
-                  : { type: "spring", stiffness: 150, damping: 13, mass: 0.9, delay: item.delay, opacity: { duration: 0.25, delay: item.delay } }
+                  : { type: "spring", stiffness: 210, damping: 17, mass: 0.8, delay: item.delay, opacity: { duration: 0.22, delay: item.delay } }
               }
             >
               <span
