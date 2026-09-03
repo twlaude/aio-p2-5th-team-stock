@@ -77,6 +77,9 @@ class DisclosureDetailResponse(TypedDict, total=False):
     receipt_number: str
     published_at: str
     document_type: Literal["disclosure"]
+    content: str
+    content_truncated: bool
+    total_chars: int
     summary: str
     source_url: str
     collected_at: str
@@ -89,6 +92,7 @@ class MatchedPassage(TypedDict):
     section: str
     text: str
     score: float
+    match_type: Literal["vector", "keyword"]
 
 
 class AnnualReportSearchRequest(TypedDict):
@@ -108,6 +112,7 @@ class AnnualReportSearchResponse(TypedDict, total=False):
     receipt_number: str
     report_year: int
     matched_passages: list[MatchedPassage]
+    available_years: list[int]
     source_url: str
     collected_at: str
     error: ErrorDetail

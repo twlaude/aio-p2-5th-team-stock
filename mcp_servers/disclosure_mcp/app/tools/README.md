@@ -16,6 +16,8 @@ MCP Client에 공개하는 Tool만 정의한다. 기업 고유번호 조회는 `
 
 - 입력: `receipt_number`
 - 출력: 공시 제목, 핵심 내용, 공식 원문 URL, 발행일과 수집 시각
+- 원문은 표를 `셀 | 셀` 형태로 평탄화하고 최대 3,000자만 반환한다. 전체 길이와
+  잘림 여부는 `total_chars`, `content_truncated`으로 전달한다.
 - 사용 제한: Agent는 최근 공시 중 질문과 직접 관련된 최대 2건만 상세 조회한다.
 
 ## `search_annual_report`

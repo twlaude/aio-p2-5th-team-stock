@@ -32,6 +32,7 @@ class DisclosureConfig:
     dart_api_key: str | None = None
     dart_api_url: str = "https://opendart.fss.or.kr/api"
     database_url: str | None = None
+    openai_api_key: str | None = None
     embedding_provider: str | None = None
     embedding_model: str | None = None
     host: str = "0.0.0.0"
@@ -59,6 +60,7 @@ class DisclosureConfig:
             name
             for name, value in {
                 "DATABASE_URL": self.database_url,
+                "OPENAI_API_KEY": self.openai_api_key,
                 "EMBEDDING_PROVIDER": self.embedding_provider,
                 "EMBEDDING_MODEL": self.embedding_model,
             }.items()
@@ -70,6 +72,12 @@ class DisclosureConfig:
             )
         if not 1 <= self.annual_report_top_k <= 5:
             raise ConfigurationError("ANNUAL_REPORT_TOP_K must be between 1 and 5.")
+        if self.embedding_provider != "openai":
+            raise ConfigurationError("EMBEDDING_PROVIDER must be 'openai'.")
+        if self.embedding_model != "text-embedding-3-small":
+            raise ConfigurationError(
+                "EMBEDDING_MODEL must be 'text-embedding-3-small' for vector(1536)."
+            )
 
 
 def get_config() -> DisclosureConfig:
@@ -79,6 +87,7 @@ def get_config() -> DisclosureConfig:
         dart_api_key=os.getenv("DART_API_KEY") or None,
         dart_api_url=os.getenv("DART_API_URL", DisclosureConfig.dart_api_url),
         database_url=os.getenv("DATABASE_URL") or None,
+        openai_api_key=os.getenv("OPENAI_API_KEY") or None,
         embedding_provider=os.getenv("EMBEDDING_PROVIDER") or None,
         embedding_model=os.getenv("EMBEDDING_MODEL") or None,
         host=os.getenv("DISCLOSURE_MCP_HOST", DisclosureConfig.host),
