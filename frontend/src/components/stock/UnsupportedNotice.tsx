@@ -16,6 +16,8 @@ interface UnsupportedNoticeProps {
 
 export function UnsupportedNotice({ query, message, onSelectCompany }: UnsupportedNoticeProps) {
   const displayQuery = query?.trim() || "입력한 기업";
+  // 목/서버 메시지가 제목 문장을 그대로 반복하면 설명은 기준 안내 문구만 보여준다
+  const description = message && !message.startsWith(`아직 ${displayQuery}`) ? message : fallbackDescription;
 
   // motion 4b-15
   return (
@@ -24,7 +26,7 @@ export function UnsupportedNotice({ query, message, onSelectCompany }: Unsupport
         <Mascot state="oops" size={64} />
         <div className="unsupported-notice__text">
           <h2>아직 {displayQuery} 분석은 제공하지 않아요</h2>
-          <p>{message || fallbackDescription}</p>
+          <p>{description}</p>
         </div>
       </div>
       <h3 className="notice-stage__label">지원 기업 20개</h3>
