@@ -75,6 +75,8 @@ news_mcp/
 
 요청 흐름: MCP Client → `tools/news.py`(입력 검증) → `services/news.py` → `clients/naver_news.py` → NAVER API HUB. 응답은 역순으로 돌아오며 services에서 중복 제거·관련성 필터링 후 계약 형식으로 맞춘다.
 
+NAVER API HUB 뉴스 검색 API는 응답에 언론사명(`publisher`)을 주지 않는다(`title`, `originallink`, `link`, `description`, `pubDate`만 제공). 따라서 `publisher`는 `originallink` 도메인으로 임시 대체한다(예: `thebell.co.kr`). 정확한 언론사명이 필요해지면 도메인→언론사 매핑 테이블을 추가한다.
+
 중복·관련성 판단 기준:
 - 중복: `source_url`(없으면 제목)이 같은 기사는 첫 기사만 남긴다.
 - 관련성: 제목·요약에 `company_name`이 포함되지 않으면 낮음으로 보고 결과에서 제외한다.

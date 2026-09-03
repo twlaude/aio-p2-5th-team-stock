@@ -3,6 +3,7 @@ from email.utils import parsedate_to_datetime
 from html import unescape
 import re
 from typing import Any
+from urllib.parse import urlparse
 from uuid import uuid4
 
 from app.clients.naver_news import (
@@ -48,6 +49,11 @@ def _relevance(company_name: str, headline: str, summary: str) -> str:
     return "high" if company_name in haystack else "low"
 
 
+def _publisher_from_url(source_url: str) -> str:
+    host = urlparse(source_url).netloc
+    return host.removeprefix("www.") or "unknown"
+
+
 def map_upstream_response(
     payload: dict[str, Any],
     request: NewsRequest,
@@ -77,7 +83,7 @@ def map_upstream_response(
         articles.append(
             {
                 "headline": headline,
-                "publisher": item.get("publisher") or "unknown",
+                "publisher": item.get("publisher") or _publisher_from_url(source_url),
                 "published_at": published_at or "",
                 "summary": summary,
                 "source_url": source_url,

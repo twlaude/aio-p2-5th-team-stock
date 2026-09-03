@@ -31,8 +31,8 @@ class NaverNewsClient:
 
     def _headers(self) -> dict[str, str]:
         return {
-            "X-Naver-Client-Id": self._client_id or "",
-            "X-Naver-Client-Secret": self._client_secret or "",
+            "X-NCP-APIGW-API-KEY-ID": self._client_id or "",
+            "X-NCP-APIGW-API-KEY": self._client_secret or "",
         }
 
     def close(self) -> None:
