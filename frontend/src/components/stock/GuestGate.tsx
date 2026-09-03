@@ -37,7 +37,7 @@ export function GuestGate({ companyName, query }: GuestGateProps) {
             <div className="guest-gate__dummy-copy">커뮤니티 언급량 · 뉴스 기사량 · 거래량 변화 기준. 상승 가능성이 아니에요.</div>
           </article>
           <article className="guest-gate__dummy-card">
-            <div className="guest-gate__dummy-caption">근거 확인 정도</div>
+            <div className="guest-gate__dummy-caption">공시·보고서로 확인된 정도</div>
             <div className="guest-gate__dummy-score"><span>보통</span></div>
             <div className="guest-gate__segments"><span /><span /><i /></div>
             <div className="guest-gate__dummy-copy">최근 공시에서 메모리 투자는 확인, 파운드리 수익성은 미확인.</div>

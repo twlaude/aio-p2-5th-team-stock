@@ -80,11 +80,11 @@ export function GaugeCard(props: GaugeCardProps) {
   return (
     // motion 4b-10
     <div ref={ref} className={["analysis-gauge-card", inView ? "analysis-gauge-card--visible" : ""].join(" ")}>
-      <div className="analysis-gauge-card__caption">근거 확인 정도</div>
+      <div className="analysis-gauge-card__caption">공시·보고서로 확인된 정도</div>
       <div className="analysis-gauge-card__headline">
         <span className="analysis-gauge-card__number">{level.text}</span>
       </div>
-      <div className="analysis-gauge-card__segments" aria-label={`근거 확인 정도 ${level.text}`}>
+      <div className="analysis-gauge-card__segments" aria-label={`공시·보고서로 확인된 정도 ${level.text}`}>
         {[0, 1, 2].map((index) => (
           <span
             key={index}

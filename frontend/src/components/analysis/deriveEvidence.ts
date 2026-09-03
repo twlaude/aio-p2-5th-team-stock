@@ -32,7 +32,7 @@ export interface DisclosureChecks {
 }
 
 export interface EvidenceLevelView {
-  text: "충분" | "보통" | "부족";
+  text: "많이 확인됨" | "절반쯤" | "아직 조금";
   segments: 1 | 2 | 3;
 }
 
@@ -199,10 +199,10 @@ export function fgiLabel(fgi: number | null | undefined) {
 
 export function evidenceLevelText(level: EvidenceLevel): EvidenceLevelView {
   if (level === "high") {
-    return { text: "충분", segments: 3 };
+    return { text: "많이 확인됨", segments: 3 };
   }
   if (level === "medium") {
-    return { text: "보통", segments: 2 };
+    return { text: "절반쯤", segments: 2 };
   }
-  return { text: "부족", segments: 1 };
+  return { text: "아직 조금", segments: 1 };
 }
