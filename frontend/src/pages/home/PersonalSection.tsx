@@ -1,14 +1,39 @@
+import { PersonalCard } from "../../components/analysis/PersonalCard";
+import { readAuthSession } from "../../state/auth";
 import { useSearch } from "../../state/searchStore";
+import { SiteFooter } from "./SiteFooter";
+import "./personalSection.css";
 
-/** 영역 C 소유 — 성향별 확인 포인트 + 푸터. 아래는 스텁. */
 export function PersonalSection() {
   const { result, status } = useSearch();
-  if (status !== "ready" || !result || result.status === "unsupported_company" || result.access_level !== "member" || !result.personalized_checkpoints) {
+  if (status !== "ready" || !result) {
     return null;
   }
+  if (result.status === "unsupported_company") {
+    return null;
+  }
+  if (result.access_level !== "member" || !result.detail) {
+    return null;
+  }
+
+  const session = readAuthSession();
+  if (session?.profileCompleted === false) {
+    return (
+      <section id="personal" className="sallae-personal-section">
+        <div className="sallae-personal-section__setup">성향 설정이 필요해요</div>
+        <SiteFooter />
+      </section>
+    );
+  }
+
+  if (!result.personalized_checkpoints) {
+    return null;
+  }
+
   return (
-    <section className="personal">
-      <p>{result.personalized_checkpoints.personal_summary}</p>
+    <section id="personal" className="sallae-personal-section">
+      <PersonalCard checkpoints={result.personalized_checkpoints} />
+      <SiteFooter />
     </section>
   );
 }

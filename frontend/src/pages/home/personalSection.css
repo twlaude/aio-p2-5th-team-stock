@@ -1,0 +1,7 @@
+.sallae-personal-section { display: flex; flex-direction: column; align-items: center; gap: 20px; width: 100vw; margin-right: calc(50% - 50vw); margin-left: calc(50% - 50vw); padding: 64px 64px 80px; background: var(--c-bg); }
+.sallae-personal-section__setup { width: 880px; max-width: 100%; padding: 36px; border-radius: var(--r-xl); color: var(--c-primary-deep); background: var(--c-pale); font-size: 18px; font-weight: 700; }
+
+@media (max-width: 480px) {
+  .sallae-personal-section { padding: 36px 20px 56px; }
+  .sallae-personal-section__setup { padding: 24px; }
+}

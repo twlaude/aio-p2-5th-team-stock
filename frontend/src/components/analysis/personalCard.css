@@ -1,0 +1,26 @@
+.analysis-personal-card { position: relative; display: flex; flex-direction: column; gap: 20px; width: 880px; max-width: 100%; padding: 36px; overflow: hidden; border: 0; border-radius: var(--r-xl); background: var(--c-pale); }
+.analysis-personal-card::before { position: absolute; inset: 0; border-radius: inherit; content: ""; pointer-events: none; opacity: 0; background: linear-gradient(110deg, transparent 0 35%, rgba(31, 179, 94, 0.32) 48%, transparent 62% 100%); transform: translateX(-100%); }
+.analysis-personal-card--visible::before { animation: analysis-personal-sweep 1.2s linear 1; }
+.analysis-personal-card__header { display: flex; align-items: center; gap: 10px; color: var(--c-primary-deep); font-size: 14px; font-weight: 700; }
+.analysis-personal-card__summary { color: var(--c-ink); font-size: 26px; font-weight: 700; letter-spacing: 0; line-height: 1.35; text-wrap: pretty; }
+.analysis-personal-card__checks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.analysis-personal-card__check { padding: 16px; border-radius: var(--r-md); background: var(--c-white); color: var(--c-ink); font-size: 14px; line-height: 1.5; opacity: 0; transform: translateY(10px); }
+.analysis-personal-card--visible .analysis-personal-card__check { opacity: 1; transform: translateY(0); transition: opacity 320ms ease-out var(--tile-delay), transform 320ms ease-out var(--tile-delay); }
+.analysis-personal-card__check span { font-weight: 700; }
+.analysis-personal-card__caution { color: var(--c-sub); font-size: 14px; line-height: 1.5; }
+
+@keyframes analysis-personal-sweep {
+  0% { opacity: 1; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(100%); }
+}
+
+@media (max-width: 480px) {
+  .analysis-personal-card { width: 100%; padding: 24px; }
+  .analysis-personal-card__summary { font-size: 21px; }
+  .analysis-personal-card__checks { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .analysis-personal-card::before { display: none; }
+  .analysis-personal-card__check, .analysis-personal-card--visible .analysis-personal-card__check { opacity: 1; transform: none; transition: opacity 160ms ease; }
+}
