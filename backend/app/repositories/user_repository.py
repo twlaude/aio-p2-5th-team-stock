@@ -15,34 +15,31 @@ class UserRecord:
     profile: InvestmentProfile | None
 
 
+_EXPERIENCE_LEVELS = ("beginner", "intermediate", "experienced")
+_RISK_PROFILES = ("conservative", "balanced", "aggressive")
+_INVESTMENT_HORIZONS = ("long", "medium", "short")
+_PREFERRED_EVIDENCE = ("news", "market", "financial", "risk")
+
+
 def _seed() -> dict[str, UserRecord]:
+    """발표용 데모 계정 10개. shared/contracts/frontend_backend/README.md 기준 공용 비밀번호 Demo1234!를 쓴다."""
     demo_password = hash_password("Demo1234!")
-    return {
-        "demo001": UserRecord(
-            user_id="demo-001",
-            username="demo001",
+    users: dict[str, UserRecord] = {}
+    for i in range(1, 11):
+        username = f"demo{i:03d}"
+        users[username] = UserRecord(
+            user_id=f"demo-{i:03d}",
+            username=username,
             password_hash=demo_password,
-            display_name="데모 사용자 1",
+            display_name=f"데모 사용자 {i}",
             profile=InvestmentProfile(
-                experience_level="beginner",
-                risk_profile="conservative",
-                investment_horizon="long",
-                preferred_evidence="news",
+                experience_level=_EXPERIENCE_LEVELS[(i - 1) % len(_EXPERIENCE_LEVELS)],
+                risk_profile=_RISK_PROFILES[(i - 1) % len(_RISK_PROFILES)],
+                investment_horizon=_INVESTMENT_HORIZONS[(i - 1) % len(_INVESTMENT_HORIZONS)],
+                preferred_evidence=_PREFERRED_EVIDENCE[(i - 1) % len(_PREFERRED_EVIDENCE)],
             ),
-        ),
-        "demo002": UserRecord(
-            user_id="demo-002",
-            username="demo002",
-            password_hash=demo_password,
-            display_name="데모 사용자 2",
-            profile=InvestmentProfile(
-                experience_level="experienced",
-                risk_profile="aggressive",
-                investment_horizon="short",
-                preferred_evidence="market",
-            ),
-        ),
-    }
+        )
+    return users
 
 
 _USERS_BY_USERNAME: dict[str, UserRecord] = _seed()

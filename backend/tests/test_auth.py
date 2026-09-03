@@ -34,3 +34,11 @@ def test_signup_creates_new_user(client):
 def test_profile_requires_auth(client):
     response = client.get("/api/v1/profile")
     assert response.status_code == 401
+
+
+def test_all_ten_demo_accounts_can_log_in(client):
+    for i in range(1, 11):
+        username = f"demo{i:03d}"
+        response = client.post("/api/v1/auth/login", json={"username": username, "password": "Demo1234!"})
+        assert response.status_code == 200, username
+        assert response.json()["user"]["username"] == username
