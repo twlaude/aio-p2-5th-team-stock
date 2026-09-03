@@ -1,10 +1,10 @@
 export type ApiMode = "mock" | "live";
 export type AnalysisStatus = "success" | "partial_completed" | "unsupported_company";
 export type AccessLevel = "guest" | "member";
-export type RiskProfile = "stable" | "balanced" | "aggressive";
-export type InvestmentHorizon = "long" | "mid" | "short";
-export type ExperienceLevel = "beginner" | "intermediate" | "advanced";
-export type PreferredEvidence = "news" | "disclosure" | "community";
+export type RiskProfile = "conservative" | "balanced" | "aggressive";
+export type InvestmentHorizon = "short" | "medium" | "long";
+export type ExperienceLevel = "beginner" | "intermediate" | "experienced";
+export type PreferredEvidence = "financial" | "market" | "news" | "risk";
 export type DataCoverage = "price" | "news" | "disclosure" | "community";
 export type SourceType = "news" | "disclosure" | "community";
 export type EvidenceLevel = "low" | "medium" | "high";
@@ -20,11 +20,15 @@ export interface UserProfile {
   preferred_evidence: PreferredEvidence;
 }
 
-export interface DemoUser {
+/** backend/app/data/mock_users.json 과 동일 구조 (성향 4필드 flat) */
+export interface DemoUser extends UserProfile {
   user_id: string;
   username: string;
   display_name: string;
-  profile: UserProfile;
+}
+
+export interface DemoUsersFixture {
+  users: DemoUser[];
 }
 
 export interface LoginRequest {

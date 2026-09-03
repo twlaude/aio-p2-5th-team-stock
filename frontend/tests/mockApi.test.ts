@@ -60,7 +60,7 @@ describe("mock backend api contract", () => {
 
   it("returns the member analysis contract fields", async () => {
     const api = createMockClient({ delayMs: 0 });
-    const login = await api.login({ username: "demo009", password: "Demo1234!" });
+    const login = await api.login({ username: "demo003", password: "Demo1234!" });
     const response = await api.createAnalysis({ query: "005930" }, login.access_token);
 
     expectMember(response);

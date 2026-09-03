@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 import usersFixture from "../../mocks/users.json";
 import { apiClient } from "../../services/backend_api";
-import type { DemoUser, LoginResponse } from "../../services/backend_api/client";
+import type { DemoUsersFixture, LoginResponse } from "../../services/backend_api/client";
 import type { AuthSession } from "../../state/auth";
 import { readPendingQuery } from "../../state/search";
 
-const demoUsers = usersFixture as DemoUser[];
+const demoUsers = (usersFixture as DemoUsersFixture).users;
 
 interface LoginPageProps {
   onLogin: (response: LoginResponse) => void;

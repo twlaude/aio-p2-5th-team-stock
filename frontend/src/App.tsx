@@ -6,6 +6,7 @@ import { HomePage } from "./pages/home/HomePage";
 import { LoginPage } from "./pages/login/LoginPage";
 import type { LoginResponse } from "./services/backend_api/client";
 import { clearAuthSession, readAuthSession, saveAuthSession, type AuthSession } from "./state/auth";
+import { SearchProvider } from "./state/searchStore";
 
 export function App() {
   const [session, setSession] = useState<AuthSession | null>(() => readAuthSession());
@@ -23,12 +24,14 @@ export function App() {
   return (
     <div className="app-shell">
       <Nav session={session} onLogout={handleLogout} />
-      <main className="page-shell">
-        <Routes>
-          <Route path="/" element={<HomePage session={session} />} />
-          <Route path="/login" element={<LoginPage onLogin={handleLogin} session={session} />} />
-        </Routes>
-      </main>
+      <SearchProvider token={session?.token}>
+        <main className="page-shell">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage onLogin={handleLogin} session={session} />} />
+          </Routes>
+        </main>
+      </SearchProvider>
     </div>
   );
 }

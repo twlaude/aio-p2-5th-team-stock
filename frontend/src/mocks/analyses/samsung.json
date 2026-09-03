@@ -69,17 +69,17 @@
     ]
   },
   "member_profiles": {
-    "stable-long": {
+    "conservative-long": {
       "personal_summary": "장기 관점에서는 실적 확인 뒤 천천히 비중을 살펴봐야 해요.",
       "priority_checks": ["현금흐름과 배당 여력", "AI 메모리 매출 지속성", "분기 실적 변동 폭"],
       "caution": "단기 급등 구간에서는 확인 없이 따라가기보다 발표 일정을 먼저 봐야 해요."
     },
-    "stable-mid": {
+    "conservative-medium": {
       "personal_summary": "중기 관점에서는 가격보다 실적 회복 속도를 먼저 확인해 보세요.",
       "priority_checks": ["다음 분기 영업이익 흐름", "재고 조정 마무리 여부", "시장 기대와 실제 수주 차이"],
       "caution": "뉴스 기대만 커진 날은 변동성이 커질 수 있어요."
     },
-    "stable-short": {
+    "conservative-short": {
       "personal_summary": "단기 확인은 가능하지만 손실 제한 기준을 먼저 정해야 해요.",
       "priority_checks": ["당일 거래대금 변화", "외국인 수급 지속성", "주요 뉴스의 반복 여부"],
       "caution": "짧은 흐름에서는 커뮤니티 반응을 사실처럼 보면 위험해요."
@@ -89,7 +89,7 @@
       "priority_checks": ["CAPEX와 수익성 균형", "AI 메모리 고객 다변화", "주주환원 정책 변화"],
       "caution": "장기 계좌라도 한 번에 판단하지 말고 실적 발표 전후를 나눠 봐야 해요."
     },
-    "balanced-mid": {
+    "balanced-medium": {
       "personal_summary": "중기 균형형은 뉴스 모멘텀과 공시 숫자를 같이 확인해요.",
       "priority_checks": ["목표 실적 대비 진행률", "제품 믹스 개선 여부", "가격 반영 속도"],
       "caution": "이미 오른 가격에 기대가 얼마나 들어갔는지 확인이 필요해요."
@@ -104,7 +104,7 @@
       "priority_checks": ["신규 수요의 지속 기간", "경쟁사 증설 속도", "마진 개선 가능성"],
       "caution": "성장 기대가 큰 만큼 실적 지연 뉴스에 흔들릴 수 있어요."
     },
-    "aggressive-mid": {
+    "aggressive-medium": {
       "personal_summary": "중기 공격형은 촉매가 실제 숫자로 이어지는 구간인지 봐야 해요.",
       "priority_checks": ["수주와 매출 인식 시점", "기관 수급 변화", "업황 사이클 위치"],
       "caution": "촉매가 이미 가격에 반영됐는지 확인해야 해요."

@@ -11,6 +11,7 @@ import type {
   Company,
   DataCoverage,
   DemoUser,
+  DemoUsersFixture,
   EvidenceLevel,
   GuestAnalysisResponse,
   LoginRequest,
@@ -56,7 +57,7 @@ const SNAPSHOT_DATE = "2026-09-01";
 const TOKEN_PREFIX = "demo-token-";
 
 const companies = companiesFixture as Company[];
-const users = usersFixture as DemoUser[];
+const users = (usersFixture as DemoUsersFixture).users;
 const samsung = samsungFixture as SamsungFixture;
 const templates = templateFixture as TemplateAnalysis[];
 
@@ -115,8 +116,17 @@ function getUserFromToken(token?: string) {
   return users.find((user) => user.username === username) ?? null;
 }
 
-function profileKey(profile: UserProfile) {
-  return `${profile.risk_profile}-${profile.investment_horizon}`;
+function profileOf(user: DemoUser): UserProfile {
+  return {
+    experience_level: user.experience_level,
+    risk_profile: user.risk_profile,
+    investment_horizon: user.investment_horizon,
+    preferred_evidence: user.preferred_evidence,
+  };
+}
+
+function profileKey(user: DemoUser) {
+  return `${user.risk_profile}-${user.investment_horizon}`;
 }
 
 function unsupportedResponse(query: string): AnalysisResponse {
@@ -203,7 +213,7 @@ function buildTemplateResponse(company: Company, user: DemoUser, partial = false
       access_level: "member",
       requires_login: false,
       detail: partial ? samsung.partial_detail : samsung.member_detail,
-      personalized_checkpoints: samsung.member_profiles[profileKey(user.profile)],
+      personalized_checkpoints: samsung.member_profiles[profileKey(user)],
     });
   }
 
@@ -216,7 +226,7 @@ function buildTemplateResponse(company: Company, user: DemoUser, partial = false
     price: templatePrice(template),
     one_line_summary: `${company.company_name}은 ${template.topic}을 중심으로 확인할 흐름이 보여요.`,
     detail: buildTemplateDetail(company, template, partial),
-    personalized_checkpoints: samsung.member_profiles[profileKey(user.profile)],
+    personalized_checkpoints: samsung.member_profiles[profileKey(user)],
   };
 }
 
@@ -257,7 +267,7 @@ function buildSamsungMember(user: DemoUser, partial = false): MemberAnalysisResp
     access_level: "member",
     requires_login: false,
     detail: partial ? clone(samsung.partial_detail) : clone(samsung.member_detail),
-    personalized_checkpoints: clone(samsung.member_profiles[profileKey(user.profile)]),
+    personalized_checkpoints: clone(samsung.member_profiles[profileKey(user)]),
   };
 }
 
@@ -300,7 +310,7 @@ export function createMockClient(options: MockClientOptions = {}): BackendApiCli
 
       return {
         status: "success",
-        profile: clone(user.profile),
+        profile: profileOf(user),
       };
     },
     updateProfile: async (token: string, profile: UserProfile): Promise<ProfileResponse> => {
