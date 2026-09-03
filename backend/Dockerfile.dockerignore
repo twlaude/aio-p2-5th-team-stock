@@ -1,0 +1,10 @@
+backend/.venv
+backend/**/__pycache__
+backend/**/*.pyc
+backend/.env
+backend/tests
+frontend
+mcp_client
+mcp_servers
+legacy
+.git

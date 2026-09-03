@@ -90,6 +90,16 @@ JWT_SECRET_KEY
 
 실제 값은 `.env`에만 두고 `.env.example`에는 키 이름과 예시 형식만 작성한다.
 
+## Docker 실행
+
+`Dockerfile`이 `shared/supported_companies.json`을 이미지 안에 복사해야 해서 빌드 컨텍스트를 backend/가 아니라 저장소 루트로 잡는다. `backend/`에서 그냥 `docker build .`를 실행하면 실패한다.
+
+```bash
+# 저장소 루트에서 실행
+docker build -f backend/Dockerfile -t stock-backend .
+docker run -p 8000:8000 --env-file backend/.env stock-backend
+```
+
 ## 개인화는 MCP Client 책임
 
 `나를 위한 확인 포인트`(`personalized_checkpoints`) 생성은 MCP Client가 OpenAI `gpt-5.6-luna`로 처리한다. Backend는 MCP Client 응답의 `personalized_checkpoints`를 검증만 하고 그대로 Frontend에 전달한다.
