@@ -117,7 +117,7 @@ export function HeroSection() {
           <Mascot state={mascotState} size={120} />
         </motion.div>
         <motion.h1 className="hero__title" variants={heroItem}>
-          요즘 어떤 종목이<br />궁금하세요?
+          어떤 종목이 궁금하세요?
         </motion.h1>
         <motion.p className="hero__subtitle" variants={heroItem}>
           가격 뒤에 있는 뉴스, 공시, 시장 반응을 한 번에 봐요.
