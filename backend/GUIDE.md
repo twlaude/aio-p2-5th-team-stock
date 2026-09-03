@@ -51,22 +51,22 @@ Frontend 요청
 
 ## MCP Client 요청 원칙
 
-MCP Client에는 가능한 한 사용자 개인정보를 보내지 않는다.
+MCP Client는 공통 분석과 개인화 확인 항목을 모두 만든다. Backend는 사용자를 확인하고 투자 성향을 조회해서 MCP Client에 전달하며, 개인화 문장을 직접 생성하지 않는다.
 
 보내는 정보 예시:
 
 - 기업명
 - 종목 코드
-- 분석 질문
-- 데이터 조회 기간
+- 투자 성향(`experience_level`, `risk_profile`, `investment_horizon`, `preferred_evidence`) — 비회원은 `null`
 
 보내지 않는 정보 예시:
 
-- 비밀번호
+- 아이디, 비밀번호
 - 인증 토큰
-- 사용자 전체 프로필
 - 개인정보
 - 사용자 전체 대화 기록
+
+MCP Client가 받은 투자 성향은 가격·뉴스·기업보고서·커뮤니티 MCP 서버에는 전달하지 않는다.
 
 ## 환경변수 계획
 
@@ -90,20 +90,15 @@ JWT_SECRET_KEY
 
 실제 값은 `.env`에만 두고 `.env.example`에는 키 이름과 예시 형식만 작성한다.
 
-## 개인화 LLM과 토큰 절감 규칙
+## 개인화는 MCP Client 책임
 
-회원별 `나를 위한 확인 포인트` 생성에도 OpenAI의 `gpt-5.6-luna`를 사용한다. Backend는 개인화에 필요한 최소 정보만 LLM에 전달한다.
-
-- 회원의 네 가지 성향 값: 투자 경험, 위험 성향, 투자 기간, 선호 근거
-- MCP Client가 만든 공통 한 줄 분석과 핵심 근거
-- 개인화 출력 규격: `personal_summary` 1개, `priority_checks` 2개, `caution` 1개
-
-전체 대화 기록, 뉴스 원문 전체, 커뮤니티 원문, 기업보고서 전체는 개인화 호출에 다시 넣지 않는다. 동일한 회원 성향·종목·공통 분석 버전에 대한 개인화 결과는 캐시할 수 있으며, 입력·출력·추론 토큰 사용량을 기록한다.
+`나를 위한 확인 포인트`(`personalized_checkpoints`) 생성은 MCP Client가 OpenAI `gpt-5.6-luna`로 처리한다. Backend는 MCP Client 응답의 `personalized_checkpoints`를 검증만 하고 그대로 Frontend에 전달한다.
 
 ## Backend에서 하지 않는 일
 
 - 뉴스·DART·커뮤니티 원본 직접 수집
 - 네 MCP 서버의 결과 통합
+- 개인화 확인 포인트 생성(LLM 호출)
 - Frontend 화면 렌더링
 - 주식 매수·매도 추천
 

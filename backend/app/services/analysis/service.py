@@ -5,12 +5,12 @@ from app.schemas.analysis import (
     CompanyRef,
     EvidenceLevel,
     MarketTemperature,
+    PersonalizedCheckpoints,
     PriceSnapshot,
     UnsupportedCompanyResponse,
 )
 from app.schemas.user import CurrentUser
 from app.services.analysis import companies
-from app.services.personalization.service import build_checkpoints
 from app.services.profile import service as profile_service
 
 UNSUPPORTED_MESSAGE = (
@@ -21,7 +21,7 @@ UNSUPPORTED_ACTIONS = ["지원 기업 20개 보기", "다른 종목 검색하기
 
 
 def run_analysis(
-    query: str, question: str | None, current_user: CurrentUser | None
+    query: str, current_user: CurrentUser | None
 ) -> AnalysisResponse | UnsupportedCompanyResponse:
     company = companies.resolve_company(query)
     if company is None:
@@ -29,7 +29,9 @@ def run_analysis(
 
     company_name = company["company_name"]
     stock_code = company["stock_code"]
-    raw = mcp_client.fetch_common_analysis(company_name, stock_code, question)
+
+    profile = profile_service.get_profile(current_user.user_id) if current_user else None
+    raw = mcp_client.fetch_common_analysis(company_name, stock_code, profile)
     common = raw["common_analysis"]
 
     response = AnalysisResponse(
@@ -42,10 +44,9 @@ def run_analysis(
         one_line_summary=common["one_line_summary"],
     )
 
-    if current_user is None:
+    if profile is None:
         return response
 
-    profile = profile_service.get_profile(current_user.user_id)
     response.access_level = "member"
     response.requires_login = False
     response.detail = AnalysisDetail(
@@ -56,5 +57,6 @@ def run_analysis(
         community_summary=common["community_summary"],
         sources=raw.get("sources", []),
     )
-    response.personalized_checkpoints = build_checkpoints(profile, common)
+    if raw.get("personalized_checkpoints"):
+        response.personalized_checkpoints = PersonalizedCheckpoints(**raw["personalized_checkpoints"])
     return response

@@ -5,7 +5,6 @@ from pydantic import BaseModel
 
 class AnalysisRequest(BaseModel):
     query: str
-    question: str | None = None
 
 
 class CompanyRef(BaseModel):
