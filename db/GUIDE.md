@@ -28,22 +28,30 @@
 
 Redis 데이터가 사라져도 회원과 장기 Memory는 PostgreSQL에 남아 있어야 한다.
 
-## 테이블 후보
+## 확정된 테이블 (`db/schema.sql`)
+
+Backend가 실제로 필요로 하는 범위부터 먼저 확정했다.
 
 ```text
-users
-user_profiles
-user_memories
-conversation_sessions
-conversation_messages
-companies
-analysis_runs
-analysis_evidence
-source_documents
-rag_chunks
+users            회원 기본정보 (user_id, username, password_hash, display_name)
+user_profiles    장기 Memory. 허용 네 값만 저장 (users와 1:1)
+analysis_runs    분석 기록. sources·partial_failures·personalized_checkpoints는
+                 MCP Client가 만드는 가변 구조라 JSONB로 저장
+rag_chunks       News·Disclosure·Community MCP 공용 벡터 저장소
 ```
 
-실제 테이블과 컬럼은 API 계약과 데이터 제공 방식이 정해진 뒤 확정한다.
+기존에 있던 `positions`·`transactions`·`fear_greed_daily`는 매수·매도 추천이나
+포트폴리오 추적을 하지 않기로 한 `plan.md` 방향과 맞지 않아 제거했다.
+
+## 아직 없는 테이블 (후보)
+
+Price MCP·Disclosure MCP 쪽 설계가 정해지면 추가한다.
+
+```text
+companies          종목 마스터 (지금은 shared/supported_companies.json을 직접 읽는다)
+conversation_sessions / conversation_messages
+source_documents   rag_chunks 원문 관리가 필요해지면
+```
 
 ## 사용자 분리 원칙
 
