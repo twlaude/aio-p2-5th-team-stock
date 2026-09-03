@@ -100,6 +100,17 @@ docker build -f backend/Dockerfile -t stock-backend .
 docker run -p 8000:8000 --env-file backend/.env stock-backend
 ```
 
+## 테스트 실행 전 PostgreSQL 필요
+
+`app/repositories/user_repository.py`, `analysis_repository.py`가 실제 PostgreSQL을 사용한다(더 이상 메모리 저장이 아니다). 테스트나 로컬 실행 전에 DB를 먼저 띄운다.
+
+```bash
+cd infra
+docker compose up -d postgres
+```
+
+`DATABASE_URL` 기본값은 `infra/docker-compose.yml`의 기본 계정과 일치한다. Redis 단기 상태(`clients/redis/client.py`)와 로그인 토큰(`repositories/session_repository.py`)은 아직 메모리 그대로다 — 별도 작업으로 남겨둔다.
+
 ## 개인화는 MCP Client 책임
 
 `나를 위한 확인 포인트`(`personalized_checkpoints`) 생성은 MCP Client가 OpenAI `gpt-5.6-luna`로 처리한다. Backend는 MCP Client 응답의 `personalized_checkpoints`를 검증만 하고 그대로 Frontend에 전달한다.

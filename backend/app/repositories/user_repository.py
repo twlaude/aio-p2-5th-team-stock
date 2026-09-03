@@ -1,7 +1,9 @@
-"""임시 PostgreSQL 대체 저장소. 실제 DB 연결 전까지 프로세스 메모리에 보관한다."""
 from dataclasses import dataclass
 from uuid import uuid4
 
+import psycopg2.errors
+
+from app.core.db import get_cursor
 from app.core.security import hash_password
 from app.schemas.profile import InvestmentProfile
 
@@ -15,69 +17,93 @@ class UserRecord:
     profile: InvestmentProfile | None
 
 
-_EXPERIENCE_LEVELS = ("beginner", "intermediate", "experienced")
-_RISK_PROFILES = ("conservative", "balanced", "aggressive")
-_INVESTMENT_HORIZONS = ("long", "medium", "short")
-_PREFERRED_EVIDENCE = ("news", "market", "financial", "risk")
+_SELECT = """
+    SELECT u.user_id, u.username, u.password_hash, u.display_name,
+           p.experience_level, p.risk_profile, p.investment_horizon, p.preferred_evidence
+    FROM users u
+    LEFT JOIN user_profiles p ON p.user_id = u.user_id
+    WHERE {column} = %s
+"""
 
 
-def _seed() -> dict[str, UserRecord]:
-    """발표용 데모 계정 10개. shared/contracts/frontend_backend/README.md 기준 공용 비밀번호 Demo1234!를 쓴다."""
-    demo_password = hash_password("Demo1234!")
-    users: dict[str, UserRecord] = {}
-    for i in range(1, 11):
-        username = f"demo{i:03d}"
-        users[username] = UserRecord(
-            user_id=f"demo-{i:03d}",
-            username=username,
-            password_hash=demo_password,
-            display_name=f"데모 사용자 {i}",
-            profile=InvestmentProfile(
-                experience_level=_EXPERIENCE_LEVELS[(i - 1) % len(_EXPERIENCE_LEVELS)],
-                risk_profile=_RISK_PROFILES[(i - 1) % len(_RISK_PROFILES)],
-                investment_horizon=_INVESTMENT_HORIZONS[(i - 1) % len(_INVESTMENT_HORIZONS)],
-                preferred_evidence=_PREFERRED_EVIDENCE[(i - 1) % len(_PREFERRED_EVIDENCE)],
-            ),
+def _row_to_record(row) -> UserRecord:
+    profile = None
+    if row["experience_level"] is not None:
+        profile = InvestmentProfile(
+            experience_level=row["experience_level"],
+            risk_profile=row["risk_profile"],
+            investment_horizon=row["investment_horizon"],
+            preferred_evidence=row["preferred_evidence"],
         )
-    return users
-
-
-_USERS_BY_USERNAME: dict[str, UserRecord] = _seed()
-_USERS_BY_ID: dict[str, UserRecord] = {u.user_id: u for u in _USERS_BY_USERNAME.values()}
+    return UserRecord(
+        user_id=row["user_id"],
+        username=row["username"],
+        password_hash=row["password_hash"],
+        display_name=row["display_name"],
+        profile=profile,
+    )
 
 
 def get_by_username(username: str) -> UserRecord | None:
-    return _USERS_BY_USERNAME.get(username)
+    with get_cursor() as cur:
+        cur.execute(_SELECT.format(column="u.username"), (username,))
+        row = cur.fetchone()
+    return _row_to_record(row) if row else None
 
 
 def get_by_id(user_id: str) -> UserRecord | None:
-    return _USERS_BY_ID.get(user_id)
+    with get_cursor() as cur:
+        cur.execute(_SELECT.format(column="u.user_id"), (user_id,))
+        row = cur.fetchone()
+    return _row_to_record(row) if row else None
 
 
 def create_user(username: str, password: str, display_name: str, profile: InvestmentProfile) -> UserRecord:
-    if username in _USERS_BY_USERNAME:
-        raise ValueError(f"이미 존재하는 사용자명이다: {username}")
-    record = UserRecord(
-        user_id=f"user-{uuid4()}",
-        username=username,
-        password_hash=hash_password(password),
-        display_name=display_name,
-        profile=profile,
+    user_id = f"user-{uuid4()}"
+    password_hash = hash_password(password)
+    with get_cursor(commit=True) as cur:
+        try:
+            cur.execute(
+                "INSERT INTO users (user_id, username, password_hash, display_name) VALUES (%s, %s, %s, %s)",
+                (user_id, username, password_hash, display_name),
+            )
+        except psycopg2.errors.UniqueViolation as exc:
+            raise ValueError(f"이미 존재하는 사용자명이다: {username}") from exc
+        cur.execute(
+            """
+            INSERT INTO user_profiles
+                (user_id, experience_level, risk_profile, investment_horizon, preferred_evidence)
+            VALUES (%s, %s, %s, %s, %s)
+            """,
+            (user_id, profile.experience_level, profile.risk_profile, profile.investment_horizon, profile.preferred_evidence),
+        )
+    return UserRecord(
+        user_id=user_id, username=username, password_hash=password_hash, display_name=display_name, profile=profile
     )
-    _USERS_BY_USERNAME[username] = record
-    _USERS_BY_ID[record.user_id] = record
-    return record
 
 
 def update_profile(user_id: str, profile: InvestmentProfile) -> UserRecord | None:
-    record = _USERS_BY_ID.get(user_id)
-    if record is None:
-        return None
-    record.profile = profile
-    return record
+    with get_cursor(commit=True) as cur:
+        try:
+            cur.execute(
+                """
+                INSERT INTO user_profiles
+                    (user_id, experience_level, risk_profile, investment_horizon, preferred_evidence, updated_at)
+                VALUES (%s, %s, %s, %s, %s, now())
+                ON CONFLICT (user_id) DO UPDATE SET
+                    experience_level = EXCLUDED.experience_level,
+                    risk_profile = EXCLUDED.risk_profile,
+                    investment_horizon = EXCLUDED.investment_horizon,
+                    preferred_evidence = EXCLUDED.preferred_evidence,
+                    updated_at = now()
+                """,
+                (user_id, profile.experience_level, profile.risk_profile, profile.investment_horizon, profile.preferred_evidence),
+            )
+        except psycopg2.errors.ForeignKeyViolation:
+            return None
+    return get_by_id(user_id)
 
 
 def delete_profile(user_id: str) -> None:
-    record = _USERS_BY_ID.get(user_id)
-    if record is not None:
-        record.profile = None
+    with get_cursor(commit=True) as cur:
+        cur.execute("DELETE FROM user_profiles WHERE user_id = %s", (user_id,))

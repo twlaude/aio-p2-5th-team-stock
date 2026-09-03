@@ -14,8 +14,11 @@ def test_login_wrong_password(client):
 
 
 def test_signup_creates_new_user(client):
+    from uuid import uuid4
+
+    username = f"new_user_{uuid4().hex[:8]}"
     body = {
-        "username": "new_user",
+        "username": username,
         "password": "SafePass1!",
         "display_name": "새 사용자",
         "profile": {
@@ -28,7 +31,7 @@ def test_signup_creates_new_user(client):
     response = client.post("/api/v1/auth/signup", json=body)
 
     assert response.status_code == 200
-    assert response.json()["user"]["username"] == "new_user"
+    assert response.json()["user"]["username"] == username
 
 
 def test_profile_requires_auth(client):

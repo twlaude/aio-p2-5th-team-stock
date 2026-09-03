@@ -1,4 +1,7 @@
-def _signup(client, username):
+def _signup(client, username_prefix):
+    from uuid import uuid4
+
+    username = f"{username_prefix}_{uuid4().hex[:8]}"
     body = {
         "username": username,
         "password": "SafePass1!",
