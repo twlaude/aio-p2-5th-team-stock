@@ -51,6 +51,16 @@ Redis
 
 초기에는 PostgreSQL, pgvector, Redis만 Docker로 실행하는 방향이 단순하다. 각 Python 서버는 팀원 컴퓨터에서 직접 실행할 수 있다.
 
+`infra/docker-compose.yml`이 이 둘을 띄운다. 저장소 루트에서:
+
+```bash
+cd infra
+cp .env.example .env
+docker compose up -d
+```
+
+PostgreSQL 최초 실행 시 `db/schema.sql`, `db/seed.sql`을 자동 적용한다. 각 Python 서버의 `.env`에서 `DATABASE_URL`/`REDIS_URL`이 이 컨테이너를 가리키게 한다(기본 포트 5432/6379는 확정 포트표와 동일).
+
 ## 연결 점검 순서
 
 1. PostgreSQL과 Redis 실행
