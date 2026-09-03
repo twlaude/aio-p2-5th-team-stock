@@ -13,7 +13,7 @@ def _env(name: str, default, cast):
 
 @dataclass(frozen=True)
 class NewsConfig:
-    api_url: str = "https://openapi.naver.com/v1/search/news.json"
+    api_url: str = "https://naverapihub.apigw.ntruss.com/search/v1/news"
     client_id: str | None = None
     client_secret: str | None = None
     host: str = "0.0.0.0"
