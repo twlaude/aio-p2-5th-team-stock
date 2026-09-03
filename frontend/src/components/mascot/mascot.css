@@ -1,0 +1,43 @@
+.mascot { display: block; overflow: visible; }
+.mascot__body { transform-box: fill-box; transform-origin: 60px 108px; }
+.mascot__shell, .mascot__type-pill rect, .mascot__bubble rect, .mascot__reveal-bubble rect { fill: var(--c-white); stroke: var(--c-ink); stroke-width: 2.5; }
+.mascot__cheek { fill: var(--c-cheek); }
+.mascot__eye, .mascot__eyes path, .mascot__mouth, .mascot__sprout { fill: none; stroke: var(--c-ink); stroke-linecap: round; stroke-width: 2.5; }
+.mascot__eye, .mascot__dot, .mascot__mouth--fill { fill: var(--c-ink); stroke: none; }
+.mascot__mouth--round { fill: none; }
+.mascot__sprout { transform-origin: 60px 14px; }
+.mascot__q, .mascot__spark, .mascot__drop { fill: var(--c-primary); }
+.mascot__q, .mascot__type-pill text, .mascot__reveal-bubble text { font-family: var(--font); font-weight: 900; }
+.mascot__q { font-size: 26px; }
+.mascot__type-pill text, .mascot__reveal-bubble text { fill: var(--c-ink); font-size: 10px; }
+.mascot__cursor { fill: var(--c-ink); }
+.mascot__spark--one { transform-origin: 103px 31px; }
+.mascot__spark--two { transform-origin: 16px 38px; }
+
+/* motion 4a */
+.mascot--idle .mascot__body { animation: bob 2.8s ease-in-out infinite; }
+.mascot--idle .mascot__eye { animation: blink 4s infinite; transform-origin: center; }
+.mascot--idle .mascot__eyes { animation: glance 7s ease-in-out infinite; }
+.mascot--typing .mascot__body { animation: lean 1.6s ease-in-out infinite; }
+.mascot--typing .mascot__eyes { animation: track 1.6s ease-in-out infinite; }
+.mascot--typing .mascot__sprout { animation: sproutwag 0.8s ease-in-out infinite; }
+.mascot--submit .mascot__body { animation: jump 0.6s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.mascot--thinking .mascot__body { animation: tilt 2.4s ease-in-out infinite; }
+.mascot--thinking .mascot__eyes { animation: lookup 2.4s ease-in-out infinite; }
+.mascot--thinking .mascot__q { animation: qfloat 2.4s ease-out infinite; }
+.mascot--reveal .mascot__body { animation: pop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.mascot--reveal .mascot__reveal-bubble { animation: bubble 3s ease-out infinite; }
+.mascot--reveal .mascot__spark { animation: spark 3s ease-in-out infinite; }
+.mascot--reveal .mascot__spark--two { animation-delay: 0.3s; }
+.mascot--peek .mascot__body { animation: peek 4s ease-in-out infinite; }
+.mascot--peek .mascot__eyes { animation: lookdown 1.2s ease-in-out infinite; }
+.mascot--wink .mascot__body { animation: bob 2.8s ease-in-out infinite; }
+.mascot--wink .mascot__eye--wink-open { animation: winkA 3s infinite; }
+.mascot--wink .mascot__wink { animation: winkB 3s infinite; }
+.mascot--wink .mascot__cheek { animation: blush 3s infinite; }
+.mascot--oops .mascot__body { animation: droop 3s ease-in-out infinite; }
+.mascot--oops .mascot__drop { animation: sweat 2s ease-in infinite; }
+.mascot__dot--one { animation: dots 1.2s infinite 0s; }
+.mascot__dot--two { animation: dots 1.2s infinite 0.2s; }
+.mascot__dot--three { animation: dots 1.2s infinite 0.4s; }
+.mascot__cursor { animation: cursor 1s steps(1) infinite; }

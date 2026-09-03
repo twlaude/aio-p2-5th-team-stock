@@ -1,26 +1,131 @@
-import type { FormEvent } from "react";
+import { motion, type Variants } from "motion/react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Mascot } from "../../components/mascot/Mascot";
+import { heroMascotState } from "../../components/mascot/mascotState";
+import { CompanyChips } from "../../components/stock/CompanyChips";
+import { ErrorNotice } from "../../components/stock/ErrorNotice";
+import { LoadingBlock } from "../../components/stock/LoadingBlock";
+import { SearchBar } from "../../components/stock/SearchBar";
+import { UnsupportedNotice } from "../../components/stock/UnsupportedNotice";
 import { useSearch } from "../../state/searchStore";
+import "./hero.css";
+
+// motion 4b-1
+const heroContainer: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.07,
+    },
+  },
+};
+
+const heroItem: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 16,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 /** 영역 A 소유 — 검색 히어로(마스코트·검색바·칩·20종목 시트·로딩·미지원·에러). 아래는 스텁. */
 export function HeroSection() {
-  const search = useSearch();
-  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    void search.submit();
-  };
+  const { error, query, result, status, submittedQuery, retry, setQuery, submit } = useSearch();
+  const [typing, setTyping] = useState(false);
+  const [submitPulse, setSubmitPulse] = useState(false);
+  const pulseTimer = useRef<number | null>(null);
+  const scenarioStarted = useRef(false);
+
+  const unsupported = result?.status === "unsupported_company";
+  const errored = status === "error";
+  const compressed = status !== "idle";
+  const mascotState = submitPulse && status === "loading"
+    ? "submit"
+    : heroMascotState({ status, typing, unsupported, errored });
+
+  const stopPulse = useCallback(() => {
+    if (pulseTimer.current !== null) {
+      window.clearTimeout(pulseTimer.current);
+      pulseTimer.current = null;
+    }
+    setSubmitPulse(false);
+  }, []);
+
+  const startPulse = useCallback(() => {
+    stopPulse();
+    setSubmitPulse(true);
+    pulseTimer.current = window.setTimeout(() => setSubmitPulse(false), 600);
+  }, [stopPulse]);
+
+  const submitWithPulse = useCallback((nextQuery: string) => {
+    startPulse();
+    setTyping(false);
+    void submit(nextQuery);
+  }, [startPulse, submit]);
+
+  const retryWithPulse = useCallback(() => {
+    startPulse();
+    void retry();
+  }, [retry, startPulse]);
+
+  useEffect(() => stopPulse, [stopPulse]);
+
+  // motion 4b-4
+  useEffect(() => {
+    if (scenarioStarted.current || status !== "idle" || submittedQuery) {
+      return;
+    }
+
+    const scenario = new URLSearchParams(window.location.search).get("scenario");
+    const scenarioQuery = scenario === "unsupported" ? "NAVER" : scenario === "slow" || scenario === "error" ? "삼성전자" : "";
+    if (scenarioQuery) {
+      scenarioStarted.current = true;
+      submitWithPulse(scenarioQuery);
+    }
+  }, [status, submittedQuery, submitWithPulse]);
+
+  const shellClassName = [
+    "hero-shell",
+    compressed ? "hero-shell--compressed" : "",
+    unsupported ? "hero-shell--notice" : "",
+    errored ? "hero-shell--error" : "",
+  ].filter(Boolean).join(" ");
+
   return (
-    <section className="hero">
-      <Mascot state={search.status === "loading" ? "thinking" : "idle"} />
-      <h1>요즘 어떤 종목이<br />궁금하세요?</h1>
-      <form onSubmit={onSubmit}>
-        <input aria-label="기업명 또는 종목코드" value={search.query} onChange={(e) => search.setQuery(e.target.value)} placeholder="기업명 또는 종목코드 6자리" />
-        <button type="submit" disabled={search.status === "loading"}>살펴보기</button>
-      </form>
-      {search.status === "loading" ? <p>모으는 중…</p> : null}
-      {search.status === "error" ? <p role="alert">{search.error}</p> : null}
-      {search.result?.status === "unsupported_company" ? <p role="alert">{search.result.message}</p> : null}
+    <section className={shellClassName}>
+      {/* motion 4b-2 */}
+      <div className="hero__blob hero__blob--one" aria-hidden="true" />
+      <div className="hero__blob hero__blob--two" aria-hidden="true" />
+      <motion.div className="hero__content" initial="hidden" animate="show" variants={heroContainer}>
+        <motion.div className="hero__mascot" variants={heroItem}>
+          <Mascot state={mascotState} size={120} />
+        </motion.div>
+        <motion.h1 className="hero__title" variants={heroItem}>
+          요즘 어떤 종목이<br />궁금하세요?
+        </motion.h1>
+        <motion.p className="hero__subtitle" variants={heroItem}>
+          가격 뒤에 있는 뉴스, 공시, 시장 반응을 한 번에 봐요.
+        </motion.p>
+        <motion.div className="hero__search" variants={heroItem}>
+          <SearchBar value={query} status={status} unsupported={unsupported} onChange={setQuery} onSubmit={submitWithPulse} onTypingChange={setTyping} />
+        </motion.div>
+        {(status === "idle" || status === "loading") ? (
+          <motion.div className="hero__chips" variants={heroItem}>
+            <CompanyChips onSelectCompany={submitWithPulse} />
+          </motion.div>
+        ) : null}
+      </motion.div>
+      {status === "loading" ? <LoadingBlock /> : null}
+      {unsupported ? <UnsupportedNotice query={submittedQuery} message={result.message} onSelectCompany={submitWithPulse} /> : null}
+      {errored ? <ErrorNotice message={error} onRetry={retryWithPulse} /> : null}
     </section>
   );
 }
