@@ -1,0 +1,6 @@
+fastmcp==4.0.1
+httpx==0.28.1
+pydantic
+pydantic-settings
+python-dotenv
+pytest

@@ -4,10 +4,22 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
+    backend_host: str = "0.0.0.0"
+    backend_port: int = 8000
     database_url: str = "postgresql://postgres:postgres@localhost:5432/stock_insight"
+    redis_url: str = "redis://localhost:6379/0"
+    redis_ttl_seconds: int = 900
+
+    mcp_client_url: str = "http://localhost:8010"
+    mcp_client_timeout_seconds: int = 75
+
     openai_api_key: str = ""
-    dart_api_key: str = ""
-    mcp_server_url: str = "http://localhost:8050"
+    openai_model: str = "gpt-5.6-luna"
+    openai_reasoning_effort: str = "low"
+
+    auth_mode: str = "demo"
+    demo_password: str = ""
+    jwt_secret_key: str = ""
 
 
 settings = Settings()

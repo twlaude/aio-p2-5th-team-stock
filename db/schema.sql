@@ -1,70 +1,88 @@
--- stock_insight 스키마 (PostgreSQL + pgvector)
--- 원칙: 숫자·시계열·포트폴리오 원장 = 정형 테이블 / 긴 텍스트 근거 = rag_chunks(벡터)
+-- 살래? 말래? MVP 스키마 (PostgreSQL + pgvector)
+-- 포함: 사용자 성향·Memory, 지원 기업, 기업보고서 RAG, 분석 결과
+-- 제외: 포트폴리오, 매매내역, 실제 주문
 
 CREATE EXTENSION IF NOT EXISTS vector;
 
--- ── 정형: 사용자/포트폴리오 ──────────────────────────────
 CREATE TABLE IF NOT EXISTS users (
-    id          BIGSERIAL PRIMARY KEY,
-    username    TEXT NOT NULL UNIQUE,
-    created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+    user_id       TEXT PRIMARY KEY,
+    username      TEXT NOT NULL UNIQUE,
+    display_name  TEXT NOT NULL,
+    password_hash TEXT,
+    is_demo       BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at    TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-CREATE TABLE IF NOT EXISTS positions (
-    id          BIGSERIAL PRIMARY KEY,
-    user_id     BIGINT NOT NULL REFERENCES users(id),
-    stock_code  TEXT NOT NULL,              -- 종목코드 (예: 005930)
-    stock_name  TEXT NOT NULL,
-    quantity    NUMERIC NOT NULL,
-    avg_price   NUMERIC NOT NULL,
-    updated_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
-    UNIQUE (user_id, stock_code)
+CREATE TABLE IF NOT EXISTS investment_profiles (
+    user_id             TEXT PRIMARY KEY REFERENCES users(user_id) ON DELETE CASCADE,
+    experience_level    TEXT NOT NULL CHECK (experience_level IN ('beginner', 'intermediate', 'experienced')),
+    risk_profile        TEXT NOT NULL CHECK (risk_profile IN ('conservative', 'balanced', 'aggressive')),
+    investment_horizon  TEXT NOT NULL CHECK (investment_horizon IN ('short', 'medium', 'long')),
+    preferred_evidence  TEXT NOT NULL CHECK (preferred_evidence IN ('market', 'news', 'financial', 'risk')),
+    updated_at          TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-CREATE TABLE IF NOT EXISTS transactions (
-    id          BIGSERIAL PRIMARY KEY,
-    user_id     BIGINT NOT NULL REFERENCES users(id),
-    stock_code  TEXT NOT NULL,
-    side        TEXT NOT NULL CHECK (side IN ('buy', 'sell')),
-    quantity    NUMERIC NOT NULL,
-    price       NUMERIC NOT NULL,
-    traded_at   TIMESTAMPTZ NOT NULL
+CREATE TABLE IF NOT EXISTS user_memories (
+    memory_id    BIGSERIAL PRIMARY KEY,
+    user_id      TEXT NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
+    memory_key   TEXT NOT NULL,
+    memory_value JSONB NOT NULL,
+    created_at   TIMESTAMPTZ NOT NULL DEFAULT now(),
+    updated_at   TIMESTAMPTZ NOT NULL DEFAULT now(),
+    UNIQUE (user_id, memory_key)
 );
 
--- ── 정형: 커뮤니티 공포탐욕 시계열 (추이/전일대비는 SQL로) ──
-CREATE TABLE IF NOT EXISTS fear_greed_daily (
-    id           BIGSERIAL PRIMARY KEY,
-    stock_code   TEXT NOT NULL,
-    summary_date DATE NOT NULL,
-    score        NUMERIC NOT NULL,          -- 0(공포)~100(탐욕)
-    post_count   INT NOT NULL DEFAULT 0,
-    UNIQUE (stock_code, summary_date)
+CREATE TABLE IF NOT EXISTS supported_companies (
+    stock_code              CHAR(6) PRIMARY KEY,
+    rank                    INTEGER NOT NULL,
+    company_name            TEXT NOT NULL UNIQUE,
+    market                  TEXT NOT NULL DEFAULT 'KOSPI',
+    snapshot_date           DATE NOT NULL,
+    market_cap_trillion_krw NUMERIC,
+    UNIQUE (snapshot_date, rank)
 );
 
--- ── 벡터: 긴 텍스트 근거 저장소 ─────────────────────────
--- doc_type: user_note | news | disclosure | community_summary | report
--- 임베딩 모델 통일 필수 — text-embedding-3-small(1536) 기준. 바꾸면 전체 재임베딩.
+CREATE TABLE IF NOT EXISTS source_documents (
+    document_id   BIGSERIAL PRIMARY KEY,
+    stock_code    CHAR(6) NOT NULL REFERENCES supported_companies(stock_code),
+    document_type TEXT NOT NULL CHECK (document_type IN ('annual_report', 'disclosure')),
+    external_id   TEXT NOT NULL,
+    title         TEXT NOT NULL,
+    source_url    TEXT,
+    published_at  TIMESTAMPTZ,
+    collected_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
+    metadata      JSONB NOT NULL DEFAULT '{}',
+    UNIQUE (document_type, external_id)
+);
+
 CREATE TABLE IF NOT EXISTS rag_chunks (
-    id              BIGSERIAL PRIMARY KEY,
-    user_id         BIGINT REFERENCES users(id),   -- user_note만 채움, 공용 자료는 NULL
-    stock_code      TEXT NOT NULL,
-    doc_type        TEXT NOT NULL,
-    document_id     TEXT,                          -- 원문 식별자 (기사 URL, 공시 접수번호 등)
-    chunk_index     INT NOT NULL DEFAULT 0,
-    title           TEXT,
+    chunk_id        BIGSERIAL PRIMARY KEY,
+    document_id     BIGINT NOT NULL REFERENCES source_documents(document_id) ON DELETE CASCADE,
+    chunk_index     INTEGER NOT NULL,
     content         TEXT NOT NULL,
-    content_hash    TEXT NOT NULL,                 -- 중복 삽입/재임베딩 방지
-    published_at    TIMESTAMPTZ,                   -- 원문 기준일
-    ingested_at     TIMESTAMPTZ NOT NULL DEFAULT now(),
-    source          TEXT,
+    content_hash    TEXT NOT NULL,
     embedding       vector(1536),
     embedding_model TEXT NOT NULL DEFAULT 'text-embedding-3-small',
     metadata        JSONB NOT NULL DEFAULT '{}',
-    UNIQUE (doc_type, content_hash)
+    created_at      TIMESTAMPTZ NOT NULL DEFAULT now(),
+    UNIQUE (document_id, chunk_index),
+    UNIQUE (document_id, content_hash)
 );
 
--- 검색은 항상 SQL 선필터(stock_code/user_id/doc_type) → 그 안에서 벡터 top-k
-CREATE INDEX IF NOT EXISTS idx_rag_chunks_filter
-    ON rag_chunks (stock_code, doc_type, user_id);
+CREATE INDEX IF NOT EXISTS idx_source_documents_stock_type
+    ON source_documents (stock_code, document_type, published_at DESC);
 
--- ANN 인덱스(HNSW)는 데이터 커지기 전엔 불필요 — 풀스캔이 정확함
+CREATE INDEX IF NOT EXISTS idx_rag_chunks_document
+    ON rag_chunks (document_id);
+
+CREATE TABLE IF NOT EXISTS analysis_runs (
+    request_id               UUID PRIMARY KEY,
+    run_id                   UUID,
+    user_id                  TEXT REFERENCES users(user_id) ON DELETE SET NULL,
+    stock_code               CHAR(6) NOT NULL REFERENCES supported_companies(stock_code),
+    status                   TEXT NOT NULL,
+    common_analysis          JSONB,
+    personalized_checkpoints JSONB,
+    partial_failures         JSONB NOT NULL DEFAULT '[]',
+    created_at               TIMESTAMPTZ NOT NULL DEFAULT now()
+);

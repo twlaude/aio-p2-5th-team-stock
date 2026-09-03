@@ -80,10 +80,11 @@ Backend 연결 주소와 전체 JSON은 `shared/contracts/analysis/README.md`를
 입력 핵심 필드:
 
 ```text
+request_id
 company_name
 stock_code
 question
-date_range
+requested_at
 ```
 
 출력 핵심 필드:
@@ -153,7 +154,7 @@ WORKFLOW_TIMEOUT_SECONDS=60
 6. 동일 종목의 공통 분석은 데이터 기준 시각과 함께 캐시하여 같은 자료로 반복 생성하지 않는다.
 7. Agent 반복 횟수는 `MAX_AGENT_STEPS=3`으로 제한한다.
 8. 요청별 입력·출력·추론 토큰 사용량을 기록하여 발표 준비 중 비정상적으로 큰 호출을 찾는다.
-9. 출처가 부족한 경우 추가 호출을 무한 반복하지 않고 `insufficient_evidence` 또는 부분 완료 상태로 종료한다.
+9. 출처가 부족한 경우 추가 호출을 무한 반복하지 않고 `no_data` 또는 `partial_completed`로 종료한다.
 
 OpenAI API Key는 `.env`에만 저장하고 Git에 올리지 않는다. `.env.example`에는 변수 이름과 모델명 예시만 둔다.
 
@@ -176,3 +177,7 @@ OpenAI API Key는 `.env`에만 저장하고 Git에 올리지 않는다. `.env.ex
 5. 최대 단계와 종료 이유가 남는다.
 6. 출처와 수집 시각을 유지한다.
 7. 일부 MCP 실패를 구조화해서 반환한다.
+
+## 현재 상태
+
+폴더와 계약만 준비되어 있고 실행 코드는 아직 없다. 구현은 Community MCP를 실제 서버로 연결하고 Price·News·Disclosure를 Mock으로 대체하는 단계부터 시작한다.

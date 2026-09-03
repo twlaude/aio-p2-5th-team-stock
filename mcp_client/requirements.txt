@@ -1,10 +1,9 @@
 fastapi
 uvicorn[standard]
+fastmcp==4.0.1
+httpx==0.28.1
+openai
 pydantic
 pydantic-settings
-psycopg[binary]
-pgvector
-redis
-openai
-httpx
 python-dotenv
+pytest

@@ -1,85 +1,83 @@
-# Frontend 가이드
+# Frontend 개발 가이드
 
 ## 역할
 
-Frontend는 사용자가 직접 보는 화면을 담당한다. Backend만 호출하며 MCP 서버, DB, Redis, 외부 데이터 API에 직접 접근하지 않는다.
+Frontend는 사용자 화면만 담당하고 Backend의 `/api/v1`만 호출한다. MCP Client, MCP 서버, DB, Redis와 외부 데이터 API에는 직접 연결하지 않는다.
 
-## 담당 화면
+## 확정 화면
 
-### FE0-1 로그인
+```text
+검색 화면
+  → 공개 결과
+  → 상세 요청
+      ├─ 비회원: 로그인 안내
+      └─ 회원: 근거와 개인화 결과
+```
 
-- 첫 단계는 실제 계정 대신 데모 사용자 선택으로 구현 가능
-- 이후 회원가입·로그인으로 교체
-- 로그인 성공 후 투자 성향 존재 여부 확인
+### 검색 화면
 
-### FE0-2 투자 성향 설정
+- 기업명 또는 종목 코드 입력
+- 지원 기업 20개 안내
+- 로그인 버튼 또는 현재 Mock 사용자 표시
 
-- 투자 경험
-- 투자 기간
-- 변동성에 대한 태도
-- 중요하게 보는 정보
+### 공개 결과
 
-### FE1 종목 검색
+- 기업명·종목 코드
+- 현재 가격·변화·등락률
+- 공통 한 줄 설명
+- `왜 이렇게 판단했나요?` 버튼
 
-- `살래? 말래?` 서비스 문구
-- 기업명 또는 종목 코드 검색
-- 많이 검색한 종목
-- 최근 검색한 종목
+### 회원 상세
 
-### FE2 공통 분석과 개인화
+- 시장 온도와 근거 수준
+- 뉴스·기업보고서·커뮤니티 요약과 출처
+- 커뮤니티 표본과 공포탐욕 지수
+- 투자 성향에 맞춘 확인 포인트
+- 데이터 부족·부분 실패 안내
 
-- 종목 기본정보
-- 공통 한줄평
-- 시장 관심 온도
-- 근거 확인 정도
-- 뉴스·전자공시·커뮤니티 요약
-- 나를 위한 확인 포인트
-- 상세 근거와 출처
-
-### FE3 관리자
-
-핵심 기능이 완성된 뒤 진행한다.
-
-## 구현 시 목표 구조
+## 목표 구조
 
 ```text
 frontend/
-├─ pages/                 # 화면 단위
-├─ components/            # 재사용 UI
-├─ services/              # Backend API 호출
-├─ state/                 # 로그인 사용자·선택 종목·현재 단계
-├─ mocks/                 # Mock 사용자와 Mock 분석 결과
-├─ assets/                # 이미지와 아이콘
+├─ pages/
+│  ├─ home/
+│  ├─ login/
+│  ├─ profile/
+│  └─ analysis/
+├─ components/
+│  ├─ common/
+│  ├─ stock/
+│  └─ analysis/
+├─ services/backend_api/
+├─ state/
+├─ mocks/
+├─ assets/
+├─ tests/
 ├─ .env.example
 ├─ requirements.txt
+├─ Dockerfile
 └─ app.py
 ```
 
-현재 Streamlit을 사용하므로 실제 디렉터리 이름은 Streamlit 페이지 구조에 맞게 조정할 수 있다.
+관리자 페이지는 이번 범위에서 제외한다.
 
-## Frontend가 보관할 수 있는 임시 상태
-
-- 로그인한 데모 사용자 표시값
-- 현재 검색어
-- 현재 화면
-- Backend에서 받은 분석 결과
-
-장기 보관이 필요한 투자 성향과 Memory는 Frontend가 아니라 Backend와 PostgreSQL이 관리한다.
-
-## 환경변수 계획
+## 환경변수
 
 ```text
-BACKEND_URL
-APP_MODE
-DEMO_MODE
+BACKEND_URL=http://localhost:8000
+APP_MODE=development
+DEMO_MODE=true
 ```
 
-Frontend 환경변수에는 LLM, DART, 뉴스 API Key나 DB 비밀번호를 넣지 않는다.
+Frontend `.env`에는 OpenAI, DART, 뉴스, Community Token이나 DB 비밀번호를 넣지 않는다.
 
 ## 완료 기준
 
-1. 데모 사용자를 선택할 수 있다.
-2. 투자 성향이 없으면 FE0-2로 이동한다.
-3. 투자 성향 설정 후 원래 검색하려던 종목으로 돌아간다.
-4. FE2에서 공통 분석과 개인화 확인 포인트를 구분해 보여준다.
-5. 근거의 출처와 수집 시각을 확인할 수 있다.
+1. 비회원이 로그인 없이 지원 종목을 검색한다.
+2. 공개 결과에 가격과 공통 한 줄 설명이 표시된다.
+3. 상세 버튼에서 로그인 여부를 구분한다.
+4. Mock 로그인 후 원래 검색 종목의 상세 결과로 돌아간다.
+5. 회원에게 공통 근거와 개인화 결과를 구분해 표시한다.
+6. 미지원 기업과 부분 실패 메시지를 표시한다.
+
+화면 흐름은 `docs/FRONTEND_FLOW.md`, JSON은 `shared/contracts/frontend_backend/README.md`를 따른다.

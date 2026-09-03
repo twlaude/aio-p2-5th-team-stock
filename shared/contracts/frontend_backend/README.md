@@ -14,7 +14,7 @@
 |---|---|---|---|
 | GET | `/health` | 없음 | Backend 상태 확인 |
 | POST | `/api/v1/auth/login` | 없음 | 로그인 |
-| POST | `/api/v1/auth/signup` | 없음 | 회원가입과 투자 성향 등록 |
+| POST | `/api/v1/auth/signup` | 없음 | 실제 회원가입(후순위 선택 구현) |
 | GET | `/api/v1/profile` | 필요 | 내 투자 성향 조회 |
 | PUT | `/api/v1/profile` | 필요 | 내 투자 성향 수정 |
 | GET | `/api/v1/companies` | 없음 | 지원 기업 20개 조회 |
@@ -40,17 +40,17 @@
   "user": {
     "user_id": "demo-001",
     "username": "demo001",
-    "display_name": "데모 사용자 1"
+    "display_name": "안정형 장기 초보"
   },
   "profile_completed": true
 }
 ```
 
-DB에는 원문 비밀번호가 아니라 해시를 저장한다. `Demo1234!`는 발표용 데모 계정 10개가 함께 사용하는 비밀번호다.
+Mock 사용자 목록은 `backend/app/data/mock_users.json`이다. 아이디는 `demo001`~`demo010`, 공통 비밀번호는 `Demo1234!`이며 발표용 공개 Mock 자격증명이다. Backend는 `DEMO_PASSWORD` 환경변수로 읽는다. 실제 인증을 구현할 경우 DB에는 비밀번호 해시만 저장한다.
 
-## 회원가입
+## 실제 회원가입(후순위)
 
-네 가지 투자 성향 응답을 모두 받아야 회원가입이 완료된다.
+MVP는 투자 성향이 준비된 Mock 사용자 10명의 로그인까지만 필수다. 시간이 남아 실제 회원가입을 구현한다면 네 가지 투자 성향 응답을 모두 받아야 가입이 완료된다.
 
 ```json
 {
@@ -85,9 +85,7 @@ DB에는 원문 비밀번호가 아니라 해시를 저장한다. `Demo1234!`는
 }
 ```
 
-정확한 20개 기업 데이터는 KRX 공식 자료를 내려받아 별도 Mock/Seed 데이터로 고정한다. 우선주·ETF·REIT는 제외하고 보통주 기업만 순위를 다시 매긴다.
-
-확정 목록은 `shared/supported_companies.json`이다(2026-09-02 확정, 20개). Backend Seed, Disclosure MCP 임베딩 대상, Community MCP 지원 종목, Price MCP 조회 대상은 모두 이 파일을 기준으로 한다.
+확정 목록은 `shared/supported_companies.json`이다(2026-09-02 확정, 20개). 목록의 기준과 출처는 JSON의 `criteria`, `source` 필드를 따른다. Backend Seed와 Disclosure MCP 임베딩 대상은 이 Snapshot을 기준으로 한다.
 
 ## 종목 분석 요청
 
