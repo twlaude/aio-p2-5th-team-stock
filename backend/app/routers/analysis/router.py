@@ -23,4 +23,4 @@ def list_companies() -> CompanyListResponse:
 def create_analysis(
     body: AnalysisRequest, current_user: CurrentUser | None = Depends(get_optional_user)
 ) -> AnalysisResponse | UnsupportedCompanyResponse:
-    return run_analysis(body.query, body.question, current_user)
+    return run_analysis(body.query, current_user)
