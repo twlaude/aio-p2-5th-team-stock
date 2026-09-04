@@ -65,7 +65,7 @@ function failBadges(failures) {
   return failures.map(f => `<span class="fail-badge">${f.service ?? '?'}: ${f.status ?? f.message ?? '실패'}</span>`).join(' ');
 }
 
-function prependRun(run, isNew) {
+function buildRunRow(run, isNew) {
   const tr = document.createElement('tr');
   if (isNew) tr.className = 'new-row';
   tr.innerHTML = `
@@ -75,7 +75,11 @@ function prependRun(run, isNew) {
     <td class="status-${run.status}">${run.status}</td>
     <td>${failBadges(run.partial_failures)}</td>
   `;
-  runsBody.prepend(tr);
+  return tr;
+}
+
+function prependRun(run) {
+  runsBody.prepend(buildRunRow(run, true));
   while (runsBody.children.length > 30) runsBody.removeChild(runsBody.lastChild);
 }
 
@@ -84,7 +88,8 @@ async function loadSnapshot() {
   const data = await res.json();
   renderShortTerm(data.short_term);
   runsBody.innerHTML = '';
-  data.recent_runs.forEach(run => prependRun(run, false));
+  // recent_runs는 서버에서 이미 requested_at DESC(최신순)로 온다 — append로 그 순서를 그대로 유지한다.
+  data.recent_runs.forEach(run => runsBody.appendChild(buildRunRow(run, false)));
 }
 
 function connect() {
@@ -94,7 +99,7 @@ function connect() {
   es.onmessage = (ev) => {
     const event = JSON.parse(ev.data);
     if (event.type === 'analysis_run') {
-      prependRun(event, true);
+      prependRun(event);
     } else if (event.type === 'short_term') {
       loadSnapshot();
     }
