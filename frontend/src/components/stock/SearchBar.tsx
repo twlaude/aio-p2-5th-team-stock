@@ -1,5 +1,5 @@
 import { ArrowRight, Search } from "lucide-react";
-import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
+import { useEffect, useRef, useState, type ChangeEvent, type FormEvent, type MouseEvent } from "react";
 
 import type { SearchStatus } from "../../state/searchStore";
 import { handleSearchSubmit } from "./searchSubmit";
@@ -16,6 +16,7 @@ interface SearchBarProps {
 
 export function SearchBar({ value, status, unsupported, onChange, onSubmit, onTypingChange }: SearchBarProps) {
   const [focused, setFocused] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
   const typing = focused && value.trim().length > 0;
 
   useEffect(() => {
@@ -33,11 +34,19 @@ export function SearchBar({ value, status, unsupported, onChange, onSubmit, onTy
     onChange(event.target.value);
   };
 
+  const focusInput = (event: MouseEvent<HTMLFormElement>) => {
+    if (event.target instanceof Element && event.target.closest("button")) {
+      return;
+    }
+    inputRef.current?.focus();
+  };
+
   // motion 4b-3, motion 4b-15, motion 4b-18
   return (
-    <form className={`search-bar${focused ? " search-bar--focus" : ""}${unsupported ? " search-bar--shake" : ""}`} onSubmit={submit}>
+    <form className={`search-bar${focused ? " search-bar--focus" : ""}${unsupported ? " search-bar--shake" : ""}`} onClick={focusInput} onSubmit={submit}>
       <Search className="search-bar__icon" size={22} strokeWidth={2} aria-hidden="true" />
       <input
+        ref={inputRef}
         className="search-bar__input"
         aria-label="기업명 또는 종목코드 6자리"
         value={value}

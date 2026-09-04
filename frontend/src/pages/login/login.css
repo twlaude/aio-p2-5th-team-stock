@@ -1,5 +1,5 @@
 .login-page {
-  display: flex; flex-direction: column; align-items: center; width: 100vw; min-height: calc(100vh - 83px); margin: -56px calc(50% - 50vw) -80px;
+  display: flex; flex-direction: column; align-items: center; width: 100vw; min-height: calc(100vh - 83px); min-height: max(0px, calc(100svh - 83px)); margin: -56px calc(50% - 50vw) -80px;
   padding: 72px 64px 80px; gap: 28px; background: var(--c-bg); text-align: center;
 }
 .login-page h1 { margin: 0; font-size: 36px; font-weight: 900; letter-spacing: 0; }
@@ -29,8 +29,19 @@
 .login-page__error { margin-top: -12px; color: var(--c-danger); font-size: 13px; font-weight: 700; }
 .login-page__caption { margin-top: -8px; color: var(--c-mute); font-size: 13px; }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .login-page { margin-top: -36px; padding: 56px 20px 64px; }
+}
+
+@media (max-width: 600px) {
+  .login-page { min-height: calc(100vh - 65px); min-height: max(0px, calc(100svh - 65px)); }
+}
+
+@media (max-width: 480px) {
   .login-page h1 { font-size: 28px; }
   .login-page__users { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-height: 520px) {
+  .login-page { gap: 18px; padding-top: 32px; padding-bottom: 40px; }
 }

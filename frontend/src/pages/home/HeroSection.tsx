@@ -38,13 +38,14 @@ const heroItem: Variants = {
 
 /** 영역 A 소유 — 검색 히어로(마스코트·검색바·칩·20종목 시트·로딩·미지원·에러). 아래는 스텁. */
 export function HeroSection() {
-  const { error, query, result, status, submittedQuery, retry, setQuery, submit } = useSearch();
+  const { error, query, result, runId, status, submittedQuery, retry, setQuery, submit } = useSearch();
   const reducedMotion = useReducedMotion();
   const [typing, setTyping] = useState(false);
   const [submitPulse, setSubmitPulse] = useState(false);
   const [companiesError, setCompaniesError] = useState<string | null>(null);
   const pulseTimer = useRef<number | null>(null);
   const scenarioStarted = useRef(false);
+  const scrolledRunId = useRef<number | null>(null);
 
   const unsupported = result?.status === "unsupported_company";
   const errored = status === "error";
@@ -81,6 +82,24 @@ export function HeroSection() {
   }, [retry, startPulse]);
 
   useEffect(() => stopPulse, [stopPulse]);
+
+  useEffect(() => {
+    if (
+      status !== "ready"
+      || unsupported
+      || scrolledRunId.current === runId
+      || !window.matchMedia("(max-width: 720px)").matches
+    ) {
+      return;
+    }
+
+    const priceHeader = document.querySelector<HTMLElement>(".price-header");
+    if (!priceHeader) {
+      return;
+    }
+    scrolledRunId.current = runId;
+    priceHeader.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+  }, [reducedMotion, runId, status, unsupported]);
 
   // motion 4b-4
   useEffect(() => {

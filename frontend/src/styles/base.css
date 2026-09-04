@@ -321,8 +321,100 @@ pre {
   }
 }
 
+@media (max-width: 600px) {
+  .nav {
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .nav__brand {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    min-height: 40px;
+  }
+
+  .nav__actions {
+    min-width: 0;
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+
+  .nav__caption,
+  .user-pill__display-name,
+  .ghost-button__label {
+    display: none;
+  }
+
+  .user-pill {
+    min-width: 0;
+    min-height: 40px;
+    flex: 0 1 auto;
+    padding: 8px 10px;
+  }
+
+  .user-pill__username {
+    min-width: 0;
+    max-width: 84px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ghost-button {
+    width: 40px;
+    min-height: 40px;
+    flex: 0 0 40px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) and (pointer: coarse) {
+  button,
+  a,
+  button[class],
+  a[class] {
+    min-height: 40px;
+  }
+}
+
 @media (max-width: 480px) {
   .nav__caption { display: none; }
   .nav { flex-wrap: nowrap; }
   .nav__actions { gap: 8px; }
+}
+
+@media (min-width: 1800px) {
+  .app-shell {
+    --app-scale: 1.2;
+    min-height: calc(100vh / var(--app-scale));
+    min-height: calc(100svh / var(--app-scale));
+    zoom: var(--app-scale);
+  }
+
+  body .hero-shell,
+  body .result-section,
+  body .sallae-evidence-section,
+  body .sallae-personal-section,
+  body .login-page,
+  body .guest-gate {
+    width: calc(100vw / var(--app-scale));
+    margin-right: calc(50% - 50vw / var(--app-scale));
+    margin-left: calc(50% - 50vw / var(--app-scale));
+  }
+
+  body .login-page {
+    min-height: max(0px, calc(100vh / var(--app-scale) - 83px));
+    min-height: max(0px, calc(100svh / var(--app-scale) - 83px));
+  }
+
+  body .sallae-evidence-section__subsections {
+    gap: calc(48px / var(--app-scale));
+  }
+}
+
+@media (min-width: 2400px) {
+  .app-shell { --app-scale: 1.4; }
 }

@@ -20,8 +20,13 @@
 @media (max-width: 720px) {
   .hero-shell { margin-top: -36px; }
   .hero__content { padding: 96px 20px 80px; }
-  .hero-shell--compressed .hero__content { padding-top: 56px; padding-bottom: 28px; }
+  .hero-shell--compressed .hero__content { gap: 16px; padding-top: 32px; padding-bottom: 20px; }
   .hero__title { font-size: clamp(24px, 7.2vw, 30px); }
   .hero-shell--compressed .hero__title { font-size: clamp(20px, 6vw, 26px); }
   .hero__subtitle { max-width: 320px; font-size: 16px; word-break: keep-all; }
+}
+
+@media (max-height: 520px) {
+  .hero__content { padding-top: 40px; padding-bottom: 40px; }
+  .hero-shell--compressed .hero__content { gap: 16px; padding-top: 24px; padding-bottom: 16px; }
 }
