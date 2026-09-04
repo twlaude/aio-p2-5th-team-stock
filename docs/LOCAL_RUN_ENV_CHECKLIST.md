@@ -22,7 +22,7 @@ Frontend → Backend → MCP Client → MCP 4개를 한 컴퓨터에서 붙여 �
 ```text
 infra:      cd infra && cp .env.example .env && docker compose up -d      # PG(pgvector)+Redis
 disclosure: cd mcp_servers/disclosure_mcp && python scripts/init_db.py && python scripts/sync_companies.py
-            python scripts/ingest_annual_reports.py --stock 005930 --years 2025   # 필요한 종목만
+            python scripts/ingest_annual_reports.py --stock 005930 --years 2025   # 최신 1년치만, 필요한 종목만
 MCP 4개:    각 폴더에서 python server.py            (8020 price / 8021 news / 8022 disclosure / 8023 community)
 mcp_client: cd mcp_client && python server.py       (8010)
 backend:    cd backend && uvicorn app.main:app --host 0.0.0.0 --port 8000
@@ -58,7 +58,7 @@ frontend:   cd frontend && npm ci && npm run dev    (8501, .env에 VITE_API_MODE
    오류 원문: `Invalid schema for response_format 'stock_information_analysis': In context=(), 'additionalProperties' is required to be supplied and to be false.`
    Narrative(및 중첩 모델)에 `model_config = ConfigDict(extra="forbid")`를 주면 pydantic이 `additionalProperties: false`를 넣어 준다. 이게 풀려야 Agent 서사·Tool 호출 루프가 실제로 돈다.
 3. **폴백 문장 조사.** 규칙 기반 문장이 "삼성전자은 …"으로 나온다 (은/는). LLM이 붙으면 사라지지만 폴백도 쓰인다면 조사 처리 필요.
-4. **사업보고서 2024 색인 실패.** `ingest_annual_reports.py --years 2024 2025`에서 2024는 `색인 가능한 사업보고서 섹션이 없습니다`(parser가 SECTION-1/2를 못 찾음, XML을 html.parser로 읽는 경고 동반). 2025는 정상.
+4. **사업보고서는 최신 1년치(2025)만 색인한다.** `ingest_annual_reports.py --stock 005930 --years 2025`. 2024 이전 보고서는 파서가 섹션을 못 찾아 실패하지만, 1년치만 쓰기로 해서 고치지 않는다.
 5. **프론트 live 어댑터(태웅 담당)**: 재료 표시줄 "뉴스 0건·공시 0건", 분위기 vs 근거 카드 "공시 없음"은 mock 기준 조립이라 백엔드 응답 구조에 맞춰 손볼 예정. `display_name`도 seed 값("데모 사용자 1")이 그대로 나온다.
 
 ## 5. 검증 명령
