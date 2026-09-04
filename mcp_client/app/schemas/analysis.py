@@ -49,6 +49,8 @@ class EvidenceLevel(BaseModel):
 
 
 class PersonalizedCheckpoints(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     personal_summary: str
     priority_checks: list[str] = Field(min_length=1, max_length=3)
     caution: str
