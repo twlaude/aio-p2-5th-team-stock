@@ -1,3 +1,3 @@
 # Disclosure MCP Client
 
-Disclosure MCP의 공시·보고서 Tool을 발견하고 호출하는 연결 코드가 들어갈 위치다.
+`client.py`가 최근 공시, 최신 사업보고서와 Agent가 선택한 공시 상세 Tool을 호출한다.

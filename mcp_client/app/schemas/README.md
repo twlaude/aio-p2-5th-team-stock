@@ -1,3 +1,3 @@
 # MCP Client Schemas
 
-분석 요청, Agent State, MCP Result, 최종 공통 분석과 종료 상태 Schema가 들어갈 위치다.
+`analysis.py`가 Backend 요청·응답, 수집 결과, 관심 온도, 개인화와 Trace Schema를 정의한다.
