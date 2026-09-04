@@ -1,5 +1,5 @@
-.companies-sheet { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: 24px; background: rgba(0, 0, 0, 0.32); }
-.companies-sheet__panel { width: min(100%, 1000px); max-height: min(760px, calc(100vh - 48px)); overflow: auto; padding: 28px; border-radius: var(--r-xl); background: var(--c-white); box-shadow: var(--shadow-pop); }
+.companies-sheet { position: fixed; inset: 0; z-index: 40; display: grid; place-items: center; padding: calc(24px + env(safe-area-inset-top)) calc(24px + env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) calc(24px + env(safe-area-inset-left)); background: rgba(0, 0, 0, 0.32); }
+.companies-sheet__panel { width: min(100%, 1000px); max-height: min(760px, calc(100vh - 48px)); max-height: min(760px, calc(100dvh - 48px)); overflow: auto; padding: 28px; border-radius: var(--r-xl); background: var(--c-white); box-shadow: var(--shadow-pop); }
 .companies-sheet__header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
 .companies-sheet__header h2 { margin: 0; font-size: 22px; font-weight: 900; }
 .companies-sheet__close { display: inline-grid; place-items: center; width: 38px; height: 38px; border: 0; border-radius: var(--r-pill); color: var(--c-ink); background: var(--c-pale); }
@@ -8,16 +8,19 @@
 .company-grid__rank { width: 24px; flex: 0 0 auto; color: var(--c-mute); font-size: 13px; font-weight: 700; }
 .company-grid__name { min-width: 0; flex: 1 1 auto; overflow: hidden; font-size: 14px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
 .company-grid__code { flex: 0 0 auto; color: var(--c-mute); font-family: var(--mono); font-size: 12px; }
-.companies-sheet__close:hover, .company-grid__item:hover { transform: scale(1.02); }
 .companies-sheet__close:active, .company-grid__item:active { transform: scale(0.97); }
 .companies-sheet__close:focus-visible, .company-grid__item:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
 
-@media (max-width: 760px) {
+@media (hover: hover) {
+  .companies-sheet__close:hover, .company-grid__item:hover { transform: scale(1.02); }
+}
+
+@media (max-width: 839px) {
   .company-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 480px) {
-  .companies-sheet { padding: 14px; }
+@media (max-width: 599px) {
+  .companies-sheet { padding: calc(14px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right)) calc(14px + env(safe-area-inset-bottom)) calc(14px + env(safe-area-inset-left)); }
   .companies-sheet__panel { padding: 20px; }
   .company-grid { grid-template-columns: 1fr; }
 }

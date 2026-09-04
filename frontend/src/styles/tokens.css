@@ -1,5 +1,10 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 
+/*
+ * Responsive size classes (Material 3)
+ * compact: <600px | medium: 600-839px | expanded: >=840px
+ * exceptions: short viewport <=520px high | large canvas >=1600px wide
+ */
 :root {
   --c-primary: #1fb35e;
   --c-primary-deep: #178a49;
@@ -29,4 +34,33 @@
   --shadow-pop: 0 16px 40px rgba(20, 60, 35, 0.1);
   --font: "Pretendard Variable", Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --fs-display: clamp(28px, 7vw, 52px);
+  --fs-h1: clamp(28px, 4vw, 36px);
+  --fs-h2: clamp(22px, 3.56vw, 32px);
+  --fs-body: clamp(15px, 1.563vw, 16px);
+  --fs-lead: clamp(16px, 1.25vw, 18px);
+  --fs-secondary: clamp(13px, 1.367vw, 14px);
+  --fs-caption: clamp(12px, 1.27vw, 13px);
+  --fs-metric: clamp(44px, 7vw, 56px);
+  --fs-price: clamp(30px, 5vw, 44px);
+  --fs-section: clamp(20px, 3.125vw, 24px);
+  --fs-verdict: clamp(21px, 3.385vw, 26px);
+  --fs-personal: clamp(21px, 3.65vw, 28px);
+  --fs-display-compressed: clamp(24px, 5.4vw, 40px);
+  --lh-heading: 1.35;
+  --lh-copy: 1.55;
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --fs-display: clamp(52px, 3.2vw, 64px);
+    --fs-h1: clamp(36px, 2.2vw, 44px);
+    --fs-h2: clamp(32px, 2vw, 40px);
+    --fs-metric: clamp(56px, 3.4vw, 68px);
+    --fs-price: clamp(44px, 2.8vw, 56px);
+    --fs-section: clamp(24px, 1.4vw, 28px);
+    --fs-verdict: clamp(26px, 1.6vw, 32px);
+    --fs-personal: clamp(28px, 1.7vw, 34px);
+    --fs-display-compressed: clamp(40px, 2.5vw, 50px);
+  }
 }

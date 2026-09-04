@@ -68,7 +68,7 @@ export function EvidenceSection() {
   }, [result, navOffset]);
 
   useEffect(() => {
-    if (!window.matchMedia("(max-width: 600px)").matches) {
+    if (!window.matchMedia("(max-width: 599px)").matches) {
       return;
     }
     const row = tabRowRef.current;

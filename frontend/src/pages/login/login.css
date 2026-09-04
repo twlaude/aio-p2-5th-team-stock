@@ -1,9 +1,9 @@
 .login-page {
-  display: flex; flex-direction: column; align-items: center; width: 100vw; min-height: calc(100vh - 83px); min-height: max(0px, calc(100svh - 83px)); margin: -56px calc(50% - 50vw) -80px;
+  display: flex; flex-direction: column; align-items: center; width: 100vw; min-height: calc(100vh - 83px); min-height: max(0px, calc(100dvh - 83px)); margin: -56px calc(50% - 50vw) -80px;
   padding: 72px 64px 80px; gap: 28px; background: var(--c-bg); text-align: center;
 }
-.login-page h1 { margin: 0; font-size: 36px; font-weight: 900; letter-spacing: 0; }
-.login-page__copy { max-width: 760px; margin: 0; color: var(--c-sub); font-size: 16px; line-height: 1.5; }
+.login-page h1 { margin: 0; font-size: var(--fs-h1); font-weight: 900; letter-spacing: 0; }
+.login-page__copy { max-width: 760px; margin: 0; color: var(--c-sub); font-size: var(--fs-body); line-height: 1.5; }
 .login-page__session { margin: -10px 0 0; color: var(--c-sub); font-size: 13px; }
 .login-page__users { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; width: 1000px; max-width: 100%; }
 .login-user-card {
@@ -23,22 +23,21 @@
   display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border: 0; border-radius: var(--r-pill); background: var(--c-primary);
   color: var(--c-white); font-size: 15px; font-weight: 700; transition: transform 180ms ease;
 }
-.login-page__submit:hover:not(:disabled) { transform: scale(1.02); }
 .login-page__submit:active:not(:disabled) { transform: scale(0.97); }
 .login-page__submit:disabled { cursor: wait; opacity: 0.65; }
 .login-page__error { margin-top: -12px; color: var(--c-danger); font-size: 13px; font-weight: 700; }
 .login-page__caption { margin-top: -8px; color: var(--c-mute); font-size: 13px; }
 
-@media (max-width: 720px) {
+@media (hover: hover) {
+  .login-page__submit:hover:not(:disabled) { transform: scale(1.02); }
+}
+
+@media (max-width: 839px) {
   .login-page { margin-top: -36px; padding: 56px 20px 64px; }
 }
 
-@media (max-width: 600px) {
-  .login-page { min-height: calc(100vh - 65px); min-height: max(0px, calc(100svh - 65px)); }
-}
-
-@media (max-width: 480px) {
-  .login-page h1 { font-size: 28px; }
+@media (max-width: 599px) {
+  .login-page { min-height: calc(100vh - 65px); min-height: max(0px, calc(100dvh - 65px)); }
   .login-page__users { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 

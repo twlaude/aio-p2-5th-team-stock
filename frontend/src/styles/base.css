@@ -12,6 +12,7 @@ body {
   color: var(--c-ink);
   background: var(--c-bg);
   font-family: var(--font);
+  font-size: var(--fs-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -42,6 +43,7 @@ pre {
 
 .app-shell {
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .page-shell {
@@ -55,7 +57,7 @@ pre {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 22px 64px;
+  padding: calc(22px + env(safe-area-inset-top)) calc(64px + env(safe-area-inset-right)) 22px calc(64px + env(safe-area-inset-left));
   border-bottom: 1px solid var(--c-line);
   background: var(--c-bg);
 }
@@ -98,10 +100,6 @@ pre {
     transform 180ms ease,
     box-shadow 180ms ease,
     background-color 180ms ease;
-}
-
-.pill-button:hover {
-  transform: scale(1.02);
 }
 
 .pill-button:active {
@@ -167,7 +165,7 @@ pre {
 
 .page-title {
   margin: 0;
-  font-size: 36px;
+  font-size: var(--fs-h1);
   font-weight: 900;
   line-height: 1.2;
 }
@@ -175,7 +173,7 @@ pre {
 .page-copy {
   margin: 0;
   color: var(--c-sub);
-  font-size: 15px;
+  font-size: var(--fs-body);
   line-height: 1.6;
 }
 
@@ -291,7 +289,13 @@ pre {
   font-weight: 700;
 }
 
-@media (max-width: 720px) {
+@media (hover: hover) {
+  .pill-button:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 839px) {
   .nav {
     align-items: flex-start;
     padding: 18px 20px;
@@ -311,28 +315,24 @@ pre {
     padding: 36px 20px 64px;
   }
 
-  .page-title {
-    font-size: 30px;
-  }
-
   .json-grid,
   .user-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   .nav {
     align-items: center;
     gap: 8px;
-    padding: 12px;
+    padding: calc(12px + env(safe-area-inset-top)) calc(12px + env(safe-area-inset-right)) 12px calc(12px + env(safe-area-inset-left));
   }
 
   .nav__brand {
     display: inline-flex;
     flex: 0 0 auto;
     align-items: center;
-    min-height: 40px;
+    min-height: 44px;
   }
 
   .nav__actions {
@@ -350,7 +350,7 @@ pre {
 
   .user-pill {
     min-width: 0;
-    min-height: 40px;
+    min-height: 44px;
     flex: 0 1 auto;
     padding: 8px 10px;
   }
@@ -364,57 +364,26 @@ pre {
   }
 
   .ghost-button {
-    width: 40px;
-    min-height: 40px;
-    flex: 0 0 40px;
+    width: 44px;
+    min-height: 44px;
+    flex: 0 0 44px;
     padding: 0;
   }
 }
 
-@media (max-width: 600px) and (pointer: coarse) {
+@media (pointer: coarse) {
   button,
   a,
   button[class],
   a[class] {
-    min-height: 40px;
+    min-height: 44px;
   }
 }
 
-@media (max-width: 480px) {
-  .nav__caption { display: none; }
-  .nav { flex-wrap: nowrap; }
-  .nav__actions { gap: 8px; }
+@media (min-width: 1600px) {
+  .page-shell { width: min(100%, 1120px); }
 }
 
-@media (min-width: 1800px) {
-  .app-shell {
-    --app-scale: 1.2;
-    min-height: calc(100vh / var(--app-scale));
-    min-height: calc(100svh / var(--app-scale));
-    zoom: var(--app-scale);
-  }
-
-  body .hero-shell,
-  body .result-section,
-  body .sallae-evidence-section,
-  body .sallae-personal-section,
-  body .login-page,
-  body .guest-gate {
-    width: calc(100vw / var(--app-scale));
-    margin-right: calc(50% - 50vw / var(--app-scale));
-    margin-left: calc(50% - 50vw / var(--app-scale));
-  }
-
-  body .login-page {
-    min-height: max(0px, calc(100vh / var(--app-scale) - 83px));
-    min-height: max(0px, calc(100svh / var(--app-scale) - 83px));
-  }
-
-  body .sallae-evidence-section__subsections {
-    gap: calc(48px / var(--app-scale));
-  }
-}
-
-@media (min-width: 2400px) {
-  .app-shell { --app-scale: 1.4; }
+@media (min-width: 2000px) {
+  .page-shell { width: min(100%, 1280px); }
 }

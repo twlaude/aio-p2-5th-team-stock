@@ -88,7 +88,7 @@ export function HeroSection() {
       status !== "ready"
       || unsupported
       || scrolledRunId.current === runId
-      || !window.matchMedia("(max-width: 720px)").matches
+      || !window.matchMedia("(max-width: 839px)").matches
     ) {
       return;
     }
