@@ -11,8 +11,6 @@
 .search-bar__input::placeholder { color: var(--c-mute); font-weight: 400; }
 .search-bar__button, .company-chip { border: 0; border-radius: var(--r-pill); transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease; }
 .search-bar__button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 120px; min-height: 46px; padding: 12px 22px; color: var(--c-white); background: var(--c-primary); font-size: 15px; font-weight: 700; }
-.search-bar__button:hover { transform: scale(1.03); }
-
 /* motion 4b-18 */
 .search-bar__button:active, .company-chip:active { transform: scale(0.97); }
 .search-bar__button:focus-visible, .company-chip:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
@@ -20,9 +18,12 @@
 .company-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 4px; }
 .company-chip { padding: 8px 14px; color: var(--c-chip-fg); background: var(--c-pale); font-size: 13px; }
 .company-chip--sheet { color: var(--c-primary-deep); }
-.company-chip:hover { transform: translateY(-2px); background: var(--c-tint); }
+@media (hover: hover) {
+  .search-bar__button:hover { transform: scale(1.03); }
+  .company-chip:hover { transform: translateY(-2px); background: var(--c-tint); }
+}
 
-@media (max-width: 560px) {
+@container (inline-size < 35rem) {
   .search-bar { height: auto; min-height: 62px; padding: 8px 8px 8px 16px; }
   .search-bar__input { font-size: 16px; }
   .search-bar__button { min-width: 46px; padding: 12px; }

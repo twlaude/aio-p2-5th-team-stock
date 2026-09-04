@@ -69,7 +69,7 @@ interface BubbleRect {
 
 interface Bounds {
   mobile: boolean;
-  viewportHalf: number;
+  containerHalf: number;
   hostHalfH: number;
   bubble: BubbleRect;
 }
@@ -87,10 +87,10 @@ function measureBubble(host: HTMLElement): BubbleRect | null {
   return { halfW: bubble.offsetWidth / 2, top: top - centerY, bottom: top + bubble.offsetHeight - centerY };
 }
 
-function boundsFor(host: HTMLElement, viewportWidth: number): Bounds | null {
+function boundsFor(host: HTMLElement, availableWidth: number): Bounds | null {
   const bubble = measureBubble(host);
   if (!bubble) return null;
-  return { mobile: viewportWidth <= 600, viewportHalf: viewportWidth / 2, hostHalfH: host.offsetHeight / 2, bubble };
+  return { mobile: availableWidth < 600, containerHalf: availableWidth / 2, hostHalfH: host.offsetHeight / 2, bubble };
 }
 
 /** 칩 실제 폭(반폭) 측정 — 캔버스 measureText. 캔버스 없으면(jsdom) 글자수 근사 */
@@ -118,13 +118,13 @@ function overlaps(a: { x: number; y: number; halfW: number }, b: { x: number; y:
  */
 function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidths: number[], labels: string[]): Placed[] {
   const rand = mulberry32(seed);
-  const { bubble, mobile, hostHalfH, viewportHalf } = bounds;
+  const { bubble, mobile, hostHalfH, containerHalf } = bounds;
   const widest = halfWidths.length ? Math.max(...halfWidths) : mobile ? 44 : 54;
   const slots: { x: number; y: number; angle: number }[] = [];
 
   if (mobile) {
     // 위 2개는 캡션 양옆(차트 안 건드림), 아래 2개는 why 버튼 아래 양옆
-    const xTop = Math.min(bubble.halfW - 30, viewportHalf - widest - 6);
+    const xTop = Math.min(bubble.halfW - 30, containerHalf - widest - 6);
     const xBottom = Math.max(60, bubble.halfW - 40);
     slots.push(
       { x: -xTop, y: -hostHalfH + 16, angle: Math.PI },
@@ -134,7 +134,7 @@ function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidth
     );
   } else {
     const count = 12;
-    const rx = Math.min(bubble.halfW + 64, viewportHalf - widest - 10);
+    const rx = Math.min(bubble.halfW + 64, containerHalf - widest - 10);
     const ry = hostHalfH + 34;
     const step = (Math.PI * 2) / count;
     for (let i = 0; i < count; i += 1) {
@@ -159,7 +159,7 @@ function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidth
       if (Math.abs(y - bubbleMidY) < bubbleHalfH + CHIP_HALF_H) {
         // 옆구리: 말풍선 테두리 바깥으로. 화면 밖이면 뺀다
         const needX = bubble.halfW + halfW + 10;
-        if (needX > viewportHalf - 8) return;
+        if (needX > containerHalf - 8) return;
         x = Math.sign(x) * needX;
       }
       if (Math.sin(slot.angle) > 0.85) {
@@ -177,7 +177,7 @@ function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidth
       y += dirY * 12;
       tries += 1;
     }
-    if (Math.abs(x) + halfW > viewportHalf - 6) return;
+    if (Math.abs(x) + halfW > containerHalf - 6) return;
 
     const weight = Math.max(1, Math.min(5, topic.weight));
     placed.push({
@@ -226,11 +226,16 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
   useLayoutEffect(() => {
     const measure = () => {
       if (!hostRef.current) return;
-      setBounds(boundsFor(hostRef.current, window.innerWidth));
+      setBounds(boundsFor(hostRef.current, hostRef.current.clientWidth));
     };
     measure();
+    const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(measure);
+    if (hostRef.current) observer?.observe(hostRef.current);
     window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener("resize", measure);
+    };
   }, []);
 
   const seed = useMemo(() => hashText(topics.map((t) => t.text).join("|")) ^ (runId * 2654435761), [topics, runId]);

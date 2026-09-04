@@ -2,15 +2,15 @@
 .one-liner__caption { color: var(--c-primary); font-size: 15px; font-weight: 700; }
 .one-liner__bubble {
   width: 100%; padding: 28px 40px; border: 2px solid var(--c-ink); border-radius: var(--r-xl); background: var(--c-white);
-  font-size: 32px; font-weight: 700; letter-spacing: 0; line-height: 1.4; text-align: center; text-wrap: balance; word-break: keep-all;
+  font-size: var(--fs-h2); font-weight: 700; letter-spacing: 0; line-height: 1.4; text-align: center; text-wrap: balance; word-break: keep-all;
 }
 .typewriter { display: inline; }
 .typewriter__cursor { display: inline-block; margin-left: 2px; animation: typewriter-blink 1s steps(2, jump-none) infinite; }
 @keyframes typewriter-blink { 0%, 48% { opacity: 1; } 49%, 100% { opacity: 0; } }
 
-@media (max-width: 480px) {
+@container result (inline-size < 37.5rem) {
   .one-liner { width: 100%; padding: 12px 0 0; }
-  .one-liner__bubble { padding: 20px 18px; font-size: 22px; }
+  .one-liner__bubble { padding: 20px 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -211,7 +211,7 @@ async function inspectLayout(page, { checkTargets, checkEvidenceGaps }) {
       for (const element of document.querySelectorAll("button, a")) {
         if (!isRendered(element)) continue;
         const height = element.getBoundingClientRect().height;
-        if (height < 40 - tolerance / 2) {
+        if (height < 44 - tolerance / 2) {
           smallTargets.push({ element: describe(element), height: Math.round(height * 10) / 10 });
         }
       }
@@ -265,7 +265,7 @@ async function assertResponsive(page, label, { coarse, evidence = false }) {
     failures.push("viewport <=600 did not emulate pointer: coarse");
   }
   if (layout.smallTargets.length) {
-    failures.push(`targets below 40px ${JSON.stringify(layout.smallTargets.slice(0, 12))}`);
+    failures.push(`targets below 44px ${JSON.stringify(layout.smallTargets.slice(0, 12))}`);
   }
   const largeGaps = layout.evidenceGaps.filter(({ gap }) => gap > 48 + 0.5);
   if (largeGaps.length) {

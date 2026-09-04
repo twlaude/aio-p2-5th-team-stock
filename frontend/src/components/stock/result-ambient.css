@@ -1,4 +1,4 @@
-.result-ambient-host { position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; }
+.result-ambient-host { position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; container-type: inline-size; }
 .result-ambient-host__content { position: relative; z-index: 1; width: 100%; display: flex; flex-direction: column; align-items: center; }
 
 .result-ambient { position: absolute; left: 50%; top: 50%; width: 0; height: 0; z-index: 0; pointer-events: none; }
@@ -24,7 +24,7 @@
 
 .result-ambient--static .result-ambient__topic { animation: none; }
 @media (prefers-reduced-motion: reduce) { .result-ambient__topic { animation: none; } }
-@media (max-width: 600px) {
+@container (inline-size < 37.5rem) {
   .result-ambient__compact {
     box-sizing: border-box;
     display: flex;
