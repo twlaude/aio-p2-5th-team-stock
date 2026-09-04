@@ -75,9 +75,9 @@ const PREFERRED_CHECK: Record<DemoUser["preferred_evidence"], string> = {
 };
 
 function gapState(score: number, level: EvidenceLevel): GapState {
-  if (score >= 70 && level === "low") return "large";
-  if ((score >= 65 && level === "medium") || (score >= 78 && level !== "low")) return "some";
-  if (score < 50 && level === "high") return "quiet";
+  if (score >= 60 && level === "low") return "large";
+  if ((score >= 60 && level === "medium") || (score >= 80 && level !== "low")) return "some";
+  if (score < 45 && level === "high") return "quiet";
   return "small";
 }
 
@@ -135,7 +135,7 @@ function composePersonal(company: string, topic: string, score: number, level: E
 
 /** 목 모드 한줄 결론 — 실서비스에선 MCP Client의 LLM이 4개 재료(가격·뉴스·공시·커뮤니티)를 취합해 만든다. 여기선 같은 재료로 조합만. */
 function composeOneLiner(template: TemplateAnalysis): string {
-  if (template.evidence_level === "low" && template.temperature_score >= 70) {
+  if (template.evidence_level === "low" && template.temperature_score >= 60) {
     return `뉴스는 ${josa(template.topic, "으로", "로")} 시끄러운데, 공시로 확인된 건 거의 없어요. 기사만으로 띄우는 흐름일 수 있어요.`;
   }
   const news = `뉴스는 ${template.topic}에 쏠려 있고`;

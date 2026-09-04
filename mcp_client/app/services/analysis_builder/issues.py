@@ -7,6 +7,12 @@ def _clean_text(value: object) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
+def short_issue(issue: str, limit: int = 28) -> str:
+    """문구에 넣을 이슈 표시용 — 뉴스 제목처럼 긴 이슈는 잘라 쓴다. 매칭에는 원문을 쓴다."""
+    text = _clean_text(issue)
+    return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
+
+
 def extract_issues(data: CollectedData, company_name: str) -> list[str]:
     """현재 화제를 커뮤니티 중심으로 뽑고 회사명이 명시된 뉴스만 보탠다."""
 

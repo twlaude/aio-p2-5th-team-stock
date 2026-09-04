@@ -1,6 +1,7 @@
 from typing import Any
 
 from app.schemas.analysis import Narrative, PersonalizedCheckpoints
+from app.services.analysis_builder.issues import short_issue
 from app.services.analysis_builder.matching import disclosure_date_label
 
 
@@ -66,7 +67,7 @@ def build_fallback_narrative(context: dict[str, Any]) -> Narrative:
         top_topics = community.get("top_topics") or {}
         topic = next(iter(top_topics.get("expectations") or []), "최근 이슈")
     change = int(context["data"].get("price", {}).get("change") or 0)
-    if evidence["level"] == "low" and temperature["score"] >= 70:
+    if evidence["level"] == "low" and temperature["score"] >= 60:
         one_line = (
             f"뉴스는 {_josa(topic, '으로', '로')} 시끄러운데, 공시로 확인된 건 거의 없어요. "
             "기사만으로 띄우는 흐름일 수 있어요."
@@ -87,7 +88,7 @@ def build_fallback_narrative(context: dict[str, Any]) -> Narrative:
         first = matches[0]
         disclosure_summary = (
             f"{disclosure_date_label(first.get('published_at'))} {first.get('report_name')} 공시에서 "
-            f"{first.get('issue')}를 확인했어요."
+            f"{_josa(short_issue(str(first.get('issue') or '')), '을', '를')} 확인했어요."
         )
     else:
         disclosure_summary = (

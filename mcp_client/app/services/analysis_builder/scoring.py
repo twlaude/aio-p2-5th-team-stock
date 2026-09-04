@@ -2,7 +2,7 @@ import math
 from typing import Any
 
 from app.schemas.analysis import CollectedData, EvidenceLevel, MarketTemperature
-from app.services.analysis_builder.issues import extract_issues
+from app.services.analysis_builder.issues import extract_issues, short_issue
 from app.services.analysis_builder.narrative import _josa
 from app.services.analysis_builder.matching import disclosure_date_label, match_issues
 
@@ -122,7 +122,7 @@ def calculate_evidence_level(data: CollectedData, coverage: list[str]) -> Eviden
     elif result.material_count:
         reason = (
             f"최근 30일 주요 공시 {result.material_count}건은 있지만 "
-            f"지금 화제({issues[0]})와 직접 연결되진 않아요"
+            f"지금 화제({short_issue(issues[0])})와 직접 연결되진 않아요"
             if issues
             else f"최근 30일 주요 공시 {result.material_count}건은 있지만 화제로 잡힌 이슈가 없어요"
         )

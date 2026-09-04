@@ -64,7 +64,7 @@ def _mock_common_analysis(
         },
         "common_analysis": {
             "one_line_summary": one_line_summary,
-            "market_temperature": {"score": 60, "label": "보통", "data_coverage": ["price"]},
+            "market_temperature": {"score": 52, "label": "보통", "data_coverage": ["price"]},
             "evidence_level": {"level": "low", "reason": "mcp_client 연결 전 Mock 데이터다."},
             "news_summary": "mcp_client 연결 전 표본 뉴스 요약이다.",
             "disclosure_summary": "mcp_client 연결 전 표본 공시 요약이다.",

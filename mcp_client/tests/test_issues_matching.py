@@ -88,3 +88,30 @@ def test_match_issues_supports_smr_rule_without_similarity_scoring():
     result = match_issues(["SMR 원전 사업 기대"], payload)
 
     assert result.matched[0].receipt_number == "smr"
+
+
+def test_short_issue_for_reason_copy():
+    from app.services.analysis_builder.issues import short_issue
+
+    long_issue = "삼성물산, 스웨덴 SMR 사업 참여... 1.2GW 규모 신규 원전 개발 추진"
+    shortened = short_issue(long_issue)
+    assert len(shortened) <= 28 and shortened.endswith("…")
+    assert short_issue("짧은 이슈") == "짧은 이슈"
+
+
+def test_matched_report_name_collapses_padding_whitespace():
+    from app.services.analysis_builder.matching import match_issues
+
+    payload = {
+        "status": "success",
+        "disclosures": [
+            {
+                "report_name": "영업(잠정)실적(공정공시)               ",
+                "receipt_number": "20260901000001",
+                "published_at": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).strftime("%Y-%m-%d"),
+                "disclosure_kind": "major",
+            }
+        ],
+    }
+    result = match_issues(["3분기 실적 기대"], payload)
+    assert result.matched and result.matched[0].report_name == "영업(잠정)실적(공정공시)"  # strip (#51)

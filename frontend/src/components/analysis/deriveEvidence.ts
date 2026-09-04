@@ -253,13 +253,14 @@ export function deriveGapCheck(input: {
   if (disclosures.length === 0) signals.push({ text: "이 기간 공시로 확인된 내용이 없어요", tone: "warn" });
   else if (checks.unconfirmed.length > checks.confirmed.length) signals.push({ text: `공시로 확인된 것(${checks.confirmed.length})보다 아직 아닌 것(${checks.unconfirmed.length})이 많아요`, tone: "warn" });
   else if (checks.confirmed.length > 0) signals.push({ text: `공시·보고서로 확인된 항목 ${checks.confirmed.length}개`, tone: "ok" });
-  if (positiveRatio !== null && positiveRatio >= 0.6) signals.push({ text: `커뮤니티 긍정 ${Math.round(positiveRatio * 100)}% — 분위기가 앞서가요`, tone: heat >= 70 ? "warn" : "info" });
+  if (positiveRatio !== null && positiveRatio >= 0.6) signals.push({ text: `커뮤니티 긍정 ${Math.round(positiveRatio * 100)}% — 분위기가 앞서가요`, tone: heat >= 60 ? "warn" : "info" });
   if (changeRate >= 3) signals.push({ text: `가격이 하루 ${changeRate.toFixed(1)}% 올랐어요`, tone: "info" });
 
   let level: GapLevel = "small";
-  if (heat >= 70 && evidenceLevel === "low") level = "large";
-  else if ((heat >= 65 && evidenceLevel === "medium") || (heat >= 78 && evidenceLevel !== "low")) level = "some";
-  else if (heat < 50 && evidenceLevel === "high") level = "quiet";
+  // 온도 v2(평소=50, 라벨 40/60/80) 기준 — backend narrative.gap_state·mock.ts gapState와 동일하게 유지
+  if (heat >= 60 && evidenceLevel === "low") level = "large";
+  else if ((heat >= 60 && evidenceLevel === "medium") || (heat >= 80 && evidenceLevel !== "low")) level = "some";
+  else if (heat < 45 && evidenceLevel === "high") level = "quiet";
 
   const copy: Record<GapLevel, { verdict: string; advice: string }> = {
     large: { verdict: "다들 환호하는데, 공식 자료로 확인된 건 거의 없어요.", advice: "기사와 커뮤니티가 앞서가는 구간이에요. 공시가 따라오는지 먼저 확인해 보세요." },

@@ -89,4 +89,10 @@ describe("deriveGapCheck — 환호 vs 근거", () => {
     const gap = deriveGapCheck({ temperatureScore: 42, evidenceLevel: "high", sources: [], changeRate: 0.2 });
     expect(gap.level).toBe("quiet");
   });
+  it("온도 v2 문턱값(60/60/80/45) — 관심 높음 라벨부터 온도차가 잡힌다", () => {
+    expect(deriveGapCheck({ temperatureScore: 60, evidenceLevel: "low", sources: [], changeRate: 0 }).level).toBe("large");
+    expect(deriveGapCheck({ temperatureScore: 59, evidenceLevel: "low", sources: [], changeRate: 0 }).level).toBe("small");
+    expect(deriveGapCheck({ temperatureScore: 60, evidenceLevel: "medium", sources: [], changeRate: 0 }).level).toBe("some");
+    expect(deriveGapCheck({ temperatureScore: 45, evidenceLevel: "high", sources: [], changeRate: 0 }).level).toBe("small");
+  });
 });
