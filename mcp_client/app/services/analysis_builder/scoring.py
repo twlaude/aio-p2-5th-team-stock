@@ -3,6 +3,7 @@ from typing import Any
 
 from app.schemas.analysis import CollectedData, EvidenceLevel, MarketTemperature
 from app.services.analysis_builder.issues import extract_issues
+from app.services.analysis_builder.narrative import _josa
 from app.services.analysis_builder.matching import disclosure_date_label, match_issues
 
 
@@ -112,9 +113,10 @@ def calculate_evidence_level(data: CollectedData, coverage: list[str]) -> Eviden
     if result.matched:
         first = result.matched[0]
         extra = f" 외 {len(result.matched) - 1}건" if len(result.matched) > 1 else ""
+        issue_label = first.issue if len(first.issue) <= 30 else first.issue[:29] + "…"
         reason = (
-            f"{first.issue}가 {disclosure_date_label(first.published_at)} "
-            f"{first.report_name} 공시와 맞아요{extra}"
+            f"{_josa(issue_label, '이', '가')} {disclosure_date_label(first.published_at)} "
+            f"{first.report_name.strip()} 공시와 맞아요{extra}"
         )
         level = "high"
     elif result.material_count:
