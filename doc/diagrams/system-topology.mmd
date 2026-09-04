@@ -1,7 +1,7 @@
 flowchart TB
     U["사용자 브라우저"]
 
-    subgraph VPS["VPS 159.223.75.71 · 데모 및 MCP 상시 운영"]
+    subgraph RUN["실행 환경 · 서비스 7개"]
         direction LR
         FE["Frontend<br/>React + Vite<br/>:8501"]
         BE["Backend<br/>FastAPI<br/>:8000"]
@@ -50,5 +50,5 @@ flowchart TB
     DM --> DART
     DM --> DPG
     CM --> FGI
-    DEV -.->|"MCP 4개 VPS URL 사용 가능"| MCP
+    DEV -.->|"MCP 4개는 다른 컴퓨터 주소로도 연결"| MCP
     DEV --> COMPOSE

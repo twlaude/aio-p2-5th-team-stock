@@ -6,15 +6,7 @@
 
 `살래? 말래?`는 종목 추천, 목표주가, 수익률 예측을 제공하지 않습니다. 관심 온도는 시장의 관심 정도를 나타낼 뿐 상승 가능성이나 매수 점수가 아닙니다.
 
-| 대상 | 주소 |
-|---|---|
-| VPS 데모 | http://159.223.75.71:8501 |
-| Price MCP | http://159.223.75.71:8020/mcp |
-| News MCP | http://159.223.75.71:8021/mcp |
-| Disclosure MCP | http://159.223.75.71:8022/mcp |
-| Community MCP | http://159.223.75.71:8023/mcp |
-
-MCP 서버의 상태는 각 포트의 `/health`에서 확인할 수 있습니다. 위 주소는 발표용 공개 데모 범위이며 실제 API Key와 내부 토큰은 공개하지 않습니다.
+전체 서비스는 로컬에서 실행합니다. 실행 순서와 환경변수는 아래 실행 절과 [로컬 실행 체크리스트](docs/LOCAL_RUN_ENV_CHECKLIST.md)를 따릅니다.
 
 데모 로그인은 `demo001`부터 `demo010`까지이며 공통 비밀번호는 `Demo1234!`입니다.
 
@@ -104,7 +96,7 @@ Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 
 | MCP 서버 | FastMCP Streamable HTTP, HTTPX |
 | 데이터베이스 | PostgreSQL, pgvector, `text-embedding-3-small` 1536차원 |
 | 외부 데이터 | 한국투자증권 Open API, NAVER API HUB, OpenDART, 커뮤니티 FGI API |
-| 인프라 | Docker, Docker Compose, VPS systemd |
+| 인프라 | Docker, Docker Compose |
 | 테스트 | pytest, Vitest, Playwright Core |
 
 ### 폴더 구조
@@ -159,7 +151,7 @@ cp .env.example .env
 python server.py
 ```
 
-`mcp_client/.env`에는 `OPENAI_API_KEY`와 Price·News·Disclosure·Community MCP URL을 설정합니다. 로컬에서 MCP 4개를 따로 실행하지 않는다면 위 주소 표의 VPS `/mcp` URL을 사용할 수 있습니다.
+`mcp_client/.env`에는 `OPENAI_API_KEY`와 Price·News·Disclosure·Community MCP URL을 설정합니다. MCP 4개를 다른 컴퓨터에서 실행하면 그 주소로 바꿉니다.
 
 ### 3) Backend
 
@@ -203,7 +195,7 @@ MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`과 
 
 | 이름 | 담당 |
 |---|---|
-| 문태웅 | 프론트엔드(React) 전체, Community MCP + 커뮤니티(FGI) 데이터 파이프라인, VPS 운영·통합 테스트 |
+| 문태웅 | 프론트엔드(React) 전체, Community MCP + 커뮤니티(FGI) 데이터 파이프라인, 통합 테스트·운영 |
 | 권오현 | 전체 기획·아키텍처·계약 문서, MCP Client(Agent Workflow), Price MCP(한국투자증권), 발표자 |
 | 윤기화 | Backend(인증·Memory·개인화·분석 API), DB·infra, News MCP |
 | 김인혜 | Disclosure MCP(OpenDART 수집·사업보고서 RAG·pgvector) |
@@ -222,7 +214,7 @@ MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`과 
 | [최종 아키텍처](docs/FINAL_ARCHITECTURE.md) | 서비스 책임과 확정 연결 구조 |
 | [서비스 연결 계약](shared/CONNECTION_CONTRACT.md) | 포트, 시간 제한, 데이터 경계와 공통 표기 규칙 |
 | [세부 계약](shared/contracts/README.md) | Frontend·Backend·분석·MCP Tool·성향·오류 계약 색인 |
-| [로컬 실행 체크리스트](docs/LOCAL_RUN_ENV_CHECKLIST.md) | VPS MCP 연결과 서비스별 환경변수·점검 명령 |
+| [로컬 실행 체크리스트](docs/LOCAL_RUN_ENV_CHECKLIST.md) | MCP 연결과 서비스별 환경변수·점검 명령 |
 | [Frontend 흐름](docs/FRONTEND_FLOW.md) | 검색·로그인·근거·개인화 화면의 기준 흐름 |
 
 초기 아이디어와 폐기된 구조는 `docs/archive/`에 보관합니다. 현재 구현과 연결 기준은 위 최종 문서와 실제 코드를 우선합니다.
