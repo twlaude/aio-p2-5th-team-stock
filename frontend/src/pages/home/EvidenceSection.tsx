@@ -106,6 +106,9 @@ export function EvidenceSection() {
             score={detail.market_temperature.score}
             label={detail.market_temperature.label}
             dataCoverage={detail.market_temperature.data_coverage}
+            weightCovered={detail.market_temperature.weight_covered}
+            volumeBasis={result.price.volume_basis}
+            volumeAsOf={result.price.volume_as_of}
           />
           <GaugeCard variant="evidence" level={detail.evidence_level.level} reason={detail.evidence_level.reason} />
         </div>

@@ -1,6 +1,6 @@
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class AnalysisRequest(BaseModel):
@@ -18,12 +18,15 @@ class PriceSnapshot(BaseModel):
     change: int
     change_rate: float
     as_of: str
+    volume_basis: str | None = None
+    volume_as_of: str | None = None
 
 
 class MarketTemperature(BaseModel):
     score: int
     label: str
     data_coverage: list[str]
+    weight_covered: int = Field(default=100, ge=0, le=100)
 
 
 class EvidenceLevel(BaseModel):

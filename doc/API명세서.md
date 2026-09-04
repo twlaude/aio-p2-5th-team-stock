@@ -219,14 +219,14 @@ PUT은 기존 성향을 갱신하고 없으면 생성합니다. 투자 성향은
 | `status` | string | `success` / `partial_success` |
 | `access_level` / `requires_login` | string / boolean | `guest`·true 또는 `member`·false |
 | `company` | object | `company_name`, `stock_code`, `supported:true` |
-| `price` | object | `current_price`, `change`, `change_rate`, `as_of` |
+| `price` | object | `current_price`, `change`, `change_rate`, `as_of`, 선택적 `volume_basis`, `volume_as_of` |
 | `one_line_summary` | string | 추천 없는 현재 상황 설명 |
 | `detail` | object / null | 회원 상세 근거 |
 | `personalized_checkpoints` | object / null | 회원 성향별 확인 포인트 |
 
 | 회원 전용 상세 필드 | 설명 |
 |---|---|
-| `detail.market_temperature` | `score`, `label`, `data_coverage` |
+| `detail.market_temperature` | `score`, `label`, `data_coverage`, `weight_covered` |
 | `detail.evidence_level` | `level`(`low / medium / high`), `reason` |
 | `detail.news_summary / disclosure_summary / community_summary` | 세 출처 요약 |
 | `detail.sources` | 화면 출처 배열 |
@@ -311,24 +311,27 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 | `collected_at` | 취합 시각 |
 | `trace_summary` | Tool·LLM 호출 수, 성공·실패 Tool, `duration_ms` |
 
-`common_analysis.market_temperature`에는 `score`, `label`, `data_coverage`와 실제 배점 구성인 `components`가 포함됩니다.
+`common_analysis.market_temperature`에는 `score`, `label`, `data_coverage`, 가용 입력의 최대 배점 합인 `weight_covered`, 실제 배점 구성인 `components`가 포함됩니다. `weight_covered`는 0~100이며 구버전 응답을 재검증하는 Backend에서는 필드가 없을 때 100을 기본값으로 사용합니다.
 
 | 중첩 객체 | 필드 |
 |---|---|
-| `price` | `current_price`, `change`, `change_rate`, `as_of`, 선택적 `source_name` |
+| `price` | `current_price`, `change`, `change_rate`, `as_of`, 선택적 `source_name`, `volume_basis`, `volume_as_of` |
 | `common_analysis` | `one_line_summary`, `market_temperature`, `evidence_level`, `news_summary`, `disclosure_summary`, `community_summary` |
-| `market_temperature` | `score`(0~100), `label`, `data_coverage`, `components` |
+| `market_temperature` | `score`(0~100), `label`, `data_coverage`, `weight_covered`(0~100), `components` |
 | `evidence_level` | `level`(`low / medium / high`), `reason` |
 | `personalized_checkpoints` | `personal_summary`, 1~3개의 `priority_checks`, `caution` |
 | `sources[]` | `source_type`, `title`, 선택적 `url / published_at`, `meta` |
 | `partial_failures[]` | `service`, `status`, `message` |
 | `trace_summary` | `tool_calls`, `llm_calls`, `completed_tools`, `failed_tools`, `duration_ms` |
 
-| `components` | 최대 배점 |
-|---|---:|
-| `price_movement` / `news_attention` | 20 / 25 |
-| `community_activity` / `fear_greed_intensity` | 20 / 20 |
-| `disclosure_activity` | 15 |
+| `components` | 입력 | 0~1 정규화 | 최대 배점 |
+|---|---|---|---:|
+| `volume_activity` | 20일 평균 대비 거래량 비율. 없으면 `1 + 전일 대비 거래량 변화율 / 100`으로 대체 | `clamp(ratio / 3, 0, 1)` | 30 |
+| `news_attention` | 기간 내 관련 기사 수. 없으면 반환 기사 수로 대체 | `clamp(count / 30, 0, 1)` | 25 |
+| `community_activity` | 지난 7일 글 수의 이전 28일 주간 평균 대비 비율 | `clamp(ratio / 3, 0, 1)` | 25 |
+| `fear_greed_intensity` | 공포탐욕 지수 | `abs(fgi - 50) / 50` | 20 |
+
+각 항목은 출처가 성공하고 필요 입력이 있을 때만 `components`에 담습니다. 미가용 항목은 빼고 `score = round(가용 항목 점수 합 / weight_covered × 100)`으로 재정규화하며, 가용 배점이 0이면 0점입니다. 공시 건수와 주가 등락률은 시장 관심 온도 산식에 사용하지 않습니다.
 
 현재 성공 응답에서 생성되는 종료 이유는 `completed`, `partial_completed`, `model_error`, `invalid_tool_call`, `max_steps_exceeded`입니다. Workflow 시간 초과는 응답 모델이 아니라 HTTP 504로 종료합니다.
 
@@ -360,10 +363,12 @@ Health는 `status:ok`, `service:price_mcp`, KIS 자격 증명 여부 `configured
 | 구분 | 필드·규칙 |
 |---|---|
 | 입력 | `company_name`은 공백 제거 후 필수, `stock_code`는 공백 제거 후 6자리 숫자 |
-| 성공 | `status`, `company_name`, `stock_code`, `current_price`, `change`, `change_rate`, `as_of`, `source_name`, `collected_at` |
+| 성공 | 기존 가격 필드와 `volume`, `volume_change_rate`, `avg_volume_20d`, `volume_ratio_20d`, `volume_basis`, `volume_as_of`, `projected_volume`, `warnings` |
 | 부호 | 상승 양수, 하락 음수, 보합 0 |
 | 캐시 | 종목별 성공 응답, 계약 기본 TTL 60초 |
 | 결과 없음 | `no_data`와 기업명·코드·제공처·수집시각 |
+
+거래량 기준은 Asia/Seoul 시각과 일봉 `output2`의 오늘 행 존재 여부로 고른다. 거래일 장중(09:00~15:30 전)은 `intraday_pace`로 누적 거래량을 장 마감 페이스로 환산하고, 장 마감 뒤에는 `today_close`, 비거래일이나 장 시작 전에는 `last_session`을 사용한다. `volume_as_of`는 기준 거래일이며 `projected_volume`은 `intraday_pace`에서만 값이 있다. 일봉 조회 실패 시 세 필드는 모두 `null`이다.
 
 | 상황 | `status` / `error.code` | 재시도 |
 |---|---|---|
@@ -507,7 +512,7 @@ Health는 `status:ok`, `service:community_mcp`, `mock` 여부를 반환합니다
 | 재시도 | 네트워크·5xx 1회 재시도 | Backend·MCP 호출 코드에 재시도 루프 없음 | 현재 호출당 1회 |
 | Frontend 시간 제한 | 분석 요청 90초 | live client는 `fetch`에 AbortSignal·timeout을 설정하지 않음 | 브라우저 요청 제한 구현 필요 |
 | MCP Client 운영 API | 분석 계약은 분석 POST 중심 | Health와 `mcp-status`도 구현 | 운영 경로 추가 |
-| 관심 온도 | 계약 예시는 세 필드 | MCP Client는 `components`도 직렬화 | 실제 확장 필드 반영 |
+| 관심 온도 | Backend는 `score`, `label`, `data_coverage`, `weight_covered`를 응답 | MCP Client는 `components`도 직렬화 | Backend는 화면 필요 필드를 재검증해 전달 |
 | 종료 이유 | 계약 목록에는 `mcp_tool_error`, `workflow_timeout`도 있음 | 성공 응답은 `completed / partial_completed / model_error / invalid_tool_call / max_steps_exceeded`; Workflow timeout은 HTTP 504 | 응답 JSON과 HTTP 오류를 분리 처리 |
 | Disclosure Tool | 계약·함수 docstring은 3개 | `search_periodic_report` 포함 4개 등록 | 네 번째 Tool 명시 |
 | 최근 공시 범위 | 기본 30일·20건 | 허용 범위 1~365일·1~100건 | 코드 범위 반영 |

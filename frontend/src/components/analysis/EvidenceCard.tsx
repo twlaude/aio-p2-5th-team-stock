@@ -23,7 +23,7 @@ const copy = {
   community: {
     title: "커뮤니티 반응",
     footer: "네이버 종목토론방 집계 · 사실이 아닌 시장 반응",
-    failedBody: "커뮤니티 서버가 응답하지 않아 이 부분은 뺐어요. 시장 관심 온도는 뉴스·가격만으로 계산됐어요.",
+    failedBody: "커뮤니티 서버가 응답하지 않아 이 부분은 뺐어요. 시장 관심 온도는 뉴스·거래량만으로 계산됐어요.",
     failedFooter: "MCP 부분 실패 · status: partial_success",
   },
   news: {

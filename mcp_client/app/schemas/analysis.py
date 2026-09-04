@@ -34,6 +34,8 @@ class PriceSnapshot(BaseModel):
     change_rate: float
     as_of: str
     source_name: str | None = None
+    volume_basis: str | None = None
+    volume_as_of: str | None = None
 
 
 class MarketTemperature(BaseModel):
@@ -41,6 +43,7 @@ class MarketTemperature(BaseModel):
     label: str
     data_coverage: list[str]
     components: dict[str, int] = Field(default_factory=dict)
+    weight_covered: int = Field(ge=0, le=100)
 
 
 class EvidenceLevel(BaseModel):

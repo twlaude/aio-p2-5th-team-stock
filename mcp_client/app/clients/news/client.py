@@ -14,6 +14,6 @@ class NewsMCPClient:
                 "company_name": company_name,
                 "stock_code": stock_code,
                 "lookback_days": 7,
-                "limit": 10,
+                "limit": 100,
             },
         )

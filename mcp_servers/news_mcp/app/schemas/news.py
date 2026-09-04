@@ -42,6 +42,7 @@ class NewsResponse(TypedDict, total=False):
     stock_code: str
     articles: list[Article]
     result_count: int
+    relevant_count: int
     collected_at: str
     mock: bool
     error: ErrorDetail

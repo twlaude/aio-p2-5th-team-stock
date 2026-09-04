@@ -22,6 +22,8 @@ class PriceConfig:
     token_url: str = "/oauth2/tokenP"
     price_url: str = "/uapi/domestic-stock/v1/quotations/inquire-price"
     tr_id: str = "FHKST01010100"
+    daily_url: str = "/uapi/domestic-stock/v1/quotations/inquire-daily-itemchartprice"
+    daily_tr_id: str = "FHKST03010100"
     market_code: str = "J"
     token_cache_file: Path = PRICE_MCP_ROOT / ".cache" / "kis_token.json"
     host: str = "0.0.0.0"
@@ -46,6 +48,8 @@ def get_config() -> PriceConfig:
         token_url=os.getenv("KIS_TOKEN_URL", PriceConfig.token_url),
         price_url=os.getenv("KIS_PRICE_URL", PriceConfig.price_url),
         tr_id=os.getenv("KIS_TR_ID", PriceConfig.tr_id),
+        daily_url=os.getenv("KIS_DAILY_URL", PriceConfig.daily_url),
+        daily_tr_id=os.getenv("KIS_DAILY_TR_ID", PriceConfig.daily_tr_id),
         market_code=os.getenv("KIS_MARKET_CODE", PriceConfig.market_code),
         token_cache_file=cache_path,
         host=os.getenv("PRICE_MCP_HOST", PriceConfig.host),

@@ -233,6 +233,8 @@ function templatePrice(template: TemplateAnalysis): PriceSnapshot {
     change: template.change,
     change_rate: template.change_rate,
     as_of: "2026-09-01T06:30:00Z",
+    volume_basis: "last_session",
+    volume_as_of: "2026-08-31",
   };
 }
 
@@ -276,6 +278,7 @@ function buildTemplateDetail(company: Company, template: TemplateAnalysis, parti
       score: partial ? Math.max(40, template.temperature_score - 8) : template.temperature_score,
       label: partial ? "일부 확인" : template.temperature_label,
       data_coverage: coverage,
+      weight_covered: partial ? 55 : 100,
     },
     evidence_level: {
       level: partial ? "medium" : template.evidence_level,

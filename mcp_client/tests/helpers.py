@@ -12,12 +12,19 @@ def collected_data() -> CollectedData:
             "current_price": 70000,
             "change": 1700,
             "change_rate": 2.5,
+            "volume": 1500000,
+            "volume_change_rate": 50.0,
+            "avg_volume_20d": 1000000,
+            "volume_ratio_20d": 1.5,
+            "volume_basis": "intraday_pace",
+            "volume_as_of": "2026-09-04",
             "as_of": "2026-09-04T01:00:00Z",
             "source_name": "한국투자증권 Open API",
         },
         news={
             "status": "success",
             "result_count": 5,
+            "relevant_count": 5,
             "articles": [
                 {
                     "headline": f"삼성전자 관련 뉴스 {index}",
@@ -63,6 +70,12 @@ def collected_data() -> CollectedData:
             "top_topics": {"expectations": ["신제품"], "concerns": ["업황"]},
             "representative_evidence": [],
             "fgi_latest": {"fgi": 75.0, "label": "탐욕"},
+            "activity": {
+                "posts_7d": 200,
+                "weekly_avg_prev_28d": 100.0,
+                "ratio": 2.0,
+                "baseline_days": 28,
+            },
             "source_name": "태웅님 커뮤니티 서버",
         },
         completed_tools=[

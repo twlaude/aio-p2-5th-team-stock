@@ -82,6 +82,8 @@ export interface PriceSnapshot {
   change: number;
   change_rate: number;
   as_of: string;
+  volume_basis?: string | null;
+  volume_as_of?: string | null;
 }
 
 export interface AnalysisSource {
@@ -97,6 +99,7 @@ export interface AnalysisDetail {
     score: number;
     label: string;
     data_coverage: DataCoverage[];
+    weight_covered: number;
   };
   evidence_level: {
     level: EvidenceLevel;

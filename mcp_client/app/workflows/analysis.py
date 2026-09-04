@@ -151,6 +151,8 @@ class AnalysisWorkflow:
             change_rate=float(data.price["change_rate"]),
             as_of=str(data.price["as_of"]),
             source_name=data.price.get("source_name"),
+            volume_basis=data.price.get("volume_basis"),
+            volume_as_of=data.price.get("volume_as_of"),
         )
         common = CommonAnalysis(
             one_line_summary=narrative.one_line_summary,

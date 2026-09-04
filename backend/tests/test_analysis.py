@@ -1,6 +1,7 @@
 import pytest
 
 from app.core.config import settings
+from app.schemas.analysis import MarketTemperature
 
 from app.services.analysis.narrative import josa, pick_topic
 
@@ -23,6 +24,8 @@ def test_guest_analysis_hides_detail(client):
     assert body["requires_login"] is True
     assert body["detail"] is None
     assert body["personalized_checkpoints"] is None
+    assert body["price"]["volume_basis"] == "last_session"
+    assert body["price"]["volume_as_of"] == "2026-09-03"
 
 
 def test_member_analysis_includes_personalization(client, member_token):
@@ -34,7 +37,31 @@ def test_member_analysis_includes_personalization(client, member_token):
     assert body["access_level"] == "member"
     assert body["requires_login"] is False
     assert body["detail"] is not None
+    assert body["detail"]["market_temperature"]["weight_covered"] == 100
     assert body["personalized_checkpoints"]["priority_checks"]
+
+
+@pytest.mark.parametrize(("payload", "expected"), [({}, 100), ({"weight_covered": 55}, 55)])
+def test_market_temperature_weight_covered_default_and_passthrough(payload, expected):
+    temperature = MarketTemperature(
+        score=60,
+        label="보통",
+        data_coverage=["price", "news"],
+        **payload,
+    )
+
+    assert temperature.weight_covered == expected
+
+
+@pytest.mark.parametrize("weight_covered", [-1, 101])
+def test_market_temperature_rejects_out_of_range_weight_covered(weight_covered):
+    with pytest.raises(ValueError):
+        MarketTemperature(
+            score=60,
+            label="보통",
+            data_coverage=["price", "news"],
+            weight_covered=weight_covered,
+        )
 
 
 def test_unsupported_company(client):
