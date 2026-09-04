@@ -4,7 +4,7 @@ import { useEffect, useState, type CSSProperties } from "react";
 import { EvidenceSubsection } from "../../components/analysis/EvidenceSubsection";
 import { GapCheckCard } from "../../components/analysis/GapCheckCard";
 import { GaugeCard } from "../../components/analysis/GaugeCard";
-import { PartialNotice } from "../../components/analysis/PartialNotice";
+import { PartialNotice, type FailedKind } from "../../components/analysis/PartialNotice";
 import { PeekMascot } from "../../components/analysis/PeekMascot";
 import { countOf, deriveCommunity, deriveDisclosureChecks, deriveGapCheck, deriveItems } from "../../components/analysis/deriveEvidence";
 import { useSearch } from "../../state/searchStore";
@@ -81,6 +81,11 @@ export function EvidenceSection() {
   const communityFailed = detail.community_summary === null || !hasCommunityCoverage;
   const newsFailed = detail.news_summary === null;
   const disclosureFailed = detail.disclosure_summary === null;
+  const failedKinds: FailedKind[] = [
+    ...(communityFailed ? (["community"] as const) : []),
+    ...(newsFailed ? (["news"] as const) : []),
+    ...(disclosureFailed ? (["disclosure"] as const) : []),
+  ];
 
   const handleTabClick = (id: string, key: EvidenceTab) => {
     setActiveTab(key);
@@ -90,7 +95,7 @@ export function EvidenceSection() {
   return (
     <section id="evidence" className="sallae-evidence-section" style={{ "--nav-offset": `${navOffset}px` } as CSSProperties}>
       <div className="sallae-evidence-section__inner">
-        {result.status === "partial_success" ? <PartialNotice /> : null}
+        {result.status === "partial_success" ? <PartialNotice failed={failedKinds} /> : null}
         <div className="sallae-evidence-section__gauges">
           <GaugeCard
             variant="temperature"
