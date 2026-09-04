@@ -9,7 +9,7 @@ from app.clients.dart import DartClient
 from app.clients.repository import DisclosureCacheRow, DisclosureRepository
 from app.schemas.re import DartDisclosureRecord
 from app.schemas.search import DisclosureItem, RecentDisclosuresResponse
-from app.services.company import CompanyResolver
+from app.services.company_resolver import CompanyResolver
 
 
 _SEOUL = ZoneInfo("Asia/Seoul")

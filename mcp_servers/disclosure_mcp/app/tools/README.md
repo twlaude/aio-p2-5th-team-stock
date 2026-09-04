@@ -1,6 +1,6 @@
 # Disclosure MCP Tools
 
-MCP Client에 공개하는 Tool만 정의한다. 기업 고유번호 조회는 `company_resolver`가 내부적으로 수행하므로 공개 Tool가 아니다.
+MCP Client에 공개하는 Tool만 정의한다. 기업 고유번호 조회는 `services/company_resolver.py`의 `CompanyResolver`가 내부적으로 수행하므로 공개 Tool가 아니다.
 
 ## `get_recent_disclosures`
 
