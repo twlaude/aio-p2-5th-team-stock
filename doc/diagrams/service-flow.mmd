@@ -1,0 +1,54 @@
+sequenceDiagram
+    autonumber
+    actor U as 사용자
+    participant F as Frontend :8501
+    participant B as Backend :8000
+    participant DB as PostgreSQL / Redis
+    participant M as MCP Client Workflow :8010
+    participant P as Price MCP :8020
+    participant N as News MCP :8021
+    participant D as Disclosure MCP :8022
+    participant C as Community MCP :8023
+    participant A as Stock Analysis Agent<br/>gpt-5.6-luna
+
+    U->>F: 지원 종목명 또는 종목 코드 검색
+    F->>B: POST /api/v1/analyses<br/>선택적으로 Bearer JWT
+    B->>B: 지원 20종목 확인과 사용자 식별
+    opt 회원 요청
+        B->>DB: 투자 성향 조회
+        DB-->>B: 성향 네 값
+    end
+    B->>M: POST /internal/v1/common-analyses<br/>기업·종목 코드·성향 또는 null
+
+    par 현재가
+        M->>P: get_stock_quote
+        P-->>M: 가격·등락·수집 시각
+    and 최근 뉴스
+        M->>N: search_news<br/>최근 7일·최대 10건
+        N-->>M: 정제된 기사 목록
+    and 최근 공시와 사업보고서
+        M->>D: get_recent_disclosures<br/>최근 30일·최대 20건
+        D-->>M: 최근 공시 목록
+        M->>D: search_annual_report<br/>top_k 최대 5
+        D-->>M: 관련 보고서 구절
+    and 커뮤니티 반응
+        M->>C: get_community_reaction<br/>최근 7일·최대 100개 표본
+        C-->>M: 감성 집계·주제·FGI
+    end
+
+    M->>M: 관심 온도·근거 수준 규칙 계산
+    M->>A: 제한된 근거와 계산 결과 전달
+    opt 공시 제목만으로 설명이 부족함
+        A-->>M: get_disclosure_detail Tool 요청
+        M->>D: 목록 내 접수번호 조회·최대 2건
+        D-->>M: 공식 공시 상세
+        M->>A: 검증된 Tool 결과
+    end
+    A-->>M: 추천 없는 설명과 개인화 JSON
+    M-->>B: 공통 분석·출처·부분 실패·Trace
+    B->>DB: 분석 실행 이력 저장
+    opt 회원 요청
+        B->>DB: 최근 검색 상태를 Redis에 TTL 저장
+    end
+    B-->>F: guest 또는 member 응답
+    F-->>U: 가격·한 줄 결론과 접근 수준별 근거 표시

@@ -1,0 +1,54 @@
+flowchart TB
+    U[사용자]
+    FE[Frontend]
+    BE[Backend]
+    MC[MCP Client Agent]
+    DART[OpenDART]
+    EMB[OpenAI Embeddings<br/>text-embedding-3-small]
+
+    subgraph BDB[Backend PostgreSQL]
+        USERS[(users)]
+        PROFILES[(user_profiles)]
+        RUNS[(analysis_runs)]
+        RAG[(rag_chunks<br/>공용 벡터 DDL)]
+    end
+
+    subgraph CACHE[Redis DB 0]
+        SHORT[(backend:short_term:user_id<br/>JSON + TTL 1800초)]
+    end
+
+    subgraph DDB[Disclosure MCP 전용 PostgreSQL]
+        COMPANIES[(companies)]
+        DISCLOSURES[(disclosures)]
+        REPORTS[(annual_reports)]
+        CHUNKS[(report_chunks<br/>vector 1536)]
+    end
+
+    U -->|회원가입·로그인| FE
+    FE --> BE
+    BE -->|가입 트랜잭션| USERS
+    BE -->|장기 투자 성향| PROFILES
+    USERS -->|PK/FK 1:0..1| PROFILES
+
+    U -->|종목 분석| FE
+    FE -->|분석 요청| BE
+    BE -->|회원 최근 검색 상태| SHORT
+    BE -->|공통 분석 요청| MC
+    MC -->|공시·보고서 도구| COMPANIES
+
+    COMPANIES -->|지원 종목·corp_code 확인| DART
+    DART -->|최근 공시 목록| DISCLOSURES
+    DART -->|정기보고서 XML| REPORTS
+    REPORTS -->|파싱·청킹할 본문| EMB
+    EMB -->|1536차원 벡터| CHUNKS
+    REPORTS -->|ON DELETE CASCADE| CHUNKS
+
+    MC -->|기업·종류·연도 SQL 선필터| REPORTS
+    REPORTS -->|annual_report_id 범위| CHUNKS
+    CHUNKS -->|cosine distance 정렬·top-k| MC
+    MC -->|가격·뉴스·공시·커뮤니티 통합 결과| BE
+    BE -->|요청·출처·실패·개인화 스냅샷| RUNS
+    BE -->|응답| FE
+    FE --> U
+
+    MC -. "현재 직접 접근 코드 없음" .-> RAG

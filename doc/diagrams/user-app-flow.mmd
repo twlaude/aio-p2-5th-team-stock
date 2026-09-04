@@ -1,0 +1,47 @@
+flowchart TD
+    ENTRY(["서비스 접속"]) --> HOME["홈 /<br/>검색 히어로 · 마스코트 · 검색창"]
+
+    HOME -->|"지원 20종목 보기"| SHEET["지원 기업 20개 모달"]
+    SHEET -->|"기업 선택"| LOADING
+    SHEET -->|"닫기"| HOME
+    HOME -->|"기업명 또는 6자리 종목 코드 검색"| LOADING["분석 중<br/>가격 · 뉴스 · 공시 · 커뮤니티 진행 표시"]
+
+    LOADING -->|"지원 종목 · 정상"| PUBLIC["공개 결과<br/>가격 헤더 · 스파크라인 · 한줄결론 · 재료줄"]
+    LOADING -->|"unsupported_company"| UNSUPPORTED["미지원 안내<br/>지원 기업 20개 목록"]
+    LOADING -->|"네트워크·서버 오류"| ERROR["전체 실패 안내<br/>다시 시도"]
+    UNSUPPORTED -->|"지원 기업 선택"| LOADING
+    ERROR -->|"다시 시도"| LOADING
+
+    PUBLIC --> WHY{"왜 이렇게 판단했나요?"}
+    WHY -->|"비회원"| GATE["비회원 게이트<br/>근거 미리보기 blur"]
+    WHY -->|"회원"| EVIDENCE
+
+    HOME -->|"상단 로그인"| LOGIN["/login<br/>데모 계정 10개 선택"]
+    GATE -->|"Mock 계정으로 로그인<br/>검색어 보관"| LOGIN
+    LOGIN -->|"로그인 성공 · 프로필 조회"| RETURN["/ 복귀<br/>보던 종목 자동 재분석"]
+    RETURN --> LOADING
+
+    EVIDENCE["회원 근거 시작<br/>시장 관심 온도 · 공시 확인 정도"] --> GAP["분위기 vs 근거"]
+    GAP --> COMMUNITY["커뮤니티 반응<br/>비율 · FGI · 주요 주제"]
+    COMMUNITY --> NEWS["최신 뉴스<br/>요약 · 출처 링크"]
+    NEWS --> DISCLOSURE["기업보고서·공시<br/>출처 · 확인/미확인"]
+    DISCLOSURE --> PERSONAL["성향별 확인 포인트<br/>우선 확인 3개 · 주의점"]
+    PERSONAL --> FOOTER["투자 추천이 아닌 정보 제공 고지"]
+
+    LOADING -. "partial_completed" .-> PARTIAL["부분 실패 안내<br/>실패 근거만 제외 · 다시 시도"]
+    PARTIAL --> EVIDENCE
+    EVIDENCE -->|"sticky 탭으로 섹션 이동"| GAP
+    EVIDENCE -->|"sticky 탭으로 섹션 이동"| COMMUNITY
+    EVIDENCE -->|"sticky 탭으로 섹션 이동"| NEWS
+    EVIDENCE -->|"sticky 탭으로 섹션 이동"| DISCLOSURE
+    EVIDENCE -->|"빼꼼 마스코트: 맨 위로"| HOME
+
+    classDef primary fill:#ecf9f0,stroke:#1fb968,color:#102019,stroke-width:2px;
+    classDef gate fill:#fff8e8,stroke:#e5a43a,color:#3a2a10,stroke-width:1.5px;
+    classDef error fill:#fff0f0,stroke:#dc4b4b,color:#3b1616,stroke-width:1.5px;
+    classDef secondary fill:#ffffff,stroke:#9eb2a6,color:#102019;
+
+    class HOME,PUBLIC,EVIDENCE,PERSONAL primary;
+    class GATE,LOGIN,RETURN gate;
+    class UNSUPPORTED,ERROR,PARTIAL error;
+    class SHEET,LOADING,GAP,COMMUNITY,NEWS,DISCLOSURE,FOOTER secondary;
