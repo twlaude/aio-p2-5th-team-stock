@@ -1,3 +1,3 @@
 # Stock Analysis Agent
 
-Single Agent의 Goal, Instructions, Allowed Tools와 완료 기준이 들어갈 위치다. MCP 서버별 Agent를 따로 만들지 않는다.
+`stock_analysis.py`가 Single Agent의 Goal과 Tool Allowlist를 정의한다. 기본 자료 수집은 Workflow가 담당하고 Agent에는 읽기 전용 `get_disclosure_detail`만 허용한다.

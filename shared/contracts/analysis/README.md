@@ -43,6 +43,8 @@
 
 Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 기업명과 6자리 종목 코드를 받는다. MCP Client가 받은 투자 성향은 Price·News·Disclosure·Community MCP에는 전달하지 않는다.
 
+이 서비스는 자유 질문형이 아니므로 MCP Client 요청에 `question`, `date_range`를 포함하지 않는다.
+
 ## 성공 또는 부분 성공 응답
 
 ```json
@@ -84,6 +86,13 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
   },
   "sources": [],
   "partial_failures": [],
+  "trace_summary": {
+    "tool_calls": 5,
+    "llm_calls": 1,
+    "completed_tools": ["get_stock_quote", "search_news"],
+    "failed_tools": [],
+    "duration_ms": 1200
+  },
   "collected_at": "2026-09-01T09:00:10Z"
 }
 ```
@@ -99,6 +108,7 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 5. Agent 최대 단계는 3으로 제한한다.
 6. 일부 Tool 실패 시 성공한 자료를 유지하고 `partial_success`로 반환한다.
 7. `investment_profile`을 받으면 공통 분석과 성향 네 값으로 `personalized_checkpoints`를 OpenAI `gpt-5.6-luna`로 생성한다. 이 값은 Price·News·Disclosure·Community MCP에 전달하지 않는다.
+8. 기본 조회는 AI가 선택하지 않는다. Luna Agent에는 최근 공시 상세 조회 Tool만 허용하고, 기본 조회에 포함된 접수번호를 최대 2건까지 사용할 수 있다.
 
 ## 종료 이유
 

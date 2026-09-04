@@ -1,3 +1,3 @@
 # MCP Client API
 
-Backend가 종목 분석을 요청하고 실행 상태를 확인할 HTTP API가 들어갈 위치다.
+`routes.py`가 Backend 분석 요청, Health, 네 MCP 연결 상태 확인 API를 제공한다.
