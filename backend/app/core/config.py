@@ -26,6 +26,9 @@ class Settings(BaseSettings):
 
     cors_allowed_origins: str = "http://localhost:5173"
 
+    admin_username: str = "admin"
+    admin_password: str = "change-me"
+
     @field_validator("jwt_secret_key", mode="before")
     @classmethod
     def _jwt_secret_not_empty(cls, value: str) -> str:

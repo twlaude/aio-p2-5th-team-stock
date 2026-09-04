@@ -2,6 +2,7 @@ import json
 from datetime import datetime
 from typing import Any
 
+from app.clients.redis import client as redis_client
 from app.core.db import get_cursor
 
 
@@ -44,3 +45,31 @@ def save_run(
                 collected_at,
             ),
         )
+    redis_client.publish_event(
+        {
+            "type": "analysis_run",
+            "request_id": request_id,
+            "user_id": user_id,
+            "company_name": company_name,
+            "stock_code": stock_code,
+            "access_level": access_level,
+            "status": status,
+            "partial_failures": partial_failures,
+            "requested_at": requested_at,
+        }
+    )
+
+
+def list_recent(limit: int = 20) -> list[dict[str, Any]]:
+    with get_cursor() as cur:
+        cur.execute(
+            """
+            SELECT request_id, user_id, company_name, stock_code, access_level, status,
+                   partial_failures, requested_at, collected_at
+            FROM analysis_runs
+            ORDER BY requested_at DESC
+            LIMIT %s
+            """,
+            (limit,),
+        )
+        return [dict(row) for row in cur.fetchall()]
