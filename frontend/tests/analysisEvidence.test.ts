@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { countOf, deriveCommunity, deriveDisclosureChecks, deriveItems, deriveTopics, evidenceLevelText, fgiLabel } from "../src/components/analysis/deriveEvidence";
-import { temperatureDescription } from "../src/components/analysis/GaugeCard";
+import { lastSessionVolumeDescription, temperatureDescription } from "../src/components/analysis/GaugeCard";
 import samsungFixture from "../src/mocks/analyses/samsung.json";
 import type { AnalysisDetail } from "../src/services/backend_api/client";
 
@@ -41,6 +41,11 @@ describe("analysis evidence derivation", () => {
       primary: "거래량 변화 · 뉴스 기사량 기준 (커뮤니티 제외)",
       partial: "일부 자료를 못 받아 받은 자료만으로 계산했어요.",
     });
+  });
+
+  it("shows the last-session date only for the last-session volume basis", () => {
+    expect(lastSessionVolumeDescription("last_session", "2026-09-03")).toBe("거래량은 9월 3일 거래일 기준이에요.");
+    expect(lastSessionVolumeDescription("intraday_pace", "2026-09-04")).toBeNull();
   });
 
   it("derives source items, source counts, and evidence segment count", () => {

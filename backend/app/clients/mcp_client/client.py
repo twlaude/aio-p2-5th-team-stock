@@ -59,6 +59,8 @@ def _mock_common_analysis(
             "change": 500,
             "change_rate": 0.72,
             "as_of": now,
+            "volume_basis": "last_session",
+            "volume_as_of": "2026-09-03",
         },
         "common_analysis": {
             "one_line_summary": one_line_summary,

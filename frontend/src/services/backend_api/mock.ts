@@ -233,6 +233,8 @@ function templatePrice(template: TemplateAnalysis): PriceSnapshot {
     change: template.change,
     change_rate: template.change_rate,
     as_of: "2026-09-01T06:30:00Z",
+    volume_basis: "last_session",
+    volume_as_of: "2026-08-31",
   };
 }
 

@@ -27,6 +27,8 @@ async def test_builds_backend_contract_for_guest():
     assert response.status == "success"
     assert response.termination_reason == "completed"
     assert response.price.current_price == 70000
+    assert response.price.volume_basis == "intraday_pace"
+    assert response.price.volume_as_of == "2026-09-04"
     assert response.personalized_checkpoints is None
     assert response.trace_summary.tool_calls == 5
 

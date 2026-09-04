@@ -16,6 +16,8 @@ def collected_data() -> CollectedData:
             "volume_change_rate": 50.0,
             "avg_volume_20d": 1000000,
             "volume_ratio_20d": 1.5,
+            "volume_basis": "intraday_pace",
+            "volume_as_of": "2026-09-04",
             "as_of": "2026-09-04T01:00:00Z",
             "source_name": "한국투자증권 Open API",
         },

@@ -18,6 +18,8 @@ class PriceSnapshot(BaseModel):
     change: int
     change_rate: float
     as_of: str
+    volume_basis: str | None = None
+    volume_as_of: str | None = None
 
 
 class MarketTemperature(BaseModel):

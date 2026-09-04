@@ -83,6 +83,9 @@ def test_daily_price_failure_keeps_current_quote_successful_and_cached():
     assert first["volume"] == 2000
     assert first["avg_volume_20d"] is None
     assert first["volume_ratio_20d"] is None
+    assert first["volume_basis"] is None
+    assert first["volume_as_of"] is None
+    assert first["projected_volume"] is None
     assert first["warnings"] == ["VOLUME_BASELINE_UNAVAILABLE"]
     assert second == first
     assert client.calls == 2

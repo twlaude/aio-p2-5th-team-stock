@@ -62,7 +62,9 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
     "change": 0,
     "change_rate": 0.0,
     "as_of": "2026-09-01T06:30:00Z",
-    "source_name": "한국투자증권 Open API"
+    "source_name": "한국투자증권 Open API",
+    "volume_basis": "last_session",
+    "volume_as_of": "2026-08-31"
   },
   "common_analysis": {
     "one_line_summary": "추천 없이 현재 상황을 설명하는 한 줄",
@@ -105,6 +107,7 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 ```
 
 `personalized_checkpoints`는 요청에 `investment_profile`이 있을 때만 채운다. 비회원 요청(`investment_profile: null`)에는 이 필드를 생략하거나 `null`로 반환한다.
+`price.volume_basis`와 `price.volume_as_of`는 Price MCP가 선택한 거래량 기준과 기준 거래일을 전달한다. 구버전 Price 응답이나 일봉 실패에서는 두 필드를 생략하거나 `null`로 반환한다.
 
 ## 시장 관심 온도 v2
 

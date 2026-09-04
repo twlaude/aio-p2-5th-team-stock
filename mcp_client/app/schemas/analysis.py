@@ -34,6 +34,8 @@ class PriceSnapshot(BaseModel):
     change_rate: float
     as_of: str
     source_name: str | None = None
+    volume_basis: str | None = None
+    volume_as_of: str | None = None
 
 
 class MarketTemperature(BaseModel):

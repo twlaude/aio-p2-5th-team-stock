@@ -219,7 +219,7 @@ PUT은 기존 성향을 갱신하고 없으면 생성합니다. 투자 성향은
 | `status` | string | `success` / `partial_success` |
 | `access_level` / `requires_login` | string / boolean | `guest`·true 또는 `member`·false |
 | `company` | object | `company_name`, `stock_code`, `supported:true` |
-| `price` | object | `current_price`, `change`, `change_rate`, `as_of` |
+| `price` | object | `current_price`, `change`, `change_rate`, `as_of`, 선택적 `volume_basis`, `volume_as_of` |
 | `one_line_summary` | string | 추천 없는 현재 상황 설명 |
 | `detail` | object / null | 회원 상세 근거 |
 | `personalized_checkpoints` | object / null | 회원 성향별 확인 포인트 |
@@ -315,7 +315,7 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 
 | 중첩 객체 | 필드 |
 |---|---|
-| `price` | `current_price`, `change`, `change_rate`, `as_of`, 선택적 `source_name` |
+| `price` | `current_price`, `change`, `change_rate`, `as_of`, 선택적 `source_name`, `volume_basis`, `volume_as_of` |
 | `common_analysis` | `one_line_summary`, `market_temperature`, `evidence_level`, `news_summary`, `disclosure_summary`, `community_summary` |
 | `market_temperature` | `score`(0~100), `label`, `data_coverage`, `weight_covered`(0~100), `components` |
 | `evidence_level` | `level`(`low / medium / high`), `reason` |
@@ -363,10 +363,12 @@ Health는 `status:ok`, `service:price_mcp`, KIS 자격 증명 여부 `configured
 | 구분 | 필드·규칙 |
 |---|---|
 | 입력 | `company_name`은 공백 제거 후 필수, `stock_code`는 공백 제거 후 6자리 숫자 |
-| 성공 | `status`, `company_name`, `stock_code`, `current_price`, `change`, `change_rate`, `as_of`, `source_name`, `collected_at` |
+| 성공 | 기존 가격 필드와 `volume`, `volume_change_rate`, `avg_volume_20d`, `volume_ratio_20d`, `volume_basis`, `volume_as_of`, `projected_volume`, `warnings` |
 | 부호 | 상승 양수, 하락 음수, 보합 0 |
 | 캐시 | 종목별 성공 응답, 계약 기본 TTL 60초 |
 | 결과 없음 | `no_data`와 기업명·코드·제공처·수집시각 |
+
+거래량 기준은 Asia/Seoul 시각과 일봉 `output2`의 오늘 행 존재 여부로 고른다. 거래일 장중(09:00~15:30 전)은 `intraday_pace`로 누적 거래량을 장 마감 페이스로 환산하고, 장 마감 뒤에는 `today_close`, 비거래일이나 장 시작 전에는 `last_session`을 사용한다. `volume_as_of`는 기준 거래일이며 `projected_volume`은 `intraday_pace`에서만 값이 있다. 일봉 조회 실패 시 세 필드는 모두 `null`이다.
 
 | 상황 | `status` / `error.code` | 재시도 |
 |---|---|---|

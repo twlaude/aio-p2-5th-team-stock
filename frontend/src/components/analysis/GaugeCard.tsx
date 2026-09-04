@@ -12,6 +12,8 @@ type GaugeCardProps =
       label: string;
       dataCoverage: DataCoverage[];
       weightCovered: number;
+      volumeBasis?: string | null;
+      volumeAsOf?: string | null;
     }
   | {
       variant: "evidence";
@@ -60,6 +62,12 @@ export function temperatureDescription(dataCoverage: DataCoverage[], weightCover
   return { primary, partial };
 }
 
+export function lastSessionVolumeDescription(volumeBasis?: string | null, volumeAsOf?: string | null) {
+  const match = volumeBasis === "last_session" && volumeAsOf?.match(/^\d{4}-(\d{2})-(\d{2})$/);
+  if (!match) return null;
+  return `거래량은 ${Number(match[1])}월 ${Number(match[2])}일 거래일 기준이에요.`;
+}
+
 export function GaugeCard(props: GaugeCardProps) {
   const { ref, inView } = useInView<HTMLDivElement>();
   const temperature = props.variant === "temperature" ? Math.max(0, Math.min(100, props.score)) : 0;
@@ -67,6 +75,7 @@ export function GaugeCard(props: GaugeCardProps) {
 
   if (props.variant === "temperature") {
     const description = temperatureDescription(props.dataCoverage, props.weightCovered);
+    const volumeDescription = lastSessionVolumeDescription(props.volumeBasis, props.volumeAsOf);
     return (
       // motion 4b-10
       <div ref={ref} className={["analysis-gauge-card", inView ? "analysis-gauge-card--visible" : ""].join(" ")}>
@@ -84,6 +93,12 @@ export function GaugeCard(props: GaugeCardProps) {
             <>
               <br />
               {description.partial}
+            </>
+          ) : null}
+          {volumeDescription ? (
+            <>
+              <br />
+              {volumeDescription}
             </>
           ) : null}
         </div>

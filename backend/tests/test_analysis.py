@@ -24,6 +24,8 @@ def test_guest_analysis_hides_detail(client):
     assert body["requires_login"] is True
     assert body["detail"] is None
     assert body["personalized_checkpoints"] is None
+    assert body["price"]["volume_basis"] == "last_session"
+    assert body["price"]["volume_as_of"] == "2026-09-03"
 
 
 def test_member_analysis_includes_personalization(client, member_token):

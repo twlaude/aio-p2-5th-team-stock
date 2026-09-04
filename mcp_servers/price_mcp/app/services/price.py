@@ -1,5 +1,5 @@
 from collections.abc import Callable
-from datetime import date, datetime, timezone
+from datetime import datetime, time, timezone
 from decimal import Decimal, InvalidOperation
 from time import monotonic
 from typing import Any
@@ -15,12 +15,15 @@ from app.clients.kis_price import (
     KISPriceClient,
 )
 from app.core.config import PriceConfig, get_config
-from app.schemas.price import ErrorDetail, PriceRequest, PriceResponse
+from app.schemas.price import ErrorDetail, PriceRequest, PriceResponse, VolumeBasis
 
 SERVICE_NAME = "price_mcp"
 SOURCE_NAME = "한국투자증권 Open API"
 
 _QUOTE_CACHE: dict[str, tuple[float, PriceResponse]] = {}
+_SEOUL = ZoneInfo("Asia/Seoul")
+_SESSION_OPEN = time(9)
+_SESSION_CLOSE = time(15, 30)
 
 
 def _utc_now() -> datetime:
@@ -55,18 +58,25 @@ def _optional_float(value: Any) -> float | None:
     return float(_number(value))
 
 
-def _volume_baseline(
+def _volume_metrics(
     daily_prices: list[dict[str, Any]],
     current_volume: int,
-    today: date,
-) -> tuple[int | None, float | None]:
-    today_text = today.strftime("%Y%m%d")
+    current_time: datetime,
+) -> tuple[int | None, float | None, VolumeBasis, str | None, int | None]:
+    local_time = current_time.astimezone(_SEOUL)
+    today_text = local_time.strftime("%Y%m%d")
+    is_business_day = any(
+        str(row.get("stck_bsop_date", "")).strip() == today_text
+        for row in daily_prices
+    )
     dated_volumes: list[tuple[str, int]] = []
     for row in daily_prices:
         business_date = str(row.get("stck_bsop_date", "")).strip()
         if len(business_date) != 8 or not business_date.isdigit():
             continue
-        if business_date >= today_text:
+        try:
+            datetime.strptime(business_date, "%Y%m%d")
+        except ValueError:
             continue
         try:
             volume = int(_number(row.get("acml_vol")))
@@ -76,16 +86,31 @@ def _volume_baseline(
             continue
         dated_volumes.append((business_date, volume))
 
-    recent_volumes = [
-        volume
-        for _, volume in sorted(dated_volumes, key=lambda item: item[0], reverse=True)[:20]
-    ]
-    if not recent_volumes:
-        return None, None
+    dated_volumes.sort(key=lambda item: item[0], reverse=True)
+    if is_business_day and _SESSION_OPEN <= local_time.time() < _SESSION_CLOSE:
+        session_open = datetime.combine(local_time.date(), _SESSION_OPEN, tzinfo=_SEOUL)
+        elapsed = (local_time - session_open).total_seconds() / (6.5 * 60 * 60)
+        elapsed = min(max(elapsed, 0.10), 1.0)
+        basis, basis_date = round(current_volume / elapsed), today_text
+        volume_basis: VolumeBasis = "intraday_pace"
+    elif is_business_day and local_time.time() >= _SESSION_CLOSE:
+        basis, basis_date = current_volume, today_text
+        volume_basis = "today_close"
+    else:
+        previous = [(day, volume) for day, volume in dated_volumes if day < today_text]
+        if not previous:
+            return None, None, "last_session", None, None
+        basis_date, basis = previous[0]
+        volume_basis = "last_session"
 
-    average = sum(recent_volumes) // len(recent_volumes)
-    ratio = round(current_volume / average, 2) if average > 0 else None
-    return average, ratio
+    baseline = [
+        volume for day, volume in dated_volumes if day < basis_date
+    ][:20]
+    average = sum(baseline) // len(baseline) if baseline else None
+    ratio = round(basis / average, 2) if average and average > 0 else None
+    projected = basis if volume_basis == "intraday_pace" else None
+    volume_as_of = datetime.strptime(basis_date, "%Y%m%d").date().isoformat()
+    return average, ratio, volume_basis, volume_as_of, projected
 
 
 def map_kis_quote(
@@ -98,11 +123,15 @@ def map_kis_quote(
     collected_at = _iso_utc(current_time)
     sign_code = str(output.get("prdy_vrss_sign", ""))
     current_volume = int(_number(output.get("acml_vol")))
-    average_volume, volume_ratio = _volume_baseline(
-        daily_prices or [],
-        current_volume,
-        current_time.astimezone(ZoneInfo("Asia/Seoul")).date(),
-    )
+    average_volume: int | None = None
+    volume_ratio: float | None = None
+    volume_basis: VolumeBasis | None = None
+    volume_as_of: str | None = None
+    projected_volume: int | None = None
+    if daily_prices is not None:
+        average_volume, volume_ratio, volume_basis, volume_as_of, projected_volume = (
+            _volume_metrics(daily_prices, current_volume, current_time)
+        )
     return {
         "status": "success",
         "company_name": request["company_name"],
@@ -114,6 +143,9 @@ def map_kis_quote(
         "volume_change_rate": _optional_float(output.get("prdy_vrss_vol_rate")),
         "avg_volume_20d": average_volume,
         "volume_ratio_20d": volume_ratio,
+        "volume_basis": volume_basis,
+        "volume_as_of": volume_as_of,
+        "projected_volume": projected_volume,
         "warnings": [],
         "as_of": collected_at,
         "source_name": SOURCE_NAME,
