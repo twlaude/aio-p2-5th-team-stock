@@ -2,6 +2,7 @@ import { useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type Mo
 import { motion, useReducedMotion } from "motion/react";
 
 import type { TopicEvidence } from "../analysis/deriveEvidence";
+import { shortenTopic } from "./shortenTopic";
 import "./result-ambient.css";
 
 /**
@@ -18,6 +19,8 @@ interface ResultAmbientProps {
 
 interface Placed {
   topic: TopicEvidence;
+  label: string;
+  halfW: number;
   x: number;
   y: number;
   scale: number;
@@ -81,65 +84,109 @@ function boundsFor(host: HTMLElement, viewportWidth: number): Bounds | null {
   return { mobile: viewportWidth <= 480, viewportHalf: viewportWidth / 2, hostHalfH: host.offsetHeight / 2, bubble };
 }
 
+/** 칩 실제 폭(반폭) 측정 — 캔버스 measureText. 캔버스 없으면(jsdom) 글자수 근사 */
+function measureHalfWidths(host: HTMLElement, labels: string[], mobile: boolean): number[] {
+  const fontSize = mobile ? 12 : 13;
+  const extra = (mobile ? 20 : 26) + 3; // 좌우 padding + border
+  const ctx = document.createElement("canvas").getContext?.("2d") ?? null;
+  if (!ctx) return labels.map((label) => (label.length * fontSize + extra) / 2);
+  ctx.font = `700 ${fontSize}px ${getComputedStyle(host).fontFamily || "sans-serif"}`;
+  return labels.map((label) => (ctx.measureText(label).width + extra) / 2);
+}
+
+const CHIP_HALF_H = 15;
+const GAP = 12; // 부유 진폭(x≤5, y≤11)까지 감안한 여유
+
+function overlaps(a: { x: number; y: number; halfW: number }, b: { x: number; y: number; halfW: number }) {
+  return Math.abs(a.x - b.x) < a.halfW + b.halfW + GAP && Math.abs(a.y - b.y) < CHIP_HALF_H * 2 + GAP;
+}
+
 /**
  * 링 배치: 캡션·말풍선·재료줄을 한 덩어리로 보고 그 바깥 타원 위에 키워드를 등간격(360°)으로 두른다.
  * 형 지시(2026-09-03): "주변으로 간격 일정하게 360도로 두르게". 아래 중앙(why 버튼) 근처 점은 바깥으로 밀고, 화면이 좁아 옆구리가 안 나오면 그 점은 뺀다.
  * 모바일은 네 귀퉁이만(위 2·아래 2). 랜덤은 부유 리듬에만.
+ * 2026-09-04(오현님): 주제를 shortenTopic으로 축약하고, 칩 실제 폭을 재서 앞 칩과 겹치면 각도 방향으로 바깥으로 민다. 화면 밖까지 밀려야 하면 그 칩은 뺀다.
  */
-function layout(topics: TopicEvidence[], bounds: Bounds, seed: number): Placed[] {
+function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidths: number[], labels: string[]): Placed[] {
   const rand = mulberry32(seed);
   const { bubble, mobile, hostHalfH, viewportHalf } = bounds;
-  const chipHalfW = mobile ? 44 : 54;
-  const chipHalfH = 15;
-  const points: { x: number; y: number }[] = [];
+  const widest = halfWidths.length ? Math.max(...halfWidths) : mobile ? 44 : 54;
+  const slots: { x: number; y: number; angle: number }[] = [];
 
   if (mobile) {
     // 위 2개는 캡션 양옆(차트 안 건드림), 아래 2개는 why 버튼 아래 양옆
-    const xTop = Math.min(bubble.halfW - 30, viewportHalf - chipHalfW - 6);
+    const xTop = Math.min(bubble.halfW - 30, viewportHalf - widest - 6);
     const xBottom = Math.max(60, bubble.halfW - 40);
-    points.push({ x: -xTop, y: -hostHalfH + 16 }, { x: xTop, y: -hostHalfH + 16 }, { x: -xBottom, y: hostHalfH + 98 }, { x: xBottom, y: hostHalfH + 98 });
+    slots.push(
+      { x: -xTop, y: -hostHalfH + 16, angle: Math.PI },
+      { x: xTop, y: -hostHalfH + 16, angle: 0 },
+      { x: -xBottom, y: hostHalfH + 98, angle: Math.PI },
+      { x: xBottom, y: hostHalfH + 98, angle: 0 },
+    );
   } else {
     const count = 12;
-    const rx = Math.min(bubble.halfW + 64, viewportHalf - chipHalfW - 10);
+    const rx = Math.min(bubble.halfW + 64, viewportHalf - widest - 10);
     const ry = hostHalfH + 34;
     const step = (Math.PI * 2) / count;
     for (let i = 0; i < count; i += 1) {
       const angle = -Math.PI / 2 + step / 2 + i * step; // 반 스텝 오프셋: 위·아래 정중앙은 비움
-      let x = Math.cos(angle) * rx;
-      const y = Math.sin(angle) * ry;
-      const bubbleMidY = (bubble.top + bubble.bottom) / 2;
-      const bubbleHalfH = (bubble.bottom - bubble.top) / 2;
-      if (Math.abs(y - bubbleMidY) < bubbleHalfH + chipHalfH) {
-        // 옆구리: 말풍선 테두리 바깥으로. 화면 밖이면 뺀다
-        const needX = bubble.halfW + chipHalfW + 10;
-        if (needX > viewportHalf - 8) continue;
-        x = Math.sign(x) * needX;
-      }
-      if (Math.sin(angle) > 0.85) {
-        // 아래 중앙 근처: why 버튼(반폭 ~90)과 안 겹치게 바깥으로
-        x = Math.sign(x) * Math.max(Math.abs(x), 150 + chipHalfW + 12);
-      }
-      points.push({ x, y });
+      slots.push({ x: Math.cos(angle) * rx, y: Math.sin(angle) * ry, angle });
     }
   }
 
-  const chosen = [...topics].sort((a, b) => b.weight - a.weight).slice(0, points.length);
-  return chosen.map((topic, index) => {
-    const slot = points[index];
+  const order = topics
+    .map((topic, index) => ({ topic, index }))
+    .sort((a, b) => b.topic.weight - a.topic.weight)
+    .slice(0, slots.length);
+
+  const placed: Placed[] = [];
+  order.forEach(({ topic, index: topicIndex }, slotIndex) => {
+    const slot = slots[slotIndex];
+    const halfW = halfWidths[topicIndex] ?? widest;
+    let { x, y } = slot;
+    if (!mobile) {
+      const bubbleMidY = (bubble.top + bubble.bottom) / 2;
+      const bubbleHalfH = (bubble.bottom - bubble.top) / 2;
+      if (Math.abs(y - bubbleMidY) < bubbleHalfH + CHIP_HALF_H) {
+        // 옆구리: 말풍선 테두리 바깥으로. 화면 밖이면 뺀다
+        const needX = bubble.halfW + halfW + 10;
+        if (needX > viewportHalf - 8) return;
+        x = Math.sign(x) * needX;
+      }
+      if (Math.sin(slot.angle) > 0.85) {
+        // 아래 중앙 근처: why 버튼(반폭 ~90)과 안 겹치게 바깥으로
+        x = Math.sign(x) * Math.max(Math.abs(x), 150 + halfW + 12);
+      }
+    }
+    // 충돌 해소: 앞서 놓인 칩과 겹치면 각도 방향으로 바깥으로 민다(최대 8단계). 화면 밖이면 뺀다
+    const dirX = Math.cos(slot.angle);
+    const dirY = Math.sin(slot.angle);
+    let tries = 0;
+    while (placed.some((other) => overlaps({ x, y, halfW }, other))) {
+      if (tries >= 8) return;
+      x += dirX * 22;
+      y += dirY * 12;
+      tries += 1;
+    }
+    if (Math.abs(x) + halfW > viewportHalf - 6) return;
+
     const weight = Math.max(1, Math.min(5, topic.weight));
-    return {
+    placed.push({
       topic,
-      x: slot.x,
-      y: slot.y,
+      label: labels[topicIndex] ?? topic.text,
+      halfW,
+      x,
+      y,
       scale: 0.84 + weight * 0.06,
-      delay: 0.4 + index * 0.045,
+      delay: 0.4 + placed.length * 0.045,
       floatDuration: 4.5 + rand() * 3.5,
       floatDelay: rand() * -6,
       ampX: (rand() > 0.5 ? 1 : -1) * (2 + rand() * 3),
       ampY: (rand() > 0.5 ? 1 : -1) * (6 + rand() * 5),
       rot: (rand() > 0.5 ? 1 : -1) * (1 + rand() * 1.5),
-    };
+    });
   });
+  return placed;
 }
 
 function pushBubbles(host: HTMLElement, event: MouseEvent<HTMLElement> | null) {
@@ -178,7 +225,12 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
   }, []);
 
   const seed = useMemo(() => hashText(topics.map((t) => t.text).join("|")) ^ (runId * 2654435761), [topics, runId]);
-  const placed = useMemo(() => (bounds && topics.length ? layout(topics, bounds, seed) : []), [bounds, topics, seed]);
+  const labels = useMemo(() => topics.map((t) => shortenTopic(t.text)), [topics]);
+  const placed = useMemo(() => {
+    if (!bounds || !topics.length || !hostRef.current) return [];
+    const halfWidths = measureHalfWidths(hostRef.current, labels, bounds.mobile);
+    return layout(topics, bounds, seed, halfWidths, labels);
+  }, [bounds, topics, seed, labels]);
   const canHover = typeof window !== "undefined" && window.matchMedia?.("(hover: hover) and (pointer: fine)").matches;
 
   return (
@@ -215,7 +267,7 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
                   } as CSSProperties
                 }
               >
-                {item.topic.text}
+                {item.label}
               </span>
             </motion.span>
           ))}
