@@ -1,5 +1,3 @@
-from urllib.parse import urlsplit
-
 from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -39,6 +37,11 @@ class Settings(BaseSettings):
     admin_username: str = "admin"
     admin_password: str = "change-me"
 
+    # 실황 페이지의 MCP Inspector 바로가기 링크에만 쓴다. mcp_client_url의 호스트는
+    # "백엔드가 내부적으로 mcp_client에 접속하는 주소"라서(같은 서버면 localhost) 브라우저용
+    # 링크에는 못 쓴다 — 브라우저가 실제로 접속할 수 있는 주소를 여기 명시로 넣는다.
+    mcp_public_host: str = "localhost"
+
     @field_validator("jwt_secret_key", mode="before")
     @classmethod
     def _jwt_secret_not_empty(cls, value: str) -> str:
@@ -51,9 +54,8 @@ class Settings(BaseSettings):
 
     @property
     def mcp_server_urls(self) -> dict[str, str]:
-        """mcp_client_url과 같은 호스트에서 확정 포트로 뜨는 4개 MCP 서버 주소(디버그용)."""
-        host = urlsplit(self.mcp_client_url).hostname or "localhost"
-        return {name: f"http://{host}:{port}/mcp" for name, port in _MCP_SERVER_PORTS.items()}
+        """MCP_PUBLIC_HOST에서 확정 포트로 뜨는 4개 MCP 서버 주소(브라우저 디버그용)."""
+        return {name: f"http://{self.mcp_public_host}:{port}/mcp" for name, port in _MCP_SERVER_PORTS.items()}
 
 
 settings = Settings()
