@@ -1,0 +1,24 @@
+.why-button-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 8px; }
+.why-button {
+  position: relative; display: inline-flex; align-items: center; gap: 10px; min-height: 60px; padding: 0 34px 0 28px;
+  border: 0; border-radius: var(--r-pill); background: var(--c-ink); color: var(--c-white);
+  font: inherit; font-size: 18px; font-weight: 800; letter-spacing: -0.01em; cursor: pointer;
+  box-shadow: 0 12px 28px rgba(21, 31, 25, 0.22), 0 0 0 6px rgba(252, 253, 251, 0.9);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.why-button svg { color: var(--c-primary); }
+.why-button::after { position: absolute; inset: 0; border: 1px solid var(--c-ink); border-radius: inherit; content: ""; animation: why-ring 2.4s ease-out infinite; }
+.why-button:hover { transform: scale(1.03); box-shadow: 0 16px 32px rgba(21, 31, 25, 0.26), 0 0 0 6px rgba(252, 253, 251, 0.9); }
+.why-button:active { transform: scale(0.97); }
+.why-button:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
+.why-button-wrap__chevron { color: var(--c-ink); animation: why-nudge 1.4s ease-in-out infinite; }
+@keyframes why-ring { 0% { opacity: 0.35; transform: scale(1); } 100% { opacity: 0; transform: scale(1.35); } }
+@keyframes why-nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .why-button, .why-button::after, .why-button-wrap__chevron { animation: none; transition: opacity 180ms ease; }
+}
+
+@media (max-width: 480px) {
+  .why-button { min-height: 54px; padding: 0 24px 0 20px; font-size: 16px; }
+}

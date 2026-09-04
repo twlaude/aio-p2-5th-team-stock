@@ -70,7 +70,7 @@ archive/        현재 실행하지 않는 이전 코드
 | Frontend | 최소 Streamlit 화면만 구현 |
 | MCP Client | 구조와 계약만 확정 |
 | Price·News·Disclosure MCP | 구조와 계약만 확정 |
-| PostgreSQL·Redis | `infra/compose.yaml`과 DB 초기화 SQL 준비 완료 |
+| PostgreSQL·Redis | `infra/docker-compose.yml`과 DB 초기화 SQL 준비 완료 |
 | 서비스 Docker | Frontend·Backend·Community MCP만 준비 완료 |
 
 ## 보안 원칙

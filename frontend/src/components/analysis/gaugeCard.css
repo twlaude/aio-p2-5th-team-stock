@@ -1,0 +1,22 @@
+.analysis-gauge-card { display: flex; flex-direction: column; gap: 14px; min-width: 0; padding: 28px; border: 1px solid var(--c-line); border-radius: var(--r-lg); background: var(--c-white); box-shadow: var(--shadow-card); }
+.analysis-gauge-card__caption { color: var(--c-sub); font-size: 14px; }
+.analysis-gauge-card__headline { display: flex; align-items: baseline; gap: 10px; }
+.analysis-gauge-card__number { color: var(--c-ink); font-size: 56px; font-weight: 700; letter-spacing: 0; line-height: 1; }
+.analysis-gauge-card__label { color: var(--c-primary); font-size: 16px; font-weight: 700; }
+.analysis-gauge-card__track, .analysis-gauge-card__segments { height: 8px; }
+.analysis-gauge-card__track { overflow: hidden; border-radius: var(--r-pill); background: #f4eeea; }
+.analysis-gauge-card__fill { width: 0; height: 8px; border-radius: var(--r-pill); background: var(--c-primary); }
+.analysis-gauge-card--visible .analysis-gauge-card__fill { width: var(--gauge-width); transition: width 900ms ease-out; }
+.analysis-gauge-card__segments { display: flex; gap: 6px; }
+.analysis-gauge-card__segment { flex: 1; border-radius: var(--r-pill); background: #f4eeea; }
+.analysis-gauge-card__segment--filled { background: #f4eeea; }
+.analysis-gauge-card--visible .analysis-gauge-card__segment--filled { background: var(--c-primary); transition: background-color 220ms ease-out var(--segment-delay); }
+.analysis-gauge-card__description { color: var(--c-mute); font-size: 13px; line-height: 1.45; }
+
+@media (max-width: 480px) {
+  .analysis-gauge-card__number { font-size: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .analysis-gauge-card__fill, .analysis-gauge-card--visible .analysis-gauge-card__fill, .analysis-gauge-card--visible .analysis-gauge-card__segment--filled { transition: none; }
+}

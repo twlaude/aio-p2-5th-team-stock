@@ -1,3 +1,3 @@
 # Workflows
 
-입력 검증, 필수 MCP 조회, Agent 실행, 근거·응답 검증과 반환 순서를 통제하는 결정적 Workflow가 들어갈 위치다.
+`analysis.py`가 기본 MCP 조회, 점수 계산, Agent 실행, 응답 검증과 반환 순서를 통제한다. `factory.py`는 실제 Client와 Provider를 조립한다.

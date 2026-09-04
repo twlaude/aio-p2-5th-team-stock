@@ -2,9 +2,11 @@ fastapi
 uvicorn[standard]
 pydantic
 pydantic-settings
-psycopg[binary]
+psycopg2-binary
 pgvector
-redis
 openai
 httpx
 python-dotenv
+pytest
+pyjwt
+redis

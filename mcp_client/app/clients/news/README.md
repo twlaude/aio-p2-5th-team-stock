@@ -1,3 +1,3 @@
 # News MCP Client
 
-News MCP의 Tool을 발견하고 Streamable HTTP로 호출하는 연결 코드가 들어갈 위치다.
+`client.py`가 Streamable HTTP로 News MCP의 `search_news`를 호출한다.

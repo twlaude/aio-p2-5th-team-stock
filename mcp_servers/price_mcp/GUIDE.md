@@ -1,56 +1,62 @@
-# 주가 MCP 서버 가이드
+# Price MCP 가이드
 
 ## 역할
 
-Price MCP는 주가와 등락 정보를 제공하는 독립 Tool 서버다. MCP Client가 공공데이터 API를 직접 호출하지 않도록 가격 데이터의 수집·정제·캐시를 전담한다.
-
-## 데이터 제공처
-
-- 공공데이터포털 금융위원회 주식시세정보 API
-- 필요한 환경변수: `DATA_GO_KR_SERVICE_KEY`
-- 기본 캐시: 종목별 1분
-
-## 환경변수 계획
+Price MCP는 한국투자증권 실전투자 REST API에서 검색 종목의 현재 가격을 조회하고 공통 Schema로 변환하는 독립 Tool 서버다.
 
 ```text
-DATA_GO_KR_SERVICE_KEY
-PRICE_MCP_HOST=0.0.0.0
-PRICE_MCP_PORT=8020
-PRICE_CACHE_TTL_SECONDS=60
+MCP Client -> get_stock_quote -> Price MCP -> 한국투자증권 Open API
 ```
 
-## 확정 Tool
+Price MCP는 시장 관심도, 투자 판단, 종합 분석을 만들지 않는다. 사용자 정보와 투자 성향도 받지 않는다.
+
+## 제공 Tool
 
 ```text
-get_stock_quote
-get_price_activity_snapshot
+get_stock_quote(company_name, stock_code)
 ```
 
-- `get_stock_quote`: 한 종목의 현재가, 대비, 등락률과 기준 시각을 반환한다.
-- `get_price_activity_snapshot`: 지원 기업 20개의 절대 등락 활동을 반환하여 시장 관심 온도 계산에 사용한다.
+- `company_name`: Backend에서 검증한 정식 기업명
+- `stock_code`: 6자리 종목 코드
+- 반환값: 현재가, 전일 대비, 등락률, 가격 기준 시각과 출처
 
-정확한 입출력 JSON은 `shared/contracts/price/README.md`를 따른다.
+## 실행 환경
 
-## 목표 구조
+```powershell
+Copy-Item .env.example .env
+python -m pip install -r requirements.txt
+python server.py
+```
+
+실제 `KIS_APP_KEY`, `KIS_APP_SECRET`은 `.env`에만 입력하고 Git에 올리지 않는다.
 
 ```text
-price_mcp/
-├─ server.py       # 진입점 (FastMCP 생성 + Tool 등록)
-├─ app/
-│  ├─ tools/       # MCP Tool
-│  ├─ services/    # 가격 정규화·활동도 계산·캐시
-│  ├─ clients/     # 공공데이터 API 연결
-│  ├─ schemas/     # Tool 입출력
-│  └─ core/        # 설정·로그
-├─ tests/
-├─ .env.example
-├─ requirements.txt
-└─ GUIDE.md
+MCP: http://localhost:8020/mcp
+Health: http://localhost:8020/health
 ```
 
-## 하지 않는 일
+## 처리 순서
 
-- 뉴스·공시·커뮤니티 조회
-- 사용자 로그인과 투자 성향 처리
-- 매수·매도 판단
-- 종합 분석 문장 생성
+1. Tool이 기업명과 6자리 종목 코드를 검증한다.
+2. Service가 종목별 60초 캐시를 확인한다.
+3. Client가 저장된 접근 토큰을 확인하고 필요할 때만 재발급한다.
+4. 한국투자증권 `주식현재가 시세` API를 호출한다.
+5. 원본 응답을 팀 공통 Price Schema로 변환한다.
+6. 인증, 시간 초과, 외부 장애를 구조화한 상태로 반환한다.
+
+런타임 Mock Data와 Mock 모드는 제공하지 않는다. 단위 테스트에서만 외부 HTTP 응답을 가상화한다.
+
+## Docker
+
+```powershell
+docker build -t stock-price-mcp .
+docker run --env-file .env -p 8020:8020 stock-price-mcp
+```
+
+## 완료 확인
+
+```powershell
+pytest
+```
+
+마지막 실제 연동은 삼성전자 `005930`으로 확인한다. 로그와 오류 응답에는 App Key, App Secret, 접근 토큰을 남기지 않는다.

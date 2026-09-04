@@ -1,0 +1,447 @@
+{
+  "guest": {
+    "status": "success",
+    "access_level": "guest",
+    "requires_login": true,
+    "company": {
+      "company_name": "삼성전자",
+      "stock_code": "005930",
+      "supported": true
+    },
+    "price": {
+      "current_price": 78500,
+      "change": 2450,
+      "change_rate": 3.2,
+      "as_of": "2026-09-01T06:30:00Z"
+    },
+    "one_line_summary": "관심은 뜨겁지만, 공식적으로 확인된 재료는 조금 더 살펴봐야 해요.",
+    "detail": null,
+    "personalized_checkpoints": null,
+    "topics_preview": [
+      {
+        "text": "AI 메모리",
+        "sentiment": "positive",
+        "weight": 5
+      },
+      {
+        "text": "HBM 수요",
+        "sentiment": "positive",
+        "weight": 5
+      },
+      {
+        "text": "외국인 수급",
+        "sentiment": "positive",
+        "weight": 4
+      },
+      {
+        "text": "실적 발표",
+        "sentiment": "neutral",
+        "weight": 4
+      },
+      {
+        "text": "파운드리 마진",
+        "sentiment": "negative",
+        "weight": 4
+      },
+      {
+        "text": "단기 과열",
+        "sentiment": "negative",
+        "weight": 3
+      },
+      {
+        "text": "배당 기대",
+        "sentiment": "positive",
+        "weight": 3
+      },
+      {
+        "text": "환율 영향",
+        "sentiment": "neutral",
+        "weight": 2
+      },
+      {
+        "text": "차익 실현",
+        "sentiment": "negative",
+        "weight": 2
+      },
+      {
+        "text": "설비 투자",
+        "sentiment": "neutral",
+        "weight": 3
+      },
+      {
+        "text": "업황 회복",
+        "sentiment": "positive",
+        "weight": 4
+      },
+      {
+        "text": "밸류에이션 부담",
+        "sentiment": "negative",
+        "weight": 3
+      }
+    ]
+  },
+  "member_detail": {
+    "market_temperature": {
+      "score": 82,
+      "label": "뜨거움",
+      "data_coverage": [
+        "price",
+        "news",
+        "disclosure",
+        "community"
+      ]
+    },
+    "evidence_level": {
+      "level": "medium",
+      "reason": "최근 공시에서 메모리 투자 지속은 확인됐지만, 파운드리 수익성은 아직 확인되지 않았어요."
+    },
+    "news_summary": "반도체 업황 회복과 AI 메모리 수요가 뉴스 흐름의 중심이에요.",
+    "disclosure_summary": "시설 투자와 실적 전망 관련 공시를 함께 확인해야 해요.",
+    "community_summary": "커뮤니티는 기대와 단기 변동 우려가 섞인 시장 반응으로 보여요.",
+    "sources": [
+      {
+        "type": "news",
+        "title": "삼성전자 AI 메모리 공급 확대 보도",
+        "publisher": "Mock News",
+        "published_at": "2026-09-01T01:30:00Z",
+        "url": "https://example.com/samsung-news-1",
+        "meta": {
+          "issue_count": 3
+        }
+      },
+      {
+        "type": "news",
+        "title": "반도체 업황 회복 기대 분석",
+        "publisher": "Mock Market",
+        "published_at": "2026-08-31T05:20:00Z",
+        "url": "https://example.com/samsung-news-2"
+      },
+      {
+        "type": "news",
+        "title": "HBM 수요 증가가 메모리 가격에 미치는 영향",
+        "publisher": "Mock Economy",
+        "published_at": "2026-08-31T02:10:00Z",
+        "url": "https://example.com/samsung-news-3"
+      },
+      {
+        "type": "news",
+        "title": "외국인 수급 반등과 대형 반도체주 흐름",
+        "publisher": "Mock Securities",
+        "published_at": "2026-08-30T07:40:00Z",
+        "url": "https://example.com/samsung-news-4"
+      },
+      {
+        "type": "news",
+        "title": "파운드리 회복 속도는 아직 확인 필요",
+        "publisher": "Mock Tech",
+        "published_at": "2026-08-30T03:15:00Z",
+        "url": "https://example.com/samsung-news-5",
+        "meta": {
+          "issue_count": 2
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 반기보고서 주요 재무 지표",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-29T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-1",
+        "meta": {
+          "receipt_no": "20260829000123",
+          "confirmed": [
+            "메모리 설비 투자 지속",
+            "반기보고서 재무 지표 제출",
+            "현금성 자산 규모"
+          ],
+          "unconfirmed": [
+            "파운드리 수익성 회복 시점",
+            "AI 메모리 단가 지속성",
+            "단기 주가 촉매"
+          ]
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 주요사항보고서 시설투자 진행",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-20T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-2",
+        "meta": {
+          "receipt_no": "20260820000456"
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 기업설명회 자료",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-14T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-3",
+        "meta": {
+          "receipt_no": "20260814000789"
+        }
+      },
+      {
+        "type": "community",
+        "title": "삼성전자 커뮤니티 시장 반응 표본",
+        "publisher": "Mock Community",
+        "published_at": "2026-09-01T04:00:00Z",
+        "meta": {
+          "samples": 480,
+          "positive": 52,
+          "neutral": 31,
+          "negative": 17,
+          "fgi": 68,
+          "topics": [
+            {
+              "text": "AI 메모리",
+              "sentiment": "positive",
+              "weight": 5
+            },
+            {
+              "text": "HBM 수요",
+              "sentiment": "positive",
+              "weight": 5
+            },
+            {
+              "text": "외국인 수급",
+              "sentiment": "positive",
+              "weight": 4
+            },
+            {
+              "text": "실적 발표",
+              "sentiment": "neutral",
+              "weight": 4
+            },
+            {
+              "text": "파운드리 마진",
+              "sentiment": "negative",
+              "weight": 3
+            },
+            {
+              "text": "단기 과열",
+              "sentiment": "negative",
+              "weight": 3
+            },
+            {
+              "text": "배당 기대",
+              "sentiment": "positive",
+              "weight": 2
+            },
+            {
+              "text": "환율 영향",
+              "sentiment": "neutral",
+              "weight": 2
+            },
+            {
+              "text": "재고 조정",
+              "sentiment": "neutral",
+              "weight": 3
+            },
+            {
+              "text": "목표가 상향",
+              "sentiment": "positive",
+              "weight": 4
+            },
+            {
+              "text": "차익 실현",
+              "sentiment": "negative",
+              "weight": 2
+            },
+            {
+              "text": "업황 사이클",
+              "sentiment": "neutral",
+              "weight": 3
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "member_profiles": {
+    "conservative-long": {
+      "personal_summary": "천천히 오래 들고 가는 편이면, 지금은 사람들 기대보다 회사가 실제로 돈을 잘 벌고 있는지부터 보면 돼요.",
+      "priority_checks": [
+        "다음 실적 발표 날짜와 결과",
+        "공시로 확인된 계약이 있는지",
+        "배당이 줄어들 조짐은 없는지"
+      ],
+      "caution": "기대가 높을 땐 급하게 따라 사지 않아도 괜찮아요. 확인하고 들어가도 늦지 않아요."
+    },
+    "conservative-medium": {
+      "personal_summary": "몇 달 보고 가는 편이면, 기사 분위기보다 분기 실적이 좋아지고 있는지가 더 중요해요.",
+      "priority_checks": [
+        "이번 분기 실적이 지난 분기보다 나아졌는지",
+        "공시에 나온 투자 계획이 실제로 진행 중인지",
+        "가격이 너무 빨리 올라온 건 아닌지"
+      ],
+      "caution": "뉴스만 많고 숫자로 확인 안 된 건 아직 '기대'예요. 반대로 갈 수도 있어요."
+    },
+    "conservative-short": {
+      "personal_summary": "짧게 보고 가되 조심하는 편이면, 오늘 왜 올랐는지 이유가 확인된 것인지부터 보세요.",
+      "priority_checks": [
+        "오른 이유가 공시나 실적인지, 기사뿐인지",
+        "하루 오르내림 폭이 견딜 만한지",
+        "어디까지 떨어지면 정리할지 미리 정하기"
+      ],
+      "caution": "이유가 기사뿐이면 금방 식을 수 있어요. 손실 한도를 먼저 정해두세요."
+    },
+    "balanced-long": {
+      "personal_summary": "오래 보되 적당히 움직이는 편이면, 지금 관심이 뜨거운 이유가 오래 갈 재료인지 따져보면 돼요.",
+      "priority_checks": [
+        "업황이 실제로 좋아지고 있는지",
+        "가격이 이미 많이 오른 건 아닌지",
+        "공시로 확인된 성장 계획"
+      ],
+      "caution": "관심이 뜨거울 때 사면 이미 비싼 경우가 많아요. 나눠서 보는 것도 방법이에요."
+    },
+    "balanced-medium": {
+      "personal_summary": "몇 달 단위로 보는 편이면, 뉴스 흐름과 공시 숫자를 같이 놓고 보면 돼요.",
+      "priority_checks": [
+        "뉴스에서 반복되는 주제가 뭔지",
+        "그 주제가 공시에 숫자로 나왔는지",
+        "커뮤니티 분위기가 과열됐는지"
+      ],
+      "caution": "뉴스와 커뮤니티가 같이 뜨거우면 한 박자 쉬어가도 돼요."
+    },
+    "balanced-short": {
+      "personal_summary": "짧게 보는 편이면, 지금 사람들이 몰리는 이유와 거래량을 같이 보세요.",
+      "priority_checks": [
+        "거래량이 평소보다 얼마나 늘었는지",
+        "커뮤니티 기대가 근거 있는지",
+        "오늘 뉴스가 새 소식인지 반복인지"
+      ],
+      "caution": "몰릴 때 들어가면 빠질 때도 빨라요. 나갈 기준을 먼저 정하세요."
+    },
+    "aggressive-long": {
+      "personal_summary": "공격적으로 오래 가는 편이면, 성장 이야기가 실제 숫자로 이어지는지 계속 확인하면 돼요.",
+      "priority_checks": [
+        "매출이 실제로 늘고 있는지",
+        "새 사업 공시가 있는지",
+        "경쟁사보다 나은 점이 뭔지"
+      ],
+      "caution": "이야기가 좋아도 숫자가 안 따라오면 오래 못 가요."
+    },
+    "aggressive-medium": {
+      "personal_summary": "공격적으로 몇 달 보는 편이면, 지금 재료가 실적 발표 때 숫자로 나올지가 핵심이에요.",
+      "priority_checks": [
+        "다음 실적 발표 날짜",
+        "기사에 나온 계약이 공시됐는지",
+        "가격이 기대를 얼마나 미리 반영했는지"
+      ],
+      "caution": "기대가 너무 앞서가면 좋은 발표에도 떨어질 수 있어요."
+    },
+    "aggressive-short": {
+      "personal_summary": "짧고 공격적으로 가는 편이면, 속도보다 어디서 되돌아설지 기준을 먼저 정하는 게 중요해요.",
+      "priority_checks": [
+        "오늘 오른 이유가 확인된 건지",
+        "거래량과 커뮤니티 과열 정도",
+        "되돌림이 오면 어디서 나갈지"
+      ],
+      "caution": "뉴스만으로 오른 종목은 되돌림이 빨라요. 욕심보다 기준이 먼저예요."
+    }
+  },
+  "partial_detail": {
+    "market_temperature": {
+      "score": 70,
+      "label": "일부 확인",
+      "data_coverage": [
+        "price",
+        "news",
+        "disclosure"
+      ]
+    },
+    "evidence_level": {
+      "level": "medium",
+      "reason": "커뮤니티 데이터를 제외하고 뉴스와 공시만 확인했어요."
+    },
+    "news_summary": "AI 반도체 기대와 업황 회복 뉴스는 확인돼요.",
+    "disclosure_summary": "공시에서는 설비 투자와 재무 지표를 함께 봐야 해요.",
+    "community_summary": null,
+    "sources": [
+      {
+        "type": "news",
+        "title": "삼성전자 AI 메모리 공급 확대 보도",
+        "publisher": "Mock News",
+        "published_at": "2026-09-01T01:30:00Z",
+        "url": "https://example.com/samsung-news-1",
+        "meta": {
+          "issue_count": 3
+        }
+      },
+      {
+        "type": "news",
+        "title": "반도체 업황 회복 기대 분석",
+        "publisher": "Mock Market",
+        "published_at": "2026-08-31T05:20:00Z",
+        "url": "https://example.com/samsung-news-2"
+      },
+      {
+        "type": "news",
+        "title": "HBM 수요 증가가 메모리 가격에 미치는 영향",
+        "publisher": "Mock Economy",
+        "published_at": "2026-08-31T02:10:00Z",
+        "url": "https://example.com/samsung-news-3"
+      },
+      {
+        "type": "news",
+        "title": "외국인 수급 반등과 대형 반도체주 흐름",
+        "publisher": "Mock Securities",
+        "published_at": "2026-08-30T07:40:00Z",
+        "url": "https://example.com/samsung-news-4"
+      },
+      {
+        "type": "news",
+        "title": "파운드리 회복 속도는 아직 확인 필요",
+        "publisher": "Mock Tech",
+        "published_at": "2026-08-30T03:15:00Z",
+        "url": "https://example.com/samsung-news-5",
+        "meta": {
+          "issue_count": 2
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 반기보고서 주요 재무 지표",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-29T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-1",
+        "meta": {
+          "receipt_no": "20260829000123",
+          "confirmed": [
+            "메모리 설비 투자 지속",
+            "반기보고서 재무 지표 제출",
+            "현금성 자산 규모"
+          ],
+          "unconfirmed": [
+            "파운드리 수익성 회복 시점",
+            "AI 메모리 단가 지속성",
+            "단기 주가 촉매"
+          ]
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 주요사항보고서 시설투자 진행",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-20T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-2",
+        "meta": {
+          "receipt_no": "20260820000456"
+        }
+      },
+      {
+        "type": "disclosure",
+        "title": "삼성전자 기업설명회 자료",
+        "publisher": "Mock DART",
+        "published_at": "2026-08-14T08:00:00Z",
+        "url": "https://example.com/samsung-disclosure-3",
+        "meta": {
+          "receipt_no": "20260814000789"
+        }
+      }
+    ]
+  },
+  "error": {
+    "message": "일시적으로 분석 데이터를 가져오지 못했어요."
+  }
+}

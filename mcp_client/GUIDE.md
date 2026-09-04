@@ -1,183 +1,136 @@
 # MCP Client 통합 서버 가이드
 
-## 확정된 역할
+## 역할
 
-MCP Client는 Backend와 분리된 독립 서버다. 내부에서는 Price·News·Disclosure·Community 네 MCP 서버의 Client로 동작하고, 외부에서는 Backend가 호출하는 통합 API 서버로 동작한다.
-
-하나의 Stock Analysis Agent, 이를 실행하는 Runtime, 전체 안전 순서를 통제하는 Workflow를 포함한다.
-
-MCP Client는 관리자이자 연결 통로다. 공공데이터·NAVER·DART·커뮤니티 원본 API를 직접 호출하지 않고 반드시 담당 MCP Tool을 통해 데이터를 받는다.
-
-## 목표 구조
+MCP Client는 Backend가 호출하는 독립 FastAPI 서버이면서 Price·News·Disclosure·Community MCP의 통합 Client다.
 
 ```text
-mcp_client/
-├─ app/
-│  ├─ api/                  # Backend가 호출하는 HTTP API
-│  ├─ workflows/            # 입력 검증·필수 조회·검증·반환 순서
-│  ├─ agents/               # Goal·Instructions·Allowed Tools
-│  ├─ runtime/              # Agent Loop·State·종료·Trace
-│  ├─ clients/              # 네 MCP 서버의 Streamable HTTP Client
-│  │  ├─ price/
-│  │  ├─ news/
-│  │  ├─ disclosure/
-│  │  └─ community/
-│  ├─ services/
-│  │  ├─ company_resolver/
-│  │  ├─ data_collector/
-│  │  └─ analysis_builder/
-│  ├─ providers/            # LLM Provider
-│  ├─ schemas/              # 요청·응답·State 규격
-│  ├─ prompts/              # 공통 분석 지침
-│  ├─ core/                 # 설정·로그·타임아웃
-│  └─ main.py
-├─ tests/
-├─ .env.example
-├─ requirements.txt
-└─ GUIDE.md
+Backend
+  → MCP Client Workflow
+      ├─ Price MCP
+      ├─ News MCP
+      ├─ Disclosure MCP
+      └─ Community MCP
+  → 규칙 기반 관심 온도·근거 수준 계산
+  → Luna Agent 설명
+  → Backend
 ```
 
-## Workflow와 Agent
+지원 기업 20개 확인, 로그인, 투자 성향 저장은 Backend가 담당한다. MCP Client는 원본 증권·뉴스·DART·커뮤니티 API를 직접 호출하지 않는다.
 
-### Workflow가 담당
+## 실행 흐름
+
+1. `POST /internal/v1/common-analyses` 요청을 검증한다.
+2. 현재가, 최근 뉴스, 최근 공시, 최신 사업보고서, 커뮤니티 반응을 병렬 조회한다.
+3. 실패한 Tool은 기록하고 성공한 자료는 유지한다. 현재가 실패는 Backend가 처리할 수 있도록 요청 자체를 실패시킨다.
+4. Python 규칙이 0~100 관심 온도와 근거 수준을 계산한다.
+5. Luna Agent가 최근 공시 상세를 더 볼지 판단한다.
+6. Runtime은 허용된 Tool과 기본 목록에 포함된 접수번호인지 검증한다.
+7. Luna가 추천 없이 한 줄 평과 세 자료 요약을 JSON Schema로 반환한다.
+8. 회원이면 Backend가 보낸 투자 성향으로 확인 순서를 추가한다.
+
+## 기본 조회
 
 ```text
-Backend 요청 검증
-→ 회사명·종목 코드 확인
-→ 네 MCP의 기본 Tool 병렬 호출
-→ 기본 결과를 Agent State에 입력
-→ Agent Runtime 실행
-→ 출처·응답 Schema 검증
-→ Backend 반환
+get_stock_quote
+search_news                 최근 7일, 최대 10건
+get_recent_disclosures      최근 30일, 최대 20건
+search_annual_report        고정 검색문, 최대 5개 구절
+get_community_reaction      최근 7일, 최대 100개 표본
 ```
 
-### Agent가 담당
+Community 기본 응답에 `fgi_latest`가 포함되므로 `get_fear_greed_index`를 중복 호출하지 않는다.
 
-- 기본 결과가 충분한지 판단
-- 필요한 상세 Tool 선택
-- Tool Result를 보고 추가 조회 또는 종료 선택
-- 근거의 일치·충돌 설명
-- 추천 없이 공통 분석 작성
+## Agent 경계
 
-MCP 서버가 네 개여도 Agent는 하나다. 각 MCP는 Tool 제공 서버이며 독립적인 판단 주체가 아니다.
+기본 조회는 AI가 아니라 Workflow가 항상 실행한다. Agent에 허용된 추가 Tool은 읽기 전용 `get_disclosure_detail` 하나다.
 
-## Agent Runtime 필수 기능
+- 기본 최근 공시 결과에 포함된 접수번호만 허용
+- 동일 접수번호 반복 호출 차단
+- 상세 공시 최대 2건
+- Agent 최대 3단계
+- 매수·매도·가격 방향 예측 금지
+- 내부 추론, Prompt, API Key를 Trace에 저장하지 않음
 
-- Tool discovery
-- Agent별 Tool Allowlist
-- arguments JSON Object 검증
-- MCP Tool 실행
-- Tool Result를 Model에 재전달
-- 최대 반복 단계
-- 구조화된 `termination_reason`
-- Model·Tool 호출 Trace
-- 오류 정보에서 비밀값 제거
+조회 Tool뿐이므로 Human Approval은 요구하지 않는다. 추후 저장·전송·주문 Tool이 생기면 별도 승인 정책을 추가한다.
 
-## 확정 입출력 계약
-
-Backend 연결 주소와 전체 JSON은 `shared/contracts/analysis/README.md`를 따른다.
-
-입력 핵심 필드:
+## 관심 온도 임시 기준
 
 ```text
-request_id
-company_name
-stock_code
-question
-requested_at
+가격 변동 크기       20점
+뉴스 언급량          25점
+커뮤니티 활동량      20점
+공포·탐욕 강도       20점
+최근 공시·보고서     15점
 ```
-
-출력 핵심 필드:
 
 ```text
-run_id
-status
-termination_reason
-company
-collected_at
-market_temperature
-evidence_level
-one_line_summary
-news_summary
-disclosure_summary
-community_summary
-evidence
-sources
-partial_failures
-trace_summary
+0~19    관심 낮음
+20~39   관심 다소 낮음
+40~59   보통
+60~79   관심 높음
+80~100  관심 매우 높음
 ```
 
-필드 이름과 자료형을 임의로 바꾸지 않는다. 변경이 필요하면 `shared` 계약을 먼저 수정한다.
+이 계산은 수익률이나 상승 가능성을 의미하지 않는다. 팀 논의 후 `app/services/analysis_builder/scoring.py`의 상수와 구간만 바꿀 수 있다.
 
-## 일부 서버 실패
+## Backend 요청
+
+```json
+{
+  "request_id": "uuid",
+  "company": {"company_name": "삼성전자", "stock_code": "005930"},
+  "investment_profile": null,
+  "requested_at": "2026-09-04T00:00:00Z"
+}
+```
+
+자유 질문형 서비스가 아니므로 `question`, `date_range`는 받지 않는다.
+
+## 진행 이벤트
+
+`BACKEND_EVENT_URL`이 설정되면 Workflow 진행 메타데이터를 Backend에 전달한다. 설정되지 않으면 분석은 그대로 실행되며 이벤트는 외부로 전송하지 않는다.
 
 ```text
-가격: 성공
-뉴스: 성공
-전자공시: 성공
-커뮤니티: 실패
+workflow_started
+collection_started
+tool_started
+tool_completed
+tool_failed
+llm_started
+llm_completed
+workflow_completed
+workflow_failed
 ```
 
-이 경우 확인된 뉴스와 공시는 유지하되 `partial_completed`와 제한사항을 반환한다. 실패한 데이터를 Model이 추측으로 채우게 하지 않는다.
+MCP 원문과 사용자 개인정보는 이벤트로 보내지 않는다. Backend의 이벤트 API와 Redis 저장 규격은 기화님·태웅님 협의 후 URL만 연결한다.
 
-## 환경변수 계획
+## 실행
+
+```powershell
+Copy-Item .env.example .env
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe server.py
+```
 
 ```text
-MCP_CLIENT_HOST=0.0.0.0
-MCP_CLIENT_PORT=8010
-
-PRICE_MCP_URL=http://localhost:8020/mcp
-NEWS_MCP_URL=http://localhost:8021/mcp
-DISCLOSURE_MCP_URL=http://localhost:8022/mcp
-COMMUNITY_MCP_URL=http://localhost:8023/mcp
-MCP_REQUEST_TIMEOUT_SECONDS=15
-
-LLM_PROVIDER
-OPENAI_API_KEY
-OPENAI_MODEL=gpt-5.6-luna
-OPENAI_REASONING_EFFORT=low
-MAX_AGENT_STEPS=3
-WORKFLOW_TIMEOUT_SECONDS=60
+API:    http://localhost:8010/internal/v1/common-analyses
+Health: http://localhost:8010/health
+Status: http://localhost:8010/internal/v1/mcp-status
 ```
 
-## 확정 LLM과 토큰 절감 규칙
+`LLM_PROVIDER=mock`은 OpenAI 비용 없이 서버 연결과 화면 규격을 확인할 때만 사용한다. 실제 발표 연동은 `LLM_PROVIDER=openai`와 `OPENAI_API_KEY`를 사용한다.
 
-공통 종목 분석은 OpenAI의 `gpt-5.6-luna`를 사용한다. 발표용 MVP는 구현 확인이 목적이므로 처음부터 더 비싼 모델을 섞지 않고 Luna 하나로 통일한다.
+## Docker
 
-담당자는 다음 규칙을 지킨다.
+```powershell
+docker build -t stock-mcp-client .
+docker run --env-file .env -p 8010:8010 stock-mcp-client
+```
 
-1. 뉴스는 중복을 제거한 뒤 핵심 기사 최대 5건만 LLM에 전달한다.
-2. 기업보고서는 질문과 관련된 검색 결과 3~5개 조각만 전달하고 보고서 전체를 넣지 않는다.
-3. 커뮤니티 게시글 원문 최대 100개를 그대로 전달하지 않는다. Community MCP가 만든 반응 비율, 주요 기대·우려 주제, 대표 근거만 전달한다.
-4. 매 호출마다 네 MCP의 원본 응답 전체를 넣지 않고 공통 Schema에 맞게 필요한 필드만 추린다.
-5. LLM 출력은 자유로운 장문이 아니라 정해진 JSON Schema와 짧은 길이 제한을 사용한다.
-6. 동일 종목의 공통 분석은 데이터 기준 시각과 함께 캐시하여 같은 자료로 반복 생성하지 않는다.
-7. Agent 반복 횟수는 `MAX_AGENT_STEPS=3`으로 제한한다.
-8. 요청별 입력·출력·추론 토큰 사용량을 기록하여 발표 준비 중 비정상적으로 큰 호출을 찾는다.
-9. 출처가 부족한 경우 추가 호출을 무한 반복하지 않고 `no_data` 또는 `partial_completed`로 종료한다.
+## 테스트
 
-OpenAI API Key는 `.env`에만 저장하고 Git에 올리지 않는다. `.env.example`에는 변수 이름과 모델명 예시만 둔다.
-
-## 하지 않는 일
-
-- 회원가입과 로그인
-- 사용자 장기 Memory 저장
-- 사용자별 투자 성향 관리
-- 공공데이터·NAVER·DART·커뮤니티 원본 API 직접 호출
-- 주가·뉴스·공시·커뮤니티 원본 저장
-- 사용자에게 직접 매수·매도 추천
-- 네 MCP 서버를 서로 다른 Agent라고 부르기
-
-## 완료 기준
-
-1. Backend와 별도 컨테이너로 실행된다.
-2. 네 MCP 서버의 Tool을 발견하고 호출한다.
-3. 필수 기본 조회는 Workflow가 통제한다.
-4. Tool Result를 본 Agent가 추가 Tool 또는 종료를 판단한다.
-5. 최대 단계와 종료 이유가 남는다.
-6. 출처와 수집 시각을 유지한다.
-7. 일부 MCP 실패를 구조화해서 반환한다.
-
-## 현재 상태
-
-폴더와 계약만 준비되어 있고 실행 코드는 아직 없다. 구현은 Community MCP를 실제 서버로 연결하고 Price·News·Disclosure를 Mock으로 대체하는 단계부터 시작한다.
+```powershell
+pytest -q
+```
