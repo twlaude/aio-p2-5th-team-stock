@@ -1,8 +1,10 @@
 import logging
+
 from datetime import datetime, timezone
 from uuid import uuid4
 
 from app.clients.mcp_client import client as mcp_client
+from app.core.config import settings
 from app.clients.mcp_client.client import MCPClientError, MCPClientTimeout, MCPClientUnavailable
 from app.clients.redis import client as redis_client
 from app.repositories import analysis_repository
@@ -18,6 +20,7 @@ from app.schemas.analysis import (
 from app.schemas.errors import ErrorDetail, ErrorResponse
 from app.schemas.user import CurrentUser
 from app.services.analysis import companies
+from app.schemas.analysis import PersonalizedCheckpoints
 from app.services.analysis.narrative import compose_one_liner, compose_personal, pick_topic
 from app.services.profile import service as profile_service
 
@@ -69,6 +72,14 @@ def _remember_recent_search(user_id: str, company_name: str, stock_code: str, se
     )
 
 
+def _agent_narrative_ok(raw: dict) -> bool:
+    """MCP Client Agent 서사를 신뢰할 수 있는지. NARRATIVE_SOURCE=backend면 항상 Backend 조립."""
+    if settings.narrative_source == "backend":
+        return False
+    failures = raw.get("partial_failures") or []
+    return not any(item.get("service") == "openai" for item in failures)
+
+
 def run_analysis(
     query: str, current_user: CurrentUser | None
 ) -> AnalysisResponse | UnsupportedCompanyResponse | ErrorResponse:
@@ -92,6 +103,8 @@ def run_analysis(
     temperature = common["market_temperature"]
     evidence = common["evidence_level"]
     topic = pick_topic(sources, "최근 이슈")
+    # Agent(MCP Client LLM)가 서사를 완성했으면 그대로 쓰고, 실패·폴백일 때만 Backend가 프론트 규칙으로 조립한다.
+    agent_ok = _agent_narrative_ok(raw)
 
     response = AnalysisResponse(
         request_id=raw["request_id"],
@@ -100,11 +113,10 @@ def run_analysis(
         requires_login=True,
         company=CompanyRef(company_name=company_name, stock_code=stock_code, supported=True),
         price=PriceSnapshot(**raw["price"]),
-        one_line_summary=compose_one_liner(
-            topic,
-            evidence["level"],
-            temperature["score"],
-            raw["price"]["change"],
+        one_line_summary=(
+            common["one_line_summary"]
+            if agent_ok and common.get("one_line_summary")
+            else compose_one_liner(topic, evidence["level"], temperature["score"], raw["price"]["change"])
         ),
     )
 
@@ -119,8 +131,10 @@ def run_analysis(
             community_summary=common["community_summary"],
             sources=sources,
         )
-        response.personalized_checkpoints = compose_personal(
-            company_name, topic, temperature["score"], evidence["level"], profile
+        response.personalized_checkpoints = (
+            PersonalizedCheckpoints(**raw["personalized_checkpoints"])
+            if agent_ok and raw.get("personalized_checkpoints")
+            else compose_personal(company_name, topic, temperature["score"], evidence["level"], profile)
         )
         _remember_recent_search(current_user.user_id, company_name, stock_code, requested_at)
 

@@ -1,5 +1,7 @@
 import pytest
 
+from app.core.config import settings
+
 from app.services.analysis.narrative import josa, pick_topic
 
 
@@ -44,7 +46,9 @@ def test_unsupported_company(client):
     assert "actions" in body
 
 
-def test_guest_one_liner_uses_frontend_rule(client):
+def test_guest_one_liner_uses_frontend_rule(client, monkeypatch):
+    # Agent 서사가 없거나 실패한 경우 Backend가 프론트 규칙으로 조립한다.
+    monkeypatch.setattr(settings, "narrative_source", "backend")
     response = client.post("/api/v1/analyses", json={"query": "삼성전자"})
 
     assert response.json()["one_line_summary"] == (
@@ -53,7 +57,43 @@ def test_guest_one_liner_uses_frontend_rule(client):
     )
 
 
-def test_member_personal_summary_uses_risk_gap_rule(client, member_token):
+def test_agent_narrative_wins_when_agent_succeeded(client, member_token):
+    # 기본(agent_first): MCP Client Agent가 완성한 서사를 그대로 화면에 보낸다.
+    response = client.post(
+        "/api/v1/analyses",
+        json={"query": "삼성전자"},
+        headers={"Authorization": f"Bearer {member_token}"},
+    )
+    body = response.json()
+
+    assert body["one_line_summary"].endswith("(Mock).")
+    assert body["personalized_checkpoints"]["personal_summary"].startswith("장기 관점에서 보면")
+
+
+def test_backend_composes_when_agent_failed(client, member_token, monkeypatch):
+    from app.clients.mcp_client import client as mcp_client_module
+
+    original = mcp_client_module.fetch_common_analysis
+
+    def failed_agent(*args, **kwargs):
+        raw = original(*args, **kwargs)
+        raw["partial_failures"] = [{"service": "openai", "status": "model_error", "message": "x"}]
+        return raw
+
+    monkeypatch.setattr("app.services.analysis.service.mcp_client.fetch_common_analysis", failed_agent)
+    response = client.post(
+        "/api/v1/analyses",
+        json={"query": "삼성전자"},
+        headers={"Authorization": f"Bearer {member_token}"},
+    )
+    body = response.json()
+
+    assert body["one_line_summary"].startswith("뉴스는 HBM 메모리에 쏠려 있고")
+    assert body["personalized_checkpoints"]["personal_summary"].startswith("무리 없는 구간이에요.")
+
+
+def test_member_personal_summary_uses_risk_gap_rule(client, member_token, monkeypatch):
+    monkeypatch.setattr(settings, "narrative_source", "backend")
     response = client.post(
         "/api/v1/analyses",
         json={"query": "삼성전자"},

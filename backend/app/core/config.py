@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     mcp_client_url: str = "http://localhost:8010"
     mcp_client_timeout_seconds: float = 75.0  # 공통 계약: Backend → MCP Client 75초
     mcp_client_mode: str = "mock"  # "mock" | "live"
+    narrative_source: str = "agent_first"  # "agent_first": Agent 서사 우선, 실패 시 Backend 조립 | "backend": 항상 Backend 조립
 
     llm_provider: str = "openai"
     openai_api_key: str = ""
