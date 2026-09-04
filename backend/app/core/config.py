@@ -1,5 +1,15 @@
+from urllib.parse import urlsplit
+
 from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# 공통 계약(shared/CONNECTION_CONTRACT.md) 확정 포트. mcp_client_url과 같은 호스트에 떠 있다고 가정한다.
+_MCP_SERVER_PORTS = {
+    "price_mcp": 8020,
+    "news_mcp": 8021,
+    "disclosure_mcp": 8022,
+    "community_mcp": 8023,
+}
 
 
 class Settings(BaseSettings):
@@ -38,6 +48,12 @@ class Settings(BaseSettings):
     @property
     def cors_allowed_origin_list(self) -> list[str]:
         return [origin.strip() for origin in self.cors_allowed_origins.split(",") if origin.strip()]
+
+    @property
+    def mcp_server_urls(self) -> dict[str, str]:
+        """mcp_client_url과 같은 호스트에서 확정 포트로 뜨는 4개 MCP 서버 주소(디버그용)."""
+        host = urlsplit(self.mcp_client_url).hostname or "localhost"
+        return {name: f"http://{host}:{port}/mcp" for name, port in _MCP_SERVER_PORTS.items()}
 
 
 settings = Settings()
