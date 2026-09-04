@@ -13,3 +13,5 @@ htmlcov/
 *.log
 *.sqlite3
 .streamlit/secrets.toml
+undefined/
+/frontend/tests/shots/responsive/
