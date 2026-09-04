@@ -29,9 +29,9 @@ export function ResultSection() {
   const sources = result.access_level === "member" ? result.detail?.sources ?? [] : [];
   const materials = result.access_level === "member"
     ? {
-        news: sources.filter((s) => s.type === "news").length,
-        disclosure: sources.filter((s) => s.type === "disclosure").length,
-        community: sources.find((s) => s.type === "community")?.meta?.samples as number | undefined,
+        news: sources.filter((s) => s.source_type === "news").length,
+        disclosure: sources.filter((s) => s.source_type === "disclosure").length,
+        community: sources.find((s) => s.source_type === "community")?.meta?.samples as number | undefined,
       }
     : undefined;
   const ambientTopics = result.access_level === "member" ? deriveTopics(result.detail?.sources ?? []) : (result.topics_preview ?? []);

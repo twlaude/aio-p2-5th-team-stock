@@ -78,6 +78,7 @@ class SourceItem(BaseModel):
     title: str
     url: str | None = None
     published_at: str | None = None
+    meta: dict[str, Any] = Field(default_factory=dict)
 
 
 class PartialFailure(BaseModel):

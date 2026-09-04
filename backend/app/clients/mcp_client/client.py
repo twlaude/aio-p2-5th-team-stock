@@ -68,7 +68,36 @@ def _mock_common_analysis(
             "disclosure_summary": "mcp_client 연결 전 표본 공시 요약이다.",
             "community_summary": "mcp_client 연결 전 표본 커뮤니티 요약이다.",
         },
-        "sources": [],
+        "sources": [
+            {
+                "source_type": "news",
+                "title": f"{company_name} HBM 메모리 관련 보도",
+                "meta": {"publisher": "Mock News"},
+            },
+            {
+                "source_type": "disclosure",
+                "title": f"{company_name} 반기보고서",
+                "meta": {
+                    "receipt_number": "20260829000123",
+                    "document_type": "disclosure",
+                },
+            },
+            {
+                "source_type": "community",
+                "title": f"{company_name} 커뮤니티 반응",
+                "meta": {
+                    "samples": 100,
+                    "positive": 52,
+                    "neutral": 31,
+                    "negative": 17,
+                    "fgi": 68,
+                    "fgi_label": "탐욕",
+                    "topics": [
+                        {"text": "HBM 메모리", "sentiment": "positive", "weight": 5}
+                    ],
+                },
+            },
+        ],
         "partial_failures": [],
         "collected_at": now,
         "mock": True,

@@ -85,9 +85,8 @@ export interface PriceSnapshot {
 }
 
 export interface AnalysisSource {
-  type: SourceType;
+  source_type: DataCoverage;
   title: string;
-  publisher?: string;
   published_at?: string;
   url?: string;
   meta?: Record<string, unknown>;
