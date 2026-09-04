@@ -125,11 +125,9 @@ export function HeroSection() {
         <motion.div className="hero__search" variants={heroItem}>
           <SearchBar value={query} status={status} unsupported={unsupported} onChange={setQuery} onSubmit={submitWithPulse} onTypingChange={setTyping} />
         </motion.div>
-        {(status === "idle" || status === "loading") ? (
-          <motion.div className="hero__chips" variants={heroItem}>
-            <CompanyChips onSelectCompany={submitWithPulse} onError={setCompaniesError} />
-          </motion.div>
-        ) : null}
+        <motion.div className="hero__chips" variants={heroItem}>
+          <CompanyChips onSelectCompany={submitWithPulse} onError={setCompaniesError} />
+        </motion.div>
       </motion.div>
       {status === "loading" ? <LoadingBlock /> : null}
       {unsupported ? <UnsupportedNotice query={submittedQuery} message={result.message} onSelectCompany={submitWithPulse} /> : null}
