@@ -25,11 +25,12 @@ def josa(word: str, a: str, b: str) -> str:
 
 
 def gap_state(score: int, level: EvidenceLevelName) -> GapState:
-    if score >= 70 and level == "low":
+    # 온도 v2(평소=50, 라벨 40/60/80) 기준. 2026-09-04 20종목 실측(34~64)으로 70/65/78/50 → 60/60/80/45 재조정.
+    if score >= 60 and level == "low":
         return "large"
-    if (score >= 65 and level == "medium") or (score >= 78 and level != "low"):
+    if (score >= 60 and level == "medium") or (score >= 80 and level != "low"):
         return "some"
-    if score < 50 and level == "high":
+    if score < 45 and level == "high":
         return "quiet"
     return "small"
 
@@ -48,7 +49,7 @@ def pick_topic(sources: list[dict], fallback: str) -> str:
 
 
 def compose_one_liner(topic: str, evidence_level: EvidenceLevelName, temperature_score: int, change: int) -> str:
-    if evidence_level == "low" and temperature_score >= 70:
+    if evidence_level == "low" and temperature_score >= 60:
         return f"뉴스는 {josa(topic, '으로', '로')} 시끄러운데, 공시로 확인된 건 거의 없어요. 기사만으로 띄우는 흐름일 수 있어요."
     news = f"뉴스는 {topic}에 쏠려 있고"
     if evidence_level == "high":

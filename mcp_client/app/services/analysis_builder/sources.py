@@ -26,7 +26,7 @@ def _disclosure_source(
 ) -> SourceItem:
     return SourceItem(
         source_type="disclosure",
-        title=str(disclosure.get("report_name") or "전자공시"),
+        title=" ".join(str(disclosure.get("report_name") or "전자공시").split()),
         url=disclosure.get("source_url") or None,
         published_at=disclosure.get("published_at") or None,
         meta=_meta(

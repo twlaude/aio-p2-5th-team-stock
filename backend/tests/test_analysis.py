@@ -198,3 +198,22 @@ def test_evidence_level_accepts_and_preserves_issue_match_fields():
     )
 
     assert evidence.model_dump()["matched"][0]["receipt_number"] == "202609040101"
+
+
+@pytest.mark.parametrize(
+    ("score", "level", "expected"),
+    [
+        (60, "low", "large"),
+        (59, "low", "small"),
+        (60, "medium", "some"),
+        (80, "high", "some"),
+        (44, "high", "quiet"),
+        (45, "high", "small"),
+        (52, "medium", "small"),
+    ],
+)
+def test_gap_state_uses_temperature_v2_scale(score, level, expected):
+    # 온도 v2(평소=50, 라벨 40/60/80) 기준 문턱값 60/60/80/45 — 프론트 deriveGapCheck·mock gapState와 동일
+    from app.services.analysis.narrative import gap_state
+
+    assert gap_state(score, level) == expected
