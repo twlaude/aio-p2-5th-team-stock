@@ -25,6 +25,7 @@ def collected_data() -> CollectedData:
             "status": "success",
             "result_count": 5,
             "relevant_count": 5,
+            "span_hours": 48.0,
             "articles": [
                 {
                     "headline": f"삼성전자 관련 뉴스 {index}",

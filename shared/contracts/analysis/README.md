@@ -126,7 +126,7 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 | `components` key | 입력 | 정규화 | 배점 |
 |---|---|---:|---:|
 | `volume_activity` | `price.volume_ratio_20d`, 없으면 `1 + volume_change_rate / 100` | `clamp(ratio / 3, 0, 1)` | 30 |
-| `news_attention` | `news.relevant_count`, 없으면 `result_count` | `clamp(count / 80, 0, 1)` | 25 |
+| `news_attention` | `news.relevant_count`(없으면 `result_count`) + `news.span_hours` | 관련 기사 100건이 쌓이는 시간 `h = span_hours × 100 / count`. 6시간 이하 1, 168시간(7일) 이상 0, 사이는 로그 스케일. `span_hours` 없으면 `clamp(count / 80, 0, 1)` 폴백 | 25 |
 | `community_activity` | `community.activity.ratio` | `clamp(ratio / 3, 0, 1)` | 25 |
 | `fear_greed_intensity` | `community.fgi_latest.fgi` | `abs(fgi - 50) / 50` | 20 |
 

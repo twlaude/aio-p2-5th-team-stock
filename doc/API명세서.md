@@ -327,7 +327,7 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 | `components` | 입력 | 0~1 정규화 | 최대 배점 |
 |---|---|---|---:|
 | `volume_activity` | 20일 평균 대비 거래량 비율. 없으면 `1 + 전일 대비 거래량 변화율 / 100`으로 대체 | `clamp(ratio / 3, 0, 1)` | 30 |
-| `news_attention` | 기간 내 관련 기사 수. 없으면 반환 기사 수로 대체 | `clamp(count / 80, 0, 1)` | 25 |
+| `news_attention` | 관련 기사 수 + 가장 오래된 관련 기사부터 지금까지 시간(`span_hours`) | 100건이 쌓이는 시간 6시간 이하 1, 7일 이상 0, 로그 스케일. `span_hours` 없으면 `clamp(count / 80, 0, 1)` | 25 |
 | `community_activity` | 지난 7일 글 수의 이전 28일 주간 평균 대비 비율 | `clamp(ratio / 3, 0, 1)` | 25 |
 | `fear_greed_intensity` | 공포탐욕 지수 | `abs(fgi - 50) / 50` | 20 |
 
