@@ -1,3 +1,4 @@
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -24,6 +25,12 @@ class Settings(BaseSettings):
     jwt_expires_minutes: int = 1440  # 24시간
 
     cors_allowed_origins: str = "http://localhost:5173"
+
+    @field_validator("jwt_secret_key", mode="before")
+    @classmethod
+    def _jwt_secret_not_empty(cls, value: str) -> str:
+        # .env에 JWT_SECRET_KEY= 처럼 비워 두면 HMAC 키 오류로 로그인이 500이 되므로 개발 기본값으로 대체한다.
+        return value if isinstance(value, str) and value.strip() else "dev-secret-change-me-please-32-bytes-min"
 
     @property
     def cors_allowed_origin_list(self) -> list[str]:

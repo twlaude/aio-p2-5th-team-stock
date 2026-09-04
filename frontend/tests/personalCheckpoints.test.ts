@@ -13,7 +13,7 @@ const users = (usersFixture as DemoUsersFixture).users;
 const samsung = samsungFixture as SamsungFixture;
 
 function expectMember(response: Awaited<ReturnType<ReturnType<typeof createMockClient>["createAnalysis"]>>): asserts response is MemberAnalysisResponse {
-  expect(response.status).toMatch(/success|partial_completed/);
+  expect(response.status).toMatch(/success|partial_success/);
   expect("access_level" in response && response.access_level).toBe("member");
 }
 

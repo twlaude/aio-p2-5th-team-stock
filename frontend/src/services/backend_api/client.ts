@@ -1,5 +1,5 @@
 export type ApiMode = "mock" | "live";
-export type AnalysisStatus = "success" | "partial_completed" | "unsupported_company";
+export type AnalysisStatus = "success" | "partial_success" | "unsupported_company";
 export type AccessLevel = "guest" | "member";
 export type RiskProfile = "conservative" | "balanced" | "aggressive";
 export type InvestmentHorizon = "short" | "medium" | "long";
@@ -136,7 +136,7 @@ export interface GuestAnalysisResponse {
 
 export interface MemberAnalysisResponse {
   request_id: string;
-  status: "success" | "partial_completed";
+  status: "success" | "partial_success";
   access_level: "member";
   requires_login: false;
   company: AnalysisCompany;
