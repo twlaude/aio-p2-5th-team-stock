@@ -120,6 +120,16 @@ docker compose up -d
 
 `나를 위한 확인 포인트`(`personalized_checkpoints`) 생성은 MCP Client가 OpenAI `gpt-5.6-luna`로 처리한다. Backend는 MCP Client 응답의 `personalized_checkpoints`를 검증만 하고 그대로 Frontend에 전달한다.
 
+## 실황 확인 (`/api/v1/admin/live-status`)
+
+배포 서버(root SSH만 있는 VPS 등)에서 SSH 없이 지금 무슨 일이 일어나는지 보고 싶을 때 쓴다. `ADMIN_USERNAME`/`ADMIN_PASSWORD`(Basic Auth) 뒤에 있고, 프론트 프록시를 그대로 타므로 `https://프론트주소/api/v1/admin/live-status`로 열면 된다.
+
+- Redis `backend:short_term:*` 스냅샷 (지금 활성 단기 Memory, TTL 포함)
+- PostgreSQL `analysis_runs` 최근 30건 (`status`, `partial_failures` 포함 — 어느 MCP가 왜 실패했는지 여기서 보인다)
+- 이후 변화는 폴링이 아니라 **Redis Pub/Sub(`backend:live-events`) → SSE**로 실시간 push된다. `set_state()`와 `analysis_repository.save_run()`이 매번 이벤트를 발행한다.
+
+배포 환경에서는 `.env`의 `ADMIN_USERNAME`/`ADMIN_PASSWORD`를 기본값에서 반드시 바꾼다.
+
 ## Backend에서 하지 않는 일
 
 - 뉴스·DART·커뮤니티 원본 직접 수집
