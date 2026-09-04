@@ -1,7 +1,7 @@
 from collections.abc import Callable
 from datetime import datetime, time, timezone
 from decimal import Decimal, InvalidOperation
-from time import monotonic
+from time import monotonic, sleep
 from typing import Any
 from zoneinfo import ZoneInfo
 
@@ -21,6 +21,9 @@ SERVICE_NAME = "price_mcp"
 SOURCE_NAME = "한국투자증권 Open API"
 
 _QUOTE_CACHE: dict[str, tuple[float, PriceResponse]] = {}
+# KIS는 현재가 직후 곧바로 일봉을 부르면 초당 호출 제한으로 간헐 실패한다 → 짧게 쉬고 1회 재시도
+_DAILY_RETRY_DELAY_SECONDS = 0.5
+_daily_retry_sleep: Callable[[float], None] = sleep
 _SEOUL = ZoneInfo("Asia/Seoul")
 _SESSION_OPEN = time(9)
 _SESSION_CLOSE = time(15, 30)
@@ -186,15 +189,17 @@ def fetch_stock_quote(
     try:
         output = active_client.get_quote(request["stock_code"])
         current_time = now()
-        try:
-            daily_prices = active_client.get_daily_prices(request["stock_code"])
-            result = map_kis_quote(
-                output,
-                request,
-                now=current_time,
-                daily_prices=daily_prices,
-            )
-        except KISAPIError:
+        daily_prices: list[dict[str, Any]] | None = None
+        for attempt in range(2):
+            try:
+                daily_prices = active_client.get_daily_prices(request["stock_code"])
+                break
+            except KISAPIError:
+                if attempt == 0:
+                    _daily_retry_sleep(_DAILY_RETRY_DELAY_SECONDS)
+        if daily_prices is not None:
+            result = map_kis_quote(output, request, now=current_time, daily_prices=daily_prices)
+        else:
             result = map_kis_quote(output, request, now=current_time)
             result["warnings"] = ["VOLUME_BASELINE_UNAVAILABLE"]
         _QUOTE_CACHE[request["stock_code"]] = (

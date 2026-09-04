@@ -88,4 +88,42 @@ def test_daily_price_failure_keeps_current_quote_successful_and_cached():
     assert first["projected_volume"] is None
     assert first["warnings"] == ["VOLUME_BASELINE_UNAVAILABLE"]
     assert second == first
+
+
+class FlakyDailyClient(FakeClient):
+    """첫 일봉 호출만 실패(초당 호출 제한 재현), 재시도는 성공."""
+
+    def __init__(self):
+        super().__init__()
+        self.daily_attempts = 0
+
+    def get_daily_prices(self, stock_code):
+        self.daily_attempts += 1
+        if self.daily_attempts == 1:
+            raise KISAPIUnavailable()
+        return super().get_daily_prices(stock_code)
+
+
+def test_daily_price_retries_once_after_transient_failure(monkeypatch):
+    from app.services import price as price_service
+
+    clear_quote_cache()
+    slept = []
+    monkeypatch.setattr(price_service, "_daily_retry_sleep", lambda seconds: slept.append(seconds))
+    client = FlakyDailyClient()
+    request = {"company_name": "삼성전자", "stock_code": "005930"}
+    now = lambda: datetime(2026, 9, 4, 5, 30, tzinfo=timezone.utc)
+
+    result = fetch_stock_quote(
+        request,
+        config=PriceConfig(cache_ttl_seconds=60),
+        client=client,
+        now_provider=now,
+        cache_clock=lambda: 100.0,
+    )
+
+    assert client.daily_attempts == 2
+    assert slept == [price_service._DAILY_RETRY_DELAY_SECONDS]
+    assert result["warnings"] == []
+    print("[TEST] daily retry after transient KIS failure")
     assert client.calls == 2
