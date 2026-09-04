@@ -67,6 +67,12 @@ function josa(word: string, a: string, b: string) {
 
 const RISK_WORD: Record<DemoUser["risk_profile"], string> = { conservative: "손실을 피하는 걸 우선하는", balanced: "적당한 위험은 감수하는", aggressive: "큰 변동도 감수하는" };
 const HORIZON_WORD: Record<DemoUser["investment_horizon"], string> = { long: "오래 들고 가는", medium: "몇 달 보고 가는", short: "짧게 치고 빠지는" };
+const PREFERRED_CHECK: Record<DemoUser["preferred_evidence"], string> = {
+  financial: "최근 사업보고서의 매출·영업이익 흐름",
+  news: "최근 기사 내용이 공시로 확인되는지",
+  market: "거래량이 평소보다 늘었는지",
+  risk: "사업보고서의 위험 요인 중 지금 현실화된 게 있는지",
+};
 
 function gapState(score: number, level: EvidenceLevel): GapState {
   if (score >= 70 && level === "low") return "large";
@@ -122,7 +128,7 @@ function composePersonal(company: string, topic: string, score: number, level: E
   };
   return {
     personal_summary: opinion[state][user.risk_profile],
-    priority_checks: ["다음 실적 발표 날짜와 결과", stateCheck[state], horizonCheck[user.investment_horizon]],
+    priority_checks: [PREFERRED_CHECK[user.preferred_evidence], stateCheck[state], horizonCheck[user.investment_horizon]],
     caution: caution[user.risk_profile],
   };
 }
@@ -134,7 +140,7 @@ function composeOneLiner(template: TemplateAnalysis): string {
   }
   const news = `뉴스는 ${template.topic}에 쏠려 있고`;
   const disclosure =
-    template.evidence_level === "high" ? "공시로도 대부분 확인돼요" : template.evidence_level === "medium" ? "공시로 확인된 건 절반쯤이에요" : "공식 확인은 아직 조금이에요";
+    template.evidence_level === "high" ? "관련 공시가 실제로 있어요" : template.evidence_level === "medium" ? "주요 공시는 있지만 지금 화제와는 달라요" : "공식 확인은 아직 조금이에요";
   const community = template.change >= 0 ? "커뮤니티는 기대가 앞서요" : "커뮤니티는 조심스러워요";
   return `${news}, ${disclosure}. ${community}.`;
 }
@@ -264,10 +270,10 @@ function buildTemplateNewsSources(company: Company, template: TemplateAnalysis):
 function buildTemplateDisclosureSources(company: Company, template: TemplateAnalysis): AnalysisSource[] {
   return [
     { source_type: "disclosure", title: `${company.company_name} 주요사항보고서`, published_at: "2026-08-29T08:00:00Z", url: "https://example.com/mock-disclosure-1", meta: template.evidence_level === "low"
-        ? { receipt_number: `20260829${company.stock_code}`, document_type: "disclosure", confirmed: ["정기 재무 지표 제출"], unconfirmed: [`${template.topic} 관련 공식 공시`, "계약·수주 금액", "다음 분기 실적 반영 폭", "시장 기대와 실제 숫자의 차이"] }
-        : { receipt_number: `20260829${company.stock_code}`, document_type: "disclosure", confirmed: [`${template.topic} 관련 공개 자료`, "최근 재무 지표 제출", "주요 사업 현황 공시"], unconfirmed: ["다음 분기 실적 반영 폭", "단기 가격 촉매 지속성", "시장 기대와 실제 숫자의 차이"] } },
-    { source_type: "disclosure", title: `${company.company_name} 반기보고서`, published_at: "2026-08-20T08:00:00Z", url: "https://example.com/mock-disclosure-2", meta: { receipt_number: `20260820${company.stock_code}`, document_type: "disclosure" } },
-    { source_type: "disclosure", title: `${company.company_name} 기업설명회 자료`, published_at: "2026-08-14T08:00:00Z", url: "https://example.com/mock-disclosure-3", meta: { receipt_number: `20260814${company.stock_code}`, document_type: "disclosure" } },
+        ? { receipt_number: `20260829${company.stock_code}`, document_type: "disclosure", disclosure_kind: "major", confirmed: ["정기 재무 지표 제출"], unconfirmed: [`${template.topic} 관련 공식 공시`, "계약·수주 금액", "다음 분기 실적 반영 폭", "시장 기대와 실제 숫자의 차이"] }
+        : { receipt_number: `20260829${company.stock_code}`, document_type: "disclosure", disclosure_kind: "major", confirmed: [`${template.topic} 관련 공개 자료`, "최근 재무 지표 제출", "주요 사업 현황 공시"], unconfirmed: ["다음 분기 실적 반영 폭", "단기 가격 촉매 지속성", "시장 기대와 실제 숫자의 차이"] } },
+    { source_type: "disclosure", title: `${company.company_name} 반기보고서`, published_at: "2026-08-20T08:00:00Z", url: "https://example.com/mock-disclosure-2", meta: { receipt_number: `20260820${company.stock_code}`, document_type: "disclosure", disclosure_kind: "periodic" } },
+    { source_type: "disclosure", title: `${company.company_name} 기업설명회 자료`, published_at: "2026-08-14T08:00:00Z", url: "https://example.com/mock-disclosure-3", meta: { receipt_number: `20260814${company.stock_code}`, document_type: "disclosure", disclosure_kind: "other" } },
   ];
 }
 

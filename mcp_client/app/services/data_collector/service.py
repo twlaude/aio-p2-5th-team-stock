@@ -39,6 +39,10 @@ class DataCollector:
                 "disclosure_mcp",
                 self.disclosure.get_recent_disclosures(company_name, stock_code),
             ),
+            "get_material_disclosures": (
+                "disclosure_mcp",
+                self.disclosure.get_material_disclosures(company_name, stock_code),
+            ),
             "search_annual_report": (
                 "disclosure_mcp",
                 self.disclosure.search_annual_report(company_name, stock_code),
@@ -134,6 +138,7 @@ class DataCollector:
             price=results["get_stock_quote"],
             news=results["search_news"],
             disclosures=results["get_recent_disclosures"],
+            material_disclosures=results["get_material_disclosures"],
             annual_report=results["search_annual_report"],
             community=results["get_community_reaction"],
             failures=failures,

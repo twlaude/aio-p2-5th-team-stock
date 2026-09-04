@@ -21,6 +21,20 @@ class DisclosureMCPClient:
             },
         )
 
+    async def get_material_disclosures(
+        self, company_name: str, stock_code: str
+    ) -> dict[str, Any]:
+        return await self.client.call_tool(
+            "get_recent_disclosures",
+            {
+                "company_name": company_name,
+                "stock_code": stock_code,
+                "lookback_days": 30,
+                "limit": 50,
+                "disclosure_types": ["B", "C", "D", "E", "I"],
+            },
+        )
+
     async def search_annual_report(self, company_name: str, stock_code: str) -> dict[str, Any]:
         return await self.client.call_tool(
             "search_annual_report",

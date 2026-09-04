@@ -8,6 +8,12 @@ GapState = Literal["large", "some", "small", "quiet"]
 
 RISK_WORD = {"conservative": "손실을 피하는 걸 우선하는", "balanced": "적당한 위험은 감수하는", "aggressive": "큰 변동도 감수하는"}
 HORIZON_WORD = {"long": "오래 들고 가는", "medium": "몇 달 보고 가는", "short": "짧게 치고 빠지는"}
+PREFERRED_CHECK = {
+    "financial": "최근 사업보고서의 매출·영업이익 흐름",
+    "news": "최근 기사 내용이 공시로 확인되는지",
+    "market": "거래량이 평소보다 늘었는지",
+    "risk": "사업보고서의 위험 요인 중 지금 현실화된 게 있는지",
+}
 
 
 def josa(word: str, a: str, b: str) -> str:
@@ -46,9 +52,9 @@ def compose_one_liner(topic: str, evidence_level: EvidenceLevelName, temperature
         return f"뉴스는 {josa(topic, '으로', '로')} 시끄러운데, 공시로 확인된 건 거의 없어요. 기사만으로 띄우는 흐름일 수 있어요."
     news = f"뉴스는 {topic}에 쏠려 있고"
     if evidence_level == "high":
-        disclosure = "공시로도 대부분 확인돼요"
+        disclosure = "관련 공시가 실제로 있어요"
     elif evidence_level == "medium":
-        disclosure = "공시로 확인된 건 절반쯤이에요"
+        disclosure = "주요 공시는 있지만 지금 화제와는 달라요"
     else:
         disclosure = "공식 확인은 아직 조금이에요"
     community = "커뮤니티는 기대가 앞서요" if change >= 0 else "커뮤니티는 조심스러워요"
@@ -100,6 +106,6 @@ def compose_personal(company_name: str, topic: str, score: int, level: EvidenceL
     }
     return PersonalizedCheckpoints(
         personal_summary=opinion[state][profile.risk_profile],
-        priority_checks=["다음 실적 발표 날짜와 결과", state_check[state], horizon_check[profile.investment_horizon]],
+        priority_checks=[PREFERRED_CHECK[profile.preferred_evidence], state_check[state], horizon_check[profile.investment_horizon]],
         caution=caution[profile.risk_profile],
     )

@@ -9,6 +9,13 @@ export type DataCoverage = "price" | "news" | "disclosure" | "community";
 export type SourceType = "news" | "disclosure" | "community";
 export type EvidenceLevel = "low" | "medium" | "high";
 
+export interface MatchedDisclosure {
+  issue: string;
+  report_name: string;
+  receipt_number: string;
+  published_at: string;
+}
+
 export interface HealthResponse {
   status: "ok" | "success";
 }
@@ -104,6 +111,9 @@ export interface AnalysisDetail {
   evidence_level: {
     level: EvidenceLevel;
     reason: string;
+    matched?: MatchedDisclosure[];
+    unmatched?: string[];
+    material_count?: number;
   };
   news_summary: string | null;
   disclosure_summary: string | null;

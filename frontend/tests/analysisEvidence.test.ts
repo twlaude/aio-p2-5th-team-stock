@@ -53,6 +53,7 @@ describe("analysis evidence derivation", () => {
     expect(countOf(samsung.member_detail.sources, "news")).toBe(5);
     expect(countOf(samsung.member_detail.sources, "disclosure")).toBe(3);
     expect(evidenceLevelText("high")).toEqual({ text: "많이 확인됨", segments: 3 });
+    expect(deriveItems(samsung.member_detail.sources, "disclosure")[0].disclosureKind).toBe("major");
   });
 
   it("derives community topics from source meta only", () => {

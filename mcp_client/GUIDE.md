@@ -21,7 +21,7 @@ Backend
 ## 실행 흐름
 
 1. `POST /internal/v1/common-analyses` 요청을 검증한다.
-2. 현재가, 최근 뉴스, 최근 공시, 최신 사업보고서, 커뮤니티 반응을 병렬 조회한다.
+2. 현재가, 최근 뉴스, 정기공시, 최근 30일 주요 비정기 공시, 최신 사업보고서, 커뮤니티 반응을 병렬 조회한다.
 3. 실패한 Tool은 기록하고 성공한 자료는 유지한다. 현재가 실패는 Backend가 처리할 수 있도록 요청 자체를 실패시킨다.
 4. Python 규칙이 0~100 관심 온도와 근거 수준을 계산한다.
 5. Luna Agent가 최근 공시 상세를 더 볼지 판단한다.
@@ -34,7 +34,8 @@ Backend
 ```text
 get_stock_quote
 search_news                 최근 7일, 최대 10건
-get_recent_disclosures      최근 30일, 최대 20건
+get_recent_disclosures      정기공시 최근 180일, 최대 20건
+get_material_disclosures    최근 30일 B/C/D/E/I 공시, 최대 50건
 search_annual_report        고정 검색문, 최대 5개 구절
 get_community_reaction      최근 7일, 최대 100개 표본
 ```
@@ -75,8 +76,9 @@ Community 기본 응답에 `fgi_latest`가 포함되므로 `get_fear_greed_index
 80~100  관심 매우 높음
 ```
 
-이 계산은 수익률이나 상승 가능성을 의미하지 않는다. 라벨 구간과 근거 수준
-계산은 기존 규칙을 유지한다.
+이 계산은 수익률이나 상승 가능성을 의미하지 않는다. 라벨 구간은 기존 규칙을 유지한다.
+
+근거 수준은 커뮤니티 기대 3개·우려 2개와 제목에 정식 회사명이 들어간 뉴스 2개에서 현재 이슈를 뽑은 뒤, 최근 30일 주요 비정기 공시명과 규칙 사전으로 연결해 정한다. 연결 공시가 있으면 `high`, 연결은 없지만 주요 공시가 있으면 `medium`, 주요 공시가 없거나 조회에 실패하면 `low`다. 임베딩·유사도 하한과 자료 종류 수·커뮤니티 표본 수는 이 판정에 쓰지 않는다. 응답은 연결 공시 `matched`, 미연결 이슈 `unmatched`, 주요 공시 수 `material_count`를 함께 제공한다.
 
 ## Backend 요청
 

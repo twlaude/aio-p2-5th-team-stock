@@ -67,8 +67,9 @@ class StockAgentRuntime:
         receipt_numbers: list[str],
         reporter: ProgressReporter,
     ) -> AgentResult:
-        allowed_receipts = set(receipt_numbers[:5])
-        tools = self._tools(sorted(allowed_receipts))
+        ordered_receipts = list(dict.fromkeys(receipt_numbers))[:5]
+        allowed_receipts = set(ordered_receipts)
+        tools = self._tools(ordered_receipts)
         fallback = build_fallback_narrative(context)
         result = AgentResult(narrative=fallback, termination_reason="model_error")
 

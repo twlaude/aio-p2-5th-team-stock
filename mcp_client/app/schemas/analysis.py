@@ -46,9 +46,19 @@ class MarketTemperature(BaseModel):
     weight_covered: int = Field(ge=0, le=100)
 
 
+class MatchedDisclosure(BaseModel):
+    issue: str
+    report_name: str
+    receipt_number: str
+    published_at: str
+
+
 class EvidenceLevel(BaseModel):
     level: Literal["low", "medium", "high"]
     reason: str
+    matched: list[MatchedDisclosure] = Field(default_factory=list)
+    unmatched: list[str] = Field(default_factory=list)
+    material_count: int = 0
 
 
 class PersonalizedCheckpoints(BaseModel):
@@ -128,6 +138,7 @@ class CollectedData(BaseModel):
     disclosures: dict[str, Any]
     annual_report: dict[str, Any]
     community: dict[str, Any]
+    material_disclosures: dict[str, Any] = Field(default_factory=dict)
     failures: list[ToolFailure] = Field(default_factory=list)
     completed_tools: list[str] = Field(default_factory=list)
     failed_tools: list[str] = Field(default_factory=list)

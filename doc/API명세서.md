@@ -318,7 +318,7 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 | `price` | `current_price`, `change`, `change_rate`, `as_of`, 선택적 `source_name`, `volume_basis`, `volume_as_of` |
 | `common_analysis` | `one_line_summary`, `market_temperature`, `evidence_level`, `news_summary`, `disclosure_summary`, `community_summary` |
 | `market_temperature` | `score`(0~100), `label`, `data_coverage`, `weight_covered`(0~100), `components` |
-| `evidence_level` | `level`(`low / medium / high`), `reason` |
+| `evidence_level` | `level`(`low / medium / high`), `reason`, 연결 공시 `matched[]`, 미연결 이슈 `unmatched[]`, 최근 30일 주요 공시 수 `material_count` |
 | `personalized_checkpoints` | `personal_summary`, 1~3개의 `priority_checks`, `caution` |
 | `sources[]` | `source_type`, `title`, 선택적 `url / published_at`, `meta` |
 | `partial_failures[]` | `service`, `status`, `message` |
@@ -333,11 +333,13 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 
 각 항목은 출처가 성공하고 필요 입력이 있을 때만 `components`에 담습니다. 미가용 항목은 빼고 `score = round(가용 항목 점수 합 / weight_covered × 100)`으로 재정규화하며, 가용 배점이 0이면 0점입니다. 공시 건수와 주가 등락률은 시장 관심 온도 산식에 사용하지 않습니다.
 
+`evidence_level`은 자료 종류 수가 아니라 현재 이슈와 최근 30일 주요 비정기 공시의 연결 여부로 계산합니다. 커뮤니티 기대 3개·우려 2개를 우선하고 제목에 정식 회사명이 포함된 뉴스 2개를 보조 이슈로 사용합니다. 규칙 사전으로 연결된 공시가 있으면 `high`, 연결은 없지만 주요 공시가 있으면 `medium`, 주요 공시가 없으면 `low`이며, 공시 조회 실패도 사유를 밝힌 `low`입니다. 임베딩·유사도 하한은 사용하지 않습니다. `sources[].meta`의 `confirmed`/`unconfirmed`는 연결·미연결 이슈를, `disclosure_kind`는 `major`/`periodic`/`other`를 뜻합니다.
+
 현재 성공 응답에서 생성되는 종료 이유는 `completed`, `partial_completed`, `model_error`, `invalid_tool_call`, `max_steps_exceeded`입니다. Workflow 시간 초과는 응답 모델이 아니라 HTTP 504로 종료합니다.
 
 #### 처리와 오류
 
-1. Price·News·최근 공시·사업보고서·Community의 다섯 기본 Tool을 병렬 호출합니다.
+1. Price·News·정기공시·최근 30일 주요 비정기 공시·사업보고서·Community의 여섯 기본 Tool을 병렬 호출합니다.
 2. Price가 성공하지 않으면 필수 자료 누락으로 `503`을 반환합니다.
 3. 선택 자료 실패는 성공 자료를 유지하고 `partial_success`로 표시합니다.
 4. 관심 온도·근거 수준을 규칙으로 계산하고 Agent가 설명합니다.

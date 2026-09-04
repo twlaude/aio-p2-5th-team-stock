@@ -54,6 +54,27 @@ def collected_data() -> CollectedData:
                 },
             ],
         },
+        material_disclosures={
+            "status": "success",
+            "disclosures": [
+                {
+                    "report_name": "단일판매ㆍ공급계약체결",
+                    "receipt_number": "202609040101",
+                    "published_at": "2026-09-04T00:00:00Z",
+                    "document_type": "disclosure",
+                    "disclosure_kind": "major",
+                    "source_url": "https://dart.fss.or.kr/material/1",
+                },
+                {
+                    "report_name": "기업설명회(IR)개최(안내공시)",
+                    "receipt_number": "202609030101",
+                    "published_at": "2026-09-03T00:00:00Z",
+                    "document_type": "disclosure",
+                    "disclosure_kind": "other",
+                    "source_url": "https://dart.fss.or.kr/material/2",
+                },
+            ],
+        },
         annual_report={
             "status": "success",
             "report_name": "2025년 사업보고서",
@@ -67,7 +88,7 @@ def collected_data() -> CollectedData:
             "sample_status": "sufficient",
             "sample_size": 50,
             "sentiment": {"positive_count": 20, "neutral_count": 20, "negative_count": 10},
-            "top_topics": {"expectations": ["신제품"], "concerns": ["업황"]},
+            "top_topics": {"expectations": ["대규모 공급계약 효과"], "concerns": ["업황"]},
             "representative_evidence": [],
             "fgi_latest": {"fgi": 75.0, "label": "탐욕"},
             "activity": {
@@ -82,6 +103,7 @@ def collected_data() -> CollectedData:
             "get_stock_quote",
             "search_news",
             "get_recent_disclosures",
+            "get_material_disclosures",
             "search_annual_report",
             "get_community_reaction",
         ],

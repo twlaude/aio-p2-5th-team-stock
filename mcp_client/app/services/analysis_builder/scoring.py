@@ -2,6 +2,8 @@ import math
 from typing import Any
 
 from app.schemas.analysis import CollectedData, EvidenceLevel, MarketTemperature
+from app.services.analysis_builder.issues import extract_issues
+from app.services.analysis_builder.matching import disclosure_date_label, match_issues
 
 
 def _optional_float(value: Any) -> float | None:
@@ -95,23 +97,46 @@ def calculate_market_temperature(data: CollectedData) -> MarketTemperature:
 
 
 def calculate_evidence_level(data: CollectedData, coverage: list[str]) -> EvidenceLevel:
-    has_official_evidence = bool(data.annual_report.get("matched_passages")) or bool(
-        data.disclosures.get("disclosures")
-    )
-    community_sufficient = data.community.get("sample_status") == "sufficient"
-    count = len(set(coverage))
+    # coverage는 이전 호출부 호환을 위해 유지한다. 근거 단계는 자료 종류 수로 판정하지 않는다.
+    _ = coverage
+    issues = extract_issues(data, str(data.price.get("company_name") or ""))
+    status = data.material_disclosures.get("status")
+    if status not in {"success", "no_data"}:
+        return EvidenceLevel(
+            level="low",
+            reason="최근 공시를 확인하지 못했어요",
+            unmatched=issues,
+        )
 
-    if count == 4 and has_official_evidence:
+    result = match_issues(issues, data.material_disclosures)
+    if result.matched:
+        first = result.matched[0]
+        extra = f" 외 {len(result.matched) - 1}건" if len(result.matched) > 1 else ""
+        reason = (
+            f"{first.issue}가 {disclosure_date_label(first.published_at)} "
+            f"{first.report_name} 공시와 맞아요{extra}"
+        )
         level = "high"
-        reason = "가격·뉴스·공식 공시·커뮤니티 자료가 모두 확인되었습니다."
-    elif count >= 2:
+    elif result.material_count:
+        reason = (
+            f"최근 30일 주요 공시 {result.material_count}건은 있지만 "
+            f"지금 화제({issues[0]})와 직접 연결되진 않아요"
+            if issues
+            else f"최근 30일 주요 공시 {result.material_count}건은 있지만 화제로 잡힌 이슈가 없어요"
+        )
         level = "medium"
-        reason = "여러 자료를 확인했지만 일부 출처가 없거나 표본이 충분하지 않습니다."
     else:
+        reason = (
+            "최근 30일 안에 주요 공시가 없어요. 정기보고서만 있어요"
+            if issues
+            else "화제로 잡힌 이슈가 없어요"
+        )
         level = "low"
-        reason = "확인 가능한 출처가 적어 제한적인 해석만 제공합니다."
 
-    if level == "high" and not community_sufficient:
-        level = "medium"
-        reason = "공식 자료는 확인했지만 커뮤니티 표본이 충분하지 않습니다."
-    return EvidenceLevel(level=level, reason=reason)
+    return EvidenceLevel(
+        level=level,
+        reason=reason,
+        matched=result.matched,
+        unmatched=result.unmatched,
+        material_count=result.material_count,
+    )
