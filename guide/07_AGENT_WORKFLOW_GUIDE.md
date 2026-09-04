@@ -95,7 +95,6 @@ trace
 
 ```text
 get_stock_quote
-get_price_activity_snapshot
 search_news
 get_recent_disclosures
 get_disclosure_detail
@@ -140,7 +139,7 @@ workflow_timeout      전체 허용 시간 초과
 
 ```text
 Workflow 기본 조회
-├─ 현재 주가·가격 활동도
+├─ 현재 주가
 ├─ 최근 뉴스
 ├─ 최근 공시
 └─ 커뮤니티 반응
