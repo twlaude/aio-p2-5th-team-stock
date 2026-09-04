@@ -72,6 +72,7 @@ interface Bounds {
   containerHalf: number;
   hostHalfH: number;
   bubble: BubbleRect;
+  avoid: { left: number; right: number; top: number; bottom: number }[];
 }
 
 function measureBubble(host: HTMLElement): BubbleRect | null {
@@ -90,7 +91,23 @@ function measureBubble(host: HTMLElement): BubbleRect | null {
 function boundsFor(host: HTMLElement, availableWidth: number): Bounds | null {
   const bubble = measureBubble(host);
   if (!bubble) return null;
-  return { mobile: availableWidth < 600, containerHalf: availableWidth / 2, hostHalfH: host.offsetHeight / 2, bubble };
+  const hostRect = host.getBoundingClientRect();
+  const hostCenterX = hostRect.left + hostRect.width / 2;
+  const hostCenterY = hostRect.top + host.offsetHeight / 2;
+  const avoid = [...(host.closest(".result-section") ?? host).querySelectorAll<HTMLElement>(
+    ".one-liner__caption, .one-liner__materials, .why-button",
+  )].map((element) => {
+    const rect = element.getBoundingClientRect();
+    const centerX = (rect.left + rect.right) / 2 - hostCenterX;
+    const centerY = (rect.top + rect.bottom) / 2 - hostCenterY;
+    return {
+      left: centerX - element.offsetWidth / 2,
+      right: centerX + element.offsetWidth / 2,
+      top: centerY - element.offsetHeight / 2,
+      bottom: centerY + element.offsetHeight / 2,
+    };
+  });
+  return { mobile: availableWidth < 600, containerHalf: availableWidth / 2, hostHalfH: host.offsetHeight / 2, bubble, avoid };
 }
 
 /** 칩 실제 폭(반폭) 측정 — 캔버스 measureText. 캔버스 없으면(jsdom) 글자수 근사 */
@@ -106,8 +123,13 @@ function measureHalfWidths(host: HTMLElement, labels: string[], mobile: boolean)
 const CHIP_HALF_H = 15;
 const GAP = 12; // 부유 진폭(x≤5, y≤11)까지 감안한 여유
 
-function overlaps(a: { x: number; y: number; halfW: number }, b: { x: number; y: number; halfW: number }) {
-  return Math.abs(a.x - b.x) < a.halfW + b.halfW + GAP && Math.abs(a.y - b.y) < CHIP_HALF_H * 2 + GAP;
+function overlaps(a: { x: number; y: number; halfW: number }, b: { x: number; y: number; halfW: number }, gap = GAP) {
+  return Math.abs(a.x - b.x) < a.halfW + b.halfW + gap && Math.abs(a.y - b.y) < CHIP_HALF_H * 2 + gap;
+}
+
+function overlapsTarget(chip: { x: number; y: number; halfW: number }, target: Bounds["avoid"][number], gap: number) {
+  return chip.x + chip.halfW + gap > target.left && chip.x - chip.halfW - gap < target.right
+    && chip.y + CHIP_HALF_H + gap > target.top && chip.y - CHIP_HALF_H - gap < target.bottom;
 }
 
 /**
@@ -119,6 +141,8 @@ function overlaps(a: { x: number; y: number; halfW: number }, b: { x: number; y:
 function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidths: number[], labels: string[]): Placed[] {
   const rand = mulberry32(seed);
   const { bubble, mobile, hostHalfH, containerHalf } = bounds;
+  const constrained = containerHalf < 600;
+  const collisionGap = constrained ? 24 : GAP;
   const widest = halfWidths.length ? Math.max(...halfWidths) : mobile ? 44 : 54;
   const slots: { x: number; y: number; angle: number }[] = [];
 
@@ -171,7 +195,8 @@ function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidth
     const dirX = Math.cos(slot.angle);
     const dirY = Math.sin(slot.angle);
     let tries = 0;
-    while (placed.some((other) => overlaps({ x, y, halfW }, other))) {
+    while (placed.some((other) => overlaps({ x, y, halfW }, other, collisionGap))
+      || (constrained && bounds.avoid.some((target) => overlapsTarget({ x, y, halfW }, target, GAP)))) {
       if (tries >= 8) return;
       x += dirX * 22;
       y += dirY * 12;

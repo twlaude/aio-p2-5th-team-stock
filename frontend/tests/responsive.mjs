@@ -238,6 +238,27 @@ async function inspectLayout(page, { checkTargets, checkEvidenceGaps }) {
       }
     }
 
+    const ambientOverlaps = [];
+    const topics = [...document.querySelectorAll(".result-ambient__topic")].filter(isRendered);
+    const protectedElements = [...document.querySelectorAll(
+      ".one-liner__caption, .one-liner__bubble, .one-liner__materials, .why-button",
+    )].filter(isRendered);
+    const intersectionArea = (a, b) => (
+      Math.max(0, Math.min(a.right, b.right) - Math.max(a.left, b.left))
+      * Math.max(0, Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top))
+    );
+    for (let index = 0; index < topics.length; index += 1) {
+      const topic = topics[index];
+      for (const target of [...protectedElements, ...topics.slice(index + 1)]) {
+        const area = intersectionArea(topic.getBoundingClientRect(), target.getBoundingClientRect());
+        if (area > 0) ambientOverlaps.push({
+          topic: topic.textContent?.trim(),
+          target: target.textContent?.trim(),
+          area: Math.round(area * 10) / 10,
+        });
+      }
+    }
+
     return {
       documentWidth: {
         client: viewportWidth,
@@ -246,6 +267,7 @@ async function inspectLayout(page, { checkTargets, checkEvidenceGaps }) {
       offscreen,
       smallTargets,
       evidenceGaps,
+      ambientOverlaps,
       pointerCoarse: matchMedia("(pointer: coarse)").matches,
     };
   }, { shouldCheckTargets: checkTargets, shouldCheckEvidenceGaps: checkEvidenceGaps });
@@ -270,6 +292,9 @@ async function assertResponsive(page, label, { coarse, evidence = false }) {
   const largeGaps = layout.evidenceGaps.filter(({ gap }) => gap > 48 + 0.5);
   if (largeGaps.length) {
     failures.push(`evidence subsection gaps above 48px ${JSON.stringify(largeGaps)}`);
+  }
+  if (layout.ambientOverlaps.length) {
+    failures.push(`ambient topic overlaps ${JSON.stringify(layout.ambientOverlaps)}`);
   }
   if (failures.length) throw new Error(`${label} responsive assertions failed:\n- ${failures.join("\n- ")}`);
 
