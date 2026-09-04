@@ -1,0 +1,20 @@
+<DOCUMENT>
+  <SECTION-1 ACLASS="MANDATORY" APARTSOURCE="SOURCE">
+    <TITLE ATOC="Y" ENG="I. Company Overview">I. 회사의 개요</TITLE>
+    <SECTION-2 ACLASS="MANDATORY">
+      <TITLE ATOC="Y" ENG="1. Company overview">1. 회사의 개요</TITLE>
+      <P>신용평가 현황입니다.</P>
+      <TABLE>
+        <TR><TD ALIGN="CENTER">평가기관</TD><TD ALIGN="CENTER">등급</TD></TR>
+        <TR><TD ALIGN="CENTER">S&P(미국)</TD><TD ALIGN="CENTER">A</TD></TR>
+      </TABLE>
+    </SECTION-2>
+  </SECTION-1>
+  <SECTION-1 ACLASS="MANDATORY" APARTSOURCE="SOURCE">
+    <TITLE ATOC="Y" ENG="II. Business Description">II. 사업의 내용</TITLE>
+    <SECTION-2 ACLASS="MANDATORY">
+      <TITLE ATOC="Y">1. (제조서비스업)사업의 개요</TITLE>
+      <P>차량 및 관련 서비스를 제공합니다.</P>
+    </SECTION-2>
+  </SECTION-1>
+</DOCUMENT>
