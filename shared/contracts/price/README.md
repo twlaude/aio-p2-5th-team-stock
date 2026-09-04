@@ -3,10 +3,11 @@
 ## 연결
 
 - MCP 주소: `http://PRICE_MCP_HOST:8020/mcp`
-- 제공처: 공공데이터포털 금융위원회 주식시세정보 API
-- 캐시: 종목별 1분
+- 제공처: 한국투자증권 실전투자 REST `주식현재가 시세` API
+- 캐시: 종목별 60초
+- 런타임 Mock Data 없음
 
-## Tool 1: `get_stock_quote`
+## Tool: `get_stock_quote`
 
 입력:
 
@@ -16,45 +17,42 @@
   "stock_code": "005930"
 }
 ```
-출력:
+
+Backend가 지원 기업을 검증한 뒤 MCP Client가 정식 기업명과 6자리 종목 코드를 전달한다. Price MCP는 목록을 별도로 관리하지 않고 입력 형식만 검증한다.
+
+성공 출력:
 
 ```json
 {
   "status": "success",
   "company_name": "삼성전자",
   "stock_code": "005930",
-  "current_price": 0,
-  "change": 0,
-  "change_rate": 0.0,
-  "as_of": "2026-09-01T06:30:00Z",
-  "source_name": "공공데이터포털 금융위원회 주식시세정보",
-  "collected_at": "2026-09-01T06:31:00Z"
+  "current_price": 70000,
+  "change": 500,
+  "change_rate": 0.72,
+  "as_of": "2026-09-04T05:30:00Z",
+  "source_name": "한국투자증권 Open API",
+  "collected_at": "2026-09-04T05:30:00Z"
 }
 ```
 
-휴장 또는 장 마감 이후에는 제공처가 반환한 가장 최근 거래 기준 시각을 `as_of`에 표시한다.
+- 금액은 원 단위 정수다.
+- `change`와 `change_rate`는 상승 시 양수, 하락 시 음수, 보합 시 0이다.
+- REST 현재가 응답을 받은 시각을 UTC ISO 8601로 기록한다.
+- 장 마감·휴장 중에는 제공처가 반환하는 가장 최근 가격을 그대로 표시한다.
 
-## Tool 2: `get_price_activity_snapshot`
-
-지원 기업 20개의 6자리 종목 코드를 배열로 받아 종목별 절대 등락률을 반환한다. MCP Client는 이 값을 뉴스 활동도와 커뮤니티 언급량에 결합해 시장 관심 온도를 계산한다.
+오류 출력:
 
 ```json
 {
-  "stock_codes": ["005930", "000000"]
+  "status": "external_api_error",
+  "error": {
+    "service": "price_mcp",
+    "code": "KIS_API_UNAVAILABLE",
+    "message": "현재 가격 정보를 일시적으로 가져오지 못했습니다.",
+    "retryable": true
+  }
 }
 ```
 
-```json
-{
-  "status": "success",
-  "items": [
-    {
-      "stock_code": "005930",
-      "change_rate": 1.25,
-      "absolute_change_rate": 1.25
-    }
-  ],
-  "as_of": "2026-09-01T06:30:00Z",
-  "collected_at": "2026-09-01T06:31:00Z"
-}
-```
+가능한 상태는 `success`, `no_data`, `invalid_request`, `unauthorized`, `external_api_error`, `timeout`, `internal_error`다. 실제 API 실패를 가짜 가격으로 대체하지 않는다.

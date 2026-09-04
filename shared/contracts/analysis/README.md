@@ -60,7 +60,7 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
     "change": 0,
     "change_rate": 0.0,
     "as_of": "2026-09-01T06:30:00Z",
-    "source_name": "공공데이터포털 금융위원회 주식시세정보"
+    "source_name": "한국투자증권 Open API"
   },
   "common_analysis": {
     "one_line_summary": "추천 없이 현재 상황을 설명하는 한 줄",
