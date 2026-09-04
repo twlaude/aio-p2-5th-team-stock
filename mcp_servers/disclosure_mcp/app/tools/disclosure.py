@@ -30,6 +30,7 @@ def register_disclosure_tools(mcp: FastMCP) -> None:
         company_name: str | None = None,
         lookback_days: int = 30,
         limit: int = 20,
+        disclosure_types: list[str] | None = None,
     ) -> dict[str, Any]:
         """최근 공시 제목·접수번호·DART URL 목록을 반환한다."""
 
@@ -40,6 +41,7 @@ def register_disclosure_tools(mcp: FastMCP) -> None:
                     company_name=company_name,
                     lookback_days=lookback_days,
                     limit=limit,
+                    disclosure_types=disclosure_types,
                 )
             )
             result.update(_common_fields(stock_code=stock_code, company_name=company_name))
@@ -65,6 +67,7 @@ def register_disclosure_tools(mcp: FastMCP) -> None:
         company_name: str | None = None,
         top_k: int = 5,
         report_year: int | None = None,
+        min_score: float = 0.0,
     ) -> dict[str, Any]:
         """사업보고서의 관련 원문 청크를 최대 다섯 개 반환한다."""
 
@@ -76,6 +79,7 @@ def register_disclosure_tools(mcp: FastMCP) -> None:
                     company_name=company_name,
                     top_k=top_k,
                     report_year=report_year,
+                    min_score=min_score,
                 )
             )
             result.update(_common_fields(stock_code=stock_code, company_name=company_name))
