@@ -66,7 +66,7 @@ class DocumentService:
 
     @staticmethod
     def _source_url(receipt_number: str) -> str:
-        return f"https://dart.fss.or.kr/dsaf001/main.do?rcptNo={receipt_number}"
+        return f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={receipt_number}"
 
 
 def flatten_document_xml(xml: str) -> str:
