@@ -61,11 +61,13 @@ class DisclosureService:
         )
         end_date = datetime.now(_SEOUL).date()
         begin_date = end_date - timedelta(days=lookback_days - 1)
+        # 팀 결정(2026-09-04): 최근 공시는 정기공시(사업·반기·분기보고서)만 모은다 → DART pblntf_ty=A
         raw_response = self._dart_client.get_disclosures(
             corp_code=company["corp_code"],
             begin_date=begin_date.strftime("%Y%m%d"),
             end_date=end_date.strftime("%Y%m%d"),
             page_count=100,
+            disclosure_type="A",
         )
         collected_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
         raw_disclosures = raw_response.get("list", [])
@@ -94,7 +96,7 @@ class DisclosureService:
 
     @staticmethod
     def _source_url(receipt_number: str) -> str:
-        return f"https://dart.fss.or.kr/dsaf001/main.do?rcptNo={receipt_number}"
+        return f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={receipt_number}"
 
     @classmethod
     def _to_disclosure_item(cls, record: DartDisclosureRecord) -> DisclosureItem:

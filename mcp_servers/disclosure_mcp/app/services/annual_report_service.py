@@ -190,7 +190,7 @@ def _published_at(dart_date: str) -> datetime:
 
 
 def _source_url(receipt_number: str) -> str:
-    return f"https://dart.fss.or.kr/dsaf001/main.do?rcptNo={receipt_number}"
+    return f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={receipt_number}"
 
 
 def _default_report_year(report_type: DartPeriodicReportType) -> int:

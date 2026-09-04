@@ -26,7 +26,11 @@ export function EvidenceSection() {
 
   useEffect(() => {
     const updateOffset = () => {
-      setNavOffset(Math.round(document.querySelector(".nav")?.getBoundingClientRect().height ?? 0));
+      // 네비가 sticky/fixed 로 화면에 남을 때만 그 높이만큼 내려서 붙인다. 일반 흐름 네비면 0 — 아니면 탭바 위 틈으로 콘텐츠가 비쳐 보인다.
+      const nav = document.querySelector(".nav");
+      const position = nav ? getComputedStyle(nav).position : "static";
+      const pinned = position === "sticky" || position === "fixed";
+      setNavOffset(pinned ? Math.round(nav?.getBoundingClientRect().height ?? 0) : 0);
     };
     updateOffset();
     window.addEventListener("resize", updateOffset);

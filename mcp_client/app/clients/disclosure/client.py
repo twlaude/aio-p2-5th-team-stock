@@ -16,7 +16,7 @@ class DisclosureMCPClient:
             {
                 "company_name": company_name,
                 "stock_code": stock_code,
-                "lookback_days": 30,
+                "lookback_days": 180,  # 정기공시(사업·반기·분기)만 받으므로 두 분기 분량을 본다
                 "limit": 20,
             },
         )
