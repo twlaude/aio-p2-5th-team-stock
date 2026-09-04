@@ -2,6 +2,7 @@ import { LogIn, LogOut, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import type { AuthSession } from "../../state/auth";
+import { apiMode } from "../../services/backend_api";
 
 interface NavProps {
   session: AuthSession | null;
@@ -15,7 +16,7 @@ export function Nav({ session, onLogout }: NavProps) {
         살래<span className="nav__brand-mark">?</span> 말래<span className="nav__brand-mark">?</span>
       </Link>
       <div className="nav__actions">
-        <div className="nav__caption">Mock 데이터 · 실제 투자 정보 아님</div>
+        <div className="nav__caption">{apiMode === "live" ? "실데이터 데모 · 투자 권유 아님" : "Mock 데이터 · 실제 투자 정보 아님"}</div>
         {session ? (
           <>
             <div className="user-pill" aria-label={`${session.user.display_name} 로그인됨`}>
