@@ -34,6 +34,9 @@ interface Placed {
 
 export const COMPACT_TOPIC_LIMIT = 6;
 
+/** 링 배치가 이 개수 미만이면 정적 칩 줄로 폴백한다 */
+const RING_MIN_PLACED = 4;
+
 export function selectCompactTopics(topics: TopicEvidence[]) {
   return topics
     .map((topic, index) => ({ topic, index, label: shortenTopic(topic.text) }))
@@ -271,6 +274,8 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
     const halfWidths = measureHalfWidths(hostRef.current, labels, bounds.mobile);
     return layout(topics, bounds, seed, halfWidths, labels);
   }, [bounds, topics, seed, labels]);
+  // 링에 칩이 거의 안 놓이면(좁은 medium·1024 등에서 회피 대상에 전부 튕김) 키워드가 사라지지 않게 정적 줄로 폴백
+  const useCompact = Boolean(bounds && (bounds.mobile || (topics.length >= RING_MIN_PLACED && placed.length < RING_MIN_PLACED)));
   const canHover = typeof window !== "undefined" && window.matchMedia?.("(hover: hover) and (pointer: fine)").matches;
 
   return (
@@ -280,8 +285,8 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
       onMouseMove={canHover && !reducedMotion ? (event) => pushBubbles(event.currentTarget, event) : undefined}
       onMouseLeave={canHover && !reducedMotion ? (event) => pushBubbles(event.currentTarget, null) : undefined}
     >
-      {bounds?.mobile && compactTopics.length ? (
-        <div className="result-ambient__compact" aria-hidden="true" data-count={compactTopics.length}>
+      {useCompact && compactTopics.length ? (
+        <div className={`result-ambient__compact${bounds?.mobile ? "" : " result-ambient__compact--forced"}`} aria-hidden="true" data-count={compactTopics.length}>
           {compactTopics.map(({ topic, index, label }) => (
             <span
               key={`${runId}-${topic.text}-${index}`}
@@ -292,7 +297,7 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
           ))}
         </div>
       ) : null}
-      {placed.length ? (
+      {!useCompact && placed.length ? (
         <div className={`result-ambient${reducedMotion ? " result-ambient--static" : ""}`} aria-hidden="true" data-count={placed.length}>
           {placed.map((item, index) => (
             <motion.span

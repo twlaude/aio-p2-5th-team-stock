@@ -251,7 +251,8 @@ async function inspectLayout(page, { checkTargets, checkEvidenceGaps }) {
       const topic = topics[index];
       for (const target of [...protectedElements, ...topics.slice(index + 1)]) {
         const area = intersectionArea(topic.getBoundingClientRect(), target.getBoundingClientRect());
-        if (area > 0) ambientOverlaps.push({
+        // 칩은 ±11px 부유 애니메이션이라 순간적으로 몇 px² 닿을 수 있다 — 실제 겹침(16px² 초과)만 잡는다
+        if (area > 16) ambientOverlaps.push({
           topic: topic.textContent?.trim(),
           target: target.textContent?.trim(),
           area: Math.round(area * 10) / 10,
@@ -268,6 +269,7 @@ async function inspectLayout(page, { checkTargets, checkEvidenceGaps }) {
       smallTargets,
       evidenceGaps,
       ambientOverlaps,
+      ambientTopicCount: document.querySelector(".result-ambient-host") ? topics.length : undefined,
       pointerCoarse: matchMedia("(pointer: coarse)").matches,
     };
   }, { shouldCheckTargets: checkTargets, shouldCheckEvidenceGaps: checkEvidenceGaps });
@@ -292,6 +294,9 @@ async function assertResponsive(page, label, { coarse, evidence = false }) {
   const largeGaps = layout.evidenceGaps.filter(({ gap }) => gap > 48 + 0.5);
   if (largeGaps.length) {
     failures.push(`evidence subsection gaps above 48px ${JSON.stringify(largeGaps)}`);
+  }
+  if (layout.ambientTopicCount !== undefined && layout.ambientTopicCount < 4) {
+    failures.push(`ambient topics visible ${layout.ambientTopicCount} < 4 (keywords vanished)`);
   }
   if (layout.ambientOverlaps.length) {
     failures.push(`ambient topic overlaps ${JSON.stringify(layout.ambientOverlaps)}`);

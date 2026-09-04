@@ -24,10 +24,14 @@
 
 .result-ambient--static .result-ambient__topic { animation: none; }
 @media (prefers-reduced-motion: reduce) { .result-ambient__topic { animation: none; } }
+/* 정적 칩 줄: compact 컨테이너(<37.5rem) 또는 링 폴백(--forced)일 때만 보인다 */
+.result-ambient__compact--forced { display: flex; }
 @container (inline-size < 37.5rem) {
-  .result-ambient__compact {
+  .result-ambient__compact { display: flex; }
+}
+.result-ambient__compact,
+.result-ambient__compact--forced {
     box-sizing: border-box;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
