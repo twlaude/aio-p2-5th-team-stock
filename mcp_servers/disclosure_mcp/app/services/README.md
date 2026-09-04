@@ -4,11 +4,11 @@
 
 ## 서비스 책임
 
-- `company_resolver`: 입력 기업명·종목코드에서 DART 기업 고유번호를 찾고, 동명이인·미상 기업을 처리한다.
-- `disclosure_service`: 기간·기업 조건으로 최근 공시를 조회하고 중복 또는 정정 공시를 정리한다.
-- `document_service`: 접수번호로 공시 원문을 확보하고 공시뷰어 URL을 구성한다.
-- `annual_report_service`: 최신 사업보고서를 확인하고, 미색인 또는 갱신 대상일 때만 수집·색인한다.
-- `report_search_service`: 기업과 문서 종류를 선필터한 뒤 관련 보고서 청크를 검색한다.
+- `company_resolver.py`: 입력 기업명·종목코드에서 DART 기업 고유번호를 찾고, 동명이인·미상 기업을 처리한다.
+- `disclosure_service.py`: 기간·기업 조건으로 최근 공시를 조회하고 중복 또는 정정 공시를 정리한다.
+- `document_service.py`: 접수번호로 공시 원문을 확보하고 공시뷰어 URL을 구성한다.
+- `annual_report_service.py`: 최신 사업보고서를 확인하고, 미색인 또는 갱신 대상일 때만 수집·색인한다.
+- `report_search_service.py`: 기업과 문서 종류를 선필터한 뒤 관련 보고서 청크를 검색한다.
 
 ## 최신 사업보고서 결정
 

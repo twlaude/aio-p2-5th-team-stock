@@ -14,10 +14,11 @@ from app.clients.repository import DisclosureRepository
 from app.core.config import DisclosureConfig, get_config
 from app.core.errors import ConfigurationError
 from app.rag import ReportStore
-from app.services.annual_report import AnnualReportNotFoundError, AnnualReportService
-from app.services.company import CompanyResolver, UnsupportedCompanyError
-from app.services.disclosure import DisclosureService
-from app.services.document import DocumentParseError, DocumentService
+from app.services.annual_report_service import AnnualReportNotFoundError
+from app.services.company_resolver import CompanyResolver, UnsupportedCompanyError
+from app.services.disclosure_service import DisclosureService
+from app.services.document_service import DocumentParseError, DocumentService
+from app.services.report_search_service import ReportSearchService
 
 
 def register_disclosure_tools(mcp: FastMCP) -> None:
@@ -144,11 +145,11 @@ def _document_service() -> DocumentService:
 
 
 @lru_cache(maxsize=1)
-def _annual_service() -> AnnualReportService:
+def _annual_service() -> ReportSearchService:
     config = _config()
     config.validate_for_annual_report_search()
     assert config.database_url is not None
-    return AnnualReportService(
+    return ReportSearchService(
         company_resolver=CompanyResolver(_repository()),
         dart_client=_dart_client(),
         embedding_client=OpenAIEmbeddingClient(config),
