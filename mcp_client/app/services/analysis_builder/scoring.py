@@ -50,7 +50,7 @@ def calculate_market_temperature(data: CollectedData) -> MarketTemperature:
         if news_count is None:
             news_count = _optional_float(data.news.get("result_count"))
         if news_count is not None:
-            components["news_attention"] = _component_score(news_count, 30.0, 25)
+            components["news_attention"] = _component_score(news_count, 80.0, 25)
             weight_covered += 25
 
     if data.community.get("status") == "success":

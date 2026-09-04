@@ -6,11 +6,11 @@ def test_calculates_attention_score_without_predicting_direction():
     data = collected_data()
     temperature = calculate_market_temperature(data)
 
-    assert temperature.score == 46
+    assert temperature.score == 44
     assert temperature.label == "보통"
     assert temperature.components == {
         "volume_activity": 15,
-        "news_attention": 4,
+        "news_attention": 2,
         "community_activity": 17,
         "fear_greed_intensity": 10,
     }
@@ -37,11 +37,11 @@ def test_renormalizes_when_community_source_is_unavailable():
 
     assert temperature.components == {
         "volume_activity": 15,
-        "news_attention": 4,
+        "news_attention": 2,
         "fear_greed_intensity": 10,
     }
     assert temperature.weight_covered == 75
-    assert temperature.score == 39
+    assert temperature.score == 36
     assert temperature.data_coverage == ["price", "news", "disclosure", "community"]
 
 
@@ -65,13 +65,13 @@ def test_falls_back_to_result_count_when_relevant_count_is_missing():
 
     temperature = calculate_market_temperature(data)
 
-    assert temperature.components["news_attention"] == 4
+    assert temperature.components["news_attention"] == 2
     assert temperature.weight_covered == 100
 
 
 def test_prefers_relevant_count_over_total_result_count():
     data = collected_data()
-    data.news["relevant_count"] = 30
+    data.news["relevant_count"] = 80
     data.news["result_count"] = 1
 
     temperature = calculate_market_temperature(data)
