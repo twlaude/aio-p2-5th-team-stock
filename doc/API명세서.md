@@ -515,8 +515,8 @@ Health는 `status:ok`, `service:community_mcp`, `mock` 여부를 반환합니다
 | 공시 상세 | 제목·핵심 내용·URL 설명 | 원문 3,000자와 잘림·전체 길이 메타 반환 | 실제 구조 반영 |
 | Community 표본 | 표본 수별 상태 규칙 | 어댑터는 원본 `/reaction` 상태를 로컬 재계산 없이 전달 | 원본 계약 준수 필요 |
 | Community FGI | 공통 상태에 `error` 없음 | 원본 오류를 `status:error`로 통합 | FGI 호출부 별도 처리 |
-| Frontend 분석 상태 | live 타입·화면은 부분 성공을 `partial_completed`로 판정 | Backend 응답 `status`는 `partial_success`; `partial_completed`는 MCP Client의 `termination_reason` | live 부분 실패 UI와 타입 정합화 필요 |
-| Frontend Profile | live 타입은 `{status, profile}` 봉투를 기대 | Backend GET·PUT은 네 성향 필드의 raw 객체를 반환 | live의 `response.profile` 사용 시 값이 없음 |
+| Frontend 분석 상태 | live 타입·화면이 `partial_completed`를 기대했음 | PR #33에서 `partial_success`로 통일. `partial_completed`는 MCP Client의 `termination_reason`에만 남음 | 정합화 완료 |
+| Frontend Profile | live 타입은 `{status, profile}` 봉투를 기대 | Backend GET·PUT은 네 성향 필드의 raw 객체를 반환하고 live client가 봉투로 감쌈(PR #33) | 정합화 완료 |
 
 ## 부록 B. 구현 근거
 
