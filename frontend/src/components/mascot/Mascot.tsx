@@ -9,9 +9,16 @@ export interface MascotProps {
   state?: MascotState;
   size?: number;
   className?: string;
+  /** typing 상태일 때 말풍선에 보여줄 입력 중인 글자 (끝 4자만 표시) */
+  typingText?: string;
 }
 
-export function Mascot({ state = "idle", size = 120, className }: MascotProps) {
+const TYPING_MAX_CHARS = 4;
+
+export function Mascot({ state = "idle", size = 120, className, typingText = "" }: MascotProps) {
+  const typed = Array.from(typingText.trim()).slice(-TYPING_MAX_CHARS).join("");
+  const pillWidth = Math.max(30, 18 + typed.length * 13);
+  const pillX = 60 - pillWidth / 2;
   return (
     <svg
       className={mascotClassName(state, className)}
@@ -41,9 +48,9 @@ export function Mascot({ state = "idle", size = 120, className }: MascotProps) {
       </g>
       {state === "typing" ? (
         <g className="mascot__type-pill">
-          <rect x="32" y="112" width="58" height="18" rx="9" />
-          <text x="42" y="125">삼성전</text>
-          <rect className="mascot__cursor" x="76" y="117" width="2" height="10" rx="1" />
+          <rect x={pillX} y="112" width={pillWidth} height="18" rx="9" />
+          <text x={pillX + 10} y="125">{typed}</text>
+          <rect className="mascot__cursor" x={pillX + 10 + typed.length * 13} y="117" width="2" height="10" rx="1" />
         </g>
       ) : null}
       {state === "thinking" ? (
