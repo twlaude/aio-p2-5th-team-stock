@@ -43,6 +43,8 @@ class NewsResponse(TypedDict, total=False):
     articles: list[Article]
     result_count: int
     relevant_count: int
+    span_hours: float | None
+    oldest_relevant_at: str | None
     collected_at: str
     mock: bool
     error: ErrorDetail

@@ -105,3 +105,6 @@ def test_relevant_count_counts_high_relevance_within_lookback_before_output_limi
 
     assert result["result_count"] == 1
     assert result["relevant_count"] == 2
+    # 가장 오래된 관련 기사(08-31 08:00Z)부터 NOW까지
+    assert result["oldest_relevant_at"] == "2026-08-31T08:00:00Z"
+    assert result["span_hours"] == round((NOW - datetime(2026, 8, 31, 8, tzinfo=timezone.utc)).total_seconds() / 3600, 2)

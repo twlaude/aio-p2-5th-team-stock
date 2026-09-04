@@ -6,11 +6,11 @@ def test_calculates_attention_score_without_predicting_direction():
     data = collected_data()
     temperature = calculate_market_temperature(data)
 
-    assert temperature.score == 44
+    assert temperature.score == 42
     assert temperature.label == "보통"
     assert temperature.components == {
         "volume_activity": 15,
-        "news_attention": 2,
+        "news_attention": 0,
         "community_activity": 17,
         "fear_greed_intensity": 10,
     }
@@ -37,11 +37,11 @@ def test_renormalizes_when_community_source_is_unavailable():
 
     assert temperature.components == {
         "volume_activity": 15,
-        "news_attention": 2,
+        "news_attention": 0,
         "fear_greed_intensity": 10,
     }
     assert temperature.weight_covered == 75
-    assert temperature.score == 36
+    assert temperature.score == 33
     assert temperature.data_coverage == ["price", "news", "disclosure", "community"]
 
 
@@ -65,18 +65,35 @@ def test_falls_back_to_result_count_when_relevant_count_is_missing():
 
     temperature = calculate_market_temperature(data)
 
-    assert temperature.components["news_attention"] == 2
+    assert temperature.components["news_attention"] == 0
     assert temperature.weight_covered == 100
 
 
 def test_prefers_relevant_count_over_total_result_count():
     data = collected_data()
-    data.news["relevant_count"] = 80
+    data.news["relevant_count"] = 100
     data.news["result_count"] = 1
+    data.news["span_hours"] = 1.5  # 대형주: 100건이 1.5시간 만에 쌓임 → 만점
 
     temperature = calculate_market_temperature(data)
 
     assert temperature.components["news_attention"] == 25
+
+
+def test_news_attention_uses_time_to_collect_100_articles():
+    data = collected_data()
+    # 92건이 36시간 → 100건 환산 39시간 → 로그 스케일 중간
+    data.news["relevant_count"] = 92
+    data.news["span_hours"] = 36.0
+    assert calculate_market_temperature(data).components["news_attention"] == 11
+    # 10건이 7일 → 100건 환산 1,680시간 → 0점
+    data.news["relevant_count"] = 10
+    data.news["span_hours"] = 168.0
+    assert calculate_market_temperature(data).components["news_attention"] == 0
+    # 구버전 MCP(span 없음)는 80건 만점 규칙으로 폴백
+    data.news["relevant_count"] = 40
+    data.news.pop("span_hours")
+    assert calculate_market_temperature(data).components["news_attention"] == 12
 
 
 def test_evidence_is_high_when_all_sources_and_official_evidence_exist():

@@ -63,6 +63,7 @@ def map_upstream_response(
     seen: set[str] = set()
     articles: list[Article] = []
     relevant_count = 0
+    oldest_relevant_at: str | None = None
 
     for item in payload.get("items", []):
         headline = _clean_text(item.get("title", ""))
@@ -82,6 +83,8 @@ def map_upstream_response(
 
         seen.add(dedupe_key)
         relevant_count += 1
+        if published_at and (oldest_relevant_at is None or published_at < oldest_relevant_at):
+            oldest_relevant_at = published_at
         if len(articles) < request["limit"]:
             articles.append(
                 {
@@ -95,6 +98,7 @@ def map_upstream_response(
             )
 
     status = "success" if articles else "no_data"
+    current = now or datetime.now(timezone.utc)
     return {
         "request_id": str(uuid4()),
         "status": status,
@@ -103,8 +107,18 @@ def map_upstream_response(
         "articles": articles,
         "result_count": len(articles),
         "relevant_count": relevant_count,
-        "collected_at": (now or datetime.now(timezone.utc)).isoformat().replace("+00:00", "Z"),
+        "span_hours": _span_hours(current, oldest_relevant_at),
+        "oldest_relevant_at": oldest_relevant_at,
+        "collected_at": current.isoformat().replace("+00:00", "Z"),
     }
+
+
+def _span_hours(now: datetime, oldest_relevant_at: str | None) -> float | None:
+    """가장 오래된 관련 기사부터 지금까지 걸린 시간(시간 단위). 관련 기사가 쌓인 속도의 분모."""
+    if not oldest_relevant_at:
+        return None
+    oldest = datetime.fromisoformat(oldest_relevant_at.replace("Z", "+00:00"))
+    return round(max((now - oldest).total_seconds(), 0.0) / 3600, 2)
 
 
 def fetch_news(
@@ -118,6 +132,9 @@ def fetch_news(
         response["relevant_count"] = sum(
             article.get("relevance") == "high" for article in response.get("articles", [])
         )
+        dated = sorted(a["published_at"] for a in response.get("articles", []) if a.get("published_at"))
+        response["oldest_relevant_at"] = dated[0] if dated else None
+        response["span_hours"] = _span_hours(datetime.now(timezone.utc), response["oldest_relevant_at"])
         return response
 
     owns_client = client is None

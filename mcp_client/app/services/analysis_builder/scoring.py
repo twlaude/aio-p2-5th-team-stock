@@ -22,6 +22,23 @@ def _component_score(value: float, divisor: float, weight: int) -> int:
     return round(normalized * weight)
 
 
+# 뉴스 관심 = 관련 기사 100건이 쌓이는 데 걸리는 시간. 6시간이면 만점, 7일(168시간) 이상이면 0점, 사이는 로그 스케일.
+_NEWS_HOT_HOURS_PER_100 = 6.0
+_NEWS_COLD_HOURS_PER_100 = 168.0
+
+
+def _news_attention_score(count: float, span_hours: float | None, weight: int) -> int:
+    if span_hours is None or span_hours <= 0 or count <= 0:
+        # 구버전 News MCP(span 없음) 폴백: 절대 건수 80건 만점
+        return _component_score(count, 80.0, weight)
+    hours_per_100 = span_hours * 100.0 / count
+    clamped = max(_NEWS_HOT_HOURS_PER_100, min(hours_per_100, _NEWS_COLD_HOURS_PER_100))
+    normalized = (math.log(_NEWS_COLD_HOURS_PER_100) - math.log(clamped)) / (
+        math.log(_NEWS_COLD_HOURS_PER_100) - math.log(_NEWS_HOT_HOURS_PER_100)
+    )
+    return round(normalized * weight)
+
+
 def _temperature_label(score: int) -> str:
     if score < 20:
         return "관심 낮음"
@@ -53,7 +70,9 @@ def calculate_market_temperature(data: CollectedData) -> MarketTemperature:
         if news_count is None:
             news_count = _optional_float(data.news.get("result_count"))
         if news_count is not None:
-            components["news_attention"] = _component_score(news_count, 80.0, 25)
+            components["news_attention"] = _news_attention_score(
+                news_count, _optional_float(data.news.get("span_hours")), 25
+            )
             weight_covered += 25
 
     if data.community.get("status") == "success":
