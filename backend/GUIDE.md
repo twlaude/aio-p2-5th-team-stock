@@ -127,8 +127,9 @@ docker compose up -d
 - Redis `backend:short_term:*` 스냅샷 (지금 활성 단기 Memory, TTL 포함)
 - PostgreSQL `analysis_runs` 최근 30건 (`status`, `partial_failures` 포함 — 어느 MCP가 왜 실패했는지 여기서 보인다)
 - 이후 변화는 폴링이 아니라 **Redis Pub/Sub(`backend:live-events`) → SSE**로 실시간 push된다. `set_state()`와 `analysis_repository.save_run()`이 매번 이벤트를 발행한다.
+- MCP Inspector 바로가기 링크 4개(Price/News/Disclosure/Community). `MCP_PUBLIC_HOST`로 만든다 — `mcp_client_url`의 호스트를 쓰면 안 된다(백엔드가 mcp_client에 접속하는 내부 주소라서 같은 서버면 `localhost`가 되고, 브라우저에서는 그 주소로 못 들어간다). 배포 환경에서는 브라우저가 실제로 접속 가능한 IP/도메인으로 반드시 채운다.
 
-배포 환경에서는 `.env`의 `ADMIN_USERNAME`/`ADMIN_PASSWORD`를 기본값에서 반드시 바꾼다.
+배포 환경에서는 `.env`의 `ADMIN_USERNAME`/`ADMIN_PASSWORD`를 기본값에서 반드시 바꾸고, `MCP_PUBLIC_HOST`도 그 서버의 공인 주소로 채운다.
 
 ## Backend에서 하지 않는 일
 
