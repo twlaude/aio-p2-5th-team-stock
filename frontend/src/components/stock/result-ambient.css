@@ -1,7 +1,8 @@
-.result-ambient-host { position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; }
+.result-ambient-host { position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; container-type: inline-size; }
 .result-ambient-host__content { position: relative; z-index: 1; width: 100%; display: flex; flex-direction: column; align-items: center; }
 
 .result-ambient { position: absolute; left: 50%; top: 50%; width: 0; height: 0; z-index: 0; pointer-events: none; }
+.result-ambient__compact { display: none; }
 .result-ambient__anchor { position: absolute; left: 0; top: 0; display: block; will-change: transform, opacity; }
 .result-ambient__topic {
   --push-x: 0px; --push-y: 0px; --topic-scale: 1; --amp-x: 4px; --amp-y: 10px; --rot: 2deg;
@@ -23,4 +24,30 @@
 
 .result-ambient--static .result-ambient__topic { animation: none; }
 @media (prefers-reduced-motion: reduce) { .result-ambient__topic { animation: none; } }
-@media (max-width: 480px) { .result-ambient__topic { font-size: 12px; padding: 6px 10px; opacity: 0.8; } }
+/* 정적 칩 줄: compact 컨테이너(<37.5rem) 또는 링 폴백(--forced)일 때만 보인다 */
+.result-ambient__compact--forced { display: flex; }
+@container (inline-size < 37.5rem) {
+  .result-ambient__compact { display: flex; }
+}
+.result-ambient__compact,
+.result-ambient__compact--forced {
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 8px;
+    gap: 6px 8px;
+    pointer-events: none;
+  }
+  .result-ambient__compact .result-ambient__topic {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: min(160px, 100%);
+    padding: 6px 10px;
+    font-size: 12px;
+    opacity: 0.86;
+    transform: none;
+    animation: none;
+  }
+}

@@ -8,7 +8,6 @@
 }
 .why-button svg { color: var(--c-primary); }
 .why-button::after { position: absolute; inset: 0; border: 1px solid var(--c-ink); border-radius: inherit; content: ""; animation: why-ring 2.4s ease-out infinite; }
-.why-button:hover { transform: scale(1.03); box-shadow: 0 16px 32px rgba(21, 31, 25, 0.26), 0 0 0 6px rgba(252, 253, 251, 0.9); }
 .why-button:active { transform: scale(0.97); }
 .why-button:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
 .why-button-wrap__chevron { color: var(--c-ink); animation: why-nudge 1.4s ease-in-out infinite; }
@@ -19,6 +18,10 @@
   .why-button, .why-button::after, .why-button-wrap__chevron { animation: none; transition: opacity 180ms ease; }
 }
 
-@media (max-width: 480px) {
+@media (hover: hover) {
+  .why-button:hover { transform: scale(1.03); box-shadow: 0 16px 32px rgba(21, 31, 25, 0.26), 0 0 0 6px rgba(252, 253, 251, 0.9); }
+}
+
+@container result (inline-size < 37.5rem) {
   .why-button { min-height: 54px; padding: 0 24px 0 20px; font-size: 16px; }
 }

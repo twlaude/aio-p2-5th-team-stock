@@ -32,6 +32,18 @@ interface Placed {
   rot: number;
 }
 
+export const COMPACT_TOPIC_LIMIT = 6;
+
+/** 링 배치가 이 개수 미만이면 정적 칩 줄로 폴백한다 */
+const RING_MIN_PLACED = 4;
+
+export function selectCompactTopics(topics: TopicEvidence[]) {
+  return topics
+    .map((topic, index) => ({ topic, index, label: shortenTopic(topic.text) }))
+    .sort((a, b) => b.topic.weight - a.topic.weight)
+    .slice(0, COMPACT_TOPIC_LIMIT);
+}
+
 function mulberry32(seed: number) {
   let state = seed >>> 0;
   return () => {
@@ -60,9 +72,10 @@ interface BubbleRect {
 
 interface Bounds {
   mobile: boolean;
-  viewportHalf: number;
+  containerHalf: number;
   hostHalfH: number;
   bubble: BubbleRect;
+  avoid: { left: number; right: number; top: number; bottom: number }[];
 }
 
 function measureBubble(host: HTMLElement): BubbleRect | null {
@@ -78,10 +91,26 @@ function measureBubble(host: HTMLElement): BubbleRect | null {
   return { halfW: bubble.offsetWidth / 2, top: top - centerY, bottom: top + bubble.offsetHeight - centerY };
 }
 
-function boundsFor(host: HTMLElement, viewportWidth: number): Bounds | null {
+function boundsFor(host: HTMLElement, availableWidth: number): Bounds | null {
   const bubble = measureBubble(host);
   if (!bubble) return null;
-  return { mobile: viewportWidth <= 480, viewportHalf: viewportWidth / 2, hostHalfH: host.offsetHeight / 2, bubble };
+  const hostRect = host.getBoundingClientRect();
+  const hostCenterX = hostRect.left + hostRect.width / 2;
+  const hostCenterY = hostRect.top + host.offsetHeight / 2;
+  const avoid = [...(host.closest(".result-section") ?? host).querySelectorAll<HTMLElement>(
+    ".one-liner__caption, .one-liner__materials, .why-button",
+  )].map((element) => {
+    const rect = element.getBoundingClientRect();
+    const centerX = (rect.left + rect.right) / 2 - hostCenterX;
+    const centerY = (rect.top + rect.bottom) / 2 - hostCenterY;
+    return {
+      left: centerX - element.offsetWidth / 2,
+      right: centerX + element.offsetWidth / 2,
+      top: centerY - element.offsetHeight / 2,
+      bottom: centerY + element.offsetHeight / 2,
+    };
+  });
+  return { mobile: availableWidth < 600, containerHalf: availableWidth / 2, hostHalfH: host.offsetHeight / 2, bubble, avoid };
 }
 
 /** 칩 실제 폭(반폭) 측정 — 캔버스 measureText. 캔버스 없으면(jsdom) 글자수 근사 */
@@ -97,8 +126,13 @@ function measureHalfWidths(host: HTMLElement, labels: string[], mobile: boolean)
 const CHIP_HALF_H = 15;
 const GAP = 12; // 부유 진폭(x≤5, y≤11)까지 감안한 여유
 
-function overlaps(a: { x: number; y: number; halfW: number }, b: { x: number; y: number; halfW: number }) {
-  return Math.abs(a.x - b.x) < a.halfW + b.halfW + GAP && Math.abs(a.y - b.y) < CHIP_HALF_H * 2 + GAP;
+function overlaps(a: { x: number; y: number; halfW: number }, b: { x: number; y: number; halfW: number }, gap = GAP) {
+  return Math.abs(a.x - b.x) < a.halfW + b.halfW + gap && Math.abs(a.y - b.y) < CHIP_HALF_H * 2 + gap;
+}
+
+function overlapsTarget(chip: { x: number; y: number; halfW: number }, target: Bounds["avoid"][number], gap: number) {
+  return chip.x + chip.halfW + gap > target.left && chip.x - chip.halfW - gap < target.right
+    && chip.y + CHIP_HALF_H + gap > target.top && chip.y - CHIP_HALF_H - gap < target.bottom;
 }
 
 /**
@@ -109,13 +143,15 @@ function overlaps(a: { x: number; y: number; halfW: number }, b: { x: number; y:
  */
 function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidths: number[], labels: string[]): Placed[] {
   const rand = mulberry32(seed);
-  const { bubble, mobile, hostHalfH, viewportHalf } = bounds;
+  const { bubble, mobile, hostHalfH, containerHalf } = bounds;
+  const constrained = containerHalf < 600;
+  const collisionGap = constrained ? 24 : GAP;
   const widest = halfWidths.length ? Math.max(...halfWidths) : mobile ? 44 : 54;
   const slots: { x: number; y: number; angle: number }[] = [];
 
   if (mobile) {
     // 위 2개는 캡션 양옆(차트 안 건드림), 아래 2개는 why 버튼 아래 양옆
-    const xTop = Math.min(bubble.halfW - 30, viewportHalf - widest - 6);
+    const xTop = Math.min(bubble.halfW - 30, containerHalf - widest - 6);
     const xBottom = Math.max(60, bubble.halfW - 40);
     slots.push(
       { x: -xTop, y: -hostHalfH + 16, angle: Math.PI },
@@ -125,7 +161,7 @@ function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidth
     );
   } else {
     const count = 12;
-    const rx = Math.min(bubble.halfW + 64, viewportHalf - widest - 10);
+    const rx = Math.min(bubble.halfW + 64, containerHalf - widest - 10);
     const ry = hostHalfH + 34;
     const step = (Math.PI * 2) / count;
     for (let i = 0; i < count; i += 1) {
@@ -150,7 +186,7 @@ function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidth
       if (Math.abs(y - bubbleMidY) < bubbleHalfH + CHIP_HALF_H) {
         // 옆구리: 말풍선 테두리 바깥으로. 화면 밖이면 뺀다
         const needX = bubble.halfW + halfW + 10;
-        if (needX > viewportHalf - 8) return;
+        if (needX > containerHalf - 8) return;
         x = Math.sign(x) * needX;
       }
       if (Math.sin(slot.angle) > 0.85) {
@@ -162,13 +198,14 @@ function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidth
     const dirX = Math.cos(slot.angle);
     const dirY = Math.sin(slot.angle);
     let tries = 0;
-    while (placed.some((other) => overlaps({ x, y, halfW }, other))) {
+    while (placed.some((other) => overlaps({ x, y, halfW }, other, collisionGap))
+      || (constrained && bounds.avoid.some((target) => overlapsTarget({ x, y, halfW }, target, GAP)))) {
       if (tries >= 8) return;
       x += dirX * 22;
       y += dirY * 12;
       tries += 1;
     }
-    if (Math.abs(x) + halfW > viewportHalf - 6) return;
+    if (Math.abs(x) + halfW > containerHalf - 6) return;
 
     const weight = Math.max(1, Math.min(5, topic.weight));
     placed.push({
@@ -217,20 +254,28 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
   useLayoutEffect(() => {
     const measure = () => {
       if (!hostRef.current) return;
-      setBounds(boundsFor(hostRef.current, window.innerWidth));
+      setBounds(boundsFor(hostRef.current, hostRef.current.clientWidth));
     };
     measure();
+    const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(measure);
+    if (hostRef.current) observer?.observe(hostRef.current);
     window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener("resize", measure);
+    };
   }, []);
 
   const seed = useMemo(() => hashText(topics.map((t) => t.text).join("|")) ^ (runId * 2654435761), [topics, runId]);
   const labels = useMemo(() => topics.map((t) => shortenTopic(t.text)), [topics]);
+  const compactTopics = useMemo(() => selectCompactTopics(topics), [topics]);
   const placed = useMemo(() => {
-    if (!bounds || !topics.length || !hostRef.current) return [];
+    if (!bounds || bounds.mobile || !topics.length || !hostRef.current) return [];
     const halfWidths = measureHalfWidths(hostRef.current, labels, bounds.mobile);
     return layout(topics, bounds, seed, halfWidths, labels);
   }, [bounds, topics, seed, labels]);
+  // 링에 칩이 거의 안 놓이면(좁은 medium·1024 등에서 회피 대상에 전부 튕김) 키워드가 사라지지 않게 정적 줄로 폴백
+  const useCompact = Boolean(bounds && (bounds.mobile || (topics.length >= RING_MIN_PLACED && placed.length < RING_MIN_PLACED)));
   const canHover = typeof window !== "undefined" && window.matchMedia?.("(hover: hover) and (pointer: fine)").matches;
 
   return (
@@ -240,7 +285,19 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
       onMouseMove={canHover && !reducedMotion ? (event) => pushBubbles(event.currentTarget, event) : undefined}
       onMouseLeave={canHover && !reducedMotion ? (event) => pushBubbles(event.currentTarget, null) : undefined}
     >
-      {placed.length ? (
+      {useCompact && compactTopics.length ? (
+        <div className={`result-ambient__compact${bounds?.mobile ? "" : " result-ambient__compact--forced"}`} aria-hidden="true" data-count={compactTopics.length}>
+          {compactTopics.map(({ topic, index, label }) => (
+            <span
+              key={`${runId}-${topic.text}-${index}`}
+              className={`result-ambient__topic result-ambient__topic--${topic.sentiment}`}
+            >
+              {label}
+            </span>
+          ))}
+        </div>
+      ) : null}
+      {!useCompact && placed.length ? (
         <div className={`result-ambient${reducedMotion ? " result-ambient--static" : ""}`} aria-hidden="true" data-count={placed.length}>
           {placed.map((item, index) => (
             <motion.span

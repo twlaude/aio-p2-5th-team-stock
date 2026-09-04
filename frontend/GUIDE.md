@@ -73,6 +73,22 @@ docker run --rm -p 8501:8501 --env-file .env.example sallae-frontend
 
 Dockerfile은 `node:22-alpine`에서 `npm ci`, `npm run build`를 수행하고 Vite preview로 `8501` 포트를 연다.
 
+## 반응형 규칙
+
+| 사이즈 클래스 | 범위 | 페이지 껍데기 용도 |
+|---|---:|---|
+| compact | `<600px` | 모바일 나브, 섹션 패딩, 단일 컬럼 |
+| medium | `600~839px` | 축소 패딩, 중간 컬럼 |
+| expanded | `>=840px` | 중앙 데스크톱 컬럼 |
+
+- 짧은 화면은 `(max-height: 520px)`, 초대형은 `1600px`과 `2000px` 단계만 예외로 둔다.
+- 큰 글자는 `tokens.css`의 `--fs-display`부터 `--fs-caption`까지 clamp 토큰을 쓴다.
+- 나브·히어로·섹션 패딩·페이지 컬럼 수만 뷰포트 쿼리로 바꾼다.
+- 카드·리스트 행처럼 재사용되는 UI는 `container-type: inline-size`와 `@container`로 부모 폭에 반응시킨다.
+- 그리드는 우선 `auto-fit`과 `minmax()`로 구성하고, 칩은 `flex-wrap`으로 줄바꿈한다.
+- 포인터가 coarse면 탭 타깃을 최소 44px로 만들고, hover 효과는 `(hover: hover)` 안에만 둔다.
+- 전체 매트릭스는 `node tests/responsive.mjs`로 10개 뷰포트 × 3개 상태를 headless 검증한다.
+
 ## Env
 
 ```text

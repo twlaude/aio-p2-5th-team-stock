@@ -1,5 +1,5 @@
 import { MessageCircle, Newspaper, FileText, Scale } from "lucide-react";
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 
 import { EvidenceSubsection } from "../../components/analysis/EvidenceSubsection";
 import { GapCheckCard } from "../../components/analysis/GapCheckCard";
@@ -13,16 +13,18 @@ import "./evidenceSection.css";
 type EvidenceTab = "gap" | "community" | "news" | "disclosure";
 
 const tabs = [
-  { key: "gap", id: "evidence-gap", label: "분위기 vs 근거", Icon: Scale },
-  { key: "community", id: "evidence-community", label: "커뮤니티 반응", Icon: MessageCircle },
-  { key: "news", id: "evidence-news", label: "최신 뉴스", Icon: Newspaper },
-  { key: "disclosure", id: "evidence-disclosure", label: "기업보고서·공시", Icon: FileText },
-] satisfies Array<{ key: EvidenceTab; id: string; label: string; Icon: typeof MessageCircle }>;
+  { key: "gap", id: "evidence-gap", label: "분위기 vs 근거", shortLabel: "온도차", Icon: Scale },
+  { key: "community", id: "evidence-community", label: "커뮤니티 반응", shortLabel: "커뮤니티", Icon: MessageCircle },
+  { key: "news", id: "evidence-news", label: "최신 뉴스", shortLabel: "뉴스", Icon: Newspaper },
+  { key: "disclosure", id: "evidence-disclosure", label: "기업보고서·공시", shortLabel: "공시", Icon: FileText },
+] satisfies Array<{ key: EvidenceTab; id: string; label: string; shortLabel: string; Icon: typeof MessageCircle }>;
 
 export function EvidenceSection() {
   const { result, status, retry } = useSearch();
   const [activeTab, setActiveTab] = useState<EvidenceTab>("gap");
   const [navOffset, setNavOffset] = useState(0);
+  const tabRowRef = useRef<HTMLDivElement | null>(null);
+  const tabRefs = useRef<Partial<Record<EvidenceTab, HTMLButtonElement>>>({});
 
   useEffect(() => {
     const updateOffset = () => {
@@ -65,6 +67,26 @@ export function EvidenceSection() {
     return () => observer.disconnect();
   }, [result, navOffset]);
 
+  useEffect(() => {
+    if (!window.matchMedia("(max-width: 599px)").matches) {
+      return;
+    }
+    const row = tabRowRef.current;
+    const activeButton = tabRefs.current[activeTab];
+    if (!row || !activeButton) {
+      return;
+    }
+    const rowRect = row.getBoundingClientRect();
+    if (rowRect.bottom <= 0 || rowRect.top >= window.innerHeight) {
+      return;
+    }
+    activeButton.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      block: "nearest",
+      inline: "nearest",
+    });
+  }, [activeTab]);
+
   if (status !== "ready" || !result) {
     return null;
   }
@@ -93,7 +115,10 @@ export function EvidenceSection() {
 
   const handleTabClick = (id: string, key: EvidenceTab) => {
     setActiveTab(key);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById(id)?.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      block: "start",
+    });
   };
 
   return (
@@ -113,17 +138,23 @@ export function EvidenceSection() {
           <GaugeCard variant="evidence" level={detail.evidence_level.level} reason={detail.evidence_level.reason} />
         </div>
         <nav className="sallae-evidence-section__tabs" aria-label="근거 상세 이동">
-          <div className="sallae-evidence-section__tab-row">
-            {tabs.map(({ key, id, label, Icon }) => (
+          <div className="sallae-evidence-section__tab-row" ref={tabRowRef}>
+            {tabs.map(({ key, id, label, shortLabel, Icon }) => (
               <button
                 type="button"
                 className={["sallae-evidence-section__tab", activeTab === key ? "sallae-evidence-section__tab--active" : ""].join(" ")}
+                aria-label={label}
                 aria-current={activeTab === key ? "true" : undefined}
                 key={key}
                 onClick={() => handleTabClick(id, key)}
+                ref={(node) => {
+                  if (node) tabRefs.current[key] = node;
+                  else delete tabRefs.current[key];
+                }}
               >
-                <Icon size={17} strokeWidth={1.9} />
-                {label}
+                <Icon size={17} strokeWidth={1.9} aria-hidden="true" />
+                <span className="sallae-evidence-section__tab-label">{label}</span>
+                <span className="sallae-evidence-section__tab-label--short" aria-hidden="true">{shortLabel}</span>
               </button>
             ))}
           </div>

@@ -20,12 +20,12 @@ export function Nav({ session, onLogout }: NavProps) {
           <>
             <div className="user-pill" aria-label={`${session.user.display_name} 로그인됨`}>
               <User size={16} aria-hidden="true" />
-              <span>{session.user.username}</span>
-              <span>{session.user.display_name}</span>
+              <span className="user-pill__username">{session.user.username}</span>
+              <span className="user-pill__display-name">{session.user.display_name}</span>
             </div>
-            <button className="ghost-button" type="button" onClick={onLogout}>
+            <button className="ghost-button" type="button" onClick={onLogout} aria-label="로그아웃">
               <LogOut size={16} aria-hidden="true" />
-              로그아웃
+              <span className="ghost-button__label">로그아웃</span>
             </button>
           </>
         ) : (
