@@ -2,6 +2,7 @@
 .result-ambient-host__content { position: relative; z-index: 1; width: 100%; display: flex; flex-direction: column; align-items: center; }
 
 .result-ambient { position: absolute; left: 50%; top: 50%; width: 0; height: 0; z-index: 0; pointer-events: none; }
+.result-ambient__compact { display: none; }
 .result-ambient__anchor { position: absolute; left: 0; top: 0; display: block; will-change: transform, opacity; }
 .result-ambient__topic {
   --push-x: 0px; --push-y: 0px; --topic-scale: 1; --amp-x: 4px; --amp-y: 10px; --rot: 2deg;
@@ -23,4 +24,26 @@
 
 .result-ambient--static .result-ambient__topic { animation: none; }
 @media (prefers-reduced-motion: reduce) { .result-ambient__topic { animation: none; } }
-@media (max-width: 480px) { .result-ambient__topic { font-size: 12px; padding: 6px 10px; opacity: 0.8; } }
+@media (max-width: 600px) {
+  .result-ambient__compact {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 8px;
+    gap: 6px 8px;
+    pointer-events: none;
+  }
+  .result-ambient__compact .result-ambient__topic {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: min(160px, 100%);
+    padding: 6px 10px;
+    font-size: 12px;
+    opacity: 0.86;
+    transform: none;
+    animation: none;
+  }
+}

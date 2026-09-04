@@ -32,6 +32,15 @@ interface Placed {
   rot: number;
 }
 
+export const COMPACT_TOPIC_LIMIT = 6;
+
+export function selectCompactTopics(topics: TopicEvidence[]) {
+  return topics
+    .map((topic, index) => ({ topic, index, label: shortenTopic(topic.text) }))
+    .sort((a, b) => b.topic.weight - a.topic.weight)
+    .slice(0, COMPACT_TOPIC_LIMIT);
+}
+
 function mulberry32(seed: number) {
   let state = seed >>> 0;
   return () => {
@@ -81,7 +90,7 @@ function measureBubble(host: HTMLElement): BubbleRect | null {
 function boundsFor(host: HTMLElement, viewportWidth: number): Bounds | null {
   const bubble = measureBubble(host);
   if (!bubble) return null;
-  return { mobile: viewportWidth <= 480, viewportHalf: viewportWidth / 2, hostHalfH: host.offsetHeight / 2, bubble };
+  return { mobile: viewportWidth <= 600, viewportHalf: viewportWidth / 2, hostHalfH: host.offsetHeight / 2, bubble };
 }
 
 /** 칩 실제 폭(반폭) 측정 — 캔버스 measureText. 캔버스 없으면(jsdom) 글자수 근사 */
@@ -226,8 +235,9 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
 
   const seed = useMemo(() => hashText(topics.map((t) => t.text).join("|")) ^ (runId * 2654435761), [topics, runId]);
   const labels = useMemo(() => topics.map((t) => shortenTopic(t.text)), [topics]);
+  const compactTopics = useMemo(() => selectCompactTopics(topics), [topics]);
   const placed = useMemo(() => {
-    if (!bounds || !topics.length || !hostRef.current) return [];
+    if (!bounds || bounds.mobile || !topics.length || !hostRef.current) return [];
     const halfWidths = measureHalfWidths(hostRef.current, labels, bounds.mobile);
     return layout(topics, bounds, seed, halfWidths, labels);
   }, [bounds, topics, seed, labels]);
@@ -240,6 +250,18 @@ export function ResultAmbient({ topics, runId, children }: ResultAmbientProps) {
       onMouseMove={canHover && !reducedMotion ? (event) => pushBubbles(event.currentTarget, event) : undefined}
       onMouseLeave={canHover && !reducedMotion ? (event) => pushBubbles(event.currentTarget, null) : undefined}
     >
+      {bounds?.mobile && compactTopics.length ? (
+        <div className="result-ambient__compact" aria-hidden="true" data-count={compactTopics.length}>
+          {compactTopics.map(({ topic, index, label }) => (
+            <span
+              key={`${runId}-${topic.text}-${index}`}
+              className={`result-ambient__topic result-ambient__topic--${topic.sentiment}`}
+            >
+              {label}
+            </span>
+          ))}
+        </div>
+      ) : null}
       {placed.length ? (
         <div className={`result-ambient${reducedMotion ? " result-ambient--static" : ""}`} aria-hidden="true" data-count={placed.length}>
           {placed.map((item, index) => (
