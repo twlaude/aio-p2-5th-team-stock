@@ -1,0 +1,27 @@
+.hero-shell { position: relative; width: 100vw; margin: -56px calc(50% - 50vw) 0; overflow: hidden; background: var(--c-bg); }
+.hero__content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 28px; padding: 140px 64px 120px; transition: padding 400ms ease; }
+
+/* motion 4b-2 */
+.hero__blob { position: absolute; z-index: 0; border-radius: var(--r-pill); filter: blur(80px); opacity: 0.35; pointer-events: none; }
+.hero__blob--one { top: 110px; left: 9%; width: 240px; height: 240px; background: var(--c-pale); animation: heroBlobA 24s ease-in-out infinite; }
+.hero__blob--two { right: 6%; bottom: 120px; width: 280px; height: 280px; background: var(--c-primary); animation: heroBlobB 30s ease-in-out infinite; }
+.hero__mascot { display: grid; place-items: center; width: 120px; height: 120px; }
+/* 한 줄 고정 + 창 폭에 맞춰 크기(형 지시 9/3): 390px에서 ~28px, 1280px에서 52px */
+.hero__title { margin: 0; color: var(--c-ink); font-size: clamp(28px, 7vw, 52px); font-weight: 900; letter-spacing: -0.01em; line-height: 1.15; text-align: center; white-space: nowrap; transition: font-size 400ms ease; }
+.hero__subtitle { max-height: 40px; margin: 0; overflow: hidden; color: var(--c-sub); font-size: 18px; line-height: 1.5; text-align: center; transition: max-height 400ms ease, opacity 300ms ease, transform 400ms ease; }
+.hero__search, .hero__chips { width: min(720px, 100%); }
+
+/* motion 4b-4 */
+.hero-shell--compressed .hero__content { padding-top: 72px; padding-bottom: 40px; }
+.hero-shell--notice .hero__content, .hero-shell--error .hero__content { padding-bottom: 24px; }
+.hero-shell--compressed .hero__title { font-size: clamp(24px, 5.4vw, 40px); }
+.hero-shell--compressed .hero__subtitle { max-height: 0; opacity: 0; transform: translateY(-8px); }
+
+@media (max-width: 720px) {
+  .hero-shell { margin-top: -36px; }
+  .hero__content { padding: 96px 20px 80px; }
+  .hero-shell--compressed .hero__content { padding-top: 56px; padding-bottom: 28px; }
+  .hero__title { font-size: clamp(24px, 7.2vw, 30px); }
+  .hero-shell--compressed .hero__title { font-size: clamp(20px, 6vw, 26px); }
+  .hero__subtitle { max-width: 320px; font-size: 16px; word-break: keep-all; }
+}

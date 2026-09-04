@@ -1,0 +1,4 @@
+.sparkline { display: block; width: 880px; max-width: 100%; height: auto; overflow: visible; }
+.sparkline__baseline { stroke: var(--c-line); stroke-dasharray: 4 6; }
+.sparkline__line { stroke: var(--c-primary-deep); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.5; }
+.sparkline__dot { fill: var(--c-primary-deep); transform-box: fill-box; transform-origin: center; }

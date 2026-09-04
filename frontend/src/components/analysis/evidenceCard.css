@@ -1,0 +1,39 @@
+.analysis-evidence-card { --tilt-x: 0deg; --tilt-y: 0deg; position: relative; display: flex; flex-direction: column; gap: 12px; min-width: 0; padding: 24px; overflow: hidden; border: 1px solid var(--c-line); border-radius: var(--r-lg); background: var(--c-white); box-shadow: var(--shadow-card); opacity: 0; transform: translateY(20px); transition: opacity 420ms ease-out var(--card-delay), transform 420ms ease-out var(--card-delay), box-shadow 180ms ease; }
+.analysis-evidence-card--visible { opacity: 1; transform: translateY(0); }
+.analysis-evidence-card__header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.analysis-evidence-card__title { color: var(--c-ink); font-size: 15px; font-weight: 700; }
+.analysis-evidence-card__meta, .analysis-evidence-card__footer, .analysis-evidence-card__mute { color: var(--c-mute); }
+.analysis-evidence-card__meta, .analysis-evidence-card__failed-label { font-size: 12px; }
+.analysis-evidence-card__failed-label { display: inline-flex; align-items: center; gap: 4px; color: var(--c-danger); }
+.analysis-evidence-card__summary { color: var(--c-body); font-size: 14px; line-height: 1.5; }
+.analysis-evidence-card__body, .analysis-evidence-card__items { color: var(--c-body); font-size: 13px; line-height: 1.5; }
+.analysis-evidence-card__items { display: flex; flex-direction: column; gap: 6px; }
+.analysis-evidence-card__footer { margin-top: auto; font-size: 12px; line-height: 1.45; }
+.analysis-evidence-card__stack { display: flex; height: 8px; overflow: hidden; border-radius: var(--r-pill); background: #f4eeea; }
+.analysis-evidence-card__stack-segment { width: 0; height: 8px; }
+.analysis-evidence-card--visible .analysis-evidence-card__stack-segment { width: var(--segment-width); transition: width 300ms ease-out var(--segment-grow-delay); }
+.analysis-evidence-card__stack-segment--0 { background: var(--c-primary); }
+.analysis-evidence-card__stack-segment--1 { background: #d1d5db; }
+.analysis-evidence-card__stack-segment--2 { background: var(--c-danger); }
+.analysis-evidence-card__retry { align-self: flex-start; padding: 10px 14px; border: 0; border-radius: var(--r-pill); color: var(--c-primary-deep); background: var(--c-pale); font-size: 13px; font-weight: 700; }
+.analysis-evidence-card__retry:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
+.analysis-evidence-card--failed { border-color: transparent; background: linear-gradient(var(--c-white), var(--c-white)) padding-box, repeating-linear-gradient(90deg, var(--c-danger-line) 0 8px, transparent 8px 14px) border-box; background-size: auto, 28px 1px; animation: analysis-dash-flow 3s linear infinite; }
+.analysis-evidence-card--shimmer::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.72), transparent); transform: translateX(-100%); animation: analysis-card-shimmer 600ms ease; }
+
+@keyframes analysis-dash-flow {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 0, 28px 0; }
+}
+
+@keyframes analysis-card-shimmer {
+  to { transform: translateX(100%); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .analysis-evidence-card--visible:hover { box-shadow: var(--shadow-pop); transform: perspective(800px) translateY(-4px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .analysis-evidence-card, .analysis-evidence-card--visible, .analysis-evidence-card--visible:hover, .analysis-evidence-card--visible .analysis-evidence-card__stack-segment { transition: opacity 160ms ease; transform: none; }
+  .analysis-evidence-card--failed, .analysis-evidence-card--shimmer::after { animation: none; }
+}
