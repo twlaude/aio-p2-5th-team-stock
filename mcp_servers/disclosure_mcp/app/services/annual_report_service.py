@@ -10,7 +10,7 @@ from app.clients.embedding import OpenAIEmbeddingClient
 from app.rag import ReportStore, chunk_sections, parse_report_sections
 from app.schemas.re import DartPeriodicReportType
 from app.schemas.search import AnnualReportSearchResponse, MatchedPassage
-from app.services.company import CompanyResolver
+from app.services.company_resolver import CompanyResolver
 
 
 class AnnualReportNotFoundError(LookupError):

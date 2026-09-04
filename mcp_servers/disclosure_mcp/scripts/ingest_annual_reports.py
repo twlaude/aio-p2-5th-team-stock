@@ -19,8 +19,8 @@ from app.clients.embedding import OpenAIEmbeddingClient
 from app.clients.repository import DisclosureRepository
 from app.core.config import get_config
 from app.rag import ReportStore
-from app.services.annual_report import AnnualReportService
-from app.services.company import CompanyResolver
+from app.services.annual_report_service import AnnualReportService
+from app.services.company_resolver import CompanyResolver
 
 
 def main() -> None:
