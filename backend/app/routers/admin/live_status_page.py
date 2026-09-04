@@ -1,4 +1,4 @@
-LIVE_STATUS_HTML = """<!DOCTYPE html>
+_HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -21,11 +21,23 @@ LIVE_STATUS_HTML = """<!DOCTYPE html>
   .empty { color: #6e7681; font-style: italic; }
   .new-row { animation: flash 1.2s ease-out; }
   @keyframes flash { 0% { background: #1f6feb33; } 100% { background: transparent; } }
+  .mcp-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .mcp-links a { color: #58a6ff; background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 6px 10px; text-decoration: none; font-size: 13px; }
+  .mcp-links a:hover { border-color: #58a6ff; }
+  pre { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 10px 12px; font-size: 12px; overflow-x: auto; }
+  .hint { color: #8b949e; font-size: 12px; margin-top: 6px; }
 </style>
 </head>
 <body>
   <h1><span class="dot"></span>실시간 실황</h1>
   <div class="sub" id="conn-status">연결 중...</div>
+
+  <section>
+    <h2>MCP 서버 직접 확인 (MCP Inspector)</h2>
+    <div class="mcp-links">{{MCP_LINKS}}</div>
+    <div class="hint">Node.js 있는 컴퓨터에서 아래 명령으로 Inspector를 띄운 뒤, Transport를 "Streamable HTTP"로 두고 위 주소 중 하나를 넣으면 Tool 목록·직접 호출·raw 응답까지 볼 수 있다.</div>
+    <pre>npx @modelcontextprotocol/inspector</pre>
+  </section>
 
   <section>
     <h2>지금 활성 단기 Memory (Redis, TTL 30분)</h2>
@@ -112,3 +124,10 @@ connect();
 </body>
 </html>
 """
+
+
+def render_live_status_html(mcp_urls: dict[str, str]) -> str:
+    links = " ".join(
+        f'<a href="{url}" target="_blank" rel="noreferrer">{name}</a>' for name, url in mcp_urls.items()
+    )
+    return _HTML_TEMPLATE.replace("{{MCP_LINKS}}", links)
