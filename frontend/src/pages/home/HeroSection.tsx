@@ -114,7 +114,7 @@ export function HeroSection() {
       <div className="hero__blob hero__blob--two" aria-hidden="true" />
       <motion.div className="hero__content" initial={reducedMotion ? "show" : "hidden"} animate="show" variants={heroContainer}>
         <motion.div className="hero__mascot" variants={heroItem}>
-          <Mascot state={mascotState} size={120} />
+          <Mascot state={mascotState} size={120} typingText={query} />
         </motion.div>
         <motion.h1 className="hero__title" variants={heroItem}>
           어떤 종목이 궁금하세요?
