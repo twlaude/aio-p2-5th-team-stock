@@ -85,3 +85,56 @@ def test_evidence_is_high_when_all_sources_and_official_evidence_exist():
     evidence = calculate_evidence_level(data, temperature.data_coverage)
 
     assert evidence.level == "high"
+    assert evidence.material_count == 1
+    assert evidence.matched[0].issue == "대규모 공급계약 효과"
+    assert evidence.matched[0].report_name == "단일판매ㆍ공급계약체결"
+    assert "단일판매ㆍ공급계약체결 공시와 맞아요" in evidence.reason
+    assert evidence.unmatched == ["업황", "삼성전자 관련 뉴스 0", "삼성전자 관련 뉴스 1"]
+
+
+def test_evidence_is_medium_when_material_disclosure_does_not_match_current_issue():
+    data = collected_data()
+    data.material_disclosures["disclosures"][0].update(
+        {"report_name": "최대주주변경", "disclosure_kind": "major"}
+    )
+
+    evidence = calculate_evidence_level(data, [])
+
+    assert evidence.level == "medium"
+    assert evidence.material_count == 1
+    assert evidence.matched == []
+    assert "지금 화제(대규모 공급계약 효과)와 직접 연결되진 않아요" in evidence.reason
+
+
+def test_evidence_is_low_when_no_material_disclosure_exists():
+    data = collected_data()
+    data.material_disclosures = {"status": "success", "disclosures": []}
+
+    evidence = calculate_evidence_level(data, ["price", "news", "community"])
+
+    assert evidence.level == "low"
+    assert evidence.material_count == 0
+    assert evidence.reason == "최근 30일 안에 주요 공시가 없어요. 정기보고서만 있어요"
+
+
+def test_evidence_is_low_with_explicit_reason_when_material_lookup_failed():
+    data = collected_data()
+    data.material_disclosures = {"status": "timeout"}
+
+    evidence = calculate_evidence_level(data, ["price", "news", "disclosure", "community"])
+
+    assert evidence.level == "low"
+    assert evidence.reason == "최근 공시를 확인하지 못했어요"
+    assert evidence.unmatched[0] == "대규모 공급계약 효과"
+
+
+def test_evidence_mentions_missing_issue_when_no_issue_was_extracted():
+    data = collected_data()
+    data.community["top_topics"] = {"expectations": [], "concerns": []}
+    data.news["articles"] = [{"headline": "시장 전체 뉴스"}]
+    data.material_disclosures = {"status": "no_data", "disclosures": []}
+
+    evidence = calculate_evidence_level(data, [])
+
+    assert evidence.level == "low"
+    assert evidence.reason == "화제로 잡힌 이슈가 없어요"

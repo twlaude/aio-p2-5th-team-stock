@@ -94,7 +94,13 @@
     },
     "evidence_level": {
       "level": "medium",
-      "reason": "최근 공시에서 메모리 투자 지속은 확인됐지만, 파운드리 수익성은 아직 확인되지 않았어요."
+      "reason": "최근 30일 주요 공시 1건은 있지만 지금 화제(HBM 수요)와 직접 연결되진 않아요",
+      "matched": [],
+      "unmatched": [
+        "HBM 수요",
+        "파운드리 수익성 회복"
+      ],
+      "material_count": 1
     },
     "news_summary": "반도체 업황 회복과 AI 메모리 수요가 뉴스 흐름의 중심이에요.",
     "disclosure_summary": "시설 투자와 실적 전망 관련 공시를 함께 확인해야 해요.",
@@ -155,6 +161,7 @@
         "meta": {
           "receipt_number": "20260829000123",
           "document_type": "disclosure",
+          "disclosure_kind": "major",
           "confirmed": [
             "메모리 설비 투자 지속",
             "반기보고서 재무 지표 제출",
@@ -174,7 +181,8 @@
         "url": "https://example.com/samsung-disclosure-2",
         "meta": {
           "receipt_number": "20260820000456",
-          "document_type": "disclosure"
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic"
         }
       },
       {
@@ -184,7 +192,8 @@
         "url": "https://example.com/samsung-disclosure-3",
         "meta": {
           "receipt_number": "20260814000789",
-          "document_type": "disclosure"
+          "document_type": "disclosure",
+          "disclosure_kind": "other"
         }
       },
       {
@@ -360,7 +369,12 @@
     },
     "evidence_level": {
       "level": "medium",
-      "reason": "커뮤니티 데이터를 제외하고 뉴스와 공시만 확인했어요."
+      "reason": "최근 30일 주요 공시 1건은 있지만 지금 화제(HBM 수요)와 직접 연결되진 않아요",
+      "matched": [],
+      "unmatched": [
+        "HBM 수요"
+      ],
+      "material_count": 1
     },
     "news_summary": "AI 반도체 기대와 업황 회복 뉴스는 확인돼요.",
     "disclosure_summary": "공시에서는 설비 투자와 재무 지표를 함께 봐야 해요.",
@@ -421,6 +435,7 @@
         "meta": {
           "receipt_number": "20260829000123",
           "document_type": "disclosure",
+          "disclosure_kind": "major",
           "confirmed": [
             "메모리 설비 투자 지속",
             "반기보고서 재무 지표 제출",
@@ -440,7 +455,8 @@
         "url": "https://example.com/samsung-disclosure-2",
         "meta": {
           "receipt_number": "20260820000456",
-          "document_type": "disclosure"
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic"
         }
       },
       {
@@ -450,7 +466,8 @@
         "url": "https://example.com/samsung-disclosure-3",
         "meta": {
           "receipt_number": "20260814000789",
-          "document_type": "disclosure"
+          "document_type": "disclosure",
+          "disclosure_kind": "other"
         }
       }
     ]

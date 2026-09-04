@@ -1,9 +1,10 @@
 import pytest
 
 from app.core.config import settings
-from app.schemas.analysis import MarketTemperature
+from app.schemas.analysis import EvidenceLevel, MarketTemperature
+from app.schemas.profile import InvestmentProfile
 
-from app.services.analysis.narrative import josa, pick_topic
+from app.services.analysis.narrative import compose_one_liner, compose_personal, josa, pick_topic
 
 
 def test_list_companies(client):
@@ -145,3 +146,55 @@ def test_pick_topic_uses_fixed_fallback_without_community_topics():
     sources = [{"source_type": "news", "title": "제목에서 주제를 뽑으면 안 됨"}]
 
     assert pick_topic(sources, "최근 이슈") == "최근 이슈"
+
+
+@pytest.mark.parametrize(
+    ("level", "expected"),
+    [
+        ("high", "관련 공시가 실제로 있어요"),
+        ("medium", "주요 공시는 있지만 지금 화제와는 달라요"),
+    ],
+)
+def test_one_liner_uses_issue_connection_evidence_copy(level, expected):
+    assert expected in compose_one_liner("공급계약", level, 60, 1)
+
+
+@pytest.mark.parametrize(
+    ("preferred_evidence", "expected"),
+    [
+        ("financial", "최근 사업보고서의 매출·영업이익 흐름"),
+        ("news", "최근 기사 내용이 공시로 확인되는지"),
+        ("market", "거래량이 평소보다 늘었는지"),
+        ("risk", "사업보고서의 위험 요인 중 지금 현실화된 게 있는지"),
+    ],
+)
+def test_personalized_first_check_follows_preferred_evidence(preferred_evidence, expected):
+    profile = InvestmentProfile(
+        experience_level="beginner",
+        risk_profile="conservative",
+        investment_horizon="long",
+        preferred_evidence=preferred_evidence,
+    )
+
+    result = compose_personal("삼성전자", "공급계약", 60, "high", profile)
+
+    assert result.priority_checks[0] == expected
+
+
+def test_evidence_level_accepts_and_preserves_issue_match_fields():
+    evidence = EvidenceLevel(
+        level="high",
+        reason="공급계약 공시와 맞아요",
+        matched=[
+            {
+                "issue": "대규모 공급계약 효과",
+                "report_name": "단일판매ㆍ공급계약체결",
+                "receipt_number": "202609040101",
+                "published_at": "2026-09-04T00:00:00Z",
+            }
+        ],
+        unmatched=["업황"],
+        material_count=1,
+    )
+
+    assert evidence.model_dump()["matched"][0]["receipt_number"] == "202609040101"

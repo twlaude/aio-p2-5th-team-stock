@@ -1,4 +1,8 @@
-from app.schemas.analysis import CollectedData, SourceItem
+from collections import defaultdict
+
+from app.schemas.analysis import CollectedData, EvidenceLevel, SourceItem
+from app.services.analysis_builder.issues import extract_issues
+from app.services.analysis_builder.matching import match_issues, recent_material_disclosures
 
 
 def _meta(**values: object) -> dict[str, object]:
@@ -17,7 +21,24 @@ def _community_topics(data: CollectedData) -> list[dict[str, object]]:
     return topics
 
 
-def collect_sources(data: CollectedData) -> list[SourceItem]:
+def _disclosure_source(
+    disclosure: dict[str, object], *, confirmed: list[str] | None = None
+) -> SourceItem:
+    return SourceItem(
+        source_type="disclosure",
+        title=str(disclosure.get("report_name") or "전자공시"),
+        url=disclosure.get("source_url") or None,
+        published_at=disclosure.get("published_at") or None,
+        meta=_meta(
+            confirmed=confirmed,
+            disclosure_kind=disclosure.get("disclosure_kind"),
+            receipt_number=disclosure.get("receipt_number"),
+            document_type=disclosure.get("document_type"),
+        ),
+    )
+
+
+def collect_sources(data: CollectedData, evidence: EvidenceLevel | None = None) -> list[SourceItem]:
     sources: list[SourceItem] = []
     if data.price.get("status") == "success":
         sources.append(
@@ -35,32 +56,84 @@ def collect_sources(data: CollectedData) -> list[SourceItem]:
             )
         )
 
-    for disclosure in (data.disclosures.get("disclosures") or [])[:2]:
-        sources.append(
-            SourceItem(
-                source_type="disclosure",
-                title=str(disclosure.get("report_name") or "전자공시"),
-                url=disclosure.get("source_url") or None,
-                published_at=disclosure.get("published_at") or None,
-                meta=_meta(
-                    receipt_number=disclosure.get("receipt_number"),
-                    document_type=disclosure.get("document_type"),
-                ),
-            )
-        )
+    if evidence is None:
+        issues = extract_issues(data, str(data.price.get("company_name") or ""))
+        match = match_issues(issues, data.material_disclosures)
+        matched = match.matched
+        unconfirmed = match.unmatched
+    else:
+        matched = evidence.matched
+        unconfirmed = evidence.unmatched
 
-    if data.annual_report.get("status") == "success":
-        sources.append(
-            SourceItem(
-                source_type="disclosure",
-                title=str(data.annual_report.get("report_name") or "최신 사업보고서"),
-                url=data.annual_report.get("source_url") or None,
-                meta=_meta(
-                    receipt_number=data.annual_report.get("receipt_number"),
-                    document_type=data.annual_report.get("document_type"),
-                ),
-            )
+    disclosure_sources: list[SourceItem] = []
+    material = recent_material_disclosures(data.material_disclosures)
+    material_by_receipt = {
+        str(item.get("receipt_number")): item for item in material if item.get("receipt_number")
+    }
+    confirmed_by_receipt: dict[str, list[str]] = defaultdict(list)
+    matched_receipts: list[str] = []
+    for item in matched:
+        if item.receipt_number not in confirmed_by_receipt:
+            matched_receipts.append(item.receipt_number)
+        confirmed_by_receipt[item.receipt_number].append(item.issue)
+
+    used_receipts: set[str] = set()
+    for receipt in matched_receipts:
+        disclosure = material_by_receipt.get(receipt)
+        if disclosure is None:
+            continue
+        disclosure_sources.append(
+            _disclosure_source(disclosure, confirmed=confirmed_by_receipt[receipt])
         )
+        used_receipts.add(receipt)
+        if len(disclosure_sources) == 4:
+            break
+
+    if len(disclosure_sources) < 4:
+        remaining_material = next(
+            (
+                item
+                for item in material
+                if str(item.get("receipt_number") or "") not in used_receipts
+            ),
+            None,
+        )
+        if remaining_material is not None:
+            disclosure_sources.append(_disclosure_source(remaining_material))
+            receipt = str(remaining_material.get("receipt_number") or "")
+            if receipt:
+                used_receipts.add(receipt)
+
+    if len(disclosure_sources) < 4:
+        periodic = next(
+            (
+                item
+                for item in (data.disclosures.get("disclosures") or [])
+                if str(item.get("receipt_number") or "") not in used_receipts
+            ),
+            None,
+        )
+        if periodic is not None:
+            periodic = {"disclosure_kind": "periodic", **periodic}
+            disclosure_sources.append(_disclosure_source(periodic))
+            receipt = str(periodic.get("receipt_number") or "")
+            if receipt:
+                used_receipts.add(receipt)
+
+    if len(disclosure_sources) < 4 and data.annual_report.get("status") == "success":
+        annual_report = {
+            "report_name": data.annual_report.get("report_name") or "최신 사업보고서",
+            "source_url": data.annual_report.get("source_url"),
+            "published_at": data.annual_report.get("published_at"),
+            "receipt_number": data.annual_report.get("receipt_number"),
+            "document_type": data.annual_report.get("document_type") or "annual_report",
+            "disclosure_kind": "periodic",
+        }
+        disclosure_sources.append(_disclosure_source(annual_report))
+
+    if disclosure_sources and unconfirmed:
+        disclosure_sources[0].meta["unconfirmed"] = list(unconfirmed)
+    sources.extend(disclosure_sources)
 
     if data.community.get("status") in {"success", "partial_success"}:
         sentiment = data.community.get("sentiment") or {}

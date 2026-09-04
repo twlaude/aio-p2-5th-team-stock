@@ -29,9 +29,19 @@ class MarketTemperature(BaseModel):
     weight_covered: int = Field(default=100, ge=0, le=100)
 
 
+class MatchedDisclosure(BaseModel):
+    issue: str
+    report_name: str
+    receipt_number: str
+    published_at: str
+
+
 class EvidenceLevel(BaseModel):
     level: Literal["low", "medium", "high"]
     reason: str
+    matched: list[MatchedDisclosure] = Field(default_factory=list)
+    unmatched: list[str] = Field(default_factory=list)
+    material_count: int = 0
 
 
 class AnalysisDetail(BaseModel):

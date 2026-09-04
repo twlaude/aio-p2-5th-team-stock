@@ -16,6 +16,7 @@ export interface EvidenceItem {
   url?: string;
   issueCount?: number;
   receiptNo?: string;
+  disclosureKind?: "major" | "periodic";
 }
 
 export type TopicSentiment = "positive" | "neutral" | "negative";
@@ -44,6 +45,11 @@ function numberMeta(meta: AnalysisSource["meta"], key: string) {
 function stringMeta(meta: AnalysisSource["meta"], key: string) {
   const value = meta?.[key];
   return typeof value === "string" && value.trim() ? value.trim() : undefined;
+}
+
+function disclosureKindMeta(meta: AnalysisSource["meta"]): EvidenceItem["disclosureKind"] {
+  const value = meta?.disclosure_kind;
+  return value === "major" || value === "periodic" ? value : undefined;
 }
 
 function stringArrayMeta(meta: AnalysisSource["meta"], key: string) {
@@ -151,6 +157,7 @@ export function deriveItems(sources: AnalysisSource[], type: Exclude<SourceType,
       url: source.url,
       issueCount: numberMeta(source.meta, "issue_count") ?? undefined,
       receiptNo: stringMeta(source.meta, "receipt_number"),
+      disclosureKind: disclosureKindMeta(source.meta),
     }));
 }
 

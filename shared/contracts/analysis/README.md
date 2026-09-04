@@ -82,7 +82,17 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
     },
     "evidence_level": {
       "level": "high",
-      "reason": "공식 근거 확인 수준에 대한 설명"
+      "reason": "현재 이슈가 8월 29일 주요 공시와 맞아요",
+      "matched": [
+        {
+          "issue": "현재 이슈",
+          "report_name": "주요 공시",
+          "receipt_number": "20260829000123",
+          "published_at": "2026-08-29T00:00:00Z"
+        }
+      ],
+      "unmatched": [],
+      "material_count": 1
     },
     "news_summary": "뉴스 요약",
     "disclosure_summary": "공시 요약",
@@ -96,7 +106,7 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
   "sources": [],
   "partial_failures": [],
   "trace_summary": {
-    "tool_calls": 5,
+    "tool_calls": 6,
     "llm_calls": 1,
     "completed_tools": ["get_stock_quote", "search_news"],
     "failed_tools": [],
@@ -120,11 +130,24 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 | `community_activity` | `community.activity.ratio` | `clamp(ratio / 3, 0, 1)` | 25 |
 | `fear_greed_intensity` | `community.fgi_latest.fgi` | `abs(fgi - 50) / 50` | 20 |
 
-출처의 `status`가 `success`가 아니거나 입력값이 없으면 해당 항목은 미가용으로 처리하고 `components`에서 생략한다. 최종 `score`는 `round(가용 항목 점수 합 / 가용 항목 배점 합 * 100)`으로 재정규화하며, 가용 배점이 없으면 0이다. `weight_covered`는 가용 항목의 배점 합으로 0~100이다. `data_coverage`와 `label` 구간, `evidence_level` 계산 규칙은 기존 의미를 유지한다.
+출처의 `status`가 `success`가 아니거나 입력값이 없으면 해당 항목은 미가용으로 처리하고 `components`에서 생략한다. 최종 `score`는 `round(가용 항목 점수 합 / 가용 항목 배점 합 * 100)`으로 재정규화하며, 가용 배점이 없으면 0이다. `weight_covered`는 가용 항목의 배점 합으로 0~100이다. `data_coverage`와 `label` 구간은 기존 의미를 유지한다.
+
+## 공시 근거 v2
+
+`evidence_level`은 자료 종류 수가 아니라 커뮤니티 중심의 현재 이슈와 최근 30일 주요 비정기 공시의 직접 연결 여부로 정한다. 뉴스 이슈는 제목에 정식 회사명이 포함된 기사만 보조로 사용하며 임베딩·유사도 점수는 쓰지 않는다.
+
+| 단계 | 판정 |
+|---|---|
+| `high` | 규칙 사전으로 현재 이슈와 연결된 주요 공시가 1건 이상 |
+| `medium` | 연결 공시는 없지만 최근 30일 주요 공시가 1건 이상 |
+| `low` | 최근 30일 주요 공시가 없음 |
+| `low` (실패) | 주요 비정기 공시 조회 상태가 `success` 또는 `no_data`가 아님 |
+
+`evidence_level.matched[]`는 `issue`, `report_name`, `receipt_number`, `published_at`을 담고, `unmatched[]`는 공시와 연결되지 않은 현재 이슈, `material_count`는 최근 30일 주요 공시 수다. `sources[]`의 공시 메타는 연결된 이슈를 `confirmed`, 미연결 이슈를 첫 공시 source의 `unconfirmed`에 중복 없이 싣고, `disclosure_kind`를 `major`, `periodic`, `other` 중 하나로 표시한다. 공시 source는 연결 주요 공시, 나머지 주요 공시 최대 1건, 정기공시 최대 1건, 사업보고서 순서이며 총 4건 이하다.
 
 ## MCP Client 책임
 
-1. Price·News·Disclosure·Community MCP의 기본 Tool을 병렬로 호출한다.
+1. Price·News·Disclosure·Community MCP의 여섯 기본 Tool(정기공시와 주요 비정기 공시 조회 포함)을 병렬로 호출한다.
 2. 외부 원본 API를 직접 호출하거나 원본 데이터를 저장하지 않는다.
 3. 뉴스 최대 5건, 연관 보고서 청크 3~5개, 커뮤니티 집계 결과만 LLM에 전달한다.
 4. 시장 관심 온도와 근거 확인 정도는 확정 규칙으로 계산하고 LLM은 이를 설명한다.

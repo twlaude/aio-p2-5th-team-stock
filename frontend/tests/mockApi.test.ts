@@ -77,7 +77,20 @@ describe("mock backend api contract", () => {
     expect(response.detail.market_temperature.data_coverage).toEqual(["price", "news", "disclosure", "community"]);
     expect(response.detail.market_temperature.weight_covered).toBe(100);
     expect(response.personalized_checkpoints.priority_checks).toHaveLength(3);
+    expect(response.personalized_checkpoints.priority_checks[0]).toBe("사업보고서의 위험 요인 중 지금 현실화된 게 있는지");
     expect(response.personalized_checkpoints.personal_summary).toContain("큰 변동도 감수하는");
+  });
+
+  it.each([
+    ["SK하이닉스", "관련 공시가 실제로 있어요"],
+    ["SK스퀘어", "주요 공시는 있지만 지금 화제와는 달라요"],
+  ])("keeps mock one-line evidence copy aligned for %s", async (query, expected) => {
+    const api = createMockClient({ delayMs: 0 });
+
+    const response = await api.createAnalysis({ query });
+
+    expectGuest(response);
+    expect(response.one_line_summary).toContain(expected);
   });
 
   it("returns the unsupported company contract fields", async () => {

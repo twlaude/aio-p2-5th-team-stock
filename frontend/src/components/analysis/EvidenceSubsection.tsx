@@ -93,6 +93,7 @@ function SourceLink({ item, kind }: { item: EvidenceItem; kind: Exclude<Evidence
     <>
       <span className="analysis-source-item__title">{item.title}</span>
       {meta ? <span className="analysis-source-item__meta">{meta}</span> : null}
+      {kind === "disclosure" && item.disclosureKind ? <span className="analysis-source-item__badge">{item.disclosureKind === "major" ? "주요 공시" : "정기"}</span> : null}
       {item.issueCount && item.issueCount > 1 ? <span className="analysis-source-item__badge">기사 {item.issueCount}건</span> : null}
       {item.url ? <ExternalLink size={15} strokeWidth={1.8} aria-hidden="true" /> : null}
     </>

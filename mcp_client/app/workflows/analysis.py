@@ -19,6 +19,7 @@ from app.services.analysis_builder import (
     calculate_market_temperature,
     collect_sources,
 )
+from app.services.analysis_builder.matching import recent_material_disclosures
 from app.services.data_collector import DataCollector
 from app.services.progress_reporter import ProgressReporter
 
@@ -39,6 +40,61 @@ class AnalysisWorkflow:
         self.agent = agent
 
     @staticmethod
+    def _ordered_news(data: Any, company_name: str) -> list[dict[str, Any]]:
+        articles = data.news.get("articles") or []
+
+        def group(article: dict[str, Any]) -> int:
+            headline = str(article.get("headline") or "")
+            if company_name and company_name in headline:
+                return 0
+            if article.get("relevance") == "high":
+                return 1
+            return 2
+
+        newest_first = sorted(
+            articles,
+            key=lambda article: str(article.get("published_at") or ""),
+            reverse=True,
+        )
+        return sorted(newest_first, key=group)[:5]
+
+    @staticmethod
+    def _ordered_material(data: Any, evidence: Any) -> list[dict[str, Any]]:
+        material = recent_material_disclosures(data.material_disclosures)
+        by_receipt = {
+            str(item.get("receipt_number")): item for item in material if item.get("receipt_number")
+        }
+        ordered: list[dict[str, Any]] = []
+        used: set[str] = set()
+        for match in evidence.matched:
+            receipt = match.receipt_number
+            if receipt in used or receipt not in by_receipt:
+                continue
+            ordered.append(by_receipt[receipt])
+            used.add(receipt)
+        ordered.extend(
+            item for item in material if str(item.get("receipt_number") or "") not in used
+        )
+        return ordered[:5]
+
+    @staticmethod
+    def _receipt_numbers(data: Any, evidence: Any) -> list[str]:
+        candidates = [
+            *(item.receipt_number for item in evidence.matched),
+            *(
+                str(item.get("receipt_number"))
+                for item in recent_material_disclosures(data.material_disclosures)
+                if item.get("receipt_number")
+            ),
+            *(
+                str(item.get("receipt_number"))
+                for item in (data.disclosures.get("disclosures") or [])
+                if item.get("receipt_number")
+            ),
+        ]
+        return list(dict.fromkeys(candidates))[:5]
+
+    @staticmethod
     def _context(
         request: AnalysisRequest,
         data: Any,
@@ -57,11 +113,17 @@ class AnalysisWorkflow:
                 "price": data.price,
                 "news": {
                     **data.news,
-                    "articles": (data.news.get("articles") or [])[:5],
+                    "articles": AnalysisWorkflow._ordered_news(
+                        data, request.company.company_name
+                    ),
                 },
                 "disclosures": {
                     **data.disclosures,
                     "disclosures": (data.disclosures.get("disclosures") or [])[:5],
+                },
+                "material_disclosures": {
+                    **data.material_disclosures,
+                    "disclosures": AnalysisWorkflow._ordered_material(data, evidence),
                 },
                 "annual_report": {
                     **data.annual_report,
@@ -80,6 +142,7 @@ class AnalysisWorkflow:
                         "top_topics",
                         "representative_evidence",
                         "fgi_latest",
+                        "activity",
                         "source_name",
                         "collected_at",
                     }
@@ -108,11 +171,7 @@ class AnalysisWorkflow:
                 temperature = calculate_market_temperature(data)
                 evidence = calculate_evidence_level(data, temperature.data_coverage)
                 context = self._context(request, data, temperature, evidence)
-                receipt_numbers = [
-                    str(item.get("receipt_number"))
-                    for item in (data.disclosures.get("disclosures") or [])
-                    if item.get("receipt_number")
-                ]
+                receipt_numbers = self._receipt_numbers(data, evidence)
                 agent_result = await self.agent.run(context, receipt_numbers, reporter)
         except TimeoutError:
             await reporter.publish(
@@ -172,7 +231,7 @@ class AnalysisWorkflow:
             price=price,
             common_analysis=common,
             personalized_checkpoints=narrative.personalized_checkpoints,
-            sources=collect_sources(data),
+            sources=collect_sources(data, evidence),
             partial_failures=failures,
             collected_at=datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
             trace_summary=TraceSummary(

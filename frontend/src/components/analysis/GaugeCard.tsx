@@ -110,7 +110,7 @@ export function GaugeCard(props: GaugeCardProps) {
   return (
     // motion 4b-10
     <div ref={ref} className={["analysis-gauge-card", inView ? "analysis-gauge-card--visible" : ""].join(" ")}>
-      <div className="analysis-gauge-card__caption">공시·보고서로 확인된 정도</div>
+      <div className="analysis-gauge-card__caption">뉴스 내용이 공시·보고서로 뒷받침되는 정도</div>
       <div className="analysis-gauge-card__headline">
         <span className="analysis-gauge-card__number">{level.text}</span>
       </div>
