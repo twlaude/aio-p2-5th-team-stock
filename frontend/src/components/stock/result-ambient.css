@@ -9,6 +9,7 @@
   padding: 7px 13px; border: 1.5px solid var(--c-line); border-radius: var(--r-pill);
   background: rgba(255, 255, 255, 0.92); box-shadow: var(--shadow-card);
   color: var(--c-body); font-size: 13px; font-weight: 700; white-space: nowrap; opacity: 0.86;
+  max-width: 200px; overflow: hidden; text-overflow: ellipsis;
   animation: result-ambient-float var(--float-duration) ease-in-out var(--float-delay) infinite alternate;
 }
 .result-ambient__topic--positive { border-color: var(--c-primary); color: var(--c-chip-fg); background: rgba(228, 245, 233, 0.92); }
