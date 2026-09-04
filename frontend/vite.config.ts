@@ -21,6 +21,12 @@ export default defineConfig(({ mode }) => {
     preview: {
       host: "0.0.0.0",
       port: 8501,
+      proxy: {
+        "/api": {
+          target: backendUrl,
+          changeOrigin: true,
+        },
+      },
     },
     test: {
       globals: false,

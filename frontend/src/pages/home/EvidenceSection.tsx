@@ -90,7 +90,7 @@ export function EvidenceSection() {
   return (
     <section id="evidence" className="sallae-evidence-section" style={{ "--nav-offset": `${navOffset}px` } as CSSProperties}>
       <div className="sallae-evidence-section__inner">
-        {result.status === "partial_completed" ? <PartialNotice /> : null}
+        {result.status === "partial_success" ? <PartialNotice /> : null}
         <div className="sallae-evidence-section__gauges">
           <GaugeCard
             variant="temperature"

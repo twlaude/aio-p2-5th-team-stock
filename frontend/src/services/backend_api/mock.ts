@@ -330,7 +330,7 @@ function buildTemplateResponse(company: Company, user: DemoUser, partial = false
 
   return {
     request_id: requestId(),
-    status: partial ? "partial_completed" : "success",
+    status: partial ? "partial_success" : "success",
     access_level: "member",
     requires_login: false,
     company: companyPayload(company),
@@ -375,7 +375,7 @@ function buildSamsungMember(user: DemoUser, partial = false): MemberAnalysisResp
   return {
     ...clone(samsung.guest),
     request_id: requestId(),
-    status: partial ? "partial_completed" : "success",
+    status: partial ? "partial_success" : "success",
     access_level: "member",
     requires_login: false,
     detail: partial ? clone(samsung.partial_detail) : clone(samsung.member_detail),

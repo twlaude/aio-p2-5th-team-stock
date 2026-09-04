@@ -24,19 +24,19 @@ const copy = {
     title: "커뮤니티 반응",
     footer: "네이버 종목토론방 집계 · 사실이 아닌 시장 반응",
     failedBody: "커뮤니티 서버가 응답하지 않아 이 부분은 뺐어요. 시장 관심 온도는 뉴스·가격만으로 계산됐어요.",
-    failedFooter: "MCP 부분 실패 · status: partial_completed",
+    failedFooter: "MCP 부분 실패 · status: partial_success",
   },
   news: {
     title: "최신 뉴스",
     footer: "원문 링크 제공 · 제목만으로 원인 단정 금지",
     failedBody: "뉴스 데이터를 불러오지 못해 이 부분은 뺐어요. 남은 공식 자료만으로 정리했어요.",
-    failedFooter: "뉴스 부분 실패 · status: partial_completed",
+    failedFooter: "뉴스 부분 실패 · status: partial_success",
   },
   disclosure: {
     title: "기업보고서 · 공시",
     footer: "공식 자료와 AI 해석은 구분 표시",
     failedBody: "공시 데이터를 불러오지 못해 이 부분은 뺐어요. 뉴스와 가격 흐름만으로 정리했어요.",
-    failedFooter: "공시 부분 실패 · status: partial_completed",
+    failedFooter: "공시 부분 실패 · status: partial_success",
   },
 } satisfies Record<EvidenceCardKind, { title: string; footer: string; failedBody: string; failedFooter: string }>;
 

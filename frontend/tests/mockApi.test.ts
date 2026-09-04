@@ -13,7 +13,7 @@ function expectGuest(response: AnalysisResponse): asserts response is GuestAnaly
 }
 
 function expectMember(response: AnalysisResponse): asserts response is MemberAnalysisResponse {
-  expect(response.status).toMatch(/success|partial_completed/);
+  expect(response.status).toMatch(/success|partial_success/);
   expect("access_level" in response && response.access_level).toBe("member");
 }
 
@@ -94,7 +94,7 @@ describe("mock backend api contract", () => {
     const response = await api.createAnalysis({ query: "삼성전자" }, login.access_token);
 
     expectMember(response);
-    expect(response.status).toBe("partial_completed");
+    expect(response.status).toBe("partial_success");
     expect(response.detail.market_temperature.data_coverage).toEqual(["price", "news", "disclosure"]);
     expect(response.detail.community_summary).toBeNull();
     expect(response.detail.sources.every((source) => source.source_type !== "community")).toBe(true);
