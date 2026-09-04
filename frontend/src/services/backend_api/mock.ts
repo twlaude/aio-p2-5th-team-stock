@@ -276,6 +276,7 @@ function buildTemplateDetail(company: Company, template: TemplateAnalysis, parti
       score: partial ? Math.max(40, template.temperature_score - 8) : template.temperature_score,
       label: partial ? "일부 확인" : template.temperature_label,
       data_coverage: coverage,
+      weight_covered: partial ? 55 : 100,
     },
     evidence_level: {
       level: partial ? "medium" : template.evidence_level,

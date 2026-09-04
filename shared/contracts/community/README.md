@@ -29,6 +29,12 @@
     "to": "2026-09-01T09:00:00Z"
   },
   "sample_size": 100,
+  "activity": {
+    "posts_7d": 100,
+    "weekly_avg_prev_28d": 70.0,
+    "ratio": 1.43,
+    "baseline_days": 28
+  },
   "sentiment": {
     "positive_count": 35,
     "neutral_count": 40,
@@ -65,6 +71,11 @@
 | 10 이상 | `success` | `sufficient` |
 
 원문 100개 전체를 MCP Client와 LLM에 전달하지 않는다. 집계값, 주요 주제와 짧은 대표 근거만 전달한다.
+
+`activity`는 최근 7일 글 수(`posts_7d`)를 직전 28일의 주간 평균
+(`weekly_avg_prev_28d`)과 비교한 활동량이다. `ratio`는 두 값의 비율이며 기준선이
+없으면 `null`이다. `baseline_days`는 `28`로 고정된다. 상류 응답에 `activity`가
+없으면 이 필드는 생략되며, 소비자는 미가용(`null`)으로 취급한다.
 
 ## Tool: get_fear_greed_index
 

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { countOf, deriveCommunity, deriveDisclosureChecks, deriveItems, deriveTopics, evidenceLevelText, fgiLabel } from "../src/components/analysis/deriveEvidence";
+import { temperatureDescription } from "../src/components/analysis/GaugeCard";
 import samsungFixture from "../src/mocks/analyses/samsung.json";
 import type { AnalysisDetail } from "../src/services/backend_api/client";
 
@@ -26,6 +27,20 @@ describe("analysis evidence derivation", () => {
 
   it("keeps partial responses without community meta empty", () => {
     expect(deriveCommunity(samsung.partial_detail.sources)).toBeNull();
+  });
+
+  it("describes the complete market temperature inputs without a partial notice", () => {
+    expect(temperatureDescription(samsung.member_detail.market_temperature.data_coverage, samsung.member_detail.market_temperature.weight_covered)).toEqual({
+      primary: "거래량 변화 · 뉴스 기사량 · 커뮤니티 글 수 · 공포탐욕 강도 기준. 이 종목의 평소 대비예요. 상승 가능성이 아니에요.",
+      partial: null,
+    });
+  });
+
+  it("describes community exclusion and adds the partial-data sentence", () => {
+    expect(temperatureDescription(samsung.partial_detail.market_temperature.data_coverage, samsung.partial_detail.market_temperature.weight_covered)).toEqual({
+      primary: "거래량 변화 · 뉴스 기사량 기준 (커뮤니티 제외)",
+      partial: "일부 자료를 못 받아 받은 자료만으로 계산했어요.",
+    });
   });
 
   it("derives source items, source counts, and evidence segment count", () => {

@@ -30,6 +30,11 @@ Backend가 지원 기업을 검증한 뒤 MCP Client가 정식 기업명과 6자
   "current_price": 70000,
   "change": 500,
   "change_rate": 0.72,
+  "volume": 15234000,
+  "volume_change_rate": 118.42,
+  "avg_volume_20d": 12864000,
+  "volume_ratio_20d": 1.18,
+  "warnings": [],
   "as_of": "2026-09-04T05:30:00Z",
   "source_name": "한국투자증권 Open API",
   "collected_at": "2026-09-04T05:30:00Z"
@@ -38,6 +43,9 @@ Backend가 지원 기업을 검증한 뒤 MCP Client가 정식 기업명과 6자
 
 - 금액은 원 단위 정수다.
 - `change`와 `change_rate`는 상승 시 양수, 하락 시 음수, 보합 시 0이다.
+- `volume`은 현재가 응답의 당일 누적 거래량이며, `volume_change_rate`는 전일 대비 거래량 비율(%)이다. 제공처가 비율을 주지 않으면 `null`이다.
+- `avg_volume_20d`는 일봉 중 오늘 행을 제외한 최근 20거래일(20일 미만이면 가용 거래일)의 평균 거래량이며, `volume_ratio_20d`는 `volume / avg_volume_20d`를 소수 둘째 자리로 반올림한 값이다. 가용 일봉이 없으면 두 값 모두 `null`이며, 평균이 0이면 비율만 `null`이다.
+- 일봉 API 조회만 실패하면 현재가 성공은 유지하고 두 기준선 필드를 `null`로 반환하며, `warnings`에 `VOLUME_BASELINE_UNAVAILABLE`을 넣는다.
 - REST 현재가 응답을 받은 시각을 UTC ISO 8601로 기록한다.
 - 장 마감·휴장 중에는 제공처가 반환하는 가장 최근 가격을 그대로 표시한다.
 

@@ -11,6 +11,7 @@ type GaugeCardProps =
       score: number;
       label: string;
       dataCoverage: DataCoverage[];
+      weightCovered: number;
     }
   | {
       variant: "evidence";
@@ -51,13 +52,21 @@ function useCountUp(target: number, active: boolean) {
   return value;
 }
 
+export function temperatureDescription(dataCoverage: DataCoverage[], weightCovered: number) {
+  const primary = dataCoverage.includes("community")
+    ? "거래량 변화 · 뉴스 기사량 · 커뮤니티 글 수 · 공포탐욕 강도 기준. 이 종목의 평소 대비예요. 상승 가능성이 아니에요."
+    : "거래량 변화 · 뉴스 기사량 기준 (커뮤니티 제외)";
+  const partial = weightCovered < 100 ? "일부 자료를 못 받아 받은 자료만으로 계산했어요." : null;
+  return { primary, partial };
+}
+
 export function GaugeCard(props: GaugeCardProps) {
   const { ref, inView } = useInView<HTMLDivElement>();
   const temperature = props.variant === "temperature" ? Math.max(0, Math.min(100, props.score)) : 0;
   const count = useCountUp(temperature, inView && props.variant === "temperature");
 
   if (props.variant === "temperature") {
-    const includesCommunity = props.dataCoverage.includes("community");
+    const description = temperatureDescription(props.dataCoverage, props.weightCovered);
     return (
       // motion 4b-10
       <div ref={ref} className={["analysis-gauge-card", inView ? "analysis-gauge-card--visible" : ""].join(" ")}>
@@ -70,7 +79,13 @@ export function GaugeCard(props: GaugeCardProps) {
           <div className="analysis-gauge-card__fill" style={{ "--gauge-width": `${temperature}%` } as CSSProperties} />
         </div>
         <div className="analysis-gauge-card__description">
-          {includesCommunity ? "커뮤니티 언급량 · 뉴스 기사량 · 거래량 변화 기준. 상승 가능성이 아니에요." : "뉴스 기사량 · 거래량 변화 기준 (커뮤니티 제외)"}
+          {description.primary}
+          {description.partial ? (
+            <>
+              <br />
+              {description.partial}
+            </>
+          ) : null}
         </div>
       </div>
     );

@@ -29,6 +29,7 @@ def test_success_sufficient_mapping_preserves_contract_fields():
         "stock_code": "005930",
         "period": {"from": "2026-08-26T09:00:00Z", "to": "2026-09-02T09:00:00Z"},
         "sample_size": 100,
+        "activity": {"posts_7d": 100, "weekly_avg_prev_28d": 64.5, "ratio": 1.55, "baseline_days": 28},
         "sentiment": {"positive_count": 18, "neutral_count": 27, "negative_count": 55},
         "top_topics": {"expectations": ["수급 기대"], "concerns": ["하락 우려"]},
         "representative_evidence": [{"text": "요지", "sentiment": "negative", "posted_at": "2026-09-02T06:12:00Z"}],
@@ -44,6 +45,7 @@ def test_success_sufficient_mapping_preserves_contract_fields():
     assert result["sample_status"] == "sufficient"
     assert result["source_name"] == "태웅님 커뮤니티 서버"
     assert result["source_detail"] == upstream["source_name"]
+    assert result["activity"] == upstream["activity"]
     assert result["fgi_mean"] == 41.02
     assert result["fgi_latest"] == upstream["fgi_latest"]
     assert result["note"] == upstream["note"]
@@ -65,6 +67,7 @@ def test_success_insufficient_sample_mapping():
     assert result["status"] == "success"
     assert result["sample_status"] == "insufficient_sample"
     assert result["sample_size"] == 5
+    assert "activity" not in result
     assert result["fgi_latest"] is None
 
 

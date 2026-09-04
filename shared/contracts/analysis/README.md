@@ -69,7 +69,14 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
     "market_temperature": {
       "score": 72,
       "label": "관심 높음",
-      "data_coverage": ["price", "news", "community"]
+      "data_coverage": ["price", "news", "community"],
+      "components": {
+        "volume_activity": 24,
+        "news_attention": 18,
+        "community_activity": 15,
+        "fear_greed_intensity": 15
+      },
+      "weight_covered": 100
     },
     "evidence_level": {
       "level": "high",
@@ -98,6 +105,19 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 ```
 
 `personalized_checkpoints`는 요청에 `investment_profile`이 있을 때만 채운다. 비회원 요청(`investment_profile: null`)에는 이 필드를 생략하거나 `null`로 반환한다.
+
+## 시장 관심 온도 v2
+
+시장 관심 온도는 주가의 상승 가능성이나 매수 점수가 아니라, 거래량·뉴스·커뮤니티 활동이 평소보다 얼마나 활발한지와 공포탐욕 강도를 나타낸다. 각 항목은 다음 규칙으로 0~1 사이로 정규화한 뒤 배점을 곱한다.
+
+| `components` key | 입력 | 정규화 | 배점 |
+|---|---|---:|---:|
+| `volume_activity` | `price.volume_ratio_20d`, 없으면 `1 + volume_change_rate / 100` | `clamp(ratio / 3, 0, 1)` | 30 |
+| `news_attention` | `news.relevant_count`, 없으면 `result_count` | `clamp(count / 30, 0, 1)` | 25 |
+| `community_activity` | `community.activity.ratio` | `clamp(ratio / 3, 0, 1)` | 25 |
+| `fear_greed_intensity` | `community.fgi_latest.fgi` | `abs(fgi - 50) / 50` | 20 |
+
+출처의 `status`가 `success`가 아니거나 입력값이 없으면 해당 항목은 미가용으로 처리하고 `components`에서 생략한다. 최종 `score`는 `round(가용 항목 점수 합 / 가용 항목 배점 합 * 100)`으로 재정규화하며, 가용 배점이 없으면 0이다. `weight_covered`는 가용 항목의 배점 합으로 0~100이다. `data_coverage`와 `label` 구간, `evidence_level` 계산 규칙은 기존 의미를 유지한다.
 
 ## MCP Client 책임
 

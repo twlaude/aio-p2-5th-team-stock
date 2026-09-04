@@ -62,6 +62,7 @@ def map_upstream_response(
     cutoff = (now or datetime.now(timezone.utc)) - timedelta(days=request["lookback_days"])
     seen: set[str] = set()
     articles: list[Article] = []
+    relevant_count = 0
 
     for item in payload.get("items", []):
         headline = _clean_text(item.get("title", ""))
@@ -80,18 +81,18 @@ def map_upstream_response(
             continue
 
         seen.add(dedupe_key)
-        articles.append(
-            {
-                "headline": headline,
-                "publisher": item.get("publisher") or _publisher_from_url(source_url),
-                "published_at": published_at or "",
-                "summary": summary,
-                "source_url": source_url,
-                "relevance": relevance,
-            }
-        )
-        if len(articles) >= request["limit"]:
-            break
+        relevant_count += 1
+        if len(articles) < request["limit"]:
+            articles.append(
+                {
+                    "headline": headline,
+                    "publisher": item.get("publisher") or _publisher_from_url(source_url),
+                    "published_at": published_at or "",
+                    "summary": summary,
+                    "source_url": source_url,
+                    "relevance": relevance,
+                }
+            )
 
     status = "success" if articles else "no_data"
     return {
@@ -101,6 +102,7 @@ def map_upstream_response(
         "stock_code": request["stock_code"],
         "articles": articles,
         "result_count": len(articles),
+        "relevant_count": relevant_count,
         "collected_at": (now or datetime.now(timezone.utc)).isoformat().replace("+00:00", "Z"),
     }
 
@@ -112,7 +114,11 @@ def fetch_news(
 ) -> NewsResponse:
     active_config = config or get_config()
     if active_config.mock_enabled:
-        return build_mock_news(request["company_name"], request["stock_code"])
+        response = build_mock_news(request["company_name"], request["stock_code"])
+        response["relevant_count"] = sum(
+            article.get("relevance") == "high" for article in response.get("articles", [])
+        )
+        return response
 
     owns_client = client is None
     active_client = client or NaverNewsClient(

@@ -9,6 +9,12 @@ def build_mock_reaction(company_name: str, stock_code: str) -> ReactionResponse:
         "stock_code": stock_code,
         "period": {"from": "2026-08-26T00:00:00Z", "to": "2026-09-01T09:00:00Z"},
         "sample_size": 100,
+        "activity": {
+            "posts_7d": 100,
+            "weekly_avg_prev_28d": 70.0,
+            "ratio": 1.43,
+            "baseline_days": 28,
+        },
         "sentiment": {"positive_count": 35, "neutral_count": 40, "negative_count": 25},
         "top_topics": {
             "expectations": ["반도체 업황 회복과 저점 매수를 기대한다."],

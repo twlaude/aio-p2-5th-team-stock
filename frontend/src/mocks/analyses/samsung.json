@@ -89,7 +89,8 @@
         "news",
         "disclosure",
         "community"
-      ]
+      ],
+      "weight_covered": 100
     },
     "evidence_level": {
       "level": "medium",
@@ -354,7 +355,8 @@
         "price",
         "news",
         "disclosure"
-      ]
+      ],
+      "weight_covered": 55
     },
     "evidence_level": {
       "level": "medium",

@@ -8,3 +8,9 @@ def test_mock_response_echoes_requested_stock_code():
     assert result["company_name"] == "현대차"
     assert result["stock_code"] == "005380"
     assert result["source_name"] == "태웅님 커뮤니티 서버"
+    assert result["activity"] == {
+        "posts_7d": 100,
+        "weekly_avg_prev_28d": 70.0,
+        "ratio": 1.43,
+        "baseline_days": 28,
+    }

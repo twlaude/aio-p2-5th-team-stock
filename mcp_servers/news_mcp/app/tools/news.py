@@ -19,9 +19,9 @@ def search_news(
     """Return recent news articles using the shared news contract.
 
     Input: company_name, six-digit stock_code, lookback_days 1..30 (기본 NEWS_LOOKBACK_DAYS=7),
-    limit 1..10 (기본 NEWS_RESULT_LIMIT=10).
-    Output: status, company_name, stock_code, articles, result_count, collected_at,
-    and contract error fields.
+    limit 1..100 (기본 NEWS_RESULT_LIMIT=10).
+    Output: status, company_name, stock_code, articles, result_count, relevant_count,
+    collected_at, and contract error fields.
     """
     config = get_config()
     if lookback_days is None:
@@ -32,8 +32,8 @@ def search_news(
         return _invalid("stock_code는 6자리 숫자여야 합니다.")
     if not 1 <= lookback_days <= 30:
         return _invalid("lookback_days는 1 이상 30 이하이어야 합니다.")
-    if not 1 <= limit <= 10:
-        return _invalid("limit는 1 이상 10 이하이어야 합니다.")
+    if not 1 <= limit <= 100:
+        return _invalid("limit는 1 이상 100 이하이어야 합니다.")
 
     request: NewsRequest = {
         "company_name": company_name,

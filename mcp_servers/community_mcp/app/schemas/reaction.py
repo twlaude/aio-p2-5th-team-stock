@@ -24,6 +24,13 @@ class ErrorDetail(TypedDict):
     retryable: bool
 
 
+class Activity(TypedDict):
+    posts_7d: int
+    weekly_avg_prev_28d: float
+    ratio: float | None
+    baseline_days: Literal[28]
+
+
 class ReactionResponse(TypedDict, total=False):
     request_id: str
     status: Status
@@ -32,6 +39,7 @@ class ReactionResponse(TypedDict, total=False):
     stock_code: str
     period: dict[str, Any]
     sample_size: int
+    activity: Activity
     sentiment: dict[str, int]
     top_topics: dict[str, list[str]]
     representative_evidence: list[dict[str, str]]

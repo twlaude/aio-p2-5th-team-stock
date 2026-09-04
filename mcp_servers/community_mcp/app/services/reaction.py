@@ -46,7 +46,20 @@ def map_upstream_response(payload: dict[str, Any], request: ReactionRequest) -> 
     if payload.get("source_name") is not None:
         response["source_detail"] = payload["source_name"]
 
-    for key in ("sample_status", "period", "sample_size", "sentiment", "top_topics", "representative_evidence", "collected_at", "fgi_mean", "fgi_latest", "note", "supported_codes"):
+    for key in (
+        "sample_status",
+        "period",
+        "sample_size",
+        "activity",
+        "sentiment",
+        "top_topics",
+        "representative_evidence",
+        "collected_at",
+        "fgi_mean",
+        "fgi_latest",
+        "note",
+        "supported_codes",
+    ):
         if key in payload:
             response[key] = payload[key]
     if "fgi_latest" not in response:

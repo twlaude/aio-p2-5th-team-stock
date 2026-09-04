@@ -41,6 +41,7 @@ class MarketTemperature(BaseModel):
     label: str
     data_coverage: list[str]
     components: dict[str, int] = Field(default_factory=dict)
+    weight_covered: int = Field(ge=0, le=100)
 
 
 class EvidenceLevel(BaseModel):

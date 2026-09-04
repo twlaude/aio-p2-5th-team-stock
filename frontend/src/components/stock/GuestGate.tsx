@@ -34,7 +34,7 @@ export function GuestGate({ companyName, query }: GuestGateProps) {
             <div className="guest-gate__dummy-caption">시장 관심 온도</div>
             <div className="guest-gate__dummy-score"><span>82</span><strong>뜨거움</strong></div>
             <div className="guest-gate__bar"><span className="guest-gate__bar-fill" /></div>
-            <div className="guest-gate__dummy-copy">커뮤니티 언급량 · 뉴스 기사량 · 거래량 변화 기준. 상승 가능성이 아니에요.</div>
+            <div className="guest-gate__dummy-copy">거래량 변화 · 뉴스 기사량 · 커뮤니티 글 수 · 공포탐욕 강도 기준. 이 종목의 평소 대비예요. 상승 가능성이 아니에요.</div>
           </article>
           <article className="guest-gate__dummy-card">
             <div className="guest-gate__dummy-caption">공시·보고서로 확인된 정도</div>

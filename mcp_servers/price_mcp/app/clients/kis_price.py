@@ -185,6 +185,42 @@ class KISPriceClient:
         except ValueError as exc:
             raise KISAPIUnavailable() from exc
 
+    def _request_daily_prices(self, stock_code: str, access_token: str) -> dict[str, Any]:
+        today = self._now().astimezone(ZoneInfo("Asia/Seoul")).date()
+        try:
+            response = self._client.get(
+                f"{self._config.base_url}{self._config.daily_url}",
+                headers={
+                    "content-type": "application/json; charset=utf-8",
+                    "authorization": f"Bearer {access_token}",
+                    "appkey": self._config.app_key or "",
+                    "appsecret": self._config.app_secret or "",
+                    "tr_id": self._config.daily_tr_id,
+                    "custtype": "P",
+                },
+                params={
+                    "FID_COND_MRKT_DIV_CODE": self._config.market_code,
+                    "FID_INPUT_ISCD": stock_code,
+                    "FID_INPUT_DATE_1": (today - timedelta(days=45)).strftime("%Y%m%d"),
+                    "FID_INPUT_DATE_2": today.strftime("%Y%m%d"),
+                    "FID_PERIOD_DIV_CODE": "D",
+                    "FID_ORG_ADJ_PRC": "0",
+                },
+            )
+        except httpx.TimeoutException as exc:
+            raise KISAPITimeout() from exc
+        except httpx.HTTPError as exc:
+            raise KISAPIUnavailable() from exc
+
+        if response.status_code in {401, 403}:
+            raise KISAPIUnauthorized()
+        if response.status_code >= 400:
+            raise KISAPIUnavailable()
+        try:
+            return response.json()
+        except ValueError as exc:
+            raise KISAPIUnavailable() from exc
+
     def get_quote(self, stock_code: str) -> dict[str, Any]:
         token = self._access_token()
         payload = self._request_quote(stock_code, token)
@@ -201,3 +237,20 @@ class KISPriceClient:
         if not isinstance(output, dict) or not output.get("stck_prpr"):
             raise KISAPINoData()
         return output
+
+    def get_daily_prices(self, stock_code: str) -> list[dict[str, Any]]:
+        token = self._access_token()
+        payload = self._request_daily_prices(stock_code, token)
+        if self._token_expired(payload):
+            token = self._access_token(force_refresh=True)
+            payload = self._request_daily_prices(stock_code, token)
+
+        if payload.get("rt_cd") != "0":
+            code = str(payload.get("msg_cd", ""))
+            if code.startswith("EGW"):
+                raise KISAPIUnauthorized()
+            raise KISAPIUnavailable()
+        output = payload.get("output2")
+        if not isinstance(output, list):
+            raise KISAPIUnavailable()
+        return [row for row in output if isinstance(row, dict)]

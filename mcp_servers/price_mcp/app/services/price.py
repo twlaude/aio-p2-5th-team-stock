@@ -1,10 +1,12 @@
 from collections.abc import Callable
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from decimal import Decimal, InvalidOperation
 from time import monotonic
 from typing import Any
+from zoneinfo import ZoneInfo
 
 from app.clients.kis_price import (
+    KISAPIError,
     KISAPINoData,
     KISAPITimeout,
     KISAPIUnauthorized,
@@ -47,13 +49,60 @@ def _signed(value: Any, sign_code: str | None) -> Decimal:
     return number
 
 
+def _optional_float(value: Any) -> float | None:
+    if value is None or str(value).strip() == "":
+        return None
+    return float(_number(value))
+
+
+def _volume_baseline(
+    daily_prices: list[dict[str, Any]],
+    current_volume: int,
+    today: date,
+) -> tuple[int | None, float | None]:
+    today_text = today.strftime("%Y%m%d")
+    dated_volumes: list[tuple[str, int]] = []
+    for row in daily_prices:
+        business_date = str(row.get("stck_bsop_date", "")).strip()
+        if len(business_date) != 8 or not business_date.isdigit():
+            continue
+        if business_date >= today_text:
+            continue
+        try:
+            volume = int(_number(row.get("acml_vol")))
+        except KISAPIUnavailable:
+            continue
+        if volume < 0:
+            continue
+        dated_volumes.append((business_date, volume))
+
+    recent_volumes = [
+        volume
+        for _, volume in sorted(dated_volumes, key=lambda item: item[0], reverse=True)[:20]
+    ]
+    if not recent_volumes:
+        return None, None
+
+    average = sum(recent_volumes) // len(recent_volumes)
+    ratio = round(current_volume / average, 2) if average > 0 else None
+    return average, ratio
+
+
 def map_kis_quote(
     output: dict[str, Any],
     request: PriceRequest,
     now: datetime | None = None,
+    daily_prices: list[dict[str, Any]] | None = None,
 ) -> PriceResponse:
-    collected_at = _iso_utc(now or _utc_now())
+    current_time = now or _utc_now()
+    collected_at = _iso_utc(current_time)
     sign_code = str(output.get("prdy_vrss_sign", ""))
+    current_volume = int(_number(output.get("acml_vol")))
+    average_volume, volume_ratio = _volume_baseline(
+        daily_prices or [],
+        current_volume,
+        current_time.astimezone(ZoneInfo("Asia/Seoul")).date(),
+    )
     return {
         "status": "success",
         "company_name": request["company_name"],
@@ -61,6 +110,11 @@ def map_kis_quote(
         "current_price": int(_number(output.get("stck_prpr"))),
         "change": int(_signed(output.get("prdy_vrss", 0), sign_code)),
         "change_rate": float(_signed(output.get("prdy_ctrt", 0), sign_code)),
+        "volume": current_volume,
+        "volume_change_rate": _optional_float(output.get("prdy_vrss_vol_rate")),
+        "avg_volume_20d": average_volume,
+        "volume_ratio_20d": volume_ratio,
+        "warnings": [],
         "as_of": collected_at,
         "source_name": SOURCE_NAME,
         "collected_at": collected_at,
@@ -99,7 +153,18 @@ def fetch_stock_quote(
     active_client = client or KISPriceClient(active_config)
     try:
         output = active_client.get_quote(request["stock_code"])
-        result = map_kis_quote(output, request, now=now())
+        current_time = now()
+        try:
+            daily_prices = active_client.get_daily_prices(request["stock_code"])
+            result = map_kis_quote(
+                output,
+                request,
+                now=current_time,
+                daily_prices=daily_prices,
+            )
+        except KISAPIError:
+            result = map_kis_quote(output, request, now=current_time)
+            result["warnings"] = ["VOLUME_BASELINE_UNAVAILABLE"]
         _QUOTE_CACHE[request["stock_code"]] = (
             current_tick + active_config.cache_ttl_seconds,
             result,

@@ -75,6 +75,7 @@ describe("mock backend api contract", () => {
       "sources",
     ]);
     expect(response.detail.market_temperature.data_coverage).toEqual(["price", "news", "disclosure", "community"]);
+    expect(response.detail.market_temperature.weight_covered).toBe(100);
     expect(response.personalized_checkpoints.priority_checks).toHaveLength(3);
     expect(response.personalized_checkpoints.personal_summary).toContain("큰 변동도 감수하는");
   });
@@ -96,6 +97,7 @@ describe("mock backend api contract", () => {
     expectMember(response);
     expect(response.status).toBe("partial_success");
     expect(response.detail.market_temperature.data_coverage).toEqual(["price", "news", "disclosure"]);
+    expect(response.detail.market_temperature.weight_covered).toBe(55);
     expect(response.detail.community_summary).toBeNull();
     expect(response.detail.sources.every((source) => source.source_type !== "community")).toBe(true);
   });

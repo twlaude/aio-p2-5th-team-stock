@@ -97,6 +97,7 @@ export interface AnalysisDetail {
     score: number;
     label: string;
     data_coverage: DataCoverage[];
+    weight_covered: number;
   };
   evidence_level: {
     level: EvidenceLevel;

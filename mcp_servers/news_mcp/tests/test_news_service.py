@@ -55,6 +55,7 @@ def test_dedupes_and_filters_irrelevant_and_old_articles():
 
     assert result["status"] == "success"
     assert result["result_count"] == 1
+    assert result["relevant_count"] == 1
     assert result["articles"][0]["source_url"] == "https://example.com/1"
     assert result["articles"][0]["headline"] == "삼성전자 실적 개선"
 
@@ -66,3 +67,41 @@ def test_no_data_when_nothing_relevant():
 
     assert result["status"] == "no_data"
     assert result["result_count"] == 0
+    assert result["relevant_count"] == 0
+
+
+def test_relevant_count_counts_high_relevance_within_lookback_before_output_limit():
+    payload = {
+        "items": [
+            _item(
+                "삼성전자 첫 번째 기사",
+                "삼성전자 관련 내용이다.",
+                "https://example.com/10",
+                "Mon, 31 Aug 2026 09:00:00 +0000",
+            ),
+            _item(
+                "삼성전자 두 번째 기사",
+                "삼성전자 관련 추가 내용이다.",
+                "https://example.com/11",
+                "Mon, 31 Aug 2026 08:00:00 +0000",
+            ),
+            _item(
+                "삼성전자 오래된 기사",
+                "삼성전자 관련 과거 내용이다.",
+                "https://example.com/12",
+                "Mon, 01 Jan 2024 09:00:00 +0000",
+            ),
+            _item(
+                "무관한 기사",
+                "다른 회사 내용이다.",
+                "https://example.com/13",
+                "Mon, 31 Aug 2026 07:00:00 +0000",
+            ),
+        ]
+    }
+    request = {**REQUEST, "limit": 1}
+
+    result = map_upstream_response(payload, request, now=NOW)
+
+    assert result["result_count"] == 1
+    assert result["relevant_count"] == 2
