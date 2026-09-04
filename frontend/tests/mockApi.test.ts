@@ -97,6 +97,6 @@ describe("mock backend api contract", () => {
     expect(response.status).toBe("partial_completed");
     expect(response.detail.market_temperature.data_coverage).toEqual(["price", "news", "disclosure"]);
     expect(response.detail.community_summary).toBeNull();
-    expect(response.detail.sources.every((source) => source.type !== "community")).toBe(true);
+    expect(response.detail.sources.every((source) => source.source_type !== "community")).toBe(true);
   });
 });

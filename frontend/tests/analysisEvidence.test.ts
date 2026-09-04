@@ -57,7 +57,7 @@ describe("analysis evidence derivation", () => {
 import { deriveGapCheck } from "../src/components/analysis/deriveEvidence";
 
 describe("deriveGapCheck — 환호 vs 근거", () => {
-  const news = (n: number, issue = 1) => Array.from({ length: n }, (_, i) => ({ type: "news" as const, title: `n${i}`, meta: { issue_count: issue } }));
+  const news = (n: number, issue = 1) => Array.from({ length: n }, (_, i) => ({ source_type: "news" as const, title: `n${i}`, meta: { issue_count: issue } }));
   it("관심 높고 공식 확인 낮으면 온도차 큼 + 반복 기사 신호", () => {
     const gap = deriveGapCheck({ temperatureScore: 86, evidenceLevel: "low", sources: news(5, 3), changeRate: 4.2 });
     expect(gap.level).toBe("large");

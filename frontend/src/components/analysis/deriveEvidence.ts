@@ -70,7 +70,7 @@ function topicWeight(value: unknown): TopicEvidence["weight"] | null {
 }
 
 export function deriveTopics(sources: AnalysisSource[]): TopicEvidence[] {
-  const source = sources.find((item) => item.type === "community");
+  const source = sources.find((item) => item.source_type === "community");
   const rawTopics = source?.meta?.topics;
   if (!Array.isArray(rawTopics)) {
     return [];
@@ -95,7 +95,7 @@ export function deriveTopics(sources: AnalysisSource[]): TopicEvidence[] {
 }
 
 export function deriveCommunity(sources: AnalysisSource[]): CommunityEvidence | null {
-  const source = sources.find((item) => item.type === "community");
+  const source = sources.find((item) => item.source_type === "community");
   if (!source?.meta) {
     return null;
   }
@@ -142,25 +142,25 @@ export function publishedAtLabel(value?: string) {
 
 export function deriveItems(sources: AnalysisSource[], type: Exclude<SourceType, "community">): EvidenceItem[] {
   return sources
-    .filter((source) => source.type === type)
+    .filter((source) => source.source_type === type)
     .slice(0, type === "news" ? 5 : 3)
     .map((source) => ({
       title: source.title,
-      publisher: source.publisher,
+      publisher: stringMeta(source.meta, "publisher"),
       publishedAtLabel: publishedAtLabel(source.published_at),
       url: source.url,
       issueCount: numberMeta(source.meta, "issue_count") ?? undefined,
-      receiptNo: stringMeta(source.meta, "receipt_no"),
+      receiptNo: stringMeta(source.meta, "receipt_number"),
     }));
 }
 
 export function countOf(sources: AnalysisSource[], type: SourceType) {
-  return sources.filter((source) => source.type === type).length;
+  return sources.filter((source) => source.source_type === type).length;
 }
 
 export function deriveDisclosureChecks(sources: AnalysisSource[]): DisclosureChecks {
   const checks = sources
-    .filter((source) => source.type === "disclosure")
+    .filter((source) => source.source_type === "disclosure")
     .reduce<DisclosureChecks>(
       (acc, source) => ({
         confirmed: [...acc.confirmed, ...stringArrayMeta(source.meta, "confirmed")],
@@ -233,8 +233,8 @@ export function deriveGapCheck(input: {
 }): GapCheck {
   const { temperatureScore: heat, evidenceLevel, sources, changeRate } = input;
   const confirmSegments = evidenceLevelText(evidenceLevel).segments;
-  const news = sources.filter((s) => s.type === "news");
-  const disclosures = sources.filter((s) => s.type === "disclosure");
+  const news = sources.filter((s) => s.source_type === "news");
+  const disclosures = sources.filter((s) => s.source_type === "disclosure");
   const community = deriveCommunity(sources);
   const checks = deriveDisclosureChecks(sources);
   const reprint = news.reduce((sum, s) => sum + (numberMeta(s.meta, "issue_count") ?? 1), 0);
