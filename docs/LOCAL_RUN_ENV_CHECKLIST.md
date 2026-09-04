@@ -10,7 +10,7 @@ Frontend → Backend → MCP Client → MCP 4개를 한 컴퓨터에서 붙여 �
 
 | MCP | VPS 주소 (mcp_client `.env`에 그대로) | 상태 |
 |---|---|---|
-| Price | `PRICE_MCP_URL=http://159.223.75.71:8020/mcp` | KIS 키 대기 → 그때까지 **테스트 스텁**(70,000원 고정, `[TEST] price stub`). 오현님 KIS 키를 받으면 실서버로 교체 |
+| Price | `PRICE_MCP_URL=http://159.223.75.71:8020/mcp` | 실서버 (한국투자증권 Open API, 9/4) |
 | News | `NEWS_MCP_URL=http://159.223.75.71:8021/mcp` | NAVER API HUB 키 없음 → mock 3건. 키 생기면 VPS `.env`에 넣고 재시작 |
 | Disclosure | `DISCLOSURE_MCP_URL=http://159.223.75.71:8022/mcp` | 실데이터. DART 최근 공시 + 20종목 2025 사업보고서 색인 |
 | Community | `COMMUNITY_MCP_URL=http://159.223.75.71:8023/mcp` | 실데이터 (네이버 종토방 FGI) |
@@ -38,7 +38,7 @@ mcp_client/.env
 
 | 구간 | 상태 |
 |---|---|
-| Price MCP | **테스트 스텁** — KIS 키가 없어 70,000원 고정값. 실서버 아님 |
+| Price MCP | 실서버 (오현님 KIS 키, 9/4 적용) |
 | News MCP | NAVER API HUB 키 없음 → `NEWS_MOCK=auto`로 mock 3건 |
 | Community MCP | 실데이터 (태웅 VPS FGI API `:8877`, 네이버 종토방 집계) |
 | Disclosure MCP | 실데이터 (DART 최근 공시 + 삼성전자 2025 사업보고서 색인) |
@@ -81,10 +81,11 @@ frontend:   cd frontend && npm ci && npm run dev    (8501, .env에 VITE_API_MODE
 
 ## 4. 붙여 보면서 확인한 것 (Agent 다듬을 때 참고)
 
-1. **가격이 없으면 전부 실패한다.** `mcp_client/app/workflows/analysis.py`가 `price.status != success`면 `RequiredPriceError` → Backend 503. 계약대로지만 KIS 키 없는 PC에서는 아무 화면도 못 본다. 개발 편의로 `PRICE_MOCK` 같은 스위치를 둘지는 결정 필요.
+1. **가격이 없으면 전부 실패한다.** (VPS는 KIS 키 적용돼 해결) `mcp_client/app/workflows/analysis.py`가 `price.status != success`면 `RequiredPriceError` → Backend 503. 계약대로지만 KIS 키 없는 PC에서는 아무 화면도 못 본다. 개발 편의로 `PRICE_MOCK` 같은 스위치를 둘지는 결정 필요.
 2. **OpenAI Responses 400 — strict JSON schema.** `mcp_client/app/providers/openai.py`의 `_text_format()`이 `strict: true`인데 `Narrative.model_json_schema()`에 `additionalProperties: false`가 없어 400이 난다.
    오류 원문: `Invalid schema for response_format 'stock_information_analysis': In context=(), 'additionalProperties' is required to be supplied and to be false.`
-   Narrative(및 중첩 모델)에 `model_config = ConfigDict(extra="forbid")`를 주면 pydantic이 `additionalProperties: false`를 넣어 준다. 이게 풀려야 Agent 서사·Tool 호출 루프가 실제로 돈다.
+   Narrative는 이미 `extra="forbid"`이고 중첩된 `PersonalizedCheckpoints`에 빠져 있다. 거기에 `model_config = ConfigDict(extra="forbid")`를 주면 pydantic이 `additionalProperties: false`를 넣어 준다. 이게 풀려야 Agent 서사·Tool 호출 루프가 실제로 돈다.
+   PR #31 이후 Backend는 Agent가 완성한 `one_line_summary`·`personalized_checkpoints`를 그대로 쓰고, Agent 실패 시에만 프론트 규칙(`backend/app/services/analysis/narrative.py`)으로 폴백한다.
 3. **폴백 문장 조사.** 규칙 기반 문장이 "삼성전자은 …"으로 나온다 (은/는). LLM이 붙으면 사라지지만 폴백도 쓰인다면 조사 처리 필요.
 4. **사업보고서는 최신 1년치(2025)만 색인한다.** `ingest_annual_reports.py --stock 005930 --years 2025`. 2024 이전 보고서는 파서가 섹션을 못 찾아 실패하지만, 1년치만 쓰기로 해서 고치지 않는다.
 5. **프론트 live 어댑터(태웅 담당)**: 재료 표시줄 "뉴스 0건·공시 0건", 분위기 vs 근거 카드 "공시 없음"은 mock 기준 조립이라 백엔드 응답 구조에 맞춰 손볼 예정. `display_name`도 seed 값("데모 사용자 1")이 그대로 나온다.
