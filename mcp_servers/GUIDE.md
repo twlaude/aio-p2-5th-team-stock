@@ -26,6 +26,7 @@ mcp_servers/
 ├─ tests/
 ├─ .env.example
 ├─ requirements.txt
+├─ Dockerfile               # 실행 코드 완성 후 추가
 └─ GUIDE.md
 ```
 
@@ -36,7 +37,11 @@ mcp_servers/
 - `clients`: 주가 API, 뉴스 API, DART, 태웅님 서버, DB 등 각 서버의 실제 원본 연결
 - `schemas`: 필드 이름과 자료형
 - `core`: 환경변수, 포트, 로그, 공통 오류
-- `server.py`: 폴더 루트에 둔다. 교재 05장 MCP 예시와 FastMCP 공식 예시가 모두 루트 `server.py`이며, `python server.py`로 바로 실행된다. FastAPI 쪽 `app/main.py`와 달리 MCP는 앱 패키지 밖에 진입점을 둔다.
+- `server.py`: 폴더 루트에 둔다. 교재 05장과 FastMCP의 대표 예제 구조를 따라 `python server.py`로 바로 실행한다. FastAPI 쪽 `app/main.py`와 구분하고 네 MCP의 실행법을 통일하기 위한 팀 규칙이다.
+
+## 기준 구현
+
+`community_mcp`는 현재 Tool, Schema, Service, 외부 Client, Mock, 오류 처리와 테스트가 구현되어 있다. 나머지 세 MCP는 Community MCP의 책임 분리와 테스트 방식을 기준으로 개발하되, Community 전용 코드를 복사하지 않는다.
 
 ## 모든 MCP 응답에 필요한 정보
 
@@ -62,6 +67,6 @@ error
 - 외부 API 장애와 검색 결과 없음은 다른 상태로 반환한다.
 - 사용자 인증 정보와 투자 성향을 받지 않는다.
 
-## 기존 단일 MCP 골격
+## 이전 단일 MCP 골격
 
-기존 `mcp_server/stock_mcp`는 이전 단일 서버 골격이었다. 삭제하지 않고 `legacy/stock_mcp`로 이동해 보존했으며, 새 구조를 구현할 때 재사용 가능한 설정과 폴더만 확인해서 각 서버로 옮긴다.
+초기 단일 서버 골격은 `archive/legacy/stock_mcp`에 보관한다. 현재 구현 대상으로 사용하지 않는다.

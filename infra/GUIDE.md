@@ -22,7 +22,7 @@ Redis
 
 아래 값을 팀 공통 기본값으로 사용한다.
 
-| 구성요소 | 포트 예시 |
+| 구성요소 | 확정 포트 |
 |---|---:|
 | Backend | 8000 |
 | MCP Client | 8010 |
@@ -49,7 +49,17 @@ Redis
 
 ## Docker 적용 범위
 
-초기에는 PostgreSQL, pgvector, Redis만 Docker로 실행하는 방향이 단순하다. 각 Python 서버는 팀원 컴퓨터에서 직접 실행할 수 있다.
+현재 `docker-compose.yml`은 PostgreSQL/pgvector와 Redis를 실행한다. 각 Python 서버는 담당자 컴퓨터에서 직접 실행하고, 기능 구현이 끝나면 서비스별 Dockerfile과 전체 Compose를 추가한다.
+
+## 기반시설 실행
+
+```text
+cd infra
+copy .env.example .env
+docker compose up -d
+```
+
+PostgreSQL을 처음 생성할 때 `db/schema.sql`과 `db/seed.sql`이 순서대로 적용된다. 기존 Volume에는 초기화 SQL이 자동 재실행되지 않는다.
 
 `infra/docker-compose.yml`이 이 둘을 띄운다. 저장소 루트에서:
 

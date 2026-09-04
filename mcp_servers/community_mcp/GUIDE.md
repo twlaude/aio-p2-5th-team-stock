@@ -93,7 +93,8 @@ community_mcp/
 │  └─ tools/community.py     # Tool 2개 입력 검증 + register_community_tools
 ├─ tests/                    # 가짜 client로 네트워크 없이 검증 (pytest)
 ├─ .env.example
-└─ requirements.txt
+├─ requirements.txt
+└─ Dockerfile
 ```
 
 요청 흐름: MCP Client → `tools/community.py`(입력 검증) → `services/reaction.py` → `clients/fgi_api.py` → 태웅님 서버. 응답은 역순으로 돌아오며 services에서 계약 형식으로 맞춘다.

@@ -11,7 +11,9 @@
 ```text
 shared/
 ├─ CONNECTION_CONTRACT.md
+├─ supported_companies.json
 └─ contracts/
+   ├─ README.md
    ├─ frontend_backend
    ├─ analysis
    ├─ user_profile
@@ -23,6 +25,8 @@ shared/
 ```
 
 각 폴더의 `README.md`에 확정 Endpoint, Tool 이름, JSON 예시와 상태값을 기록했다. 구현은 이 계약을 기준으로 시작한다.
+
+`supported_companies.json`은 2026-09-01 기준 발표 대상 20개 기업의 공통 Snapshot이다. 목록을 바꾸면 Backend Seed와 Disclosure 수집 대상을 함께 갱신한다.
 
 ## 공통 필드 원칙
 

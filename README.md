@@ -1,72 +1,81 @@
-# 살래? 말래? — AIO P2 5팀
+# 살래? 말래?
 
-> 종목을 추천하는 서비스가 아니라, 뉴스·전자공시·커뮤니티 반응을 연결해 사용자가 확인해야 할 투자 정보를 설명하는 주식 정보 도우미입니다.
+뉴스·기업보고서·커뮤니티·실시간 가격을 함께 확인하고, LLM이 근거를 종합해 현재 종목의 상황을 설명하는 교육용 주식 정보 도우미다. 매수·매도 추천이나 수익률 예측은 제공하지 않는다.
 
-## 현재 확정된 방향
+## 발표용 범위
 
-- Frontend, Backend, MCP Client, MCP 서버 4개를 독립 실행 단위로 분리한다.
-- MCP Client는 Price·News·Disclosure·Community MCP를 통괄하는 별도 서버로 실행한다.
-- 사용자 투자 성향과 Memory는 Backend가 관리한다.
-- 뉴스·공시·커뮤니티 MCP는 Agent가 아니라 Tool 제공 서버다.
-- MCP Client 안에는 하나의 Stock Analysis Agent와 이를 통제하는 Workflow를 둔다.
-- 각 서비스는 독립 Docker 컨테이너로 실행할 수 있게 준비한다.
-- 개발 중에는 팀원 컴퓨터에 분산하고, 발표 때는 한 컴퓨터에서도 전체 실행할 수 있게 한다.
+- 기준일: 2026-09-01
+- 대상: `shared/supported_companies.json`에 고정된 KOSPI 시가총액 상위 20개 보통주 기업
+- 범위 밖 종목: `지원하지 않는 기업` 응답
+- 뉴스·가격·커뮤니티: 실행 시점의 최신 데이터
+- 기업보고서: 수집된 최신 연간 사업보고서와 최근 공시
+- 사용자: 투자 성향이 미리 준비된 Mock 사용자 10명
 
-## 전체 연결 구조
+## 확정 연결 구조
 
 ```text
-Frontend
-  ↓ HTTP
-Backend
-  ├─ 로그인·사용자 구분
-  ├─ 투자 성향·Memory
-  └─ 개인화 확인 포인트
-       ↓ HTTP
-MCP Client 통합 서버
-  ├─ 결정적 Workflow
-  ├─ Single Stock Analysis Agent
-  └─ MCP Tool Client
-       ↓ Streamable HTTP
-  ┌──────┼───────────┬─────────────┐
-Price MCP News MCP Disclosure MCP Community MCP
-       ↓
-PostgreSQL + pgvector / Redis / 외부 데이터
+Frontend --REST/JSON--> Backend --REST/JSON--> MCP Client
+                                              ├─ Price MCP
+                                              ├─ News MCP
+                                              ├─ Disclosure MCP
+                                              └─ Community MCP
 ```
 
-## 주요 문서
+- Frontend는 Backend만 호출한다.
+- Backend는 지원 기업 확인, 로그인, 투자 성향, Memory와 개인화를 담당한다.
+- MCP Client는 네 MCP를 호출하고 공통 분석을 생성한다. 외부 원본 API를 직접 호출하지 않는다.
+- MCP 서버는 데이터별 Tool 제공 서버이며 사용자 정보를 받지 않는다.
+- Community MCP의 실제 구조를 나머지 MCP 구현의 기준으로 사용한다.
 
-1. `guide/06_CONFIRMED_LOCAL_STRUCTURE.md`: 확정된 전체 구조
-2. `guide/07_AGENT_WORKFLOW_GUIDE.md`: 수업 내용을 적용한 Agent Workflow
-3. `발표.md`: 컴퓨터 분산 실행과 발표 구성
-4. `plan.md`: 단계별 개발 계획
-5. 각 최상위 폴더의 `GUIDE.md`: 영역별 책임과 구현 기준
-6. `실행_폴더_구분.md`: 실제 구동 폴더와 참고용 폴더 구분
-7. `shared/CONNECTION_CONTRACT.md`: 확정 포트·Endpoint·Tool·공통 규칙
+## 사용자가 받는 결과
+
+| 사용자 | 제공 내용 |
+|---|---|
+| 비회원 | 기업명, 현재 가격·등락, 공통 한 줄 설명 |
+| 회원 | 비회원 결과 + 시장 온도 + 근거 요약·출처 + 투자 성향에 맞춘 확인 포인트 |
+
+`왜 이렇게 판단했나요?`에서 회원이 아니면 `회원가입이 필요합니다!`를 표시한다.
+
+## 개발자가 먼저 읽을 문서
+
+1. [최종 아키텍처](docs/FINAL_ARCHITECTURE.md)
+2. [서비스 연결 계약](shared/CONNECTION_CONTRACT.md)
+3. [개발 실행 계획](docs/DEVELOPMENT_PLAN.md)
+4. [실행 폴더와 담당 범위](docs/RUNTIME_FOLDERS.md)
+5. 자신이 담당한 폴더의 `GUIDE.md`
+
+초기 아이디어와 검토 문서는 `docs/archive/`에 보관한다. 해당 문서는 현재 개발 지시가 아니다.
 
 ## 폴더
 
 ```text
 frontend/       사용자 화면
-backend/        인증·Memory·개인화·Frontend API
-mcp_client/     Agent Workflow와 MCP 결과 통합 서버
-mcp_servers/    주가·뉴스·전자공시·커뮤니티 Tool 서버
-db/             PostgreSQL·pgvector 구조
-shared/         서비스 간 공통 입출력 계약
-infra/          PostgreSQL·Redis와 Docker 실행 설정 영역
-tests/          계약·통합·시나리오 테스트 영역
-legacy/         이전 단일 MCP 골격 보존
-guide/           설계 문서
-text/           화면 이미지 프롬프트와 결과
+backend/        공개 API, Mock 로그인, 투자 성향, Memory, 개인화
+mcp_client/     단일 Agent Workflow와 네 MCP 결과 통합
+mcp_servers/    가격·뉴스·기업보고서·커뮤니티 Tool 서버
+db/             PostgreSQL·pgvector 스키마와 Seed
+infra/          PostgreSQL·Redis·Docker 실행 설정
+shared/         팀 공통 연결·입출력 계약과 지원 기업 Snapshot
+tests/          계약·통합·발표 시나리오 테스트
+docs/           최종 설계·개발·발표 문서와 화면 자료
+archive/        현재 실행하지 않는 이전 코드
 ```
 
-## 현재 상태
+## 현재 구현 상태
 
-현재는 폴더 구조와 가이드 문서를 정리한 단계다. 새 서비스의 실행 코드, Dockerfile, 실제 `.env`, 실제 API 연결은 아직 구현하지 않았다. 기존 단일 MCP 코드는 삭제하지 않고 `legacy/stock_mcp`에 보존했다.
+| 영역 | 상태 |
+|---|---|
+| Community MCP | Tool 2개, 외부 서버 Client, Mock, 테스트 구현 완료 |
+| Backend | `/health`만 구현 |
+| Frontend | 최소 Streamlit 화면만 구현 |
+| MCP Client | 구조와 계약만 확정 |
+| Price·News·Disclosure MCP | 구조와 계약만 확정 |
+| PostgreSQL·Redis | `infra/docker-compose.yml`과 DB 초기화 SQL 준비 완료 |
+| 서비스 Docker | Frontend·Backend·Community MCP만 준비 완료 |
 
 ## 보안 원칙
 
-- 실제 `.env`와 API Key는 Git에 올리지 않는다.
+- 실제 `.env`, API Key, DB 비밀번호는 Git에 올리지 않는다.
 - Frontend에는 비밀값을 넣지 않는다.
-- 사용자 ID는 실제 단계에서 인증된 토큰으로 확인한다.
-- Memory에는 비밀번호, 토큰, API Key, 주민등록번호 같은 민감정보를 저장하지 않는다.
-- 서비스는 매수·매도 추천이나 수익률 보장을 제공하지 않는다.
+- MCP Client와 MCP 서버에는 사용자 프로필·비밀번호·토큰을 보내지 않는다.
+- Memory에는 인증정보나 민감정보를 저장하지 않는다.
