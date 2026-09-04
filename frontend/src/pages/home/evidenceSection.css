@@ -6,17 +6,36 @@
 .sallae-evidence-section__tab-row { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
 .sallae-evidence-section__tab-row::-webkit-scrollbar { display: none; }
 .sallae-evidence-section__tab { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 10px 18px; border: 1px solid var(--c-line); border-radius: var(--r-pill); color: var(--c-body); background: rgba(255, 255, 255, 0.88); font-size: 14px; font-weight: 700; white-space: nowrap; transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease; }
+.sallae-evidence-section__tab-label--short { display: none; }
 .sallae-evidence-section__tab--active { border-color: var(--c-primary); color: var(--c-primary-deep); background: var(--c-white); box-shadow: var(--shadow-glow); }
 .sallae-evidence-section__tab:hover { transform: translateY(-2px); }
 .sallae-evidence-section__tab:active { transform: scale(0.97); }
 .sallae-evidence-section__tab:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
-.sallae-evidence-section__subsections { width: 100%; }
+.sallae-evidence-section__subsections { display: grid; gap: 48px; width: 100%; }
+.sallae-evidence-section__subsections > .analysis-gap { margin-bottom: 0; scroll-margin-top: calc(var(--nav-offset, 0px) + 96px); }
+.sallae-evidence-section__subsections > .analysis-evidence-subsection + .analysis-evidence-subsection { margin-top: 0; }
+
+@media (max-width: 600px) {
+  .sallae-evidence-section__tabs { order: -1; }
+  .sallae-evidence-section__tab-row { margin-inline: -18px; padding-inline: 18px; overflow-y: hidden; scroll-padding-inline: 18px; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; -webkit-mask-image: linear-gradient(to right, transparent, #000 18px, #000 calc(100% - 18px), transparent); mask-image: linear-gradient(to right, transparent, #000 18px, #000 calc(100% - 18px), transparent); }
+  .sallae-evidence-section__tab { scroll-snap-align: start; scroll-snap-stop: always; }
+  .sallae-evidence-section__subsections { gap: 36px; }
+  .sallae-evidence-section__subsections > .analysis-gap { opacity: 1; transform: none; transition: none; }
+}
+
+@media (max-height: 520px) {
+  .sallae-evidence-section__tabs { order: -1; }
+  .sallae-evidence-section__subsections { gap: 36px; }
+  .sallae-evidence-section__subsections > .analysis-gap { opacity: 1; transform: none; transition: none; }
+}
 
 @media (max-width: 480px) {
   .sallae-evidence-section { padding: 20px 20px 48px; }
   .sallae-evidence-section__gauges { grid-template-columns: 1fr; }
   .sallae-evidence-section__tabs { top: 0; margin: 0 -20px 12px; padding: 10px 20px; }
   .sallae-evidence-section__tab { min-height: 40px; padding: 9px 15px; font-size: 13px; }
+  .sallae-evidence-section__tab-label { display: none; }
+  .sallae-evidence-section__tab-label--short { display: inline; }
 }
 
 @media (prefers-reduced-motion: reduce) {
