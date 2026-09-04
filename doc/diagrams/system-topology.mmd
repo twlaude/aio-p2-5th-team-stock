@@ -1,0 +1,54 @@
+flowchart TB
+    U["사용자 브라우저"]
+
+    subgraph VPS["VPS 159.223.75.71 · 데모 및 MCP 상시 운영"]
+        direction LR
+        FE["Frontend<br/>React + Vite<br/>:8501"]
+        BE["Backend<br/>FastAPI<br/>:8000"]
+        MC["MCP Client<br/>FastAPI + Agent Workflow<br/>:8010"]
+
+        subgraph MCP["FastMCP · Streamable HTTP"]
+            direction TB
+            PM["Price MCP<br/>:8020/mcp"]
+            NM["News MCP<br/>:8021/mcp"]
+            DM["Disclosure MCP<br/>:8022/mcp"]
+            CM["Community MCP<br/>:8023/mcp"]
+        end
+
+        BPG[("Backend PostgreSQL<br/>사용자·성향·분석·공용 RAG DDL")]
+        DPG[("Disclosure PostgreSQL + pgvector<br/>기업·공시·정기보고서·청크")]
+        RD[("Redis<br/>회원별 최근 검색 상태 · TTL")]
+    end
+
+    subgraph EXT["외부 데이터 제공처"]
+        direction LR
+        KIS["한국투자증권 Open API"]
+        NAVER["NAVER API HUB"]
+        DART["OpenDART"]
+        FGI["커뮤니티 FGI API<br/>:8877"]
+        OAI["OpenAI<br/>gpt-5.6-luna"]
+    end
+
+    subgraph LOCAL["로컬 개발"]
+        direction LR
+        DEV["Frontend :8501<br/>Backend :8000<br/>MCP Client :8010"]
+        COMPOSE[("infra/docker-compose.yml<br/>PostgreSQL :5432 · Redis :6379")]
+    end
+
+    U -->|"HTTP"| FE
+    FE -->|"REST / JSON"| BE
+    BE -->|"REST / JSON"| MC
+    BE --> BPG
+    BE --> RD
+    MC -->|"MCP"| PM
+    MC -->|"MCP"| NM
+    MC -->|"MCP"| DM
+    MC -->|"MCP"| CM
+    MC --> OAI
+    PM --> KIS
+    NM --> NAVER
+    DM --> DART
+    DM --> DPG
+    CM --> FGI
+    DEV -.->|"MCP 4개 VPS URL 사용 가능"| MCP
+    DEV --> COMPOSE

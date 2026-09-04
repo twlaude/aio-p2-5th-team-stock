@@ -1,0 +1,104 @@
+erDiagram
+    users ||--o| user_profiles : "user_id"
+    users o|--o{ analysis_runs : "user_id NULL 가능"
+
+    companies ||--o{ disclosures : "stock_code"
+    companies ||--o{ annual_reports : "stock_code"
+    annual_reports ||--o{ report_chunks : "annual_report_id"
+
+    users {
+        text user_id PK
+        text username UK
+        text password_hash
+        text display_name
+        timestamptz created_at
+    }
+    user_profiles {
+        text user_id PK,FK
+        text experience_level
+        text risk_profile
+        text investment_horizon
+        text preferred_evidence
+        timestamptz updated_at
+    }
+    analysis_runs {
+        bigint id PK
+        text request_id UK
+        text user_id FK "NULL 가능"
+        text company_name
+        text stock_code
+        text access_level
+        text status
+        text one_line_summary
+        jsonb sources
+        jsonb partial_failures
+        jsonb personalized_checkpoints "NULL 가능"
+        timestamptz requested_at
+        timestamptz collected_at "NULL 가능"
+    }
+    rag_chunks {
+        bigint id PK
+        text stock_code
+        text doc_type
+        text document_id "NULL 가능"
+        integer chunk_index
+        text title "NULL 가능"
+        text content
+        text content_hash
+        timestamptz published_at "NULL 가능"
+        timestamptz ingested_at
+        text source "NULL 가능"
+        vector embedding "1536차원 NULL 가능"
+        text embedding_model
+        jsonb metadata
+    }
+    companies {
+        varchar stock_code PK "6자리"
+        text company_name
+        varchar corp_code UK "8자리"
+        text market "NULL 가능"
+        boolean is_supported
+        timestamptz created_at
+        timestamptz updated_at
+    }
+    disclosures {
+        varchar receipt_number PK "14자리"
+        varchar stock_code FK
+        text report_name
+        timestamptz published_at "NULL 가능"
+        date filed_at "NULL 가능"
+        text category "NULL 가능"
+        boolean is_major
+        boolean is_correction
+        text source_url
+        jsonb raw_payload
+        timestamptz collected_at
+        timestamptz updated_at
+    }
+    annual_reports {
+        bigint id PK
+        varchar stock_code FK
+        smallint report_year
+        text report_type
+        text report_name
+        varchar receipt_number UK "14자리"
+        timestamptz published_at "NULL 가능"
+        text source_url
+        integer chunk_count
+        char content_hash "64자리 NULL 가능"
+        timestamptz indexed_at
+        timestamptz updated_at
+    }
+    report_chunks {
+        bigint id PK
+        bigint annual_report_id FK
+        integer chunk_index
+        text section_title
+        text content
+        char content_hash "64자리"
+        boolean has_table
+        vector embedding "1536차원"
+        text embedding_model
+        jsonb metadata
+        timestamptz created_at
+    }

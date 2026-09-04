@@ -1,0 +1,67 @@
+flowchart TD
+    FE["Frontend<br/>REST / JSON"]
+
+    subgraph BE["Backend · FastAPI :8000"]
+        direction TB
+        MAIN["app/main.py<br/>CORS · /health · /api/v1 등록"]
+
+        subgraph ROUTERS["Routers · HTTP 경계"]
+            direction LR
+            AUTHR["auth<br/>login · signup"]
+            PROR["profile<br/>GET · PUT"]
+            MEMR["memories<br/>GET · DELETE"]
+            ANAR["analysis<br/>companies · analyses"]
+        end
+
+        SCHEMA["Schemas · Pydantic<br/>요청·응답·오류 검증"]
+
+        subgraph SERVICES["Services · 업무 규칙"]
+            direction LR
+            AUTHS["auth<br/>JWT 인증"]
+            PROS["profile<br/>투자 성향"]
+            MEMS["memory<br/>장·단기 Memory"]
+            ANAS["analysis<br/>지원 종목·응답 조립·폴백 문장"]
+        end
+
+        subgraph REPOS["Repositories · PostgreSQL 접근"]
+            direction LR
+            UR["user_repository"]
+            AR["analysis_repository"]
+        end
+
+        subgraph CLIENTS["Clients · 외부 연결"]
+            direction LR
+            MC["mcp_client<br/>HTTP + request_id 검증"]
+            RC["redis<br/>TTL 단기 상태"]
+        end
+
+        CORE["Core<br/>config · db cursor · security"]
+        COMP["supported_companies.json<br/>지원 20종목 Snapshot"]
+
+        MAIN --> ROUTERS
+        ROUTERS --> SCHEMA
+        AUTHR --> AUTHS
+        PROR --> PROS
+        MEMR --> MEMS
+        ANAR --> ANAS
+        AUTHS --> UR
+        PROS --> UR
+        MEMS --> UR
+        MEMS --> RC
+        ANAS --> PROS
+        ANAS --> MC
+        ANAS --> RC
+        ANAS --> AR
+        ANAS --> COMP
+        REPOS --> CORE
+        AUTHS --> CORE
+    end
+
+    PG[("PostgreSQL<br/>users · profiles · analysis_runs")]
+    REDIS[("Redis<br/>backend:short_term:user_id")]
+    MCP["MCP Client :8010<br/>공통 분석·Agent Workflow"]
+
+    FE --> MAIN
+    CORE --> PG
+    RC --> REDIS
+    MC --> MCP

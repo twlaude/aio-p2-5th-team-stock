@@ -1,0 +1,69 @@
+erDiagram
+    MEMBER ||--o| INVESTMENT_PROFILE : "장기 성향을 가진다"
+    MEMBER o|--o{ ANALYSIS_RUN : "회원이면 실행한다"
+
+    SUPPORTED_COMPANY ||--o{ DISCLOSURE_CACHE : "공시를 가진다"
+    SUPPORTED_COMPANY ||--o{ PERIODIC_REPORT : "보고서를 가진다"
+    PERIODIC_REPORT ||--o{ REPORT_CHUNK : "검색 단위로 나뉜다"
+
+    MEMBER {
+        identifier member_id
+        string username
+        string display_name
+        datetime created_at
+    }
+    INVESTMENT_PROFILE {
+        string experience_level
+        string risk_profile
+        string investment_horizon
+        string preferred_evidence
+        datetime updated_at
+    }
+    ANALYSIS_RUN {
+        identifier request_id
+        string company_name
+        string stock_code
+        string access_level
+        string status
+        text one_line_summary
+        datetime requested_at
+    }
+    EVIDENCE_CHUNK {
+        string stock_code
+        string document_type
+        text content
+        string content_hash
+        vector embedding_1536
+        string embedding_model
+    }
+    SUPPORTED_COMPANY {
+        identifier stock_code
+        string company_name
+        identifier dart_corp_code
+        string market
+        boolean is_supported
+    }
+    DISCLOSURE_CACHE {
+        identifier receipt_number
+        string report_name
+        datetime published_at
+        string category
+        boolean is_major
+        boolean is_correction
+    }
+    PERIODIC_REPORT {
+        identifier report_id
+        number report_year
+        string report_type
+        identifier receipt_number
+        number chunk_count
+        string content_hash
+    }
+    REPORT_CHUNK {
+        number chunk_index
+        string section_title
+        text content
+        string content_hash
+        boolean has_table
+        vector embedding_1536
+    }
