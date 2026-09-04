@@ -3,7 +3,7 @@
 공개 Tool의 필드명은 shared/contracts/disclosure/README.md를 기준으로 한다.
 """
 
-from typing import Literal, TypedDict
+from typing import Literal, NotRequired, TypedDict
 
 
 Status = Literal[
@@ -42,6 +42,7 @@ class DisclosureItem(TypedDict):
     receipt_number: str
     published_at: str
     document_type: Literal["disclosure"]
+    disclosure_kind: Literal["periodic", "major", "other"]
     source_url: str
 
 
@@ -52,6 +53,7 @@ class RecentDisclosuresRequest(TypedDict):
     stock_code: str
     lookback_days: int
     limit: int
+    disclosure_types: NotRequired[list[str]]
 
 
 class RecentDisclosuresResponse(TypedDict, total=False):
@@ -102,6 +104,7 @@ class AnnualReportSearchRequest(TypedDict):
     stock_code: str
     query: str
     top_k: int
+    min_score: NotRequired[float]
 
 
 class AnnualReportSearchResponse(TypedDict, total=False):
@@ -113,6 +116,7 @@ class AnnualReportSearchResponse(TypedDict, total=False):
     report_year: int
     report_type: Literal["annual", "semi_annual", "quarterly"]
     matched_passages: list[MatchedPassage]
+    filtered_out: int
     available_years: list[int]
     source_url: str
     collected_at: str

@@ -99,11 +99,14 @@ class AnnualReportService:
         company_name: str | None = None,
         top_k: int = 5,
         report_year: int | None = None,
+        min_score: float = 0.0,
     ) -> AnnualReportSearchResponse:
         if not query.strip():
             raise ValueError("query는 비어 있을 수 없습니다.")
         if not 1 <= top_k <= 5:
             raise ValueError("top_k는 1~5여야 합니다.")
+        if not 0.0 <= min_score <= 1.0:
+            raise ValueError("min_score는 0~1이어야 합니다.")
         company = self._company_resolver.resolve(
             stock_code=stock_code, company_name=company_name
         )
@@ -114,6 +117,7 @@ class AnnualReportService:
             top_k=top_k,
             report_year=report_year,
             report_type="annual",
+            min_score=min_score,
         )
 
     def search_periodic_report(
@@ -125,6 +129,7 @@ class AnnualReportService:
         top_k: int = 5,
         report_year: int | None = None,
         report_type: DartPeriodicReportType,
+        min_score: float = 0.0,
     ) -> AnnualReportSearchResponse:
         """사업·반기·분기보고서 중 지정한 유형의 관련 원문을 검색한다."""
 
@@ -132,6 +137,8 @@ class AnnualReportService:
             raise ValueError("query는 비어 있을 수 없습니다.")
         if not 1 <= top_k <= 5:
             raise ValueError("top_k는 1~5여야 합니다.")
+        if not 0.0 <= min_score <= 1.0:
+            raise ValueError("min_score는 0~1이어야 합니다.")
         company = self._company_resolver.resolve(
             stock_code=stock_code, company_name=company_name
         )
@@ -161,14 +168,16 @@ class AnnualReportService:
                 "match_type": "vector",
             }
             for hit in hits
+            if hit.score >= min_score
         ]
         return {
-            "status": "success" if passages else "no_data",
+            "status": "success" if hits else "no_data",
             "report_name": report.report_name,
             "receipt_number": report.receipt_number,
             "report_year": report.report_year,
             "report_type": report.report_type,
             "matched_passages": passages,
+            "filtered_out": len(hits) - len(passages),
             "available_years": self._report_store.available_years(
                 company["stock_code"], report_type
             ),

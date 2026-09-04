@@ -13,6 +13,7 @@ from app.services.company_resolver import CompanyResolver
 
 
 _SEOUL = ZoneInfo("Asia/Seoul")
+_DISCLOSURE_TYPES = frozenset("ABCDEFGHIJ")
 _MAJOR_DISCLOSURE_TERMS = (
     "유상증자",
     "무상증자",
@@ -51,31 +52,37 @@ class DisclosureService:
         company_name: str | None = None,
         lookback_days: int = 30,
         limit: int = 20,
+        disclosure_types: list[str] | None = None,
     ) -> RecentDisclosuresResponse:
         """최근 공시를 최신순으로 반환하고, 조회한 목록을 DB에 저장한다."""
 
-        self._validate_request(lookback_days, limit)
+        requested_types = self._validate_request(lookback_days, limit, disclosure_types)
         company = self._company_resolver.resolve(
             stock_code=stock_code,
             company_name=company_name,
         )
         end_date = datetime.now(_SEOUL).date()
         begin_date = end_date - timedelta(days=lookback_days - 1)
-        # 팀 결정(2026-09-04): 최근 공시는 정기공시(사업·반기·분기보고서)만 모은다 → DART pblntf_ty=A
-        raw_response = self._dart_client.get_disclosures(
-            corp_code=company["corp_code"],
-            begin_date=begin_date.strftime("%Y%m%d"),
-            end_date=end_date.strftime("%Y%m%d"),
-            page_count=100,
-            disclosure_type="A",
-        )
+        # 팀 결정(2026-09-04): 기본값은 정기공시(A)만 유지한다.
+        records_by_receipt: dict[str, DartDisclosureRecord] = {}
+        for disclosure_type in requested_types:
+            raw_response = self._dart_client.get_disclosures(
+                corp_code=company["corp_code"],
+                begin_date=begin_date.strftime("%Y%m%d"),
+                end_date=end_date.strftime("%Y%m%d"),
+                page_count=100,
+                disclosure_type=disclosure_type,
+            )
+            if raw_response["status"] == "013":
+                continue
+            for record in raw_response.get("list", []):
+                records_by_receipt.setdefault(record["rcept_no"], record)
         collected_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
-        raw_disclosures = raw_response.get("list", [])
-        if raw_response["status"] == "013" or not raw_disclosures:
+        if not records_by_receipt:
             return {"status": "no_data", "disclosures": [], "collected_at": collected_at}
 
         sorted_disclosures = sorted(
-            raw_disclosures,
+            records_by_receipt.values(),
             key=lambda record: (record["rcept_dt"], record["rcept_no"]),
             reverse=True,
         )
@@ -88,11 +95,22 @@ class DisclosureService:
         return {"status": "success", "disclosures": items, "collected_at": collected_at}
 
     @staticmethod
-    def _validate_request(lookback_days: int, limit: int) -> None:
+    def _validate_request(
+        lookback_days: int,
+        limit: int,
+        disclosure_types: list[str] | None,
+    ) -> list[str]:
         if not 1 <= lookback_days <= 365:
             raise ValueError("lookback_days는 1~365여야 합니다.")
         if not 1 <= limit <= 100:
             raise ValueError("limit은 1~100이어야 합니다.")
+        requested_types = ["A"] if disclosure_types is None else disclosure_types
+        if not requested_types or any(
+            not isinstance(value, str) or value not in _DISCLOSURE_TYPES
+            for value in requested_types
+        ):
+            raise ValueError("disclosure_types는 A~J 대문자 목록이어야 합니다.")
+        return list(dict.fromkeys(requested_types))
 
     @staticmethod
     def _source_url(receipt_number: str) -> str:
@@ -105,6 +123,7 @@ class DisclosureService:
             "receipt_number": record["rcept_no"],
             "published_at": cls._to_iso_datetime(record["rcept_dt"]),
             "document_type": "disclosure",
+            "disclosure_kind": cls._category(record["report_nm"]),
             "source_url": cls._source_url(record["rcept_no"]),
         }
 
