@@ -140,7 +140,7 @@ def match_issues(issues: list[str], material_disclosures: dict[str, Any]) -> Mat
         matched.append(
             MatchedDisclosure(
                 issue=issue,
-                report_name=str(disclosure.get("report_name") or "전자공시"),
+                report_name=str(disclosure.get("report_name") or "전자공시").strip(),
                 receipt_number=str(disclosure.get("receipt_number") or ""),
                 published_at=str(disclosure.get("published_at") or ""),
             )
