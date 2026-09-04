@@ -2,6 +2,34 @@
 
 Frontend → Backend → MCP Client → MCP 4개를 한 컴퓨터에서 붙여 본 결과를 바탕으로, 다시 띄울 때 필요한 것만 적었다. Agent(MCP Client) 부분은 아직 다듬는 중이므로 이 문서는 "붙이는 데 필요한 것"에 한정한다.
 
+## 0. 역할 정리 (2026-09-04 합의)
+
+- **MCP 서버 4개는 VPS에서 상시 실행** (systemd, 24/7). 팀원은 띄우지 않고 URL만 쓴다.
+- **오현님**: `mcp_client`만 로컬에서 실행하며 Agent 마무리. 화면 보면서 하려면 backend + frontend도 로컬에 (infra compose로 PG·Redis).
+- **태웅**: VPS의 MCP 4개·데모 스택 운영, 프론트.
+
+| MCP | VPS 주소 (mcp_client `.env`에 그대로) | 상태 |
+|---|---|---|
+| Price | `PRICE_MCP_URL=http://159.223.75.71:8020/mcp` | KIS 키 대기 → 그때까지 **테스트 스텁**(70,000원 고정, `[TEST] price stub`). 오현님 KIS 키를 받으면 실서버로 교체 |
+| News | `NEWS_MCP_URL=http://159.223.75.71:8021/mcp` | NAVER API HUB 키 없음 → mock 3건. 키 생기면 VPS `.env`에 넣고 재시작 |
+| Disclosure | `DISCLOSURE_MCP_URL=http://159.223.75.71:8022/mcp` | 실데이터. DART 최근 공시 + 20종목 2025 사업보고서 색인 |
+| Community | `COMMUNITY_MCP_URL=http://159.223.75.71:8023/mcp` | 실데이터 (네이버 종토방 FGI) |
+
+상태 확인: `curl http://159.223.75.71:802N/health`. 인증 없음 — 발표용 공개 데모 범위에서만 쓴다.
+
+### 오현님 mcp_client 로컬 실행에 필요한 것
+
+```text
+mcp_client/.env
+  OPENAI_API_KEY=<본인 키>          # 모델·effort는 기본값(gpt-5.6-luna, low) 그대로
+  PRICE_MCP_URL=http://159.223.75.71:8020/mcp
+  NEWS_MCP_URL=http://159.223.75.71:8021/mcp
+  DISCLOSURE_MCP_URL=http://159.223.75.71:8022/mcp
+  COMMUNITY_MCP_URL=http://159.223.75.71:8023/mcp
+```
+
+그 외 키(DART·NAVER·커뮤니티 토큰)는 전부 VPS 쪽에 있으니 오현님은 필요 없다. 화면까지 보려면 `backend/.env`(`MCP_CLIENT_MODE=live`, `MCP_CLIENT_URL=http://localhost:8010`)와 `frontend/.env`(`VITE_API_MODE=live`)만 추가.
+
 ## 1. VPS 데모 (지금 붙어 있는 상태)
 
 - 화면: http://159.223.75.71:8501 (React, `VITE_API_MODE=live`)
