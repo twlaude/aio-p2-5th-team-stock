@@ -1,0 +1,18 @@
+<DOCUMENT>
+  <P>주1)<정정 전> *해당 부분 발췌</P>
+  <SECTION-1 ACLASS="MANDATORY" APARTSOURCE="SOURCE">
+    <TITLE ATOC="Y" ENG="III. Financial Information">III. 재무에 관한 사항</TITLE>
+    <SECTION-2 ACLASS="MANDATORY">
+      <TITLE ATOC="Y">2. 재무제표</TITLE>
+      <P>색인에서 제외할 재무제표입니다.</P>
+    </SECTION-2>
+    <SECTION-2 ACLASS="MANDATORY">
+      <TITLE ATOC="Y">6. 배당에 관한 사항</TITLE>
+      <P>배당 정책을 설명합니다.</P>
+    </SECTION-2>
+  </SECTION-1>
+  <SECTION-1 ACLASS="MANDATORY" APARTSOURCE="SOURCE">
+    <TITLE ATOC="Y" ENG="VII. Matters Related to Shareholders">VII. 주주에 관한 사항</TITLE>
+    <P>주주 현황입니다.</P>
+  </SECTION-1>
+</DOCUMENT>

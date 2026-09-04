@@ -32,15 +32,26 @@ def chunk_sections(
     """여러 섹션을 문서 순서대로 청킹하고 인덱스를 연속 부여한다."""
 
     chunks: list[ReportChunk] = []
+    seen_contents: set[str] = set()
     for section in sections:
-        chunks.extend(
-            _chunk_section(
-                section,
-                start_index=len(chunks),
-                chunk_size=chunk_size,
-                overlap=overlap,
-            )
+        section_chunks = _chunk_section(
+            section,
+            start_index=len(chunks),
+            chunk_size=chunk_size,
+            overlap=overlap,
         )
+        for chunk in section_chunks:
+            if chunk.content in seen_contents:
+                continue
+            seen_contents.add(chunk.content)
+            chunks.append(
+                ReportChunk(
+                    chunk_index=len(chunks),
+                    section_title=chunk.section_title,
+                    content=chunk.content,
+                    has_table=chunk.has_table,
+                )
+            )
     return chunks
 
 

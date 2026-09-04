@@ -203,7 +203,8 @@ class DartClient:
                 filenames = [name for name in archive.namelist() if not name.endswith("/")]
                 if not filenames:
                     raise DartUnavailableError("DART ZIP 응답에 파일이 없습니다.")
-                content = archive.read(filenames[0])
+                filename = self._select_xml_member(archive, filenames, params)
+                content = archive.read(filename)
         except BadZipFile as error:
             self._raise_xml_api_error(response.content)
             raise DartUnavailableError("DART가 올바른 ZIP 응답을 반환하지 않았습니다.") from error
@@ -214,6 +215,23 @@ class DartClient:
             except UnicodeDecodeError:
                 pass
         raise DartUnavailableError("DART XML 인코딩을 해석하지 못했습니다.")
+
+    @staticmethod
+    def _select_xml_member(
+        archive: ZipFile, filenames: list[str], params: dict[str, Any]
+    ) -> str:
+        """document.xml ZIP에서 첨부가 아닌 접수번호 본문을 고른다."""
+
+        receipt_number = str(params.get("rcept_no", ""))
+        if not receipt_number:
+            return filenames[0]
+        expected_name = f"{receipt_number}.xml".casefold()
+        for filename in filenames:
+            if filename.rsplit("/", maxsplit=1)[-1].casefold() == expected_name:
+                return filename
+        xml_files = [name for name in filenames if name.casefold().endswith(".xml")]
+        candidates = xml_files or filenames
+        return max(candidates, key=lambda name: archive.getinfo(name).file_size)
 
     @staticmethod
     def _raise_xml_api_error(content: bytes) -> None:
