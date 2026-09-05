@@ -19,10 +19,10 @@ def live_status_page() -> str:
 
 
 @router.get("/live-status/snapshot", dependencies=[Depends(require_admin)])
-def live_status_snapshot() -> dict:
+async def live_status_snapshot() -> dict:
     return {
-        "short_term": redis_client.snapshot_short_term(),
-        "recent_runs": analysis_repository.list_recent(limit=30),
+        "short_term": await redis_client.snapshot_short_term(),
+        "recent_runs": await analysis_repository.list_recent(limit=30),
     }
 
 

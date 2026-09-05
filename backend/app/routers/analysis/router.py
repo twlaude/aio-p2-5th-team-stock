@@ -22,10 +22,10 @@ def list_companies() -> CompanyListResponse:
 
 
 @router.post("/analyses")
-def create_analysis(
+async def create_analysis(
     body: AnalysisRequest, current_user: CurrentUser | None = Depends(get_optional_user)
 ):
-    result = run_analysis(body.query, current_user)
+    result = await run_analysis(body.query, current_user)
     if isinstance(result, ErrorResponse):
         status_code = STATUS_HTTP_CODE.get(result.status, 500)
         return JSONResponse(status_code=status_code, content=result.model_dump())

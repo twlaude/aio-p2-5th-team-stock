@@ -2,7 +2,7 @@ fastapi==0.141.1
 uvicorn[standard]==0.52.4
 pydantic==2.13.5
 pydantic-settings==2.15.0
-psycopg2-binary==2.9.12
+psycopg[binary,pool]==3.3.5
 pgvector==0.5.0
 openai==3.8.0
 httpx==0.28.1

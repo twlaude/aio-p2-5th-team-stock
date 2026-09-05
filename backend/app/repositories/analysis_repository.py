@@ -6,7 +6,7 @@ from app.clients.redis import client as redis_client
 from app.core.db import get_cursor
 
 
-def save_run(
+async def save_run(
     request_id: str,
     user_id: str | None,
     company_name: str,
@@ -20,8 +20,8 @@ def save_run(
     requested_at: datetime,
     collected_at: datetime | None,
 ) -> None:
-    with get_cursor(commit=True) as cur:
-        cur.execute(
+    async with get_cursor(commit=True) as cur:
+        await cur.execute(
             """
             INSERT INTO analysis_runs (
                 request_id, user_id, company_name, stock_code, access_level, status,
@@ -45,7 +45,7 @@ def save_run(
                 collected_at,
             ),
         )
-    redis_client.publish_event(
+    await redis_client.publish_event(
         {
             "type": "analysis_run",
             "request_id": request_id,
@@ -60,9 +60,9 @@ def save_run(
     )
 
 
-def list_recent(limit: int = 20) -> list[dict[str, Any]]:
-    with get_cursor() as cur:
-        cur.execute(
+async def list_recent(limit: int = 20) -> list[dict[str, Any]]:
+    async with get_cursor() as cur:
+        await cur.execute(
             """
             SELECT request_id, user_id, company_name, stock_code, access_level, status,
                    partial_failures, requested_at, collected_at
@@ -72,4 +72,5 @@ def list_recent(limit: int = 20) -> list[dict[str, Any]]:
             """,
             (limit,),
         )
-        return [dict(row) for row in cur.fetchall()]
+        rows = await cur.fetchall()
+        return [dict(row) for row in rows]

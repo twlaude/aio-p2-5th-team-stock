@@ -63,8 +63,8 @@ def _mcp_client_error_response(request_id: str, exc: Exception) -> ErrorResponse
     )
 
 
-def _remember_recent_search(user_id: str, company_name: str, stock_code: str, searched_at: datetime) -> None:
-    redis_client.set_state(
+async def _remember_recent_search(user_id: str, company_name: str, stock_code: str, searched_at: datetime) -> None:
+    await redis_client.set_state(
         user_id,
         recent_company_name=company_name,
         recent_stock_code=stock_code,
@@ -80,7 +80,7 @@ def _agent_narrative_ok(raw: dict) -> bool:
     return not any(item.get("service") == "openai" for item in failures)
 
 
-def run_analysis(
+async def run_analysis(
     query: str, current_user: CurrentUser | None
 ) -> AnalysisResponse | UnsupportedCompanyResponse | ErrorResponse:
     company = companies.resolve_company(query)
@@ -91,10 +91,10 @@ def run_analysis(
     stock_code = company["stock_code"]
     request_id = str(uuid4())
 
-    profile = profile_service.get_profile(current_user.user_id) if current_user else None
+    profile = await profile_service.get_profile(current_user.user_id) if current_user else None
     requested_at = datetime.now(timezone.utc)
     try:
-        raw = mcp_client.fetch_common_analysis(company_name, stock_code, profile, request_id)
+        raw = await mcp_client.fetch_common_analysis(company_name, stock_code, profile, request_id)
     except (MCPClientTimeout, MCPClientUnavailable, MCPClientError) as exc:
         return _mcp_client_error_response(request_id, exc)
 
@@ -136,9 +136,9 @@ def run_analysis(
             if agent_ok and raw.get("personalized_checkpoints")
             else compose_personal(company_name, topic, temperature["score"], evidence["level"], profile)
         )
-        _remember_recent_search(current_user.user_id, company_name, stock_code, requested_at)
+        await _remember_recent_search(current_user.user_id, company_name, stock_code, requested_at)
 
-    analysis_repository.save_run(
+    await analysis_repository.save_run(
         request_id=response.request_id,
         user_id=current_user.user_id if current_user else None,
         company_name=company_name,
