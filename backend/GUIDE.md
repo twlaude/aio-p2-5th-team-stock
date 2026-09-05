@@ -116,6 +116,20 @@ docker compose up -d
 
 로그인 토큰은 메모리 매핑이 아니라 실제 JWT(HS256)다. `JWT_SECRET_KEY`를 배포 환경에서는 반드시 32바이트 이상의 무작위 값으로 바꾼다. `JWT_EXPIRES_MINUTES`(기본 1440 = 24시간)가 지나면 토큰이 만료되어 재로그인이 필요하다.
 
+## 전부 async다
+
+라우터부터 repositories까지 I/O가 있는 경로는 전부 `async def`다.
+
+- DB: `psycopg[binary,pool]`(psycopg3) 비동기 커넥션 풀. `psycopg2`가 아니다.
+- Redis: `redis.asyncio`
+- mcp_client 호출: `httpx.AsyncClient`
+
+`app/core/async_resource.py`의 `LoopScopedResource`가 커넥션 풀/Redis 클라이언트를 이벤트 루프
+하나당 하나만 만들어 재사용한다 — pytest가 테스트마다 새 이벤트 루프를 띄우기 때문에(운영은
+루프가 하나뿐이라 사실상 싱글턴) 필요한 장치다. 새 I/O 코드를 짤 때 `def`로 만들고 그 안에서
+동기 DB/Redis 호출을 쓰면 다시 스레드풀 병목으로 돌아가니, 반드시 `async def` + `await`로 짠다.
+자세한 배경은 `docs/BACKEND_CONCURRENCY_FINDINGS.md` 참고.
+
 ## 개인화는 MCP Client 책임
 
 `나를 위한 확인 포인트`(`personalized_checkpoints`) 생성은 MCP Client가 OpenAI `gpt-5.6-luna`로 처리한다. Backend는 MCP Client 응답의 `personalized_checkpoints`를 검증만 하고 그대로 Frontend에 전달한다.

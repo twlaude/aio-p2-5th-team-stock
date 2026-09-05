@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from uuid import uuid4
 
-import psycopg2.errors
+import psycopg.errors
 
 from app.core.db import get_cursor
 from app.core.security import hash_password
@@ -44,32 +44,32 @@ def _row_to_record(row) -> UserRecord:
     )
 
 
-def get_by_username(username: str) -> UserRecord | None:
-    with get_cursor() as cur:
-        cur.execute(_SELECT.format(column="u.username"), (username,))
-        row = cur.fetchone()
+async def get_by_username(username: str) -> UserRecord | None:
+    async with get_cursor() as cur:
+        await cur.execute(_SELECT.format(column="u.username"), (username,))
+        row = await cur.fetchone()
     return _row_to_record(row) if row else None
 
 
-def get_by_id(user_id: str) -> UserRecord | None:
-    with get_cursor() as cur:
-        cur.execute(_SELECT.format(column="u.user_id"), (user_id,))
-        row = cur.fetchone()
+async def get_by_id(user_id: str) -> UserRecord | None:
+    async with get_cursor() as cur:
+        await cur.execute(_SELECT.format(column="u.user_id"), (user_id,))
+        row = await cur.fetchone()
     return _row_to_record(row) if row else None
 
 
-def create_user(username: str, password: str, display_name: str, profile: InvestmentProfile) -> UserRecord:
+async def create_user(username: str, password: str, display_name: str, profile: InvestmentProfile) -> UserRecord:
     user_id = f"user-{uuid4()}"
     password_hash = hash_password(password)
-    with get_cursor(commit=True) as cur:
+    async with get_cursor(commit=True) as cur:
         try:
-            cur.execute(
+            await cur.execute(
                 "INSERT INTO users (user_id, username, password_hash, display_name) VALUES (%s, %s, %s, %s)",
                 (user_id, username, password_hash, display_name),
             )
-        except psycopg2.errors.UniqueViolation as exc:
+        except psycopg.errors.UniqueViolation as exc:
             raise ValueError(f"이미 존재하는 사용자명이다: {username}") from exc
-        cur.execute(
+        await cur.execute(
             """
             INSERT INTO user_profiles
                 (user_id, experience_level, risk_profile, investment_horizon, preferred_evidence)
@@ -82,10 +82,10 @@ def create_user(username: str, password: str, display_name: str, profile: Invest
     )
 
 
-def update_profile(user_id: str, profile: InvestmentProfile) -> UserRecord | None:
-    with get_cursor(commit=True) as cur:
+async def update_profile(user_id: str, profile: InvestmentProfile) -> UserRecord | None:
+    async with get_cursor(commit=True) as cur:
         try:
-            cur.execute(
+            await cur.execute(
                 """
                 INSERT INTO user_profiles
                     (user_id, experience_level, risk_profile, investment_horizon, preferred_evidence, updated_at)
@@ -99,11 +99,11 @@ def update_profile(user_id: str, profile: InvestmentProfile) -> UserRecord | Non
                 """,
                 (user_id, profile.experience_level, profile.risk_profile, profile.investment_horizon, profile.preferred_evidence),
             )
-        except psycopg2.errors.ForeignKeyViolation:
+        except psycopg.errors.ForeignKeyViolation:
             return None
-    return get_by_id(user_id)
+    return await get_by_id(user_id)
 
 
-def delete_profile(user_id: str) -> None:
-    with get_cursor(commit=True) as cur:
-        cur.execute("DELETE FROM user_profiles WHERE user_id = %s", (user_id,))
+async def delete_profile(user_id: str) -> None:
+    async with get_cursor(commit=True) as cur:
+        await cur.execute("DELETE FROM user_profiles WHERE user_id = %s", (user_id,))

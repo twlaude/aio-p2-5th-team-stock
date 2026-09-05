@@ -7,10 +7,10 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 
 
 @router.post("/login", response_model=AuthResponse)
-def login(body: LoginRequest) -> AuthResponse:
-    return auth_service.login(body.username, body.password)
+async def login(body: LoginRequest) -> AuthResponse:
+    return await auth_service.login(body.username, body.password)
 
 
 @router.post("/signup", response_model=AuthResponse)
-def signup(body: SignupRequest) -> AuthResponse:
-    return auth_service.signup(body.username, body.password, body.display_name, body.profile)
+async def signup(body: SignupRequest) -> AuthResponse:
+    return await auth_service.signup(body.username, body.password, body.display_name, body.profile)

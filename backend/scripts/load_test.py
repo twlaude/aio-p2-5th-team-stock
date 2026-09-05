@@ -154,7 +154,10 @@ async def main() -> None:
     args = parser.parse_args()
 
     report = Report()
-    async with httpx.AsyncClient(base_url=args.base_url, timeout=30.0) as client:
+    # httpx 기본 커넥션 상한(max_connections=100)에 concurrency가 걸리면 서버가 아니라
+    # 이 클라이언트 자체가 병목이 된다 — 풀어준다.
+    limits = httpx.Limits(max_connections=None, max_keepalive_connections=None)
+    async with httpx.AsyncClient(base_url=args.base_url, timeout=30.0, limits=limits) as client:
         try:
             health = await client.get("/health")
             health.raise_for_status()

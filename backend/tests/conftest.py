@@ -12,8 +12,12 @@ from app.main import app
 
 
 @pytest.fixture
-def client() -> TestClient:
-    return TestClient(app)
+def client():
+    # `with`로 감싸야 ASGI lifespan shutdown이 이 테스트의 이벤트 루프가 살아있는
+    # 동안 실행된다 — DB 풀/Redis 클라이언트가 죽은 루프 위에서 정리되며 멈추는
+    # 문제를 막는다.
+    with TestClient(app) as c:
+        yield c
 
 
 @pytest.fixture

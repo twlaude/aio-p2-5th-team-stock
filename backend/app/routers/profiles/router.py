@@ -9,12 +9,12 @@ router = APIRouter(prefix="/profile", tags=["profile"])
 
 
 @router.get("", response_model=InvestmentProfile)
-def get_profile(current_user: CurrentUser = Depends(get_current_user)) -> InvestmentProfile:
-    return profile_service.get_profile(current_user.user_id)
+async def get_profile(current_user: CurrentUser = Depends(get_current_user)) -> InvestmentProfile:
+    return await profile_service.get_profile(current_user.user_id)
 
 
 @router.put("", response_model=InvestmentProfile)
-def update_profile(
+async def update_profile(
     body: InvestmentProfile, current_user: CurrentUser = Depends(get_current_user)
 ) -> InvestmentProfile:
-    return profile_service.update_profile(current_user.user_id, body)
+    return await profile_service.update_profile(current_user.user_id, body)

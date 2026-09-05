@@ -1,3 +1,4 @@
+import asyncio
 from datetime import datetime, timezone
 from typing import Any
 from uuid import uuid4
@@ -109,10 +110,13 @@ def _mock_common_analysis(
     return result
 
 
-def fetch_common_analysis(
+async def fetch_common_analysis(
     company_name: str, stock_code: str, investment_profile: InvestmentProfile | None, request_id: str
 ) -> dict[str, Any]:
     if settings.mcp_client_mode == "mock":
+        if settings.mcp_mock_delay_seconds > 0:
+            # live 모드의 느린 외부 API 대기를 흉내낸다(부하테스트 전용, non-blocking).
+            await asyncio.sleep(settings.mcp_mock_delay_seconds)
         return _mock_common_analysis(company_name, stock_code, request_id, investment_profile)
 
     payload = {
@@ -122,12 +126,12 @@ def fetch_common_analysis(
         "requested_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
     }
     try:
-        response = httpx.post(
-            f"{settings.mcp_client_url}/internal/v1/common-analyses",
-            json=payload,
-            timeout=settings.mcp_client_timeout_seconds,
-        )
-        response.raise_for_status()
+        async with httpx.AsyncClient(timeout=settings.mcp_client_timeout_seconds) as client:
+            response = await client.post(
+                f"{settings.mcp_client_url}/internal/v1/common-analyses",
+                json=payload,
+            )
+            response.raise_for_status()
     except httpx.TimeoutException:
         raise MCPClientTimeout() from None
     except httpx.HTTPError as exc:

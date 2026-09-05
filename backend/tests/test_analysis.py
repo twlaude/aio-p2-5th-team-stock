@@ -103,8 +103,8 @@ def test_backend_composes_when_agent_failed(client, member_token, monkeypatch):
 
     original = mcp_client_module.fetch_common_analysis
 
-    def failed_agent(*args, **kwargs):
-        raw = original(*args, **kwargs)
+    async def failed_agent(*args, **kwargs):
+        raw = await original(*args, **kwargs)
         raw["partial_failures"] = [{"service": "openai", "status": "model_error", "message": "x"}]
         return raw
 
