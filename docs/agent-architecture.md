@@ -293,7 +293,7 @@ Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backen
 | `normal-07`, 성향 없음 | 모델 설명·개인화 null | completed·검증 통과 | PASS |
 | `empty_disclosures-01` | 목록 없으면 상세 미호출 | completed·상세 호출 0 | PASS |
 | `normal-09` | 검증 통과 모델 설명 | 목표주가 표현 교정 후 재검증 실패·reflection_exhausted | FAIL: 모델 채택 기준 |
-| `detail_failure-01` | 상세 실패 후 후속 응답 확인 | 상세 호출 0·completed | 미검증: 실패 주입 미도달 |
+| `detail_failure-01` | 상세 실패 후 후속 응답 확인 | 자연 선택은 상세 호출 0·completed; 첫 호출 강제 보조 실측은 off 후속 HTTP 400 폴백 / on 실패 안내 서술 채택 | on PASS([v3 보조 실측](../tests/scenarios/agent_eval/results/context-v3/summary.md)) |
 | `price_failure-01` | 현재가 없으면 중단 | RequiredPriceError·LLM 0 | PASS: 중단 기준 |
 
 단위 테스트는 fake provider로 선택 오류·인자·Schema·서술 오류와 복구 상한을 검사합니다. 실측에서 발생하지 않은 오류 유형은 단위 테스트 증거로만 설명합니다. 지표의 검증 통과율이 모든 금융 사실의 정확성을 보증하지는 않습니다.
@@ -302,9 +302,8 @@ Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backen
 
 | 현재 확인된 한계 | 다음 검증·개선 방향 |
 | --- | --- |
-| 목표주가 인용·부정까지 잡는 규칙 | 문맥 구분 후 같은 원본으로 재채점 |
-| 실패 제한 검사에 정해진 네 표현만 사용 | 동등한 제한 표현과 부분 소스 성공 문맥 평가 |
-| 실측에서 상세 선택 0회 | 실제 상세 호출에 도달하는 보조 시나리오 |
+| 목표주가 비제시·직접 인용과 제한 동등 표현은 v3(`9dcc628`)에서 구분, 간접 인용·수치 부정문은 보수적으로 위반 | 배포 후 표본으로 오탐 재점검 |
+| 자연 실측에서 상세 선택 0회 | 첫 호출 강제 보조 실측으로 경로만 확인, 자연 선택 빈도는 별도 관측 |
 | 성찰 on 완료율 55/56, off 56/56 | 완료율과 서술 검증 통과율을 함께 관리 |
 | TraceSummary에 토큰·성찰 상세 없음, 일부 종료 이벤트 생략 | 현재 저장 범위를 유지해 보고하고 관측 확장은 별도 검토 |
 | off의 후속 요청 HTTP 400 | 기존 기준선 보존, on 이력 재전송 결과와 구분 |
