@@ -69,24 +69,24 @@ def compose_personal(company_name: str, topic: str, score: int, level: EvidenceL
     topic_josa = lambda a, b: josa(topic, a, b)
     opinion = {
         "large": {
-            "conservative": f"지금은 지켜보는 게 나아요. {company} {topic} 기대만 앞서 있고 공시로 확인된 건 거의 없어요. {you}인 당신에겐 맞지 않는 구간이에요.",
-            "balanced": f"지금 사면 비싸게 살 수 있어요. {company} {topic} 기대가 앞서 있어서, {you}이라면 공시로 확인되는 걸 보고 나눠서 접근하는 게 맞아요.",
-            "aggressive": f"들어간다면 나갈 기준부터 정하세요. {company} {topic} 기대만으로 움직이는 구간이라 크게 흔들릴 수 있어요. {you}이라도 기준 없이 들어가면 위험해요.",
+            "conservative": f"조금 더 지켜볼까요? {company} {topic} 기대만 있고, 공식적으로 확인된 건 아직 부족해요. {you}이라면 불확실성이 큰 상태예요.",
+            "balanced": f"급하게 판단하지 않아도 돼요. {company} {topic} 기대가 앞서 있는 상황이에요. {you}이라면 분위기에 휩쓸리기보다 공시로 확인하면서 천천히 봐도 늦지 않아요.",
+            "aggressive": f"변동 폭이 클 수 있어요. {company} 지금 {topic} 기대만으로 관심이 쏠린 상태예요. {you}이라도 나만의 기준이 없으면 흔들리기 쉬워요.",
         },
         "some": {
-            "conservative": f"당신에겐 '아직'이에요. {company} 관심은 뜨겁고 {topic_josa('은', '는')} 절반쯤 확인됐어요. {you}이라면 다음 실적으로 확인되고 나서 봐도 늦지 않아요.",
-            "balanced": f"한 번에 말고 나눠서 보세요. {company} {topic} 중 확인된 절반은 볼 만하고 나머지는 기대예요. {you}이라면 확인되는 만큼만 따라가는 게 맞아요.",
-            "aggressive": f"해볼 만한 구간이에요. {company} {topic_josa('이', '가')} 절반은 확인됐어요. 다만 {you}이라도 기대가 꺾이면 빠르게 되돌아올 수 있다는 걸 기억하세요.",
+            "conservative": f"공식 발표를 기다려 보세요. {company} 관심은 뜨겁고 {topic_josa('은', '는')} 절반쯤 확인됐어요. {you}이라면 다음 실적이나 공시가 나온 뒤 봐도 늦지 않아요.",
+            "balanced": f"확인되는 만큼만 따라가 보세요. {company} {topic} 중 절반은 공식 자료로 확인됐고 나머지는 아직 기대예요. {you}이라면 한 번에 판단하기보다 나눠서 살펴보는 게 좋아요.",
+            "aggressive": f"공식 자료가 어느 정도 모였어요. {company} {topic_josa('이', '가')} 절반은 확인됐어요. 다만 {you}이라도 기대가 식으면 흐름이 빠르게 바뀔 수 있다는 건 기억해 두세요.",
         },
         "small": {
-            "conservative": f"무리 없는 구간이에요. {company} 관심과 확인된 재료가 비슷해요. {you}인 당신은 {topic} 실적 흐름만 꾸준히 보면 돼요.",
-            "balanced": f"평소 기준대로 보면 돼요. {company} 지금 앞서가는 신호가 없어요. {you}이라면 {topic_josa('을', '를')} 중심으로 차분히 접근해도 돼요.",
-            "aggressive": f"급하게 움직일 이유는 없어요. {company} {topic} 대비 관심이 과하지 않아요. {you}이라면 새 촉매가 나오는지 지켜보세요.",
+            "conservative": f"관심과 근거가 균형을 이루고 있어요. {company} 시장의 관심과 확인된 재료가 비슷해요. {you}이라면 {topic} 실제 흐름만 꾸준히 따라가면 돼요.",
+            "balanced": f"평소 기준을 지키면 돼요. {company} 지금 눈에 띄게 앞서가는 신호가 없어요. {you}이라면 {topic_josa('을', '를')} 중심으로 차분히 살펴보세요.",
+            "aggressive": f"서두르지 말고 지켜보세요. {company} {topic} 대비 관심이 과하지 않아요. {you}이라면 새로운 소식이 나오는지 차분히 기다려 보세요.",
         },
         "quiet": {
-            "conservative": f"당신에게 잘 맞는 편이에요. {company} 조용하지만 {topic_josa('이', '가')} 공식 자료로 탄탄해요. {you}이라면 서두르지 않고 천천히 봐도 돼요.",
-            "balanced": f"관심 가져볼 만해요. {company} 관심이 낮아 가격 부담이 적고 {topic_josa('은', '는')} 확인돼 있어요. {you}이라면 지금 살펴보기 좋은 구간이에요.",
-            "aggressive": f"기다릴지 먼저 정하세요. {company} 아직 관심이 없어서 움직임이 느릴 수 있어요. {you}이라면 촉매가 나올 때까지 지루할 수 있어요.",
+            "conservative": f"조용하지만 근거는 탄탄해요. {company} 관심은 적지만 {topic_josa('이', '가')} 공식 자료로 잘 갖춰져 있어요. {you}이라면 서두르지 않고 차분히 뜯어보기 좋아요.",
+            "balanced": f"차분하게 살펴보기 좋은 상태예요. {company} 관심이 적어 들뜬 분위기가 없고 {topic_josa('은', '는')} 확인돼 있어요. {you}이라면 지금 천천히 재료를 점검해 보기 좋아요.",
+            "aggressive": f"흐름이 느릴 수 있어요. {company} 시장의 관심이 낮아서 눈에 띄는 변화가 적을 수 있어요. {you}이라면 새로운 소식이 나올 때까지 좀 지루할 수 있어요.",
         },
     }
     horizon_check = {
