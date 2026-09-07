@@ -1,0 +1,1252 @@
+{
+  "company": {
+    "company_name": "현대모비스",
+    "stock_code": "012330"
+  },
+  "captured_at": "2026-09-07T03:45:59.144956+00:00",
+  "capture_finished_at": "2026-09-07T03:47:54.283541+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "현대모비스",
+      "stock_code": "012330",
+      "current_price": 428500,
+      "change": 6500,
+      "change_rate": 1.54,
+      "volume": 122472,
+      "volume_change_rate": 53.67,
+      "avg_volume_20d": 317859,
+      "volume_ratio_20d": 0.66,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 211352,
+      "warnings": [],
+      "as_of": "2026-09-07T03:45:59.588229Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:45:59.588229Z"
+    },
+    "news": {
+      "request_id": "c52a8eb1-98ed-4ba4-bffe-488133688eae",
+      "status": "success",
+      "company_name": "현대모비스",
+      "stock_code": "012330",
+      "articles": [
+        {
+          "headline": "모비스 램프 핵심 협력사 '비상경영'…\"지원 없으면 공급 어렵다\"",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-07T02:47:00Z",
+          "summary": "현대모비스 협력사들의 손실 보전 요구가 램프 매각 지연의 주요 요인으로 부각되는 가운데, 주요 협력사의 비상경영과 공급 차질 가능성이 램프 매각에 또 다른 뇌관으로 등장했습니다. 협력사들의 손실 보전 요구...",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000333113?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "추미애의 재정 비상 선언, 정치 벗기고 숫자만 보니",
+          "publisher": "vop.co.kr",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "삼성전자 평택화성기흥 반도체 공장과 SK하이닉스 이천 반도체 공장을 비롯해 LG디스플레이(파주), 기아(화성광명), 현대모비스(평택화성) 등 주요 기업 공장이 분포해 있지만, 이들 기업이 벌어들인 수익에 부과되는...",
+          "source_url": "https://vop.co.kr/A00001696562.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 113조 투자에 아산시 '초고속 행정'...인허가 10개월→3개월",
+          "publisher": "goodmorningcc.com",
+          "published_at": "2026-09-07T02:30:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 주요 기업들이 생산 거점을 두고 있어 대기업 투자가 협력업체와 소재·부품·장비 기업으로 이어질 수 있는 산업 생태계도...",
+          "source_url": "https://www.goodmorningcc.com/news/articleView.html?idxno=451895",
+          "relevance": "high"
+        },
+        {
+          "headline": "서울 AI 허브 'TOYTHON' 해커톤 … 5시간 만에 피지컬 AI 41개 실물 완성",
+          "publisher": "worktoday.co.kr",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "삼성전자·LG CNS·SK하이닉스·현대모비스·현대오토에버·퀄컴 등 대기업·중견기업 현직자 20명도 참가해 스타트업 창업자·개발자·기획자·학생 등 다양한 배경의 참가자들이 한자리에서 피지컬 AI를 구현했다. 42개...",
+          "source_url": "http://www.worktoday.co.kr/news/articleView.html?idxno=88921",
+          "relevance": "high"
+        },
+        {
+          "headline": "아산시, '삼성 113조 투자' 전방위 행정 지원 나서",
+          "publisher": "breaknews.com",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 주요 기업이 입주해 있어 협력 생태계가 탄탄하며, KTX를 통해 서울 36분...",
+          "source_url": "http://www.breaknews.com/1234495",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 투자 이끌어 낸 '준비된 도시 아산'…기업하기 좋은 조건 갖춰",
+          "publisher": "nocutnews.co.kr",
+          "published_at": "2026-09-07T02:23:00Z",
+          "summary": "또 삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 국내외 주요 기업들이 아산에 생산 거점을 두고 있어, 대기업 투자가 곧바로 협력업체로 이어지는 구조가 잡혀 있다. 교통...",
+          "source_url": "https://www.nocutnews.co.kr/news/6573976?utm_source=naver&utm_medium=article&utm_campaign=20260907112229",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘韓 MVP’가 日 무대로… 송교창 ‘농구인생 승부수’",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T02:21:00Z",
+          "summary": "이날 오사카는 고베로 전지훈련을 온 현대모비스와 보조코트에서 연습경기를 치렀다. 송교창의 출전 시간은 길지 않았지만 후지타 히로키 오사카 감독은 경기 도중 그를 여러 차례 불러 이야기를 나눴다. 새 팀에...",
+          "source_url": "https://www.munhwa.com/article/11614989?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "일기 쓰는 필리핀 가드",
+          "publisher": "basketkorea.com",
+          "published_at": "2026-09-07T01:48:00Z",
+          "summary": "울산 현대모비스의 양동근 감독도 현역 시절 꾸준히 일기를 썼었다. 현대모비스의 아시아쿼터 선수 제리 아바디아노(필리핀·181cm)도 자신만의 훈련 일지를 쓴다. 그는 훈련 직후 체육관 의자에 앉아 노트와 펜을 들고...",
+          "source_url": "https://basketkorea.com/news/newsview.php?ncode=1065577555287812",
+          "relevance": "high"
+        },
+        {
+          "headline": "“역시 삼성전자 압도적 1위” 브랜드 가치 ‘135조’…세계 홀린 K기업...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:47:00Z",
+          "summary": "이어 현대모비스가 66억달러(5.1%↑), 삼성물산이 62억5000만달러(3.3%↑)로 상위 10위권에 이름을 올렸다. 금융과 방산 기업의 약진은 10위권 밖에서도 두드러졌다. 하나금융그룹은 지난해 20위에서 올해 15위로...",
+          "source_url": "https://www.sedaily.com/article/20087889?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼립, 신한은행과 상생펀드 350억원으로 확대 … 협력사 대출금리 1.4%p ...",
+          "publisher": "worktoday.co.kr",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "현대모비스는 하나은행·기술보증기금과 5000억원 규모 상생보증 프로그램을 도입해 기술력은 있으나 담보력이 부족한 영세 협력사에 연 3.9~4.9%대 우대금리를 지원한다. 한화그룹 6개사는 산업은행과 500억원 규모...",
+          "source_url": "http://www.worktoday.co.kr/news/articleView.html?idxno=88911",
+          "relevance": "high"
+        },
+        {
+          "headline": "113조원 투자 품은 아산…산업·교통·행정 경쟁력으로 미래 연다",
+          "publisher": "weekly.hankooki.com",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 국내외 주요 기업들이 생산 거점을 두고 있다. 대기업의 투자가 이뤄지면 협력업체와 관련 서비스 기업의 유입으로 이어지고...",
+          "source_url": "https://weekly.hankooki.com/news/articleView.html?idxno=7182717",
+          "relevance": "high"
+        },
+        {
+          "headline": "[1% 초고수의 개장선택] 로봇주 팔고 반도체주 샀다",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "LG전자가 11.66% 급등하며 순매도 1위에 올랐고 현대차와 현대모비스가 각각 2위와 5위를 기록했다. 로보티즈는 7.06% 상승한 가운데 순매도 6위, 레인보우로보틱스도 순매도 10위에 이름을 올렸다. 기아 역시 순매도...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723193",
+          "relevance": "high"
+        },
+        {
+          "headline": "서울 AI 허브, '토이톤' 개최…107명 '피지컬 AI' 도전해 5시간 만에 움...",
+          "publisher": "epnc.co.kr",
+          "published_at": "2026-09-07T00:20:00Z",
+          "summary": "이와 함께 삼성전자·LG CNS·SK하이닉스·현대모비스·현대오토에버·퀄컴 등 대기업·중견기업 현직자 20명도 참가해 스타트업 창업자와 개발자, 기획자, 학생 등 다양한 배경의 참가자들이 한자리에서 피지컬 AI를 직접...",
+          "source_url": "https://www.epnc.co.kr/news/articleView.html?idxno=406579",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 113조 투자에 아산시 발 빠른 대응…'기업이 성장하는 도시' 도약",
+          "publisher": "pointdaily.co.kr",
+          "published_at": "2026-09-07T00:16:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 국내외 주요 기업들이 생산 거점을 두고 있어 대기업 투자가 협력업체와 지역 산업 생태계로 확산될 수 있는 기반도 갖췄다....",
+          "source_url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=318205",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 6900선 급등 출발…외인·기관 쌍끌이에 삼전·SK하닉 ‘강세’",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-07T00:14:00Z",
+          "summary": "삼성생명과 삼성물산은 각각 4%대 상승하고 있으며 현대모비스는 2%대, KB금융은 1%대 오르고 있다. 현대차와 두산에너빌리티, 신한지주, 기아 등도 강세다. 업종별로는 전기·전자가 4.99% 상승하며 지수 상승을...",
+          "source_url": "https://www.dt.co.kr/article/12082392?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "로봇 직접 쓰는 현대차… 자동차 공장이 '피지컬 AI' 실험실로",
+          "publisher": "pressman.kr",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "현대차와 기아의 완성차 공장을 비롯해 현대모비스의 부품 생산시설, 현대글로비스의 물류망 등이 대표적이다. 현대차그룹은 이들 계열사의 역량을 연결해 로봇 개발과 부품 공급, 생산, 현장 검증으로 이어지는...",
+          "source_url": "https://www.pressman.kr/news/articleView.html?idxno=103526",
+          "relevance": "high"
+        },
+        {
+          "headline": "남자농구 대표팀, 필리핀 평가전 2연승 후 아시안게임 나선다…안영준...",
+          "publisher": "topstarnews.net",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "이날 경기에는 이정현(소노), 문유현(정관장), 변준형(정관장), 유기상(LG), 이우석(국군체육부대), 이현중, 에디 다니엘(SK), 여준석(시애틀대학교), 이승현(현대모비스), 이원석(국군체육부대), 장재석(KCC)이 이름을...",
+          "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16185133",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"현대차, 테슬라에 밀렸다\"?…'기술 격차' 위기론 확산→2030 반응 보니",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T00:04:00Z",
+          "summary": "6일 직장인 익명 커뮤니티 '블라인드'에는 현대모비스 재직자가 작성한 게시글이 게재됐다. 이날 해당 게시글 작성자 A씨는 현대차와 테슬라의 기술 경쟁을 과거 피처폰과 스마트폰의 경쟁에 빗대며 현대차가 차량의 공간...",
+          "source_url": "https://www.ajunews.com/view/20260907084110772",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 대규모 투자 품은 아산. 산업·교통·행정 경쟁력이 뒷받침",
+          "publisher": "gukjenews.com",
+          "published_at": "2026-09-07T00:04:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 주요 기업이 생산시설을 운영하고 있는 것도 강점이다. 대기업을 중심으로 형성된 산업 생태계가 협력업체와 소재·부품·장비...",
+          "source_url": "https://www.gukjenews.com/news/articleView.html?idxno=3686467",
+          "relevance": "high"
+        },
+        {
+          "headline": "5시간 만에 만든 41개의 작동하는 기계, 서울 AI 허브 피지컬 AI 해커톤",
+          "publisher": "platum.kr",
+          "published_at": "2026-09-06T23:32:00Z",
+          "summary": "삼성전자와 LG CNS, SK하이닉스, 현대모비스, 현대오토에버, 퀄컴 등 대기업·중견기업 현직자 20명도 참가했다. 참가자 정보 수집에 응한 95명 기준으로는 만 39세 이하가 86.3%였다. 심사에는 참가자들이 직접 참여했다....",
+          "source_url": "https://platum.kr/archives/294047",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전 3%·SK하닉 4%대 프리마켓 ‘강세’…이번 주 7000선 시험대",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-06T23:11:00Z",
+          "summary": "한화에어로스페이스(0.95%), 삼성SDI(0.91%), 현대모비스(0.71%), HD현대중공업(0.69%) 등도 강세다. 이번 주 국내 증시는 지난 금요일 발표된 미국 8월 비농업 고용 결과를 소화하면서 물가지표와 장기금리 흐름에...",
+          "source_url": "https://www.dt.co.kr/article/12082378?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[코스피·코스닥,SKC 우성 듀켐바이오 두산퓨얼셀 SOOP톱텍 사토시홀딩...",
+          "publisher": "public25.com",
+          "published_at": "2026-09-06T23:10:00Z",
+          "summary": "결정 ▲톱텍 : 현대모비스 체코법인과 파우치 EV 배터리 조립라인 공급계약 체결 ▲ 인콘 : 인천국제공항공사와 58억원 규모 IoT 기반 탑승교 시설관리 고도화 사업계약 체결 58억원 규모 ▲ 지엔씨에너지...",
+          "source_url": "https://www.public25.com/news/articleView.html?idxno=54166",
+          "relevance": "high"
+        },
+        {
+          "headline": "양궁 오예진 “김도영과 亞게임 金 따올게요”",
+          "publisher": "kwangju.co.kr",
+          "published_at": "2026-09-06T23:04:00Z",
+          "summary": "이날 훈련에는 오예진과 함께 여자 리커브 대표팀 강채영·이윤지(현대모비스)와 남자 리커브 대표팀 김제덕(예천군청), 김우진(청주시청), 이우석(코오롱)이 참가했다. 컴파운드 대표팀의 김종호·최용희(이상 현대제철)...",
+          "source_url": "http://www.kwangju.co.kr/article.php?aid=1788735600803056011",
+          "relevance": "high"
+        },
+        {
+          "headline": "[점프볼 in 도쿠시마] 일기 쓰는 필리핀 가드",
+          "publisher": "m.sports.naver.com",
+          "published_at": "2026-09-06T23:00:00Z",
+          "summary": "울산 현대모비스의 양동근 감독도 현역 시절 꾸준히 일기를 썼었다. 현대모비스의 아시아쿼터 선수 제리 아바디아노(필리핀·181cm)도 자신만의 훈련 일지를 쓴다. 그는 훈련 직후 체육관 의자에 앉아 노트와 펜을 들고...",
+          "source_url": "https://m.sports.naver.com/basketball/article/065/0000301355",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개척자 글로벌테크놀로지] ④ 마이크로 LED 원가벽 넘는다",
+          "publisher": "the-stock.kr",
+          "published_at": "2026-09-06T23:00:00Z",
+          "summary": "현대모비스와 CED를 활용한 차량용 마이크로 LED 디스플레이를 개발하고 있다. 단순 구동IC가 아니라 패키징과 모듈까지 공급하는 사업이다. IR자료에는 CED 기술을 △차량 중앙정보디스플레이(CID) △스마트월...",
+          "source_url": "https://www.the-stock.kr/news/articleView.html?idxno=33313",
+          "relevance": "high"
+        },
+        {
+          "headline": "[오늘의 IR] 기아ㆍ에코프로비엠ㆍ자이에스앤디 등",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-06T22:34:00Z",
+          "summary": "업데이트 △현대모비스, 해외 기관투자자 IR 미팅 실시 △삼성에스디에스, Daiwa London conference 참석 △코웨이, 컨퍼런스 △티씨케이, 이해관계자들의 회사에 대한 이해증진 △파크시스템스, 경영현황 및 실적...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622353",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"우리 딸이 다녔으면\" 임원까지 쭉쭉 승진…100대기업 첫 1위 차지한 아...",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-06T22:00:00Z",
+          "summary": "현대글로비스(20→11위), 기아(51→41위), 현대로템(80→62위), 현대모비스(37→33위)도 상승세를 탔다. 다만 현대건설(73→92위), 현대제철(79→95위) 등 건설·철강 계열사는 하위권으로 밀려 그룹 내 온도차를 드러냈다....",
+          "source_url": "https://view.asiae.co.kr/article/2026090314455679316",
+          "relevance": "high"
+        },
+        {
+          "headline": "아산시, 삼성 113조 투자 맞춤 행정 총력",
+          "publisher": "jeonmae.co.kr",
+          "published_at": "2026-09-06T21:34:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 국내외 주요 기업들이 생산시설을 운영하고 있다. 대기업의 신규 투자가 지역 협력기업과 부품·소재업체의 성장으로 연결될 수...",
+          "source_url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1290627",
+          "relevance": "high"
+        },
+        {
+          "headline": "[장애인 고용⑫] 삼성물산, 부문별 노력에도 저조",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-06T21:00:00Z",
+          "summary": "현대모비스와 기아, 삼성전자 등 많은 기업이 이 제도를 활용하고 있다. 자회사형 장애인 표준사업장에 채용된 근로자들은 카페부터 환경미화, 세차, 복지시설 관리 등의 업무를 수행한다. 삼성물산 관계자는 \"현재...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=861625",
+          "relevance": "high"
+        },
+        {
+          "headline": "[오늘의 주요일정]사회(9월7일 월요일)",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-06T21:00:00Z",
+          "summary": "4시 현대모비스사무연구직지회, 역삼동 현대모비스 앞, 램프사업 매각 반대 촉구 ▲오후 4시 민주노총 SK쉴더스노조, 삼성동 SK쉴더스 앞, 고용안정 보장 촉구 ▲오후 5시 청년하다, 세종로 광화문역 2出 앞 남측 인도...",
+          "source_url": "https://www.newsis.com/view/NISX20260906_0003778249",
+          "relevance": "high"
+        },
+        {
+          "headline": "[시대광장/김화진] '주주 충실의무' 상법, 오해와 진실",
+          "publisher": "sidae.com",
+          "published_at": "2026-09-06T20:00:00Z",
+          "summary": "독일 뮌헨대에서 법학박사 학위를 받았고, 미국 하버드대 로스쿨 졸업 후 서울대 로스쿨 교수를 지냈다. 미시간대 로스쿨 석좌교수, 삼성증권 이사회 의장, 현대모비스 선임독립이사 등으로 활동 중이다.",
+          "source_url": "https://www.sidae.com/article/2026090415023479581",
+          "relevance": "high"
+        },
+        {
+          "headline": "18시즌 모비스 누빈 함지훈, '형'에서 '코치'로 2막 도전",
+          "publisher": "ksilbo.co.kr",
+          "published_at": "2026-09-06T15:02:00Z",
+          "summary": "▲ 울산현대모비스피버스 함지훈(오른쪽) 코치. 울산현대모비스피버스 제공18시즌 동안 울산 현대모비스의 코트를 누볐던 함지훈이 이제는 벤치에서 새로운 농구를 시작한다. 지난 시즌을 끝으로 현역에서 은퇴한 그는...",
+          "source_url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1066496",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대모비스, 일본 전지훈련 실전 점검",
+          "publisher": "ksilbo.co.kr",
+          "published_at": "2026-09-06T15:02:00Z",
+          "summary": "▲ 울산현대모비스피버스는 지난 5일 일본 도쿠시마에서 도쿠시마 감바로스와 연습경기를 치렀다. 울산현대모비스피버스 제공프로농구 울산현대모비스피버스는 지난 5일 일본 도쿠시마에서 도쿠시마 감바로스와...",
+          "source_url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1066495",
+          "relevance": "high"
+        },
+        {
+          "headline": "국내 10대 브랜드 가치 2000억달러 육박⋯삼성 1위·하닉 3위",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-06T13:03:00Z",
+          "summary": "이어 쿠팡(87.9억달러·10.0%↑), 신한금융그룹(87.5억달러·39.2%↑), KB금융그룹(83억달러·13.7%↑), 현대모비스(66억달러·5.1%↑), 삼성물산(62.5억달러·3.3%↑) 순으로 상위 10위권에 이름을 올렸다. 브랜드 파이낸스는...",
+          "source_url": "http://www.inews24.com/view/2002450",
+          "relevance": "high"
+        },
+        {
+          "headline": "미국서 쇳물까지 만드는 현대차…자동차·아틀라스 원가절감 속도",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-06T09:02:00Z",
+          "summary": "이와 함께 현대모비스는 아틀라스 재료비의 약 60%를 차지하는 액추에이터를 연간 35만개 생산할 수 있는 체제를 미국에 구축한다. 계획대로 진행될 경우 미국 현지에서 철강 소재를 확보하고 현대모비스가 핵심...",
+          "source_url": "https://www.ajunews.com/view/20260906123839965",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"삼전 브랜드 몸값만 135조 원\"… 국내 10대 기업 가치 2천억 달러",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-06T08:22:00Z",
+          "summary": "쿠팡(87.9억달러), 신한금융그룹(87.5억달러), KB금융그룹(83억달러), 현대모비스(66억달러), 삼성물산(62.5억달러) 등이 10위권에 포함됐다. 신한금융그룹은 39.2%, KB금융그룹은 13.7%의 상승률을 기록했다. 금융과...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604334",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"다 핑계라 생각한다\"…이현중, 아시안게임 앞두고 스스로를 극한으로 ...",
+          "publisher": "topstarnews.net",
+          "published_at": "2026-09-06T08:18:00Z",
+          "summary": "후배들은 물론이고 주장 이승현(현대모비스)과 장재석(KCC) 같은 베테랑들도 경기 중 코트 안팎에서 이현중을 중심축으로 삼는 모습이다. 이현중은 이에 대해 \"아직 많이 부족한데도 이렇게 주장 형이 믿어준다는 게...",
+          "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16184526",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"결국 다 핑계죠\"…자신에게 엄격한 이현중의 '극한 아시안게임'",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-06T08:09:00Z",
+          "summary": "후배들은 물론이고 '캡틴' 이승현(현대모비스)이나 장재석(KCC) 같은 선배들도 그에게 많이 의지한다. 이현중은 \"아직 많이 부족한데도 이렇게 주장 형이 믿어준다는 게 감사하다. 늘 헌신적인 형들만큼 나도 똑같이...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260906038100007?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "국내 상위 10대 브랜드 가치 '2천억 달러' 육박 : AI 반도체 힘입어 삼성...",
+          "publisher": "huffingtonpost.kr",
+          "published_at": "2026-09-06T07:12:00Z",
+          "summary": "5% 하락한 104억1300만 달러(14조52억 원)으로 평가됐다. 현대차와 기아는 각각 2위, 4위를 차지했다. 5위부터 10위에는 LG전자, 쿠팡, 신한금융그룹, KB금융그룹, 현대모비스, 삼성물산 등이 이름을 올렸다.",
+          "source_url": "https://www.huffingtonpost.kr/article/260197",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대모비스, 아틀라스 액추에이터부터…‘로봇 손’ 후속 개발",
+          "publisher": "metroseoul.co.kr",
+          "published_at": "2026-09-06T07:00:00Z",
+          "summary": "아틀라스용 액추에이터 수주 확보·양산 목표 개발 7~8월 핸드 관련 인력 잇단 채용…후속 부품 R&D 확대 현대모비스가 보스턴 다이나믹스에 공급하는 로봇용 액추에이터 컨셉./현대모비스 현대모비스가 로봇의 관절을...",
+          "source_url": "http://www.metroseoul.co.kr/article/20260906500234",
+          "relevance": "high"
+        },
+        {
+          "headline": "“믿을 건 삼전닉스뿐?”…반도체 날자 韓 대표 브랜드 272조 훌쩍",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-06T06:51:00Z",
+          "summary": "이어 전동화 수혜를 입은 현대모비스(66억 달러·5.1%↑)와 삼성물산(62억5000만 달러·3.3%↑)이 9위와 10위에 나란히 이름을 올렸다. 10위권 밖에서는 하나금융그룹(20위→15위)과 메리츠금융그룹(70위→55위)이 뚜렷한...",
+          "source_url": "https://www.dt.co.kr/article/12082303?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대모비스 전지훈련지에 깜짝 손님이 찾아왔다…최진수 “반갑습니다...",
+          "publisher": "sportsworldi.com",
+          "published_at": "2026-09-06T06:44:00Z",
+          "summary": "사진=현대모비스 제공 “반갑습니다.” 프로농구 현대모비스가 훈련 중인 일본 도쿠시마. 반가운 손님이 찾아왔다. 현재 B.ONE(일본프로농구 2부리그) 카카와 파이브 애로우즈에서 인턴 코치로 일하고 있는 최진수다....",
+          "source_url": "https://www.sportsworldi.com/newsView/20260906507811",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘유기상 외곽 폭발-이현중·여준석 활약’ 한국, 필리핀 연파…‘3연승...",
+          "publisher": "sportsseoul.com",
+          "published_at": "2026-09-06T06:38:00Z",
+          "summary": "아바리엔토스는 KBL 현대모비스에서 뛰어 국내 팬들에게도 익숙하다. 최정예 대결이면 모를까, 주축을 빼고 온 필리핀은 한국의 상대가 되지 못했다. 1쿼터부터 압도했다. 유기상이 3점슛 4개 던져 다 넣었다. 홀로...",
+          "source_url": "https://www.sportsseoul.com/news/read/1633165?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "국내 10대 브랜드 가치 2000억달러…반도체·금융·방산 ‘질주’",
+          "publisher": "ekn.kr",
+          "published_at": "2026-09-06T06:32:00Z",
+          "summary": "9위 현대모비스는 65억9900만달러(약 9조원)로 5.1%, 10위 삼성물산은 62억4800만달러(약 8조원)로 3.3% 각각 증가했다. 상위 150대 브랜드 전체 가치도 약 3570억달러(약 482조원)로 지난해보다 4.3% 증가했다. 특히...",
+          "source_url": "https://www.ekn.kr/web/view.php?key=20260906021211191",
+          "relevance": "high"
+        },
+        {
+          "headline": "韓 10대 브랜드 가치 절반이 '삼전·하이닉스'…AI가 바꾼 기업 위상",
+          "publisher": "newsway.co.kr",
+          "published_at": "2026-09-06T06:26:00Z",
+          "summary": "이어 쿠팡이 87억9000만달러로 6위에 올랐으며 신한금융그룹, KB금융그룹, 현대모비스, 삼성물산이 상위 10위권에 이름을 올렸다. 특히 신한금융의 브랜드 가치는 전년보다 39.2% 상승하며 상위권 기업 가운데...",
+          "source_url": "https://www.newsway.co.kr/news/view?ud=2026090615241460795",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 '쌍두마차'가 끌어올린 K브랜드 가치, 2000억 달러 눈앞",
+          "publisher": "sisajournal.com",
+          "published_at": "2026-09-06T06:10:00Z",
+          "summary": "KB금융그룹은 83억 달러로 13.7%, 현대모비스는 66억 달러로 5.1%, 삼성물산은 62억5000만 달러로 3.3% 각각 증가하며 상위 10위권에 이름을 올렸다. 상위 150개 브랜드에서는 방산·금융 기업의 순위 상승이...",
+          "source_url": "https://www.sisajournal.com/news/articleView.html?idxno=386191",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 뛰고 방산 날았다…韓 기업들 몸값 '쑥↑'",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-06T04:40:00Z",
+          "summary": "이어 쿠팡(87.9억달러·10.0%↑), 신한금융그룹(87.5억달러·39.2%↑), KB금융그룹(83억달러·13.7%↑), 현대모비스(66억달러·5.1%↑), 삼성물산(62.5억달러·3.3%↑) 순으로 상위 10위권에 이름을 올렸다. 상위 150대 국내...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609060067&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "로봇 투자 186억 달러…국방·산업로봇이 64% 쓸어담아",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-06T04:20:00Z",
+          "summary": "현대모비스는 1월 CES 2026에서 같은 그룹 계열사인 보스턴다이내믹스의 차세대 휴머노이드 아틀라스에 액추에이터를 공급하기로 했다고 발표했는데 이는 이번 보고서가 다룬 AGIBOT·피규어AI·셰플러의 움직임과는...",
+          "source_url": "https://www.g-enews.com/view.php?ud=2026090613115495552bd56fbc3c_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "[타이페이로 간 BASKETKOREA] KCC 숀 롱이 본 루이스 킹, “우리 팀에 없...",
+          "publisher": "basketkorea.com",
+          "published_at": "2026-09-06T04:00:00Z",
+          "summary": "“루이스 킹, 우리 팀에 없었던 유형이다” 숀 롱은 2024~2025시즌을 울산 현대모비스에서 뛰었다. 게이지 프림(205cm, C)과 함께 뛰었기에, 긴 시간을 뛰기 어려웠다. 그럼에도 불구하고, 정규리그에서 평균 출전...",
+          "source_url": "https://basketkorea.com/news/newsview.php?ncode=1065585012572682",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전·닉스 '껑충'…K브랜드 가치 2000억달러 육박",
+          "publisher": "kfenews.co.kr",
+          "published_at": "2026-09-06T03:52:00Z",
+          "summary": "이어 쿠팡(87억9000만달러), 신한금융그룹(87억5000만달러), KB금융그룹(83억달러), 현대모비스(66억달러), 삼성물산(62억5000만달러) 순으로 상위 10개 브랜드에 이름을 올렸다. 상위 150개 브랜드 가운데서는 금융과...",
+          "source_url": "https://www.kfenews.co.kr/news/articleView.html?idxno=663940",
+          "relevance": "high"
+        },
+        {
+          "headline": "국내 10대 브랜드 가치 2000억弗 '삼전닉스' 이끌고 방산·금융 밀어",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-06T03:12:00Z",
+          "summary": "이어 쿠팡(87억9000만달러·10.0%↑), 신한금융그룹(87억5000만달러·39.2%↑), KB금융그룹(83억달러·13.7%↑), 현대모비스(66억달러·5.1%↑), 삼성물산(62000만억달러·3.3%↑) 순으로 상위 10위권에 이름을 올렸다. 상위 150대...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362692",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 호황에 삼성·하이닉스 ‘쑥’…10대 브랜드 가치 2천억달러 눈...",
+          "publisher": "newstomato.com",
+          "published_at": "2026-09-06T02:34:00Z",
+          "summary": "이어 △쿠팡 87억9000만달러 △신한금융그룹 87억5000만달러 △KB금융그룹 83억달러 △현대모비스 66억달러 △삼성물산 62억5000만달러 순이었습니다. 상위 150개 브랜드 중에서는 금융과 방산 기업의 상승세가...",
+          "source_url": "http://www.newstomato.com/ReadNews.aspx?no=1312649&inflow=N",
+          "relevance": "high"
+        },
+        {
+          "headline": "무급 인턴으로 다시 시작…최진수, 일본서 지도자 수업",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-06T02:20:00Z",
+          "summary": "일본 프로농구 카가와 파이브 애로우즈에서 인턴 코치로 일하는 최진수(오른쪽 두 번째)가 울산 현대모비스 양동근 감독(왼쪽 두 번째), 박구영 수석코치(왼쪽), 함지훈 코치(오른쪽)와 함께 기념촬영을 하고 있다. 사진...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=01443206645577496&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성전자·SK하이닉스 날았다… 국내 10대 브랜드 가치 2천억달러 육박",
+          "publisher": "newscj.com",
+          "published_at": "2026-09-06T01:46:00Z",
+          "summary": "KB금융그룹은 83억 달러로 13.7% 늘었고, 현대모비스는 66억 달러로 5.1%, 삼성물산은 62억 5000만 달러로 3.3% 각각 증가하며 상위 10개 브랜드에 포함됐다. 상위권 밖에서는 금융과 방산 기업들의 순위 상승이 눈에...",
+          "source_url": "https://www.newscj.com/news/articleView.html?idxno=3430357",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"소음도, 관중도 문제없어\"…양궁대표팀, 야구장 찾은 사연",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-06T01:40:00Z",
+          "summary": "이번 아시안게임 리커브 대표팀은 김제덕(예천군청), 김우진(청주시청), 이우석(코오롱엑스텐보이즈·이상 남자부), 강채영(현대모비스), 오예진(광주은행텐텐양궁단), 이윤지(현대모비스·이상 여자부) 6명으로 구성됐다....",
+          "source_url": "https://www.newsis.com/view/NISX20260906_0003777932",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대모비스를 찾아온 손님, 도쿠시마에서 만난 최진수",
+          "publisher": "basketkorea.com",
+          "published_at": "2026-09-06T01:25:00Z",
+          "summary": "울산 현대모비스의 해외 전지훈련 장소인 도쿠시마에 반가운 손님이 찾아왔다. 현재 B.ONE(일본프로농구 2부리그) 카카와 파이브 애로우즈에서 인턴 코치로 일하고 있는 최진수가 현대모비스 선수단과 만났다....",
+          "source_url": "https://basketkorea.com/news/newsview.php?ncode=1065576134069823",
+          "relevance": "high"
+        },
+        {
+          "headline": "[점프볼 in 도쿠시마] 현대모비스를 찾아온 손님, 도쿠시마에서 만난 최...",
+          "publisher": "m.sports.naver.com",
+          "published_at": "2026-09-06T01:00:00Z",
+          "summary": "울산 현대모비스의 해외 전지훈련 장소인 도쿠시마에 반가운 손님이 찾아왔다. 현재 B.ONE(일본프로농구 2부리그) 카카와 파이브 애로우즈에서 인턴 코치로 일하고 있는 최진수가 현대모비스 선수단의 전지훈련지를...",
+          "source_url": "https://m.sports.naver.com/basketball/article/065/0000301329",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성전자·SK하이닉스가 주도…韓 10대 브랜드 가치 2000억달러 육박",
+          "publisher": "m-i.kr",
+          "published_at": "2026-09-06T01:00:00Z",
+          "summary": "쿠팡은 10% 증가한 87억9000만달러, 현대모비스와 삼성물산은 각각 66억달러와 62억5000만달러로 평가됐다. 150대 브랜드 전체로 범위를 넓히면 금융과 방산 기업들의 약진이 더욱 눈에 띈다. 하나금융그룹은 20위에서...",
+          "source_url": "https://www.m-i.kr/news/articleView.html?idxno=1410415",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 뛰니 브랜드 가치도⋯삼성전자, 8.9% 상승 131조 ‘1위’•SK하닉...",
+          "publisher": "viva100.com",
+          "published_at": "2026-09-06T00:46:00Z",
+          "summary": "이어 쿠팡이 87억9000만달러(10.0% 증가), 신한금융그룹이 87억5000만달러(39.2% 증가), KB금융그룹이 83억달러(13.7% 증가), 현대모비스가 66억달러(5.1% 증가), 삼성물산이 62억5000만달러(3.3% 증가)로 각각 상위 10위권에...",
+          "source_url": "https://www.viva100.com/article/20260906500198",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전닉스 효과에 10대 브랜드 가치 '껑충'…2천억달러 육박",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-06T00:42:00Z",
+          "summary": "이어 쿠팡(87.9억달러·10.0%↑), 신한금융그룹(87.5억달러·39.2%↑), KB금융그룹(83억달러·13.7%↑), 현대모비스(66억달러·5.1%↑), 삼성물산(62.5억달러·3.3%↑) 순으로 상위 10위권에 이름을 올렸다. 상위 150대 국내...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723138",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성·SK하이닉스가 끌었다…한국 브랜드 가치 480조",
+          "publisher": "straightnews.co.kr",
+          "published_at": "2026-09-06T00:26:00Z",
+          "summary": "현대모비스와 삼성물산도 각각 66억달러(약 9조원)와 62억5000만달러(약 8조원)로 상위 10위에 포함됐다. 방산기업은 전체 순위보다 브랜드 가치 증가폭에서 더욱 두드러졌다. 한화에어로스페이스의 브랜드 가치는...",
+          "source_url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310494",
+          "relevance": "high"
+        },
+        {
+          "headline": "한국 10대 브랜드 가치 272조원…\"삼성전자·SK하이닉스, 성장 이끌어\"",
+          "publisher": "ftoday.co.kr",
+          "published_at": "2026-09-05T23:20:00Z",
+          "summary": "현대모비스와 삼성물산은 각각 66억달러, 62억5천만달러로 9위와 10위를 차지했다. ◆금융·방산, 새로운 성장축 상위 10개 브랜드 밖에서도 금융과 방산 기업의 상승세가 두드러졌다. 하나금융그룹은 순위가 20위에서...",
+          "source_url": "http://www.ftoday.co.kr/news/articleView.html?idxno=364878",
+          "relevance": "high"
+        },
+        {
+          "headline": "“세계가 반했다”...韓 기업 몸값도 ‘쑥’",
+          "publisher": "magazine.hankyung.com",
+          "published_at": "2026-09-05T23:07:00Z",
+          "summary": "이어 쿠팡(87.9억달러·10.0%↑), 신한금융그룹(87.5억달러·39.2%↑), KB금융그룹(83억달러·13.7%↑), 현대모비스(66억달러·5.1%↑), 삼성물산(62.5억달러·3.3%↑) 순으로 상위 10위권에 이름을 올렸다. 상위 150대 국내...",
+          "source_url": "https://magazine.hankyung.com/business/article/202609066248b",
+          "relevance": "high"
+        },
+        {
+          "headline": "“AI·방산 끌고 금융 밀고”…국내 10대 브랜드 가치 2000억달러 육박",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-05T22:30:00Z",
+          "summary": "10위권에는 쿠팡(87억9000만달러·10.0%↑), 신한금융그룹(87억5000만달러·39.2%↑), KB금융그룹(83억달러·13.7%↑), 현대모비스(66억달러·5.1%↑), 삼성물산(62억5000만달러·3.3%↑) 등이 이름을 올렸다. 상위 150개 브랜드...",
+          "source_url": "https://www.dt.co.kr/article/12082215?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "올해 국내 10대 브랜드 가치 2천억달러 육박…삼전닉스 '껑충'",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-05T21:45:00Z",
+          "summary": "이어 쿠팡(87.9억달러·10.0%↑), 신한금융그룹(87.5억달러·39.2%↑), KB금융그룹(83억달러·13.7%↑), 현대모비스(66억달러·5.1%↑), 삼성물산(62.5억달러·3.3%↑) 순으로 상위 10위권에 이름을 올렸다. 상위 150대 국내 브랜드...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260904117100003?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "[바코 인사이드] 역대 KBL 최다 출전 선수 상위 10인(2) – 추승균/이현...",
+          "publisher": "basketkorea.com",
+          "published_at": "2026-09-05T13:24:00Z",
+          "summary": "마지막 두 시즌은 현대모비스에서 서명진과 함께 팀의 가드로 코트를 누볐다. 경기 운영에서 노련함을 과시하면서 위기의 순간엔 결정적인 득점으로 베테랑의 품격을 선보였다. 그리고 2021~2022시즌을 끝으로...",
+          "source_url": "https://basketkorea.com/news/newsview.php?ncode=1065618927296680",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대모비스, 슬로바키아 전동화 신공장 가동…연 28만개 PE시스템 생산",
+          "publisher": "thefirstmedia.net",
+          "published_at": "2026-09-05T13:04:00Z",
+          "summary": "▲지난 2일(현지시간) 현대모비스 노바키 신공장 가동 기념행사에서 이규석(앞줄 왼쪽에서 네 번째) 현대모비스 사장과 내외빈 및 직원들이 기념사진을 촬영하고 있다. 현대모비스가 슬로바키아에서 전기차 구동 핵심...",
+          "source_url": "http://www.thefirstmedia.net/news/articleView.html?idxno=207807",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘압박을 극복하라’ 현대모비스의 지상과제",
+          "publisher": "basketkorea.com",
+          "published_at": "2026-09-05T11:20:00Z",
+          "summary": "울산 현대모비스는 국·내외를 오가며 연습경기를 수차례에 걸쳐 펼치고 있다. 타 구단과 마찬가지로 2명의 외국선수(게이지 프림·다리우스 베즐리)가 합류하면서 연습경기 횟수가 더 늘었다. 현대모비스 사무국은...",
+          "source_url": "https://basketkorea.com/news/newsview.php?ncode=1065611768466438",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"수준 높은 수비를 극복해야 경쟁력 생긴다\" 양동근 현대모비스 감독, ...",
+          "publisher": "osen.co.kr",
+          "published_at": "2026-09-05T11:01:00Z",
+          "summary": "일본의 강한 앞선 압박을 이겨내는 것이 울산 현대모비스의 새 시즌 준비 과정에서 핵심 과제로 떠올랐다. 국내 선수들이 공격 전개에 어려움을 겪으면서 외국인 선수의 개인 능력에 의존하는 상황이 반복되고 있다....",
+          "source_url": "http://www.osen.co.kr/article/G1112870621",
+          "relevance": "high"
+        },
+        {
+          "headline": "[점프볼 in 도쿠시마] ‘압박을 극복하라’ 현대모비스의 지상과제",
+          "publisher": "m.sports.naver.com",
+          "published_at": "2026-09-05T09:51:00Z",
+          "summary": "울산 현대모비스는 국·내외를 오가며 연습경기를 수차례에 걸쳐 펼치고 있다. 타 구단과 마찬가지로 2명의 외국선수(게이지 프림·다리우스 베즐리)가 합류하면서 연습경기 횟수가 더 늘었다. 현대모비스 사무국은...",
+          "source_url": "https://m.sports.naver.com/basketball/article/065/0000301309",
+          "relevance": "high"
+        },
+        {
+          "headline": "소음 뚫고 '집중'",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-05T09:06:00Z",
+          "summary": "대한민국 여자 양궁 리커브 국가대표 이윤지(25·현대모비스)가 5일 오후 전남광주 북구 광주-기아챔피언스필드에서 2026 아이치-나고야 아시안게임 대비 양궁국가대표 특별훈련에 임하고 있다. 2026.09....",
+          "source_url": "https://www.newsis.com/view/NISI20260905_0021424663",
+          "relevance": "high"
+        },
+        {
+          "headline": "관중석에 인사하는 이윤지",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-05T09:06:00Z",
+          "summary": "대한민국 여자 양궁 리커브 국가대표 이윤지(25·현대모비스)가 5일 오후 전남광주 북구 광주-기아챔피언스필드에서 2026 아이치-나고야 아시안게임 대비 양궁국가대표 특별훈련에 앞서 관중석을 향해...",
+          "source_url": "https://www.newsis.com/view/NISI20260905_0021424666",
+          "relevance": "high"
+        },
+        {
+          "headline": "소음·방해 뚫고 10점 '정조준'",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-05T09:06:00Z",
+          "summary": "대한민국 여자 양궁 리커브 국가대표 강채영(30·현대모비스)이 5일 오후 전남광주 북구 광주-기아챔피언스필드에서 2026 아이치-나고야 아시안게임 대비 양궁국가대표 특별훈련에 임하고 있다. 2026.09....",
+          "source_url": "https://www.newsis.com/view/NISI20260905_0021424673",
+          "relevance": "high"
+        },
+        {
+          "headline": "소음·방해 뚫고 10점 '정조준'",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-05T09:06:00Z",
+          "summary": "대한민국 여자 양궁 리커브 국가대표 강채영(30·현대모비스)이 5일 오후 전남광주 북구 광주-기아챔피언스필드에서 2026 아이치-나고야 아시안게임 대비 양궁국가대표 특별훈련에 임하고 있다. 2026.09....",
+          "source_url": "https://www.newsis.com/view/NISI20260905_0021424660",
+          "relevance": "high"
+        },
+        {
+          "headline": "관중석에 인사하는 강채영",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-05T09:06:00Z",
+          "summary": "대한민국 여자 양궁 리커브 국가대표 강채영(30·현대모비스)이 5일 오후 전남광주 북구 광주-기아챔피언스필드에서 2026 아이치-나고야 아시안게임 대비 양궁국가대표 특별훈련에 앞서 관중석을 향해...",
+          "source_url": "https://www.newsis.com/view/NISI20260905_0021424664",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"저는 한 번 물면 안 놓는 사람입니다\" KOGAS 이적생 박준영, 그가 대구...",
+          "publisher": "rookie.co.kr",
+          "published_at": "2026-09-05T06:31:00Z",
+          "summary": "해외 전지훈련을 마친 후 국내로 복귀하면 박준영과 가스공사는 현대모비스, KCC와의 오픈 매치를 치른 후 시즌 개막에 돌입한다. 박준영 역시 대구 홈 팬들에게 첫 선을 보일 날이 멀지 않았다는 뜻. 박준영은 \"대구 팬들이...",
+          "source_url": "http://www.rookie.co.kr/news/articleView.html?idxno=126668",
+          "relevance": "high"
+        },
+        {
+          "headline": "'올림픽 3관왕 2명 탈락→15세 여중생 발탁' 한국 양궁 대표팀, 왜 야구...",
+          "publisher": "starnewskorea.com",
+          "published_at": "2026-09-05T06:14:00Z",
+          "summary": "오후 3시55분부터 진행되는 훈련에는 리커브 대표팀 강채영(30·현대모비스), 오예진(23·광주은행), 이윤지(25·현대모비스), 김제덕(22·예천군청), 김우진(34·청주시청), 이우석(29·코오롱)과 컴파운드 대표팀 박예린(20...",
+          "source_url": "https://www.starnewskorea.com/sports/2026/09/05/2026090514575541204",
+          "relevance": "high"
+        },
+        {
+          "headline": "한국몰드, WAVE 2026서 AI 안전솔루션 'ODD-EYE'... \"보이지 않는 위험을...",
+          "publisher": "kr.aving.net",
+          "published_at": "2026-09-05T03:48:00Z",
+          "summary": "이외에도 한국몰드는 현대자동차, 기아자동차, 현대모비스 1차 협력업체로 등록돼 자동차 내·외장 부품용 금형과 성형제품을 공급해 왔다. 2013년 '1천만 불 수출의 탑', 2014년 '2천만 불 수출의 탑'을 수상했으며...",
+          "source_url": "https://kr.aving.net/news/articleView.html?idxno=1814013",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차그룹 대미 투자⋯자동차 이어 배터리·철강까지 '현지화'",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-05T03:46:00Z",
+          "summary": "HMGMA 주변에는 현대모비스와 현대글로비스, 현대트랜시스 등 주요 계열사들의 생산·물류 거점이 자리 잡고 있다. 현대모비스는 연간 30만대 규모의 배터리 시스템과 주요 부품 모듈을 생산해 HMGMA에 공급하고 있다....",
+          "source_url": "http://www.inews24.com/view/2002247",
+          "relevance": "high"
+        },
+        {
+          "headline": "최근 5거래일 현대모비스 주가 45만원대서 42만원대로 하락",
+          "publisher": "topstarnews.net",
+          "published_at": "2026-09-05T02:42:00Z",
+          "summary": "4일 KRX 마감 기준, 네이버페이 증권에 따르면 2026년 9월 4일 현대모비스의 주가는 422,000원으로 장을 마감하며 최근 5거래일 동안의 하락 흐름을 이어갔다. 이는 직전 거래일인 9월 3일 종가 423,500원 대비 1...",
+          "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16183867",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간 거래소 기관] 포스코인터내셔널 포스코DX SK이노베이션 신한지주...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-05T00:24:00Z",
+          "summary": "삼성전자도 순매도 상위권에 올랐으며 현대차와 LG이노텍, 대덕전자, 현대모비스 등 주요 대형주도 매도 대상에 포함됐다. SK스퀘어와 SK텔레콤, OCI홀딩스, 한국금융지주, LS ELECTRIC, 효성중공업 등도 기관 순매도...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484099",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간 거래소 외국인] SK하이닉스·삼성전자 대거 팔고 우리금융지주·...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-05T00:18:00Z",
+          "summary": "기아와 현대모비스가 순매수 종목에 포함됐다. 대형주 가운데서도 업종과 종목별로 외국인의 선택이 갈린 모습이다. 외국인이 순매수한 종목은 우리금융지주, 한미반도체, SK스퀘어, 대한항공, SK이노베이션...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484098",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"재밌는 시즌 보여드리고파\" KOGAS 최고참 김준일의 소망… 대구에 또 한...",
+          "publisher": "rookie.co.kr",
+          "published_at": "2026-09-05T00:05:00Z",
+          "summary": "1992년생인 김준일은 드래프트 동기인 이승현(현대모비스), 허웅(KCC) 등과 달리 조금 더 이르게 팀 내 최고참이 되었다. 이는 반대로 말하면 가스공사가 다른 팀들에 비해 젊고 에너지 넘치는 선수들로 구성되어 있다는 뜻일...",
+          "source_url": "http://www.rookie.co.kr/news/articleView.html?idxno=126645",
+          "relevance": "high"
+        },
+        {
+          "headline": "손창환 감독 \"태도가 중요, 약속된 농구로 4강 목표\"",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-05T00:00:00Z",
+          "summary": "울산 현대모비스도 마찬가지다. 모두 놀랄 정도로 보강을 잘 했다\"며 \"이제 완전히 춘추전국시대다\"라고 경계했다. 소노는 외국 선수로 스카티 제임스와 조니 오브라이언트를 합류시켰다. KBL은 새 시즌 경기 2, 3쿼터에...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862395",
+          "relevance": "high"
+        },
+        {
+          "headline": "[핀포인트] [현대백화점그룹] 복정역세권개발에 지분 태운 현대百, '복합...",
+          "publisher": "news.dealsitetv.com",
+          "published_at": "2026-09-04T23:02:00Z",
+          "summary": "현대차와 기아, 현대모비스, 현대글로비스, 현대제철, 현대로템 등 6개 계열사는 HMG퓨처콤플렉스를 설립하고 2030년까지 총 8조원 규모의 투자를 단계적으로 집행하기로 했다. 그룹 내 AI·소프트웨어(SW) 관련 연구조직이...",
+          "source_url": "https://news.dealsitetv.com/articles/175498",
+          "relevance": "high"
+        },
+        {
+          "headline": "대구에서 기량 만개 노리는 194cm 포워드… 이적생 박준은 \"감독님 주문...",
+          "publisher": "rookie.co.kr",
+          "published_at": "2026-09-04T22:00:00Z",
+          "summary": "1라운드 10순위로 기대를 받으며 현대모비스의 유니폼을 입었지만 16경기 출전에 그쳤고 가스공사로 적을 옮기게 되었다. 이제는 대구에서 선수 생활을 이어가게 된 박준은이 보기에 가스공사는 어떤 팀일까. 박준은은...",
+          "source_url": "http://www.rookie.co.kr/news/articleView.html?idxno=126633",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관, 삼전·하닉 팔고 삼성전기·SK이노 샀다…개인은 현대차 ‘...",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-04T20:34:00Z",
+          "summary": "SK스퀘어도 개인이 2507억원을 순매수했으며 현대모비스(2160억원), SK텔레콤(1040억원), 대우건설(816억원), 기아(802억원), LG이노텍(790억원), 한국전력(666억원), NAVER(609억원) 등이 뒤를 이었다. 반대로 SK하이닉스는...",
+          "source_url": "https://www.news2day.co.kr/article/20260905500005",
+          "relevance": "high"
+        },
+        {
+          "headline": "이정현 3점슛 폭발…남자농구 국가대표 평가전, 필리핀에 대승→다음 경...",
+          "publisher": "topstarnews.net",
+          "published_at": "2026-09-04T13:36:00Z",
+          "summary": "이날 경기 명단에는 이정현(소노), 문유현(정관장), 변준형(정관장), 유기상(LG), 이우석(국군체육부대), 이현중, 안영준(SK), 에디 다니엘(SK), 여준석(시애틀대학교), 이승현(현대모비스), 이원석(국군체육부대)...",
+          "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16183486",
+          "relevance": "high"
+        },
+        {
+          "headline": "'마줄스호' 남자 농구, AG 앞두고 필리핀과 평가전서 81-55 완승",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-04T11:47:00Z",
+          "summary": "베테랑 이승현(현대모비스)과 변준형(정관장), 신예 에디 다니엘(SK)과 문유현(정관장) 등의 활약도 주요했다. 지난 2월 한국 농구 사상 첫 외국인 사령탑으로 지휘봉을 잡은 마줄스 감독은 부임 후 3승(6패)을 거두는...",
+          "source_url": "https://www.newsis.com/view/NISX20260904_0003777233",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"시끄러울수록 좋다!\" KIA 챔필 한복판에 서는 신궁들… 한국 양궁 '독한...",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-04T11:13:00Z",
+          "summary": "5일 오후 3시 55분부터 진행되는 이번 특별 훈련에는 김우진(청주시청), 김제덕(예천군청), 이우석(코오롱엑스텐보이즈), 강채영(현대모비스), 오예진, 이윤지(이상 현대모비스)로 구성된 리커브 대표팀 6명이 나선다....",
+          "source_url": "https://www.fnnews.com/news/202609042011040006",
+          "relevance": "high"
+        },
+        {
+          "headline": "톱텍, 현대모비스 체코 배터리 장비 256억원 수주",
+          "publisher": "thelec.kr",
+          "published_at": "2026-09-04T10:10:00Z",
+          "summary": "중견 자동화 설비 업체 톱텍이 현대모비스 체코 공장에 전기차(EV)용 배터리 팩 자동화 생산 장비를 공급한다. 톱텍은 4일 전자공시를 통해 현대모비스 체코법인과 256억원 규모 파우치형 EV 배터리 조립라인...",
+          "source_url": "https://www.thelec.kr/news/articleView.html?idxno=61860",
+          "relevance": "high"
+        },
+        {
+          "headline": "아시안게임 양궁 대표팀, 내일 광주서 야구장 함성 속 '특별 훈련'",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-04T09:40:00Z",
+          "summary": "이번 아시안게임 리커브 대표팀은 김제덕(예천군청), 김우진(청주시청), 이우석(코오롱엑스텐보이즈), 강채영(현대모비스), 오예진, 이윤지(현대모비스)까지 6명으로 구성됐다. 컴파운드 대표팀은 김종호, 최은규...",
+          "source_url": "https://www.newsis.com/view/NISX20260904_0003777099",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"보스턴다이내믹스 몸값 45조 vs 적자 2조\"… 현대차 로봇 홀로서기 성공...",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-04T09:20:00Z",
+          "summary": "5일 현대모비스 반기보고서에 따르면 보스턴다이내믹스는 올해 상반기 매출 813억원, 순손실 3888억원을 기록했다. 매출은 전년 동기보다 21.5% 증가했지만 상반기 순손실은 지난해 연간 순손실 5284억원의 약 74%에 달할...",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169539",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘레전드’ 함지훈의 코치 적응기… “바쁘고 정신없지만 쾌감 있다”",
+          "publisher": "sportsworldi.com",
+          "published_at": "2026-09-04T08:50:00Z",
+          "summary": "사진=현대모비스 피버스 농구단 제공 함지훈(가운데) 사진=현대모비스 피버스 농구단 제공 “선수 때는 몰랐던 걸 새롭게 알게 됐을 때 오는 쾌감이 있네요.” 18시즌 동안 한 팀에서만 뛴 원클럽맨이자 레전드다. 정든...",
+          "source_url": "https://www.sportsworldi.com/newsView/20260904510764",
+          "relevance": "high"
+        },
+        {
+          "headline": "KBL, 2027년 3월 21일 삼성 DB 경기, 시작 시간 오후 5시로 변경",
+          "publisher": "sportalkorea.com",
+          "published_at": "2026-09-04T08:43:00Z",
+          "summary": "변경 사유는 서울 동아마라톤 개최에 따른 체육관 주변 도로 통제다. 같은날 열리는 울산 현대모비스와 창원 LG의 경기는 오후 4시 30분 그대로 열린다. 사진=KBL 제공",
+          "source_url": "https://www.sportalkorea.com/news/articleView.html?idxno=2025052909553514724",
+          "relevance": "high"
+        },
+        {
+          "headline": "[이주의 모빌리티] 현대차그룹, 오만과 비전 2040 탄소중립 전환 협력 外",
+          "publisher": "dealsite.co.kr",
+          "published_at": "2026-09-04T08:36:00Z",
+          "summary": "◆ 현대모비스, 슬로바키아 전동화 신공장 오픈 현대모비스가 유럽 현지에서 ‘전기차의 심장’ PE(Power Electric)시스템 본격 양산에 돌입한다. PE시스템은 전기 모터와 인버터(전류 전환장치), 감속기를 통합한 전동화...",
+          "source_url": "https://dealsite.co.kr/articles/168439",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인, 우리금융 3900억 순매수… 기관도 신한·KB·하나 사들여",
+          "publisher": "weekly.donga.com",
+          "published_at": "2026-09-04T08:13:00Z",
+          "summary": "기관이 가장 많이 순매도한 10개 종목은 SK하이닉스, 삼성전자, 현대차, LG이노텍, 대덕전자, 현대모비스, SK스퀘어, SK텔레콤, OCI홀딩스, 한국금융지주였다. 이번 주 개인 순매수 1위 종목은 현대차였다. 2~10위는...",
+          "source_url": "https://weekly.donga.com/3/all/11/6373825/1",
+          "relevance": "high"
+        },
+        {
+          "headline": "미국, 외국산 휴머노이드 수입 차단…\"美 투자가 유일한 돌파구\"",
+          "publisher": "news.mtn.co.kr",
+          "published_at": "2026-09-04T08:08:00Z",
+          "summary": "현대자동차, 현대모비스, 현대위아, 두산로보틱스, 한화로보틱스, 티로보틱스, 로보티즈, 원익로보틱스, HL만도, 티라로보틱스, 하이젠알앤엠 등 각 기업 대미 수출 담당자들이 참석했다. 미국은 단순히 특정 재화의...",
+          "source_url": "https://news.mtn.co.kr/news-detail/2026090415520216551",
+          "relevance": "high"
+        },
+        {
+          "headline": "[오늘의 주요공시] 현대건설ㆍ삼성SDIㆍ큐리언트 등",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-04T07:40:00Z",
+          "summary": "이투데이=임하은 기자 | △현대건설, 중대재해 사망자 발생...샤힌 에틸렌시설 건설공사 현장서 추락 △삼성SDI, 타인에 대한 채무보증 결정...계열사 StarPlus Energy에 2.8조 규모 △톱텍, 현대모비스 체코법인과...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622085",
+          "relevance": "high"
+        },
+        {
+          "headline": "[코스피 지수선물 옵션] 삼성전자·SK하이닉스 오르고 금융주는 울상…...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-04T07:36:00Z",
+          "summary": "현대차와 기아, 현대모비스가 상승 흐름을 나타냈으며 한국타이어는 약세를 보였다. 자동차 업종에서는 글로벌 판매와 환율, 전기차 및 고부가 차량 수요 등이 투자심리에 영향을 미치는 변수로 꼽힌다. 2차전지주는...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484048",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 68.17,
+      "oldest_relevant_at": "2026-09-04T07:36:00Z",
+      "collected_at": "2026-09-07T03:45:59.918446Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814004065",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814004065"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002700",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002700"
+        }
+      ],
+      "collected_at": "2026-09-07T03:45:59.432939Z",
+      "request_id": "e32fed75-b5ea-4a1f-b05a-33a95d4638de",
+      "source_type": "dart",
+      "stock_code": "012330",
+      "company_name": "현대모비스"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260309001878",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "분석실을 통한 실물 분석지원\n- 유해화학물질 배출량 파악 및 대체물질 유효성 확인 및 검토\n- 취급자의 철저한 보호구 착용관리 및 비상보호구 상시관리를 통한 사고예방\n(3) 폐기물 배출 관리\n- 폐기물 발생량 저감활동\n- 발생 폐기물 재활용 확대로 폐기물 자원화 증대\n(4) 대기, 수질 오염물질 관리 - 발생 오염물질의 방지시설 적정처리 - 엄격한 자체 배출기준을 바탕으로 오염물질 배출 저감 - 주기적인 방지시설 점검과 소모품 교체를 통한 환경영향 최소화\n(5) 기타 환경관리\n- 환경사고 요인의 인적ㆍ물적 피해에 대한 보상 및 책임관리를 위한 \"환경책임보험\" 가입 관리\n마. 안전보건관련 실적 및 계획\n당사는 '안전하고 건강한 일터' 구현을 위해 모든 업무활동에 안전보건환경을 최우선으로 운영한다는 경영방침을 확립하고 안전보건 경영에 주력하고 있습니다. 또한, 관련 법규의 준수, 사업장 안전 확보 및 임직원 만족도 제고를 위해 매년 회사의 안전보건 계획을 수립하고, 다양한 정책을 추진하고 있습니다.\n(1) 안전보건 현황\n1) 안전보건 경영방침 - 첫째, SHE 법규준수 및 이해관계자 소통을 통한 '기업의 투명성/책임성' 확보\n- 둘째, 환경 오염 최소화 및 임직원의 건강관리로 '지속가능한 사업장' 구축\n- 셋째, '안전문화 정착’과 재해예방을 위한 '안전투자/개발' 로 안전문화 수준을 선도\n2) 안전보건 관리 조직의 구성 - 안전보건경영책임자, 안전보건관리책임자/총괄책임자, 안전관리자, 보건관리자, 관리감독자 外\n3) 안전보건관련 시설 및 장비 현황 - 안전보건시설 : 안전교육장(SH&E아카데미, 안전체험관 등), 건강관리실, 운동치료실, 방재실, 소방관제시스템 등 - 안전보건장비 : 긴급구조장비, 측정기(가스농도 측정기, 열화상 카메라), 안전보건 보호구 등\n(2) 안전보건 활동 실적 및 향후 계획",
+          "score": 0.49012,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "2025년 4분기 주요 활동 | 2026년 1분기 주요 계획\n○ 근로자 & 현장중심 참여형 안전문화 JUMP-UP 캠페인 활동 추진 - 사업장별 특성을 고려한 현장참여형 점검 & 맞춤형 안전문화 활동 시행 - 전사적 안전문화 전환점 마련을 위한 공통추진 사항 → 안전문화 정착활동 : 안전마일리지 제도, 안전 골든벨, 릴레이 안전강연 ○ 신정부 정책대응 「경영층~현장」全계층 참여 집중점검 실시 - 사업장 고위험요인 근절을 위한 현장중심 테마별 중대재해 타겟 점검 추진 - 공사 현장 안전감시단 강화 : 주말/야간 취약시간 감시인력 배치 등 - 외부 고용노동부 산업안전감독관 출신 전문가 “全사업장 모의감독”추진 ○ 구매협력사/통합계열사 등 안전관리 역량강화를 위한 상생지원 사업 추진 - 구매협력사 : 고위험 업종/신규 社 컨설팅 지원 (안전 종합진단, 법령/인허가 누락사항 등) - 통합계열사 : 모비스↔통합계열사 間 안전 협의체/워크샵 추진(정책/사고, 수평전개 등) | ○ 고위험 중점개선을 통한 현장안전관리 체계화 - 공사현장 안전관리 강화 및 화재/협착/충돌/추락/작업환경 등 고위험지속 개선 - All-In-One 안전진단 체계 정립 : 리스크 기반 안전관리 체계 정립 ○ 취약영역 안전관리 강화를 통한 선제적 리스크 대응 강화 - 자회사/협력사 안전역량 강화 및 법적 RISK 예방 - 해외법인 사전안전심사 도입 및 글로벌 SHE 수준향상 지원 ○ 사업장별 특화 안전활동 실행 - 시험장비 예방보전관리, 안전디자인 강화, 리스크 기반 책임점검, TBM정례화 등 ○ 참여중심의 안전문화 캠페인 지속 추진 - 개인에서 가족, 동료까지 함께 참여하는 안전문화 활동을 통한 안전문화 정착\n바. 사업부문별 요약 재무현황\n(1) 제 49기 (2025년)\n(단위:백만원)",
+          "score": 0.479896,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "가. 재무위험관리연결회사는 시장위험(환위험, 가격위험, 이자율위험), 신용위험 및 유동성 위험과 같은 다양한 금융 위험에 노출되어 있습니다. 연결회사는 이러한 위험요소들을 관리하기 위하여 각각의 위험요인에 대해 면밀하게 모니터링하고 대응하는 위험관리정책 및 프로그램을 운용하고 있습니다. 재무위험관리의 대상이 되는 금융자산은 현금 및 현금성자산, 기타금융자산, 비유동금융자산, 매출채권 및 기타채권 등으로 구성되어 있으며 금융부채는 매입채무 및 기타채무, 차입금 및 사채 등으로 구성되어 있습니다.(1) 시장위험1) 환위험\n연결회사는 국제적으로 영업활동을 영위하고 있어 다양한 통화로부터의 환율 변동 위험에 노출되어 있으며, 연결회사가 노출되어 있는 주요 외화로는 달러화 및 유로화 등이 있습니다. 또한, 연결회사는 외화로 표시된 채권과 채무 관리시스템을 통하여 환노출위험을 주기적으로 평가, 관리 및 보고하고 있습니다.\n연결회사는 외화자산ㆍ부채 및 외화차입 등과 관련하여 환위험에 노출되어 있습니다. 당기말과 전기말 현재 각 외화에 대한 기능통화의 환율 10% 변동시 화폐성 외화자산 및 외화부채가 법인세비용차감전순이익에 미치는 영향은 다음과 같습니다.\n(단위 : 백만원)\n구 분 | 당기말 | 전기말\n10%상승시 | 10%하락시 | 10%상승시 | 10%하락시\n법인세비용차감전순이익 | 133,032 | (133,032) | 132,355 | (132,355)\n2) 가격위험연결회사는 공정가치측정금융자산 중 지분상품과 관련하여 시장가격의 변동으로 인한 가격위험에 노출되어 있습니다. 당기말 과 전기말 현재 연결회사의 시장성 있는 지분상품은 다음과 같습니다.\n(단위 : 백만원)\n구 분 | 당기말 | 전기말\n기타포괄손익-공정가치측정금융자산 | 450,257 | 372,654",
+          "score": 0.449521,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "배출시설 및 오염물질 범위 확대 등 환경 관련 기업의 사회적 책임이 강화되는 환경 속에서, 당사의 환경적, 규제적, 운영적 요구사항을 효과적으로 대응하기 위해 환경 관리 플랫폼(통합안전보건플랫폼/ Global SHE Platform )을 구축하였습니다. 폐기물 발생량, 환경오염물질 배출농도, 토양오염 측정 등의 다양한 데이터를 하나의 시스템에서 관리하여 정보의 정확성과 신뢰성을 높이며 이를 통해 환경 성과와 환경 리스크를 체계적으로 관리하고, 환경 법규 준수 및 환경 영향 최소화를 달성할 수 있을 것으로 예상됩니다.",
+          "score": 0.433306,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "신차 제조용 OEM 부품부문과 A/S용 부품부문으로 구분할 수 있습니다. 연결회사가 영위하고 있는 A/S용 부품사업은 현대자동차ㆍ기아 등 완성차 업체의 자동차 판매에 따른 사후관리로 운영되는 고객서비스 산업으로써 완성차 보수용 A/S부품의 책임공급을 담당하고 있습니다.\n(산업의 성장성)A/S용 부품매출은 자동차 A/S 수요 운행대수, 평균 차량연령, 부품 내구성, 교통사고 건수 등의 요인에 의해 발생됩니다. 이 중 자동차 A/S 수요 운행대수는 매출증가에 가장 큰 영향을 미치는 요인입니다. 국내 자동차 보유 대수 및 증가율은 2015년 4분기 마감 기준 2,099만대, 2020년 동기 2,437만대, 2023년 2,595만대, 2024년 2,630만대 (한국자동차모빌리티산업협회)로 집계되었습니다. 2025년 4분기 말 전체 보유 대수는 2,651만대이며, 이 가운데 현대자동차·기아 보유 대수는 1,878 만대(한국자동차모빌리티산업협회)로 70.8% 를 차지하고 있습니다. 2025년 해외 A/S 수요 운행 대수는 2024년(3,942만) 대비 0.4% 감소한 3,926만대입니다(2025년 사업계획 기준).\n2025년에는 트럼프 행정부의 높은 관세 정책과 불확실한 통상 환경 등 외부 위험 요인이 커지면서 글로벌 자동차 산업이 크게 성장하기는 어려웠습니다. 그럼에도 불구하고 하이브리드 차량(HEV)과 신차 중심의 제품 구성 개선, 신차 라인업 확대, 자동화 및 전동화의 진전으로 인한 가격 인상 등이 앞으로도 안정적인 사업 성장세를 유지하는 데 중요한 역할을 할 것으로 보입니다. (PWC 2025년 국내외 경영환경전망, HMG경영연구소 경제전망)\n(경기변동의 특성)일반적으로 자동차 산업은 경기변동에 많은 영향을 받을 수 있으나, 이미 보유한 차량의 유지보수를 위해 반드시 필요한 A/S용 부품의 경우 상대적으로 경기변동의 영향이 적은 편입니다.\n(국내외 시장여건)",
+          "score": 0.428983,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309001878",
+      "collected_at": "2026-09-07T03:45:59.680310Z",
+      "request_id": "890067c8-9db3-4cfb-ba82-6b8aefafa7d5",
+      "source_type": "dart",
+      "stock_code": "012330",
+      "company_name": "현대모비스"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "현대모비스",
+      "stock_code": "012330",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:45:59.343278+00:00",
+        "to": "2026-09-07T03:45:59.343278+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 1221,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 369.75,
+        "ratio": 3.3,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 33,
+        "neutral_count": 23,
+        "negative_count": 44
+      },
+      "top_topics": {
+        "expectations": [
+          "아틀라스 액추에이터 매출 확대",
+          "로봇 양산 사업 진전",
+          "자율주행·로보택시 수혜",
+          "실적 대비 저평가 해소",
+          "대차 상환에 따른 수급 개선"
+        ],
+        "concerns": [
+          "시장·로봇주 대비 주가 부진",
+          "지분 승계와 상속 관련 주가 부담",
+          "장 초반 상승 후 약세 반복",
+          "장기 이동평균선 저항",
+          "반도체로의 수급 쏠림"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "아틀라스용 액추에이터 수주에 따른 로봇 매출 확대를 기대한다.",
+          "posted_at": "2026-09-07T02:28:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "로봇 양산 준비 확대를 사업 진전으로 평가한다.",
+          "posted_at": "2026-09-04T08:24:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "자율주행 관련 직접 납품 품목에 관심을 보인다.",
+          "posted_at": "2026-09-04T10:22:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "자율주행차와 로보택시 시장 확대의 수혜를 기대한다.",
+          "posted_at": "2026-09-04T09:14:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "매출과 이익 규모에 비해 기업가치가 낮다고 평가한다.",
+          "posted_at": "2026-09-04T08:12:00+00:00",
+          "sentiment": "positive"
+        }
+      ],
+      "collected_at": "2026-09-07T03:45:59.343278+00:00",
+      "fgi_mean": 46.34,
+      "fgi_latest": {
+        "fgi": 38.6,
+        "label": "공포",
+        "as_of": "2026-09-07T03:15:00+00:00",
+        "post_count": 2,
+        "valence_percentile": 13.17
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260904800311",
+          "published_at": "2026-09-04T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904800311"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260831800835",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800835"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260828800372",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800372"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260827800312",
+          "published_at": "2026-08-27T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800312"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260821800436",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821800436"
+        }
+      ],
+      "collected_at": "2026-09-07T03:45:59.862743Z",
+      "request_id": "4ae0ac0a-a973-46e0-9e66-93ce0b63f589",
+      "source_type": "dart",
+      "stock_code": "012330",
+      "company_name": "현대모비스"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260814004065": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260814004065",
+        "document_type": "disclosure",
+        "content": "(제 50기 반기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 06월 30일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 8월 14일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 현대모비스 주식회사\n대 표 이 사 : | 이 규 석\n본 점 소 재 지 : | 서울특별시 강남구 테헤란로 203\n(전 화) 02-2018-5114\n(홈페이지) https://www.mobis.com\n작 성 책 임 자 : | (직 책) 재경담당 (성 명) 김 도 형\n(전 화) 02-2018-5015\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 개황연결대상 종속회사 현황은 다음과 같습니다.\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | - | - | - | - | -\n비상장 | 45 | - | - | 45 | 34\n합계 | 45 | - | - | 45 | 34\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n(1) 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | - | -\n- | -\n연결제외 | - | -\n- | -\n나. 회사의 법적, 상업적 명칭법인 등기부등본 상 당사의 상호는 '현대모비스 주식회사' 입니다. 영문으로는 'HYUNDAI MOBIS(약호 MOBIS)' 라고 표기합니다.다. 설립일자 및 존속기간법인 등기부등본 상 당사의 설립일자는 '1977년 6월 25일' 입니다.라. 본사의 주소, 전화번호, 홈페이지 주소법인 등기부등본 상 당사의 본점 주소지는 '서울특별시 강남구 테헤란로 203(역삼동)' 이고, 대표 전화번호는 '02-2018-5114' 입니다. 인터넷 홈페이지 주소는 'www.mobis.com' 입니다.마. 중소기업 등 해당 여부\n중소기업 해당 여부 | 미해당\n벤처기업 해당 여부 | 미해당\n중견기업 해당 여부 | 미해당\n바. 주요 사업의 내용 현대모비스 주식회사(이하 \"당사\")와 종속기업(이하 당사와 종속기업을 \"연결회사\"라 함)은 자동차 모듈 및 부품제조사업과 A/S용 부품사업을 영위하고 있습니다. 먼저 자동차 모듈 및 부품제조사업을 통해 자동차 3대 핵심모듈인 샤시모듈, 칵핏모듈, 프론트엔드모듈(이하 \"FEM\")을 조립ㆍ생산하여 현대자동차와 기아 등에 직서열(JIS, Just In Sequence) 공급하고 있으며, 제동ㆍ조향ㆍ에어백ㆍ램프 및 전장ㆍ전동화 부품 등 다양한 자동차 부품을 생산하여 현대자동차와 기아 및 글로벌 완성차 업체에 공급하고 있습니다. 또한 A/S용 부품사업을 통해 국내외에서 운행 중인 모든 현대자동차ㆍ기아에 소요되는 보수용 부품의 공급을 책임지고 있습니다. 2026년 매출액의 구성을 보면 자동차 모듈 및 부품제조사업이 78.2%, A/S용 부품사업이 나머지 21.8%를 차지하고 있습니다. 사업 부문별 자세한 사항은 'Ⅱ. 사업의 내용 '을 참조하시기 바랍니다.\n사. 신용평가에 관한 사항당사는 회사채 및 기업어음 발행의 목적 또는 기타 수시평가를 위해 신용평가 전문기관으로부터 평가를 받고 있습니다. 공시대상기간 동안의 신용평가 현황은 다음과 같고 각 신용평가사의 신용평가등급체계는 다음과 같습니다.\n(1) 최근 3년간 신용평가 내역\n평가일 | 신용평가전문기관명 | 신용등급 | 평가대상 | 평가구분\n2026.06.26 | NICE신용평가 | AA+ (안정적) | 회사채 | 정기평가\n2026.06.23 | 한국신용평가 | AA+ (안정적) | 회사채 | 정기평가\n2026.03.05 | S&P Global(미국) | BBB+ (Stable) | 기업평가 | Periodic\n2025.12.09 | Moody's(미국) | A3(Stable) | 기업평가 | Periodic\n2025.06.23 | NICE신용평가 | AA+ (안정적) | 회사채 | 정기평가\n2025.06.18 | 한국신용평가 | AA+ (안정적) | 회사채 | 정기평가\n2025.03.13 | S&P Global(미국) | BBB+ (Stable) | 기업평가 | Periodic\n2024.06.21 | NICE신용평가 | AA+ (안정적) | 회사채 | 정기평가\n2024.06.03 | 한국신용평가 | AA+ (안정적) | 회사채 | 정기평가\n2024.02.06 | Moody's(미국) | A3(Stable) | 기업평가 | Periodic\n2024.01.24 | S&P Global(미국) | BBB+ (Stable) | 기업평가 | Periodic\n(2) 신용등급 체계\n- 국내 신용평가사\n평가대상 | NICE신용평가 | 한국신용평가 | 부여의미\n기업평가(회사채) | AAA | AAA | 원리금 상환가능성이 최고 수준이다. 원리금 지급 확실성이 최고수준이며, 현단계에서 합리적으로 예측가능한 장래의 어떠한 환경변화에도 영향을 받지않을 만큼 안정적임.\nAA | AA | 원리금 지급 확실성이 매우 높지만 AAA등급에 비해 다소 열등한 요소가 있음.\nA | A | 원리금 지급 확실성이 높지만 장래 급격한 환경변화에 따라 다소 영향을 받을 가능성이 있음.\nBBB | BBB | 원리금 지급 확실성은 인정되지만 장래 환경변화로 전반적인 채무상환능력이 저하될 가능성이 있음.\nBB | BB | 원리금 지급 확실성에 당면 문제는 없지만 장래의 안정성면에서는 투기적 요소가 내포되어 있음.\nB | B | 원리금 지급 확실성이 부족하여 투기적이며, 장래의 안정성에 대해서는 현단계에서 단언할 수 없음.\nCCC | CCC | 채무불이행이 발생할 가능성을 내포하고 있어 매우 투기적임.\nCC | CC | 채무불이행이 발생할 가능성이 높아 상위등급에 비해 불안요소가 더욱 많음.\nC | C | 채무불이행이 발생할 가능성이 극히 높고 현단계에서는 장래 회복될 가능성이 없을 것으로 판단됨.\nD | D | 원금 또는 이자가 지급불능 상태에 있음.\n위 등급중 AA등급부터 CCC등급까지는 등급내의 상대적인 우열에 따라 +,- 기호가 첨부됩니다.\n- 국제 신용평가사\n평가대상 | 무디스(Moody's) | S&P Global (Standard and Po",
+        "content_truncated": true,
+        "total_chars": 399478,
+        "summary": "반기보고서 (2026.06) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814004065",
+        "collected_at": "2026-09-07T03:46:06.498167Z",
+        "report_name": "반기보고서 (2026.06)",
+        "published_at": "2026-08-14T00:00:00Z",
+        "request_id": "51fa0d52-384d-433f-a44d-20bf22ef86af",
+        "source_type": "dart"
+      }
+    },
+    "20260515002700": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260515002700",
+        "document_type": "disclosure",
+        "content": "(제 50기 1분기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 03월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 5월 15일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 현대모비스 주식회사\n대 표 이 사 : | 이 규 석\n본 점 소 재 지 : | 서울특별시 강남구 테헤란로 203\n(전 화) 02-2018-5114\n(홈페이지) https://www.mobis.com\n작 성 책 임 자 : | (직 책) 재경담당 (성 명) 김 도 형\n(전 화) 02-2018-5015\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n당사는 기업공시서식 작성기준에 따라 회사의 개요를 분기보고서에는 기재하지 않습니다. 1분기 중 발생한 변동사항은 반기보고서에 포함하여 기재할 예정입니다.\n2. 회사의 연혁\n당사는 기업공시서식 작성기준에 따라 회사의 연혁을 분기보고서에는 기재하지 않습니다. 1분기 중 발생한 변동사항은 반기보고서에 포함하여 기재할 예정입니다.\n3. 자본금 변동사항\n당사는 기업공시서식 작성기준에 따라 자본금 변동사항을 분기보고서에는 기재하지 않습니다. 1분기 중 발생한 변동사항은 반기보고서에 포함하여 기재할 예정입니다.\n4. 주식의 총수 등\n당사는 기업공시서식 작성기준에 따라 주식의 총수 등을 분기보고서에는 기재하지 않습니다. 1분기 중 발생한 변동사항은 반기보고서에 포함하여 기재할 예정입니다.\n5. 정관에 관한 사항\n당사는 기업공시서식 작성기준에 따라 정관에 관한 사항을 분기보고서에는 기재하지 않습니다. 1분기 중 발생한 변동사항은 반기보고서에 포함하여 기재할 예정입니다.\nII. 사업의 내용\n1. 사업의 개요\n연결회사는 자동차 모듈 및 부품제조사업과 A/S용 부품사업을 영위하고 있으며, 국내외 생산거점 29곳, 물류거점 41곳, 연구소 8곳 등을 운영하고 있습니다.자동차 3대 핵심모듈인 샤시모듈, 칵핏모듈, 프론트엔드모듈(이하 \"FEM\")을 조립ㆍ생산하여 현대자동차와 기아 등에 직서열(JIS, Just In Sequence) 공급하고 있으며, 제동ㆍ조향ㆍ에어백ㆍ램프 및 전장ㆍ전동화 부품 등 다양한 자동차 부품을 생산하여 현대자동차와 기아 및 글로벌 완성차 업체에 공급하고 있습니다. 연구개발 초기 단계부터 완성차 업체와 협력하며 자동차 특성에 맞춘 모듈을 개발, 생산하고 있으며, 첨단화 및 시스템 통합화를 통해 생산공정 간소화와 조립 편의성 증대 등 모듈화 효과를 바탕으로 글로벌 경쟁력을 강화하고 있습니다.또한 연결회사는 국내외에서 운행 중인 현대자동차ㆍ기아에 소요되는 보수용 부품의공급을 책임지고 있는 A/S용 부품사업을 영위하고 있습니다. 부품의 책임공급을 위해 물류센터 등의 대단위 인프라를 구축했고, 212개 차종 및 277만 품목을 관리함으로써 보수용 A/S부품에 대한 수요 발생 시 신속하고 정확한 부품 공급을 통해 현대자동차ㆍ기아 차량 보유 고객에 대한 최상의 서비스를 제공하고 있습니다.2026년 1분기 매출액 대비 매출비중은 자동차 모듈 및 부품제조사업이 77.4%, A/S용 부품사업이 22.6%입니다. 2026년 1분기 매출액은 15조 5,605억 원, 영업이익은 8,026억 원으로 전년 동기 대비 매출액은 5.5%, 영업이익은 3.3% 증가하였습니다.대내외 경영 환경 불확실성이 가중되고 있는 가운데에도 당사는 미래 모빌리티 산업 생태계에서 핵심 경쟁력을 강화하고, 신사업 기회를 확보하기 위하여 노력하고 있습니다. 또한, 당사는 '책임 있는 혁신, 청정 기술을 활용한 모빌리티 구현'이라는 지속가능경영 비전 실현을 통해 위기 극복과 동시에 미래를 위한 준비를 지속할 것입니다.\n2. 주요 제품 및 서비스\n가. 주요 제품 등의 현황연결회사는 3대 핵심모듈을 비롯하여 전장, 전동화 등 미래 핵심부품 제조 및 차량 A/S용 부품사업 등을 주요 사업으로 하고 있습니다. 제동ㆍ조향ㆍ안전 제품과 멀티ㆍ전자제어 지능형 안전시스템 및 전동화 부품 등 첨단 자동차 기술의 선제적 확보를 통한 미래 경쟁력 강화를 위해 품질혁신과 기술개발에 매진하고 있습니다.각 사업부문별 매출액이 총 매출액에서 차지하는 비중은 다음과 같습니다.\n(단위 : 백만원, %)\n사업부문 | 주요 제품 | 매출액\n제50기 1분기 | 제49기 1분기 | 제48기 1분기\n모듈 및 부품제조 사업부문 | 샤시, 칵핏모듈 등 | 12,041,534 | 77.4% | 11,474,273 | 77.8% | 10,937,417 | 78.9%\nA/S용 부품 사업부문 | A/S 보수용품 등 | 3,518,979 | 22.6% | 3,277,761 | 22.2% | 2,931,807 | 21.1%\n계 | - | 15,560,513 | 100.0% | 14,752,034 | 100.0% | 13,869,224 | 100.0%\n2026년 1분기 모듈 및 부품제조사업 매출은 2025년 1분기 대비 567,261백만원 증가(4.9%)하였으며, A/S용 부품사업 매출은 241,218백만원 증가(7.4%)하였습니다. 모듈 및 부품제조사업 매출은 2025년 1분기 대비 전기차 생산량 증가 및 환율 영향 등에 따라 증가하였으며, A/S용 부품사업 매출은 글로벌 수요 증가세가 지속됨에 따라 증가하였습니다. 모듈 및 부품제조사업과 A/S용 부품사업 전체로 볼 때 2025년 1분기 대비 808,479백만원 증가(5.5%)하였습니다.나. 주요 제품 등의 가격변동 추이연결회사의 주요 생산제품별 가격변동 추이는 다음과 같습니다.\n(단위 : 원)\n품 목 | 제50기 1분기 | 제49기 | 제48기\n샤시모듈 | 5,680,539 | 5,271,604 | 5,060,508\n칵핏모듈 | 3,084,652 | 2,675,218 | 2,578,307\nFEM | 1,142,263 | 934,544 | 840,344\n샤시모듈, 칵핏모듈, FEM의 가격은 대표차종인 쏘나타 1대 기준으로 산출되었으며,대당 가격은 국내시장과 해외시장에서 판매되는 해당제품 단가의 평균입니다. 샤시모듈, 칵핏모듈, FEM의 주요 가격변동 원인은 제품별 자재 사양 구성 차이, 부품 가격의 인상 등으로 볼 수 있습니",
+        "content_truncated": true,
+        "total_chars": 282037,
+        "summary": "분기보고서 (2026.03) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002700",
+        "collected_at": "2026-09-07T03:46:11.779978Z",
+        "report_name": "분기보고서 (2026.03)",
+        "published_at": "2026-05-15T00:00:00Z",
+        "request_id": "57d37194-6c1f-40d6-bc38-e9d64fb1911c",
+        "source_type": "dart"
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260814004065",
+    "20260515002700"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:45:59.144996Z"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:59.145281Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:59.145600Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:59.145775Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:59.145901Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:59.146009Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:59.146114Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:59.432061Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:59.535396Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:59.712598Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:59.786168Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:59.974127Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012330",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:59.980332Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

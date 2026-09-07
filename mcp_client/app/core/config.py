@@ -23,6 +23,8 @@ class Settings(BaseSettings):
     openai_model: str = "gpt-5.6-luna"
     openai_reasoning_effort: str = "low"
     max_agent_steps: int = 3
+    agent_reflection_enabled: bool = True
+    agent_max_reflections: int = Field(default=2, ge=0)
 
     backend_event_url: str = ""
     backend_internal_token: str = ""

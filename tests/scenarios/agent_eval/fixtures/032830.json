@@ -1,0 +1,1280 @@
+{
+  "company": {
+    "company_name": "삼성생명",
+    "stock_code": "032830"
+  },
+  "captured_at": "2026-09-07T03:40:26.147882+00:00",
+  "capture_finished_at": "2026-09-07T03:47:54.033802+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "삼성생명",
+      "stock_code": "032830",
+      "current_price": 309000,
+      "change": 11500,
+      "change_rate": 3.87,
+      "volume": 121598,
+      "volume_change_rate": 41.55,
+      "avg_volume_20d": 467525,
+      "volume_ratio_20d": 0.46,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 215126,
+      "warnings": [],
+      "as_of": "2026-09-07T03:40:26.607835Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:40:26.607835Z"
+    },
+    "news": {
+      "request_id": "5af1555a-ba24-4e53-a44a-ed4667b0eb3c",
+      "status": "success",
+      "company_name": "삼성생명",
+      "stock_code": "032830",
+      "articles": [
+        {
+          "headline": "[이은실의 사람을 얻는 영업] 고객의 세상으로 들어가기",
+          "publisher": "lecturernews.com",
+          "published_at": "2026-09-07T03:20:00Z",
+          "summary": "이은실 칼럼니스트는 삼성생명에서 27년간 보험심사, 고객상담, 영업, 교육, 코칭, 강의 등 다양한 현장을 경험했다. 수많은 사람들의 삶의 전환점을 함께하며 신뢰와 관계의 가치를 몸소 배웠고, 그 경험을 바탕으로 사람과...",
+          "source_url": "https://www.lecturernews.com/news/articleView.html?idxno=210167",
+          "relevance": "high"
+        },
+        {
+          "headline": "여자농구 KB, 일본 후지쓰와 격돌… 10월 3일 박신자컵 개막전",
+          "publisher": "newscj.com",
+          "published_at": "2026-09-07T03:14:00Z",
+          "summary": "모두 10개 팀이 참가하는 이번 대회는 A조에 KB·후지쓰·용인 삼성생명·칼튼대(캐나다)· BNK썸이 편성됐고, B조는 인천 신한은행·울란바타르(몽골)·부천 하나은행·호주 NBL1 선발팀·아산 우리은행으로...",
+          "source_url": "https://www.newscj.com/news/articleView.html?idxno=3430601",
+          "relevance": "high"
+        },
+        {
+          "headline": "클레온, 삼성생명과 'AI 롤플레이' 솔루션 공개…금융권 첫 실전 적용",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-07T03:00:00Z",
+          "summary": "인공지능(AI) 스타트업 클레온은 삼성생명과 공동 개발한 'AI 롤플레이 솔루션'을 공개한다고 7일 밝혔다. 이 솔루션은 오는 9일부터 이틀간 서울 동대문디자인플라자(DDP)에서 열리는 글로벌 스타트업 행사 '트라이...",
+          "source_url": "https://www.mt.co.kr/future/2026/09/07/2026090709413944722",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"개막전 한일 격돌\" KB, 日후지쓰와 박신자컵 첫 경기",
+          "publisher": "topstarnews.net",
+          "published_at": "2026-09-07T02:52:00Z",
+          "summary": "A조에는 청주 KB, 후지쓰, 용인 삼성생명, 캐나다 칼튼대, 부산 BNK썸이 포함됐다. B조에는 인천 신한은행, 몽골 울란바타르, 부천 하나은행, 호주 NBL1 선발팀, 아산 우리은행이 배정돼 총 10개 팀이 출전한다. 연합뉴스...",
+          "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16185373",
+          "relevance": "high"
+        },
+        {
+          "headline": "[보험업계 동향] 삼성생명ㆍDB손해보험ㆍKB손해보험ㆍ흥국화재 (9.7)",
+          "publisher": "weeklytoday.com",
+          "published_at": "2026-09-07T02:50:00Z",
+          "summary": "■ 삼성생명, 'AI롤플레잉 서비스' 출시···AI 가상 고객과 상담 훈련 - 보험 특화 LLM으로 상황별 대화 구현···개인별 피드백 제공 - 9월 중순 출시···9~10일 DDP서 사전 체험 운영 [위클리오늘=홍정기 기자] 삼성생명이 AI...",
+          "source_url": "http://www.weeklytoday.com/news/articleView.html?idxno=793281",
+          "relevance": "high"
+        },
+        {
+          "headline": "'49승1패'인데 독 품은 안세영! \"완벽하게 철저하게 준비하겠다\" AG 우승...",
+          "publisher": "xportsnews.com",
+          "published_at": "2026-09-07T02:45:00Z",
+          "summary": "한국의 '배드민턴 여제' 안세영(삼성생명·세계랭킹 1위)이 다음 대회인 2026 아이치·나고야 아시안게임은 더욱 완벽하고 철저하게 준비하겠다고 밝혔다. 2026 세계배드민턴연맹(BWF) 중국 마스터즈(슈퍼 750)에서 상대에게...",
+          "source_url": "https://www.xportsnews.com/article/2193013",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명 & KB손해보험 등, 보험사 AI 활용 '가속', 초점은?",
+          "publisher": "choicenews.co.kr",
+          "published_at": "2026-09-07T02:44:00Z",
+          "summary": "한편 이날 한국증시 장중 AI전략을 적극 추진 중인 삼성생명의 주가는 급등해 눈길을 끌고 있다. 7일 관련 업계에 따르면 삼성생명은 이날 \"AI 디지털 휴먼이 가상 고객 역할을 맡아 컨설턴트가 실제 상담처럼...",
+          "source_url": "http://www.choicenews.co.kr/news/articleView.html?idxno=171024",
+          "relevance": "high"
+        },
+        {
+          "headline": "'WKBL 디펜딩 챔피언' KB스타즈 vs '대회 3연패 도전' 日후지쯔, 박신자...",
+          "publisher": "starnewskorea.com",
+          "published_at": "2026-09-07T02:43:00Z",
+          "summary": "부천 하나은행은 10월 4일 호주 NBL1을 상대로 첫 승 사냥에 나선다. 박신자컵에 첫선을 보이는 몽골 울란바토르와 캐나다 칼튼대학교는 개막 첫날인 3일 각각 인천 신한은행, 용인 삼성생명을 상대로 시험대에 오른다.",
+          "source_url": "https://www.starnewskorea.com/sports/2026/09/07/2026090711395831435",
+          "relevance": "high"
+        },
+        {
+          "headline": "여자농구 KB, 10월 3일 박신자컵 개막전서 일본 후지쓰와 격돌",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T02:42:00Z",
+          "summary": "참가팀은 A조 KB, 후지쓰, 용인 삼성생명, 칼튼대(캐나다) BNK썸, B조 인천 신한은행, 울란바타르(몽골), 부천 하나은행, 호주 NBL1 선발팀, 아산 우리은행 10개 팀이다. 각 조 1, 2위가 4강 크로스 토너먼트로...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907079600007?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI 투자 기대에 외인·기관 1.6조 '사자'…코스피 6900선 공방[장중시황...",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "SK스퀘어(402340)(5.86%), SK하이닉스(000660)(5.65%), 삼성전자(005930)(3.91%), 삼성생명(032830)(3.7%), 삼성전자우(005935)(2.19%), KB금융(105560)(1.57%), 현대차(005380)(1.43%), 삼성전기(009150)(1.28%), LG에너지솔루션(373220)(0.56...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6282070",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 디지털 휴먼 활용 상담훈련 서비스 선봬",
+          "publisher": "lcnews.co.kr",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "라이센스뉴스 = 이소라 기자 | 삼성생명이 보험설계사 교육에 생성형 인공지능(AI)을 본격적으로 끌어들인다. AI가 고객 역할을 맡아 상담을 주고받고, 대화 결과를 토대로 설계사별 보완점을 짚어주는 방식이다. 대면...",
+          "source_url": "https://www.lcnews.co.kr/news/articleView.html?idxno=207852",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 'AI롤플레잉 서비스'로 설계사 역량 강화",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "|중앙이코노미뉴스 정재혁 기자|삼성생명은 인공지능(AI)을 활용해 컨설턴트의 상담 역량을 높이는 'AI롤플레잉 서비스'를 이달 중순 출시한다고 7일 밝혔다. [사진=삼성생명]  삼성생명은 인공지능(AI)을 활용해...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=546026",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, AI 디지털 휴먼이 고객 맡는다…보험상담 훈련도 생성형 AI로",
+          "publisher": "e-science.co.kr",
+          "published_at": "2026-09-07T02:32:00Z",
+          "summary": "삼성생명은 가상 고객과 실제처럼 대화하고 상담 결과까지 평가받을 수 있는 생성형 AI 기반 교육 서비스를 이달 중순 도입한다. 'AI 롤플레잉 서비스'는 디지털 휴먼이 고객 역할을 맡고 컨설턴트가 보험 상담을...",
+          "source_url": "https://www.e-science.co.kr/news/articleView.html?idxno=134851",
+          "relevance": "high"
+        },
+        {
+          "headline": "장중 亞증시?..삼성전자·삼성생명·키옥시아·소프트뱅크 '껑충'",
+          "publisher": "choicenews.co.kr",
+          "published_at": "2026-09-07T02:32:00Z",
+          "summary": "이 시각 한국증시에선 삼성전자의 주가가 26만5500원으로 3.82%나 상승하고 삼성전자 지분을 보유한 삼성생명의 주가 또한 31만원으로 4.20%나 치솟으며 코스피 지수 급등세에 기여하고 있다. 이 시각...",
+          "source_url": "http://www.choicenews.co.kr/news/articleView.html?idxno=171023",
+          "relevance": "high"
+        },
+        {
+          "headline": "클레온, 삼성생명과 AI 롤플레이 솔루션 공개",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "클레온 | 서울=한스경제 김종효 기자 | 클레온은 삼성생명과 함께 개발한 AI 롤플레이 솔루션을 9일부터 10일까지 서울 DDP에서 열리는 'Try Everything 2026'에서 처음 공개한다고 7일 밝혔다. 이번 솔루션은 클레온의...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862621",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인·기관 사자에 코스피 3%대 상승세…6900 탈환 고지전",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "삼성전자와 SK하이닉스는 각각 3%대, 5%대 오름세를 이어가고 있고 SK스퀘어, 삼성전기, LG에너지솔루션, 현대차, 삼성바이오로직스, KB금융, 삼성생명이 모두 상승 중이다. 같은 시간 코스닥 지수는 1.64%(13.35포인트)...",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/07/QZ57IBRFANHSJAVOFB54QGKVTE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 치매신약 부작용 첫 보장…올해 다섯 번째 배타적사용권",
+          "publisher": "raonnews.com",
+          "published_at": "2026-09-07T02:24:00Z",
+          "summary": "레켐비 투약 후 뇌출혈 보장 신설…석 달 새 다섯 건 확보 삼성생명이 치매 치료제 투약 과정에서 나타나는 부작용을 보장하는 특약으로 올해 다섯 번째 배타적사용권을 받았다. 7일 보험업계에 따르면 생명보험협회...",
+          "source_url": "https://www.raonnews.com/news/article.html?no=60893",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB, ‘박신자컵 2연패’ 日 후지쯔와 개막전 격돌…조 편성·일정 확정",
+          "publisher": "isplus.com",
+          "published_at": "2026-09-07T02:22:00Z",
+          "summary": "박신자컵 최다 우승(3회) 기록을 보유한 하나은행은 10월 4일 호주 NBL1과 첫 경기를 치른다. 대회에 처음 참가하는 울란바토르와 칼튼대학교는 10월 3일 각각 인천 신한은행, 용인 삼성생명과 맞붙는다.",
+          "source_url": "https://isplus.com/article/view/isp202609070065",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 컨설턴트 역량강화 돕는 'AI롤플레잉' 서비스 출시",
+          "publisher": "news.tf.co.kr",
+          "published_at": "2026-09-07T02:21:00Z",
+          "summary": "AI 가상 고객과 실제 상담처럼 대화하며 반복 훈련 상담 내용 AI가 분석해 개인별 피드백 삼성생명이 인공지능(AI)을 활용해 컨설턴트의 상담 역량을 높이는 'AI롤플레잉 서비스'를 출시한다. 7일 삼성생명에 따르면...",
+          "source_url": "https://news.tf.co.kr/read/economy/2362659.htm",
+          "relevance": "high"
+        },
+        {
+          "headline": "[금융권 이모저모]하나금융, '2026 국제비즈니스대상' 금상 外",
+          "publisher": "businessplus.kr",
+          "published_at": "2026-09-07T02:20:00Z",
+          "summary": "그래픽=삼성생명 ◇삼성생명, AI 가상고객과 상담 훈련하는 서비스 출시 삼성생명은 인공지능 디지털 휴먼을 활용해 전속 컨설턴트의 상담 역량을 높이는 'AI롤플레잉 서비스'를 이달 중순 출시한다고 7일 밝혔다....",
+          "source_url": "https://www.businessplus.kr/news/articleView.html?idxno=116468",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"모바일로 언제 어디서나 학습\" 삼성생명, 컨설턴트 역량강화 'AI롤플레...",
+          "publisher": "catchnews.kr",
+          "published_at": "2026-09-07T02:19:00Z",
+          "summary": "삼성생명이 컨설턴트의 실무 역량 강화를 위해 AI 디지털 휴먼 기술을 접목한 'AI롤플레잉 서비스'를 이달 중순 선보인다. 삼성생명 컨설턴트가 AI롤플레잉 서비스를 통해 상담역량을 키우고 있다. [이미지 삼성생영...",
+          "source_url": "https://www.catchnews.kr/news/articleView.html?idxno=128209",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 디지털휴먼 고객으로 컨설턴트 역량 강화",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:13:00Z",
+          "summary": "삼성생명은 인공지능(AI)을 활용해 컨설턴트(상담사)의 역량을 높이는 ‘AI롤플레잉 서비스’를 9월 중순 출시한다고 7일 밝혔다. ‘AI롤플레잉 서비스’란 AI 디지털 휴먼(인간)이 가상 고객 역할을 맡아 컨설턴트가 실제...",
+          "source_url": "https://biz.heraldcorp.com/article/10864765?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 메모리주 강세에 장 초반 3%대 상승...삼전 4%·SK하닉 6%↑",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "삼성생명은 4.71%, 삼성물산은 3.81% 상승 중이다. 현재 국내 증시는 AI 기대가 다시 반도체 업황 개선 기대와 맞물리며 강한 반등 흐름을 보이고 있다. 시가총액 상위 종목 가운데 삼성전기는 2.50...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317738",
+          "relevance": "high"
+        },
+        {
+          "headline": "WKBL, 퓨처스리그 대진 공개...후지쯔 KB 스타즈 개막전 격돌",
+          "publisher": "sportalkorea.com",
+          "published_at": "2026-09-07T02:07:00Z",
+          "summary": "한편, 박신자컵 최다 우승(3회) 기록을 보유한 하나은행은 오는 10월 4일 호주 NBL1과첫 경기를 치르며, 박신자컵 첫 참가를 앞둔 울란바토르와 칼튼대학교는 10월 3일 각각 신한은행과 삼성생명을 상대로 대회...",
+          "source_url": "https://www.sportalkorea.com/news/articleView.html?idxno=2025052909553518500",
+          "relevance": "high"
+        },
+        {
+          "headline": "기후솔루션 \"기후보험 파는 국내 보험사들, 화석연료에도 자금 대는 이...",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T02:02:00Z",
+          "summary": "이 보고서는 삼성화재, 현대해상, DB손해보험, KB손해보험, 메리츠화재, 삼성생명, 교보생명, 한화생명 등 국내 주요 보험사 8개사의 탈석탄 정책을 해외 선도 보험사들과 비교해 분석한 내용을 담았다. 보고서에 따르면...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446522",
+          "relevance": "high"
+        },
+        {
+          "headline": "본업 살아나고, 주주환원 '주목'...KCC 주가 '장중 활짝'",
+          "publisher": "choicenews.co.kr",
+          "published_at": "2026-09-07T02:02:00Z",
+          "summary": "한편 이날 증시에서 오전 10시 14분 현재 삼성전자(+3.72%) 주가가 급등 중인 가운데 삼성전자의 지분을 보유한 삼성생명(+3.36%)과 삼성물산(+2.72%)도 동반 급등 거래 중이다. 같은 시각 코스피 지수는 직전거래일 대비 2....",
+          "source_url": "http://www.choicenews.co.kr/news/articleView.html?idxno=171019",
+          "relevance": "high"
+        },
+        {
+          "headline": "2026 박신자컵 조 편성 완료! 개막전부터 대박이네, KB스타즈 vs 日 후지...",
+          "publisher": "mydaily.co.kr",
+          "published_at": "2026-09-07T02:01:00Z",
+          "summary": "WKBL은 \"박신자컵 최다 우승(3회) 기록을 보유한 하나은행은 10월 4일 호주 NBL1과첫 경기를 치르며, 박신자컵 첫 참가를 앞둔 울란바토르와 칼튼대학교는 10월 3일 각각 신한은행과 삼성생명을 상대로 대회 일정을...",
+          "source_url": "https://www.mydaily.co.kr/page/view/2026090710283973398",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 장중 '반도체주 강세'에 3%대 오른 6890선, 코스닥도 1%대 올라",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "SK하이닉스가 5.89%로 가장 많이 오르고 있고 SK스퀘어(5.48%) 삼성전자(3.82%) 삼성생명(3.70%) 삼성전자우(2.35%) 현대차(1.69%) KB금융(1.54%) 삼성전기(1.53%) LG에너지솔루션(0.14%) 삼성바이오로직스(0.07%) 가 뒤를 잇고...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446528",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, AI 가상고객으로 보험상담 훈련",
+          "publisher": "financialpost.co.kr",
+          "published_at": "2026-09-07T01:58:00Z",
+          "summary": "삼성생명이 인공지능(AI)을 보험 영업 현장에 접목해 컨설턴트 교육을 혁신한다. 삼성생명은 AI 디지털 휴먼이 가상 고객 역할을 맡아 실제 상담처럼 대화하고 반복 훈련할 수 있는 'AI롤플레잉 서비스'를 9월 중순...",
+          "source_url": "https://www.financialpost.co.kr/news/articleView.html?idxno=274208",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"실제 고객처럼 묻고 답한다\"…삼성생명, AI 상담훈련 도입",
+          "publisher": "ftoday.co.kr",
+          "published_at": "2026-09-07T01:58:00Z",
+          "summary": "삼성생명이 인공지능(AI) 가상 고객과 실제 상담처럼 대화하며 영업 현장을 훈련할 수 있는 'AI롤플레잉 서비스'를 출시한다. 보험 전문지식을 반영한 거대언어모델(LLM)을 기반으로 다양한 상담 상황을 구현하고 상담...",
+          "source_url": "http://www.ftoday.co.kr/news/articleView.html?idxno=364937",
+          "relevance": "high"
+        },
+        {
+          "headline": "금융권 디지털 확대... AI 에이전트 경진대회부터 홈 화면 개편까지",
+          "publisher": "pressman.kr",
+          "published_at": "2026-09-07T01:58:00Z",
+          "summary": "삼성생명은 AI 디지털 휴먼이 가상 고객 역할을 맡아 컨설턴트가 반복 훈련할 수 있도록 지원하는 'AI롤플레잉 서비스'를 9월 중순 출시한다고 밝혔다. 컨설턴트가 고객 유형과 상담 상황을 선택하면 AI가 실제 영업...",
+          "source_url": "https://www.pressman.kr/news/articleView.html?idxno=103534",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 'AI롤플레잉 서비스'로 보험 상담 실전훈련",
+          "publisher": "insnews.co.kr",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "삼성생명이 인공지능(AI)을 활용한 가상 상담 훈련을 전속 컨설턴트 교육에 도입한다. 삼성생명은 컨설턴트의 상담 역량과 전문성을 높이는 'AI롤플레잉 서비스'를 이달 중순 출시한다고 7일 밝혔다. 'AI롤플레잉 서비스...",
+          "source_url": "https://www.insnews.co.kr/news/articleView.html?idxno=92646",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 컨설턴트 상담훈련에 'AI롤플레잉' 도입",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-07T01:54:00Z",
+          "summary": "이투데이=권현원 기자 | 삼성생명이 인공지능(AI) 가상고객과 대화하며 실제 상담 상황을 훈련할 수 있는 서비스를 컨설턴트 교육에 도입한다. 7일 삼성생명은 컨설턴트의 상담 역량 강화를 위한 'AI롤플레잉 서비스'를...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622566",
+          "relevance": "high"
+        },
+        {
+          "headline": "통합 우승 KB vs 3연패 도전 후지쯔, 2026 박신자컵 개막전 한-일 맞대결",
+          "publisher": "basketkorea.com",
+          "published_at": "2026-09-07T01:52:00Z",
+          "summary": "한편, 박신자컵 최다 우승(3회) 기록을 보유한 하나은행은 10월 4일(일) 호주 NBL1과첫 경기를 치르며, 박신자컵 첫 참가를 앞둔 울란바토르와 칼튼대학교는 10월 3일 각각 신한은행과 삼성생명을 상대로 대회...",
+          "source_url": "https://basketkorea.com/news/newsview.php?ncode=1065577673662015",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB스타즈-후지쯔, 박신자컵 개막전서 격돌…지난해 4강 리턴매치",
+          "publisher": "sportschosun.com",
+          "published_at": "2026-09-07T01:52:00Z",
+          "summary": "또 이번 대회에 처음 참가하는 몽골 프로 최강팀 울란바토르 아마존스와 캐나다 대학농구 강호인 칼튼대학교는 10월 3일 각각 신한은행과 삼성생명을 상대로 첫 경기에 나선다. 대회는 10개 팀이 2개 조로 나뉘어...",
+          "source_url": "https://www.sportschosun.com/basketball/2026-09-07/202609070100046550003045",
+          "relevance": "high"
+        },
+        {
+          "headline": "'승률 98%' 안세영, 中 마스터스 3연패…부상 복귀 후 33연승 질주",
+          "publisher": "stnsports.co.kr",
+          "published_at": "2026-09-07T01:52:00Z",
+          "summary": "정아람 기자┃배드민턴 여자 단식 세계랭킹 1위 안세영(삼성생명)이 압도적인 기량으로 2주 연속 정상에 올랐다. 안세영은 6일 중국 선전 아레나에서 열린 2026 세계배드민턴연맹(BWF) 월드투어 중국 마스터스(슈퍼...",
+          "source_url": "https://www.stnsports.co.kr/news/articleView.html?idxno=322153",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]코스피, 오픈AI발 호재에 6,900선 재탈환…삼전 4.3%·닉스 5.9% 급...",
+          "publisher": "kwnews.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.kwnews.co.kr/article/20260907500348",
+          "relevance": "high"
+        },
+        {
+          "headline": "이번엔 日 벽 넘을까? KB스타즈 vs 후지쯔, ‘2026 박신자컵’ 개막전서...",
+          "publisher": "sportsseoul.com",
+          "published_at": "2026-09-07T01:47:00Z",
+          "summary": "한편 박신자컵 최다인 3회 우승을 기록한 하나은행은 10월4일 호주 NBL1과 첫 경기를 치른다. 올해 처음 출전하는 울란바토르와 칼튼대학교는 10월3일 각각 신한은행과 삼성생명을 상대로 첫선을 보인다.",
+          "source_url": "https://www.sportsseoul.com/news/read/1633292?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 '쌍끌이' 매수에 6890선 훌쩍…3%대 강세",
+          "publisher": "mediapen.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "이 밖에 SK스퀘어(5.76%), 삼성생명(4.03%), 삼성전자우(2.30%), 삼성전기(1.86%), 현대차(1.83%), KB금융(1.42%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.07%) 등 주요 대형주가 모두 강세를 보이고 있다. 같은 시각...",
+          "source_url": "https://www.mediapen.com/news/view/1121704",
+          "relevance": "high"
+        },
+        {
+          "headline": "[금융 HOT 뉴스] 삼성생명, AI롤플레잉 서비스 9월 중순 출시",
+          "publisher": "bizwnews.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "삼성생명 컨설턴트가 AI롤플레잉 서비스를 통해 상담역량을 키우고 있다. 사진=삼성생명  삼성생명이 인공지능(AI)을 활용해 컨설턴트의 상담 역량을 높이는 'AI롤플레잉 서비스'를 9월 중순 출시한다고 7일 밝혔다. 이...",
+          "source_url": "http://www.bizwnews.com/news/articleView.html?idxno=145426",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 업고 2.9%대 급등",
+          "publisher": "straightnews.co.kr",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "현대차가 2.22%, KB금융이 1.74%, 삼성생명이 4.03% 올랐다. LG에너지솔루션은 0.70%, 삼성바이오로직스는 0.07% 상승했다. 다만 지수 상승폭에 비해 시장 전체의 온도가 뜨겁다고 보기는 어려웠다. 유가증권시장에서...",
+          "source_url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310533",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등… 코스피 6,900선 재탈환",
+          "publisher": "fntoday.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%)이 상승 중이며 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등 시가총액 상위 종목 대다수가 상승 대열에 합류했다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.fntoday.co.kr/news/articleView.html?idxno=392276",
+          "relevance": "high"
+        },
+        {
+          "headline": "[증시 오늘(7일) 주요 특징주] 반도체·로봇 대장주 급등에 코스피 6800선...",
+          "publisher": "thefairnews.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "이와 함께 삼성생명을 비롯한 대형 금융·지주사 주가도 3% 이상 뛰며 지수 하단을 견고하게 받치고 있다. 증권가에서는 대형주 중심의 수급 유입이 안정적인 완충 역할을 하면서 반도체와 신성장 산업군을 중심으로 한...",
+          "source_url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87272",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명 'AI롤플레잉 서비스'… AI활용 보험상담 역량 강화",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T01:34:00Z",
+          "summary": "삼성생명이 인공지능(AI)을 활용해 상담 역량을 높인다. 삼성생명은 ‘AI 롤플레잉 서비스’를 이달 중 출시한다고 7일 밝혔다. 이 서비스는 AI 디지털 휴먼이 가상 고객 역할을 맡아 컨설턴트가 실제 고객을 상담하는...",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609070942166065a6e8311f64_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "“AI 고객과 실전처럼 상담 연습”…삼성생명, ‘AI롤플레잉’ 출시",
+          "publisher": "ddaily.co.kr",
+          "published_at": "2026-09-07T01:33:00Z",
+          "summary": "삼성생명이 인공지능(AI) 가상 고객과 실제 상담처럼 대화하며 보험 상담을 연습할 수 있는 서비스를 선보인다. 삼성생명은 컨설턴트의 상담 역량을 높이기 위한 ‘AI롤플레잉 서비스’를 9월 중순 출시한다고 7일...",
+          "source_url": "https://www.ddaily.co.kr/page/view/2026090709441386965",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "시가총액 상위 종목 가운데서는 삼성전자(3.82%), SK하이닉스(6.19%), SK스퀘어(5.86%), 삼성전기(1.93%), LG에너지솔루션(0.42%), 현대차(1.69%), 삼성바이오로직스(0.21%), KB금융(1.63%), 삼성생명(3.78%), 삼성물산(2.72...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, AI 롤플레잉 서비스 도입…컨설턴트 상담 역량 높인다",
+          "publisher": "beyondpost.co.kr",
+          "published_at": "2026-09-07T01:30:00Z",
+          "summary": "삼성생명이 인공지능(AI) 기술을 활용해 컨설턴트의 실전 영업 대응력을 높이는 모바일 학습 체계를 구축했다. 7일 삼성생명은 컨설턴트 상담 역량 강화를 위한 'AI 롤플레잉 서비스'를 이달 중순 출시한다고 밝혔다....",
+          "source_url": "http://www.beyondpost.co.kr/view.php?ud=202609071015203116be44c0aacd_30",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피,美오픈AI 호재에 6,900선…환율 23개월만에 1,330원대",
+          "publisher": "seouleconews.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있다. 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "http://www.seouleconews.com/news/articleView.html?idxno=93564",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, AI 상담 훈련 도입…삼성화재, 모빌리티 대응 논의",
+          "publisher": "sateconomy.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "삼성생명, AI 디지털 휴먼 활용해 컨설턴트 상담 훈련 지원 삼성화재, 모빌리티 변화 점검…AI·자율주행 대응 방향 공유 삼성생명(대표이사 홍원학)과 삼성화재(대표이사 이문화)가 인공지능(AI)을 활용한 업무 역량...",
+          "source_url": "https://sateconomy.co.kr/news/view/1065575188410876",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 순매수에 6900선 강세",
+          "publisher": "kfenews.co.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "시가총액 상위 종목은 삼성전자(4.01%), SK하이닉스(5.59%), SK스퀘어(5.96%), 삼성전자우(2.66%), 삼성전기(1.14%), 현대차(2.22%), LG에너지솔루션(1.26%), 삼성생명(4.20%), KB금융(1.45%), 삼성바이오로직스(0.41%) 등 모두 오르고...",
+          "source_url": "https://www.kfenews.co.kr/news/articleView.html?idxno=663954",
+          "relevance": "high"
+        },
+        {
+          "headline": "시니어 하우스의 모든 것 ①",
+          "publisher": "woman.chosun.com",
+          "published_at": "2026-09-07T01:18:00Z",
+          "summary": "그 예로 지난해 8월 자회사 삼성노블라이프를 설립한 삼성생명은 올해 실버타운 '삼성노블카운티(용인)' 인수·통합을 마치며 시니어 리빙·케어 사업을 본격 확장했다. KB골든라이프케어(KB라이프)는 현재 서울 종로구...",
+          "source_url": "http://woman.chosun.com/news/articleView.html?idxno=126519",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승",
+          "publisher": "news.sbs.co.kr",
+          "published_at": "2026-09-07T01:17:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중입니다. 반면 삼성SDI(-0.91%), 셀트리온...",
+          "source_url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008740759&plink=ORI&cooper=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "2026 박신자컵 개막전은 한-일 맞대결...KB스타즈 vs 후지쯔",
+          "publisher": "rookie.co.kr",
+          "published_at": "2026-09-07T01:17:00Z",
+          "summary": "한편, 박신자컵 최다 우승(3회) 기록을 보유한 하나은행은 10월 4일(일) 호주 NBL1과 첫 경기를 치르며, 박신자컵 첫 참가를 앞둔 울란바토르와 칼튼대학교는 10월 3일 각각 신한은행과 삼성생명을 상대로 대회...",
+          "source_url": "http://www.rookie.co.kr/news/articleView.html?idxno=126715",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB스타즈 vs 후지쯔, 2026 박신자컵 개막전 맞대결 성사",
+          "publisher": "m.sports.naver.com",
+          "published_at": "2026-09-07T01:15:00Z",
+          "summary": "한편, 박신자컵 최다 우승(3회) 기록을 보유한 부천 하나은행은 10월 4일(일) 호주 NBL1과첫 경기를 치르며, 박신자컵 첫 참가를 앞둔 울란바토르와 칼튼대학교는 10월 3일 각각 인천 신한은행과 용인 삼성생명을...",
+          "source_url": "https://m.sports.naver.com/basketball/article/065/0000301360",
+          "relevance": "high"
+        },
+        {
+          "headline": "배드민턴 안세영, 두 대회 '퍼펙트 우승'…아시안게임 2연패 도전",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "'배드민턴 여제' 안세영(24·삼성생명)이 2026 세계배드민턴연맹(BWF) 월드 투어 중국 마스터스(슈퍼 750)를 제패하며 2개 대회 연속 '퍼펙트 우승'을 달성했다. 안세영은 지난 6일 중국 선전 아레나에서 열린 대회 여자...",
+          "source_url": "https://www.mt.co.kr/sports/2026/09/07/2026090708435663836",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍타고 3%대↑···6900선 회복",
+          "publisher": "finomy.com",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "△삼성전자우(2.45%) △SK스퀘어(5.48%) △삼성전기(1.07%) △LG에너지솔루션(1.12%) △현대차(1.69%) △삼성바이오로직스(0.69%) △KB금융(1.34%) △삼성생명(3.87%) 등이 상승하고 있다. 코스닥지수는 전 거래일보다 14....",
+          "source_url": "http://www.finomy.com/news/articleView.html?idxno=260879",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 컨설턴트 교육용 'AI롤플레잉 서비스' 출시",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T01:12:00Z",
+          "summary": "7월 금융위 혁신금융서비스 지정 제 상담처럼 대화하며 반복 훈련 아주경제=권가림 기자 [REDACTED_EMAIL] [사진=삼성생명] 삼성생명이 인공지능(AI)을 활용한 보험 컨설턴트 교육 서비스를 선보인다. 삼성생명은 오는 9월...",
+          "source_url": "https://www.ajunews.com/view/20260907100905173",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체주 훈풍…코스피, 3% 급등·6900 회복",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "이 밖에 삼성생명(3.87%), 삼성물산(3.0%), KB금융(1.34%), 현대차(1.04%), 삼성바이오로직스(0.41%) 등이 오름세를 이어가고 있다. 코스닥지수는 전일 대비 0.95% 오른 821.26에 거래되고 있다. 개인과 기관이 각각 506억원...",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609070040",
+          "relevance": "high"
+        },
+        {
+          "headline": "[카드] 삼성생명, 컨설턴트 대상 AI 상담훈련 서비스 'AI 롤플레잉' 선봬",
+          "publisher": "newsprime.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "삼성생명(032830)은 이달 중순 인공지능(AI)을 활용해 컨설턴트의 상담 역량을 높이는 'AI롤플레잉 서비스'를 출시한다고 7일 밝혔다.",
+          "source_url": "http://www.newsprime.co.kr/news/article.html?no=746672",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 오픈AI 호재…코스피 3%대 급등",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "다른 시가총액 상위주 가운데 SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%), 삼성전기(2.50%), 현대차(1.83%), LG에너지솔루션(0.42%) 등도 상승 중이다. 반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862662",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전 3%·닉스 5% 오름세…‘오픈AI 훈풍’에 코스피 6900선 등락",
+          "publisher": "segye.com",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "SK스퀘어(5.38%), 삼성생명(3.19%), 삼성전자우(2.24%), 현대차(1.69%), KB금융(1.51%), 삼성전기(1.07%) 등 시총 상위 종목 대부분 상승하고 있다. 같은 시각 코스닥 지수는 전 거래일보다 14.04포인트(1.73%) 오른 827.54를...",
+          "source_url": "https://www.segye.com/newsView/20260907504947?OutUrl=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"45분 만에 끝났다\"... 안세영, 무실세트 퍼펙트로 중국 마스터스 3연패...",
+          "publisher": "insight.co.kr",
+          "published_at": "2026-09-07T01:04:00Z",
+          "summary": "지난 6일(한국 시각) 삼성생명 소속 안세영(24)은 중국 선전 아레나에서 펼쳐진 2026 세계배드민턴연맹(BWF) 월드투어 중국 마스터스(수퍼 750) 여자 단식 결승전에서 일본 미야자키 도모카(세계 랭킹 9위)를 상대로 21-17, 21...",
+          "source_url": "https://www.insight.co.kr/news/572157",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 랠리에 코스피 장중 6900선 회복…환율 23개월 만에 1330원대",
+          "publisher": "hidomin.com",
+          "published_at": "2026-09-07T01:00:00Z",
+          "summary": "SK스퀘어도 5.38% 오르고 있으며 삼성생명(3.70%), 삼성전자우(2.51%), 현대차(1.69%), KB금융(1.40%) 등 시가총액 상위 종목 대부분이 상승세다. 증권가에서는 최근 이어진 반도체주 매도 압력이 완화될 가능성에...",
+          "source_url": "https://www.hidomin.com/news/articleView.html?idxno=720058",
+          "relevance": "high"
+        },
+        {
+          "headline": "'AI 고객'이 상담 훈련 돕는다...삼성생명, 'AI롤플레잉' 출시",
+          "publisher": "pointdaily.co.kr",
+          "published_at": "2026-09-07T00:58:00Z",
+          "summary": "이미지=삼성생명  인공지능(AI)을 통해 보험사 컨설턴트의 상담 훈련을 돕는 서비스가 출시될 전망이다. 삼성생명은 AI를 활용해 컨설턴트의 상담 역량을 높이는 'AI롤플레잉 서비스'를 오는 9월 중순 출시한다고 7일...",
+          "source_url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=318226",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 상담 역량 제고 위한 AI 롤플레잉 서비스 출시",
+          "publisher": "lawissue.co.kr",
+          "published_at": "2026-09-07T00:58:00Z",
+          "summary": "삼성생명이 AI를 활용해 컨설턴트의 상담 역량을 높이는 'AI롤플레잉 서비스'를 9월 중순 출시한다고 7일 밝혔다. 삼성생명에 따르면 AI 디지털 휴먼이 가상 고객 역할을 맡아 실제 상담처럼 반복 훈련할 수 있도록...",
+          "source_url": "http://www.lawissue.co.kr/view.php?ud=2026090709555915799817d053b9_12",
+          "relevance": "high"
+        },
+        {
+          "headline": "아스트라 돌풍, 이번엔 정말 ‘칠천피’ 재돌파?…코스피, 6900선 회복 [...",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있다. 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://biz.heraldcorp.com/article/10864511?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관 모처럼 ‘쌍끌이’…코스피 3% 급등하며 6900선 회복[마켓시...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "삼성생명(032830)은 4.71%, 삼성물산(028260)은 3.88% 오르고 있다. 현대차(005380)는 1.96%, KB금융(105560)은 1.98% 상승하고 있으며 삼성바이오로직스(207940)도 0.48% 강세다. 로봇주도 상승세를 보이고 있다. 로보티즈(108490)...",
+          "source_url": "https://www.sedaily.com/article/20087844?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 'AI롤플레잉 서비스' 선보인다…컨설턴트 교육 혁신",
+          "publisher": "newsmap.co.kr",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "삼성생명이 인공지능(AI)을 활용한 서비스를 선보이며 컨설턴트의 상담 역량 제고에 나선다. 삼성생명은 AI 디지털 휴먼이 가상 고객 역할을 맡아 실제 상담처럼 대화하며 반복 훈련할 수 있는 'AI롤플레잉 서비스'를...",
+          "source_url": "https://www.newsmap.co.kr/news/articleView.html?idxno=2914",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"땡큐, 오픈AI\"...코스피, 미국발 훈풍에 6,900선 탈환",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T00:51:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있다. 시가총액 상위주 중 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070134&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍에 3%대 급등…6900선 회복",
+          "publisher": "ppss.kr",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "SK스퀘어도 6.44% 상승했고 삼성생명 4.71%, 삼성물산 3.81% 등 주요 대형주도 강세다. 삼성전기와 현대차도 각각 2.50%, 1.83% 상승하고 있다. 업종별로도 반도체를 포함한 기술주 강세가 두드러진다. 전기·전자가 4.96...",
+          "source_url": "https://www.ppss.kr/news/articleView.html?idxno=309118",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, AI 가상고객과 상담 훈련…컨설턴트 실전 역량 높인다",
+          "publisher": "the-today.com",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "삼성생명이 AI 디지털 휴먼과 실제 상담처럼 대화하며 고객 대응을 연습할 수 있는 훈련 서비스를 선보인다. 모바일 반복 학습과 개인별 피드백을 통해 컨설턴트의 전문성과 고객 상담 품질을 함께 높인다는 구상이다....",
+          "source_url": "https://www.the-today.com/news/articleView.html?idxno=89589",
+          "relevance": "high"
+        },
+        {
+          "headline": "'아스트라 훈풍'에 반도체주 날았다…코스피 6900선 재탈환",
+          "publisher": "kado.net",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "SK스퀘어는 6.44%, 삼성생명 4.71%, 삼성물산 3.81% 상승 중이다. 시가총액 상위주 가운데 삼성전기는 2.50%, LG에너지솔루션은 0.42%, 현대차는 1.83% 오르고 있다. 반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60...",
+          "source_url": "https://www.kado.net/news/articleView.html?idxno=2070949",
+          "relevance": "high"
+        },
+        {
+          "headline": "'불기둥' 삼성전자·SK하이닉스⋯코스피 6900선 복귀",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "삼성전기(1.78%), LG에너지솔루션(0.84%), 현대차(2.35%), 삼성바이오로직스(0.28%), KB금융(1.79%), 삼성생명(4.20%) 등 시가총액 상위 종목들도 일제히 상승하고 있다. 코스닥 지수는 전 거래일 대비 11.60(1.43%) 오른 825....",
+          "source_url": "http://www.inews24.com/view/2002535",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 3%대 급등해 6900선 탈환…외인·기관 '쌍끌이 매수'",
+          "publisher": "slist.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%) 등도 올랐다. 업종별로는 전기·전자가 4.96% 급등했고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등이 강세를 보였다. 반면 음식료·담배(-1.99%), 섬유·의류(-1.46%), 부동산...",
+          "source_url": "https://www.slist.kr/news/articleView.html?idxno=764200",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 훈풍에 3%대 급등 6900선 돌파…삼전3%·닉스5%↑",
+          "publisher": "beyondpost.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "삼성전자(3.91%), SK하이닉스(5.65%), 삼성전자우(2.77%), SK스퀘어(6.24%), 삼성전기(1.64%), LG에너지솔루션(0.70%), 현대차(2.61%), 삼성바이오로직스(0.35%), 삼성생명(3.87%), KB금융(1.69%) 전부 상승 중이다. 키움증권 한지영...",
+          "source_url": "http://www.beyondpost.co.kr/view.php?ud=202609070943067703be44c0aacd_30",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 'AI롤플레잉' 출시…AI 가상 고객과 상담 연습한다",
+          "publisher": "cstimes.com",
+          "published_at": "2026-09-07T00:44:00Z",
+          "summary": "컨슈머타임스=김예령 기자 | 삼성생명이 인공지능(AI) 디지털 휴먼을 가상 고객으로 활용해 컨설턴트가 실제 상담과 유사한 환경에서 반복 훈련할 수 있는 서비스를 선보인다. 7일 삼성생명에 따르면 이달 중순...",
+          "source_url": "https://www.cstimes.com/news/articleView.html?idxno=719585",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 삼전닉스 ‘쑥’…코스피 6900선 회복 [시황]",
+          "publisher": "dailian.co.kr",
+          "published_at": "2026-09-07T00:42:00Z",
+          "summary": "이 외에도 SK스퀘어(6.34%)·삼성전기(1.93%)·LG에너지솔루션(0.70%)·현대차(2.35%)·삼성바이오로직스(0.21%)·KB금융(1.69%)·삼성생명(4.03%) 등이 오르고 있다. 같은 시간 코스닥 지수는 전 거래일보다 13.41포인트(1.65...",
+          "source_url": "https://www.dailian.co.kr/news/view/1687085/?sc=Naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_9월 7일",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융, 한화에어로스페이스",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070004",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"역시 믿을 건 반도체?\" 코스피 3% 급등...美금리인상 우려에도 쑥",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "두 종목과 업무·지분으로 엮인 SK스퀘어는 6%대, 삼성물산과 삼성생명은 4%대 오르는 중이다. 코스닥은 같은 시각 전 거래일 대비 11.42포인트(1.40%) 상승한 824.92를 나타내고 있다. 코스닥은 이날 9.41포인트(1.16...",
+          "source_url": "https://www.mt.co.kr/stock/2026/09/07/2026090709282975262",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 코스피 3%대 급등…6900선 안팎 등락[개장시황]",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "SK스퀘어(402340)(6.63%), SK하이닉스(000660)(6.13%), 삼성물산(028260)(4.77%), 삼성전자(005930)(4.70%), 삼성생명(032830)(4.54%), 삼성전기(009150)(3.21%), 삼성전자우(005935)(3.03%), 현대차(005380)(2.35%), LG에너지솔루션(373220)(0.56...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6281791",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등…코스피 6900선 재탈환",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T00:37:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0....",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063013",
+          "relevance": "high"
+        },
+        {
+          "headline": "클레온, 삼성생명과 AI 롤플레이 개발…금융 상담 훈련에 적용",
+          "publisher": "epnc.co.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "클레온은 삼성생명과 공동 개발한 'AI 롤플레이 솔루션'을 오는 9일부터 10일까지 서울 동대문디자인플라자(DDP)에서 열리는 '트라이 에브리싱(Try Everything) 2026'에서 공개한다고 밝혔다. AI 롤플레이 솔루션은 AI가 고객...",
+          "source_url": "https://www.epnc.co.kr/news/articleView.html?idxno=406593",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6900선 돌파…외인·기관 매수에 대형주 동반 상승",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "삼성전기는 3.28%, LG에너지솔루션은 0.7%, 현대차는 2.48%, 삼성바이오로직스는 0.41%, KB금융은 1.45%, 삼성생명은 3.7% 올랐다. 코스닥도 상승세를 나타냈다. 같은 시각 코스닥지수는 전 거래일 대비 9.57p(1.18...",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145568",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_8월 31일_오차율",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "빅터뉴스 빅터뉴스 기자 ▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융...",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070002",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6900선 재탈환…외인·기관 반도체 사자 행진",
+          "publisher": "kmib.co.kr",
+          "published_at": "2026-09-07T00:35:00Z",
+          "summary": "시가총액 투톱인 삼성전자(4.31%)와 SK하이닉스(5.95%)가 가파르게 상승했고, 지주·금융사인 SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%)도 동반 랠리를 펼쳤다. 현대차(1.83%), 삼성전기(2.50%), LG에너지솔루션...",
+          "source_url": "https://www.kmib.co.kr/article/view.asp?arcid=9000009650&cp=nv",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 'AI 가상고객' 도입…컨설턴트 상담훈련 돕는다",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "삼성생명이 인공지능(AI)을 활용해 컨설턴트의 상담 역량을 높이는 'AI롤플레잉 서비스'를 출시한다고 7일 밝혔다. 'AI롤플레잉 서비스'는 AI 디지털 휴먼이 가상 고객 역할을 맡아 컨설턴트가 실제 고객을 상담하는 것처럼...",
+          "source_url": "https://view.asiae.co.kr/article/2026090709341529927",
+          "relevance": "high"
+        },
+        {
+          "headline": "3% 상승 출발 코스피, 6900선 탈환 목전…삼전닉스도 큰폭 올라",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "삼성전자(4.11%), SK하이닉스(5.77%), SK스퀘어(6.05%), 삼성전기(4.14%), 현대차(1.04%), 삼성바이오로직스(0.41%), KB금융(1.34%), 삼성생명(3.87%), 삼성물산(3.0%) 등 전반적으로 오르고 있다. 코스닥은 전일 대비 7.76포인트...",
+          "source_url": "https://www.mk.co.kr/article/12145772",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3%대 급등...6900선 회복",
+          "publisher": "cstimes.com",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "이 외에도 SK스퀘어(6.34%), 삼성전기(2.36%), 현대차(1.96%), 삼성생명(4.54%), 삼성물산(3.81%) 등 전 종목이 상승했다. 같은 시각 코스닥도 큰 폭으로 올랐다. 코스닥 지수는 전일 대비 11.41포인트(1.40%)  오른 824....",
+          "source_url": "https://www.cstimes.com/news/articleView.html?idxno=719581",
+          "relevance": "high"
+        },
+        {
+          "headline": "[장초반 시황] 코스피 3% 급등 6900선 회복…美 반도체 훈풍에 SK하이닉...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "유가증권시장 시가총액 상위 종목 중에서는 SK스퀘어(6.34%)와 SK하이닉스(5.89%)가 가장 큰 폭으로 올랐고, 삼성생명(4.54%)과 삼성전자(4.50%)도 강세를 나타내고 있다. 이밖에 삼성전자우(3.03%), 삼성전기(2.36...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484428",
+          "relevance": "high"
+        },
+        {
+          "headline": "기후위기에 '자기모순' '인과응보'에 빠진 보험사들 [지금은 기후위기]",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T00:33:00Z",
+          "summary": "환경단체 기후솔루션은 국내 주요 보험사 8개(삼성화재, 현대해상, DB손해보험, KB손해보험, 메리츠화재, 삼성생명, 교보생명, 한화생명)의 탈석탄 정책을 해외 선도 보험사 5개(Generali, AXA, QBE, Aviva, AXIS Capital)의 기준과...",
+          "source_url": "http://www.inews24.com/view/2002531",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승(종합)",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T00:33:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0....",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907031051008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "[보험브리핑] 삼성생명, AI서비스로 상담역량 강화 외",
+          "publisher": "seoulfn.com",
+          "published_at": "2026-09-07T00:33:00Z",
+          "summary": "삼성생명은 인공지능(AI)을 활용해 컨설턴트의 상담 역량을 높이는 'AI 롤플레잉 서비스'를 이달 중순 출시한다고 7일 밝혔다. 'AI 롤플레잉 서비스'는 AI 디지털 휴먼이 가상 고객 역할을 맡아 컨설턴트가 실제 고객을...",
+          "source_url": "https://www.seoulfn.com/news/articleView.html?idxno=637360",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, AI 활용 컨설턴트 상담훈련 서비스 선봬",
+          "publisher": "popcornnews.net",
+          "published_at": "2026-09-07T00:32:00Z",
+          "summary": "삼성생명이 컨설턴트의 상담 역량을 높이기 위해 인공지능(AI)을 활용한 교육 서비스를 선보인다. 7일 삼성생명에 따르면 회사는 이달 중순 'AI롤플레잉 서비스'를 출시한다. 'AI롤플레잉 서비스'는 AI 디지털 휴먼이 가상...",
+          "source_url": "http://www.popcornnews.net/news/articleView.html?idxno=132037",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3%대 상승 출발···삼전닉스 4~5%대 급등",
+          "publisher": "seoulfn.com",
+          "published_at": "2026-09-07T00:32:00Z",
+          "summary": "LG에너지솔루션(0.42%), 현대차(1.83%), 삼성바이오로직스(0.41%), 삼성물산(4.54%), 삼성생명(3.95%), KB금융(1.86%)도 상승 중이다. 한지영 키움증권 연구원은 \"지난주 미국 반도체주가 강세를 보인 점을 고려하면...",
+          "source_url": "https://www.seoulfn.com/news/articleView.html?idxno=637357",
+          "relevance": "high"
+        },
+        {
+          "headline": "클레온-삼성생명, 대화형 상호작용 AI 롤플레이 솔루션 금융 첫 적용",
+          "publisher": "hellot.net",
+          "published_at": "2026-09-07T00:32:00Z",
+          "summary": "사람과 실시간으로 자연스럽게 상호작용하는 AI 기술을 개발하는 클레온(Klleon, 대표 진승혁)이 삼성생명과 공동 개발한 AI 롤플레이 솔루션을 9월 9~10일 서울 동대문디자인플라자(DDP)에서 열리는 글로벌 스타트업...",
+          "source_url": "https://www.hellot.net/news/article.html?no=114803",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, AI가 가상 고객 된다…FC 상담 역량 키우는 'AI 롤플레잉' 출...",
+          "publisher": "paxetv.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "삼성생명은 AI를 활용해 컨설턴트(FC)의 상담 역량을 높이는 'AI 롤플레잉 서비스'를 이달 중순 출시한다고 7일 밝혔습니다. AI 디지털 휴먼이 가상 고객 역할을 맡아 실제 상담과 유사한 상황에서 반복 훈련할 수 있도록...",
+          "source_url": "http://www.paxetv.com/news/articleView.html?idxno=281146",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 호조에 3% 급등…6900선 회복",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "삼성전자우(3.03%), SK스퀘어(6.82%), 삼성전기(2.36%), LG에너지솔루션(0.70%), 현대차(1.96%), 삼성바이오로직스(0.48%), 삼성생명(1.98%), 삼성물산(4.54%) 등 모두 강세를 보이고 있다. 한지영 키움증권 연구원은 \"국내외...",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609070922344137923c501012_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체주 급등에 코스피 6900선 회복…외인·기관 '쌍끌이'",
+          "publisher": "ezyeconomy.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "▲삼성생명은 4.71%, ▲신한지주는 2.36%, ▲한화에어로스페이스는 1.23% 오름세다. 코스닥도 상승세다. 코스닥지수는 전 거래일보다 1.16% 오른 822.91에 출발한 뒤 오전 9시10분 기준 824.00에 거래되고 있다....",
+          "source_url": "https://www.ezyeconomy.com/news/articleView.html?idxno=239410",
+          "relevance": "high"
+        },
+        {
+          "headline": "[EBN 데이터센터] 코스피, 6800선 돌파 상승 출발…외국인·기관 동반 매...",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T00:28:00Z",
+          "summary": "LG에너지솔루션은 0.56%, 현대차는 1.83%, 삼성바이오로직스는 0.35%, 삼성생명은 4.37%, KB금융은 1.98% 상승했다. 반도체와 대형 정보기술 종목 전반의 강세가 지수 전반을 끌어올린 것으로 풀이된다. 시장 전반의...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723188",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명, 컨설턴트 역량강화 위한 'AI롤플레잉 서비스' 출시",
+          "publisher": "daily.hankooki.com",
+          "published_at": "2026-09-07T00:26:00Z",
+          "summary": "사진=삼성생명. 삼성생명이 인공지능(AI)을 활용해 컨설턴트의 상담 역량을 높이는 'AI롤플레잉 서비스'를 9월 중순 출시한다고 7일 밝혔다. 'AI롤플레잉 서비스'는 AI 디지털 휴먼이 가상 고객 역할을 맡아 컨설턴트가...",
+          "source_url": "https://daily.hankooki.com/news/articleView.html?idxno=1403217",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 3.24,
+      "oldest_relevant_at": "2026-09-07T00:26:00Z",
+      "collected_at": "2026-09-07T03:40:26.950573Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003263",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003263"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002696",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002696"
+        },
+        {
+          "report_name": "[기재정정]사업보고서 (2025.12)",
+          "receipt_number": "20260331004244",
+          "published_at": "2026-03-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331004244"
+        }
+      ],
+      "collected_at": "2026-09-07T03:40:26.419837Z",
+      "request_id": "c457cf03-da63-457e-a6d1-8d1358e2bcc5",
+      "source_type": "dart",
+      "stock_code": "032830",
+      "company_name": "삼성생명"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "[기재정정]사업보고서 (2025.12)",
+      "receipt_number": "20260331004244",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "을 바탕으로 견실한 이익 구조를 구축하였으며\n특히, 안정적인 이차익 창출이라는 기본 원칙 아래 자산 포트폴리오 다변화를 통해\n수익성 제고를 꾀하는 한편, M&A기회를 지속 탐색하는 등 신규 투자기회 역시 적극발굴하고 있습니다.\n(5) 풍부한 자본여력 및 리스크관리 역량\n자본 적정성 기준을 초과하는 충분한 지급 여력으로 고객 신뢰를 확보하고 있습니다.또한, 안정적인 리스크 관리 체계를 기반으로 매년 전사 리스크 양의 한도를 설정하고 범위 내에서 리스크를 관리하고 있습니다.\n(6) 디지털 경쟁력\n당사는 지난 수 년간 회사 전 영역에 걸쳐 디지털혁신을 추진해 왔습니다. AI 등 최신기술을 접목한 지원시스템을 개발하여 영업편의성을 제고하고, 업무 자동화의 범위를 넓히는 등 일하는 방식을 획기적으로 변화시키고 있습니다.\n또한, 데이터를 기반으로 보험 본업 경쟁력을 강화하고, 삼성금융계열사 통합 플랫폼인 모니모와 생명보험 업계 1위 다이렉트채널을 기반으로 차별화된 디지털 채널 서비스를 제공하고 있습니다.\n라. 회사가 경쟁에서 우위를 점하기 위한 주요 수단\n삼성생명은 보험본업은 물론 자산운용, 신사업, 디지털 등 전 영역에 걸쳐 장기적인\n성장 기반을 마련하기 위해 노력하고 있습니다.\n보험본업은 채널경쟁 심화 속에서도 보장성 신계약 판매 확대를 통해 보험계약마진(CSM)을 극대화하는 한편, 제반 효율 항목을 체계적으로 관리하며 안정적인 손익 기반 마련에 힘쓰고 있습니다. 또한, 차별화된 신상품을 개발하여 보험시장 신규 수요를 창출하고 미래손익 확보에도 주력하고 있습니다.\n자산운용은 ALM 개선 및 보유이원 제고를 추진하고, 자회사(삼성자산운용, SRA)와 긴밀한 협업을 통해 운용이익률을 향상시키고자 노력하고 있습니다. 아울러 자산운용을 중장기 수익 창출의 핵심 축으로 설정하고 글로벌 자산운용사에 대한 투자를 지속적으로 확대해나갈 계획입니다.",
+          "score": 0.506665,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "노후에 대한 관심 증가로 건강보험 시장은 당분간 성장세가 이어질 것으로 전망됩니다. 또한, 시니어 비즈니스, 헬스케어 등 보험 본업과 연계한 신사업 중심으로 새로운 시장이 창출될 것으로 예상되며 이는 신규 수요 발굴의 기회가 될 것으로 보입니다.\n(2) 시장점유율 추이\n국내에서 사업을 영위 중인 생명보험사는 총 22개사로서, 상위3사(당사, 한화, 교보)가 약 51% (25년 3분기 기준) 점유율을 차지하고 있습니다. 이 외에도 신한라이프, 농협, KB 라이프 등 중소형 13개사가 시장의 약 36%를 점유하고 있으며, 나머지 13%는 메트라이프, 라이나 등 외자계 6개사가 차지하고 있습니다.\n(단위: %, 수입보험료 기준)\n구 분 | FY2025 3Q | FY2024 | FY2023\n대형 3사 | 51 | 51 | 52\n중소형 13사 | 37 | 37 | 36\n외자계 6사 | 12 | 12 | 12\n주1) 중소형사는 신한라이프, 농협, KB라이프, 미래에셋, 동양, 흥국, ABL, DB, KDB, IBK연금, 하나, IM 라이프, 교보라이프플래닛\n주2) 외자계는 메트라이프, 라이나, 푸본현대, AIA, BNP 파리바카디프, 처브라이프\n※ 자료출처 : 금융감독원(http://www.fisis.fss.or.kr) 금융통계정보시스템 (2025년 3분기 기준)\n다. 시장 경쟁력을 좌우하는 요인 및 경쟁상의 강점\n생명보험시장에서 생명보험사의 경쟁력을 좌우하는 요인은 다음과 같습니다.\n(1) 보험영업조직\n생명보험업은 대면영업이 중요한 경쟁 요소입니다. 강력한 영업력을 발휘하기위해서는 전국적인 영업조직 구축이 필요합니다. 특히, 영업조직을 확대하기 위해서는 대규모 비용투자가 필요할 뿐더러, 오랜 시간이 소요되므로 이는 모방이 어려운 중요한 경쟁 요소입니다.\n(2) 상품개발력",
+          "score": 0.506422,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "가. 사업부문별 시장여건 및 영업의 개황 (1) 산업의 특성(성장성, 경기변동의 특성, 계절성) 자산운용은 투자대행기관으로, 판매 채널 및 일임 방식으로 모아진 투자자의 자금을 투자대상에 투자하고, 그로부터 발생한 손익을 투자비율에 따라 다시 투자자에게 배분하는 산업입니다. 투자 대상에 따라 증권(주식, 채권, 주식혼합, 채권혼합), 단기금융(MMF), 파생, 부동산, 특별자산 등으로 구분하며, 투자지역에 따라 국내 및 해외형투자 형태에 따라 ETF, 재간접펀드, 사모펀드(PEF) 등으로 별도 구분 합니다. (2) 국내외 시장여건(시장 안정성, 경쟁상황, 시장점유율 추이) ① 국내시장 : '25년 서울 오피스 거래규모는 리츠 투자 활동 증가 등에 따라 전년 대비 약 63% 증가한 19.3조 원을 기록하였습니다. '25년 4분기 서울 오피스 공실률은 6.5%로 중,대형 오피스 공실이 일부 해소되면서 전 분기 대비 0.4%p 하락하였습니다. 다만 '26년 서울 오피스 예정 공급량은 약 26.7만 평으로, '25년 대비 약 27% 증가할 것으로 예상되어 단기적으로는 임대시장에 신규 공급에 따른 영향이 지속될 전망입니다.② 해외시장 : '25년 미국과 유럽 오피스 투자시장은 기관 투자자들의 점진적인 복귀와 유동성 개선 등에 따라 거래규모가 전년 대비 각각 25%, 21% 증가하였습니다. 미국의 경우, '25년 하반기 임차 수요가 회복되며 임대시장이 점진적인 개선 흐름을 보이고 있으나, 지역 및 자산 등급에 따른 양극화는 지속되고 있습니다. 한편, 유럽은 오피스 신규 착공 물량이 감소하는 추세로, 향후 신규 공급에 따른 공실 부담은 점진적으로 완화될 전망입니다.(3) 시장에서 경쟁력을 좌우하는 요인 및 회사의 경쟁상의 강점과 단점 ① 투자본부와 운용본부로 구분되어 업무 전문성 및 효율성 강화② 철저한 리스크 분석 프로세스 및 부서별 Check & Balance를 통한 높은 수준의 리스크 관리③ 회사 내부 리서치센터의 House View에 기반한 포트폴리오 운용전략④",
+          "score": 0.500604,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "[지배회사(삼성생명보험)]\n가. 산업의 특성\n생명보험상품은 피보험자의 생로병사와 관련한 우연한 사고가 발생할 경우 일정한급여 또는 보상을 제공하는 보험을 의미합니다. 생명보험상품은 가입목적에 따라사망보험, 건강보험 등의 보장성보험과 연금보험, 저축보험 등의 저축성보험으로구분됩니다. 또한, 생명보험상품은 일반 금융상품과 달리 짧게는 수년, 길게는종신동안 계약의 효력이 지속되는 특징을 가지고 있습니다.\n생명보험업은 이렇듯 수십년간 지속되는 보험계약을 통해 안정적인 보험료수입을 창출할 수 있는 장기적인 사업이며, 동시에 이러한 계약기간의 특성으로 인해 경기변동및 금융시장의 영향을 많이 받습니다. 또한, 생명보험업은 공적보험을 보완, 보충하는 사회안전망 역할을 할 뿐만 아니라 대규모 자산을 운용하는 대형 기관투자자로서의 공공재적 역할도 겸하고 있습니다.\n나. 국내외 시장여건 및 경쟁상황\n(1) 국내외 시장여건\n글로벌 경제의 변동성 심화로 인해 국내 경제를 둘러싼 불확실성이 더욱 확대될 것으로 예상되며 새로운 회계제도(IFRS17)와 신지급여력제도(K-ICS)의 본격적인 시행은보험사들에게 성장성과 안정성을 동시에 확보할 것을 요구하고 있습니다. 그 결과, 차별적인 자본력과 수익성에 강점을 지닌 보험사들이 경쟁우위 확보에 유리할 것으로 보이며 향후 경쟁 양상도 단기 성과 위주의 양적 경쟁에서 차별화된 상품 및 고객 서비스 제공 등 질적 경쟁 중심으로 변화될 것으로 예상됩니다.\n한편, 저출생 및 초고령화로 대표되는 급격한 인구구조 변화로 인해 기존의 종신보험 시장은 향후 어려움이 예상되는 반면, 건강한 삶과 노후에 대한 관심 증가로 건강보험 시장은 당분간 성장세가 이어질 것으로 전망됩니다. 또한, 시니어 비즈니스, 헬스케어 등 보험 본업과 연계한 신사업 중심으로 새로운 시장이 창출될 것으로 예상되며 이는 신규 수요 발굴의 기회가 될 것으로 보입니다.\n(2) 시장점유율 추이",
+          "score": 0.492616,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "건강보장, 은퇴소득, 변액상품 등 고객의 다양한 니즈에 대응할 수 있는 다각화된상품구성과 더불어, 광범위한 데이터(보험계약정보, 지급정보 등)의 축적 및 분석을기반으로 한 경쟁력있는 상품을 적시에 개발하는 능력이 필요합니다.\n(3) 자산운용 및 리스크관리\n생명보험은 수십 년간 지속되는 장기적인 사업으로서, 사업을 안정적으로 지속할 수있는 재무안정성이 매우 중요합니다. 특히 금융시장의 미래 예측이 어려워지는 상황에서 재무건전성을 강화하기 위해서는 높은 수준의 리스크 관리 역량과 고도화된 자산운용 전략이 필수적입니다.\n삼성생명의 강점은 다음과 같습니다.\n(1) 우수한 브랜드 인지도\n압도적인 브랜드파워로 고객들로부터 신뢰를 받고 있습니다. 이러한 브랜드파워는 신규 고객을 유입하고, 고객 충성도를 제고하여 궁극적으로 경쟁력을 강화하는 주요\n원천이며 중소형사가 모방하기 어려운 요소 중 하나입니다.\n(2) 업계 최고의 채널운영 역량\n업계 최고 수준의 전속 설계사 조직을 기반으로 회사의 채널 운영 전략과 연계한 보험사업 운영이 가능합니다. 또한, 방카슈랑스, GA등 채널별 시장 경쟁력을 강화하기위해 타사와 차별화된 맞춤 전략을 전개하고 있습니다.\n(3) 선제적 상품개발 역량 확보\n당사는 업계에서 가장 많은 계리 전문 인력을 확보하고 있으며, 이를 바탕으로 다양한 고객 니즈에 부응하는 상품 라인업을 구축하기 위해 노력한 결과, 2024년 보험업계의 특허권 개념인 배타적 사용권을 업계 최다인 8건을 획득하는 등 차별화된 상품경쟁력을 확보하고 있습니다.\n(4) 전략적 자산운용\n당사는 업계 최고 수준의 재무건전성을 바탕으로 견실한 이익 구조를 구축하였으며\n특히, 안정적인 이차익 창출이라는 기본 원칙 아래 자산 포트폴리오 다변화를 통해\n수익성 제고를 꾀하는 한편, M&A기회를 지속 탐색하는 등 신규 투자기회 역시 적극발굴하고 있습니다.\n(5) 풍부한 자본여력 및 리스크관리 역량",
+          "score": 0.489761,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331004244",
+      "collected_at": "2026-09-07T03:40:26.683608Z",
+      "request_id": "39125826-8928-4819-8adb-c21d26719e36",
+      "source_type": "dart",
+      "stock_code": "032830",
+      "company_name": "삼성생명"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "삼성생명",
+      "stock_code": "032830",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:40:26.341022+00:00",
+        "to": "2026-09-07T03:40:26.341022+00:00"
+      },
+      "sample_size": 51,
+      "activity": {
+        "posts_7d": 59,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 155.75,
+        "ratio": 0.38,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 23,
+        "neutral_count": 10,
+        "negative_count": 18
+      },
+      "top_topics": {
+        "expectations": [
+          "삼성전자 배당 수취 확대",
+          "금리 상승에 따른 운용 수익 개선",
+          "목표주가 상향에 따른 재평가",
+          "보험업종 강세 수혜"
+        ],
+        "concerns": [
+          "배당 호재의 주가 반영 부족",
+          "자사주 소각과 주주환원 지연",
+          "금리 인상에 따른 보험주 부담",
+          "외국인 프로그램 매도",
+          "주가 하락과 회복 부진"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "삼성전자 특별배당으로 큰 수혜를 받을 것으로 기대한다.",
+          "posted_at": "2026-09-04T20:50:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "외국계 증권사의 높은 목표가를 근거로 주가 상승을 기대한다.",
+          "posted_at": "2026-09-05T05:54:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "금리 상승이 채권 운용 수익에 유리할 것으로 기대한다.",
+          "posted_at": "2026-09-01T11:40:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "보험업종 강세가 주가 상승으로 이어지길 기대한다.",
+          "posted_at": "2026-09-03T00:47:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "대규모 배당 수취 기대에도 주가가 부진하다는 불만이다.",
+          "posted_at": "2026-09-04T06:23:00+00:00",
+          "sentiment": "negative"
+        }
+      ],
+      "collected_at": "2026-09-07T03:40:26.341022+00:00",
+      "fgi_mean": 52.31,
+      "fgi_latest": {
+        "fgi": 54.33,
+        "label": "중립",
+        "as_of": "2026-09-07T00:00:00+00:00",
+        "post_count": 1,
+        "valence_percentile": 72.26
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "풍문또는보도에대한해명(미확정)              ",
+          "receipt_number": "20260903800096",
+          "published_at": "2026-09-03T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260903800096"
+        },
+        {
+          "report_name": "연결재무제표기준영업(잠정)실적(공정공시)              ",
+          "receipt_number": "20260813800256",
+          "published_at": "2026-08-13T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813800256"
+        }
+      ],
+      "collected_at": "2026-09-07T03:40:26.844299Z",
+      "request_id": "e1ee6395-c107-4304-ab2c-ad1ee7746efc",
+      "source_type": "dart",
+      "stock_code": "032830",
+      "company_name": "삼성생명"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260903800096": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260903800096",
+        "document_type": "disclosure",
+        "content": "삼성생명/풍문 또는 보도에 대한 해명(미확정)/(2026.09.03)풍문 또는 보도에 대한 해명(미확정)\n1. 풍문 또는 보도의 내용 | '삼성화재·생명, 英·美 대형 보험사 인수' 보도 관련\n2. 풍문 또는 보도의 매체 | 한국경제신문\n3. 풍문 또는 보도의 발생일자 | 2026-09-03\n4. 풍문 또는 보도의 내용에 대한 해명내용\n본 공시는 2026년 9월 3일자 한국경제신문이 보도한 '삼성화재·생명, 英·美 대형 보험사 인수' 기사에 대한 해명공시(미확정)입니다. 당사의 미국 보험사 지분 투자 검토 보도와 관련하여, 당사는 신성장 동력 확보를 위해 국내외 다양한 투자처를 검토 중에 있으나, 현재까지 구체적으로 결정된 사항은 없습니다. 이와 관련하여 추후 구체적인 내용이 결정되는 시점 또는 1개월 이내에 재공시하겠습니다. (공시책임자) 이완삼 경영지원실장\n5. 재공시예정일 | 2026-10-02\n※ 관련공시 | -",
+        "content_truncated": false,
+        "total_chars": 464,
+        "summary": "풍문또는보도에대한해명(미확정)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260903800096",
+        "collected_at": "2026-09-07T03:40:27.152422Z",
+        "report_name": "풍문또는보도에대한해명(미확정)              ",
+        "published_at": "2026-09-03T00:00:00Z",
+        "request_id": "a8d89b8c-d90a-4469-884c-7a9d01e9fb9c",
+        "source_type": "dart"
+      }
+    },
+    "20260813800256": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260813800256",
+        "document_type": "disclosure",
+        "content": "삼성생명/연결재무제표기준영업(잠정)실적(공정공시)/(2026.08.13)연결재무제표기준영업(잠정)실적(공정공시)\n실적기간\n당기실적 | 2026-04-01 | ~ | 2026-06-30\n전기실적 | 2026-01-01 | ~ | 2026-03-31\n전년동기실적 | 2025-04-01 | ~ | 2025-06-30\n당기누계실적 | 2026-01-01 | ~ | 2026-06-30\n전년동기누적실적 | 2025-01-01 | ~ | 2025-06-30\n※ 동 정보는 잠정치로서 향후 확정치와는 다를 수 있음.\n1. 연결실적내용 | 단위 : 백만원, %\n구분 | 당기실적 | 전기실적 | 전기대비 | 전년동기실적 | 전년동기대비\n(26.2분기 ) | ( 26.1분기) | 증감율(%) | 흑자적자전환여부 | ( 25.2분기) | 증감율(%) | 흑자적자전환여부\n매출액 | 당해실적 | 18,759,919 | 14,719,366 | 27.5 | - | 10,911,075 | 71.9 | -\n누계실적 | 33,479,285 | - | - | - | 19,320,936 | 73.3 | -\n영업이익 | 당해실적 | 622,617 | 1,357,813 | -54.1 | - | 915,407 | -32.0 | -\n누계실적 | 1,980,430 | - | - | - | 1,669,365 | 18.6 | -\n법인세비용차감전계속사업이익 | 당해실적 | 861,702 | 1,529,384 | -43.7 | - | 1,009,627 | -14.7 | -\n누계실적 | 2,391,086 | - | - | - | 1,852,084 | 29.1 | -\n당기순이익 | 당해실적 | 727,366 | 1,240,307 | -41.4 | - | 793,580 | -8.3 | -\n누계실적 | 1,967,673 | - | - | - | 1,471,076 | 33.8 | -\n지배기업 소유주지분 순이익 | 당해실적 | 689,921 | 1,203,581 | -42.7 | - | 758,890 | -9.1 | -\n누계실적 | 1,893,502 | - | - | - | 1,394,149 | 35.8 | -\n- | - | - | - | - | - | - | -\n2. 정보제공내역 | 정보제공자 | 삼성생명 IR팀 IR파트\n정보제공대상자 | 국내외 투자자 및 언론\n정보제공(예정)일자 | 2026년 8월 13일(목) 홈페이지와 이메일 등을 통해 제공\n정보제공(예정)시간 | -\n행사명(장소) | FY2026 2분기 실적발표회\n3. 연락처 | 관련부서 | IR팀 IR파트\n전화번호 | 02-772-6944\n4. 기타 투자판단과 관련한 중요사항\n- 상기 실적은 한국채택국제회계기준에 따라 작성된 연결기준임 - FY2026 2분기 실적은 외부감사인의 회계검토가 완료되지 않은 상태에서 제공되는 잠정금액이며, 외부감사인의 검토결과 등에 따라 변동될 수 있음 - '매출액'은 포괄손익계산서 상 보험서비스수익과 투자서비스수익의 합 - '당기순이익'은 비지배주주지분 당기순이익 포함\n※ 관련공시 | -",
+        "content_truncated": false,
+        "total_chars": 1486,
+        "summary": "연결재무제표기준영업(잠정)실적(공정공시)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813800256",
+        "collected_at": "2026-09-07T03:40:27.392509Z",
+        "report_name": "연결재무제표기준영업(잠정)실적(공정공시)              ",
+        "published_at": "2026-08-13T00:00:00Z",
+        "request_id": "0d510638-2383-4f4b-ad5a-2ee795c7eb10",
+        "source_type": "dart"
+      }
+    },
+    "20260814003263": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260814003263",
+        "document_type": "disclosure",
+        "content": "(제 71 기 반기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 06월 30일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 08월 14일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 삼성생명보험주식회사\n대 표 이 사 : | 홍원학\n본 점 소 재 지 : | 서울특별시 서초구 서초대로74길 11 (서초동)\n(전 화) 02-1588-3114\n(홈페이지) http://www.samsunglife.com\n작 성 책 임 자 : | (직 책) 경영지원실장 (성 명) 이완삼\n(전 화) 02-2074-2206\n목 차\n[ 대표이사 등의 확인 ]Ⅰ. 회사의 개요Ⅱ. 사업의 내용Ⅲ. 재무에 관한 사항Ⅳ. 이사의 경영진단 및 분석의견(MD&A)Ⅴ. 회계감사인의 감사의견 등Ⅵ. 이사회 등 회사의 기관에 관한 사항Ⅶ. 주주에 관한 사항Ⅷ. 임원 및 직원 등에 관한 사항Ⅸ. 계열회사 등에 관한 사항Ⅹ. 대주주 등과의 거래내용XI. 그 밖에 투자자 보호를 위하여 필요한 사항XⅡ. 상세표[ 전문가의 확인 ]\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | 1 | - | - | 1 | 1\n비상장 | 162 | 18 | 8 | 172 | 7\n합계 | 163 | 18 | 8 | 173 | 8\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n- 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | 삼성SRA일반사모자투자신탁제117호 | 지분 취득에 따른 지배력 획득\n삼성HayfinDL일반사모투자신탁제1호 | 지분 취득에 따른 지배력 획득\n삼성 글로벌 Core AI 목표전환형 증권 투자신탁 제2호 | 지분율 변동으로 인한 지배력 획득\n삼성글로벌6G성장플러스배당증권자투자신탁H | 지분 취득에 따른 지배력 획득\n삼성글로벌6G성장플러스배당증권자투자신탁UH | 지분 취득에 따른 지배력 획득\n삼성글로벌6G성장플러스배당증권모투자신탁 | 지분 취득에 따른 지배력 획득\n삼성금채권혼합증권투자신탁 | 지분 취득에 따른 지배력 획득\n삼성SRA글로벌멀티매니저일반사모부동산모투자신탁제1-1호 | 지분 취득에 따른 지배력 획득\n삼성SRA일반사모모투자신탁제117-1호 | 지분 취득에 따른 지배력 획득\n첼린저제사십차유동화전문유한회사 | 지분 취득에 따른 지배력 획득\nSVIC75호신기술사업투자조합 | 지분 취득에 따른 지배력 획득\n삼성SRA국내PF대출일반사모부동산투자신탁제5호 | 지분 취득에 따른 지배력 획득\n삼성인프라전략일반사모투자신탁제4호 | 지분 취득에 따른 지배력 획득\n삼성KODEX 28-12 회사채(AA-이상)액티브증권상장지수투자신탁 | 지분 취득에 따른 지배력 획득\n삼성액티브 지금은한국에투자 증권투자신탁 | 지분 취득에 따른 지배력 획득\n삼성 코리아EMP 적격TDF 2060 증권자투자신탁 | 지분 취득에 따른 지배력 획득\n삼성 코리아EMP 주식증권모투자신탁 | 지분 취득에 따른 지배력 획득\n삼성 코리아EMP 채권증권모투자신탁 | 지분 취득에 따른 지배력 획득\n연결제외 | 삼성 한국형 TDF 2060 증권투자신탁H | 지분율 변동으로 인한 지배력 상실\n파인더제이차유동화전문유한회사 | 청산으로 인한 지배력 상실\n삼성액티브KoAct 미국나스닥채권혼합50액티브증권상장지수투자신탁 | 지분율 변동으로 인한 지배력 상실\n삼성SRA전문투자형사모부동산투자신탁제63호 | 청산으로 인한 지배력 상실\n삼성금채권혼합증권투자신탁 | 지분율 변동으로 인한 지배력 상실\n삼성알아서투자해주는EMP목표전환형증권투자신탁 제3호 | 지분 환매로 인한 지배력 상실\n삼성 글로벌 Core AI 목표전환형 증권 투자신탁 제2호 | 지분 환매로 인한 지배력 상실\n삼성ETF를담은TDF증권투자신탁 | 지분 환매로 인한 지배력 상실\n나. 회사의 법적ㆍ상업적 명칭 - 당사의 명칭은 삼성생명보험주식회사이며, 영문으로는 Samsung Life Insurance Co., Ltd. 입니다. 다. 설립일자 - 1957년 4월 24일 라. 본사의 주소, 전화번호, 홈페이지 주소 - 주 소 : 06620 서울특별시 서초구 서초대로74길 11 (서초동) 삼성생명보험주식회사 - 전화번호 : 대표전화 02-1588-3114 - 홈페이지 : www.samsunglife.com 마. 회사사업 영위의 근거가 되는 법률 - 보험업법 바. 중소기업 등 해당 여부\n중소기업 해당 여부 | 미해당\n벤처기업 해당 여부 | 미해당\n중견기업 해당 여부 | 미해당\n사. 주요 사업의 내용 및 향후 추진하려는 신규사업에 관한 간략한 설명 삼성생명은 1957년 4월 24일 설립된 이래 사망, 질병, 장애, 사고 및 기타 사건에대하여 광범위한 보호를 제공하는 보장성 보험상품과 노후대비를 위한 연금/저축성보험상품 등 개인의 생애 단계별 니즈에 부합하는 상품과 서비스를 제공하는 것을\n주요 사업으로 하고 있습니다. 또한, 자산운용업을 핵심사업으로 육성하기 위해글로벌 자산운용사에 대한 지분투자를 확대하고 있으며,\n이미 진출한 태국, 중국 외에도 새로운 해외시장의 성장기회를 모색하고 있습니다.\n당사의 보험상품별 판매비중은 다음과 같습니다.FY2026 반기말 기준으로 생존보험 1조 8,722억원(14.14%), 사망보험 7조 3,445억원(55.45%), 생사혼합보험 1,319억원(1.00%), 단체보험 2,134억원(1.61%) 및\n퇴직연금 등 3조 6,820억원(27.80%)의 실적을 거두었습니다.\n삼성생명은 각각의 보험상품과 관련된 제반 서비스를 제공하는 한편, 고객으로부터 수령한 보험료를 기반으로 향후 안정적인 이자 및 보험금 지급을 위해 고도화된 자산운용전략을 추진하고 있습니다.\n당사는 인구구조 변화 및 디지털기술 발전에 따라 변화하는 고객 니즈를충족시킬 수 있도록 보험 상품과 서비스의 다양성을 지속적으로 확대해 나갈 것이며,자산운용업 비중을 확대하고 보험 본업과 연계된 신사업을 적극 추진하는 등 수익\n다각화를 위한 노력을 지속하고 있습니다.\n구 분 | 대 상 회 사 | 내 용\n지배회사 | 삼",
+        "content_truncated": true,
+        "total_chars": 737565,
+        "summary": "반기보고서 (2026.06) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003263",
+        "collected_at": "2026-09-07T03:40:42.180736Z",
+        "report_name": "반기보고서 (2026.06)",
+        "published_at": "2026-08-14T00:00:00Z",
+        "request_id": "d9b400ea-3325-4e78-92fd-6cfa5cb56605",
+        "source_type": "dart"
+      }
+    },
+    "20260515002696": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260515002696",
+        "document_type": "disclosure",
+        "content": "(제 71 기 1분기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 03월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 5월 15일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 삼성생명보험주식회사\n대 표 이 사 : | 홍원학\n본 점 소 재 지 : | 서울특별시 서초구 서초대로74길 11 (서초동)\n(전 화) 02-1588-3114\n(홈페이지) http://www.samsunglife.com\n작 성 책 임 자 : | (직 책) 경영지원실장 (성 명) 이완삼\n(전 화) 02-2074-2206\n목 차\n[ 대표이사 등의 확인 ]Ⅰ. 회사의 개요Ⅱ. 사업의 내용Ⅲ. 재무에 관한 사항Ⅳ. 이사의 경영진단 및 분석의견(MD&A)Ⅴ. 회계감사인의 감사의견 등Ⅵ. 이사회 등 회사의 기관에 관한 사항Ⅶ. 주주에 관한 사항Ⅷ. 임원 및 직원 등에 관한 사항Ⅸ. 계열회사 등에 관한 사항Ⅹ. 대주주 등과의 거래내용XI. 그 밖에 투자자 보호를 위하여 필요한 사항XⅡ. 상세표[ 전문가의 확인 ]\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n회사의 개요는 기업공시서식 작성기준(별지 제35호 서식)에 따라 분기보고서에서는 기재하지 않습니다. (반기 및 사업보고서에 기재 예정)\n2. 회사의 연혁\n회사의 연혁은 기업공시서식 작성기준(별지 제35호 서식)에 따라 분기보고서에서는 기재하지 않습니다. (반기 및 사업보고서에 기재 예정)\n3. 자본금 변동사항\n자본금 변동사항은 기업공시서식 작성기준(별지 제35호 서식)에 따라 분기보고서에서는 기재하지 않습니다. (반기 및 사업보고서에 기재 예정)\n4. 주식의 총수 등\n주식의 총수 등은 기업공시서식 작성기준(별지 제35호 서식)에 따라 분기보고서에서는 기재하지 않습니다. (반기 및 사업보고서에 기재 예정)\n5. 정관에 관한 사항\n정관에 관한 사항은 기업공시서식 작성기준(별지 제35호 서식)에 따라 분기보고서에서는 기재하지 않습니다. (반기 및 사업보고서에 기재 예정)\nII. 사업의 내용\n1. 사업의 개요\n[지배회사(삼성생명보험)]\n삼성생명은 1960년대부터 국내 1위의 생명보험회사로 한국에서 가장 큰 삼성그룹 내 대표기업 중 하나입니다. 국내 최고 브랜드 중 하나라는 이점을 바탕으로 법인 고객에게 단체생명보험과 퇴직연금을, 개인 고객에게는 생명보험과 연금보험 등 다양한 상품 및 서비스를 제공하고 있습니다. 당사는 2026년 3월말 현재 2,038만건의 보험계약을 보유하고 있습니다.당사가 판매하는 보험상품은 생존보험, 사망보험, 생사혼합보험, 단체보험 및 퇴직연금 등으로 구성되며, 2026년 3월말 기준으로 수입보험료 규모는 각각 7,815억원(11.65%), 3조 6,401억원(54.25%), 693억원(1.03%), 1,061억원(1.58%), 2조 1,133억원(31.49%) 으로 총 6조 7,103억원의 실적을 거두었습니다.이에 따른 2026년 3월말 누적 기준 준비금 평잔은 264조 8,918억원 입니다.\n당사는 고객으로부터 수령한 보험료에 대한 이자 및 미래 보험금 지급 등을 위하여 자산을 운용하고 그 결과인 운용이익으로 고객을 위한 책임준비금을 관리하고 있습니다.\n특별계정(변액보험, 퇴직연금 실적배당형 등) 자산을 제외한 총자산 298조 6,024억원 중 292조 7,334억원을 운용자산으로 운용하여 자산운용률은 98.03% 이며,\n운용자산은 대출채권 37조 4,396억원(12.79%), 유가증권 250조 1,337억원(85.45%)등으로 구성되어 있으며, 2026년 1~3월 운용자산이익률은 3.41% 입니다.\n또한, 회사가 보유하는 해외채권에 대한 환율 및 이자율 변동 등에 따른 공정가치와 현금흐름의 변동위험을 회피할 목적으로 이자율 스왑과 통화스왑을 이용한 위험회피목적의 파생상품 거래를 하고 있고, 시세차익 및 평가성 부채의 손익 변동성 축소를 위해 매매목적의 파생상품 거래를 하고 있습니다.\n[주요 종속회사] 1. 삼성카드\n삼성카드는 1983년 3월 24일에 설립되어 1988년 5월 24일자로 재무부로부터신용카드업의 인가를 받았으며, 당분기말 현재 약 1,367만명의 신용카드회원,약 308만개의 가맹점 및 12개의 영업ㆍ채권사업단을 기반으로 카드사업 부문과할부리스사업 부문 및 기타 부문의 사업을 영위하고 있습니다.\n각 사업 부문별 주요 취급업무는 다음과 같습니다.\n영업부문 | 취급업무 | 주요 내용\n카드사업 부문 | 개인신판 | 개인고객을 대상으로 한 할부 및 일시불 신용제공 서비스\n법인신판 | 법인고객을 대상으로 한 신용제공 서비스\n카드대출 | 단기카드대출, 장기카드대출 등 신용카드회원에 대한 장ㆍ단기 자금대여 서비스\n할부리스사업 부문 | 할부사업 | 전자, 내구재, 신차 및 중고차에 대한 할부제공 서비스\n리스사업 | 설비, 오토, 플릿리스 및 렌트제공 서비스\n일반대출 | 고객을 대상으로 한 일반 자금대여 서비스\n팩 토 링 | 기업으로부터 매출채권 등을 매입하고 매입대금을 지불하는 상품\n기타 부문 | 생활편의서비스 | 보험대리판매, 온라인 쇼핑몰 및 여행알선 등의 서비스 제공\n카드사업 부문은 개인ㆍ법인 등 신용카드회원이 가맹점으로부터 물품 및 용역을 구매할 수 있도록 신용을 제공하고, 신용카드회원에게 단기카드대출(현금서비스),장기카드대출(카드론) 등 장단기 자금을 대여하고 있습니다. 할부리스사업 부문은 고객이 전자, 내구재, 자동차 등을 할부로 구매할 수 있도록할부금융 서비스와 일반고객을 대상으로 자금대여 서비스를 제공하고 있으며, 자동차 등을 삼성카드가 구입하여 이용자에게 대여하고 이용료를 받는 리스/렌탈 서비스를 제공하고 있습니다.\n기타 부문에서는 보험대리판매, SMS 알림상품, 온라인 쇼핑몰 및 여행알선 등의상품 및 서비스를 제공하고 있습니다.당분기 총 누적취급고는 47조 3,345억원으로, 카드사업 부문은 47조 1,438억원,할부리스사업 부문은 1,907억원을 각각 달성하였으며,상품자산에 대한 당분기 누계 자금운용 평잔은 30조 3,666억원입니다.삼성카드는 회사채 발행 및 일반 차입 등의 방법으로 자금을 조달하고 있는데,당분기 누계 자금조달 평잔은",
+        "content_truncated": true,
+        "total_chars": 520480,
+        "summary": "분기보고서 (2026.03) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002696",
+        "collected_at": "2026-09-07T03:40:54.304993Z",
+        "report_name": "분기보고서 (2026.03)",
+        "published_at": "2026-05-15T00:00:00Z",
+        "request_id": "d849f370-7ae8-49d7-a7a0-444d78b4d4cc",
+        "source_type": "dart"
+      }
+    },
+    "20260331004244": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260903800096",
+    "20260813800256",
+    "20260814003263",
+    "20260515002696",
+    "20260331004244"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:40:26.147926Z"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:26.148292Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:26.148577Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:26.148697Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:26.148828Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:26.148928Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:26.149117Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:26.451017Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:26.488018Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:26.708035Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:26.809529Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:26.905732Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-032830",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:26.987627Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

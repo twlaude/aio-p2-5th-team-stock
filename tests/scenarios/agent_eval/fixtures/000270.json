@@ -1,0 +1,1284 @@
+{
+  "company": {
+    "company_name": "기아",
+    "stock_code": "000270"
+  },
+  "captured_at": "2026-09-07T03:44:02.690191+00:00",
+  "capture_finished_at": "2026-09-07T03:47:54.155374+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "기아",
+      "stock_code": "000270",
+      "current_price": 126500,
+      "change": 0,
+      "change_rate": 0.0,
+      "volume": 366939,
+      "volume_change_rate": 37.55,
+      "avg_volume_20d": 810815,
+      "volume_ratio_20d": 0.79,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 638716,
+      "warnings": [],
+      "as_of": "2026-09-07T03:44:03.170045Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:44:03.170045Z"
+    },
+    "news": {
+      "request_id": "f88edc37-cdf1-47f6-b15f-94cea8574410",
+      "status": "success",
+      "company_name": "기아",
+      "stock_code": "000270",
+      "articles": [
+        {
+          "headline": "현대제철, 미국 첫 전기로 제철소 건설...8조 투자",
+          "publisher": "newsbrite.net",
+          "published_at": "2026-09-07T03:32:00Z",
+          "summary": "이후 현대차, 기아, 포스코 등 주요 투자사들의 지분 출자가 시작돼 HPLS가 출범했다. 미국의 철강 시장은 안정적인 수요와 높은 가격으로 인해 자동차 강판 공급을 통한 고수익성을 확보할 수 있는 시장이다. 이에...",
+          "source_url": "http://www.newsbrite.net/news/articleView.html?idxno=200216",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"팬들에게 받은 사랑, 의미 있는 방식으로 보답\" 네일·올러·카스트로...",
+          "publisher": "sportalkorea.com",
+          "published_at": "2026-09-07T03:15:00Z",
+          "summary": "KIA 타이거즈가 오는 9일부터 11일까지 광주-기아 챔피언스 필드에서 열리는 NC 다이노스, SSG 랜더스와 홈 경기를 팬 대상 사회공헌활동 주간인 'TIGERS CSR 위크'로 지정해 특별한 행사를 진행한다. TIGERS CSR 위크는 지난해...",
+          "source_url": "https://www.sportalkorea.com/news/articleView.html?idxno=2025052909553518924",
+          "relevance": "high"
+        },
+        {
+          "headline": "철강 관세 피해 美 갔는데… 현대제철 발목 잡은 '설비 관세'",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-07T03:14:00Z",
+          "summary": "현대제철과 포스코, 현대차·기아가 총 58억달러를 투입하는 사업으로 현대제철이 지분 50%, 포스코가 20%, 현대차와 기아가 각각 15%를 보유한다. 실제 건설은 인허가 절차를 마치는 대로 올해 4분기 시작해 2029년 양산에...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727450",
+          "relevance": "high"
+        },
+        {
+          "headline": "2026 LCK 최후의 무대, 돌고 돌아 ‘젠한티’…이제 무대는 KSPO돔으로",
+          "publisher": "sports.khan.co.kr",
+          "published_at": "2026-09-07T03:14:00Z",
+          "summary": "그리고 T1이 6일 열린 디플러스 기아(DK)와 PO 3라운드에서 3-1로 승리하며 한화생명과 마지막 1장의 최종 결승전 티켓을 두고 한 판 승부를 벌이게 됐다. 최후의 승자를 가릴 파이널 라운드는 오는 12~13일 이틀간 서울...",
+          "source_url": "https://sports.khan.co.kr/article/202609071212003?pt=nv",
+          "relevance": "high"
+        },
+        {
+          "headline": "두 달 새 13% 내린 환율…원화 강세에 국내 증시 희비 엇갈려",
+          "publisher": "m-i.kr",
+          "published_at": "2026-09-07T03:04:00Z",
+          "summary": "반면 현대차·기아 등이 포함된 KRX 자동차지수는 같은 기간 약 10.2% 하락했다. 원화 가치가 높아지면 해외에서 달러로 벌어들인 매출을 원화로 환산할 때 금액이 줄어드는 만큼 수출기업 실적에 부담이 될 수 있다....",
+          "source_url": "https://www.m-i.kr/news/articleView.html?idxno=1410715",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘1조달러 호황’의 착시… 반도체 171% 뛸 때, 車·철강은 멈췄다[수출...",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T02:57:00Z",
+          "summary": "기아는 같은 기간 역대 최다 판매 실적을 기록했으나 지난해와 비교해 영업이익은 되레 4.9% 감소했다. 김주홍 한국자동차모빌리티산업협회 전무는 “유럽 시장에서 전기차가 소형 중심으로 바뀌며 평균 수출 단가가...",
+          "source_url": "https://www.munhwa.com/article/11615037?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 국내 첫 '무인지게차' 공급…내년부터 기아 공장 투입",
+          "publisher": "ddaily.co.kr",
+          "published_at": "2026-09-07T02:57:00Z",
+          "summary": "현대위아는 자체 개발한 무인지게차를 2027년 5월부터 기아 오토랜드 화성 공장에 최초 공급해 운용할 예정이라고 7일 밝혔다. 국내에서 상·하차 작업까지 전 과정이 완전 무인화된 무인지게차를 제조 현장에 들여오는...",
+          "source_url": "https://www.ddaily.co.kr/page/view/2026090709461256183",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철, 美 제철소 첫삽…\"아틀라스에 적용\"",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-07T02:56:00Z",
+          "summary": "제철소 지분은 현대제철 50%, 현대차와 기아가 각각 15%, 포스코가 나머지 20%를 보유합니다. 이번 기공식에는 정의선 현대차그룹 회장과 장인화 포스코그룹 회장, 김정관 산업통상부 장관의 핵심 인사들이 참석했습니다....",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000333126?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "정의선, 美 8조 ‘쇳물 승부수’… 차 넘어 로봇·로켓까지",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T02:53:00Z",
+          "summary": "현대차그룹은 80%(현대제철 50%, 현대차·기아 각 15%), 포스코는 20%를 지분 투자했다. HPLS가 완공되면 연간 자동차용 180만t, 일반용 90만t 등 총 270만t의 열연·냉연·도금 강판을 생산하게 된다. HPLS는 원료 생산 설비에서...",
+          "source_url": "https://www.munhwa.com/article/11615028?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아 국내 첫 무인지게차… 내년 5월 오토랜드 화성 도입",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T02:53:00Z",
+          "summary": "내년 5월부터 기아 오토랜드 화성에 최초로 도입해 운용될 예정이다. 무인지게차에는 현대위아의 자율주행 물류로봇 기술이 총집약됐다. 비전 센서가 탑재돼 팔레트(화물 운반대)의 위치를 정확히 인식할 수 있다. 또...",
+          "source_url": "https://www.munhwa.com/article/11615029?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "젠지, LCK 8회 연속 결승 '대기록'…한화생명·T1은 마지막 티켓 놓고 격...",
+          "publisher": "dailian.co.kr",
+          "published_at": "2026-09-07T02:49:00Z",
+          "summary": "T1은 디플러스 기아를 제압하며 결승 진출전에 합류했고, 한화생명과 마지막 한 장의 결승 티켓을 놓고... 1라운드에서 디플러스 기아를 완파하고 올라온 KT를 상대로 한 세트도 내주지 않고 3대0으로 승리하며...",
+          "source_url": "https://www.dailian.co.kr/news/view/1687254/?sc=Naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차·포스코, 美 8조원 철강사업 본격화…현대제철 14.6억달러 출자",
+          "publisher": "thetracker.co.kr",
+          "published_at": "2026-09-07T02:46:00Z",
+          "summary": "현대제철이 전체 지분의 절반을 보유하는 최대주주로 사업을 이끌고 포스코와 현대차·기아가 나머지 지분을 나눠 갖는 구조다. 현대차·기아의 미국 생산에 필요한 자동차강판을 현지에서 조달하는 동시에...",
+          "source_url": "https://thetracker.co.kr/View.aspx?No=4215269",
+          "relevance": "high"
+        },
+        {
+          "headline": "[LCK] T1 , DK 기아꺾고 월드 챔피언십 3시드 확보",
+          "publisher": "tgdaily.co.kr",
+          "published_at": "2026-09-07T02:44:00Z",
+          "summary": "T1이 디플러스 기아(DK)를 3대 1로 잡아내며 'LCK 결승 주간'이 진행되는 KSPO 돔으로 향했다. 지난 6일 치지직 롤파크에서 열린 '2026 LCK 플레이오프 패자조 3라운드'에서 T1은  치열한 접전 끝에 DK를 돌려 세우며 '리그 오브...",
+          "source_url": "https://www.tgdaily.co.kr/news/articleView.html?idxno=406795",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 관세 뚫으려 손잡은 현대제철-포스코, 루이지애나 ‘K-철강 동맹’ 셈...",
+          "publisher": "mydaily.co.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "지분은 현대제철 50%, 현대차 15%, 기아 15%, 포스코 20%로 구성됐다. 현대차그룹이 전체 지분의 80%를 보유해... 현대차·기아라는 검증된 캡티브 수요처를 확보하고 미국의 고율 관세를 우회할 수 있는 실익을 챙겼다....",
+          "source_url": "https://www.mydaily.co.kr/page/view/2026090711004760222",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 국내 최초 '완전 무인지게차' 띄운다…내년 기아 화성공장 투...",
+          "publisher": "widedaily.com",
+          "published_at": "2026-09-07T02:40:00Z",
+          "summary": "이 최첨단 장비는 내년 5월부터 기아 오토랜드 화성 현장에 본격적으로 투입돼 물류 혁신을 이끌 예정이다. 이번에 공개된 무인지게차는 라이다(LiDAR)와 비전 센서, 안전 스캐너 등 첨단 장비를 두루 탑재해 복잡한 공장...",
+          "source_url": "https://www.widedaily.com/news/articleView.html?idxno=300701",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 무인지게차 공급 나선다…‘H-Motion’ 라인업 확대",
+          "publisher": "kukinews.com",
+          "published_at": "2026-09-07T02:40:00Z",
+          "summary": "해당 무인지게차는 내년 5월부터 기아 오토랜드 화성에 처음 적용될 예정이다. 현대위아에 따르면 완전 무인 방식으로 상·하역 작업이 가능한 무인지게차를 공급하는 것은 국내 최초다. 이번에 개발한 무인지게차는...",
+          "source_url": "https://www.kukinews.com/article/view/kuk202609070064",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 무인지게차 공급…'물류 로봇' 라인업 구축",
+          "publisher": "irobotnews.com",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "이 무인지게차는 내년 5월부터 기아 오토랜드 화성에 최초로 적용돼 운용될 예정이다. 완전 무인으로 상·하역이 가능한 무인지게차 공급에 성공한 것은 국내에서 현대위아가 처음이다. 현대위아의 무인지게차는...",
+          "source_url": "https://www.irobotnews.com/news/articleView.html?idxno=48341",
+          "relevance": "high"
+        },
+        {
+          "headline": "추미애의 재정 비상 선언, 정치 벗기고 숫자만 보니",
+          "publisher": "vop.co.kr",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "삼성전자 평택화성기흥 반도체 공장과 SK하이닉스 이천 반도체 공장을 비롯해 LG디스플레이(파주), 기아(화성광명), 현대모비스(평택화성) 등 주요 기업 공장이 분포해 있지만, 이들 기업이 벌어들인 수익에 부과되는...",
+          "source_url": "https://vop.co.kr/A00001696562.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간 LCK] 젠지, 8연속 리그 결승전 진출 '대기록'",
+          "publisher": "khgames.co.kr",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "T1은 디플러스 기아를 제압하고 결승 진출전으로 향했다. 젠지가 한화생명e스포츠를 꺾고 8회 연속 LCK... T1은 6일 열린 하위조 3라운드에서 디플러스 기아를 세트 스코어 3대1로 꺾고 결승 진출전 진출을 확정했다....",
+          "source_url": "https://www.khgames.co.kr/news/articleView.html?idxno=308110",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 국내 최초 '완전 무인' 지게차 제조 현장 공급… 물류 자동화...",
+          "publisher": "mtnews.net",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "현대위아는 국내 최초로 완전 무인 상·하역이 가능한 무인지게차 공급에 성공했으며, 해당 장비는 내년 5월 기아 오토랜드 화성에 최초 도입되어 운용될 예정이라고 7일 밝혔다. 이번에 공급하는 무인지게차는...",
+          "source_url": "https://www.mtnews.net/news/articleView.html?idxno=25872",
+          "relevance": "high"
+        },
+        {
+          "headline": "[LCK PO 2차전] 젠지, 역대 LCK 최다 연속 결승 진출",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "T1은 지난 6일 열린 디플러스 기아와의 하위조 3라운드에서 세트 스코어 3대1로 승리하면서 KSPO돔에서... 한화생명e스포츠에게 리버스 스윕을 당하면서 하위조 3라운드를 치러야 했던 T1은 디플러스 기아와의...",
+          "source_url": "https://www.mk.co.kr/article/12145908",
+          "relevance": "high"
+        },
+        {
+          "headline": "[최창호 변호사의 법조단상] 해외입양 소고",
+          "publisher": "gosiweek.com",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "신원 조작 및 뿌리 찾기(알 권리)의 한계 과거 입양 기관들은 입양 절차를 신속하게 처리하기 위해 아동의 신원 사항을 '기아(버려진 아이)'로 조작하거나 미혼모의 기록을 삭제·변조하는 행위를 자행하기도 하였다. 이로...",
+          "source_url": "https://www.gosiweek.com/article/1065579314960589",
+          "relevance": "high"
+        },
+        {
+          "headline": "KIA 흥행 돌풍을 분석하던 관계자 입에서 의외의 이름이 튀어 나왔다, 그...",
+          "publisher": "mhnse.com",
+          "published_at": "2026-09-07T02:23:00Z",
+          "summary": "KIA는 4일부터 6일까지 광주-기아 챔피언스필드에서 열린 KT 위즈와 3연전을 모두 만원 관중으로 채웠다. 이로써 올 시즌 홈경기 매진은 32차례까지 늘어났다. 종전 구단 한 시즌 최다 기록이었던 2024년의 30회를 이미...",
+          "source_url": "https://mhnse.com/news/articleView.html?idxno=1528849",
+          "relevance": "high"
+        },
+        {
+          "headline": "관세장벽에 美서 손잡은 포스코·현대제철…韓 제조업 '공동생산' 시대",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T02:23:00Z",
+          "summary": "현대제철이 지분 50%, 포스코가 20%, 현대차와 기아가 각각 15%를 보유한다. ◆ 50% 관세가 바꾼 경쟁의 문법... 현대차·기아가 각각 15%씩 직접 출자해 수요 기반을 제공하고, 현대제철과 포스코가 고급 자동차강판 생산...",
+          "source_url": "https://www.newspim.com/news/view/20260907000523",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 완전 무인 상·하역 지게차 국내 첫 공급",
+          "publisher": "cnbnews.com",
+          "published_at": "2026-09-07T02:22:00Z",
+          "summary": "이 무인지게차는 내년 5월부터 기아 오토랜드 화성에 처음 적용돼 운용될 예정이다. 완전 무인으로 상·하역이 가능한 무인지게차 공급에 성공한 것은 현대위아가 국내에서 처음이다. 현대위아의 무인지게차는...",
+          "source_url": "https://www.cnbnews.com/news/articleView.html?idxno=1014623",
+          "relevance": "high"
+        },
+        {
+          "headline": "경상국립대, 진주 창업기업 투자·성장 지원 앞장",
+          "publisher": "daily.hankooki.com",
+          "published_at": "2026-09-07T02:22:00Z",
+          "summary": "㈜라이브워크는 사업단 지원을 통해 개발한 기술을 바탕으로 현대차·기아 1차 협력사에 선정됐으며, '쇼미더IR 레벨업' 프로그램을 통해 투자 협약사 및 대내외 협력 프로그램과의 연계 기회도 확보했다. ㈜이노보드는...",
+          "source_url": "https://daily.hankooki.com/news/articleView.html?idxno=1403239",
+          "relevance": "high"
+        },
+        {
+          "headline": "[LCK이모저모] 젠지, 한화생명 꺾고 8회 연속 결승행...역대 최다 기록",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T02:22:00Z",
+          "summary": "T1은 디플러스 기아를 꺾고 한화생명e스포츠와 마지막 결승 티켓을 놓고 맞붙게 됐다. 라이엇 게임즈는... KT는 1라운드에서 디플러스 기아를 완파한 기세를 이어가려 했지만 젠지는 상대의 공세를 노련하게 받아치며...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=546023",
+          "relevance": "high"
+        },
+        {
+          "headline": "'최연소 무산의 아픔?' 김도영의 방망이는 이제부터 진짜다",
+          "publisher": "nocutnews.co.kr",
+          "published_at": "2026-09-07T02:16:00Z",
+          "summary": "김도영은 지난 6일 광주-기아 챔피언스필드에서 열린 2026 신한 쏠 KBO리그 KT 위즈와의 홈경기에 3번타자 3루수로 선발 출전했다. 이날 김도영은 5타석 4타수 4안타 3득점 1볼넷으로 맹활약했으나, 기대를 모았던 시즌...",
+          "source_url": "https://www.nocutnews.co.kr/news/6573968?utm_source=naver&utm_medium=article&utm_campaign=20260907111530",
+          "relevance": "high"
+        },
+        {
+          "headline": "울산-광주, 자동차 제조 AI 전환에 손잡았다",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:13:00Z",
+          "summary": "울산시는 국내 최대 규모인 연간 200만대 생산 규모의 현대자동차 울산공장을, 광주시는 연간 총 72만대 생산 능력의 기아 오토랜드광주와 광주글로벌모터스 등 2개 완성차 공장을 각각 두고 있다. 울산시와 광주시는 7일...",
+          "source_url": "https://biz.heraldcorp.com/article/10864764?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 실제 제조 현장에 무인지게차 공급",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T02:11:00Z",
+          "summary": "현대위아의 무인지게차는 내년 5월부터기아 오토랜드 화성에 처음 적용된다. 완전 무인으로 상하역까지 가능한 무인지게차 공급에 성공한 것은 국내 최초라고 현대위아는 설명했다. 현대위아는 자율주행 물류로봇(AMR)...",
+          "source_url": "https://biz.chosun.com/industry/company/2026/09/07/TQHXOXD3TBHQBDQ37W3KSIIEO4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "[엔터家] 프로야구 ⑳ㅣ 잔여경기 돌입, 불붙은 순위 싸움…삼성 선두",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-07T02:06:00Z",
+          "summary": "6일 광주 기아챔피언스필드에서 열린 kt wiz와의 홈경기에서 김도영은 3번 타자 3루수로 출전해 5차례 타석에 들어섰으나 홈런을 추가하지 못했다. 지난달 26일 롯데 자이언츠전에서 시즌 39호 홈런을 기록한 뒤 22세...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604447",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철 \"美 제철소 연매출 40억달러 전망\"… 탄소 70% 줄인 車강판 '승...",
+          "publisher": "newscj.com",
+          "published_at": "2026-09-07T02:06:00Z",
+          "summary": "현대차·기아 미국 공장에 공급할 물량을 이미 확보한 가운데 저탄소 강판 생산을 경쟁력으로 삼아 연간 40억 달러 수준의 매출을 기대하고 있다. 7일 업계에 따르면 현대제철은 포스코, 현대차·기아와 함께 총 58억...",
+          "source_url": "https://www.newscj.com/news/articleView.html?idxno=3430575",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차·기아 8월 판매 전년比 5.9%↓…중견 3사도 동반 부진 [주간 CAR톡...",
+          "publisher": "joseilbo.com",
+          "published_at": "2026-09-07T02:05:00Z",
+          "summary": "현대차와 기아는 내수 부진 속에서 해외 판매 성과가 엇갈렸고, KGM·GM 한국사업장·르노코리아도 수출... ■ 현대차·기아, 8월 55만5249대 판매…전년比 5.9%↓ 현대차와 기아가 지난 8월 글로벌 시장에서 합산...",
+          "source_url": "http://www.joseilbo.com/news/news_read.php?uid=575195&class=17&grp=",
+          "relevance": "high"
+        },
+        {
+          "headline": "韓·美 정관계 “양국 동맹의 새 상징” 한목소리",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:04:00Z",
+          "summary": "그러면서 “현대제철과 현대자동차, 기아, 포스코가 협력해 루이지애나에서 생산 기반을 만들게 됐다”며 “이곳에서 미국 전역에 공급할 강판이 생산되고 전반적인 자동차 생태계를 강화하게 될 것”이라고 말했다....",
+          "source_url": "https://biz.heraldcorp.com/article/10864729?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "포스코, 현대제철 협력…‘해외 조강 1000만톤’ 확대",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:03:00Z",
+          "summary": "이어 올해 1월에는 ▷현대제철 50% ▷포스코 20% ▷현대차 15% ▷기아 15% 지분출자를 진행했다. 현대제철과 포스코는 각각 당진제철소와 광양제철소에서 대형 전기로를 운영하며 기술력을 확보해 왔다. 업계에서는...",
+          "source_url": "https://biz.heraldcorp.com/article/10864727?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 저탄소 생산시대 연 현대제철…정의선 “지속가능 미래 시작점”",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:03:00Z",
+          "summary": "현대제철이 지분 50%를 보유하고 현대차와 기아가 각각 15%, 포스코가 20% 참여한다. 특히, 제철소 내에서... 김형진 HPLS 최고경영자(CEO)는 “현대차와 기아의 미국 공장에 각각 40만톤씩 총 80만톤 공급이 확정돼 있다”며...",
+          "source_url": "https://biz.heraldcorp.com/article/10864726?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[FSL 서머] 뜨거웠던 여름 ... 우승컵 들어 올린 KT의 '우타'",
+          "publisher": "tgdaily.co.kr",
+          "published_at": "2026-09-07T02:02:00Z",
+          "summary": "한편 개인전인 FSL과 달리, 팀 대결로 펼쳐지는 '2026 FSL 팀배틀 서머'(FTB)는 7일 개막한다. 온ㆍ오프라인을 병행해 진행되는 이번 FTB는 디플러스 기아(DK)와 DN 수퍼스(DNS)의 개막 경기로 시작한다.",
+          "source_url": "https://www.tgdaily.co.kr/news/articleView.html?idxno=406794",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"앞으로 갈 길이 멀어요\" 최연소 40홈런 놓친 KIA 김도영, 그 한마디가 ...",
+          "publisher": "starnewskorea.com",
+          "published_at": "2026-09-07T02:01:00Z",
+          "summary": "김도영은 6일 광주-기아챔피언스필드에서 열린 KT 위즈와 홈 경기에 3번 타자 및 3루수로 선발 출장해 4타수 4안타 1볼넷 3득점으로 맹활약했다. KIA는 KT를 8-3으로 꺾고 3연전을 모두 쓸어 담았다. 홈런은 없었다....",
+          "source_url": "https://www.starnewskorea.com/sports/2026/09/07/2026090613310458709",
+          "relevance": "high"
+        },
+        {
+          "headline": "[사설]美제철소 투자, 국내 산업 기반도 함께 키워야",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "현대제철과 포스코, 현대차·기아가 함께 세우는 미국 루이지애나 전기로 제철소가 첫 삽을 떴다. 58억달러를 투자해 연 270만t의 철강을 생산하는 대형 프로젝트다. 생산부터 수요까지 현지 공급망을 묶었다는 점도 주목할...",
+          "source_url": "https://view.asiae.co.kr/article/2026090709382645920",
+          "relevance": "high"
+        },
+        {
+          "headline": "기계에 '두뇌' 입힌다… 제조업 경쟁력 된 소프트웨어",
+          "publisher": "pressman.kr",
+          "published_at": "2026-09-07T01:58:00Z",
+          "summary": "현대위아는 내년 5월부터 기아 오토랜드 화성에 완전 무인으로 상·하역 작업을 수행하는 무인지게차를 공급한다. 공장 내부 이동에 그치지 않고 화물차에 실린 팔레트를 인식해 물건을 내리거나 다시 싣는 과정까지...",
+          "source_url": "https://www.pressman.kr/news/articleView.html?idxno=103530",
+          "relevance": "high"
+        },
+        {
+          "headline": "[e모션] LCK '롤드컵' 4팀 확정…젠지 8연속 결승, T1은 최종 관문으로",
+          "publisher": "ddaily.co.kr",
+          "published_at": "2026-09-07T01:57:00Z",
+          "summary": "디플러스 기아가 마지막 롤드컵 티켓을 거머쥔 가운데 젠지e스포츠는 LCK 최초 8회 연속 결승 진출이라는... 이번 주 경기를 거치며 T1·젠지·한화생명e스포츠·디플러스 기아가 LCK 대표로 롤드컵 무대에 나서게...",
+          "source_url": "https://www.ddaily.co.kr/page/view/2026090710390785967",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 국내 최초 '완전 무인 상·하역' 지게차 개발…기아 화성에 ...",
+          "publisher": "cstimes.com",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "국내 최초로 완전 무인 상·하역이 가능한 무인지게차 개발에 성공한 현대위아는 내년 5월부터 기아 오토랜드 화성에 이를 최초로 공급할 예정이며, 관련 영상은 공식 유튜브 채널에서 확인할 수 있다. 이번...",
+          "source_url": "https://www.cstimes.com/news/articleView.html?idxno=719590",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철 美제철소 'HPLS' 의미는",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "지분은 현대제철 50%, 포스코 20%, 현대차·기아 각 15%씩 나눠 갖는다. HPLS는 제철소 내에서 원료부터... 현대차·기아는 물론 미국 완성차업계의 자동차강판 공급망에 참여해 만성적 고부가 철강재 공급 부족 해소에...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362714",
+          "relevance": "high"
+        },
+        {
+          "headline": "[롤짤] 돌고 돌아, 올해도 LCK 3강은 '젠지·한화·T1'",
+          "publisher": "gamemeca.com",
+          "published_at": "2026-09-07T01:55:00Z",
+          "summary": "T1은 6일 열린 하위조 3라운드에서 디플러스 기아를 잡으며 가까스로 LCK 결승 진출전에 올랐습니다. 시즌 내내 저점을 보였던 상체가 되살아났고, 이를 토대로 바텀이 뒤처지더라도 피해를 복구할 시간을 벌어준...",
+          "source_url": "https://www.gamemeca.com/mv.php?inflow=naver_s&gid=1780122",
+          "relevance": "high"
+        },
+        {
+          "headline": "정주영 창업회장의 꿈 '수직계열화'…정의선, 美서도 해냈다",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:55:00Z",
+          "summary": "HPLS는 현대제철과 포스코, 현대차, 기아가 공동 투자했다. 지분은 현대제철 50%, 포스코 20%, 현대차와 기아가 각각 15%다. 올 4분기 착공해 2029년부터 자동차용 강판 180만t과 일반용 강판 90만t 등을 생산할 계획이다....",
+          "source_url": "https://view.asiae.co.kr/article/2026090710063818068",
+          "relevance": "high"
+        },
+        {
+          "headline": "젠지, 8회 연속 결승 진출 '대기록' 썼다",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T01:47:00Z",
+          "summary": "KT 롤스터가 1라운드에서 디플러스 기아를 완파하면서 올라온 기세를 앞세워 저항했지만 젠지는 노련하게... T1은 6일 열린 디플러스 기아와의 하위조 3라운드에서 세트 스코어 3대1로 승리하면서 KSPO돔에서 열리는...",
+          "source_url": "http://www.inews24.com/view/2002606",
+          "relevance": "high"
+        },
+        {
+          "headline": "“역시 삼성전자 압도적 1위” 브랜드 가치 ‘135조’…세계 홀린 K기업...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:47:00Z",
+          "summary": "반면 현대차와 기아 등 자동차 기업의 브랜드 가치는 나란히 뒷걸음질쳤다. 6일(현지시간) 영국의... 4위 기아 역시 104억1300만달러로 10.5% 줄었다. 높은 금리와 글로벌 자동차 수요 둔화, 미국의 관세 압박 등이...",
+          "source_url": "https://www.sedaily.com/article/20087889?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 무인지게차 공급…‘H-Motion’ 물류로봇 라인업 확대",
+          "publisher": "kukinews.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "쿠키뉴스=강종효 기자 | 현대위아가 제조 현장에서 화물을 스스로 상·하차할 수 있는 무인지게차를 내년 5월 기아 오토랜드 화성에 공급하며 물류로봇 사업을 확대한다. 무인지게차는 라이다·비전 센서와 안전...",
+          "source_url": "https://www.kukinews.com/article/view/kuk202609070066",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철 \"美 HPLS 연매출 40억달러 기대 … 탄소 70% 저감 강판이 강점...",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T01:38:00Z",
+          "summary": "현대차·기아와 포스코를 통해 전체 생산능력의 절반이 넘는 연간 140만톤의 초기 판매 물량을 확보한 데... 현대차와 기아 미국 공장에 각각 연간 40만톤씩 총 80만톤을 공급하기로 했으며 포스코 역시 60만톤의 판매...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700104.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "제네시스 마그마 레이싱, 론스타 르망 레이스 톱10 올라",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T01:33:00Z",
+          "summary": "(FIA) 월드 인듀어런스 챔피언십(WEC) 5라운드 '론스타 르망'에서 톱10에 진입했다고 7일 밝혔다. 사진은 제네시스 소속 레이싱팀인 '제네시스 마그마 레이싱'. 2026.9.7 [현대자동차·기아 제공. 재판매 및 DB 금지]",
+          "source_url": "https://www.yna.co.kr/view/PYH20260907065100003?input=1196m",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "92%), 기아(0.32%) 등이 상승 중이다. 반면 한화에어로스페이스(-1.90%), 삼성SDI(-0.55%) 등은 하락하고 있다. 업종별로는 전기·전자(4.59%), 기계(3.70%), 의료정밀(2.32%), 금융업(2.05%), 건설업(2.03%), 유통업(1.64%), 보험...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철·포스코 '맞손'...美 생산으로 50% 관세 정면 돌파",
+          "publisher": "opinionnews.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "HPLS는 현대제철이 지분 50%, 현대차와 기아가 각각 15%를 보유하는 등 현대차그룹이 모두 80%를 투자하고... 현대차그룹은 2029년부터 자동차 강판의 현지 생산이 가능해지면 현대차 앨라배마주 공장, 기아 조지아주 공장...",
+          "source_url": "http://www.opinionnews.co.kr/news/articleView.html?idxno=144066",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"내 승리보다 팀 승리가 먼저\"... KIA 양현종이 12시즌 연속 10승 찍고 남...",
+          "publisher": "insight.co.kr",
+          "published_at": "2026-09-07T01:30:00Z",
+          "summary": "지난 5일 광주-기아 챔피언스필드에서 열린 KT전에서 5이닝 3실점으로 팀을 승리로 이끈 KIA의 에이스는 개인 기록보다 팀 승리에 의미를 뒀다. 양현종은 이날 7피안타 1볼넷 2탈삼진을 기록하며 시즌 10승(6패)을...",
+          "source_url": "https://www.insight.co.kr/news/572188",
+          "relevance": "high"
+        },
+        {
+          "headline": "2026 LCK 플레이오프 종합 젠지, 8회 연속 결승 진출 ‘대기록’",
+          "publisher": "gamechosun.co.kr",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "KT 롤스터가 1라운드에서 디플러스 기아를 완파하면서 올라온 기세를 앞세워 저항했지만 젠지는 노련하게... T1은 6일(일) 열린 디플러스 기아와의 하위조 3라운드에서 세트 스코어 3대1로 승리하면서 KSPO돔에서...",
+          "source_url": "https://www.gamechosun.co.kr/webzine/article/view.php?no=224991",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대자동차그룹·포스코그룹, 현대제철 미국 HPLS 전기로 제철소 기공식...",
+          "publisher": "wsobi.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "사장, 기아 송호성 사장, 현대차그룹 성 김 사장, 서강현 사장 등이 참석했다. 정의선 회장은 환영사를... 현대차ㆍ기아는 물론 미국 완성차업계의 자동차강판 공급망에 참여해 만성적 고부가 철강재 공급 부족...",
+          "source_url": "http://www.wsobi.com/news/articleView.html?idxno=317658",
+          "relevance": "high"
+        },
+        {
+          "headline": "페로타임즈 손바닥뉴스 9월7일(월)",
+          "publisher": "ferrotimes.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "속 기아 해외판매 '버팀목'…현대차 KGM 부진 中 STS 생산 高수준…수출 급감, 내수로 무게 이동 SCFI 3500선 재돌파 美 1만 달러 진입…4분기 하락 전환 예고 [메타 Plus+영상] 中 1만 명당 로봇 600대, AI 첨단소재...",
+          "source_url": "http://www.ferrotimes.com/news/articleView.html?idxno=50213",
+          "relevance": "high"
+        },
+        {
+          "headline": "BYD 공세가 드러낸 역설...전기차 시대 더 강해진 현대차의 '홈그라운드...",
+          "publisher": "e-science.co.kr",
+          "published_at": "2026-09-07T01:24:00Z",
+          "summary": "현대차·기아를 비롯해 테슬라, BMW, 메르세데스-벤츠 등은 지원 대상에 남았다. 이에 따라 아토3·돌핀·씰·씨라이언7 등 BYD 전기차는 7월부터 정부 구매보조금을 받을 수 없게 됐다. BYD는 자체 지원금을 투입해 소비자의...",
+          "source_url": "https://www.e-science.co.kr/news/articleView.html?idxno=134812",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘김도영+카스트로 8안타 합작’ KIA, KT 3연전 싹쓸이…삼성은 선두 유...",
+          "publisher": "mhnse.com",
+          "published_at": "2026-09-07T01:18:00Z",
+          "summary": "KIA 타이거즈는 6일 광주 기아챔피언스필드에서 열린 2026 신한 SOL KBO리그 KT 위즈와 홈경기서 8-3 승리를 거두며 주말 3연전을 싹쓸이했다. KIA는 1-1로 맞선 3회 무사 1, 2루 상황 해럴드 카스트로가 적시 2루타를...",
+          "source_url": "https://mhnse.com/news/articleView.html?idxno=1528700",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 완전무인 지게차 상용화…내년 기아 공장 투입",
+          "publisher": "m-i.kr",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "현대위아는 내년 5월부터 기아 오토랜드 화성에 무인지게차를 공급한다고 7일 밝혔다. 해당 무인지게차는 라이다, 비전 센서, 안전 스캐너 등을 탑재해 스스로 공장 안을 움직이며 팔레트에 물건을 싣고, 상·하차 작업을...",
+          "source_url": "https://www.m-i.kr/news/articleView.html?idxno=1410645",
+          "relevance": "high"
+        },
+        {
+          "headline": "車강판 넘어 로봇·우주까지 … 현대차그룹, 美 제철소로 '첨단소재' 영...",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T01:10:00Z",
+          "summary": "현대제철이 미국 루이지애나에 짓는 전기로 제철소를 현대차·기아의 자동차강판 공급기지로 활용하는 데... 이 가운데 약 180만톤은 자동차용 강판으로 생산해 현대차·기아의 미국 생산거점 등에 공급할 예정이다....",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700060.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철 美 루이지애나 제철소, 연매출 40억달러 목표…\"탄소 70% 감축...",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "현대차·기아 미국 공장에 공급할 물량을 이미 확보한 가운데 저탄소 자동차강판을 앞세워 현지 판매처를 넓힌다. 현대제철은 포스코, 현대차·기아와 총 58억달러를 투자해 루이지애나주 어센션 페리시 도널드슨빌에...",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145581",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철, 美 제철소 건설 첫삽···\"270만톤 규모\"",
+          "publisher": "cnbnews.com",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "올해 4분기 착공해 2029년 양산을 목표로 하며, 지분은 현대제철(50%), 포스코(20%), 현대차(15%), 기아(15%)가... 또한 루이지애나 부지는 미시시피강 항만과 철도망을 갖춘 물류 요충지로, 현대차·기아 및 글로벌 완성차...",
+          "source_url": "https://www.cnbnews.com/news/articleView.html?idxno=1014592",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 완전 무인지게차 공급…내년 5월 기아 오토랜드 화성에 첫 적...",
+          "publisher": "etnews.com",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "현대위아는 모바일 로봇 브랜드 '에이치 모션(H-Motion)' 라인업에 무인지게차를 추가하고, 내년 5월부터 기아 오토랜드 화성에 최초 적용해 운용한다고 7일 밝혔다. 국내에서 완전 무인으로 상·하역이 가능한 무인지게차...",
+          "source_url": "https://www.etnews.com/20260907000112",
+          "relevance": "high"
+        },
+        {
+          "headline": "라이다·비전 센서로 팔레트 스스로…현대위아, 기아 공장에 '무인지게...",
+          "publisher": "zdnet.co.kr",
+          "published_at": "2026-09-07T01:01:00Z",
+          "summary": "내년 5월 기아 오토랜드 화성에 처음 적용할 예정이다. 현대위아는 무인지게차를 기아 오토랜드 화성에 공급한다고 7일 밝혔다. 완전 무인 방식으로 상·하역 작업이 가능한 무인지게차를 실제 제조 현장에 공급하는...",
+          "source_url": "https://zdnet.co.kr/view/?no=20260907100041",
+          "relevance": "high"
+        },
+        {
+          "headline": "애플 폴더블 출격…삼성·LG 수혜 본격화",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:01:00Z",
+          "summary": "50% 철강 관세 압박을 정면 돌파하는 현지 공급망 구축으로, 현대차·기아의 원가 경쟁력 강화와 미국... 50% 관세 넘어 美 철강 공급망 완성 핵심 요약: 현대제철·현대차·기아·포스코가 58억 달러(약 8조 원)를...",
+          "source_url": "https://www.sedaily.com/article/20087830?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 국내 최초 완전 무인지게차 공급…'물류 로봇' 라인업 구축",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T00:59:00Z",
+          "summary": "이 무인지게차는 내년 5월부터 기아 오토랜드 화성에 최초로 적용되어 운용될 예정이다. 완전 무인으로 상·하역이 가능한 무인지게차 공급에 성공한 것은 국내에서 현대위아가 처음이다. 무인지게차는 스스로 공장 안을...",
+          "source_url": "http://www.inews24.com/view/2002542",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철, 美 루이지애나에 58억 달러 전기로 제철소 첫 삽",
+          "publisher": "lcnews.co.kr",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "지분은 현대제철이 50%, 포스코 20%, 현대차 15%, 기아 15%를 출자했다. 원료 생산부터 최종 제품까지... 현대차 앨라배마 공장, 기아 조지아 공장, 현대차그룹 메타플랜트 아메리카(HMGMA)를 비롯해 GM 텍사스 공장, 폭스바겐...",
+          "source_url": "https://www.lcnews.co.kr/news/articleView.html?idxno=207825",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 기아 화성공장에 무인지게차 첫 공급",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T00:53:00Z",
+          "summary": "현대위아(011210)는 내년 5월부터 기아(000270) 오토랜드 화성에 무인지게차를 공급한다고 7일 밝혔다. 국내에서 완전 무인지게차를 공장에 투입하는 것은 현대위아가 처음이다. 현대위아의 무인지게차는 스스로 공장 안을...",
+          "source_url": "https://www.sedaily.com/article/20087845?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 4톤급 완전 무인지게차 국내 첫 공급···내년 기아 화성공장...",
+          "publisher": "seoulfn.com",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "기아 생산 공장에 해당 무인지게차를 본격 투입하며 모바일 로봇 시장 공략을 가속화한다는 구상이다. 현대위아는 라이다, 비전 센서, 안전 스캐너 등을 장착해 완전 무인으로 작동하는 지게차를 개발해 내년 5월부터 기아...",
+          "source_url": "https://www.seoulfn.com/news/articleView.html?idxno=637367",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 4t 화물 나르는 무인지게차 개발…내년 기아공장 투입",
+          "publisher": "asiatoday.co.kr",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "해당 무인지게차는 내년 5월부터 기아 오토랜드 화성에 처음 적용된다. 완전 무인 방식으로 화물 운반은 물론 차량에 대한 상·하역까지 수행하는 것이 특징이다.무인지게차는 공장 내에서 정해진 경로를 따라 움직이는...",
+          "source_url": "https://www.asiatoday.co.kr/kn/view.php?key=20260907010002294",
+          "relevance": "high"
+        },
+        {
+          "headline": "“상·하역 무인화 국내 최초”…현대위아, 무인 지게차 공급",
+          "publisher": "knnews.co.kr",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "내년 5월 기아 오토랜드 화성에 적용될 예정으로, 국내에서 완전 무인 상·하역이 가능한 지게차 공급에 성공한 것은 이번이 처음이다. 현대위아는 완전 무인으로 상·하역이 가능한 무인지게차를 공급한다고 7일 밝혔다....",
+          "source_url": "https://www.knnews.co.kr/news/articleView.php?idxno=1550269",
+          "relevance": "high"
+        },
+        {
+          "headline": "원·달러 환율 1350원 전망…현대차·기아 4분기 실적 '원화 강세' 부담",
+          "publisher": "ppss.kr",
+          "published_at": "2026-09-07T00:51:00Z",
+          "summary": "유안타증권은 2023년 1분기부터 2026년 2분기까지 환율 효과로 현대차가 약 3조7000억원, 기아가 약 4조3000억원의 추가 영업이익을 거둔 것으로 추산했다. 향후 긍정 요인으로는 보스턴 다이내믹스(BD) 지분 가치...",
+          "source_url": "https://www.ppss.kr/news/articleView.html?idxno=309098",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 기아 공장 완전 무인지게차 투입…내년 5월",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "5월부터 기아 공장에 실전 투입하기로 했습니다. 국내에서 완전 무인으로 화물 상·하역 작업을 수행하는... 5월부터 기아 오토랜드 화성에 처음 투입할 예정이라고 7일 밝혔습니다. 이 무인지게차는 공장 내부 이동부터...",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000333071?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 내년 기아 화성에 '무인지게차' 공급 … 물류로봇 사업 확대",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "현대위아는 완전 무인으로 화물을 상·하역할 수 있는 무인지게차를 개발해 내년 5월부터 기아 오토랜드 화성에 공급한다고 7일 밝혔다. 현대위아에 따르면 완전 무인 상·하역이 가능한 지게차를 실제 제조 현장에...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700065.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "정의선, 8조원 美 제철소 첫 삽…“아틀라스 넘어 스페이스X까지”",
+          "publisher": "mydaily.co.kr",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "자동차용 180만t과 일반용 90만t을 생산해 현대차와 기아에 각각 40만t, 포스코에 최소 60만t을 공급할 계획이다. HPLS에는 원료 투입부터 완제품 생산까지 한곳에서 처리하는 일관 공정 시스템이 구축된다. 현대제철은...",
+          "source_url": "https://www.mydaily.co.kr/page/view/2026090709165799285",
+          "relevance": "high"
+        },
+        {
+          "headline": "[게임스테이션] '이클립스' PC 사전다운로드·메이플 어택' 브랜드 대상...",
+          "publisher": "newsworks.co.kr",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "T1은 6일 디플러스 기아와의 하위조 3라운드에서 세트 스코어 3대1로 승리하며 결승 진출전 진출권을 따냈다. 젠지는 오는 13일 서울 KSPO돔에서 열리는 결승전에서 우승에 도전한다. ◆'아키에이지S' BI 공개...",
+          "source_url": "https://www.newsworks.co.kr/news/articleView.html?idxno=852819",
+          "relevance": "high"
+        },
+        {
+          "headline": "[KBO] 김도영, '최연소 시즌 40홈런' 불발..KIA 3연승 질주",
+          "publisher": "hg-times.com",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "KIA는 지난 6일 안방인 광주-기아 챔피언스필드에서 벌어진 2026 신한 쏠 KBO리그 KT 위즈와의 경기에서 8-3으로 승리했다. 이날 승리로 KT와의 3연전을 모두 승리로 장식한 4위 KIA는 3위 LG 트윈스를 0.5경기 차로...",
+          "source_url": "https://www.hg-times.com/news/articleView.html?idxno=305048",
+          "relevance": "high"
+        },
+        {
+          "headline": "'최연소 40홈런' 아깝다, 그래도 대단한 KIA 김도영 [프로야구]",
+          "publisher": "sportsq.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "김도영은 6일 광주-기아챔피언스필드에서 열린 2026 신한SOL KBO리그 KT 위즈전에서 4타수 4안타 1볼넷 3득점으로 5타석 모두 출루해 KIA의 8-3 승리를 이끌었다. 완벽한 경기였지만 아쉬움도 남았다. 이승엽이 1999년...",
+          "source_url": "http://www.sportsq.co.kr/news/articleView.html?idxno=498110",
+          "relevance": "high"
+        },
+        {
+          "headline": "[1% 초고수의 개장선택] 로봇주 팔고 반도체주 샀다",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "기아 역시 순매도 8위였다. 최근 증시에서 부각된 휴머노이드 로봇과 피지컬 AI 기대가 자동차·전자·로봇주 전반으로 번지면서 주가가 빠르게 뛰자 초고수들이 일부 차익을 실현하는 움직임으로 해석된다. 특히...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723193",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철, 美 루이지애나 제철소 연매출 40억 달러 목표…2029년 상업 생...",
+          "publisher": "iminju.net",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "김 전무는 \"현대차와 기아 미국 공장에 각각 40만 톤씩 총 80만 톤을 공급하는 것으로 예정돼 있다\"고... HPLS 지분은 현대제철이 50%, 포스코가 20%, 현대차·기아가 각각 15%를 보유한다. 현대제철의 전기로 운영 노하우에...",
+          "source_url": "http://www.iminju.net/news/articleView.html?idxno=169116",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 국내 첫 '완전 무인' 지게차 공급…기아 공장 투입",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T00:45:00Z",
+          "summary": "이 무인지게차는 내년 5월부터 기아 오토랜드 화성에 최초로 적용된다. 완전 무인으로 상·하역이 가능한 무인지게차 공급에 성공한 것은 국내에서 현대위아가 처음이다. 현대위아의 무인지게차는 스스로 공장 안을...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070056&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 스타리아 EV, 유럽 판매 개시…폭스바겐 ID.버즈와 맞붙는다",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-07T00:44:00Z",
+          "summary": "차체 길이는 5253mm로, ID.버즈를 비롯해 기아 PV5보다 크다. 카스쿱스는 스타리아 일렉트릭이 주요 차체... 기아는 스타리아 일렉트릭보다 상용차 성격이 강한 대형 전기 밴 PV7을 준비하고 있으며, 오는 14일 독일...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82261",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철 \"美 제철소는 게임체인저…연매출 40억달러 전망\"",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-07T00:44:00Z",
+          "summary": "현대제철은 HPLS 지분을 나눠 가진 포스코, 현대차·기아와 총 58억달러를 투자해 연 270만t(자동차용 180만t... 그는 \"현대차·기아 미국 공장에 각 40만t씩 공급이 확정돼 있고 포스코도 60만t 판매 계획을 가지고 있다\"며...",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000333074?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, '무인지게차' 첫 공급…기아 화성공장서 내년 5월 가동",
+          "publisher": "newslock.co.kr",
+          "published_at": "2026-09-07T00:44:00Z",
+          "summary": "해당 제품은 내년 5월부터 기아 오토랜드 화성에 처음 적용돼 운용될 예정이다. 완전 무인 상태에서 상·하역 작업이 가능한 무인지게차를 국내 제조 현장에 공급하는 것은 현대위아가 처음이다. 현대위아의 무인지게차는...",
+          "source_url": "http://www.newslock.co.kr/news/articleView.html?idxno=135603",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 무인지게차 내년 5월 첫 공급",
+          "publisher": "sidae.com",
+          "published_at": "2026-09-07T00:42:00Z",
+          "summary": "현대위아는 스스로 공장 내부를 이동하며 화물을 싣고 내리는 무인지게차를 개발해 내년 5월 기아 오토랜드 화성에 처음 적용할 예정이라고 7일 밝혔다. 회사 측은 완전 무인 방식으로 상·하역이 가능한 무인지게차를...",
+          "source_url": "https://www.sidae.com/article/2026090709371038734",
+          "relevance": "high"
+        },
+        {
+          "headline": "사람 없이 4t 화물 ‘번쩍’…현대위아 무인지게차, 기아 공장 누빈다",
+          "publisher": "dailian.co.kr",
+          "published_at": "2026-09-07T00:41:00Z",
+          "summary": "현대위아는 스스로 이동하며 화물차 등에 물건을 싣고 내릴 수 있는 무인지게차를 내년 5월부터 기아 오토랜드 화성에 공급한다고 7일 밝혔다. 완전 무인으로 상·하역 작업이 가능한 무인지게차를 실제 제조 현장에...",
+          "source_url": "https://www.dailian.co.kr/news/view/1687112/?sc=Naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_9월 7일",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융, 한화에어로스페이스",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070004",
+          "relevance": "high"
+        },
+        {
+          "headline": "1,560원 찌르던 환율 1,350원 붕괴… 증시 판도 싹 바꿨다",
+          "publisher": "fntoday.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "현대차와 기아가 속한 KRX자동차지수는 3분기 들어 10.2%나 빠졌다. 반도체 '투톱' 삼성전자와 SK하이닉스도 실적 추정치 하향 조정을 피하지 못했다. 외국계 증권사인 노무라증권은 국내 메모리 기업의 경우 원화...",
+          "source_url": "https://www.fntoday.co.kr/news/articleView.html?idxno=392253",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철, 美 전기로 제철소 첫 삽…8조원 투입해 2029년 양산",
+          "publisher": "inthenews.co.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "루이지애나에 58억달러 투자…연산 270만톤 규모 현대제철 50%·포스코 20% 출자…현대차·기아도 각각 15% 참여... 지분은 현대제철이 50%, 포스코가 20%, 현대차와 기아가 각각 15%를 보유합니다. 총투자금 58억달러는...",
+          "source_url": "https://www.inthenews.co.kr/news/article.html?no=91480",
+          "relevance": "high"
+        },
+        {
+          "headline": "'기아·SK하이닉스' 잇는 실무형 인재 키운다… 동의과학대, 미래차 초광...",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "1995년 신설된 동의과학대 전기자동차과는 지금까지 전문 인력 5000여명을 배출했다. 2025년 기아 생산·서비스직 10명 합격에 이어, 2026년 상반기 SK하이닉스 4명 합격 등 굵직한 취업 성과를 내고 있다.",
+          "source_url": "https://view.asiae.co.kr/article/2026090709382238909",
+          "relevance": "high"
+        },
+        {
+          "headline": "“팬들에게 받은 사랑 돌려드립니다”…KIA, 9~11일 ‘TIGERS CSR 위크’ ...",
+          "publisher": "sportsseoul.com",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "KIA는 “9일부터 11일까지 광주-기아 챔피언스 필드에서 열리는 2026 KBO리그 NC·SSG전을 팬 대상 사회공헌활동 주간인 ‘TIGERS CSR 위크’로 지정해 특별한 행사를 진행한다”고 7일 밝혔다. 지난해 처음 선보인 TIGERS CSR...",
+          "source_url": "https://www.sportsseoul.com/news/read/1633254?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_8월 31일_오차율",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "빅터뉴스 빅터뉴스 기자 ▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융...",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070002",
+          "relevance": "high"
+        },
+        {
+          "headline": "T1 '페이커' 이상혁 \"DK전 초반 실수 아쉬웠지만 팀원들 덕에 승리... 꼭...",
+          "publisher": "xportsnews.com",
+          "published_at": "2026-09-07T00:35:00Z",
+          "summary": "디플러스 기아를 꺾고 결승진출전으로 향하는 T1 '페이커' 이상혁이 승리 소감과 함께 한화생명e스포츠와의... 디플러스 기아를 세트 스코어 3:1로 제압했다. 경기 후 엑스포츠뉴스와 만난 '페이커'는 승리 소감과 함께 경기...",
+          "source_url": "https://www.xportsnews.com/article/2192977",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철, 미국 전기로 제철소 기공식 개최…탄소저감 강판 270만톤 생산",
+          "publisher": "socialvalue.kr",
+          "published_at": "2026-09-07T00:32:00Z",
+          "summary": "HPLS의 총투자비는 58억달러(약 8조원)로 지분구조는 현대제철 50%, 포스코 20%, 현대차와 기아 각 15%다. 정의선... 현대제철은 HPLS와 관련 탄소저감 철강재를 바탕으로 현대차·기아뿐 아니라 미국 내 글로벌 완성차...",
+          "source_url": "https://www.socialvalue.kr/news/view/1065570947259608",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아 '자율지게차', 내년 5월 기아 오토랜드 화성에 첫 적용",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-07T00:31:00Z",
+          "summary": "현대위아는 무인지게차를 개발해 내년 5월 기아 오토랜드 화성에 처음 적용한다고 7일 밝혔다. 완전 무인으로 상·하차가 가능한 무인지게차를 공급하는 것은 국내에서 현대위아가 처음이다. 이 지게차는 스스로 공장...",
+          "source_url": "https://www.mt.co.kr/industry/2026/09/07/2026090709242261215",
+          "relevance": "high"
+        },
+        {
+          "headline": "“사람 없이 싣고 내린다”…현대위아, 기아공장에 무인지게차 공급",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-07T00:28:00Z",
+          "summary": "내년 5월 기아 오토랜드 화성에 처음 적용해 운용할 예정이다. 회사에 따르면 완전 무인 상·하역이 가능한 무인지게차 공급에 성공한 것은 국내 최초다. 무인지게차는 공장 내부를 스스로 이동해 팔레트에 실린 물건을...",
+          "source_url": "https://www.dt.co.kr/article/12082395?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 4t 무인지게차 내년 5월 화성 투입",
+          "publisher": "tokenpost.kr",
+          "published_at": "2026-09-07T00:28:00Z",
+          "summary": "현대위아(011210)가 운전자 없이 공장 안을 이동하고 화물차 상·하차까지 수행하는 4t급 무인지게차를 내년 5월 기아(000270) 오토랜드 화성에 투입한다. 현대위아는 7일 무인지게차를 2027년 5월부터 기아 오토랜드 화성에...",
+          "source_url": "https://www.tokenpost.kr/news/tech/403572",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 순매수에 6890선 상승 출발···반도체주 강세",
+          "publisher": "smartbizn.com",
+          "published_at": "2026-09-07T00:24:00Z",
+          "summary": "기아(1.42%), LG에너지솔루션(0.70%), 삼성바이오로직스(0.41%) 등은 내렸다. 코스닥지수는 전 거래일보다 23.29포인트(1.19%) 오른 823.29에 거래되고 있다. 수급별로는 개인이 257억원 사들였고, 외국인과 기관이 각각...",
+          "source_url": "https://www.smartbizn.com/news/articleView.html?idxno=153165",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘쪼개기 상장’ 막히자…대기업 인적분할 급증 [ESG 뉴스 5]",
+          "publisher": "magazine.hankyung.com",
+          "published_at": "2026-09-07T00:21:00Z",
+          "summary": "정 회장은 현지에서 생산한 철강을 현대차·기아뿐 아니라 보스턴다이내믹스의 휴머노이드 로봇 아틀라스와 스페이스X 등 미국 우주기업에도 공급하고 싶다는 뜻을 밝혔다. 자동차용 철강 공급망을 넘어 로봇...",
+          "source_url": "https://magazine.hankyung.com/business/article/202609077664b",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"차 안에서 멜론·카카오내비 쓴다\"…현대차 플레오스 커넥트 앱 18종으...",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T00:20:00Z",
+          "summary": "커넥트 적용 차종이 늘어나면서 앱 마켓을 이용할 수 있는 차량도 확대될 예정이다. 한편, 현대차그룹은 플레오스 커넥트를 SDV 전환의 핵심 플랫폼으로 2030년까지 현대차·기아·제네시스 약 2000만대에 적용할 계획이다.",
+          "source_url": "https://www.ajunews.com/view/20260907091615921",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 3.4,
+      "oldest_relevant_at": "2026-09-07T00:20:00Z",
+      "collected_at": "2026-09-07T03:44:03.438129Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003932",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003932"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002675",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002675"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260312001224",
+          "published_at": "2026-03-12T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001224"
+        }
+      ],
+      "collected_at": "2026-09-07T03:44:04.762947Z",
+      "request_id": "14e95bbc-097e-4a4f-a24f-cd545041d229",
+      "source_type": "dart",
+      "stock_code": "000270",
+      "company_name": "기아"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260312001224",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "I. 회사의 개요 > 2. 회사의 연혁",
+          "text": "바. 그 밖에 경영활동과 관련된 중요한 사항의 발생내용\n최근 5사업연도중 발생한 주요사항은 다음과 같습니다.",
+          "score": 0.488898,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "가. 시장위험과 위험관리\n연결실체는 신용위험, 유동성위험 및 시장위험(환위험과 이자율위험으로 구분)에 노출되어 있습니다. 이러한 위험요소들을 관리하기 위하여 연결실체는 각각의 위험들에 대해 지속적인 모니터링과 예측을 실시하고 그에 대응하는 위험관리 정책을 실시하고 있습니다.\n(1) 신용위험\n신용위험이란 고객이나 거래상대방이 금융상품에 대한 계약상의 의무를 이행하지 않아 연결실체가 재무손실을 입을 위험을 의미합니다.\n연결실체는 채무자의 채무불이행으로 인한 위험을 통제하기 위해 상대방의 신용도를감안하여 충분한 담보를 확보한 후 거래를 실시하고 있습니다. 거래 상대방에 대한 신용도 측정은 외부의 독립적인 신용평가기관으로부터 제공받은 신용등급을 기준으로 하되, 자료의 획득이 불가능한 경우에는 거래 당사자와의 사이에서 획득된 거래 정보를 사용하여 신용도를 측정하여 거래에 수반되는 신용위험 회피에 활용하고 있으며 거래처의 신용도 측정은 지속적으로 실시하고 있습니다.\n(2) 유동성위험 유동성위험이란 연결실체가 금융부채에 관련된 의무를 충족하는데 어려움을 겪게 될위험을 의미합니다. 연결실체는 주기적인 현금흐름 점검 및 예측을 통하여 유동성위험을 관리하고 있으며, 예기치 못한 상황의 발생에 따른 단기적인 금융부채 및 지급 의무를 대비하기 위하여 일정수준의 당좌예금 등을 보유하고 있습니다.(3) 시장위험 시장위험이란 시장가격의 변동으로 인하여 금융상품의 공정가치나 미래현금흐름이 변동할 위험을 의미합니다. 시장가격 관리의 목적은 수익은 최적화하는 반면 수용가능한 한계 이내로 시장위험 노출을 관리 및 통제하는 것입니다.\n① 환위험 연결실체는 글로벌 영업활동을 수행함에 따라 달러화 및 유로화를 포함한 다양한 통화의 환율변동 위험에 노출되어 있습니다. 연결실체는 환율변동으로 인한 경영실적 변동 및 재무위험 최소화를 위하여 주요통화에 대한 환노출 규모를 주기적으로 측정및 평가하고 이를 바탕으로 세부지침을 수립하여 환위험을 관리하고 있습니다.\n[주요위험]",
+          "score": 0.486621,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "등 경기 변동에 민감한 영향을 받고 있습니다. 경기 침체기에는 투자 위축과 고용 감소로 인해 소비가 둔화되면서 중산층 이하의 지출에 크게 영향을 미칩니다. 이 시기 대표적 내구재인 자동차 수요는 다른 소비재에 비해 더 크게 감소하는 특성을 나타냅니다.\n(4) 경쟁 요소\n자동차 산업은 거대한 자본이 투입되는 대규모 장치 산업이라는 특성 때문에 각국마다 소수 업체 위주의 과점 체제를 구축하고 있습니다. 즉, 일정 규모의 양산 설비를 구축하는 데 막대한 비용이 투입되어야 하며 진입 결정 이후 제품 출시까지 최소한 4~5년이 소요되기 때문에 막대한 자금력을 갖춘 기업이라도 진입에 성공할 가능성이 낮습니다. 이밖에 자동차 업체는 종업원이 수만 명에 이르고 협력업체가 수천 개에 달하기 때문에, 실적 부진이 장기화되는 경우에도 국민 경제에 미치는 파장을 고려해 구조조정이나 조업단축에 신중할 필요가 있습니다.\n자동차 산업의 핵심 경쟁 요소로는 제품력과 마케팅력, 비용 경쟁력을 들 수 있습니다. 이 세 가지 요소는 시장 지배력을 강화하고 비용 절감 및 수익성을 확보하는 데 결정적인 영향을 미치는 변수입니다. 이 중 가장 중요한 제품력은 차량의 성능, 안전성, 디자인, 품질, 신기술 등 제품에 대한 만족도를 극대화시킴으로써 경쟁 우위를 가질 수 있게 해줍니다. 마케팅력은 고객이 원하는 상품 컨셉트 창출 및 신제품 출시, 광고, 판매 및 A/S망 구축 등을 매개로 고객을 적극 창출함으로써 경쟁력을 높여주게 됩니다. 비용 경쟁력은 신제품 개발 비용, 양산차 제조 생산성, 간접 인력의 생산성, 금융 비용 등을 포함하는 총체적인 비용 개념으로 가격 경쟁력과 수익성에 결정적인 영향을 미치고 있습니다.\n나. 회사의 영업현황\n당사는 2011년부터 한국채택국제회계기준(K-IFRS)을 도입하여 재무제표를 작성하였습니다. 지역별 영업현황은 다음과 같습니다.\n(1) 제82기\n(단위:백만원)",
+          "score": 0.477773,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "유로화를 포함한 다양한 통화의 환율변동 위험에 노출되어 있습니다. 연결실체는 환율변동으로 인한 경영실적 변동 및 재무위험 최소화를 위하여 주요통화에 대한 환노출 규모를 주기적으로 측정및 평가하고 이를 바탕으로 세부지침을 수립하여 환위험을 관리하고 있습니다.\n[주요위험]\n- 환율 변동에 따른 미래 외화 매출액의 원화 표시금액 변동 위험\n- 환율 변동에 따른 외화 표시 자산 및 부채의 원화 표시금액 변동 위험\n- 영업활동과 관련된 매출채권 회수 및 지급채무 결제시점까지의 환율변동 위험\n[전략]\n- 연결실체는 외화자금 유입과 유출의 환종, 규모, 만기를 일치시킴으로써 환노출규 모를 최소화하는 것을 기본 원칙으로 하고 있습니다.\n- 주요 영업활동과 관련하여 발생하는 매출채권 및 지급채무 등의 경우, 할인(NEGO)등의 무역금융 상품을 활용하여 환노출 기간을 축소하고 있습니다.\n- 최대 12개월 이내 발생할 것으로 예상되는 미래 현금흐름에 대해 통화선도, 통화옵션 등의 파생상품을 활용하여 환율변동 위험을 회피하고 있습니다.\n- 12개월을 초과하는 외화차입금의 경우 통화스왑 등의 파생상품을 활용하여 만기일까지의 환율변동 위험을 회피하고 있습니다.\n- 연결실체의 파생상품 계약은 내부 환위험관리 규정 및 절차에 따라 검토 후 시행되고 있으며, 투기목적의 거래는 엄격히 제한하고 있습니다.\n② 이자율위험 연결실체는 시장이자율의 변동으로 인한 금융상품의 공정가치 및 미래 현금흐름 변동위험에 노출되어 있습니다. 이자율 변동으로 인한 불확실성 및 순이자비용 최소화를 위하여 시장이자율 변동추이 및 예측자료들을 모니터링하고 이를 바탕으로 적절한 금융상품을 운용하고 있습니다.\n[주요위험]\n- 시장이자율 변동에 따른 예금 등 금융상품에 대한 순이자비용 변동 위험\n- 시장이자율 변동에 따른 변동금리 차입금의 미래현금흐름 변동 위험\n- 시장이자율 변동에 따른 매출채권 할인 이자율 변동 위험\n[전략]",
+          "score": 0.461489,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 3. 원재료 및 생산설비",
+          "text": "다. 주요투자 현황(1) 진행중인 투자 회사는 공장의 생산능력 증대 및 가동률 향상, 기존제품의 품질향상 및 신제품 개발등을 위해 지속적으로 시설 및 설비에 투자를 하고 있습니다. 보고서 작성 기준일까지 진행된 시설 및 설비 투자 내역은 아래의 표와 같습니다.\n(단위 : 억원)\n구 분 | 품 목 | 투자효과 | 투자금액\n국내공장 | 신제품개발,공장신증설,보완투자 등 | 가동률향상/품질향상 등 | 23,922\n미국공장 | 5,340\n슬로박공장 | 3,843\n멕시코공장 | 2,263\n인도공장 | 3,047\n계 | 38,415\n(2) 향후 투자 계획\n(단위 : 억원)\n구 분 | 품 목 | 투자효과 | 2026년도예상투자금액\n국내공장 | 신제품개발,공장신증설,보완투자 등 | 가동률향상/생산능력 증대 등 | 27,132\n미국공장 | 3,407\n슬로박공장 | 4,025\n멕시코공장 | 3,797\n인도공장 | 5,338\n계 | 43,699\n＊투자금액은 시설/설비투자에 한정한 투자금액으로 연구개발비용은 제외된 기준임.＊향후 경영상황에 따라 예상 투자금액은 조정될 수 있음.",
+          "score": 0.456225,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001224",
+      "collected_at": "2026-09-07T03:44:07.944016Z",
+      "request_id": "a83aaa92-8da4-49cc-b5fb-b3a482e3b9ca",
+      "source_type": "dart",
+      "stock_code": "000270",
+      "company_name": "기아"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "기아",
+      "stock_code": "000270",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:44:02.832199+00:00",
+        "to": "2026-09-07T03:44:02.832199+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 490,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 239.5,
+        "ratio": 2.05,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 23,
+        "neutral_count": 17,
+        "negative_count": 60
+      },
+      "top_topics": {
+        "expectations": [
+          "미국 판매 실적 호조",
+          "연말 배당 수익",
+          "저가 매수 매력",
+          "쌍바닥 이후 반등"
+        ],
+        "concerns": [
+          "원화 강세에 따른 수익성 부담",
+          "관세 불확실성",
+          "외국인·기관·연기금 매도 압력",
+          "자사주 매입·소각 등 주주환원 대책 부족",
+          "실적 호조 대비 주가 부진"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "미국 판매 실적 호조를 긍정적으로 평가한다.",
+          "posted_at": "2026-09-07T00:37:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "연말 배당으로 투자 수익을 보완할 수 있다는 기대다.",
+          "posted_at": "2026-09-04T09:02:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "하락한 주가가 매수하기에 매력적인 수준이라는 평가다.",
+          "posted_at": "2026-09-05T11:49:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "쌍바닥 형성 이후 주가 반등을 기대한다.",
+          "posted_at": "2026-09-04T02:50:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "환율 하락이 회사 실적과 주가에 부담이 될까 우려한다.",
+          "posted_at": "2026-09-06T18:40:00+00:00",
+          "sentiment": "negative"
+        }
+      ],
+      "collected_at": "2026-09-07T03:44:02.832199+00:00",
+      "fgi_mean": 41.1,
+      "fgi_latest": {
+        "fgi": 50.78,
+        "label": "탐욕",
+        "as_of": "2026-09-07T03:15:00+00:00",
+        "post_count": 1,
+        "valence_percentile": 85.26
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260902800231",
+          "published_at": "2026-09-02T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260902800231"
+        },
+        {
+          "report_name": "영업(잠정)실적(공정공시)              ",
+          "receipt_number": "20260901800418",
+          "published_at": "2026-09-01T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901800418"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260831800286",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800286"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260824800400",
+          "published_at": "2026-08-24T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260824800400"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260821800002",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821800002"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260818800199",
+          "published_at": "2026-08-18T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818800199"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260810800225",
+          "published_at": "2026-08-10T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260810800225"
+        }
+      ],
+      "collected_at": "2026-09-07T03:44:05.541547Z",
+      "request_id": "36f522c1-5f4a-4d70-9926-18a3ca0e42fa",
+      "source_type": "dart",
+      "stock_code": "000270",
+      "company_name": "기아"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260901800418": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260901800418",
+        "document_type": "disclosure",
+        "content": "기아/영업(잠정)실적(공정공시)/(2026.09.01)영업(잠정)실적(공정공시)\n실적기간\n당기실적 | 2026-08-01 | ~ | 2026-08-31\n전기실적 | 2026-07-01 | ~ | 2026-07-31\n전년동기실적 | 2025-08-01 | ~ | 2025-08-31\n당기누계실적 | 2026-01-01 | ~ | 2026-08-31\n전년동기누적실적 | 2025-01-01 | ~ | 2025-08-31\n※ 동 정보는 잠정치로서 향후 확정치와는 다를 수 있음.\n1. 실적내용 | 단위 : 백만원, %\n구분 | 당기실적 | 전기실적 | 전기대비 | 전년동기실적 | 전년동기대비\n( ) | ( ) | 증감율(%) | 흑자적자전환여부 | ( ) | 증감율(%) | 흑자적자전환여부\n매출액 | 당해실적 | - | - | - | - | - | - | -\n누계실적 | - | - | - | - | - | - | -\n영업이익 | 당해실적 | - | - | - | - | - | - | -\n누계실적 | - | - | - | - | - | - | -\n법인세비용차감전계속사업이익 | 당해실적 | - | - | - | - | - | - | -\n누계실적 | - | - | - | - | - | - | -\n당기순이익 | 당해실적 | - | - | - | - | - | - | -\n누계실적 | - | - | - | - | - | - | -\n구분 (단위:대,%) | 당기실적 ('26.8월) | 전기실적 ('26.7월) | 전기대비 증감율 (%) | - | 전년동기실적 ('25.8월) | 전년동기대비 증감율 (%) | -\n판매대수(내수) | 40,213 | 54,604 | -26.4 | - | 43,501 | -7.6 | -\n판매대수(해외) | 225,413 | 242,587 | -7.1 | - | 209,901 | +7.4 | -\n판매대수(특수) | 1,049 | 877 | +19.6 | - | 541 | +93.9 | -\n계 | 266,675 | 298,068 | -10.5 | - | 253,943 | +5.0 | -\n구분 (단위:대,%) | 당기누적 ('26.8월) | - | - | - | 전년동기누적 ('25.8월) | 전년동기누적대비 증감율 (%) | -\n판매대수(내수) | 390,596 | - | - | - | 364,941 | +7.0 | -\n판매대수(해외) | 1,800,865 | - | - | - | 1,736,205 | +3.7 | -\n판매대수(특수) | 4,662 | - | - | - | 3,140 | +48.5 | -\n계 | 2,196,123 | - | - | - | 2,104,286 | +4.4 | -\n2. 정보제공내역 | 정보제공자 | 커뮤니케이션센터\n정보제공대상자 | 언론사 등\n정보제공(예정)일자 | 2026년 9월 1일 보도자료 배포 및 수시제공\n정보제공(예정)시간 | -\n행사명(장소) | 보도자료 배포 등\n3. 연락처 | 관련부서 | 투명경영지원팀\n전화번호 | 02-3464-5391\n4. 기타 투자판단과 관련한 중요사항\n1) '23년부터 당사 사업구분 기준이 변경되어 특수사업(군수,상용특장)을 구분하여 표기하였음 2) '26년 8월 판매실적 주요내용 : 글로벌 시장에서 총 26만 6,675대 판매, 전년 대비 +5.0% 증가 3) 상기실적은 가마감수치로 변경될 수 있음 ※ 기타 자세한 내용은 첨부자료 및 당사 글로벌브랜드사이트 참조 : 당사 글로벌브랜드사이트 https://worldwide.kia.com\n※ 관련공시 | -",
+        "content_truncated": false,
+        "total_chars": 1718,
+        "summary": "영업(잠정)실적(공정공시)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901800418",
+        "collected_at": "2026-09-07T03:44:09.817008Z",
+        "report_name": "영업(잠정)실적(공정공시)              ",
+        "published_at": "2026-09-01T00:00:00Z",
+        "request_id": "6a8e0947-4939-4174-b34e-feb0130775dd",
+        "source_type": "dart"
+      }
+    },
+    "20260814003932": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    },
+    "20260515002675": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    },
+    "20260312001224": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260901800418",
+    "20260814003932",
+    "20260515002675",
+    "20260312001224"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:44:02.690236Z"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:44:02.690411Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:44:02.690694Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:44:02.690883Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:44:02.690995Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:44:02.691100Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:44:02.691197Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:44:02.929456Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:44:03.369856Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:44:03.470441Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:44:05.346762Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:44:06.385416Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:44:08.030296Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

@@ -1,0 +1,1337 @@
+{
+  "company": {
+    "company_name": "셀트리온",
+    "stock_code": "068270"
+  },
+  "captured_at": "2026-09-07T03:45:29.830460+00:00",
+  "capture_finished_at": "2026-09-07T03:47:54.226525+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "셀트리온",
+      "stock_code": "068270",
+      "current_price": 185500,
+      "change": -2600,
+      "change_rate": -1.38,
+      "volume": 204861,
+      "volume_change_rate": 75.71,
+      "avg_volume_20d": 473957,
+      "volume_ratio_20d": 0.75,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 354297,
+      "warnings": [],
+      "as_of": "2026-09-07T03:45:30.309593Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:45:30.309593Z"
+    },
+    "news": {
+      "request_id": "d5729288-c225-45a3-b95c-0d1c2f2c8b34",
+      "status": "success",
+      "company_name": "셀트리온",
+      "stock_code": "068270",
+      "articles": [
+        {
+          "headline": "새 품목들 상반기 성과 거둬... 국내사 캐시카우 육성 품목 모두 선전",
+          "publisher": "hitnews.co.kr",
+          "published_at": "2026-09-07T03:10:00Z",
+          "summary": "지난해 성장 상위 30개 품목 중 해당 계열 약제는 셀트리온제약 '암로젯' 한 품목이었고 이 역시 1억7000억원 수준에 지나지 않았다. 반면 올해에는 해당 계열 품목이 10개, 유통액 역시 92억원으로...",
+          "source_url": "https://www.hitnews.co.kr/news/articleView.html?idxno=78932",
+          "relevance": "high"
+        },
+        {
+          "headline": "금리·수급에 눌린 제약바이오…현장에선 글로벌 경쟁력 '레벨업'",
+          "publisher": "kpanews.co.kr",
+          "published_at": "2026-09-07T03:10:00Z",
+          "summary": "셀트리온의 미국과 유럽 시장에서 신규 바이오시밀러 점유율을 확대도 높이 평가했다. 미국에서는... 높다며 셀트리온의 경쟁력을 긍정적으로 평가했다. 신약 분야에서도 굵직한 움직임이 이어지고 있다....",
+          "source_url": "https://www.kpanews.co.kr/news/articleView.html?idxno=542963",
+          "relevance": "high"
+        },
+        {
+          "headline": "전통제약 축소·비급여사 확대…약가압박에 판관비 지출 양극화",
+          "publisher": "dailypharm.com",
+          "published_at": "2026-09-07T03:06:00Z",
+          "summary": "CDMO‧글로벌 신약‧에스테틱 등 비급여 사업 비중이 높은 8개 기업(삼성바이오로직스‧셀트리온... 에스티팜(-7.9%p)과 셀트리온(-2.4%p)도 판관비 비중이 축소됐다. 약가개편 앞두고 허리띠 매는 전통제약…42곳 중...",
+          "source_url": "https://www.dailypharm.com/user/news/342203?REFERER=NP",
+          "relevance": "high"
+        },
+        {
+          "headline": "예산군, 산업단지 4곳으로 미래산업 성장판 연다",
+          "publisher": "cctimes.kr",
+          "published_at": "2026-09-07T02:58:00Z",
+          "summary": "특히 셀트리온과 연계한 바이오 생산시설과 그린바이오 벤처캠퍼스, 메디푸드 연구지원시설 등을 집적해 연구·창업·실증·생산이 연계되는 미래산업 성장축으로 육성하고 있다. ◇ 산업단지 조성에서 기업유치...",
+          "source_url": "http://www.cctimes.kr/news/articleView.html?idxno=925800",
+          "relevance": "high"
+        },
+        {
+          "headline": "안보현·이성민 출연 JTBC '신의 구슬'…아마존서 전 세계 공개",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-07T02:48:00Z",
+          "summary": "극본은 정현민이, 연출은 정대윤이 맡았으며, 셀트리온 엔터테인먼트와 SLL이 제작을 담당한다. 공개된 티저 포스터에는 관음보주 호송대 특임지휘관이자 도령 백결 역을 맡은 배우 안보현이 등장한다. 안보현은 전장...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604492",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘44조원 블록버스터’ 키트루다 바이오시밀러⋯셀트리온, 美 임상 3상 ...",
+          "publisher": "kormedi.com",
+          "published_at": "2026-09-07T02:46:00Z",
+          "summary": "셀트리온이 글로벌 블록버스터 면역항암제 '키트루다' 바이오시밀러의 미국 임상 3상 시험계획 변경을 승인받았다. 셀트리온은 키트루다 바이오시밀러 'CT-P51'의 글로벌 임상 3상 시험계획 변경신청이 미국...",
+          "source_url": "https://kormedi.com/?p=2861234",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 훈풍에 코스피 3% 급등…외국인·기관 1.6조 싹쓸이",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "반면 한화에어로스페이스(-2.18%), 삼성SDI(-0.73%), 셀트리온(-0.90%) 등은 내리고 있다. 업종별로 전기·전자(4.29%), 기계·장비(4.12%), 제조(3.35%) 등은 오르고 음식료·담배(-2.55%), 부동산(-1.15%), 섬유·의류(-1.11...",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063126",
+          "relevance": "high"
+        },
+        {
+          "headline": "안보현, 첫 사극 주인공…전장 한복판에 섰다 (신의 구슬)",
+          "publisher": "enews.imbc.com",
+          "published_at": "2026-09-07T02:40:00Z",
+          "summary": "JTBC 새 토일드라마 ‘신의 구슬’(극본 정현민, 연출 정대윤, 제작 셀트리온 엔터테인먼트·SLL)은 30년 동안 계속된 몽골과의 전쟁으로 고려가 점차 패색에 휩싸이던 서기 1258년(고려시대)을 배경으로 한다. 호국의 성물인...",
+          "source_url": "http://enews.imbc.com/News/RetrieveNewsInfo/517442",
+          "relevance": "high"
+        },
+        {
+          "headline": "예산군, 농생명 산업 키우고 청년 손맛으로 마을 잇는다",
+          "publisher": "aflnews.co.kr",
+          "published_at": "2026-09-07T02:38:00Z",
+          "summary": "군은 이곳에 셀트리온과 연계한 바이오 생산시설, 그린바이오 벤처캠퍼스, 메디푸드 연구지원시설 등을 집적할 계획이다. 이를 통해 연구, 창업, 실증, 생산이 연계되는 미래산업 성장축으로 육성한다는 구상이다....",
+          "source_url": "https://www.aflnews.co.kr/news/articleView.html?idxno=327676",
+          "relevance": "high"
+        },
+        {
+          "headline": "유한양행, 노바티스 '랩시도' 유통 전담…개원가 공략",
+          "publisher": "4th.kr",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "셀트리온제약은 4월 오말리주맙 바이오시밀러 '옴리클로'의 300㎎ 사전충전형주사제(PFS)를 국내 출시했다. 기존 75㎎·150㎎에 고용량 제형을 추가해 환자의 투약 부담을 줄이고 의료진의 처방 선택 폭을 넓혔다. 조욱제...",
+          "source_url": "http://www.4th.kr/news/articleView.html?idxno=2117574",
+          "relevance": "high"
+        },
+        {
+          "headline": "바이오의약품 관련주 혼조, 삼천당제약 강세 바이넥스 한올바이오파마...",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "알테오젠은 0.52% 하락한 28만7000원, 셀트리온은 0.48% 내린 18만7200원을 기록하고 있다. 녹십자는 0.31%, 셀트리온제약은 0.37% 하락하고 있다. 프레스티지바이오로직스와 프레스티지바이오파마도 각각 0.52%, 0.46...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604473",
+          "relevance": "high"
+        },
+        {
+          "headline": "예산군, 4개 산단 주축 미래산업 거점 도약",
+          "publisher": "ggilbo.com",
+          "published_at": "2026-09-07T02:18:00Z",
+          "summary": "셀트리온과 연계한 바이오 생산시설과 그린바이오 벤처캠퍼스, 메디푸드 연구지원시설 등을 집적해 연구·창업·실증·생산이 연계되는 미래산업 성장축으로 육성하고 있다. 군은 4개 산업단지를 주축으로 산업용지...",
+          "source_url": "https://www.ggilbo.com/news/articleView.html?idxno=1180049",
+          "relevance": "high"
+        },
+        {
+          "headline": "셀트리온, 키트루다·다잘렉스 바이오시밀러 임상 3상 변경 승인",
+          "publisher": "ngetnews.com",
+          "published_at": "2026-09-07T02:18:00Z",
+          "summary": "뉴스저널리즘 이금영 기자 = 셀트리온이 항암제 키트루다와 다잘렉스의 바이오시밀러 임상 3상 시험계획... 7일 금융감독원 전자공시시스템에 따르면 셀트리온은 키트루다 바이오시밀러 'CT-P51'의 미국 임상 3상...",
+          "source_url": "https://www.ngetnews.com/news/articleView.html?idxno=553074",
+          "relevance": "high"
+        },
+        {
+          "headline": "예산군 산업단지 4곳 확충…기업 유지 기반 넓힌다",
+          "publisher": "jbnews.com",
+          "published_at": "2026-09-07T02:16:00Z",
+          "summary": "총사업비 2천465억원을 투입, 기회발전특구와 그린바이오산업 육성지구 지정을 기반으로 셀트리온 연계 바이오 생산시설, 그린바이오 벤처캠퍼스, 메디푸드 연구지원시설 등을 집적할 계획이다. 준공 목표 시점은...",
+          "source_url": "https://www.jbnews.com/news/articleView.html?idxno=1510976",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 훈풍에 3% 안팎 상승세…삼전닉스 3~5%↑",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T02:12:00Z",
+          "summary": "반면 한화에어로스페이스(-2.18%), 삼성SDI(-0.73%), 셀트리온(-0.90%) 등은 내리고 있다. 업종별로 전기·전자(4.29%), 기계·장비(4.12%), 제조(3.35%) 등은 오르고 음식료·담배(-2.55%), 부동산(-1.15%), 섬유·의류(-1.11...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907072500008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 메모리주 강세에 장 초반 3%대 상승...삼전 4%·SK하닉 6%↑",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 하락 중이다. 업종별로는 기술주 급등 영향으로 전기·전자가 4.96% 오르고 있다. 제조는 3.95%, 금융은 2.51%, 유통은 2.45% 상승 중이다. 음식료·담배는 1.99...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317738",
+          "relevance": "high"
+        },
+        {
+          "headline": "안보현, 칼 쥔 고려 장수로 변신…'신의 구슬' 티저 포스터 공개",
+          "publisher": "slist.kr",
+          "published_at": "2026-09-07T02:04:00Z",
+          "summary": "오는 12월 첫 방송되는 '신의 구슬'(극본 정현민, 연출 정대윤, 제작 셀트리온 엔터테인먼트·SLL)은 몽골과 30년간 전쟁을 이어가던 서기 1258년 고려를 배경으로 한다. 전세를 뒤집을 호국의 성물 '관음보주'를 찾아 나선...",
+          "source_url": "https://www.slist.kr/news/articleView.html?idxno=764226",
+          "relevance": "high"
+        },
+        {
+          "headline": "셀트리온, '키트루다' 이어 '다잘렉스'까지…항암 바이오시밀러 2종 3상...",
+          "publisher": "news.ifm.kr",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "셀트리온이 글로벌 블록버스터 항암제 '키트루다'와 '다잘렉스'를 겨냥한 바이오시밀러 후보물질의 임상 3상을 동시에 진전시키며 항암제 포트폴리오 확대에 속도를 내고 있다. 셀트리온은 오늘(7일) 미국에서 진행...",
+          "source_url": "https://news.ifm.kr/news/articleView.html?idxno=478782",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]코스피, 오픈AI발 호재에 6,900선 재탈환…삼전 4.3%·닉스 5.9% 급...",
+          "publisher": "kwnews.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중이다. 그러나 음식료·담배(-1.99...",
+          "source_url": "https://www.kwnews.co.kr/article/20260907500348",
+          "relevance": "high"
+        },
+        {
+          "headline": "’20조원 시장 겨냥’ 셀트리온, 다잘렉스 바이오시밀러 임상 3상 변경 ...",
+          "publisher": "kormedi.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "셀트리온은 다잘렉스 바이오시밀러 CT-P44의 한국 임상 3상 시험계획 변경신청이 식품의약품안전처 승인을... 셀트리온은 이번 임상을 통해 표적항암제 시장에서 영향력 확대를 노린다. 회사는 이미 유방암·위암 치료제...",
+          "source_url": "https://kormedi.com/?p=2861146",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등… 코스피 6,900선 재탈환",
+          "publisher": "fntoday.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 약세를 보이고 있다. 업종별로는 기술주 랠리에 힘입어 전기·전자(4.96%)가 폭등했고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등이 오름세를 타고 있다. 반면...",
+          "source_url": "https://www.fntoday.co.kr/news/articleView.html?idxno=392276",
+          "relevance": "high"
+        },
+        {
+          "headline": "예산군, 산업단지 4곳으로 미래산업 성장판 연다",
+          "publisher": "ccdailynews.com",
+          "published_at": "2026-09-07T01:38:00Z",
+          "summary": "특히 셀트리온과 연계한 바이오 생산시설과 그린바이오 벤처캠퍼스, 메디푸드 연구지원시설 등을 집적해 연구·창업·실증·생산이 연계되는 미래산업 성장축으로 육성하고 있다. □산업단지 조성에서 기업유치...",
+          "source_url": "https://www.ccdailynews.com/news/articleView.html?idxno=2438800",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피,美오픈AI 호재에 6,900선…환율 23개월만에 1,330원대",
+          "publisher": "seouleconews.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중이다. 그러나 음식료·담배(-1.99...",
+          "source_url": "http://www.seouleconews.com/news/articleView.html?idxno=93564",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체주 강세에 3%가까이 급등…6,880선 돌파",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "반면 한화에어로스페이스(0.95%)와 삼성SDI(0.73%), 셀트리온(0.58%), 삼성화재(0.75%), 한화오션(0.23%) 등은... 반면 알테오젠(0.52%)과 휴젤(0.61%), 펄어비스(2.32%), 에스티팜(6.52%), 셀트리온제약(0.37%) 등은 하락세다....",
+          "source_url": "https://www.news2day.co.kr/article/20260907500108",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승",
+          "publisher": "news.sbs.co.kr",
+          "published_at": "2026-09-07T01:17:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중입니다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중입니다. 그러나 음식료·담배(-1....",
+          "source_url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008740759&plink=ORI&cooper=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "예산군, 산업단지 확충·기업유치로 미래산업 거점도시 도약",
+          "publisher": "shinailbo.co.kr",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "특히 셀트리온과 연계한 바이오 생산시설을 비롯해 그린바이오 벤처캠퍼스와 메디푸드 연구지원시설 등을 집적해 연구·창업·실증·생산이 연계되는 산업 생태계를 구축할 계획이다. 예산군은 산업용지 공급과...",
+          "source_url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5059067",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 오픈AI 호재…코스피 3%대 급등",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11%) 등은 내리고 있다. 업종별로는 전기·전자(4.96%), 제조(3.95%), 금융(2.51%), 유통(2.45%) 등이 상승, 음식료·담배(-1.99%), 섬유·의류(-1.46%), 부동산(-0.98...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862662",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 약 3% 뛴 6800선…코스닥도 약 2% 가까이 상승",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:07:00Z",
+          "summary": "시가총액 상위 20개 종목별로도 두산에너빌리티(+6.19%), SK(+5.41%) 등 18개 종목의 주가가 상승했으며, 삼성SDI(-0.73%), 셀트리온(-0.48%) 등 2개 종목에서만 주가가 떨어졌다. 코스닥은 13.88포인트(1.71%) 상승한...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710072234147",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체주 훈풍 6900선 재등정… 삼전닉스 동반 강세",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-07T01:04:00Z",
+          "summary": "반면 삼성SDI(-0.18%), 셀트리온(-0.53%), 삼성화재(-0.9%) 등은 하락세다. 코스닥은 전 거래일 대비 14.02(1.72%) 오른 827.52를 기록하고 있다. 지난주 뉴욕 증시는 3대 지수가 모두 하락했지만 반도체 업종은 강세를...",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169589",
+          "relevance": "high"
+        },
+        {
+          "headline": "아스트라 돌풍, 이번엔 정말 ‘칠천피’ 재돌파?…코스피, 6900선 회복 [...",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 코스닥 지수도 상승세를 나타내고 있다. 코스닥은 전장보다 9.41포인트(1.16%) 오른 822.91로 출발해 1%대 상승률을 보인다. 개인이 372억원...",
+          "source_url": "https://biz.heraldcorp.com/article/10864511?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"땡큐, 오픈AI\"...코스피, 미국발 훈풍에 6,900선 탈환",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T00:51:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 한지영 키움증권 연구원은 \"지난 금요일(4일) 미국 반도체주 랠리가 시사하듯이 국내외 반도체주에 대한 지속적인 매도 압력도...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070134&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "'아스트라 훈풍'에 반도체주 날았다…코스피 6900선 재탈환",
+          "publisher": "kado.net",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 각각 하락했다. 업종별로는 전기·전자가 4.96% 상승했고 제조 3.95%, 금융 2.51%, 유통 2.45% 등도 오름세다. 음식료·담배는 1.99%, 섬유·의류는 1.46%, 부동산은...",
+          "source_url": "https://www.kado.net/news/articleView.html?idxno=2070949",
+          "relevance": "high"
+        },
+        {
+          "headline": "예산군, 산업단지 4곳으로 미래산업 성장판 연다",
+          "publisher": "chungnamilbo.co.kr",
+          "published_at": "2026-09-07T00:44:00Z",
+          "summary": "특히 셀트리온과 연계한 바이오 생산시설과 그린바이오 벤처캠퍼스, 메디푸드 연구지원시설 등을 집적해 연구·창업·실증·생산이 연계되는 미래산업 성장축으로 육성하고 있다. ■ 산업단지 조성에서 기업유치...",
+          "source_url": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=907912",
+          "relevance": "high"
+        },
+        {
+          "headline": "예산군, 산업단지 4곳으로 서북부 미래산업 거점도시 도약",
+          "publisher": "cc.newdaily.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "특히 셀트리온과 연계한 바이오 생산시설을 비롯해 그린바이오 벤처캠퍼스와 메디푸드 연구지원시설 등을 집적해 연구·창업·실증·생산이 연계되는 미래산업 거점으로 육성할 계획이다. 군은 산업용지 공급과...",
+          "source_url": "https://cc.newdaily.co.kr/site/data/html/2026/09/07/2026090700012.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등…코스피 6900선 재탈환",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T00:37:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중이다. 그러나 음식료·담배(-1.99...",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063013",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6900선 재탈환…외인·기관 반도체 사자 행진",
+          "publisher": "kmib.co.kr",
+          "published_at": "2026-09-07T00:35:00Z",
+          "summary": "현대차(1.83%), 삼성전기(2.50%), LG에너지솔루션(0.42%) 등도 오름세를 탄 반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11%)은 약세를 보였다. 업종별로는 전기·전자(4.96%)와 제조업(3.95%)이 장을 주도했으나...",
+          "source_url": "https://www.kmib.co.kr/article/view.asp?arcid=9000009650&cp=nv",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승(종합)",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T00:33:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중이다. 그러나 음식료·담배(-1.99...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907031051008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "셀트리온, 다잘렉스·키트루다 바이오시밀러 3상 변경 승인...글로벌 임...",
+          "publisher": "greened.kr",
+          "published_at": "2026-09-07T00:22:00Z",
+          "summary": "셀트리온의 다잘렉스(Darzalex)와 키트루다(Keytruda) 바이오시밀러 후보물질이 한국과 미국에서 각각 임상 3상 시험계획 변경 승인을 받았다. 셀트리온은 지난 4일 식품의약품안전처로부터 다잘렉스 바이오시밀러 'CT-P44...",
+          "source_url": "https://www.greened.kr/news/articleView.html?idxno=349344",
+          "relevance": "high"
+        },
+        {
+          "headline": "셀트리온, 키트루다 이어 다잘렉스 바이오시밀러 3상 본격화",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-06T23:51:00Z",
+          "summary": "셀트리온이 글로벌 블록버스터 의약품인 키트루다와 다잘렉스를 겨냥한 바이오시밀러 개발에 속도를... 셀트리온(068270)은 7일 공시를 통해 키트루다 바이오시밀러 후보물질 ‘CT-P51’의 미국 임상 3상 시험계획...",
+          "source_url": "https://www.sedaily.com/article/20087785?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "셀트리온, 글로벌 면역항암제 바이오시밀러의 임상계획 변경 승인",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-06T23:34:00Z",
+          "summary": "셀트리온이 글로벌 매출 1위 면역항암제인 키트루다의 바이오시밀러(복제약)에 대한 임상시험 계획 변경 신청을 승인받았다. 셀트리온은 'CT-P51'(키트루다 바이오시밀러)에 대한 글로벌 제3임상 시험계획...",
+          "source_url": "https://www.fnnews.com/news/202609070818395201",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장 전 주요 공시] 셀트리온·SOOP·태영건설·SKC 등",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-06T23:32:00Z",
+          "summary": "셀트리온, CT-P44 한국 임상 3상 변경신청 승인 셀트리온은 CT-P44(다잘렉스 바이오시밀러) 한국 임상 3상 시험계획 변경신청 승인을 지난 4일 받았다고 7일 공시했다. 이번 임상은 불응성 또는 재발성 다발성...",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609070828462460923c501012_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "[기후리더] 제약·바이오 부문 1위 '대웅제약'...A 이상은 3곳뿐",
+          "publisher": "newstree.kr",
+          "published_at": "2026-09-06T23:12:00Z",
+          "summary": "분석대상 14개사는 삼성바이오로직스, 셀트리온, 유한양행, GC녹십자, SK바이오팜, 한미약품, 일동제약... 셀트리온, 종근당, 동아에스티가 대표적이다. 탄소집약도 개선을 곧바로 온실가스 실질 감축으로...",
+          "source_url": "https://www.newstree.kr/newsView/ntr202608250020",
+          "relevance": "high"
+        },
+        {
+          "headline": "셀트리온, 'CT-P51' 미국 임상3상-'CT-P44' 한국 3상 IND 변경 승인",
+          "publisher": "yakup.com",
+          "published_at": "2026-09-06T22:56:00Z",
+          "summary": "셀트리온이 'CT-P51'(키트루다 바이오시밀러) 미국 FDA  임상3상시험계획 변경신청을 5일 승인받았다고... 셀트리온은 3상 임상시험을 통해 CT-P51 약물의 오리지널 약물 키트루다(Keytruda)에 대한 유효성 및...",
+          "source_url": "https://www.yakup.com/news/index.html?mode=view&cat=12&nid=332144",
+          "relevance": "high"
+        },
+        {
+          "headline": "[KFT 모닝 브리프] 2026.09.07 — 오늘 꼭 알아야 할 국내외 경제·시장 ...",
+          "publisher": "fntimes.com",
+          "published_at": "2026-09-06T22:34:00Z",
+          "summary": "셀트리온도 자사주 매입에 동참하면서 주주환원을 통한 수급 방어가 반도체를 넘어 시장 전반으로... 셀트리온 등 다른 대형주로도 주주환원 확산 조짐이 나타나는 중이다. 다만 이는 어디까지나 수급 측면의...",
+          "source_url": "https://www.fntimes.com/html/view.php?ud=202609070721022362141825007d_18",
+          "relevance": "high"
+        },
+        {
+          "headline": "9번 준우승 극복한 최예림, 9년 노력 끝에 첫 승 결실 [ST스페셜]",
+          "publisher": "stoo.com",
+          "published_at": "2026-09-06T22:06:00Z",
+          "summary": "6월 셀트리온 퀸즈 마스터즈에서는 서교림이 첫 승을 신고했다. 2025년 신인왕을 수상했지만 우승과 연을 맺지 못해 '우승 없는 신인왕'이라는 꼬리표를 달았던 서교림은 이 우승으로 원치 않았던 꼬리표를 깨끗이...",
+          "source_url": "http://www.stoo.com/article.php?aid=108739185075",
+          "relevance": "high"
+        },
+        {
+          "headline": "이사회 문은 열렸는데…승진해 오르는 미등기임원 여성은 6.5%뿐[2026 양성...",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-06T22:00:00Z",
+          "summary": "그 다음으로 아모레퍼시픽(26.5%), LG생활건강(25.7%), SK네트웍스(25%), 셀트리온(24.7%) 등이 뒤를 이었다. 금융권은 평균 9.6%로 100대 기업보다 높았고 0%인 곳도 하나은행 한 곳뿐이었다. 사외이사가 없어 감점된...",
+          "source_url": "https://view.asiae.co.kr/article/2026090315225764364",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"너희 둘, 동기 아냐?\" 그래도 수천만원 차이 났다…남성 연봉 1억917만원...",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-06T22:00:00Z",
+          "summary": "현대자동차가 89.4%, KT 89.3%, 셀트리온 88.8%, 삼성바이오로직스 87.6%, 기아는 85.9%였다. 방산·소재기업이 이 지표 1위라는 점도 눈에 띈다. 여성 인력이 상대적으로 적은 업종이라고 해서 반드시 연봉 격차까지 클...",
+          "source_url": "https://view.asiae.co.kr/article/2026090315474201643",
+          "relevance": "high"
+        },
+        {
+          "headline": "불붙은 주주환원 경쟁… ‘신뢰 쌓은 기업’에 돈 몰린다 [마이머니]",
+          "publisher": "segye.com",
+          "published_at": "2026-09-06T21:04:00Z",
+          "summary": "SK하이닉스가 40조원 규모의 자기주식 취득 및 소각을 결정한 데 이어 메리츠금융지주와 셀트리온도 각각 5000억원, 1000억원 규모의 자기주식 취득 계획을 내놨다. 현대자동차 역시 7891억원 규모의 자사주 소각을...",
+          "source_url": "https://www.segye.com/newsView/20260906508213?OutUrl=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "복제약이 밀고 신약이 끌고… ‘글로벌 빅파마’ 도약 순항",
+          "publisher": "segye.com",
+          "published_at": "2026-09-06T21:03:00Z",
+          "summary": "바이오시밀러 ‘글로벌 톱3’ 셀트리온 2025년 복제약 매출 2년 전보다 104%↑ 사업 전 주기 내재화 역량 강화... 박차 셀트리온이 글로벌 바이오시밀러(복제약) 시장에서 경쟁 우위를 바탕으로 지배력을 확대하고 있다....",
+          "source_url": "https://www.segye.com/newsView/20260906508322?OutUrl=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "사람이 만들던 약, AI·로봇이 만든다… 대형사 전유물 '자동화 공장' 제...",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-06T21:02:00Z",
+          "summary": "셀트리온도 앞으로 지을 송도 원료의약품(DS) 4·5공장을 '피지컬 AI' 기반 스마트팩토리로 구축할 예정이다. 자율이송로봇(AMR), 자동화 물류창고, 지능형 로봇팔과 협동로봇 등을 투입한다. 셀트리온은 반복적이고...",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169491",
+          "relevance": "high"
+        },
+        {
+          "headline": "상장 제약·바이오사 2Q 평균 매출 코스피 2116억원, 코스닥 557억원",
+          "publisher": "yakup.com",
+          "published_at": "2026-09-06T21:02:00Z",
+          "summary": "한 셀트리온과 삼성바이오로직스가 나란히 1조 3000억원의 벽을 돌파하며 초대형 제약·바이오 기업의... 주요 기업별 매출 총액은 1위 셀트리온(1조3937억원), 2위 삼성바이오로직스(1조3209억원), 3위 유한양행...",
+          "source_url": "https://www.yakup.com/news/index.html?mode=view&cat=12&nid=332137",
+          "relevance": "high"
+        },
+        {
+          "headline": "기술 팔고 생산도 한다…K바이오, '수출+CDMO' 투트랙 가속",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-06T21:00:00Z",
+          "summary": "삼성바이오로직스 외에도 롯데바이오로직스와 셀트리온 등이 생산시설 확대와 글로벌 고객사 확보에 나서고 있으며 에스티팜과 바이넥스 등도 원료의약품 및 바이오의약품 분야에서 CDMO 사업을 확대하고 있다....",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145417",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스닥 상장폐지 기준 강화 '유예'…바이오주 '숨통'",
+          "publisher": "dailymedi.com",
+          "published_at": "2026-09-06T20:34:00Z",
+          "summary": "셀트리온제약은 4만850원으로 보합 마감했다. 바이오 관련 의료기기와 헬스케어 종목도 대체로 오름세를 보였다. 파마리서치는 1.44%, 클래시스는 0.32% 상승했다. 피앤에스미캐닉스는 3.35% 올랐고, 에스엠은 4.91...",
+          "source_url": "https://www.dailymedi.com/news/news_view.php?wr_id=940185",
+          "relevance": "high"
+        },
+        {
+          "headline": "스테키마 16.2%·유플라이마 9.4%… 셀트리온 美 직판 성과",
+          "publisher": "ggilbo.com",
+          "published_at": "2026-09-06T20:26:00Z",
+          "summary": "사진=셀트리온 제공 셀트리온의 자가면역질환 치료제 '스테키마'가 미국 우스테키누맙 바이오시밀러 시장에서 두 자릿수 점유율을 유지하며 시장 확대에 속도를 내고 있다. 또 다른 자가면역질환 치료제 '유플라이마'도...",
+          "source_url": "https://www.ggilbo.com/news/articleView.html?idxno=1179387",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성은 생산·셀트리온은 유통망‧SK바팜은 신약·…K바이오 ‘성장축’...",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-06T20:00:00Z",
+          "summary": "6일 업계에 따르면 삼성바이오로직스는 펩타이드 생산 역량, 셀트리온은 유럽 현지 유통·영업망... 셀트리온은 해외 판매망을 직접 확보하기 위해 인수합병 카드를 꺼냈다. 올해 5월 프랑스 헬스케어 기업 지프레의 지분...",
+          "source_url": "https://www.etoday.co.kr/news/view/2621998",
+          "relevance": "high"
+        },
+        {
+          "headline": "[AI시대, 권력 대이동-셀트리온] '신약개발·업무효율' 두 토끼 잡겠다....",
+          "publisher": "pointdaily.co.kr",
+          "published_at": "2026-09-06T16:20:00Z",
+          "summary": "셀트리온은 올해 국내 제약바이오 업계 중 가장 적극적으로 인공지능 전환(AX)에 나선 기업 중 하나로 꼽힌다. 서정진 셀트리온 회장도 연초 신년사를 통해 회사의 혁신성과 경쟁력을 높이는 방향으로 AI를...",
+          "source_url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=318063",
+          "relevance": "high"
+        },
+        {
+          "headline": "[mhn포토] 김서윤, 페어웨이 정조준",
+          "publisher": "mhnse.com",
+          "published_at": "2026-09-06T15:00:00Z",
+          "summary": "(파72ㅣ예선 6,695야드,본선 6,582야드)에서 2026시즌 스물두 번째 대회 ‘OK저축은행 읏맨 오픈(총상금 10억 원, 우승상금 1억 8천만 원)’ 최종 3라운드가 열렸다. 김서윤(셀트리온)이 1번홀 경기를 펼치고 있다.",
+          "source_url": "https://mhnse.com/news/articleView.html?idxno=1528272",
+          "relevance": "high"
+        },
+        {
+          "headline": "[mhn포토] 김서윤, 이 악물고 날린다",
+          "publisher": "mhnse.com",
+          "published_at": "2026-09-06T15:00:00Z",
+          "summary": "(파72ㅣ예선 6,695야드,본선 6,582야드)에서 2026시즌 스물두 번째 대회 ‘OK저축은행 읏맨 오픈(총상금 10억 원, 우승상금 1억 8천만 원)’ 최종 3라운드가 열렸다. 김서윤(셀트리온)이 1번홀 경기를 펼치고 있다.",
+          "source_url": "https://mhnse.com/news/articleView.html?idxno=1528270",
+          "relevance": "high"
+        },
+        {
+          "headline": "[mhn포토] 김서윤, 우승 정조준",
+          "publisher": "mhnse.com",
+          "published_at": "2026-09-06T14:59:00Z",
+          "summary": "(파72ㅣ예선 6,695야드,본선 6,582야드)에서 2026시즌 스물두 번째 대회 ‘OK저축은행 읏맨 오픈(총상금 10억 원, 우승상금 1억 8천만 원)’ 최종 3라운드가 열렸다. 김서윤(셀트리온)이 1번홀 경기를 펼치고 있다.",
+          "source_url": "https://mhnse.com/news/articleView.html?idxno=1528268",
+          "relevance": "high"
+        },
+        {
+          "headline": "[기고] 도전하라, 인천의 다음 유니콘은 당신이다",
+          "publisher": "kyeongin.com",
+          "published_at": "2026-09-06T11:34:00Z",
+          "summary": "제2·3 셀트리온 기대 오늘날 세계 산업과 경제 흐름을 바꾸고 있는 기업들의 시작은 생각보다 작았다. 애플과... 제2, 제3의 셀트리온이 인천에서 나오지 말라는 법은 없다. 시작은 거창할 필요가 없다. 중요한 것은 머릿속의...",
+          "source_url": "https://www.kyeongin.com/article/1770339",
+          "relevance": "high"
+        },
+        {
+          "headline": "[제물포럼] 인천대 공공의대 설립, 지금이 골든타임이다",
+          "publisher": "incheonilbo.com",
+          "published_at": "2026-09-06T09:06:00Z",
+          "summary": "인천은 세계적인 바이오 기업으로 이름을 올린 셀트리온과 삼성바이오로직스를 중심으로 새로운 성장동력을 얻었다. 셀트리온과 삼성바이오로직스가 지난 2002년, 2011년 각각 설립돼 인천에서 자리 잡으면서 인천은...",
+          "source_url": "https://www.incheonilbo.com/news/articleView.html?idxno=1331346",
+          "relevance": "high"
+        },
+        {
+          "headline": "바이오 메카 송도, 전력·용수 인프라 한계 속 지원 '全無'",
+          "publisher": "kihoilbo.co.kr",
+          "published_at": "2026-09-06T09:00:00Z",
+          "summary": "송도국제도시에는 삼성바이오로직스와 셀트리온이 생산시설을 운영하고 있으며 SK바이오사이언스와 롯데바이오로직스도 본사 인력을 송도로 이전할 예정이다. 최근 이재용 삼성전자 회장이 바이오산업에 대한 투자...",
+          "source_url": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3033745",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘바이오 도시’ 인천, 스타트업 육성 기반 주목 [모두의 창업 프로젝트...",
+          "publisher": "kyeonggi.com",
+          "published_at": "2026-09-06T07:57:00Z",
+          "summary": "인천은 송도국제도시를 중심으로 삼성바이오로직스, 셀트리온, 롯데바이오로직스, SK바이오사이언스, 싸토리우스 등 글로벌 바이오 기업들이 모여 국내 최대 바이오 클러스터를 형성하고 있다. 이와 함께 K...",
+          "source_url": "https://www.kyeonggi.com/article/20260906580214",
+          "relevance": "high"
+        },
+        {
+          "headline": "'준우승만 9번' 최예림, KLPGA 투어 데뷔 9년 만에 감격의 첫 우승",
+          "publisher": "stoo.com",
+          "published_at": "2026-09-06T06:54:00Z",
+          "summary": "2024시즌에는 셀트리온 퀸즈 마스터즈와 맥콜·모나 용평 오픈, 롯데 오픈에서 모두 준우승에 그치며 한 해에만 3번의 준우승을 기록하기도 했다. 불운은 올 시즌에도 이어졌다. 지난 6월 맥콜·모나 용평 오픈에서...",
+          "source_url": "http://www.stoo.com/article.php?aid=108734016106",
+          "relevance": "high"
+        },
+        {
+          "headline": "[KLPGA] 최예림, 준우승 징크스 깨고 ‘238전 239기’ 감격의 첫 우승",
+          "publisher": "swtvnews.com",
+          "published_at": "2026-09-06T06:52:00Z",
+          "summary": "2024 셀트리온 퀸즈 마스터즈, 맥콜 · 모나 용평 오픈, 롯데 오픈, 2026 맥콜 · 모나 용평 오픈) 준우승을 기록한 최예림은 이로써 ‘9전 10기’ 준우승 징크스 탈출에 성공하면서 데뷔 9시즌 만에 239번째 출전 대회였던...",
+          "source_url": "https://swtvnews.com/news/newsview.php?ncode=1065595785544110",
+          "relevance": "high"
+        },
+        {
+          "headline": "KLPGA 투어 2026시즌 우승자 명단…최예림, OK저축은행 읏맨 오픈 우승",
+          "publisher": "golfhankook.hankooki.com",
+          "published_at": "2026-09-06T06:52:00Z",
+          "summary": "5~7일--셀트리온 퀸즈 마스터즈---서교림 12--2026년 6월 11~14일--메르세데스-벤츠 제40회 한국여자오픈골프선수권대회---김민솔(2승) 13--2026년 6월 19~21일--인카금융 더헤븐 마스터즈---서교림(2승) 14...",
+          "source_url": "https://golfhankook.hankooki.com/news/articleView.html?idxno=20021784",
+          "relevance": "high"
+        },
+        {
+          "headline": "셀트리온제약, 모회사가 끌고 정부가 민다…바이오시밀러 성장 기대",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-06T05:46:00Z",
+          "summary": "셀트리온제약이 모회사 셀트리온의 바이오시밀러 성장과 정부의 산업 활성화 정책을 등에 업고 사업 확장에 나설 전망이다. IBK투자증권은 최근 보고서에서 셀트리온의 피하주사(SC) 제형 확대와 정부의 바이오시밀러...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484262",
+          "relevance": "high"
+        },
+        {
+          "headline": "김승원 측, 렘데시비르 ‘3일 승인’으로 특혜 반박…제넨셀과 비교 적...",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-06T02:11:00Z",
+          "summary": "시기와 개발단계 등의 차이를 고려하지 않고 코로나19 치료제라는 이유만으로 비교군을 정한다면 셀트리온 항체치료제 렉키로나(CT-P59) 사례도 있다. 셀트리온은 2020년 8월26일 CT-P59 임상 2·3상을 신청해 같은 해...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=01423526645577496&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성바이오로직스 노사, 오는 8일 사후조정 돌입…추석 전 타결 이룰까",
+          "publisher": "dnews.co.kr",
+          "published_at": "2026-09-06T00:20:00Z",
+          "summary": "경쟁사인 셀트리온의 추가 임금 인상 등 최근 달라진 업계 상황을 반영한 수정안을 사후조정 과정에서... 사후조정에서 사측이 셀트리온의 임금 인상 등 변화된 여건을 반영한 수정안을 어느 수준으로 제시하느냐가...",
+          "source_url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609041535043460723",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성에피스·셀트리온 '44조 키트루다' 잡아라…美 유통망 확보 잰걸음",
+          "publisher": "newsworks.co.kr",
+          "published_at": "2026-09-05T23:00:00Z",
+          "summary": "삼성바이오에피스와 셀트리온은 지난달 나란히 품목허가를 신청했고, 미국 유통망 확보를 위한 물밑 움직임도 빨라질 전망이다. 4일 금융감독원 전자공시시스템에 따르면 삼성바이오에피스와 셀트리온은 각각...",
+          "source_url": "https://www.newsworks.co.kr/news/articleView.html?idxno=852724",
+          "relevance": "high"
+        },
+        {
+          "headline": "트럼프 이중압박…K바이오 ‘영향 제한적’ 속 긴장",
+          "publisher": "mediapen.com",
+          "published_at": "2026-09-05T00:36:00Z",
+          "summary": "(사진 왼쪽부터) 기우성 셀트리온 부회장, 토드 윙지 셀트리온 브랜치버그 대표이사, 박경옥 셀트리온홀딩스 수석 부회장, 서정진 셀트리온그룹 회장, 토마스 킨 주니어 연방 뉴저지 하원의원, 앤디 김 연방 뉴저지...",
+          "source_url": "https://www.mediapen.com/news/view/1121510",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간 거래소 외국인] SK하이닉스·삼성전자 대거 팔고 우리금융지주·...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-05T00:18:00Z",
+          "summary": "또 HD현대일렉트릭, 삼성화재, LS ELECTRIC, 한화에어로스페이스, 삼성에피스홀딩스, 두산퓨얼셀, 산일전기, LG화학, 대우건설, 셀트리온, 현대해상도 외국인 순매도 상위 종목으로 집계됐다. 반도체 대장주에 대한 외국인의...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484098",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘신경과학계의 GLP-1’ 오렉신…글로벌 개발 경쟁 본격화",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-04T23:02:00Z",
+          "summary": "◇국내선 셀트리온·아름테라퓨틱스 도전 국내에서도 오렉신 작용제 개발이 시작됐다. 셀트리온과 국내 바이오벤처 아름테라퓨틱스가 공동 개발하는 OX2R 작용제가 대표적이다. 양사가 ‘신규한 오렉신2 수용체...",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609040194",
+          "relevance": "high"
+        },
+        {
+          "headline": "K-바이오, 미국 사업 ‘껑충’…관세 우려에도 현지화 속도",
+          "publisher": "dailypharm.com",
+          "published_at": "2026-09-04T21:02:00Z",
+          "summary": "셀트리온은 1년 새 미국 지역 매출이 3배 이상 늘었고, SK바이오팜은 전년동기 대비 42% 증가했다.... 삼성바이오로직스와 셀트리온은 현지 생산시설을 잇달아 확보했다. GC녹십자는 원료 공급망, SK바이오팜은 판매...",
+          "source_url": "https://www.dailypharm.com/user/news/342189?REFERER=NP",
+          "relevance": "high"
+        },
+        {
+          "headline": "[제약공시 책갈피] 9월 1주차 - 알테오젠·유한양행 外",
+          "publisher": "medipana.com",
+          "published_at": "2026-09-04T21:00:00Z",
+          "summary": "셀트리온은 1000억원을 투입해 자사주 52만4384주를 장내에서 취득하고 전량 소각하기로 했다. 연결... 지급보증 ◆셀트리온, 1000억 자사주 매입 후 전량 소각 ◆국제약품 남영우 명예회장, 지분 8.58% 남태훈에 증여...",
+          "source_url": "https://www.medipana.com/news/articleView.html?idxno=417103",
+          "relevance": "high"
+        },
+        {
+          "headline": "[심층분석] 코스피 반등 장세속 대형주 동반 상승…시총 상위 10개 종목...",
+          "publisher": "thefairnews.co.kr",
+          "published_at": "2026-09-04T15:00:00Z",
+          "summary": "LG에너지솔루션과 삼성바이오로직스는 기관의 순매수에 힘입어 상승 마감했으며 셀트리온 역시 바이오 업종 전반의 투자심리 개선에 힘입어 거래량을 늘리며 흐름을 이어갔다. 자동차와 현대차그룹주도 안정적인 흐름을...",
+          "source_url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87148",
+          "relevance": "high"
+        },
+        {
+          "headline": "[증시 프리즘] 반도체·2차전지·바이오 삼각 편대…코스피 반등 장세 주...",
+          "publisher": "thefairnews.co.kr",
+          "published_at": "2026-09-04T15:00:00Z",
+          "summary": "삼성바이오로직스와 셀트리온 등 시가총액 상위 바이오 기업들의 거래량이 증가하면서 업종 전반에 온기가 돌았고 반도체에 이어 지수 상승을 견인하는 주요축으로 작동했다. 시장 전문가들은 특정 업종에만 매수세가...",
+          "source_url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87149",
+          "relevance": "high"
+        },
+        {
+          "headline": "[증시 오늘] 코스피 6680선 반등",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-04T11:30:00Z",
+          "summary": "20%, 셀트리온 0.90%, KB금융 2.40%, 신한지주 1.80%, LG화학 0.50% 상승했다. 코스닥은 전 거래일 대비 23.... 10%), 셀트리온제약(1.60%), HPSP(2.90%)가 올랐다. 원·달러 환율은 오후 3시 30분 기준 전 거래일 대비 8.90원...",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609040017",
+          "relevance": "high"
+        },
+        {
+          "headline": "[공시] 9월 7일, 코스피 상장사 42개 종목 자사주 매수 신청",
+          "publisher": "newstnt.com",
+          "published_at": "2026-09-04T11:22:00Z",
+          "summary": "다음으로 셀트리온(068270)과 IPARK현대산업개발(294870)이 각각 4만주, ​현대지에프홀딩스(005440) 3만주, ​현대퓨처넷(126560) 1만7천주, ​태원물산(001420) 1만주가 신청됐다. 이어 현대그린푸드(453340) 5...",
+          "source_url": "https://www.newstnt.com/news/articleView.html?idxno=716792",
+          "relevance": "high"
+        },
+        {
+          "headline": "[코스피 지수선물 옵션] 삼성전자·SK하이닉스 오르고 금융주는 울상…...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-04T07:36:00Z",
+          "summary": "삼성바이오로직스와 삼성에피스가 하락한 가운데 한미약품과 유한양행, SK바이오팜, 셀트리온, 알테오젠은 상승했다. 신약 개발과 기술수출, 실적 전망 등에 따라 같은 바이오 업종에서도 투자자들의 평가가 엇갈렸다....",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484048",
+          "relevance": "high"
+        },
+        {
+          "headline": "[거래소 외국인] SK하이닉스 삼성전기 SK스퀘어 삼성전자우 한미반도체...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-04T07:00:00Z",
+          "summary": "KT&G와 효성중공업, 셀트리온도 순매도 상위권에 이름을 올렸다. 포스코인터내셔널 역시 외국인이 순매도한 종목으로 나타났다. 외국인 수급을 업종별로 보면 이날 매수와 매도의 방향이 뚜렷하게 갈렸다. 반도체...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484013",
+          "relevance": "high"
+        },
+        {
+          "headline": "GTX-C 천안아산 연장 검토…충청 메가프로젝트 연계",
+          "publisher": "newskr.kr",
+          "published_at": "2026-09-04T05:22:00Z",
+          "summary": "삼성 140조원, SK하이닉스 100조원, 셀트리온 2조원 규모다. 여기에 인공지능(AI) 데이터센터 투자 150조원을 더해 392조원이 됐다. 박수현 충남지사는 이 투자를 'AI 수도 충남' 실현의 발판으로 삼겠다고 말했다. 도내 15개...",
+          "source_url": "http://www.newskr.kr/news/articleView.html?idxno=106121",
+          "relevance": "high"
+        },
+        {
+          "headline": "셀트리온, 유럽 'ERS 총회' 참가…핵심층 겨냥 '옴리클로' 마케팅 강화",
+          "publisher": "goodkyung.com",
+          "published_at": "2026-09-04T05:18:00Z",
+          "summary": "셀트리온이 스페인에서 개최되는 호흡기질환 분야 세계 최대 규모 학술행사에 참가한다. 만성 자발성 두드러기 및 알레르기성 천식 치료제 '옴리클로' 라인업을 확대한 셀트리온이 핵심 유럽 학회에 참석하는 주요...",
+          "source_url": "https://www.goodkyung.com/news/articleView.html?idxno=291014",
+          "relevance": "high"
+        },
+        {
+          "headline": "송도바이오클러스터 키우는 인천시...세계 1위 '바이오도시' 속도",
+          "publisher": "news.ifm.kr",
+          "published_at": "2026-09-04T05:14:00Z",
+          "summary": "셀트리온도 지난 3월 송도캠퍼스에 1조 2265억원을 투입해 4·5공장을 동시에 증설한다고 발표했다. 두 공장... 삼성바이오로직스와 셀트리온, 롯데바이오로직스의 생산시설 확대에 SK바이오사이언스의 연구·공정개발...",
+          "source_url": "https://news.ifm.kr/news/articleView.html?idxno=478654",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전닉스 상승폭 키우자 코스피 6700 눈앞…개인은 2.5조 순매도 [fn오후...",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-04T04:27:00Z",
+          "summary": "NAVER(2.89%)와 셀트리온(0.27%)은 오르고 있지만 신한지주(-3.49%), KB금융(-3.32%), 삼성바이오로직스(-2.64%), 삼성생명(-2.15%), LG에너지솔루션(-1.92%) 등은 하락하고 있다. 규모별로는 대형주 지수가 1.79% 상승한...",
+          "source_url": "https://www.fnnews.com/news/202609041323414083",
+          "relevance": "high"
+        },
+        {
+          "headline": "[K바이오 돈의 경로] 신민철 CFO 18조 곳간 운용 과제｜셀트리온②",
+          "publisher": "bloter.net",
+          "published_at": "2026-09-04T03:33:00Z",
+          "summary": "셀트리온은 시가총액이 약 44조원에 달하는 제약바이오 대장주로서 약 2조원의 매출을 올리고 있다.... 셀트리온의 곳간지기는 신민철 최고재무책임자(CFO) 사장(55)이다. 그는 회사의 관리부문 부문장으로서 10년 넘게...",
+          "source_url": "https://www.bloter.net/news/articleView.html?idxno=672710",
+          "relevance": "high"
+        },
+        {
+          "headline": "신약 성과에 K-뷰티 가세…제약바이오 상반기 수출 호조",
+          "publisher": "dailypharm.com",
+          "published_at": "2026-09-04T03:08:00Z",
+          "summary": "한미약품은 1116억원에서 1935억원으로 73%, 셀트리온은 1조1415억원에서 1조8434억원으로 61%, 에스티팜은 1137억원에서 1701억원으로 50% 각각 늘었다. 또한 SK바이오팜과 파마리서치는 40% 이상, 휴젤과 대웅제약은 30% 이상...",
+          "source_url": "https://www.dailypharm.com/user/news/342146?REFERER=NP",
+          "relevance": "high"
+        },
+        {
+          "headline": "로수젯 ODT, 별도 급여기준 설정해 등재 예상",
+          "publisher": "hitnews.co.kr",
+          "published_at": "2026-09-04T02:02:00Z",
+          "summary": "에제티미브 단일제 45%를 각각 산정해 합산한 금액으로 등재 절차를 밟을 것으로 보인다. 한편 로수젯ODT는 지엘파마와 동국제약, 유니메드제약, 삼진제약, 녹십자, 마더스제약, 셀트리온제약 등이 허가를 획득했다.",
+          "source_url": "https://www.hitnews.co.kr/news/articleView.html?idxno=78918",
+          "relevance": "high"
+        },
+        {
+          "headline": "[경제 인사이드] 대법원 판결과 한국 기업들의 B2B '쏠림'",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-04T01:44:00Z",
+          "summary": "(8위)와 셀트리온(17위), 네이버(23위)가 전부였다. 삼성바이오로직스와 셀트리온, 네이버를 전형적 소비재 생산기업이라고 보기도 어렵다. 삼성전자와 LG전자(22위)가 스마트폰과 TV 냉장고 같은 가전제품을 생산하지만...",
+          "source_url": "https://www.news2day.co.kr/article/20260904500094",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전닉스에 쏠린 상승장…코스피 1% 올라도 명암 엇갈려 [fn오전시황]",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-04T01:41:00Z",
+          "summary": "두산에너빌리티와 셀트리온, 현대모비스는 보합이다. 업종별로는 전기·전자(1.95%), 기계·장비(1.73%), IT 서비스(1.72%) 등이 상승하고 있다. 다만 지수 상승에도 유가증권시장에서는 하락 종목이 441개로 상승...",
+          "source_url": "https://www.fnnews.com/news/202609041026307836",
+          "relevance": "high"
+        },
+        {
+          "headline": "글로벌 빅테크 손잡는 K-바이오… AI 협력 확대",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-04T01:32:00Z",
+          "summary": "셀트리온제약은 AWS 생성형 AI를 의약품 공급망 관리에 활용하고 있다. Amazon Bedrock과 검색증강생성(RAG), 멀티 에이전트 기술을 결합해 사업계획과 재고를 포함한 내부 자료와 의약품 관련 외부 정보를 검색...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727347",
+          "relevance": "high"
+        },
+        {
+          "headline": "“이번에도 역시, 외국인은 이미 움직였네”…금리충격 전부터 ‘소·금...",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-04T01:22:00Z",
+          "summary": "최근 한 달간 외국인 순매수 상위 종목에는 셀트리온·파마리서치·삼성바이오로직스 등 바이오·헬스케어주가 다수 이름을 올렸다. 한국금융지주와 키움증권 등 증권주, 실리콘투와 삼양식품 등 소비재 종목에도 외국인...",
+          "source_url": "https://www.mk.co.kr/article/12144225",
+          "relevance": "high"
+        },
+        {
+          "headline": "신풍제약도 '프롤리아' 바이오시밀러 허가…7파전 경쟁 예고",
+          "publisher": "apsk.co.kr",
+          "published_at": "2026-09-04T00:38:00Z",
+          "summary": "바이오시밀러는 셀트리온 '스토보클로', 삼성바이오에피스 '오보덴스', LG화학 '주본티', HK이노엔 '이잠비아... 현재 오리지널 프롤리아는 암젠이 종근당과 공동판매하고 있으며, 셀트리온은 대웅제약과 손잡고...",
+          "source_url": "https://www.apsk.co.kr/news/articleView.html?idxno=540355",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 장초반 1%대 상승…정유株 동반 강세",
+          "publisher": "news.mtn.co.kr",
+          "published_at": "2026-09-04T00:34:00Z",
+          "summary": "네이버(2.4%), 현대차(1.0%), LG전자(1.6%), SK스퀘어(0.9%), 셀트리온(0.3%) 등은 강세인 반면 삼성바이오로직스(-0.3%), HD현대중공업(-0.6%), POSCO홀딩스(-0.2%) 등은 내림세다. 이밖에 S-Oil(8.7%), HD현대(7.2%), GS(5.9%), SK이노베이션...",
+          "source_url": "https://news.mtn.co.kr/news-detail/2026090409122437321",
+          "relevance": "high"
+        },
+        {
+          "headline": "신풍제약, 프롤리아 바이오시밀러 허가…실적 반등 이끌 새 성장축 될까",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-04T00:18:00Z",
+          "summary": "국내 데노수맙 시장은 약 1600억원대 규모로 추정되며, 이미 셀트리온제약·삼성바이오에피스·LG화학... 실제 선발주자인 셀트리온제약의 데노수맙 바이오시밀러 '스토보클로'는 2025년 118억원의 매출을 올렸다. 출시...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82184",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 의약품 시장서 존재감 올리는 셀트리온",
+          "publisher": "shinailbo.co.kr",
+          "published_at": "2026-09-04T00:08:00Z",
+          "summary": "셀트리온이 세계 최대 의약품 시장인 미국에서 탄탄히 입지를 다지고 있다. 특히 자가면역질환 치료영역에서의 존재감을 끌어올리는 모습이다. 셀트리온은 후속 제품군의 처방 확대에 더해 신규제품을 속속 추가하며...",
+          "source_url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5058456",
+          "relevance": "high"
+        },
+        {
+          "headline": "[앵커 선도대학을 가다/조선이공대학교] 전공 넘어 '지역과 산업' 배우...",
+          "publisher": "news.unn.net",
+          "published_at": "2026-09-04T00:00:00Z",
+          "summary": "세방리튬배터리, 광주글로벌모터스, 셀트리온 등 25개 산업체와 연계해 지역정주취업 지원체계를 운영하고 있으며, 표준현장실습 정규교과 49개 교과목을 통해 학생들이 실제 산업현장에서 직무를 경험할 수 있도록...",
+          "source_url": "https://news.unn.net/news/articleView.html?idxno=596730",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼바로직스 노사, 사후조정 D-4…노조 요구 받아 들여질까",
+          "publisher": "srtimes.kr",
+          "published_at": "2026-09-03T23:40:00Z",
+          "summary": "임단협 대치 100일 이상 이어져…노조 측\"셀트리온에 연봉 역전 불가\" 주장 사 측 \"적절한 협의안 바탕 합의... 노조는 사후조정에 앞서 경쟁사 셀트리온의 보상 수준을 마지노선으로 보고 있다. 이 수정안보다...",
+          "source_url": "http://www.srtimes.kr/news/articleView.html?idxno=211561",
+          "relevance": "high"
+        },
+        {
+          "headline": "[KLPGA 2026 이스트원·오션비치 드림투어 16차전] 손연정, 생애 첫 드림...",
+          "publisher": "chungnamilbo.co.kr",
+          "published_at": "2026-09-03T23:30:00Z",
+          "summary": "(24 셀트리온), 김연희(25)가 8언더파 136타를 쳐 두터운 공동 3위 그룹을 형성했다. 한편, 이번 대회 우승으로 상금 1050만 원을 추가한 손연정은 누적 상금 2272만 1202원으로 상금순위를 32위에서 16위까지 끌어...",
+          "source_url": "http://www.chungnamilbo.co.kr/news/articleView.html?idxno=907624",
+          "relevance": "high"
+        },
+        {
+          "headline": "'사후조정' 앞둔 삼성바이오…노사, 임금·성과급 두고 접점 모색 '난제...",
+          "publisher": "youthdaily.co.kr",
+          "published_at": "2026-09-03T23:02:00Z",
+          "summary": "셀트리온이 지난 7월 전 직원 연봉 인상률을 일괄적으로 5% 올리고 고정 인센티브를 연 200만원 늘리는 추가 처우 개선안을 내놓은 것도 삼성바이오로직스 노조의 협상 압박 요인으로 작용하고 있다. 노조는 이를 교섭...",
+          "source_url": "https://www.youthdaily.co.kr/news/article.html?no=226376",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 76.73,
+      "oldest_relevant_at": "2026-09-03T23:02:00Z",
+      "collected_at": "2026-09-07T03:45:30.908815Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003751",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003751"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002932",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002932"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260316001415",
+          "published_at": "2026-03-16T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001415"
+        }
+      ],
+      "collected_at": "2026-09-07T03:45:30.395327Z",
+      "request_id": "e30fe82b-96eb-4ff3-a081-d56cd4b33d38",
+      "source_type": "dart",
+      "stock_code": "068270",
+      "company_name": "셀트리온"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260316001415",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "신용위험은 통상적인 거래 및 투자활동에서 고객 또는 거래 상대방이 계약 조건 상 의무사항을 이행하지 못하였을 때 발생합니다. 신용위험은 보유하고 있는 수취채권 및 확정계약을 포함한 도소매 거래처에 대한 신용위험뿐 아니라 현금성자산, 채무상품의 계약 현금흐름, 파생금융상품 및 금융기관예치금으로부터 발생하고 있습니다. 연결기업은 대부분의 금융기관예치금을 신한은행, 한국산업은행 등 우량 시중은행에예치하고 있으므로 금융기관으로부터의 신용위험은 제한적입니다. 매출거래처의 경우 장기간 거래가능성과 연결기업과 사업관계를 원만히 유지할 수 있는 우량거래처를 선별후 거래하여 신용위험을 최소화하였습니다.\n보고기간 종료일 현재 신용위험에 대한 최대 노출정도는 다음과 같습니다.\n(단위: 천원)\n구분 | 2025.12.31 | 2024.12.31\n현금및현금성자산(*) | 1,119,186,212 | 996,410,679\n단기금융자산 | 120,296,086 | 146,654,878\n매출채권 | 1,806,685,314 | 1,215,250,841\n기타수취채권 | 69,288,405 | 151,947,928\n계약자산 | 179,829,209 | 213,113,846\n장기금융자산 | 5,000,000 | 4,016,122\n(*) 재무상태표의 '현금및현금성자산'과의 차이 금액은 직접 보유하고 있는 현금입니다.\n다. 유동성위험\n연결기업은 제품개발에 많은 투자가 이루어지는 사업의 특성상 적정 유동성의 유지가 매우 중요합니다. 연결기업은 적정 유동성의 유지를 위하여 자금수지 예측, 필요 현금수준의 추정 및 자금수지 관리 등을 통하여 적정 유동성을 유지하며, 계획대비 실적관리를 통하여 유동성위험을 최소화하고 있습니다. 유동성에 대한 예측시에는 연결기업의 자금조달 계획, 약정 준수, 연결기업 내부의 목표재무비율 및 통화에 대한 제한과 같은 외부법규나 법률 요구사항이 있는 경우 그러한 요구사항을 고려하고 있습니다.",
+          "score": 0.515717,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "구분 | 세후이익에 대한 영향 | 자본에 대한 영향\n2025.12.31 | 2024.12.31 | 2025.12.31 | 2024.12.31\n19% 상승 시 | 19% 하락 시 | 19% 상승 시 | 19% 하락 시 | 19% 상승 시 | 19% 하락 시 | 19% 상승 시 | 19% 하락 시\nKOSDAQ | - | - | - | - | 787,725 | (787,725) | 1,131,956 | (1,131,956)\n(3) 이자율위험\n이자율위험은 미래의 시장이자율 변동에 따라 예금 또는 차입금 등에서 발생하는 이자수익 및 이자비용이 변동될 위험으로서 이는 주로 변동금리부 조건의 예금과 차입금에서 발생하고 있습니다. 연결기업의 이자율위험관리의 목표는 이자율변동으로 인한 불확실성과 순이자비용의 최소화를 추구함으로써 기업의 가치를 극대화하는데 있습니다.\n보고기간 종료일 현재 다른 모든 변수가 일정하고 실제 해당연도 변동금리 변동폭을 근거로 변동이자부 차입금의 이자율이 30bp(전기 30bp) 변동 시 세후이익 및 자본에 미치는 영향(차입원가의 자본화 효과는 고려하지 않음)은 다음과 같습니다.\n(단위: 천원)\n구분 | 세후이익에 대한 영향 | 자본에 대한 영향\n2025.12.31 | 2024.12.31 | 2025.12.31 | 2024.12.31\n30bp 상승 시 | 30bp 하락 시 | 30bp 상승 시 | 30bp 하락 시 | 30bp 상승 시 | 30bp 하락 시 | 30bp 상승 시 | 30bp 하락 시\n이자비용 | (6,160,150) | 6,160,150 | (3,017,781) | 3,017,781 | (6,160,150) | 6,160,150 | (3,017,781) | 3,017,781\n나. 신용위험",
+          "score": 0.482892,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "연결기업은 여러 활동으로 인하여 발생하는 시장위험(외환위험, 가격위험, 이자율위험), 신용위험 및 유동성위험과 같은 다양한 금융위험에 노출되어 있습니다. 연결기업의 전반적인 위험관리정책은 금융시장의 예측불가능성에 초점을 맞추고 있으며 재무성과에 잠재적으로 불리할 수 있는 효과를 최소화하는데 중점을 두고 있습니다.\n위험관리는 이사회에서 승인한 정책에 따르며, 재무위험 관리정책 수립 및 재무위험의 측정, 평가 및 헷지 등을 실행하고 있습니다.\n가. 시장위험\n(1) 외환위험\n연결기업은 정상적인 거래로부터 기인하는 환율변동위험에 노출되어 있습니다. 동 위험의 대부분은 연결기업의 기능통화와는 다른 통화로 거래되는 구매대금 등으로부터 발생합니다. 연결기업이 외환위험에 노출되어 있는 주요 통화는 USD, EUR 등 입니다.\n연결기업은 외환위험이 최소화 될 수 있도록 사전적으로 환율변동위험을 관리하고 있습니다. 환율관리의 기본전략은 환율 영향으로 인한 손익 변동성을 축소하는 것입니다. 대부분의 환위험이 금융자산 측면에 노출되어 있으며, 매일 외환시장의 모니터링과 각 관계기관에서 발행된 외환시장 동향을 참고하여 외환의 변동에 따라 Lead and Lag 및 헷지의 방법으로 환 위험을 축소하고 있습니다.\n보고기간 종료일 현재 다른 모든 변수가 일정하고 실제 해당연도 주요 통화의 가중평균 가격 변동률을 기초로 당기 8%(전기: 8%) 변동 시 연결기업의 세전이익에 미치는 영향은 다음과 같습니다.\n(단위: 천원)",
+          "score": 0.475155,
+          "match_type": "vector"
+        },
+        {
+          "section": "I. 회사의 개요 > 1. 회사의 개요",
+          "text": "등급 | 등급의 정의\nA1 | 단기적인 채무상환능력이 매우 우수하며, 예측 가능한 장래의 환경변화에 영향을 받을 가능성이 낮다.\nA2 | 단기적인 채무상환능력이 우수하지만, 장래의 환경변화에 의해 영향을 받을 가능성이 상위 등급에 비해서는 높다.\nA3 | 단기적인 채무상환능력은 있으나, 장래의 환경변화에 따라 저하될 가능성이 내포되어 있다.\nB | 최소한의 단기적인 채무상환능력은 인정되나, 그 안정성은 가변적이어서 투기적이다.\nC | 단기적인 채무상환능력이 의문시되며, 채무불이행이 발생할 가능성이 높다.\nD | 현재 채무불이행 상태에 있다.\n아. 회사의 주권상장(또는 등록ㆍ지정)여부 및 특례상장에 관한 사항\n주권상장(또는 등록ㆍ지정)현황 | 주권상장(또는 등록ㆍ지정)일자 | 특례상장 유형\n유가증권시장 상장 | 2018년 02월 09일 | 해당사항 없음",
+          "score": 0.451036,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "구분 | 2025.12.31 | 2024.12.31\n8% 상승 시 | 8% 하락 시 | 8% 상승 시 | 8% 하락 시\nUSD | 68,639,327 | (68,639,327) | 33,837,101 | (33,837,101)\nEUR | 219,998,371 | (219,998,371) | 5,710,709 | (5,710,709)\nGBP | 13,335,319 | (13,335,319) | (56,507) | 56,507\nJPY | 9,279,288 | (9,279,288) | (182,031) | 182,031\nCHF | 1,039,944 | (1,039,944) | (17,808) | 17,808\n합계 | 312,292,249 | (312,292,249) | 39,291,464 | (39,291,464)\n(2) 가격위험\n연결기업은 연결재무상태표상 당기손익-공정가치 측정 금융자산 또는 기타포괄손익-공정가치측정금융자산으로 분류되는 연결기업 보유 지분증권의 가격위험에 노출되어 있습니다. 지분증권에 대한 투자로 인한 가격위험을 관리하기 위해 연결기업은 포트폴리오를 분산투자하고 있으며 포트폴리오의 분산투자는 연결기업이 정한 정책에 따라 이루어집니다.\n연결기업이 보유하고 있는 상장주식은 공개시장에서 거래되고 있으며, KOSDAQ 주가지수에 속해 있습니다.\n상장주식 관련 주가지수의 상승 또는 하락이 연결기업의 세후이익 및 자본(법인세효과 반영 전)에 미치는 영향은 아래 표와 같습니다. 이 분석은 다른 변수들은 일정하며 연결기업이 보유하고 있는 상장주식은 과거 해당 지수와의 상관관계에 따라 움직인다는 가정하에 실제 해당 연도 주가지수 변동률을 기초로 19%(전기 19%) 상승 또는 하락한 경우를 분석하였고, 연결기업의 비상장주식은 추정 현금흐름의 편차가 유의적이고 다양한 추정치의 발생확률을 신뢰성 있게 평가할 수 없어 분석에서 제외하였습니다.\n(단위: 천원)",
+          "score": 0.4395,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001415",
+      "collected_at": "2026-09-07T03:45:30.460118Z",
+      "request_id": "cf9d30f8-ff22-4c4e-9e12-4a656a09028f",
+      "source_type": "dart",
+      "stock_code": "068270",
+      "company_name": "셀트리온"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "셀트리온",
+      "stock_code": "068270",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:45:30.030814+00:00",
+        "to": "2026-09-07T03:45:30.030814+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 1051,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 901.0,
+        "ratio": 1.17,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 25,
+        "neutral_count": 15,
+        "negative_count": 60
+      },
+      "top_topics": {
+        "expectations": [
+          "키트루다 바이오시밀러 임상 진전",
+          "임상·허가 이후 상업화",
+          "자사주 매입·소각 확대",
+          "단기 주가 반등"
+        ],
+        "concerns": [
+          "외국인 지속 매도",
+          "공매도 압력 의구심",
+          "자사주 매입의 주가 부양 효과 부족",
+          "실적·공시 호재의 주가 반영 부족",
+          "거래량과 투자 관심 감소"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "키트루다 바이오시밀러 임상계획 변경 승인을 호재로 받아들인다.",
+          "posted_at": "2026-09-06T22:40:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "임상 이후 허가와 출시를 거쳐 판매로 이어지길 기대한다.",
+          "posted_at": "2026-09-07T02:53:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "소각을 전제로 자사주 매입 확대를 요구한다.",
+          "posted_at": "2026-09-07T02:46:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "주가 흐름에서 강한 반등 가능성을 찾고 있다.",
+          "posted_at": "2026-09-07T00:36:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "외국인의 지속적인 매도를 주가 부담으로 본다.",
+          "posted_at": "2026-09-07T01:26:00+00:00",
+          "sentiment": "negative"
+        }
+      ],
+      "collected_at": "2026-09-07T03:45:30.030814+00:00",
+      "fgi_mean": 42.85,
+      "fgi_latest": {
+        "fgi": 40.48,
+        "label": "중립",
+        "as_of": "2026-09-07T03:15:00+00:00",
+        "post_count": 4,
+        "valence_percentile": 31.7
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "투자판단관련주요경영사항              (CTP51(키트루다 바이오시밀러) 미국 임상 3상 시험계획 변경신청 승인)",
+          "receipt_number": "20260907800004",
+          "published_at": "2026-09-07T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800004"
+        },
+        {
+          "report_name": "투자판단관련주요경영사항              (CTP44(다잘렉스 바이오시밀러) 한국 임상 3상 시험계획 변경신청 승인)",
+          "receipt_number": "20260907800002",
+          "published_at": "2026-09-07T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800002"
+        },
+        {
+          "report_name": "수시공시의무관련사항(공정공시)              ",
+          "receipt_number": "20260831800153",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800153"
+        },
+        {
+          "report_name": "주요사항보고서(자기주식취득결정)",
+          "receipt_number": "20260831000538",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831000538"
+        },
+        {
+          "report_name": "주식등의대량보유상황보고서(일반)",
+          "receipt_number": "20260828001911",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828001911"
+        },
+        {
+          "report_name": "풍문또는보도에대한해명(미확정)              ",
+          "receipt_number": "20260825800463",
+          "published_at": "2026-08-25T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825800463"
+        },
+        {
+          "report_name": "투자판단관련주요경영사항              (CTP51(키트루다 바이오시밀러) 한국 품목허가 신청)",
+          "receipt_number": "20260824800001",
+          "published_at": "2026-08-24T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260824800001"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260821000493",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000493"
+        }
+      ],
+      "collected_at": "2026-09-07T03:45:30.553036Z",
+      "request_id": "70816154-333a-476d-a8e0-534fa3519602",
+      "source_type": "dart",
+      "stock_code": "068270",
+      "company_name": "셀트리온"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260831000538": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260831000538",
+        "document_type": "disclosure",
+        "content": "주요사항보고서 / 거래소 신고의무 사항\n금융위원회 / 한국거래소 귀중 | 2026년 08월 31일\n회 사 명 : | 주식회사 셀트리온\n대 표 이 사 : | 서 진 석\n본 점 소 재 지 : | 인천광역시 연수구 아카데미로 23\n(전 화) 1661-8722\n(홈페이지) http://www.celltrion.com\n작 성 책 임 자 : | (직 책) 신고업무담당이사 | (성 명) 신 민 철\n(전 화) 1661-8722\n자기주식 취득 결정\n1. 취득예정주식(주) | 보통주식 | 524,384\n기타주식 | -\n2. 취득예정금액(원) | 보통주식 | 100,000,028,800\n기타주식 | -\n3. 취득예상기간 | 시작일 | 2026년 09월 01일\n종료일 | 2026년 11월 30일\n4. 보유예상기간 | 시작일 | -\n종료일 | -\n5. 취득목적 | 주가 안정 및 주주가치 제고\n6. 취득방법 | 유가증권시장을 통한 장내 매수\n7. 위탁투자중개업자 | NH투자증권(NH INVESTMENT & SECURITIES CO., LTD.)\n8. 취득 전 자기주식 보유현황 | 배당가능이익범위 내 취득(주) | 보통주식 | 586,927 | 비율(%) | 0.3\n기타주식 | - | 비율(%) | -\n기타취득(주) | 보통주식 | 3,396,528 | 비율(%) | 1.5\n기타주식 | - | 비율(%) | -\n9. 취득결정일 | 2026년 08월 31일\n- 독립(사외)이사* 참석여부 | 참석(명) | 5\n불참(명) | 0\n- 감사(독립(사외)이사*가 아닌 감사위원)참석여부 | -\n10. 1일 매수 주문수량 한도 | 보통주식 | 138,878\n기타주식 | -\n* 상장회사는 독립이사, 비상장회사는 사외이사에 해당\n11. 기타 투자판단에 참고할 사항\n- 상기 '2. 취득예정금액(원)'은 이사회 결의일 전일 종가(2026.08.28, 190,700원) 기준이며, 향후 주가 변동에 따라 실제 취득 금액은 변동될 수 있습니다.- 상기 '4. 보유예상기간'은 최종 취득일로부터 6개월 이상입니다.- 상기 '9. 취득결정일 - 감사(독립(사외)*이사가 아닌 감사위원)참석여부'와 관련하여, 당사의 감사위원은 전원 독립이사를 겸직하고 있습니다.- 상기 '10. 1일 매수 주문수량 한도' 138,878주의 산출근거 ※ 산출근거 : [ 아래 ①과 ② 중 많은 수량 ]과 ③ 중 적은 수량 ① 취득신고주식수의 10% : 52,438주 ② 이사회 결의일 전일로부터의 1개월간 일평균거래량의 25% : 138,878주 ③ 발행주식총수의 1% : 2,326,171주\n- 본 공시에 따라 취득하는 자기주식은 전량 소각할 계획입니다.\n【자기주식 취득금액 한도】\n항 목 | 금 액\n1. 직전사업연도 말 현재 상법상 배당가능이익 한도 | 가. 순자산액 | 17,409,723,386,976\n나. 자본금의 액 | 239,361,656,000\n다. 직전 사업연도까지 적립된 자본준비금과 이익준비금의 합계액 | 12,297,205,669,556\n라. 대통령령이 정하는 미실현이익 | 1,507,850,456\n소계(가-나-다-라) | 4,871,648,210,964\n2. 직전 사업연도말 이후 자기주식 취득금액 | 229,479,321,724\n3. 직전 사업연도말 이후 정기주주총회에서 결의된 이익배당금액 및 관련 이익준비금 | 180,355,827,300\n4. 직전 사업연도말 이후 이사회에서 결의된 분기ㆍ중간배당금액 및 관련 이익준비금 | -\n5. 신탁계약의 계약금액 | -\n6. 직전 사업연도말 이후 자기주식 처분시 처분주식의 취득원가 (이동평균법 적용) | 1,910,078,940\n자기주식 취득금액 한도(1-2-3-4-5+6) | 4,463,723,140,880\n【자기주식 취득 결정 전 자기주식 보유현황】\n(단위 : 주)\n취득방법 | 주식의 종류 | 기초수량 | 변동 수량 | 기말수량 | 비고\n취득(+) | 처분(-) | 소각(-)\n배당가능이익범위이내취득 | 직접취득 | 장내 직접 취득 | 보통주식 | 7,165,466 | 1,075,904 | 11,379 | 7,643,064 | 586,927 | -\n기타주식 | - | - | - | - | - | -\n장외직접 취득 | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n공개매수 | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n소계(a) | 보통주식 | 7,165,466 | 1,075,904 | 11,379 | 7,643,064 | 586,927 | -\n기타주식 | - | - | - | - | - | -\n신탁계약에 의한취득 | 수탁자 보유물량 | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n현물보유물량 | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n소계(b) | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n기타 취득(c) | 보통주식 | 5,182,379 | 170,062 | - | 1,955,913 | 3,396,528 | 주식매수청구권 행사에 따른 입고,무상증자에 따른 단수주 취득\n기타주식 | - | - | - | - | - | -\n총 계(a+b+c) | 보통주식 | 12,347,845 | 1,245,966 | 11,379 | 9,598,977 | 3,983,455 | -\n기타주식 | - | - | - | - | - | -\n- 상기 '기초수량'은 당해 사업연도 개시일(2026.01.01) 기준 보유 수량입니다.- 상기 '기말수량'은 공시서류작성기준일(2026.08.31) 기준 보유 수량입니다.",
+        "content_truncated": false,
+        "total_chars": 2819,
+        "summary": "주요사항보고서(자기주식취득결정) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831000538",
+        "collected_at": "2026-09-07T03:45:31.163874Z",
+        "report_name": "주요사항보고서(자기주식취득결정)",
+        "published_at": "2026-08-31T00:00:00Z",
+        "request_id": "3b49176b-99e2-4cd8-a679-b5f2368739c5",
+        "source_type": "dart"
+      }
+    },
+    "20260825800463": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260825800463",
+        "document_type": "disclosure",
+        "content": "셀트리온/풍문 또는 보도에 대한 해명(미확정)/(2026.08.25)풍문 또는 보도에 대한 해명(미확정)\n2023-12-01 | 일자 풍문 또는 보도에 대한 해명(미확정)의 재공시 사항임\n1. 풍문 또는 보도의 내용 | 셀트리온 충남공장 세운다 \"2028년까지 3000억 투자\" 관련 보도\n2. 풍문 또는 보도의 매체 | 서울경제\n3. 풍문 또는 보도의 발생일자 | 2023-12-01\n4. 풍문 또는 보도의 내용에 대한 해명내용\n본 공시는 2023년 12월 1일 서울경제에서 지면 보도한 '셀트리온 충남공장 세운다 \"2028년까지 3000억 투자\"' 기사 등 다수 언론 매체에서 보도한 셀트리온 충청남도 예산 공장 신설 계획 관련 기사에 대한 해명공시입니다. 2023년 11월 30일, 셀트리온은 충청남도 예산군과 2028년 12월까지 3,000억원 규모의 바이오의약품 및 관련부자재 공장 신설 투자협약(MOU)를 체결하였습니다. 2025년 2월 27일, 셀트리온은 충청남도, 예산군, 충남개발공사와 3,000억원 규모의 완제(DP) 공장 신설에 대한 투자합의각서(MOA)를 체결하였습니다. 투자 기간 및 금액 등 세부사항은 협의에 따라 변경될 수 있습니다. 추후 구체적인 사항이 확정되는 시점 또는 6개월 이내 재공시 하도록 하겠습니다. (공시책임자) 신민철 관리부문장\n5. 재공시예정일 | 2027-02-24\n※ 관련공시 | 2023-12-01 풍문 또는 보도에 대한 해명(미확정) 2023-12-29 풍문 또는 보도에 대한 해명(미확정) 2024-03-29 풍문 또는 보도에 대한 해명(미확정) 2024-09-27 풍문 또는 보도에 대한 해명(미확정) 2025-02-27 풍문 또는 보도에 대한 해명(미확정) 2025-08-27 풍문 또는 보도에 대한 해명(미확정) 2026-02-26 풍문 또는 보도에 대한 해명(미확정)",
+        "content_truncated": false,
+        "total_chars": 912,
+        "summary": "풍문또는보도에대한해명(미확정)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825800463",
+        "collected_at": "2026-09-07T03:45:31.347416Z",
+        "report_name": "풍문또는보도에대한해명(미확정)              ",
+        "published_at": "2026-08-25T00:00:00Z",
+        "request_id": "32ae6fae-e8c5-4fde-a2b1-2245075d8eb4",
+        "source_type": "dart"
+      }
+    },
+    "20260814003751": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260814003751",
+        "document_type": "disclosure",
+        "content": "(제 36 기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 06월 30일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 08월 14일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 주식회사 셀트리온\n대 표 이 사 : | 서 진 석\n본 점 소 재 지 : | 인천광역시 연수구 아카데미로 23\n(전 화) 1661-8722\n(홈페이지) http://www.celltrion.com\n작 성 책 임 자 : | (직 책) 신고업무담당이사 (성 명) 신 민 철\n(전 화) 1661-8722\n목 차\nI. 회사의 개요 .......................................................................................... | 4\nII. 사업의 내용 ......................................................................................... | 17\nIII. 재무에 관한 사항 ................................................................................. | 56\nIV. 이사의 경영진단 및 분석의견 ................................................................. | 297\nV. 회계감사인의 감사의견 등....................................................................... | 298\nVI. 이사회 등 회사의 기관에 관한 사항 ......................................................... | 305\nVII. 주주에 관한 사항 ................................................................................ | 323\nVIII. 임원 및 직원 등에 관한 사항 ................................................................. | 331\nIX. 계열회사 등에 관한 사항........................................................................ | 377\nX. 대주주 등과의 거래 내용........................................................................ | 380\nXI. 그 밖에 투자자 보호를 위하여 필요한 사항................................................ | 383\nXII. 상세표............................................................................................... | 398\n[전문가의 확인]....................................................................................... | 404\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 개황 - 연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | 1 | - | - | 1 | 1\n비상장 | 46 | 2 | - | 48 | 16\n합계 | 47 | 2 | - | 49 | 17\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n- 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | GIFRER BARBEZAT | 종속기업의 인수\nCelltrion Slovak Republic, s. r. o. | 신규 설립\n연결제외 | - | -\n- | -\n나. 회사의 법적ㆍ상업적 명칭 당사의 명칭은 '주식회사 셀트리온'이라고 표기합니다. 또한 영문으로는 'Celltrion, Inc.'라 표기합니다. 다. 설립일자 당사는 1991년 2월 27일에 설립되었으며, 2005년 7월 19일자로 상장되어 코스닥시장에서 매매가 개시되었습니다. 이후, 2017년 9월 29일 임시주주총회 결의에 의거하여 유가증권시장으로의 이전을 결정하였으며, 2018년 2월 9일자로 유가증권시장으로 이전 완료하였습니다. 라. 본사의 주소, 전화번호 및 홈페이지 (1) 주소: 인천광역시 연수구 아카데미로 23(2) 전화번호: 1661-8722(3) 홈페이지: http://www.celltrion.com\n마. 중소기업 등 해당 여부\n중소기업 해당 여부 | 미해당\n벤처기업 해당 여부 | 미해당\n중견기업 해당 여부 | 미해당\n바. 주요 사업의 내용 및 향후 추진하고자 하는 사업 당사는 생명공학기술을 기반으로 자가면역질환, 종양 등 질병의 치료에 사용되는 의약품을 개발 및 상업화하는 것을 주요 목적 사업으로 하는 글로벌 생명공학기업입니다. 당사는 세계 최초의 항체 바이오시밀러인 램시마(CT-P13)를 시작으로 현재까지 11개 바이오시밀러 제품에 대한 글로벌 품목 허가를 획득하였으며, 당사의 제품은 유럽과 미국을 포함한 전 세계 각국에서 판매되고 있습니다. 당사는 시장성과 성장성이 있는 후속 바이오시밀러 파이프라인을 확보하기 위한 노력을 지속하는 한편, 항체 바이오 신약을 개발하기 위한 연구개발 활동도 지속하고 있습니다. 당사는 향후에도 자체 R&D 역량과 글로벌 바이오텍과의 전략적 파트너십을 통해 항체-약물 결합체(ADC), 다중 항체 등 차세대 모달리티(New Modality)의 연구개발을 지속하여 치료 저변을 확대해 나갈 예정입니다. 기타 자세한 사항은 동 보고서 'II. 사업의 내용'을 참고하시기 바랍니다.\n사. 신용평가에 관한 사항 - 신용평가 내역\n평가일 | 평가대상 유가증권 등 | 평가대상 유가증권의 신용등급 | 평가회사(신용평가등급범위) | 평가구분\n2024.06.04 | 기업어음 | A1 | 나이스신용평가 (A1 ~ D) | 본평가\n2024.11.2",
+        "content_truncated": true,
+        "total_chars": 457979,
+        "summary": "반기보고서 (2026.06) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003751",
+        "collected_at": "2026-09-07T03:45:39.139056Z",
+        "report_name": "반기보고서 (2026.06)",
+        "published_at": "2026-08-14T00:00:00Z",
+        "request_id": "06e13f1a-917f-442d-b6c1-f11d6cff7217",
+        "source_type": "dart"
+      }
+    },
+    "20260515002932": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260515002932",
+        "document_type": "disclosure",
+        "content": "(제 36 기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 03월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 05월 15일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 주식회사 셀트리온\n대 표 이 사 : | 서 진 석\n본 점 소 재 지 : | 인천광역시 연수구 아카데미로 23\n(전 화) 1661-8722\n(홈페이지) http://www.celltrion.com\n작 성 책 임 자 : | (직 책) 신고업무담당이사 (성 명) 신 민 철\n(전 화) 1661-8722\n목 차\nI. 회사의 개요 .......................................................................................... | 4\nII. 사업의 내용 ......................................................................................... | 5\nIII. 재무에 관한 사항 ................................................................................. | 43\nIV. 이사의 경영진단 및 분석의견 ................................................................. | 279\nV. 회계감사인의 감사의견 등....................................................................... | 280\nVI. 이사회 등 회사의 기관에 관한 사항 ......................................................... | 284\nVII. 주주에 관한 사항 ................................................................................ | 279\nVIII. 임원 및 직원 등에 관한 사항 ................................................................. | 287\nIX. 계열회사 등에 관한 사항........................................................................ | 293\nX. 대주주 등과의 거래 내용........................................................................ | 300\nXI. 그 밖에 투자자 보호를 위하여 필요한 사항................................................ | 303\nXII. 상세표............................................................................................... | 313\n[전문가의 확인]....................................................................................... | 314\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\n2. 회사의 연혁\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\n3. 자본금 변동사항\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\n4. 주식의 총수 등\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\n5. 정관에 관한 사항\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\nII. 사업의 내용\n1. 사업의 개요\n당사는 생명공학 기술을 기반으로 자가면역질환, 종양 등 질병의 치료에 사용되는 의약품을 개발 및 상업화하는 것을 주요 목적 사업으로 하는 글로벌 생명공학 기업입니다. 당사는 세계 최초의 항체 바이오시밀러인 램시마(CT-P13)를 시작으로 현재까지 11개 바이오시밀러 제품에 대한 글로벌 품목허가를 획득하였으며, 당사의 제품은 유럽과 미국을 포함한 전 세계 각지에서 판매되고 있습니다. 유럽 시장에서의 견고한 시장 지배력과 미국 시장에서의 가파른 성장세를 바탕으로, 2026년 1분기 기준 매출액 1조 1,450억원, 영업이익 3,219억원을 기록하며 지속적인 성장을 이어가고 있습니다.\n당사는 시장성과 성장성이 있는 후속 바이오시밀러 파이프라인을 확보하기 위한 노력을 지속하는 한편, 항체 바이오 신약을 개발하기 위한 연구개발 활동도 지속하고 있습니다. 2023년에는 세계 최초의 인플릭시맙(Infliximab) 피하주사 제형인 짐펜트라(CT-P13 SC)의 미국 FDA 신약 허가를 획득하며 글로벌 신약 시장에 본격 진출하였습니다. 당사는 향후에도 자체 R&D 역량과 글로벌 바이오텍과의 전략적 파트너십을 통해 항체-약물 결합체(ADC), 다중 항체 등 차세대 모달리티(New Modality)의 연구개발을 지속하여 치료 저변을 확대해 나갈 예정입니다.\n당사는 원료의약품(DS)부터 완제의약품(DP)까지 생산 가능한 25만 리터 규모의 국내 생산설비와, 미국 브랜치버그(Branchburg)에 위치한 6.6만 리터 규모의 원료의약품 생산설비를 보유하고 있습니다. 브랜치버그 공장은 2025년 12월 인수를 완료하였으며, 당사 제품의 미국 시장 공급을 위한 생산 거점으로 활용되는 동시에 타사 제품의 CMO 위탁 생산을 위한 제조소로 운영되고 있습니다.\n당사는 2023년 12월 ㈜셀트리온헬스케어와의 합병을 통해 개발, 생산, 판매가 결합된 통합 법인 체제를 완성하였습니다. 이를 통해 글로벌 시장에서의 가격 경쟁력을 확보하고, 직접 판매망을 통한 시장 지배력을 강화하고 있습니다. 유럽 시장은 2020년 램시마를 시작으로 2022년 하반기 전 제품의 직접판매 전환을 완료하였으며, 2023년에는 세계 최대 의약품 시장인 미국에서의 판매 구조 역시 직접판매 체제로 전환하",
+        "content_truncated": true,
+        "total_chars": 318311,
+        "summary": "분기보고서 (2026.03) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002932",
+        "collected_at": "2026-09-07T03:45:45.505884Z",
+        "report_name": "분기보고서 (2026.03)",
+        "published_at": "2026-05-15T00:00:00Z",
+        "request_id": "75ed01ed-d16c-4b42-876a-5f2686fc7496",
+        "source_type": "dart"
+      }
+    },
+    "20260316001415": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260316001415",
+        "document_type": "disclosure",
+        "content": "(제 35 기)\n사업연도 | 2025년 01월 01일 | 부터\n2025년 12월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 3월 16일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 주식회사 셀트리온\n대 표 이 사 : | 서 진 석\n본 점 소 재 지 : | 인천광역시 연수구 아카데미로 23\n(전 화) 1661-8722\n(홈페이지) http://www.celltrion.com\n작 성 책 임 자 : | (직 책) 신고업무담당이사 (성 명) 신 민 철\n(전 화) 1661-8722\n목 차\nI. 회사의 개요 .......................................................................................... | 3\nII. 사업의 내용 ......................................................................................... | 22\nIII. 재무에 관한 사항 ................................................................................. | 73\nIV. 이사의 경영진단 및 분석의견 ................................................................. | 457\nV. 회계감사인의 감사의견 등....................................................................... | 474\nVI. 이사회 등 회사의 기관에 관한 사항 ......................................................... | 482\nVII. 주주에 관한 사항 ................................................................................ | 502\nVIII. 임원 및 직원 등에 관한 사항 ................................................................. | 510\nIX. 계열회사 등에 관한 사항........................................................................ | 532\nX. 대주주 등과의 거래 내용........................................................................ | 536\nXI. 그 밖에 투자자 보호를 위하여 필요한 사항................................................ | 539\nXII. 상세표............................................................................................... | 562\n[전문가의 확인]....................................................................................... | 570\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 개황 - 연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | 1 | - | - | 1 | 1\n비상장 | 45 | 2 | 1 | 46 | 14\n합계 | 46 | 2 | 1 | 47 | 15\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n- 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | CELLTRION INDONESIA PHARMACEUTICAL | 신규 설립\nCelltrion Branchburg., LLC | 종속기업의 인수\n연결제외 | Celltrion Healthcare Argentina S.A.U. | 청산\n- | -\n나. 회사의 법적, 상업적 명칭 당사의 명칭은 '주식회사 셀트리온'이라고 표기합니다. 또한 영문으로는 'Celltrion, Inc.'라 표기합니다. 다. 설립일자 당사는 1991년 2월 27일에 설립되었으며, 2005년 7월 19일자로 상장되어 코스닥시장에서 매매가 개시되었습니다. 이후, 2017년 9월 29일 임시주주총회 결의에 의거하여 유가증권시장으로 이전을 결정하였으며, 2018년 2월 9일자로 유가증권시장으로 이전을 완료하였습니다. 라. 본사의 주소, 전화번호 및 홈페이지 (1) 주소 : 인천광역시 연수구 아카데미로 23(2) 전화번호 : 1661-8722(3) 홈페이지 : http://www.celltrion.com\n마. 중소기업 등 해당 여부\n중소기업 해당 여부 | 미해당\n벤처기업 해당 여부 | 미해당\n중견기업 해당 여부 | 미해당\n바. 주요사업의 내용 및 향후 추진하고자 하는 사업 당사는 생명공학기술을 기반으로 자가면역질환, 종양 등 질병의 치료에 사용되는 의약품을 개발 및 상업화하는 것을 주요 목적 사업으로 하는 글로벌 생명공학기업입니다. 당사는 세계 최초의 항체 바이오시밀러인 램시마(CT-P13)를 시작으로 현재까지 11개 바이오시밀러 제품에 대한 글로벌 품목 허가를 획득하였으며, 당사의 제품은 유럽과 미국을 포함한 전 세계 각국에서 판매되고 있습니다. 당사는 시장성과 성장성이 있는 후속 바이오시밀러 파이프라인을 확보하기 위한 노력을 지속하는 한편, 항체 바이오 신약을 개발하기 위한 연구개발 활동도 지속하고 있습니다. 당사는 향후에도 자체 R&D 역량과 글로벌 바이오텍과의 전략적 파트너십을 통해 항체-약물 결합체(ADC), 다중 항체 등 차세대 모달리티(New Modality)의 연구개발을 지속하여 치료 저변을 확대해 나갈 예정입니다. 기타 자세한 사항은 동 보고서 'II. 사업의 내용'을 참고하시기 바랍니다. 사. 신용평가에 관한 사항 - 신용평가 내역\n평가일 | 평가대상 유가증권 등 | 평가대상 유가증권의 신용등급 | 평가회사(신용평가등급범위) | 평가구분\n2023.09.",
+        "content_truncated": true,
+        "total_chars": 598686,
+        "summary": "사업보고서 (2025.12) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001415",
+        "collected_at": "2026-09-07T03:45:56.975569Z",
+        "report_name": "사업보고서 (2025.12)",
+        "published_at": "2026-03-16T00:00:00Z",
+        "request_id": "e051580b-a6c5-48a3-ac7b-0fa29b775a66",
+        "source_type": "dart"
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260831000538",
+    "20260825800463",
+    "20260814003751",
+    "20260515002932",
+    "20260316001415"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:45:29.830499Z"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:29.830740Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:29.830998Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:29.831134Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:29.831230Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:29.831328Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:29.831415Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:30.180671Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:30.488008Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:30.513289Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:30.574993Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:30.639655Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-068270",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:30.945527Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

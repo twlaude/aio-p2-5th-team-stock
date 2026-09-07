@@ -1,0 +1,1425 @@
+{
+  "company": {
+    "company_name": "SK하이닉스",
+    "stock_code": "000660"
+  },
+  "captured_at": "2026-09-07T03:38:18.799791+00:00",
+  "capture_finished_at": "2026-09-07T03:47:53.865057+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "SK하이닉스",
+      "stock_code": "000660",
+      "current_price": 1747000,
+      "change": 100000,
+      "change_rate": 6.07,
+      "volume": 1765672,
+      "volume_change_rate": 62.44,
+      "avg_volume_20d": 3872716,
+      "volume_ratio_20d": 0.81,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 3154134,
+      "warnings": [],
+      "as_of": "2026-09-07T03:38:19.228230Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:38:19.228230Z"
+    },
+    "news": {
+      "request_id": "286bb787-a4e9-4fd0-a3d1-5342f83905d9",
+      "status": "success",
+      "company_name": "SK하이닉스",
+      "stock_code": "000660",
+      "articles": [
+        {
+          "headline": "야간선물 4% 뛰더니 코스피 급등…외국인 현·선물 '쌍끌이'",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T03:32:00Z",
+          "summary": "이날 삼성전자는 26만5500원, SK하이닉스는 174만1000원에 거래 중이다. 이후 한국거래소 집계에서는 삼성전자가 26만6750원으로 4.40%, SK하이닉스가 174만5000원으로 5.95% 올랐다. SK스퀘어도 6.72%, 삼성전기는 2.00...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723209",
+          "relevance": "high"
+        },
+        {
+          "headline": "[美 주간탑] 씨엔에이치 인더스트리얼, 주가 23.2%↑... 주가상승률 상위...",
+          "publisher": "itooza.com",
+          "published_at": "2026-09-07T03:28:00Z",
+          "summary": "(ALNY), 디어(DE), SK하이닉스 ADR(SKHY), Si타임(SITM), 모딘 매뉴팩처링(MOD), 베스트 바이(BBY), 아센디스 파머 ADR(ASND), 버티브 홀딩스(VRT), 울타 뷰티(ULTA), 마이크론 테크놀로지(MU), 비스트라 에너지(VST)",
+          "source_url": "https://www.itooza.com/common/iview.php?no=2026090712260155905",
+          "relevance": "high"
+        },
+        {
+          "headline": "골드만삭스 \"코스피 목표 12,000 유지…여전히 과소평가돼\"",
+          "publisher": "imaeil.com",
+          "published_at": "2026-09-07T03:27:00Z",
+          "summary": "삼성전자와 SK하이닉스 등 국내 증시를 이끄는 반도체 기업에 우호적인 환경이 당분간 이어질 수 있다는 말이다. 기업들의 실적 성장세 역시 코스피 1만2천 전망을 떠받치는 근거로 제시됐다. 골드만삭스는 올해 코스피...",
+          "source_url": "https://www.imaeil.com/page/view/2026090712083765119",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 기대감‥반도체주 '강세'",
+          "publisher": "imnews.imbc.com",
+          "published_at": "2026-09-07T03:11:00Z",
+          "summary": "삼성전자와 SK하이닉스도 상승 출발했고, 장 초반 각각 4%, 6% 넘게 오르며 지수 상승을 이끌고 있습니다. 지난주 말 오픈AI가 복잡한 업무를 스스로 수행하는 기능을 강화한 최신 AI모델 '아스트라'를 내놓았습니다....",
+          "source_url": "https://imnews.imbc.com/replay/2026/nw1200/article/6850078_36967.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 'KoAct 배당성장액티브', 배당성장형 ETF 수익률·분배율 1위",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T03:08:00Z",
+          "summary": "주요 편입 종목으로는 △삼성전자우(22.8%) △SK하이닉스(21.9%) △KB금융(3.2%) △한화에어로스페이스(2.9%) △SK스퀘어(2.6%) 등이다. 총보수는 연 0.5%다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 단순히...",
+          "source_url": "https://www.fnnews.com/news/202609071157001852",
+          "relevance": "high"
+        },
+        {
+          "headline": "KDI, 경기 진단 ‘개선 확대’서 ‘흐름 유지’로…소비 개선세는 완만",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-07T03:04:00Z",
+          "summary": "지난 7월 30일 인천국제공항 화물터미널에서 홍콩으로 가는 삼성전자와 SK하이닉스 양사 반도체 화물이 항공기 탑재를 대기하고 있다. (사진=연합뉴스) KDI는 지난달 경제동향에서 “반도체 관련 부문을 중심으로...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=02994646645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체주 급등에…코스피 6,900선 안팎 강세",
+          "publisher": "yonhapnewstv.co.kr",
+          "published_at": "2026-09-07T03:02:00Z",
+          "summary": "오픈AI의 새 AI 모델 '아스트라' 공개로 메모리 수요 확대 기대가 커지면서 삼성전자와 SK하이닉스 등 반도체 대형주가 지수 상승을 이끌고 있습니다. 외국인과 기관은 동반 순매수에 나선 반면 개인은 매도 우위를...",
+          "source_url": "http://www.yonhapnewstv.co.kr/news/MYH2026090712013950J",
+          "relevance": "high"
+        },
+        {
+          "headline": "원ㆍ달러 환율 1년11개월만 최저 ‘대세 하락’⋯원ㆍ엔 동조화는 글쎄",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-07T03:02:00Z",
+          "summary": "수출기업들이 쌓아뒀던 달러를 시장에 내놓는 가운데 삼성전자와 SK하이닉스의 주주환원 정책까지 가세하면서 원화 강세 흐름이 상당 기간 이어질 것이라는 전망이다. 최근 미·일 정책공조와 일본은행(BOJ) 금리인상...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622605",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"충북 불태우는 폭주 멈춰라\"‥기후정의행진 선포식",
+          "publisher": "news.mbccb.co.kr",
+          "published_at": "2026-09-07T03:00:00Z",
+          "summary": "집행위는 \"반도체 메가프로젝트로 SK하이닉스 공장이 위치한 청주 일대의 주민 생존권이 위협받고 있고, 충북 전역을 관통하는 초고압 송전선로 등으로 지역의 일방적 희생이 강요받고 있다\"고 비판했습니다. 그러면서...",
+          "source_url": "http://news.mbccb.co.kr/home/sub.php?menukey=61&mod=view&RECEIVE_DATE=20260907&SEQUENCE=0106",
+          "relevance": "high"
+        },
+        {
+          "headline": "9일 나온다는 애플 첫 ‘폴더블폰’… 초기 진통?",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T03:00:00Z",
+          "summary": "삼성전자와 SK하이닉스로부터 스마트폰용 저전력 D램(LPDDR)을 공급받는 애플은 부족한 메모리를 구하기 위해 중국 창신메모리테크놀로지(CXMT)와 공급 협상을 벌였지만, 공급 가격을 낮춰 달라는 애플의 요구를 CXMT가...",
+          "source_url": "https://www.munhwa.com/article/11615046?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "“내몫 떼달라” 서로 청구서… 부담 늘어나는 K반도체",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T02:57:00Z",
+          "summary": "삼성전자와 SK하이닉스 등 한국 기업의 반도체 칩은 물론 이를 탑재한 인공지능(AI) 서버나 노트북 등 완제품에까지 고율의 관세를 매기겠다는 경고다. 국내에서도 상황은 다르지 않다. 호남권 등을 비롯한...",
+          "source_url": "https://www.munhwa.com/article/11615036?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "취득세 최대 절반에 주택 수 미포함… 지방 준공 후 미분양, ‘1억원 안...",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-07T02:57:00Z",
+          "summary": "특히 SK하이닉스 청주캠퍼스가 위치한 청주시 흥덕구는 3.57% 올라 충북 평균을 크게 웃돌았다. 경남 진주도 우주항공산업을 기반으로 6.19%, 원전·방산·자동차 산업이 밀집한 창원 성산구는 5.50% 상승했다. 지방에서도...",
+          "source_url": "https://www.dt.co.kr/article/12082455?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[이슈] 주주단체, 삼성전자 이사회·노조 집행부 고발…\"성과급 배임 공...",
+          "publisher": "the-today.com",
+          "published_at": "2026-09-07T02:54:00Z",
+          "summary": "주주단체가 성과급은 단체교섭 대상이 아니라며 삼성전자와 SK하이닉스 대표들을 고발한 데 이어 7일 삼성전자 이사회·노동조합 측에 대해서도 경찰 수사를 촉구했다. 이날 연합뉴스에 따르면, 대한민국 주주운동본부...",
+          "source_url": "https://www.the-today.com/news/articleView.html?idxno=89635",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 3%대 상승 출발...원·달러 환율 장중 1,330원대",
+          "publisher": "ytn.co.kr",
+          "published_at": "2026-09-07T02:53:00Z",
+          "summary": "삼성전자와 SK하이닉스가 뚜렷한 상승장을 이끌어가고 있습니다. 삼성전자는 4%대로 올라 출발했고 SK하이닉스도 장 초반 6%대 급등세를 보였습니다. 앞서 오픈AI의 신모델 'GPT-6 아스트라'가 공개되면서 AI 산업에 대한...",
+          "source_url": "https://www.ytn.co.kr/_ln/0102_202609071153114258",
+          "relevance": "high"
+        },
+        {
+          "headline": "[금융권 이모저모]삼성액티브운용, 배당성장 ETF 수익률·분배율 1위 外",
+          "publisher": "businessplus.kr",
+          "published_at": "2026-09-07T02:52:00Z",
+          "summary": "주요 편입 종목은 삼성전자우 22.8%, SK하이닉스 21.9%, KB금융 3.2%, 한화에어로스페이스 2.9%, SK스퀘어 2.6% 등이다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 현재 배당수익률이 높은 기업보다는...",
+          "source_url": "https://www.businessplus.kr/news/articleView.html?idxno=116471",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"영업이익 10% 성과급\" 파업 불가?…정부 새 지침에 '술렁' [김대영의 노...",
+          "publisher": "hankyung.com",
+          "published_at": "2026-09-07T02:50:00Z",
+          "summary": "이 단체는 영업이익 중 일정 비율을 노사 교섭을 통해 성과급으로 배분한 삼성전자·SK하이닉스 경영진을 배임 혐의로 고발한 사건의 쟁점도 선명해졌다면서 신속한 수사를 촉구했다. 당시 합의된 산식에 따라 이들 회사...",
+          "source_url": "https://www.hankyung.com/article/202609067131g",
+          "relevance": "high"
+        },
+        {
+          "headline": "중국 관영매체 한국은행의 메모리반도체 주도권 보고서 반박, \"삼성 SK와...",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T02:50:00Z",
+          "summary": "<뉴시스> 중국 관영매체가 한국은행의 메모리 반도체 산업 보고서를 두고 삼성전자와 SK하이닉스, 중국 창신메모리테크놀로지(CXMT)의 경쟁 구도를 지나치게 부각했다고 반박했다. 글로벌 메모리 반도체 시장이...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446541",
+          "relevance": "high"
+        },
+        {
+          "headline": "“일단 팔아” 2조 던졌는데…“삼전닉스 사상 초유” 들썩이는 증권가...",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-07T02:48:00Z",
+          "summary": "미국 오픈AI의 새 인공지능(AI) 모델 ‘아스트라’ 공개로 반도체주에 대한 투심이 회복되며 삼성전자와 SK하이닉스가 급등 출발한 7일 증권가는 재차 양사에 대한 눈높이를 끌어올렸다. 반면 개인 투자자들은 이날...",
+          "source_url": "https://www.seoul.co.kr/news/economy/securities/2026/09/07/20260907500127?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI·반도체 인기 좇아 '닮은꼴' ETF 우후죽순…자금 외면받은 펀드는 퇴...",
+          "publisher": "newsworker.co.kr",
+          "published_at": "2026-09-07T02:48:00Z",
+          "summary": "대표적인 사례가 삼성전자와 SK하이닉스를 함께 담은 채권혼합형 ETF다. KB자산운용은 지난 2월 RISE 삼성전자SK하이닉스채권혼합50을 상장했다. 삼성전자와 SK하이닉스를 각각 약 25%씩 편입하고 나머지 절반을...",
+          "source_url": "https://www.newsworker.co.kr/news/articleView.html?idxno=502828",
+          "relevance": "high"
+        },
+        {
+          "headline": "“내일부터 출근하지 말래, 어떡해”…중국에 밀리더니 결국 4000명 내보...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T02:47:00Z",
+          "summary": "폭스바겐의 경우 유럽 내 생산능력이 현재 수요보다 연간 50만대 이상 많은 것으로 추산되는 등 공급 과잉 문제도 구조조정을 재촉하고 있다. SK하이닉스가 굳이 ‘일본 땅’을 점찍은 진짜 이유",
+          "source_url": "https://www.sedaily.com/article/20087928?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "미국의 대중국 수출허가 제도, 이제 베이징을 돕는다",
+          "publisher": "newscham.net",
+          "published_at": "2026-09-07T02:46:00Z",
+          "summary": "2023년 워싱턴은 삼성전자와 SK하이닉스에 ‘검증된 최종사용자(Validated End User·VEU)’ 지위를 부여해 두 회사가 중국 내 반도체 생산시설로 미국산 반도체 제조장비를 들여올 때마다 새로 허가받지 않아도 되도록...",
+          "source_url": "https://newscham.net/articles/117161",
+          "relevance": "high"
+        },
+        {
+          "headline": "SK하이닉스,경쟁력 제고 비책은...HBM4는 양산 안정성, HBM4E는 미세공정...",
+          "publisher": "seouleconews.com",
+          "published_at": "2026-09-07T02:46:00Z",
+          "summary": "경기도 이천시 SK하이닉스 본사 모습. 연합뉴스  SK하이닉스가 10나노급 6세대(1c) D램 생산 비중을 연말까지 30%대로 끌어올리며, 7세대 고대역폭메모리(HBM4E) 시장 선점과 원가 경쟁력 강화에 나선다. 7일 업계에...",
+          "source_url": "http://www.seouleconews.com/news/articleView.html?idxno=93572",
+          "relevance": "high"
+        },
+        {
+          "headline": "주주단체, 삼성전자 이사회·노조 추가 고발…\"성과급 협약 배임 공범\"",
+          "publisher": "ngonews.kr",
+          "published_at": "2026-09-07T02:44:00Z",
+          "summary": "앞서 삼성전자와 SK하이닉스 경영진을 고발한 주주단체가 이번에는 삼성전자 이사회 구성원 전원과 노동조합 집행부를 배임 혐의의 공범으로 추가 고발하겠다고 밝혔다. 대한민국 주주운동본부는 7일 \"위법성이 명확해진...",
+          "source_url": "https://www.ngonews.kr/news/articleView.html?idxno=237414",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI 투자 기대에 외인·기관 1.6조 '사자'…코스피 6900선 공방[장중시황...",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "SK스퀘어(402340)(5.86%), SK하이닉스(000660)(5.65%), 삼성전자(005930)(3.91%), 삼성생명(032830)(3.7%), 삼성전자우(005935)(2.19%), KB금융(105560)(1.57%), 현대차(005380)(1.43%), 삼성전기(009150)(1.28%), LG에너지솔루션(373220)(0.56...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6282070",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 훈풍에 코스피 3% 급등…외국인·기관 1.6조 싹쓸이",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "'반도체 투톱' 삼성전자·SK하이닉스 급등…업종별 차별화 양상 이에 '반도체 투 톱' 삼성전자와 SK하이닉스가 각각 3.91%, 5.53% 상승 중이고, 시가총액 상위주 가운데 SK스퀘어(5.67%), 삼성전기(1.50...",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063126",
+          "relevance": "high"
+        },
+        {
+          "headline": "9월 10일, 코스피는 내릴까 오를까 / '네 마녀의 날'이 뭐길래",
+          "publisher": "topclass.chosun.com",
+          "published_at": "2026-09-07T02:40:00Z",
+          "summary": "기관과 외국인 투자자들이 파생상품 포지션을 조정하는 과정에서 삼성전자와 SK하이닉스 등 시가총액 상위 대형주에 매수·매도 물량이 집중될 경우 코스피 전체의 등락폭도 커질 수 있기 때문이다. 다만 현재 국내...",
+          "source_url": "http://topclass.chosun.com/news/articleView.html?idxno=36759",
+          "relevance": "high"
+        },
+        {
+          "headline": "[공공도서관은 변신 중 - ⑦ 이천] 책이 자라는 도시, 독서가 일상이 되...",
+          "publisher": "incheonilbo.com",
+          "published_at": "2026-09-07T02:40:00Z",
+          "summary": "청소년 대상 '리그 오브 라이브러리', 지역상점 연계 '책세권', 야외 팝업도서관 '난생처음 도서관', SK하이닉스로 직접 찾아간 '도서관 버스킹' 등 50개 세부 연계 사업에 많은 시민이 참여했다. 올해 하반기에는 경기도...",
+          "source_url": "https://www.incheonilbo.com/news/articleView.html?idxno=1331387",
+          "relevance": "high"
+        },
+        {
+          "headline": "수출 1조달러 눈앞인데… '효자 반도체' 美 통상압박 표적 됐다",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T02:40:00Z",
+          "summary": "러트닉 장관은 특히 삼성전자와 SK하이닉스를 겨냥해 미국 내 공장 건설이 \"필수적\"이라고 압박해왔다. 여기서 한국 수출의 역설이 발생한다. 사상 최초의 수출 1조달러를 이끌 핵심 동력이 반도체인데, 정작 그 반도체가...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700133.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "'오픈AI발 훈풍'에 코스피 개장후 6900선 터치",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-07T02:38:00Z",
+          "summary": "[기자] 오픈AI 신규 AI모델 '아스트라' 출시로 범용 인공지능 AGI 시대 기대감이 커지면서 삼성전자는 4% 이상, SK하이닉스는 5% 넘게 상승가도를 달리고 있습니다. HBM수요 증가에 따른 메모리 가격상승 기대감이...",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000333117?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "애플도 접는다…삼성 폴더블에 도전장, 韓 부품사 수혜 기대",
+          "publisher": "theviewers.co.kr",
+          "published_at": "2026-09-07T02:38:00Z",
+          "summary": "삼성전자와 SK하이닉스도 폴더블 아이폰 메모리 공급에 참여한다. 두 회사는 폴더블 아이폰에 탑재되는 12GB D램의 약 70%를 공급한다. 박강호 대신증권 연구원은 \"애플의 신규 폴더블폰이 공개된 이후 9월 말...",
+          "source_url": "https://theviewers.co.kr/View.aspx?No=4215198",
+          "relevance": "high"
+        },
+        {
+          "headline": "[특징주] 외국인·기관, 삼성전자·SK하이닉스·LG전자 '러브콜'",
+          "publisher": "newstnt.com",
+          "published_at": "2026-09-07T02:38:00Z",
+          "summary": "외국인은 삼성전자와 LG전자, 기관은 삼성전자와 SK하이닉스 등을 각각 순매수 상위에 올렸으며, 코스피는 외국인과 기관의 동반 매수세에 3% 넘게 상승했다. ◆ 외국인, 삼성전자·LG전자 순매수…파인엠텍 매도...",
+          "source_url": "https://www.newstnt.com/news/articleView.html?idxno=716941",
+          "relevance": "high"
+        },
+        {
+          "headline": "추미애의 재정 비상 선언, 정치 벗기고 숫자만 보니",
+          "publisher": "vop.co.kr",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "삼성전자 평택화성기흥 반도체 공장과 SK하이닉스 이천 반도체 공장을 비롯해 LG디스플레이(파주), 기아(화성광명), 현대모비스(평택화성) 등 주요 기업 공장이 분포해 있지만, 이들 기업이 벌어들인 수익에 부과되는...",
+          "source_url": "https://vop.co.kr/A00001696562.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "[食전食후] AI·반도체 훈풍에 코스피 6900선 육박…외국인·기관 '쌍끌...",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "삼성전자와 SK하이닉스 등 반도체 대형주가 강세를 보이는 가운데 외국인과 기관의 동반 매수세가 지수를 끌어올리고 있다. 이날 한국거래소에 따르면 오전 11시 25분 기준 코스피는 전 거래일 대비 202....",
+          "source_url": "https://www.ajunews.com/view/20260907112902463",
+          "relevance": "high"
+        },
+        {
+          "headline": "경기-충북, ‘지방재정 개편’ 손잡았다",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "경기도와 충북도는 삼성전자와 SK하이닉스 등 국내 최대 반도체 기업이 생산거점을 두고 있으면서, 도정 최우선 과제로 지방재정 개편을 꼽고 있다는 공통점이 있다. 신 지사 역시 취임 직후 부채 문제 등 심각한 재정난...",
+          "source_url": "https://www.munhwa.com/article/11615001?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산운용 \"배당성장액티브, 동일 ETF 중 수익·분배율 1위\"",
+          "publisher": "smarttimes.co.kr",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "주요 편입 종목은 ▲삼성전자우(22.8%) ▲SK하이닉스(21.9%) ▲KB금융(3.2%) ▲ 한화에어로스페이스(2.9%) ▲SK스퀘어(2.6%) 등이다. 총 보수는 연 0.5%다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 단순히...",
+          "source_url": "http://www.smarttimes.co.kr/news/articleView.html?idxno=48744",
+          "relevance": "high"
+        },
+        {
+          "headline": "텍사스 가스발전소 대미투자 1호 확정",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:33:00Z",
+          "summary": "반면 하워드 러트닉 미국 상무장관이 요구하고 있는 삼성전자와 SK하이닉스의 미국 내 메모리 반도체 생산시설(팹) 투자는 대미투자 프로젝트에는 포함되지 않는 것으로 파악됐다. 산업통상부는 7일 이같은 내용을 서울...",
+          "source_url": "https://biz.heraldcorp.com/article/10864870?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "주가 38% 빠진 '삼전닉스'에 청신호…내년 메모리 '품귀' 온다",
+          "publisher": "news.tf.co.kr",
+          "published_at": "2026-09-07T02:32:00Z",
+          "summary": "KB증권 \"메모리 재고 10일 미만\" AI 투자 1조3000억달러로 60% 급증 전망 삼성전자와 SK하이닉스 주가가 최근 고점 대비 38%가량 빠졌지만 증권가에서는 오히려 재평가 가능성에 주목하고 있다. 주가는 2027년 예상 실적...",
+          "source_url": "https://news.tf.co.kr/read/economy/2362660.htm",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI 훈풍에 삼전닉스 화색…外人도 컴백",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:32:00Z",
+          "summary": "오픈AI의 차세대 인공지능(AI) 모델 ‘GPT-6 아스트라’ 여파로 삼성전자와 SK하이닉스 주가가 강세를 보였다. 특히 주목되는 건 외국인의 순매수세이다. 증권가는 최근 조정을 거치며 외국인 등 수급주체들의...",
+          "source_url": "https://biz.heraldcorp.com/article/10864863?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[오늘의 삼전닉스] 차세대 AI 모델 등장에 삼전닉스 단숨에 '박스권 상단...",
+          "publisher": "economist.co.kr",
+          "published_at": "2026-09-07T02:32:00Z",
+          "summary": "오픈AI 새 모델 ‘아스트라’ 출시가 삼성전자와 SK하이닉스의 반도체 수요 확대 전망으로 연결되면서 주가를 끌어올리고 있다. 삼성전자와 SK하이닉스의 주가가 단숨에 박스권 상단인 26만원과 170만원을 뚫었다. 7일...",
+          "source_url": "https://economist.co.kr/article/view/ecn202609070026",
+          "relevance": "high"
+        },
+        {
+          "headline": "김민석 '호남서 시작된 메가프로젝트, 충청 넘어 전국으로'",
+          "publisher": "jbnews.com",
+          "published_at": "2026-09-07T02:32:00Z",
+          "summary": "충청권은 지난 6월 '충청권 첨단산업 발전비전 국민보고회'에서 충남도와 삼성디스플레이·SK하이닉스 등은 반도체·디스플레이·이차전지·바이오 분야에 392조원을 투자하는 협약을 체결한 바 있다. 이 중 202조원이 충남...",
+          "source_url": "https://www.jbnews.com/news/articleView.html?idxno=1510984",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘대미투자 1호’는 가스발전소... 美 요구한 반도체는 빠져",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:31:00Z",
+          "summary": "반면 하워드 러트닉 미국 상무장관이 요구하고 있는 삼성전자와 SK하이닉스의 미국 내 메모리 반도체 생산시설(팹) 투자는 대미투자 프로젝트에는 포함되지 않는 것으로 파악됐다. 산업통상부는 7일 이같은 내용을...",
+          "source_url": "https://biz.heraldcorp.com/article/10864859?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브운용 ‘KoAct 배당성장액티브’, 수익률·분배율 동반 1위",
+          "publisher": "megaeconomy.co.kr",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "주요 편입 종목은 삼성전자우 22.8%와 SK하이닉스 21.9%, KB금융 3.2%, 한화에어로스페이스 2.9%, SK스퀘어 2.6% 등이다. 삼성전자우와 SK하이닉스의 합산 비중은 44.7%로 전체 자산의 절반에 가깝다. 2024년 2월 상장한 이...",
+          "source_url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065579892530670",
+          "relevance": "high"
+        },
+        {
+          "headline": "서울 AI 허브 'TOYTHON' 해커톤 … 5시간 만에 피지컬 AI 41개 실물 완성",
+          "publisher": "worktoday.co.kr",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "삼성전자·LG CNS·SK하이닉스·현대모비스·현대오토에버·퀄컴 등 대기업·중견기업 현직자 20명도 참가해 스타트업 창업자·개발자·기획자·학생 등 다양한 배경의 참가자들이 한자리에서 피지컬 AI를 구현했다. 42개...",
+          "source_url": "http://www.worktoday.co.kr/news/articleView.html?idxno=88921",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인·기관 사자에 코스피 3%대 상승세…6900 탈환 고지전",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "삼성전자와 SK하이닉스는 각각 3%대, 5%대 오름세를 이어가고 있고 SK스퀘어, 삼성전기, LG에너지솔루션, 현대차, 삼성바이오로직스, KB금융, 삼성생명이 모두 상승 중이다. 같은 시간 코스닥 지수는 1.64%(13.35포인트)...",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/07/QZ57IBRFANHSJAVOFB54QGKVTE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "내년에 반도체 '사상 초유' 공급부족 온다...삼전닉스 주가 '재주목' [주...",
+          "publisher": "joseilbo.com",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "특히 AI 데이터센터 투자가 메모리 수요를 끌어올리면서 삼성전자와 SK하이닉스가 장기간 이어진 저평가 국면에서 벗어날 가능성이 커지고 있다는 분석이다. KB증권은 7일 보고서에서 주요 하이퍼스케일러들의...",
+          "source_url": "http://www.joseilbo.com/news/news_read.php?uid=575198&class=53&grp=",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산 KoAct 배당성장액티브, 배당성장 ETF 중 수익률·분배율...",
+          "publisher": "delighti.co.kr",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "주요 편입 종목은 삼성전자우(22.8%), SK하이닉스(21.9%), KB금융(3.2%), 한화에어로스페이스(2.9%), SK스퀘어(2.6%) 등이다. 현금흐름과 주주환원 수준이 높은 기업과 실적 개선이 기대되는 기업을 고루 담고 있다. 총보수는...",
+          "source_url": "https://www.delighti.co.kr/news/articleView.html?idxno=121420",
+          "relevance": "high"
+        },
+        {
+          "headline": "골드만삭스 \"코스피 1만 2000 갈 것…AI 메모리 호황 과소평가\"",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "삼성전자(005930)와 SK하이닉스(000660) 등 주요 반도체 기업들의 호실적도 주가를 끌어올리는데엔 큰 도움이 되지 못했다. 모 전략가는 “시장이 이번 실적 사이클의 지속 기간을 저평가하고 있다”며 “전 세계적인...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=02840486645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"성과급은 노사 교섭대상 아냐\" 뿔난 주주단체, 삼성전자 이사회·노조...",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "삼성전자와 SK하이닉스 대표이사를 성과급 노사 협약과 관련해 고발한 주주단체가 이번에는 삼성전자 이사회 구성원 전원과 노동조합 임원진을 추가로 고발하기로 했다. 성과급은 단체교섭 대상이 될 수 없으며...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070185&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "내년엔 메모리 없어서 못 파나…삼전·하닉 재고 10일 미만",
+          "publisher": "sisajournal.com",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "KB증권 \"역사상 가장 타이트한 공급 환경\" AI 투자 확대에 D램·낸드까지 공급 부족 우려 삼성전자와 SK하이닉스의 메모리 반도체 재고가 10일 미만까지 줄어든 것으로 나타났다. 인공지능(AI) 인프라 투자가 빠르게...",
+          "source_url": "https://www.sisajournal.com/news/articleView.html?idxno=386236",
+          "relevance": "high"
+        },
+        {
+          "headline": "1330원대까지 내린 환율…\"향후 변수, 한미 금리차·경상수지 등\"",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T02:25:00Z",
+          "summary": "지난 7월15일 SK하이닉스 ADR 상장에 따른 달러 자금이 한 달여간 국내에 유입된 데다 수출기업이 벌어들인 달러를 원화로 환전하면서 국내 시장의 달러 공급이 늘었다. 한국은행에 따르면 우리나라 경상수지는...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710320774615",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"환율·반도체 강세\"…삼전닉스, 금리인상 우려에도 '껑충'",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-07T02:25:00Z",
+          "summary": "7일 오전 10시 50분 기준 반도체 투톱 SK하이닉스는 전 거래일 대비 9만2000원(5.59%) 오른 173만9000원에 거래되고 있다. SK하이닉스는 2거래일째 강세를 나타냈고 이날 장중 주가는 종가 기준으로 지난달 27일 이후...",
+          "source_url": "https://www.mt.co.kr/stock/2026/09/07/2026090711113365001",
+          "relevance": "high"
+        },
+        {
+          "headline": "“310만닉스 가나요”…SK하이닉스 목표가 ‘쑥’ [오늘, 이 종목]",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-07T02:25:00Z",
+          "summary": "DB證 230만원·미래에셋證 310만원 전망 GPU 넘어 맞춤형 AI 반도체에도 공급 “HBM 가격 오르고 수요 다양해져” 원화 강세 영향으로 올 3분기 SK하이닉스 실적이 시장 예상치를 소폭 밑돌 것으로 전망되지만 실적...",
+          "source_url": "https://www.mk.co.kr/article/12145904",
+          "relevance": "high"
+        },
+        {
+          "headline": "미래에셋이 '레버리지 ETF' 특혜?...野 주장 따져보니",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T02:24:00Z",
+          "summary": "단일종목 레버리지 ETF 16개 종목은 5월 27일 상장 이후 삼성전자와 SK하이닉스 주가 움직임에 따라 거래가 급증했고, 정부는 7월 들어 투자자 보호장치를 잇달아 강화했다. 당국이 보완책을 내놓으면서 야권에서는...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=546012",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더밸류 브리핑] 오늘의 한화금융 소식...한화투자증권·한화자산운용",
+          "publisher": "thevaluenews.co.kr",
+          "published_at": "2026-09-07T02:24:00Z",
+          "summary": "딥다이브에서는 SK하이닉스와 샌디스크의 HBF 표준화 공동 발표를 다뤘다. 한화자산운용 관계자는 “AI가 디지털 경제의 성장을 이끈다면, 제조업 인프라와 국방은 그 성장을 물리적으로 뒷받침하는 축”이라며...",
+          "source_url": "http://www.thevaluenews.co.kr/news/view.php?idx=201356",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성전자 이사회 경찰 고발, 성과급 갈등의 진실은?",
+          "publisher": "gokorea.kr",
+          "published_at": "2026-09-07T02:24:00Z",
+          "summary": "이러한 조치는 지난달 삼성전자와 SK하이닉스 대표이사를 상대로 한 고발에 이어 이루어진 것이다. 이번 고발의 주요 대상은 삼성전자 이사회 전원과 삼성그룹 노조의 임원들이다. 이들은 주주총회에서 논의되어야 할...",
+          "source_url": "https://www.gokorea.kr/news/articleView.html?idxno=877415",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전·닉스, 장 초반 4∼6%대 급등세 이어가",
+          "publisher": "moneystorm.kr",
+          "published_at": "2026-09-07T02:21:00Z",
+          "summary": "삼성전자와 SK하이닉스가 7일 오전장에서  각각 4%와 6%대의 상승률을 보인다. 이날 유가증권시장에서 4.50% 오른 26만7천원으로 출발한 삼성전자는 4%대 상승 선에서 움직이고 있다. 같은 시각 SK하이닉스는...",
+          "source_url": "https://www.moneystorm.kr/news/articleView.html?idxno=6276",
+          "relevance": "high"
+        },
+        {
+          "headline": "“원화 강세보다 HBM이 더 세다”…미래에셋, 삼성전자·SK하이닉스 목표...",
+          "publisher": "ddaily.co.kr",
+          "published_at": "2026-09-07T02:21:00Z",
+          "summary": "미래에셋증권이 원화 강세를 반영해 삼성전자와 SK하이닉스의 이익 전망치를 낮추면서도 목표주가는 나란히 올렸다. 환율 부담보다 고대역폭메모리(HBM)의 성장 가능성을 더 높게 본 것이다. 범용 D램 가격...",
+          "source_url": "https://www.ddaily.co.kr/page/view/2026090711164450758",
+          "relevance": "high"
+        },
+        {
+          "headline": "[내년 채권 수급은] 미래대응기금 단기채 투자 기대…한전채 축소 효과...",
+          "publisher": "news.einfomax.co.kr",
+          "published_at": "2026-09-07T02:20:00Z",
+          "summary": "올해 크레디트물 위주로 투자를 이어온 SK하이닉스는 이미 연말인 11일께 국고채 투자를 저울질하고 있다. 삼성전자와 SK하이닉스가 한전에 향후 5년치 전기 요금을 선납하는 방안이 추진되면서 한전채 발행 감소...",
+          "source_url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433722",
+          "relevance": "high"
+        },
+        {
+          "headline": "'고정된 권리'로 변질된 '성과급의 역설'...\"반도체 초격차 흔든다\"",
+          "publisher": "mediapen.com",
+          "published_at": "2026-09-07T02:20:00Z",
+          "summary": "반도체 산업이 호황기를 맞이한 가운데, 삼성전자와 SK하이닉스가 성과급 배분을 둘러싼 내부 진통을 겪었거나 여전히 갈등을 이어가고 있다. 생산성 향상과 혁신 동기 부여를 위해 도입된 성과급 체계가 오히려...",
+          "source_url": "https://www.mediapen.com/news/view/1121729",
+          "relevance": "high"
+        },
+        {
+          "headline": "[금융권 이모저모]하나금융, '2026 국제비즈니스대상' 금상 外",
+          "publisher": "businessplus.kr",
+          "published_at": "2026-09-07T02:20:00Z",
+          "summary": "이벤트 신청 후 특판 발행어음의 3개월 평균잔액을 1000만원 이상 유지한 비대면 계좌 고객에게는 5만원 상당의 삼성전자 또는 SK하이닉스 소수점 주식을 지급한다. 생애 최초 비대면 종합계좌 개설 고객은 별도 계좌개설...",
+          "source_url": "https://www.businessplus.kr/news/articleView.html?idxno=116468",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 'KoAct 배당성장액티브', 1년 수익률·분배율 1위",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-07T02:18:00Z",
+          "summary": "주요 편입 종목은 삼성전자우(22.8%), SK하이닉스(21.9%), KB금융(3.2%), 한화에어로스페이스(2.9%), SK스퀘어(2.6%) 등이다. 지성진 삼성액티브운용 매니저는 \"인공지능(AI) 투자 확대와 메모리 업황 개선을 바탕으로 이익...",
+          "source_url": "https://www.newsis.com/view/NISX20260907_0003778945",
+          "relevance": "high"
+        },
+        {
+          "headline": "'용인반도체클러스터 동일하이빌 파크밸리', 7일(오늘)부터 3일간 정당...",
+          "publisher": "ikld.kr",
+          "published_at": "2026-09-07T02:16:00Z",
+          "summary": "[국토일보 하종숙 기자] \"청약은 끝났지만, 내 집 마련의 선택은 이제부터다.\" SK하이닉스 반도체 메가클러스터의 첫 민간분양 아파트 '용인반도체클러스터 동일하이빌 파크밸리'가 1순위 청약에서 실수요자의 높은 관심을...",
+          "source_url": "http://www.ikld.kr/news/articleView.html?idxno=340191",
+          "relevance": "high"
+        },
+        {
+          "headline": "키움증권, 생애 첫 고객 대상 세전 연 5% 발행어음 특판 실시",
+          "publisher": "weekly.hankooki.com",
+          "published_at": "2026-09-07T02:14:00Z",
+          "summary": "이벤트 신청 후 특판 발행어음 3개월 평잔 1000만원 이상을 유지한 비대면 계좌 고객은 5만원 상당의 삼성전자 또는 SK하이닉스 소수점 주식을 별도로 받는다. 여기에 더해 생애 최초 비대면 종합계좌 개설 고객은 기존...",
+          "source_url": "https://weekly.hankooki.com/news/articleView.html?idxno=7182800",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 33% vs 하이닉스 50%…좁혀지는 HBM 점유율, 승부처는?",
+          "publisher": "news.tf.co.kr",
+          "published_at": "2026-09-07T02:13:00Z",
+          "summary": "삼성전자, 1분기 대비 점유율 12%p 상승 HBM4 세대 교체 초입…생산 능력이 변수 삼성전자와 SK하이닉스의 고대역폭메모리(HBM) 점유율 격차가 한 분기 만에 절반 아래로 좁혀졌다. 메모리 업계가 하반기 6세대 HBM4...",
+          "source_url": "https://news.tf.co.kr/read/economy/2362634.htm",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 훈풍에 3% 안팎 상승세…삼전닉스 3~5%↑",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T02:12:00Z",
+          "summary": "이에 '반도체 투 톱' 삼성전자와 SK하이닉스가 각각 3.91%, 5.53% 상승 중이고, 시가총액 상위주 가운데 SK스퀘어(5.67%), 삼성전기(1.50%), LG에너지솔루션(0.28%) 등이 오르고 있다. 반면 한화에어로스페이스(-2.18...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907072500008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "뉴욕증시 반도체株 강세에 SK그룹주 일제히 상승",
+          "publisher": "gukjenews.com",
+          "published_at": "2026-09-07T02:12:00Z",
+          "summary": "사진=SK하이닉스 제공 SK그룹주가 일제히 오르고 있다. 7일 오전 10시 46분 기준 SK하이닉스 주가는 6.19% 상승한 174만 9000원에, SK네트웍스는 1.72% 상승한 6510원에 거래 중이다. SK디스커버리 3.78%, SK스퀘어 5.96...",
+          "source_url": "https://www.gukjenews.com/news/articleView.html?idxno=3686713",
+          "relevance": "high"
+        },
+        {
+          "headline": "[기획] 메가프로젝트 전력공급 어떻게?",
+          "publisher": "todayenergy.kr",
+          "published_at": "2026-09-07T02:10:00Z",
+          "summary": "/편집자주 정부와 삼성전자, SK하이닉스 등의 기업은 지난 6월 29일 청와대에서 열린 '대한민국 대도약 3대 메가프로젝트 국민보고회'에서 용인 국가산단과 일반산단의 최종 반도체 팹 완공 시점을 각각 7년, 12년...",
+          "source_url": "https://www.todayenergy.kr/news/articleView.html?idxno=302582",
+          "relevance": "high"
+        },
+        {
+          "headline": "[ET특징주] 오픈AI 새 모델 출시에 웃는 삼전·하닉… 주가 3~5% 상승",
+          "publisher": "etnews.com",
+          "published_at": "2026-09-07T02:09:00Z",
+          "summary": "오픈AI가 새 인공지능(AI) 모델을 공개하면서 메모리 가격 상승 전망으로 삼성전자와 SK하이닉스가 동반 강세다. 7일 오전 10시 57분 기준 삼성전자(005930) 주가는 전 거래일 대비 3.91% 상승한 26만 5500원...",
+          "source_url": "https://www.etnews.com/20260907000186",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 메모리주 강세에 장 초반 3%대 상승...삼전 4%·SK하닉 6%↑",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "오픈AI의 새 AI 모델 '아스트라' 출시 이후 고용량 메모리 수요 확대 기대가 커지면서 삼성전자와 SK하이닉스가 급등해 코스피가 장 초반 3% 넘게 뛰었다. 7일 한국거래소 등에 따르면, 이날 오전 9시 15분 현재...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317738",
+          "relevance": "high"
+        },
+        {
+          "headline": "개별 반도체주 팔아치우는 서학 개미...SOXL은 다시 집중 매수",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "엔비디아는 1556만달러, SK하이닉스 미국주식예탁증서(ADR)는 4616만달러 순매도를 기록했다. SK하이닉스 ADR은 지난 7월 뉴욕증시에 상장한 뒤 8월 말까지 국내 투자자들이 8억1097만달러를 순매수한 종목이다. 반면...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317729",
+          "relevance": "high"
+        },
+        {
+          "headline": "정부가 선 그은 'N% 성과급'…주주단체, 삼성전자 노조·이사회 고발·S...",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "SK하이닉스 역시 이사회와 노조 집행부가 추가 고발 검토 대상에 오르면서 반도체 업계의 성과급 갈등이 노사관계를 넘어 주주권과 이사회 책임을 둘러싼 법적 공방으로 확대되고 있다. [그래픽=구글 제미나이(Google Gemini)...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=546013",
+          "relevance": "high"
+        },
+        {
+          "headline": "자사주가 떠받친 코스피, 7000선 회복하나…美 CPI 발표 분수령",
+          "publisher": "news.tf.co.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "삼성전자와 SK하이닉스의 자사주 매입에 힘입어 기타법인이 지수 하단을 떠받쳤지만, 7000선을 넘어 추가 상승하기 위해서는 외국인 수급 회복이 필요하다는 분석이다. 증권가는 오는 11일(현지시간) 발표되는 미국...",
+          "source_url": "https://news.tf.co.kr/read/economy/2362647.htm",
+          "relevance": "high"
+        },
+        {
+          "headline": "키움증권, 첫 계좌개설 고객에 세전 연 5% 발행어음 특판",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "이벤트 신청 후 특판 발행어음의 3개월 평잔을 1000만원 이상 유지한 비대면 계좌 고객에게는 5만원 상당의 삼성전자 또는 SK하이닉스 소수점 주식을 지급한다. 생애 최초 비대면 종합계좌 개설 고객은 기존 비대면...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=02758486645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 3%대 상승 출발...원·달러 환율 1,330원대 하락",
+          "publisher": "ytn.co.kr",
+          "published_at": "2026-09-07T02:07:00Z",
+          "summary": "삼성전자와 SK하이닉스가 초반 뚜렷한 강세를 이끌어가고 있습니다. 삼성전자는 4%대로 올라 출발했고 SK하이닉스도 장 초반 6%대 급등세를 보였습니다. 앞서 오픈AI의 신모델 'GPT-6 아스트라'가 공개되면서 AI 산업에...",
+          "source_url": "https://www.ytn.co.kr/_ln/0102_202609071107019247",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 이익 증가율 꺾였다, 원화 강세에도 웃을 '실적 개선주'는",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T02:07:00Z",
+          "summary": "종목별로도 외국인은 SK하이닉스와 삼성전자를 각각 1조8181억원, 6405억원 순매도한 반면 삼성전기 2921억원, SK이노베이션 1170억원, 대한항공 835억원을 순매수했다. ◆ 이익률 개선株 뜬다…대한항공·한화엔진 등...",
+          "source_url": "https://www.newspim.com/news/view/20260906000155",
+          "relevance": "high"
+        },
+        {
+          "headline": "SG, 유상증자 구주주 청약률 96%…성장사업 투자 속도",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-07T02:04:00Z",
+          "summary": "SK하이닉스 용인 첨단시스템반도체 클러스터에 일반 아스콘을 공급한 데 이어 ‘에코스틸아스콘’ 모크업 시공도 마쳤다. 2009년 12월 설립된 SG는 2018년 1월 아스콘 업계 최초로 코스닥에 상장했다. 아스콘 제조와...",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609070087",
+          "relevance": "high"
+        },
+        {
+          "headline": "“삼전닉스의 시간은 온다”…아스트라 출시에 반도체株 상승 기대",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-07T02:04:00Z",
+          "summary": "한편 AI 연산 수요 확대 기대감이 커지면서 반도체주가 일제히 강세를 보이고 있다. 이날 오전 10시 55분 현재 SK하이닉스는 전거래일 대비 5.46% 오른 173만7000원에, 삼성전자는 3.72% 상승한 26만5000원에 거래되고 있다.",
+          "source_url": "https://www.mk.co.kr/article/12145882",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"HBM 성장 지속\" 삼전·하닉 목표가 동시 상향…\"불확실성 걷혔다\" 두산...",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T02:01:00Z",
+          "summary": "SK하이닉스는 그래픽처리장치(GPU)에 이어 빅테크의 자체 인공지능(AI) 칩으로도 HBM 수요가 확대되면서 고객 다변화 수혜가 예상됐습니다. 두산퓨얼셀은 미국 데이터센터용 연료전지 대형 수주를 계기로 중장기...",
+          "source_url": "https://www.fnnews.com/news/202609070959294511",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 장중 '반도체주 강세'에 3%대 오른 6890선, 코스닥도 1%대 올라",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "미국 증시에서 반도체주가 강세를 보이면서 삼성전자와 SK하이닉스 등 국내 반도체 대형주 투자심리도 개선된 것으로 풀이된다. 4일(현지시각) 미국 증시 3대 지수인 다우(-0.51%) S&P500(-0.38%) 나스닥(-0.29%)은...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446528",
+          "relevance": "high"
+        },
+        {
+          "headline": "[조간브리핑]오픈AI 'GPT-6' 발표에 AGI 논쟁··· mRNA 암백신·GLP-1 노...",
+          "publisher": "hellodd.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "\"AGI 시대 왔다\" 젠슨 황 한 마디에···삼전닉스 일제히 '불기둥' 삼성전자와 SK하이닉스 등 반도체 관련주들이 7일 장 초반 강세다. 오픈AI가 새 인공지능(AI) 모델을 공개한 후 젠슨 황 엔비디아 최고경영자(CEO)가...",
+          "source_url": "http://www.hellodd.com/news/articleView.html?idxno=113072",
+          "relevance": "high"
+        },
+        {
+          "headline": "9월 주식 뭐 살까… 유망주 20개 뜯어보니",
+          "publisher": "m.skyedaily.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "중장기 유망종목에는 SK하이닉스를 신규 편입했다. 인공지능(AI)과 에너지저장장치(ESS), 바이오, 정유, K푸드 등 실적 개선과 성장 모멘텀이 예상되는 업종에 무게를 실었다. 하나증권 리서치센터는 7일 ‘모닝...",
+          "source_url": "https://m.skyedaily.com/news_view.html?ID=311094",
+          "relevance": "high"
+        },
+        {
+          "headline": "[총수家] 이해진 네이버 의장 ③ㅣ 100억달러 투자 등에 업고 AI 인프라...",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "양사는 국내 2GW 규모 AI 클라우드와 AI 팩토리 구축을 위한 의향서(LOI)를 체결했으며, 엔비디아 DSX 플랫폼과 SK하이닉스의 HBM4가 탑재된 엔비디아 베라 루빈 가속 컴퓨팅 시스템이 도입될 예정이다. 첫번째 AI...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604445",
+          "relevance": "high"
+        },
+        {
+          "headline": "K뷰티 장악한 올리브영, 다음 승부처는 '글로벌 뷰티' [권상집의 논전(...",
+          "publisher": "sisajournal.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "대다수는 삼성전자나 SK하이닉스를 떠올리겠지만, 단언컨대 CJ올리브영만큼 주목받는 곳은 드물다. 올리브영을 지켜보는 이유는 무엇일까. 옴니채널 전략에서 자율과 체험 중심의 매장 경험, 그리고 K뷰티로 전략을...",
+          "source_url": "https://www.sisajournal.com/news/articleView.html?idxno=385883",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화자산운용 “AI 투자영토 넓어진다”…전력·에너지·국방 주목",
+          "publisher": "megaeconomy.co.kr",
+          "published_at": "2026-09-07T01:58:00Z",
+          "summary": "리포트는 지난 7월 샌프란시스코 AI 서밋에서 나타난 기업 간 협력 구도를 분석하고, SK하이닉스와 샌디스크가 공동 발표한 고대역폭플래시(HBF·High Bandwidth Flash) 표준화도 다뤘다. HBF는 AI 연산 과정에서 대용량 데이터를...",
+          "source_url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065578024430452",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화운용 \"AI 인프라 투자 전력·국방·제조업으로 확장\"",
+          "publisher": "weekly.hankooki.com",
+          "published_at": "2026-09-07T01:58:00Z",
+          "summary": "업체 실적이 AI 수요의 견조함을 확인시켰고 샌디스크는 인베스터데이에서 높은 마진율이 수년간 지속될 수 있다고 발표했다. 딥다이브에선 SK하이닉스와 샌디스크의 고대역폭 메모리(HBF) 표준화 공동 발표를 다뤘다.",
+          "source_url": "https://weekly.hankooki.com/news/articleView.html?idxno=7182790",
+          "relevance": "high"
+        },
+        {
+          "headline": "원달러 환율 1330원대…항공·철강 웃고, 자동차·반도체 긴장",
+          "publisher": "junggi.co.kr",
+          "published_at": "2026-09-07T01:58:00Z",
+          "summary": "국제금융협회(IIF)는 반도체 업황 호조와 삼성전자·SK하이닉스의 국내 투자 확대로 원화가 추가 강세를 보이며 코로나19 이전 수준까지 회복할 수 있다는 전망을 내놓기도 했다. 항공·철강은 웃고, 자동차·반도체는...",
+          "source_url": "https://www.junggi.co.kr/news/articleView.html?idxno=37676",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더벨]DS운용 대표펀드, 신한은행 가판대 진입",
+          "publisher": "thebell.co.kr",
+          "published_at": "2026-09-07T01:58:00Z",
+          "summary": "SK하이닉스를 비롯한 메모리 반도체 종목에 선제적으로 투자해 시장의 반향을 일으켰다. 운용 성과도 두드러진다. 2026년 상반기 더벨 헤지펀드 리그테이블에 따르면 주요 헤지펀드들이 연초 이후 200%를 상회하는...",
+          "source_url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609031018385760104318",
+          "relevance": "high"
+        },
+        {
+          "headline": "주주단체, 삼성전자 이사회·노조 집행부 고발…\"성과급 배임 공범\"",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T01:57:00Z",
+          "summary": "이 단체는 지난달 5일 전영현·노태문 삼성전자 대표이사와 곽노정 SK하이닉스 대표이사가 노사 협약을 심도 있게 검토하지 않았다며 국가수사본부에 고발장을 낸 바 있다. 해당 사건은 경기남부청에 배당됐다. 단체가...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907067100004?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "[증권톡톡] 하나증권 새 MTS '하나증권V' 출시·키움증권 '연 5% 발행어음...",
+          "publisher": "newsworks.co.kr",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "이벤트를 신청 후 특판 발행어음 3개월 평잔 1000만원 이상을 유지한 비대면 계좌 고객은 5만원 상당의 삼성전자 또는 SK하이닉스 소수점 주식을 별도로 지급한다. 이와 함께 생애 최초 비대면 종합계좌 개설 고객은...",
+          "source_url": "https://www.newsworks.co.kr/news/articleView.html?idxno=852834",
+          "relevance": "high"
+        },
+        {
+          "headline": "[生기업TALK] 한화운용, 실물경제로 확장하는 AI 인프라 투자를 위한 새...",
+          "publisher": "sisacast.kr",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "이러한 상황에서 삼성전자와 SK하이닉스의 주가는 하락세를 면치 못하고 있으며 반도체 산업의 사이클과 하락장을 방어하는 투자 심리가 시장에 영향을 끼치고 있다. 이러한 가운데 SK하이닉스와 샌디스크가 AI...",
+          "source_url": "http://www.sisacast.kr/news/articleView.html?idxno=99680",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 훈풍에 증시 반등 기대…골드만삭스 \"코스피 1만2천 간다\"",
+          "publisher": "news.bbsi.co.kr",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "우리 증시가 삼성전자와 SK하이닉스 등 반도체 대형주의 강세 흐름을 바탕으로 본격적 반등에 나설 수 있을지 관심이 커지고 있습니다. 오늘 오전 코스피 시장에서는 SK하이닉스가 전날 대비 5% 이상 오르는 등...",
+          "source_url": "https://news.bbsi.co.kr/news/articleView.html?idxno=4104948",
+          "relevance": "high"
+        },
+        {
+          "headline": "[특징주] 반도체 업황 기대감에 소부장주 장 초반 강세",
+          "publisher": "issuenbiz.com",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "소재, 부품, 장비산업(소부장) (PG)/제작=장현경 일러스트   삼성전자와 SK하이닉스 등 국내 증시의 대형 반도체주가 강세를 보이는 가운데 반도체 소재·부품·장비(소부장) 종목들도 7일 장 초반 일제히 급등세를...",
+          "source_url": "http://www.issuenbiz.com/news/articleView.html?idxno=79501",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 코스피 급등…6,900선 회복",
+          "publisher": "yonhapnewstv.co.kr",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "오픈AI의 새 인공지능 모델 공개로 반도체 수요 기대가 커지면서 삼성전자와 SK하이닉스가 지수를 끌어올리고 있습니다. 자세한 개장 상황 취재기자 연결해 알아봅니다. 양현주 기자. [기자] 네 여의도 한국거래소에...",
+          "source_url": "http://www.yonhapnewstv.co.kr/news/MYH20260907105518IoE",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"AGI가 왔다\" 젠슨 황 'GPU 40만개' 예고…기대 커지는 반도체株",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T01:55:00Z",
+          "summary": "AI 인프라 투자 확대 기대에 삼성전자(005930)와 SK하이닉스(000660) 등 국내 반도체주의 수혜 가능성에도 관심이 쏠린다. 7일 금융투자업계에 따르면 황 CEO는 이날 엑스(X·옛 트위터)를 통해 \"아스트라가 엔비디아...",
+          "source_url": "https://www.news1.kr/finance/general-stock/6281939",
+          "relevance": "high"
+        },
+        {
+          "headline": "기후부·외교부, 제7회 '푸른 하늘의 날' 기념식 개최",
+          "publisher": "nocutnews.co.kr",
+          "published_at": "2026-09-07T01:53:00Z",
+          "summary": "국무총리 표창으로 한국환경연구원 이승민 선임연구위원과 SK하이닉스 권혁화 정책연구팀장에게 수여된다. 김 장관은 \"국민이 일상에서 체감할 수 있는 맑고 푸른 하늘을 만들어가는 동시에 탄소중립을 선언적 목표에...",
+          "source_url": "https://www.nocutnews.co.kr/news/6573923?utm_source=naver&utm_medium=article&utm_campaign=20260907105229",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘아스트라 효과’ 소부장까지 번졌다…반도체株 일제히 급등[이런국장...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:52:00Z",
+          "summary": "삼성전자와 SK하이닉스 등 국내 증시 대형 반도체주가 강세를 보이는 가운데 ‘아스트라 효과’가 반도체 소재·부품·장비(소부장) 종목으로 확산하고 있다. 인공지능(AI) 수요 확대에 따른 메모리 업황 개선...",
+          "source_url": "https://www.sedaily.com/article/20087896?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "엔비디아만 보던 HBM 끝났다…SK하이닉스, AMD·메타·MS·오픈AI까지 확...",
+          "publisher": "thepowernews.co.kr",
+          "published_at": "2026-09-07T01:52:00Z",
+          "summary": "SK하이닉스가 엔비디아 중심이던 고대역폭메모리(HBM) 수요처를 AMD와 메타, 마이크로소프트(MS), 오픈AI 등으로 빠르게 넓히면서 HBM 시장 지배력이 더욱 강화될 것이란 전망이 나왔다. AI 가속기 한 개에...",
+          "source_url": "https://www.thepowernews.co.kr/view.php?ud=202609071021023593de3f0aa1be_7",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]코스피, 오픈AI발 호재에 6,900선 재탈환…삼전 4.3%·닉스 5.9% 급...",
+          "publisher": "kwnews.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "필라델피아 반도체 지수는 3.38% 상승했고, SK하이닉스 ADR(8.14%)도 올랐다. 이 같은 미국발 ‘훈풍’에 ‘반도체 투 톱’ 삼성전자(4.31%)와 SK하이닉스(5.95%)가 급등하며 지수를 끌어올리고 있다. 관련주인 SK스퀘어...",
+          "source_url": "https://www.kwnews.co.kr/article/20260907500348",
+          "relevance": "high"
+        },
+        {
+          "headline": "'출근은 가까이, 생활은 편하게'…직주근접 갖춘 '아산테크노밸리 the1 ...",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "반면 창원국가산업단지가 자리한 경남 창원시 성산구는 4.91%, SK하이닉스 청주캠퍼스가 있는 충북 청주시 흥덕구는 3.10% 올라 지방권 평균을 크게 웃돌았다. 청약 시장도 같은 방향이다. 한국부동산원 청약홈에 따르면...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710435283839",
+          "relevance": "high"
+        },
+        {
+          "headline": "대미 달러 환율 1년11개월 만에 1,330원대...원화 강세 지속",
+          "publisher": "newsfc.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "전문가들은 최근 환율 급락의 결정적인 원인이 지난 7월부터 이어진 SK하이닉스의 ADR 관련 달러 공급 물량에 지난달 발표된 주요 대기업들의 주주환원에 따른 환전 수요까지 겹친 때문이라는 진단했다. 여기에...",
+          "source_url": "http://www.newsfc.co.kr/news/articleView.html?idxno=80945",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 1.81,
+      "oldest_relevant_at": "2026-09-07T01:50:00Z",
+      "collected_at": "2026-09-07T03:38:19.542910Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003509",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003509"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002287",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002287"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260317000635",
+          "published_at": "2026-03-17T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635"
+        }
+      ],
+      "collected_at": "2026-09-07T03:38:19.306276Z",
+      "request_id": "24a652ef-a781-4607-ac42-182cb8fce5e7",
+      "source_type": "dart",
+      "stock_code": "000660",
+      "company_name": "SK하이닉스"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260317000635",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "/고용량 NAND 필요성이 증가하고 있으며 AI 파급 효과로 인한 고용량 eSSD 제품 시장이 확대되고 있습니다.\n4. 경쟁요소\n반도체 사업의 핵심 경쟁력은 1.기술 및 원가 경쟁력, 2.시장 대응 능력(고객 확보, 제품 포트폴리오), 3.설비투자 능력 등이 있습니다.\n최근 대량 생산이 용이한 표준 제품 위주에서 응용 분야가 점차 다양화, 융복합화됨에 따라 시설 투자와 생산성 향상을 통한 원가 경쟁력 중심에서 제품 가치 증대를 통한 수익성 중심으로 경쟁의 패러다임이 빠르게 전환되고 있습니다. 과거에는 적극적 투자에 의한 생산능력 확대와 생산원가 절감이 핵심 경쟁 요소였지만, 최근에는 공정 미세화의 난이도 증가와 투자 대비 수익에 대한 불확실성 증대 등 사업환경이 변화하였습니다. 따라서, 앞으로는 생산기술의 고도화를 통한 투자 절감과 제품의 부가가치 증대를 위해 다양한 선행기술 및 응용기술 개발, 메모리 컨트롤러와 펌웨어가 결합된 응용복합 제품의 개발이 중요한 사업 경쟁력이 될 것입니다. 아울러, DRAM 분야에서의 TSV(Through Silicon Via) 기술 경쟁력 확보와 New Memory의 원활한 초기 시장 진입 및 eMMC나 SSD 제품의 시장 확대를 위한 관련 기술업체와의 협업과 더불어 고객 만족도가 중요해짐에 따라 마케팅 및 고객 지원활동도 핵심 경쟁 요소로 부각되고 있습니다.\n이외에도 적기에 시장 요구에 부합하는 제품을 출시(Time to Market)할 수 있는 시장 대응력 및 재무 건전성 확보 등이 요구되고 있습니다.\n나. 회사의 현황\n1. 영업개황 및 사업부문의 구분\n(1) 영업개황",
+          "score": 0.472268,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "성 제고를 목표로 환 리스크 관리에 만전을 기하고 있습니다. 또한, 당사는 영업 측면에서 매출의 90% 이상이 USD로 발생되어 USD 수입이 지출보다 많은 구조를 가지고 있으므로 수입에서 지출을 차감한 잔존 외화 현금흐름을 환리스크 관리의 주 대상으로 하고 있습니다.\n[위험관리규정]당사는 보다 체계적이고 효율적인 환리스크 관리를 위하여 환위험 관리규정 제정 및 환리스크 관리를 위한 별도의 전담 인원을 배정하여 운영하고 있습니다. 그 주요 내용은 ①외환거래는 환 리스크를 회피하고 안정적 경영 수익을 확보하기 위해 실행되어야 하며, ②실수요와 공급에 의한 거래를 원칙으로 하고, ③환위험 관리의 정책은 자연적 헤지(Natural Hedge)를 기본으로 하되 필요시 선물환 등 외부적 관리기법을 일부 시행하고, ④회사의 환위험 관리는 주관부서에서 집중하여 관리하며, 주관부서는 환포지션을 파악하여 필요시 환노출을 최소화하도록 관리하고 있습니다.\n(2) 위험관리조직 및 운영 현황당사는 외환거래 실행을 주관하는 부서에서 환위험을 관리하고 있으며, 관리부서 주요 업무는 다음과 같습니다.① 외환관리정책 / 전략의 확정② 외환관리규정의 제정 및 개정③ 외환 거래 및 관련 업무④ 외환리스크 측정 및 분석 / 보고⑤ 환 Exposure 및 외환리스크 관리방안 수립 / 시행⑥ 국제금융시장 및 환율 동향 Monitoring⑦ 이사회 또는 감사위원회 지시 사항 이행 및 점검 다. 파생상품 거래 현황\n(1) 통화스왑 및 이자율스왑\n① 당기말 현재 현금흐름위험회피회계를 적용한 통화스왑 및 이자율스왑 거래내역은다음과 같습니다.\n(원화단위: 백만원, 외화단위: 외화 천단위)",
+          "score": 0.46315,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 3. 원재료 및 생산설비",
+          "text": "4. 투자계획(현황) 2025년 연간 누적 당사의 투자집행 현황은 다음과 같습니다.\n[유형자산 취득 기준] | (단위: 십억원)\n구분 | 투자대상자산 | 투자효과 | 투자 기간 | 기투자액(누적) | 비고\n보완투자 등 | 기계장치 외 | 생산능력증가 등 | 2025.01.01~2025.12.31 | 30,173 | 누적실적\n합 계 | 30,173 | -",
+          "score": 0.455009,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "가. 시장위험\n(1) 환율변동위험\n연결회사는 국제적으로 영업활동을 영위하고 있어 외환위험, 특히 주로 달러화, 유로화, 위안화 및 엔화와 관련된 환율변동위험에 노출되어 있습니다. 외환위험은 미래예상거래, 인식된 자산과 부채 및 해외사업장에 대한 순투자가 기능통화 외의 통화로 표시될 때 발생합니다.\n당기말 현재 연결회사의 화폐성 외화자산 및 외화부채의 내역은 다음과 같습니다.\n(원화단위: 백만원, 외화단위: 외화 백만단위)\n구 분 | 자 산 | 부 채\n현지통화 | 원화환산 | 현지통화 | 원화환산\nUSD | 23,074 | 33,108,951 | 15,528 | 22,280,863\nJPY | 904 | 8,295 | 116,044 | 1,064,852\nCNY | 1,748 | 357,939 | 2,734 | 559,886\nEUR | 25 | 42,240 | 149 | 251,626\n또한, 연결회사는 외화사채 및 차입금의 환위험을 회피하기 위하여 연결재무제표 주석 21에서 설명하는 바와 같이 통화스왑계약 및 통화이자율스왑계약을 체결하고 있습니다.당기말 현재 각 외화에 대한 기능통화의 환율이 10% 변동시, 동 환율변동이 법인세비용차감전순이익에 미치는 영향은 다음과 같습니다.\n(단위: 백만원)\n구 분 | 10% 상승시 | 10% 하락시\nUSD | 1,210,371 | (1,210,371)\nJPY | (105,656) | 105,656\nCNY | (20,195) | 20,195\nEUR | (20,939) | 20,939\n(2) 이자율위험\n연결회사의 이자율위험은 미래의 시장이자율 변동에 따라 차입금에서 발생하는 이자비용이 변동될 위험으로서, 이는 주로 변동금리부 조건의 차입금에서 발생하고 있습니다. 변동이자율로 발행된 차입금으로 인하여 연결회사는 이자율위험에 노출되어 있으며 동 이자율위험의 일부는 변동이자부 금융자산 등으로부터의 이자율위험과 상쇄됩니다.",
+          "score": 0.454073,
+          "match_type": "vector"
+        },
+        {
+          "section": "VII. 주주에 관한 사항",
+          "text": "보통주기본주당이익(손실) | 29,000 원\n우선주기본주당이익(손실) | 29,050 원\n보통주희석주당이익(손실) | 28,982 원\n보통주기본주당계속영업이익(손실) | 2,313 원\n우선주기본주당계속영업이익(손실) | 2,313 원\n보통주희석주당계속영업이익(손실) | 2,311 원\n2) 요약 별도 재무정보\n(단위 : 백만원)\n구 분 | 제35기(2025.12.31)\n[유동자산] | 2,098,821\n현금및현금성자산 | 82,417\n재고자산 | 121\n기타유동자산 | 2,016,283\n[비유동자산] | 24,300,172\n종속·관계·공동기업 투자 | 20,167,416\n유형자산 | 382,787\n사용권자산 | 147,803\n무형자산 | 2,110,738\n기타비유동자산 | 1,491,428\n자산총계 | 26,398,993\n[유동부채] | 3,199,422\n[비유동부채] | 7,628,704\n부채총계 | 10,828,126\n자본금 | 16,143\n기타불입자본 | 3,223,523\n이익잉여금 | 12,349,037\n기타자본구성요소 | -17,836\n자본총계 | 15,570,867\n부채와자본총계 | 26,398,993\n종속·관계·공동기업 투자주식의 평가방법 | 원가법\n제35기 (2025.01.01~2025.12.31)\nI. 매출액(영업수익) | 3,612,294\nII. 영업이익 | 813,163\nIII. 법인세비용차감전계속영업이익 | 1,916,162\nIV. 당기순이익 | 1,344,080\nV. 주당이익\n보통주기본주당이익 | 24,399원\n우선주기본주당이익 | 24,449원\n보통주희석주당이익 | 24,385원\n우선주희석주당이익 | 24,449원\n(5) 사업현황 등 회사 경영 안정성에 영향을 미칠 수 있는 주요 내용",
+          "score": 0.450634,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635",
+      "collected_at": "2026-09-07T03:38:19.288573Z",
+      "request_id": "295e7725-f05a-4fb7-9510-8cc0b3232607",
+      "source_type": "dart",
+      "stock_code": "000660",
+      "company_name": "SK하이닉스"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "SK하이닉스",
+      "stock_code": "000660",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:38:18.944564+00:00",
+        "to": "2026-09-07T03:38:18.944564+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 24732,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 30308.25,
+        "ratio": 0.82,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 45,
+        "neutral_count": 20,
+        "negative_count": 35
+      },
+      "top_topics": {
+        "expectations": [
+          "메모리 품귀와 수요 확대",
+          "AI 인프라 확산 수혜",
+          "미국 ADR 상승 파급",
+          "저평가 해소",
+          "기관 매수 유입"
+        ],
+        "concerns": [
+          "175만원 부근 매도벽",
+          "박스권 상단 저항",
+          "반등 후 재하락",
+          "개인 매도 확대와 수급 부족"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "내년 메모리 공급 부족이 업황에 유리할 것으로 기대한다.",
+          "posted_at": "2026-09-07T02:49:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "반도체 수요 급증에 따른 성장 기대를 드러낸다.",
+          "posted_at": "2026-09-07T02:41:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "AI 인프라 확산이 반도체주 상승으로 이어지길 기대한다.",
+          "posted_at": "2026-09-07T02:49:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "미국 ADR 상승이 국내 주가에도 이어지길 기대한다.",
+          "posted_at": "2026-09-07T02:48:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "저평가 분석을 근거로 주가 재평가를 기대한다.",
+          "posted_at": "2026-09-07T02:29:00+00:00",
+          "sentiment": "positive"
+        }
+      ],
+      "collected_at": "2026-09-07T03:38:18.944564+00:00",
+      "fgi_mean": 55.81,
+      "fgi_latest": {
+        "fgi": 57.04,
+        "label": "탐욕",
+        "as_of": "2026-09-07T03:15:00+00:00",
+        "post_count": 64,
+        "valence_percentile": 83.91
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "풍문또는보도에대한해명(미확정)              ",
+          "receipt_number": "20260904800642",
+          "published_at": "2026-09-04T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904800642"
+        },
+        {
+          "report_name": "최대주주등소유주식변동신고서              ",
+          "receipt_number": "20260821800617",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821800617"
+        },
+        {
+          "report_name": "조회공시요구(풍문또는보도)에대한답변(미확정)              ",
+          "receipt_number": "20260821800524",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821800524"
+        },
+        {
+          "report_name": "조회공시요구(풍문또는보도)              ",
+          "receipt_number": "20260821800214",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821800214"
+        },
+        {
+          "report_name": "[기재정정]임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260821000615",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000615"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260821000531",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000531"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260821000527",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000527"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260821000524",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000524"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260821000519",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000519"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260821000516",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000516"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260821000513",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000513"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260821000504",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000504"
+        },
+        {
+          "report_name": "자기주식처분결과보고서",
+          "receipt_number": "20260821000495",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000495"
+        },
+        {
+          "report_name": "주식소각결정              ",
+          "receipt_number": "20260819800340",
+          "published_at": "2026-08-19T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819800340"
+        },
+        {
+          "report_name": "수시공시의무관련사항(공정공시)              ",
+          "receipt_number": "20260819800338",
+          "published_at": "2026-08-19T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819800338"
+        },
+        {
+          "report_name": "주요사항보고서(자기주식취득결정)",
+          "receipt_number": "20260819000254",
+          "published_at": "2026-08-19T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819000254"
+        },
+        {
+          "report_name": "파생상품거래손실발생              ",
+          "receipt_number": "20260814802986",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814802986"
+        },
+        {
+          "report_name": "조회공시요구(풍문또는보도)에대한답변(미확정)              ",
+          "receipt_number": "20260810800434",
+          "published_at": "2026-08-10T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260810800434"
+        },
+        {
+          "report_name": "조회공시요구(풍문또는보도)              ",
+          "receipt_number": "20260810800101",
+          "published_at": "2026-08-10T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260810800101"
+        }
+      ],
+      "collected_at": "2026-09-07T03:38:19.790954Z",
+      "request_id": "23768fa5-6d4a-489e-a802-3377fc62dff0",
+      "source_type": "dart",
+      "stock_code": "000660",
+      "company_name": "SK하이닉스"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260904800642": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260904800642",
+        "document_type": "disclosure",
+        "content": "SK하이닉스/풍문 또는 보도에 대한 해명(미확정)/(2026.09.04)풍문 또는 보도에 대한 해명(미확정)\n1. 풍문 또는 보도의 내용 | SK하이닉스 美 자회사 솔리다임, 5조 규모 프리IPO 추진\n2. 풍문 또는 보도의 매체 | 한국경제\n3. 풍문 또는 보도의 발생일자 | 2026-08-05\n4. 풍문 또는 보도의 내용에 대한 해명내용\n본 공시는 2026년 8월 5일자 한국경제에 보도된 \"SK하이닉스 美 자회사 솔리다임, 5조 규모 프리IPO 추진\" 기사에 대한 해명 공시(미확정) 입니다. - 당사의 해외 종속회사인 솔리다임은 경쟁력 강화를 위하여 다양한 방안을 검토하고 있으나, 현재까지 확정된 사항은 없습니다. - 추후 구체적인 내용이 확정되는 시점 또는 3개월 이내 재공시 하겠습니다. (공시책임자) 김우현 재무 부문장\n5. 재공시예정일 | 2026-12-03\n※ 관련공시 | 2026-08-05 풍문 또는 보도에 대한 해명(미확정)",
+        "content_truncated": false,
+        "total_chars": 475,
+        "summary": "풍문또는보도에대한해명(미확정)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904800642",
+        "collected_at": "2026-09-07T03:38:20.001682Z",
+        "report_name": "풍문또는보도에대한해명(미확정)              ",
+        "published_at": "2026-09-04T00:00:00Z",
+        "request_id": "772b27d2-b91d-4e8b-b1df-31088139e33c",
+        "source_type": "dart"
+      }
+    },
+    "20260821000495": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260821000495",
+        "document_type": "disclosure",
+        "content": "금융감독원장 귀하 | 2026년 8월 21일\n회 사 명 : | 에스케이하이닉스 주식회사\n대 표 이 사 : | 곽 노 정\n본 점 소 재 지 : | 경기도 이천시 부발읍 경충대로 2091\n(전 화) 031-5185-4114\n(홈페이지) http://www.skhynix.com\n작 성 책 임 자 : | (직 책) 재무 부문장 (성 명) 김 우 현\n(전 화) 031-5185-4114\n1. 발행인의 명칭 및 주소\n가. 명 칭 :\n에스케이하이닉스 주식회사\n나. 주 소 :\n경기도 이천시 부발읍 경충대로 2091\n2. 처분보고에 관한 내용\n가. 주요사항보고서 제출일 :\n2026년 08월 07일\n나. 처분기간 :\n2026년 08월 08일 | 부터 | 2026년 09월 07일 | 까지\n다. 처분보고 주식의 종류 및 주식수\n기명식 보통주 총 82주\n3. 처분내용\n(단위 : 원, 주)\n일 자 | 종 류 | 수 량 | 1주당처분가액 | 처분가액총 액 | 처분대상 | 매도위탁 증권회사\n주문수량 | 처분수량 | 금융투자업자 | 고유번호\n2026년 08월 19일 | 보통주식 | 82 | 82 | 1,500,000 | 123,000,000 | 독립이사 | SK증권 | 00131850\n계 | - | 82 | 82 | 1,500,000 | 123,000,000 | - | - | -\n※ 상기 1주당 처분가액은 각 처분일자의 종가임\n4. 처분보고에 관한 내용과 실제 처분내용 일치 여부\n처분예정주식(주) | 처분주식 총수(주) | 일치여부 | 차이발생시 사유\n보통주식 | 기타주식 | 보통주식 | 기타주식\n82 | - | 82 | - | 일치 | -\n5. 처분후 자기주식등의 보유상황\n[ | 2026년 08월 21일 | 현재 ] | (단위 : 백만원, 주, %)\n주식의종 류 | 법제165조의3의규정에 의한 보유상황(A) | 법제165조의3의신탁계약등에 의한 보유상황(B) | 계(A + B)\n수량 | 비율 | 총가액 | 수량 | 비율 | 계약금액 | 수량 | 비율 | 금 액\n보통주식 | 1,625,769 | 0.2 | 92,683 | - | - | - | 1,625,769 | 0.2 | 92,683\n계 | 1,625,769 | 0.2 | 92,683 | - | - | - | 1,625,769 | 0.2 | 92,683",
+        "content_truncated": false,
+        "total_chars": 1122,
+        "summary": "자기주식처분결과보고서 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000495",
+        "collected_at": "2026-09-07T03:38:20.170199Z",
+        "report_name": "자기주식처분결과보고서",
+        "published_at": "2026-08-21T00:00:00Z",
+        "request_id": "95beed09-f464-4681-a4cd-d873ceb5d4d4",
+        "source_type": "dart"
+      }
+    },
+    "20260819800340": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260819800340",
+        "document_type": "disclosure",
+        "content": "SK하이닉스/주식 소각 결정/(2026.08.19)주식 소각 결정\n1. 소각할 주식의 종류와 수 | 보통주식 (주) | 24,070,000\n종류주식 (주) | -\n2. 발행주식 총수 | 보통주식 (주) | 730,492,365\n종류주식 (주) | -\n3. 1주당 가액(원) | 5,000\n4. 소각예정금액(원) | 40,004,340,000,000\n5. 소각을 위한 자기주식 취득 예정기간 | 시작일 | 2026-08-20\n종료일 | 2026-11-19\n6. 소각할 주식의 취득방법 | 장내매수\n7. 소각 예정일 | -\n8. 자기주식 취득 위탁 투자중개업자 | SK증권\n9. 이사회결의일(결정일) | 2026-08-19\n- 사외이사 참석여부 | 참석(명) | 6\n불참(명) | 0\n- 감사(사외이사가 아닌 감사위원) 참석여부 | -\n10. 공정거래위원회 신고대상 여부 | 미해당\n11. 기타 투자판단과 관련한 중요사항 | - 본 주식 소각은 동일자 이사회에서 결정한 배당가능이익 범위 내에서 취득 예정인 자기주식을 '상법 제343조 제1항' 단서규정에 따라 소각하는 것으로서, 발행주식 총수는 감소하나, 자본금은 감소하지 아니함. 자기주식 취득과 관련한 자세한 사항은 금일 공시한 주요사항보고서(자기주식취득결정)를 참고하시기를 바람 - 상기 '1.소각할 주식의 종류와 수-보통주식(주)'은 '4.소각예정금액(원)'을 이사회 결의일 전일 종가(2026년 8월 18일 기준: 1,662,000원)를 기준으로 산정한 수량임. 다만, 자기주식취득 과정 중의 주가 변동에 따라 실제 소각 주식 수량과 소각금액은 변동될 수 있으며, 추후 정정공시를 통해 정확한 주식수를 공시할 예정임 - 상기 '2. 발행주식총수-보통주식(주)'는 소각 전 주식수임 - 상기 '3. 주당가액'은 주당 액면가액임 - 상기 '7.소각예정일'과 관련하여, 당사는 자기주식 취득 완료 후 취득한 주식을 일괄적으로 전량 소각할 예정임 - 상기 '9.이사회결의일(결정일)-감사(사외이사가 아닌 감사위원) 참석여부' 관련하여, 당사의 감사위원은 모두 사외이사(독립이사)임\n※관련공시 | -",
+        "content_truncated": false,
+        "total_chars": 1034,
+        "summary": "주식소각결정               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819800340",
+        "collected_at": "2026-09-07T03:38:20.344614Z",
+        "report_name": "주식소각결정              ",
+        "published_at": "2026-08-19T00:00:00Z",
+        "request_id": "fa6f0581-0e35-4959-b8ea-2dc9aaa0cb84",
+        "source_type": "dart"
+      }
+    },
+    "20260819000254": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260819000254",
+        "document_type": "disclosure",
+        "content": "주요사항보고서 / 거래소 신고의무 사항\n금융위원회 / 한국거래소 귀중 | 2026년 8월 19일\n회 사 명 : | 에스케이하이닉스 주식회사\n대 표 이 사 : | 곽 노 정\n본 점 소 재 지 : | 경기도 이천시 부발읍 경충대로 2091\n(전 화) 031-5185-4114\n(홈페이지) http://www.skhynix.com\n작 성 책 임 자 : | (직 책) 재무 부문장 | (성 명) 김 우 현\n(전 화) 031-5185-4114\n자기주식 취득 결정\n1. 취득예정주식(주) | 보통주식 | 24,070,000\n기타주식 | -\n2. 취득예정금액(원) | 보통주식 | 40,004,340,000,000\n기타주식 | -\n3. 취득예상기간 | 시작일 | 2026년 08월 20일\n종료일 | 2026년 11월 19일\n4. 보유예상기간 | 시작일 | -\n종료일 | -\n5. 취득목적 | 자기주식 소각을 통한 주주가치 제고\n6. 취득방법 | 장내매수\n7. 위탁투자중개업자 | SK증권(SK Securities Co., Ltd.)\n8. 취득 전 자기주식 보유현황 | 배당가능이익범위 내 취득(주) | 보통주식 | 1,625,696 | 비율(%) | 0.2\n기타주식 | - | 비율(%) | -\n기타취득(주) | 보통주식 | 73 | 비율(%) | 0.0\n기타주식 | - | 비율(%) | -\n9. 취득결정일 | 2026년 08월 19일\n- 독립(사외)이사* 참석여부 | 참석(명) | 6\n불참(명) | 0\n- 감사(독립(사외)이사*가 아닌 감사위원)참석여부 | -\n10. 1일 매수 주문수량 한도 | 보통주식 | 2,407,000\n기타주식 | -\n* 상장회사는 독립이사, 비상장회사는 사외이사에 해당\n11. 기타 투자판단에 참고할 사항\n- 금번 자기주식 취득결정은 신규 자기주식 취득 건입니다.- 상기 '1.취득예정주식(주)'은 '2.취득예정금액(원)'을 바탕으로 이사회 결의일 전일 종가(2026년 8월 18일 기준: 1,662,000원)를 기준으로 하여 산정하였으며, 향후 주가 변동 등에 따라 취득 주식수가 달라질 수 있습니다.- 상기 '4. 보유예상기간'은 회사의 재무상태, 시장환경 변화 등 다양한 경영환경에 따라 달라질 수 있습니다. 다만, 금번 자기주식 취득 건은 소각을 목적으로 취득함에 따라, 상기'3. 취득예상기간' 내에 자기주식 취득을 완료한 후 해당 기간에 취득한 자기주식 전량을 소각할 예정입니다. 주식 소각에 대한 자세한 사항은 당사가 2026년 8월 19일 공시한 '주식 소각 결정' 공시를 통해 확인 가능합니다.- 상기 '8. 취득전 자기주식보유현황 - 기타취득(보통주식)' 자기주식수는 당사가 2023년 4월 11일 발행한 교환사채의 조기상환 청구권(Clean Up Call Option)을 2026년 5월 중 행사함에 따라 발생한 기타 취득분입니다.- 상기 '9. 취득 결정일'은 이사회 결의일입니다.- 상기 '10. 1일 매수 주문 수량 한도' 산출근거는 '증권의 발행 및 공시 등에 관한 규정 제5-5조'에 따라 [①과 ②중 많은 수량]과 ③ 중 적은 수량입니다. ① 취득 신고 주식수의 10% : 2,407,000주 ② 이사회 결의일 전일로부터 1개월간 일평균 거래량의 25% : 1,431,989주 ③ 발행주식총수의 1%: 7,304,923주\n【자기주식 취득금액 한도】\n항 목 | 금 액\n1. 직전사업연도 말 현재 상법상 배당가능이익 한도 | 가. 순자산액 | 117,318,562,193,943\n나. 자본금의 액 | 3,657,652,050,000\n다. 직전 사업연도까지 적립된 자본준비금과 이익준비금의 합계액 | 9,867,146,544,188\n라. 대통령령이 정하는 미실현이익 | 12,239,000,231,484\n소계(가-나-다-라) | 91,554,763,368,271\n2. 직전 사업연도말 이후 자기주식 취득금액 | -\n3. 직전 사업연도말 이후 정기주주총회에서 결의된 이익배당금액 및 관련 이익준비금 | 1,538,579,052,713\n4. 직전 사업연도말 이후 이사회에서 결의된 분기ㆍ중간배당금액 및 관련 이익준비금 | 593,975,016,113\n5. 신탁계약의 계약금액 | -\n6. 직전 사업연도말 이후 자기주식 처분시 처분주식의 취득원가 (이동평균법 적용) | 25,802,387,418\n자기주식 취득금액 한도(1-2-3-4-5+6) | 89,448,011,686,863\n주1) 상기 '1. 직전 사업연도 말 현재 상법상 배당가능 이익 한도'는 2025년도 결산 기준으로 작성하였습니다.\n주2) 상기 금액 단위는 '원' 기준입니다.\n【자기주식 취득 결정 전 자기주식 보유현황】\n(단위 : 주)\n취득방법 | 주식의 종류 | 기초수량 | 변동 수량 | 기말수량 | 비고\n취득(+) | 처분(-) | 소각(-)\n배당가능이익범위이내취득 | 직접취득 | 장내 직접 취득 | 보통주식 | 17,377,728 | - | 452,032 | 15,300,000 | 1,625,696 | -\n기타주식 | - | - | - | - | - | -\n장외직접 취득 | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n공개매수 | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n소계(a) | 보통주식 | 17,377,728 | - | 452,032 | 15,300,000 | 1,625,696 | -\n기타주식 | - | - | - | - | - | -\n신탁계약에 의한취득 | 수탁자 보유물량 | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n현물보유물량 | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n소계(b) | 보통주식 | - | - | - | - | - | -\n기타주식 | - | - | - | - | - | -\n기타 취득(c) | 보통주식 | - | 73 | - | - | 73 | -\n기타주식 | - | - | - | - | - | -\n총 계(a+b+c) | 보통주식 | 17,377,728 | 7",
+        "content_truncated": true,
+        "total_chars": 3268,
+        "summary": "주요사항보고서(자기주식취득결정) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819000254",
+        "collected_at": "2026-09-07T03:38:20.512641Z",
+        "report_name": "주요사항보고서(자기주식취득결정)",
+        "published_at": "2026-08-19T00:00:00Z",
+        "request_id": "9e64bb0f-73cf-4094-8f1d-140a4cfbcbb5",
+        "source_type": "dart"
+      }
+    },
+    "20260814003509": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260814003509",
+        "document_type": "disclosure",
+        "content": "(제 79 기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 06월 30일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 08월 14일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 에스케이하이닉스 주식회사\n대 표 이 사 : | 곽 노 정\n본 점 소 재 지 : | 경기도 이천시 부발읍 경충대로 2091\n(전 화) 031-5185-4114\n(홈페이지) https://www.skhynix.com\n작 성 책 임 자 : | (직 책) 재무 부문장 (성 명) 김 우 현\n(전 화) 031-5185-4114\n목 차\n【 대표이사 등의 확인 】 | -----------------------\nI. 회사의 개요 | -----------------------\n1. 회사의 개요 | -----------------------\n2. 회사의 연혁 | -----------------------\n3. 자본금 변동사항 | -----------------------\n4. 주식의 총수 등 | -----------------------\n5. 정관에 관한 사항 | -----------------------\nII. 사업의 내용 | -----------------------\n1. 사업의 개요 | -----------------------\n2. 주요 제품 및 서비스 | -----------------------\n3. 원재료 및 생산설비 | -----------------------\n4. 매출 및 수주상황 | -----------------------\n5. 위험관리 및 파생거래 | -----------------------\n6. 주요계약 및 연구개발활동 | -----------------------\n7. 기타 참고사항 | -----------------------\nIII. 재무에 관한 사항 | -----------------------\n1. 요약재무정보 | -----------------------\n2. 연결재무제표 | -----------------------\n3. 연결재무제표 주석 | -----------------------\n4. 재무제표 | -----------------------\n5. 재무제표 주석 | -----------------------\n6. 배당에 관한 사항 | -----------------------\n7. 증권의 발행을 통한 자금조달에 관한 사항 | -----------------------\n7-1. 증권의 발행을 통한 자금조달 실적 | -----------------------\n7-2. 증권의 발행을 통해 조달된 자금의 사용실적 | -----------------------\n8. 기타 재무에 관한 사항 | -----------------------\nIV. 이사의 경영진단 및 분석의견 | -----------------------\nV. 회계감사인의 감사의견 등 | -----------------------\n1. 외부감사에 관한 사항 | -----------------------\n2. 내부통제에 관한 사항 | -----------------------\nVI. 이사회 등 회사의 기관에 관한 사항 | -----------------------\n1. 이사회에 관한 사항 | -----------------------\n2. 감사제도에 관한 사항 | -----------------------\n3. 주주총회 등에 관한 사항 | -----------------------\nVII. 주주에 관한 사항 | -----------------------\nVIII. 임원 및 직원 등에 관한 사항 | -----------------------\n1. 임원 및 직원 등의 현황 | -----------------------\n2. 임원의 보수 등 | -----------------------\nIX. 계열회사 등에 관한 사항 | -----------------------\nX. 대주주 등과의 거래내용 | -----------------------\nXI. 그 밖에 투자자 보호를 위하여 필요한 사항 | -----------------------\n1. 공시내용 진행 및 변경사항 | -----------------------\n2. 우발부채 등에 관한 사항 | -----------------------\n3. 제재 등과 관련된 사항 | -----------------------\n4. 작성기준일 이후 발생한 주요사항 등 기타사항 | -----------------------\nXII. 상세표 | -----------------------\n1. 연결대상 종속회사 현황(상세) | -----------------------\n2. 계열회사 현황(상세) | -----------------------\n3. 타법인출자 현황(상세) | -----------------------\n【 전문가의 확인 】 | -----------------------\n1. 전문가의 확인 | -----------------------\n2. 전문가와의 이해관계 | -----------------------\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 개황 [연결대상 종속회사 현황(요약)]\n(기준일: 2026년 06월 30일)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | - | - | - | - | -\n비상장 | 53 | 4 | - | 57 | 28\n합계 | 53 | 4 | - | 57 | 28\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n※ 주요 종속회사 판단기준: 직전 사업연도말 자산총액 750억원 이상 또는 지배회사 자산총액의 10% 이상\n[연결대상회사의 변동내용]\n구 분 | 자회사 | 사 유\n신규연결 | Solidigm Inc. | 신설\nSolidigm NAND product Solutions (Dalian) Co., Ltd | 신설\nSHIFTIX Holdings LLC | 신설\nSHIFTIX1 LLC | 신설\n연결제외 | - | -\n- | -\n※ 한국채택국제회계기준에 따라 연결 기준으로 작성되었습니다.\n※ M",
+        "content_truncated": true,
+        "total_chars": 445231,
+        "summary": "반기보고서 (2026.06) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003509",
+        "collected_at": "2026-09-07T03:38:28.032842Z",
+        "report_name": "반기보고서 (2026.06)",
+        "published_at": "2026-08-14T00:00:00Z",
+        "request_id": "9763ed2d-8353-40f0-9ddb-7a344fdbbf11",
+        "source_type": "dart"
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260904800642",
+    "20260821000495",
+    "20260819800340",
+    "20260819000254",
+    "20260814003509"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:38:18.799850Z"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:18.800109Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:18.800447Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:18.800587Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:18.800695Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:18.800864Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:18.800970Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:19.327013Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:19.327862Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:19.373277Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:19.423250Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:19.571211Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-000660",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:19.850887Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

@@ -1,0 +1,1255 @@
+{
+  "company": {
+    "company_name": "LG에너지솔루션",
+    "stock_code": "373220"
+  },
+  "captured_at": "2026-09-07T03:39:03.981673+00:00",
+  "capture_finished_at": "2026-09-07T03:47:53.932421+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "LG에너지솔루션",
+      "stock_code": "373220",
+      "current_price": 360500,
+      "change": 2000,
+      "change_rate": 0.56,
+      "volume": 85527,
+      "volume_change_rate": 29.65,
+      "avg_volume_20d": 311552,
+      "volume_ratio_20d": 0.49,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 152257,
+      "warnings": [],
+      "as_of": "2026-09-07T03:39:04.437651Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:39:04.437651Z"
+    },
+    "news": {
+      "request_id": "6e16148c-991d-4f28-b77c-3961a2297beb",
+      "status": "success",
+      "company_name": "LG에너지솔루션",
+      "stock_code": "373220",
+      "articles": [
+        {
+          "headline": "ESS 3차 입찰, 승부처는 배점표",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T03:28:00Z",
+          "summary": "1·2차 입찰의 누적 낙찰물량 점유율은 삼성SDI 56%, SK온 25%, LG에너지솔루션 19%다. 1차(2025년 7월)에서는 삼성SDI가 76%를 가져갔지만 2차(2월)에서는 SK온이 50%를 수주하며 판도가 뒤집혔다. 문제는 가격이다. kWh당...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362731",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션,협력사 대상 중대재해처벌법 교육 실시",
+          "publisher": "cctimes.kr",
+          "published_at": "2026-09-07T03:08:00Z",
+          "summary": "LG에너지솔루션은 7일부터 이틀간 충북대학교 융합기술원 세미나실에서 163개 협력사 대상으로 중대재해처벌법 교육을 실시한다. /LG에너지솔루션 제공",
+          "source_url": "http://www.cctimes.kr/news/articleView.html?idxno=925836",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션-서울대 차세대 LMR배터리 상용화 길 열었다",
+          "publisher": "cctimes.kr",
+          "published_at": "2026-09-07T03:08:00Z",
+          "summary": "▲ '인터배터리 2026'에서 공개된 LG에너지솔루션 LMR배터리./LG에너지솔루션 제공 LG에너지솔루션과 서울대가 차세대 LMR(리튬망간리치) 배터리의 안정성을 혁신적으로 개선할 수 있는 핵심 기술을 확보했다....",
+          "source_url": "http://www.cctimes.kr/news/articleView.html?idxno=925837",
+          "relevance": "high"
+        },
+        {
+          "headline": "저렴한 망간 배터리, 전기차용 대형 배터리 상용화 가능성 높여",
+          "publisher": "dongascience.com",
+          "published_at": "2026-09-07T03:00:00Z",
+          "summary": "서울대는 임종우 화학부 교수팀과 LG에너지솔루션 공동연구팀이 '리튬-망간 리치 층상 산화물(LMR)'의 충·방전 과정에서 발생하는 가스 발생과 용량 저하의 원인을 규명하고 성능 저하를 제어할 대형 셀 최적 운용...",
+          "source_url": "https://www.dongascience.com/news/view/79796",
+          "relevance": "high"
+        },
+        {
+          "headline": "[데일리토픽] LG엔솔·서울대, 차세대 LMR 배터리 내구성 향상 기술 개발",
+          "publisher": "finomy.com",
+          "published_at": "2026-09-07T02:58:00Z",
+          "summary": "현대경제신문 주혜연 기자 | LG에너지솔루션이 서울대학교와 함께 차세대 리튬망간리치, LMR 배터리의 내구성을 높이는 기술을 개발했습니다. LMR은 비싼 코발트 대신 망간을 사용해 비용을 낮추면서도 높은 에너지...",
+          "source_url": "http://www.finomy.com/news/articleView.html?idxno=260898",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, 차세대 LMR 배터리 수명 저하 해법 찾았다",
+          "publisher": "segyebiz.com",
+          "published_at": "2026-09-07T02:58:00Z",
+          "summary": "LG에너지솔루션이 서울대와 공동 연구를 통해 차세대 리튬망간리치(LMR) 배터리의 수명 안정성을 높이는 기술을 개발했다. 충·방전 과정에서 발생하는 가스와 용량 저하 원인을 규명하고 이를 제어할 수 있는 대형 셀...",
+          "source_url": "http://www.segyebiz.com/newsView/20260907507930?OutUrl=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, LMR 배터리 안정성 개선 기술 확보",
+          "publisher": "todayenergy.kr",
+          "published_at": "2026-09-07T02:42:00Z",
+          "summary": "LG에너지솔루션과 서울대학교가 차세대 LMR(리튬망간리치) 배터리의 가스 발생을 억제하고 대형 셀의 안정성을 높이는 기술을 확보했다. LG에너지솔루션은 서울대 화학부 임종우 교수 연구진과 공동 연구를 통해 LMR...",
+          "source_url": "https://www.todayenergy.kr/news/articleView.html?idxno=302588",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 훈풍에 코스피 3% 급등…외국인·기관 1.6조 싹쓸이",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "50%), LG에너지솔루션(0.28%) 등이 오르고 있다. 반면 한화에어로스페이스(-2.18%), 삼성SDI(-0.73%), 셀트리온(-0.90%) 등은 내리고 있다. 업종별로 전기·전자(4.29%), 기계·장비(4.12%), 제조(3.35%) 등은 오르고 음식료...",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063126",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI 투자 기대에 외인·기관 1.6조 '사자'…코스피 6900선 공방[장중시황...",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "SK스퀘어(402340)(5.86%), SK하이닉스(000660)(5.65%), 삼성전자(005930)(3.91%), 삼성생명(032830)(3.7%), 삼성전자우(005935)(2.19%), KB금융(105560)(1.57%), 현대차(005380)(1.43%), 삼성전기(009150)(1.28%), LG에너지솔루션(373220)(0.56...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6282070",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션, 서울대와 차세대 'LMR 배터리' 대형 셀 안정성 확보…...",
+          "publisher": "mtnews.net",
+          "published_at": "2026-09-07T02:40:00Z",
+          "summary": "LG에너지솔루션이 서울대학교 화학부 임종우 교수 연구진과의 산학 공동 연구를 통해 차세대 LMR(리튬망간리치) 배터리의 최대 난제인 가스 발생 문제를 해결하고, 전기차용 대형 셀 상용화의 기틀을 마련했다. 이번...",
+          "source_url": "https://www.mtnews.net/news/articleView.html?idxno=25873",
+          "relevance": "high"
+        },
+        {
+          "headline": "[食전食후] AI·반도체 훈풍에 코스피 6900선 육박…외국인·기관 '쌍끌...",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "SK스퀘어(5.96%), 삼성전자우(2.14%), KB금융(1.57%), 현대차(1.43%), 삼성전기(1.28%), LG에너지솔루션(0.70%) 등도 오르고 있다. 특히 인공지능(AI) 연산 수요 확대 기대가 반도체주 투자심리를 끌어올리는 모습이다....",
+          "source_url": "https://www.ajunews.com/view/20260907112902463",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션, 차세대 LMR 배터리 수명 안정성 높이는 기술 개발",
+          "publisher": "consumernews.co.kr",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "LG에너지솔루션이 서울대학교와 차세대 리튬망간리치(LMR) 배터리의 가스 발생을 억제하고 수명 안정성을 높이는 기술을 개발했다. LG에너지솔루션은 서울대 화학부 임종우 교수 연구진과 LMR 배터리의 충·방전...",
+          "source_url": "http://www.consumernews.co.kr/news/articleView.html?idxno=763211",
+          "relevance": "high"
+        },
+        {
+          "headline": "LMR 배터리 ‘가스 발생’ 난제 풀었다…LG엔솔·서울대, 상용화 성큼",
+          "publisher": "khan.co.kr",
+          "published_at": "2026-09-07T02:29:00Z",
+          "summary": "LG에너지솔루션과 서울대가 차세대 배터리로 꼽히는 리튬망간리치(LMR) 배터리의 최대 난제인 가스 발생 문제를 해결했다. 전기차용 대형 셀 상용화 가능성을 끌어올렸다는 평가를 받는다. LG에너지솔루션은 서울대...",
+          "source_url": "https://www.khan.co.kr/article/202609071129001",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인·기관 사자에 코스피 3%대 상승세…6900 탈환 고지전",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "삼성전자와 SK하이닉스는 각각 3%대, 5%대 오름세를 이어가고 있고 SK스퀘어, 삼성전기, LG에너지솔루션, 현대차, 삼성바이오로직스, KB금융, 삼성생명이 모두 상승 중이다. 같은 시간 코스닥 지수는 1.64%(13.35포인트)...",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/07/QZ57IBRFANHSJAVOFB54QGKVTE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션-서울대, 차세대 LMR배터리 상용화 기술 확보",
+          "publisher": "koreastocknews.com",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "LG에너지솔루션은 서울대학교 화학부 임종우 교수 연구진과의 공동 연구를 통해 LMR 배터리의 전기차용 대형 셀 적용 가능성을 높이는 연구 성과를 달성했다고 7일 밝혔다. 공동 연구팀은 LMR 배터리 충·방전 과정에서...",
+          "source_url": "http://www.koreastocknews.com/news/articleView.html?idxno=121027",
+          "relevance": "high"
+        },
+        {
+          "headline": "전기차 배터리 시장 20% 커졌는데…K-배터리 점유율 '뒷걸음'",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "LG에너지솔루션은 사용량이 소폭 늘어나는 데 그치며 점유율이 하락했고, SK온은 역성장했다. 삼성SDI는 10위권에 들지 못했다. 반면 CATL을 비롯한 중국계 업체들은 빠르게 몸집을 키우며 시장 지배력을...",
+          "source_url": "https://www.news1.kr/industry/general-industry/6281994",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, 차세대 LMR 배터리 상용화 앞당겨",
+          "publisher": "thelec.kr",
+          "published_at": "2026-09-07T02:22:00Z",
+          "summary": "LG에너지솔루션이 서울대학교와 리튬망간리치(LMR) 배터리의 가스 발생을 줄이고 수명을 높이는 기술을 개발했다. LG에너지솔루션은 서울대 화학부 임종우 교수 연구진과 LMR 배터리의 산소 반응을 분석해 전기차용...",
+          "source_url": "https://www.thelec.kr/news/articleView.html?idxno=61879",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, 서울대와 차세대 LMR 배터리 상용화 속도…“수명 안정성 높여...",
+          "publisher": "mydaily.co.kr",
+          "published_at": "2026-09-07T02:20:00Z",
+          "summary": "LG에너지솔루션이 차세대 리튬망간리치(LMR) 배터리 상용화 가능성을 높이는 핵심 기술을 확보했다. LG에너지솔루션은 임종우 서울대 화학부 교수 연구진과의 공동 연구를 통해 LMR 배터리의 전기차용 대형 셀 적용...",
+          "source_url": "https://www.mydaily.co.kr/page/view/2026090711124143956",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션-서울대 공동 연구팀, LMR 배터리 가스 발생 억제 기술 확...",
+          "publisher": "sports.donga.com",
+          "published_at": "2026-09-07T02:17:00Z",
+          "summary": "​[스포츠동아 원성열 기자] LG에너지솔루션과 서울대학교 화학부 임종우 교수 공동 연구팀이 차세대 리튬망간리치(LMR) 배터리의 최대 난제로 꼽히던 가스 발생 및 수명 저하 문제를 해결할 수 있는 핵심 기술을...",
+          "source_url": "https://sports.donga.com/economy/article/all/20260907/134617939/1",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, 차세대 LMR 배터리 상용화 속도 낸다",
+          "publisher": "fntimes.com",
+          "published_at": "2026-09-07T02:14:00Z",
+          "summary": "LG에너지솔루션(대표이사 김동명)이 차세대 배터리로 손꼽히는 LMR(리튬망간리치) 배터리 상용화 기술을 확보했다. 그동안 난제로 여겨지던 가스 발생 문제를 해결하고 대현 배터리 셀 적용까지 성공했다. 특히...",
+          "source_url": "https://www.fntimes.com/html/view.php?ud=2026090711095624017492587736_18",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 훈풍에 3% 안팎 상승세…삼전닉스 3~5%↑",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T02:12:00Z",
+          "summary": "이에 '반도체 투 톱' 삼성전자와 SK하이닉스가 각각 3.91%, 5.53% 상승 중이고, 시가총액 상위주 가운데 SK스퀘어(5.67%), 삼성전기(1.50%), LG에너지솔루션(0.28%) 등이 오르고 있다. 반면 한화에어로스페이스(-2.18...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907072500008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"가스 잡고 수명 늘렸다\" LG엔솔-서울대, 차세대 LMR 배터리 개발",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "LG에너지솔루션과 서울대학교 연구진이 차세대 배터리로 꼽히는 'LMR' 대형 셀의 고질적인 가스 발생 문제를 해결하고 상용화 가능성을 입증했다고 7일 밝혔다. 이번 공동 연구 성과는 세계적 권위의 국제 학술지...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317730",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 메모리주 강세에 장 초반 3%대 상승...삼전 4%·SK하닉 6%↑",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "시가총액 상위 종목 가운데 삼성전기는 2.50%, LG에너지솔루션은 0.42%, 현대차는 1.83% 오르고 있다. 반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 하락 중이다. 업종별로는 기술주 급등 영향으로 전기...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317738",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, LMR 배터리 상용화 난제 '가스 발생' 줄였다",
+          "publisher": "sisafocus.co.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "관람객이 '인터배터리 2026'에 전시된 LG에너지솔루션의 리튬망간리치(LMR) 배터리를 살펴보고 있다. (사진 / LG에너지솔루션 제공) LG에너지솔루션과 서울대학교가 차세대 리튬망간리치(LMR) 배터리의 가스 발생과 용량...",
+          "source_url": "http://www.sisafocus.co.kr/news/articleView.html?idxno=364626",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔-서울대, LMR 배터리 최대 난제 '가스 발생' 해결…상용화 물꼬",
+          "publisher": "delighti.co.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "인터배터리 2026에서 공개된 LG에너지솔루션 LMR배터리. (사진=LG에너지솔루션)  LG에너지솔루션이 서울대학교 연구진과 함께 차세대 LMR(리튬망간리치) 배터리의 최대 약점으로 지목되던 가스 발생 문제를 해결하고...",
+          "source_url": "https://www.delighti.co.kr/news/articleView.html?idxno=121408",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, LMR 배터리 난제 풀었다…대형 셀서 883회 수명 검증",
+          "publisher": "whitepaper.co.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "화이트페이퍼, WHITEPAPER'인터배터리 2026'에서 공개된 LG에너지솔루션 LMR 배터리 (사진=LG에너지솔루션)  LG에너지솔루션이 서울대학교와 함께 차세대 리튬망간리치 배터리의 상용화 가능성을 높이는 연구 성과를 냈다....",
+          "source_url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=266470",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, 차세대 'LMR 배터리' 난제 풀었다…전기차 상용화 청신...",
+          "publisher": "cstimes.com",
+          "published_at": "2026-09-07T02:02:00Z",
+          "summary": "컨슈머타임스=김동역 기자 | LG에너지솔루션과 서울대 연구진이 공동 연구를 통해 차세대 LMR(리튬망간리치) 배터리의 안정성을 향상시키며 전기차용 대형 셀 적용 가능성을 높이는 성과를 거뒀다. 이번 연구 성과는...",
+          "source_url": "https://www.cstimes.com/news/articleView.html?idxno=719605",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션-서울대, LMR 배터리 상용화 최대 난제 가스 발생 문제 해...",
+          "publisher": "techholic.co.kr",
+          "published_at": "2026-09-07T02:02:00Z",
+          "summary": "LG에너지솔루션과 서울대가 차세대 LMR(리튬망간리치) 배터리의 안정성을 혁신적으로 개선할 수 있는 핵심 기술을 확보했다. LG에너지솔루션은 서울대학교 화학부 임종우 교수 연구진과의 공동 연구를 통해 LMR...",
+          "source_url": "http://www.techholic.co.kr/news/articleView.html?idxno=222758",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, LMR 배터리 상용화 길 열었다",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "LG에너지솔루션과 서울대가 차세대 LMR(리튬망간리치) 배터리의 안정성을 혁신적으로 개선할 수 있는 핵심 기술을 확보했다. LG에너지솔루션과 서울대가 차세대 LMR(리튬망간리치) 배터리의 안정성을 혁신적으로 개선할...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362716",
+          "relevance": "high"
+        },
+        {
+          "headline": "【리스크 모니터링】LG엔솔 美 랜싱공장, 가동 13일 만에 산업보건 조사...",
+          "publisher": "impacton.net",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "<편집자주> LG에너지솔루션의 미국 미시간주 랜싱 배터리공장이 본격 가동을 시작한 지 13일 만에 산업보건 민원으로 현지 당국의 조사를 받게 됐다. 지난달 31일 미시간 산업안전보건청(MIOSHA)은 랜싱공장을 대상으로...",
+          "source_url": "http://www.impacton.net/news/articleView.html?idxno=20239",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 장중 '반도체주 강세'에 3%대 오른 6890선, 코스닥도 1%대 올라",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "SK하이닉스가 5.89%로 가장 많이 오르고 있고 SK스퀘어(5.48%) 삼성전자(3.82%) 삼성생명(3.70%) 삼성전자우(2.35%) 현대차(1.69%) KB금융(1.54%) 삼성전기(1.53%) LG에너지솔루션(0.14%) 삼성바이오로직스(0.07%) 가 뒤를 잇고...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446528",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션, 차세대 LMR 배터리 가스 발생 원인 규명… 대형 셀 상용...",
+          "publisher": "thevaluenews.co.kr",
+          "published_at": "2026-09-07T01:54:00Z",
+          "summary": "LG에너지솔루션(대표이사 김동명)이 서울대학교 화학부 임종우 교수 연구팀과의 공동 연구를 통해 차세대 LMR(리튬망간리치) 배터리의 최대 난제로 지적돼 온 가스 발생 현상을 억제하고 수명 안정성을 확보했다....",
+          "source_url": "http://www.thevaluenews.co.kr/news/view.php?idx=201360",
+          "relevance": "high"
+        },
+        {
+          "headline": "세계 전기차 배터리 20% 성장…중국 점유율 73%",
+          "publisher": "mbnmoney.mbn.co.kr",
+          "published_at": "2026-09-07T01:52:00Z",
+          "summary": "LG에너지솔루션은 사용량이 4.5% 늘며 세계 3위를 유지했지만 점유율은 8.3%로 낮아졌고, SK온은 점유율 8위를 기록했습니다. 상위 10개 업체 가운데 7곳이 중국 기업으로, 이들의 합산 점유율은 72.8%에 달했습니다.",
+          "source_url": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005916782",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]코스피, 오픈AI발 호재에 6,900선 재탈환…삼전 4.3%·닉스 5.9% 급...",
+          "publisher": "kwnews.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.kwnews.co.kr/article/20260907500348",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션·서울대, LMR 배터리 난제 풀었다-대형 셀 상용화 가능성...",
+          "publisher": "mediafine.co.kr",
+          "published_at": "2026-09-07T01:48:00Z",
+          "summary": "LG에너지솔루션과 서울대학교가 차세대 LMR(리튬망간리치) 배터리의 안정성을 높이는 핵심 기술을 확보하며 전기차용 대형 셀 상용화에 한 걸음 다가섰다. LG에너지솔루션은 서울대 화학부 임종우 교수 연구진과...",
+          "source_url": "https://www.mediafine.co.kr/news/articleView.html?idxno=89035",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 '쌍끌이' 매수에 6890선 훌쩍…3%대 강세",
+          "publisher": "mediapen.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "이 밖에 SK스퀘어(5.76%), 삼성생명(4.03%), 삼성전자우(2.30%), 삼성전기(1.86%), 현대차(1.83%), KB금융(1.42%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.07%) 등 주요 대형주가 모두 강세를 보이고 있다. 같은 시각...",
+          "source_url": "https://www.mediapen.com/news/view/1121704",
+          "relevance": "high"
+        },
+        {
+          "headline": "전기차 배터리 시장 장악한 중국...1~7월 합산 점유율 70% 돌파",
+          "publisher": "livebiz.today",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "3위는 LG에너지솔루션이 차지했는데, 테슬라, 현대차그룹, GM, 폭스바겐 등 주요 글로벌 완성차업체에 대한 공급에 힘입어 전년 동기 대비 4.5% 증가한 60.3GWh를 기록했다. 하지만 증가 폭이 시장 평균에 미치지...",
+          "source_url": "https://www.livebiz.today/news/articleView.html?idxno=204681",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 업고 2.9%대 급등",
+          "publisher": "straightnews.co.kr",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "LG에너지솔루션은 0.70%, 삼성바이오로직스는 0.07% 상승했다. 다만 지수 상승폭에 비해 시장 전체의 온도가 뜨겁다고 보기는 어려웠다. 유가증권시장에서 상승 종목은 443개, 하락 종목은 390개였다. 코스피가 3...",
+          "source_url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310533",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션, LMR 상용화 박차…배터리 소재 전문가 자문위원 위촉",
+          "publisher": "etnews.com",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "LG에너지솔루션이 차세대 배터리로 주목받는 리튬망간리치(LMR) 기술 개발과 상용화에 속도를 내고 있다. 7일 LG에너지솔루션 공식 링크드인 채널에 따르면 회사는 김재철 교수를 자문위원으로 위촉했다고 밝혔다. 김...",
+          "source_url": "https://www.etnews.com/20260907000156",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, 차세대 LMR 배터리 상용화 가능성 입증…난제 해결 진전",
+          "publisher": "iminju.net",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "민주신문=조환흠 기자｜LG에너지솔루션이 코발트를 사용하지 않는 차세대 리튬망간리치(LMR) 배터리의 전기차용 대형 셀 상용화 가능성을 입증했다. LG에너지솔루션은 임종우 서울대 화학부 교수 연구진과의 공동...",
+          "source_url": "http://www.iminju.net/news/articleView.html?idxno=169124",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션·서울대, LMR 배터리 가스 발생 난제 해결",
+          "publisher": "todayeconomic.com",
+          "published_at": "2026-09-07T01:42:00Z",
+          "summary": "투데이e코노믹 = 이혜진 기자 | LG에너지솔루션과 서울대학교가 차세대 리튬망간리치(LMR) 배터리의 가스 발생과 성능 저하를 억제하는 기술을 개발했다. 전기차에 적용할 수 있는 대형 셀에서 성능을 검증해 LMR 배터리...",
+          "source_url": "https://www.todayeconomic.com/news/article.html?no=32012",
+          "relevance": "high"
+        },
+        {
+          "headline": "리튬 관련주 혼조 후성 광무 엔켐 강세 포스코퓨처엠 POSCO홀딩스 약세",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "LG에너지솔루션은 0.56% 오른 36만500원에 거래되고 있다. 대보마그네틱은 0.52%, 중앙첨단소재는 0.50%, 에코프로는 0.36% 상승하고 있다. 코스모화학과 포스코엠텍도 각각 0.29%, 0.08% 오름세다. 반면 리튬 관련 종목...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604465",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등… 코스피 6,900선 재탈환",
+          "publisher": "fntoday.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%)이 상승 중이며 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등 시가총액 상위 종목 대다수가 상승 대열에 합류했다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.fntoday.co.kr/news/articleView.html?idxno=392276",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션, 차세대 LMR 배터리 기술 난제 해결",
+          "publisher": "cnbnews.com",
+          "published_at": "2026-09-07T01:38:00Z",
+          "summary": "LG에너지솔루션이 임종우 서울대 교수 연구진과 차세대 LMR(리튬망간리치) 배터리의 안정성을 혁신적으로 개선하는 핵심 기술을 확보했다. LMR은 저렴한 망간을 주원료로 써 가격을 낮추고 산소 반응까지 활용해 높은...",
+          "source_url": "https://www.cnbnews.com/news/articleView.html?idxno=1014607",
+          "relevance": "high"
+        },
+        {
+          "headline": "대출금리 7%대, 배터리 3사 에너지저장 전환",
+          "publisher": "tokenpost.kr",
+          "published_at": "2026-09-07T01:38:00Z",
+          "summary": "각사 반기보고서 기준 6월 말 LG에너지솔루션의 연결 차입금은 29조1234억원으로 지난해 말보다 약 6조6000억원 늘었다. 삼성SDI의 차입금은 12조1109억원으로 같은 기간 1조2000억원 이상 증가했다. 두 회사의...",
+          "source_url": "https://www.tokenpost.kr/news/tech/403654",
+          "relevance": "high"
+        },
+        {
+          "headline": "中 배터리 7개사 점유율 72.8%...LG엔솔 3위 지켰지만 점유율 하락",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T01:38:00Z",
+          "summary": "LG에너지솔루션은 60.3GWh로 3위를 유지했다. 테슬라와 현대차그룹, GM, 폭스바겐 등 주요 완성차 업체에 대한 공급을 바탕으로 사용량은 전년 동기 대비 4.5% 증가했지만 시장 성장률에는 미치지 못했다. 이에 따라...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=545983",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, LMR 배터리 가스 발생 난제 풀었다...상용화 '성큼'",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T01:36:00Z",
+          "summary": "|중앙이코노미뉴스 송태원 기자|인터배터리 2026에서 공개된 LG에너지솔루션 LMR배터리.[사진=LG에너지솔루션] LG에너지솔루션이 서울대학교와 함께 차세대 리튬망간리치(LMR) 배터리의 가스 발생을 줄이고 수명...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=545932",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, 차세대 LMR 배터리 상용화 길 열었다…대형 셀 난제 해결",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-07T01:36:00Z",
+          "summary": "LG에너지솔루션이 임종우 서울대학교 화학부 교수 연구진과 공동 연구해 리튬망간리치(LMR) 배터리의 전기차용 대형 셀 적용 가능성을 높이는 연구 성과를 달성했다고 7일 밝혔다. 해당 연구는 세계적인 권위의 국제...",
+          "source_url": "https://www.seoul.co.kr/news/economy/industry/2026/09/07/20260907500085?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, LMR 배터리 가스 발생 원인 규명…대형 셀 적용 가능성...",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-07T01:36:00Z",
+          "summary": "LG에너지솔루션과 서울대학교 공동 연구팀이 차세대 리튬망간리치(LMR) 배터리의 가스 발생 원인을 규명하고 전기차용 대형 셀에 적용할 수 있는 운용 조건을 개발했다. LG에너지솔루션은 서울대 화학부 임종우 교수...",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169578",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션·서울대, LMR 배터리 대형 셀 안정성 확보 … 네이처 커...",
+          "publisher": "worktoday.co.kr",
+          "published_at": "2026-09-07T01:34:00Z",
+          "summary": "'인터배터리 2026'에서 공개된 LG에너지솔루션 LMR배터리 LG에너지솔루션이 서울대학교와의 공동 연구를 통해 차세대 LMR(리튬망간리치) 배터리의 안정성을 크게 끌어올릴 핵심 기술을 확보했다. LG에너지솔루션은 서울대...",
+          "source_url": "http://www.worktoday.co.kr/news/articleView.html?idxno=88914",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "시가총액 상위 종목 가운데서는 삼성전자(3.82%), SK하이닉스(6.19%), SK스퀘어(5.86%), 삼성전기(1.93%), LG에너지솔루션(0.42%), 현대차(1.69%), 삼성바이오로직스(0.21%), KB금융(1.63%), 삼성생명(3.78%), 삼성물산(2.72...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피,美오픈AI 호재에 6,900선…환율 23개월만에 1,330원대",
+          "publisher": "seouleconews.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자...",
+          "source_url": "http://www.seouleconews.com/news/articleView.html?idxno=93564",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션-서울대, 'LMR 배터리 안정성 개선 기술' 연구 성과",
+          "publisher": "newspost.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "LG에너지솔루션은 서울대 화학부 임종우 교수 연구진과 함께 LMR 배터리의 전기차용 대형 셀 적용 가능성을 높이는 성과를 냈다고 7일 밝혔다. 연구 결과는 국제 학술지 네이처 커뮤니케이션즈에 게재됐다. LMR은 코발트...",
+          "source_url": "https://www.newspost.kr/news/articleView.html?idxno=225470",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체주 강세에 3%가까이 급등…6,880선 돌파",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "이 밖에 시가총액 상위 종목에서는 삼성전자우(2.30%)와 SK스퀘어(5.48%), 삼성전기(1.21%), LG에너지솔루션(0.42%), 현대차(1.89%), 삼성바이오로직스(0.48%), KB금융(1.51%) 등이 오름세다. 반면 한화에어로스페이스(0.95...",
+          "source_url": "https://www.news2day.co.kr/article/20260907500108",
+          "relevance": "high"
+        },
+        {
+          "headline": "범용인공지능(AGI) 시대 열렸다…코스피 6900탈환",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "SK스퀘어(5.38%), 삼성전기(1.36%), LG에너지솔루션(0.42%), 현대차(1.83%), KB금융(1.63%) 등 시가총액 상위주 대부분이 상승세다. 오픈AI '아스트라' 공개하며 AGI 도래선언 오픈AI는 아스트라를 공개하면서 AGI 시대의...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710234926245",
+          "relevance": "high"
+        },
+        {
+          "headline": "中, 1~7월 전기차 배터리 점유율 70% 넘겨",
+          "publisher": "zdnet.co.kr",
+          "published_at": "2026-09-07T01:24:00Z",
+          "summary": "국내 업체 가운데 LG에너지솔루션은 전년 동기 대비 4.5% 증가한 60.3GWh를 기록하며 3위를 유지했다. 테슬라, 현대차그룹, GM, 폭스바겐 등 주요 글로벌 OEM에 대한 공급이 이어지며 사용량은 늘었지만 점유율은 9....",
+          "source_url": "https://zdnet.co.kr/view/?no=20260907102324",
+          "relevance": "high"
+        },
+        {
+          "headline": "전기차 배터리 점유율 中 73%, LG엔솔8.3%로 3위",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-07T01:23:00Z",
+          "summary": "국내 업체인 LG에너지솔루션은 테슬라, 현대차그룹, GM, 폭스바겐 등 주요 글로벌 완성차업체에 대한 공급에 힘입어 전년 동기 대비 4.5% 증가한 60.3GWh를 기록하며 3위를 유지했습니다. 그러나 증가 폭이 시장...",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000333095?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 순매수에 6900선 강세",
+          "publisher": "kfenews.co.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "시가총액 상위 종목은 삼성전자(4.01%), SK하이닉스(5.59%), SK스퀘어(5.96%), 삼성전자우(2.66%), 삼성전기(1.14%), 현대차(2.22%), LG에너지솔루션(1.26%), 삼성생명(4.20%), KB금융(1.45%), 삼성바이오로직스(0.41%) 등 모두 오르고...",
+          "source_url": "https://www.kfenews.co.kr/news/articleView.html?idxno=663954",
+          "relevance": "high"
+        },
+        {
+          "headline": "1~7월 글로벌 전기차 배터리 시장서 중국 점유율 72.8%, K배터리 점유율...",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "이 기간 국내 배터리 3사의 기록을 살펴보면 LG에너지솔루션의 배터리 사용량은 늘었으나, SK온은 감소했다. 삼성SDI는 지난 3월부터 10위권 밖에 머물고 있다. LG에너지솔루션 배터리 사용량은 60.3GWh로...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446521",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션·서울대, 차세대 리튬망간리치 배터리 상용화 난제 해결",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T01:21:00Z",
+          "summary": "LG에너지솔루션은 서울대학교 화학부 임종우 교수 연구진과의 공동 연구를 통해 리튬망간리치(LMR) 배터리의 안정성을 개선할 수 있는 핵심 기술을 확보했다고 7일 발표했다. 이 연구 결과는 기술적 성과와 학술적...",
+          "source_url": "https://biz.chosun.com/industry/company/2026/09/07/UPERJULPEBDUTG464QKQXXHCTE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "'7천피' 앞둔 코스피...반도체 훈풍에 SK하이닉스 5%대 강세 [fn오전시황...",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T01:20:00Z",
+          "summary": "LG에너지솔루션(0.56%)과 삼성바이오로직스(0.41%)도 강보합 중이다. 코스닥도 상승세를 이어가고 있다. 같은 시각 코스닥은 전 거래일보다 1.41% 오른 824.96을 기록하고 있다. 전거래일보다 1.16% 오른 822.91로 개장해...",
+          "source_url": "https://www.fnnews.com/news/202609071010485002",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, 차세대 LMR 배터리 안정성 높였다",
+          "publisher": "4th.kr",
+          "published_at": "2026-09-07T01:18:00Z",
+          "summary": "포쓰저널 박소연 기자 '인터배터리 2026'에서 공개된 LG에너지솔루션 LMR배터리/사진=LG에너지솔루션 LG에너지솔루션이 서울대학교와 차세대 리튬망간리치(LMR) 배터리의 가스 발생과 성능 저하 원인을 규명하고...",
+          "source_url": "http://www.4th.kr/news/articleView.html?idxno=2117562",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승",
+          "publisher": "news.sbs.co.kr",
+          "published_at": "2026-09-07T01:17:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중입니다. 반면 삼성SDI(-0.91%), 셀트리온...",
+          "source_url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008740759&plink=ORI&cooper=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "글로벌 배터리 20% 성장할 때 LG·SK는 제자리…中 점유율 72.8%",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T01:16:00Z",
+          "summary": "글로벌 전기차용 배터리 시장이 올해 들어 20% 넘게 성장했지만, 상위 10개사에 포함된 LG에너지솔루션과 SK온의 합산 사용량은 사실상 제자리걸음에 그쳤다. 북미 전기차 수요가 위축된 사이 중국 업체들이...",
+          "source_url": "https://www.g-enews.com/view.php?ud=2026090709560256133084322ec9_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍타고 3%대↑···6900선 회복",
+          "publisher": "finomy.com",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "△삼성전자우(2.45%) △SK스퀘어(5.48%) △삼성전기(1.07%) △LG에너지솔루션(1.12%) △현대차(1.69%) △삼성바이오로직스(0.69%) △KB금융(1.34%) △삼성생명(3.87%) 등이 상승하고 있다. 코스닥지수는 전 거래일보다 14....",
+          "source_url": "http://www.finomy.com/news/articleView.html?idxno=260879",
+          "relevance": "high"
+        },
+        {
+          "headline": "1.1조 담보 잡힌 삼성SDI, 美 정책자금 보증 변경···ESS '승부수'",
+          "publisher": "newsfreezone.co.kr",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "그러나 이번 북미 승부수가 흔들릴 경우, 대규모 생산 능력을 앞세워 국내 배터리 업계를 리드하는 LG에너지솔루션 추격에 제동이 걸리는 것은 물론, 후발주자 SK온과 유사한 재무적 리스크 압박에 직면하며 고유의...",
+          "source_url": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=707773",
+          "relevance": "high"
+        },
+        {
+          "headline": "1∼7월 전기차 배터리 사용량 20%↑…중국 업체 점유율 73%",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T01:11:00Z",
+          "summary": "국내 업체인 LG에너지솔루션은 테슬라, 현대차그룹, GM, 폭스바겐 등 주요 글로벌 완성차업체에 대한 공급에 힘입어 전년 동기 대비 4.5% 증가한 60.3GWh를 기록하며 3위를 유지했다. 그러나 증가 폭이 시장...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907054000003?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, 캐즘 탈출…북미·ESS 쌍끌이 반등",
+          "publisher": "newstomato.com",
+          "published_at": "2026-09-07T01:10:00Z",
+          "summary": "뉴스토마토 = 오세은 기자 |  전기차 캐즘(일시적 수요 정체)에 직격탄을 맞았던 LG에너지솔루션이 북미를 중심으로 반등의 기반을 다지고 있습니다. ESS와 AIDC(인공지능 데이터센터) 시장이 북미를 중심으로 확대되는...",
+          "source_url": "http://www.newstomato.com/ReadNews.aspx?no=1312675&inflow=N",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체주 훈풍…코스피, 3% 급등·6900 회복",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "시가총액 상위 종목은 LG에너지솔루션(-0.28%)을 제외하고 대부분 상승 중이다. 반도체 대형주 강세가 두드러지며 SK하이닉스가 5.77% 뛰었고 삼성전자도 4.11% 올랐다. SK스퀘어는 6.05% 급등했고 삼성전기(4.14%)도...",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609070040",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 오픈AI 호재…코스피 3%대 급등",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "다른 시가총액 상위주 가운데 SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%), 삼성전기(2.50%), 현대차(1.83%), LG에너지솔루션(0.42%) 등도 상승 중이다. 반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862662",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 반등에 6800선 회복 … 삼전닉스 4% 강세",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "SK스퀘어는 6% 이상 급등했고 삼성전기, LG에너지솔루션, 현대차, 삼성바이오, KB금융 등도 상승 중이다. 같은 시간 코스닥 지수는 전 거래일 대비 0.94% 오른 821.45다. 개인이 446억원 순매수한 반면 외국인과 기관은...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700053.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체주 훈풍 6900선 재등정… 삼전닉스 동반 강세",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-07T01:04:00Z",
+          "summary": "이밖에 삼성전자우(2.35%), SK스퀘어(5.67%), 삼성전기(1.21%), LG에너지솔루션(0.7%), 현대차(1.96%), 삼성바이오로직스(0.41%) 등이 상승하고 있다. 반면 삼성SDI(-0.18%), 셀트리온(-0.53%), 삼성화재(-0.9%) 등은 하락세다....",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169589",
+          "relevance": "high"
+        },
+        {
+          "headline": "[고금리의 귀환③] 고금리에 전기차 부담…배터리 3사, ESS로 '돌파구'",
+          "publisher": "news.einfomax.co.kr",
+          "published_at": "2026-09-07T01:02:00Z",
+          "summary": "각사 반기보고서에 따르면 지난 6월 말 LG에너지솔루션의 연결 기준 차입금은 29조1천234억원으로 지난해 말보다 6조6천억원가량 증가했다. 삼성SDI의 차입금도 같은 기간 10조8천839억원에서 12조1천109억원으로...",
+          "source_url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433689",
+          "relevance": "high"
+        },
+        {
+          "headline": "[고금리의 귀환①] 금리 1%p 오를 때…삼성·SK·LG 누가 가장 아픈가",
+          "publisher": "news.einfomax.co.kr",
+          "published_at": "2026-09-07T01:02:00Z",
+          "summary": "금리 상승하면 세전이익 일제히 감소 LG에너지솔루션[373220], 삼성SDI[006400], SK온 등 이차전지 업계는 금리가 오르는 경우 상당한 타격을 받는 것으로 나타났다. LG에너지솔루션은 이자율이 1%p 오르면 세전이익이...",
+          "source_url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433691",
+          "relevance": "high"
+        },
+        {
+          "headline": "“LMR 배터리 셀 상용화 난제 풀어냈다”..LG엔솔·서울대, 핵심 기술 개...",
+          "publisher": "dailycar.co.kr",
+          "published_at": "2026-09-07T01:02:00Z",
+          "summary": "LG에너지솔루션과 서울대학교 연구진이 코발트 프리 차세대 배터리로 주목받는 LMR(리튬망간리치) 배터리의 최대 약점이던 가스 발생과 수명 저하 문제를 해결할 핵심 기술을 개발했다. 7일 LG에너지솔루션은 서울대...",
+          "source_url": "https://www.dailycar.co.kr/content/news.html?type=view&autoId=62468",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, LMR 배터리 난제 해결…상용화 길 열었다",
+          "publisher": "itbiznews.com",
+          "published_at": "2026-09-07T01:00:00Z",
+          "summary": "LG에너지솔루션(LG엔솔)과 서울대학교가 차세대 리튬망간리치(LMR) 배터리의 안정성을 개선할 수 있는 핵심 기술을 확보했다. 7일 LG엔솔은 서울대 화학부 임종우 교수 연구팀과의 공동 연구를 통해 LMR 배터리의 전기차용...",
+          "source_url": "https://www.itbiznews.com/news/articleView.html?idxno=224028",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션, 서울대와 리튬망간리치 배터리 상용화 난제 '가스 발생...",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T01:00:00Z",
+          "summary": "지난 3월11~13일까지 서울 강남구 코엑스에서 열린 '인터배터리 2026'에서 공개된 LG에너지솔루션의 리튬망간리치(LMR) 배터리 소개자료. < LG에너지솔루션 > LG에너지솔루션은 서울대학교 화학부 임종우 교수 연구진과의...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446516",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, LMR 배터리 기술 난제 풀었다…차세대 양극재 상용화 기틀 구축",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T00:57:00Z",
+          "summary": "LG에너지솔루션이 차세대 양극 소재를 적용한 LMR(리튬망간리치) 배터리의 상용화를 가로막던 ‘가스발생’ 난제를 해결했다. LG에너지솔루션(373220)은 임종우 서울대 화학부 교수 연구진과 공동 연구를 통해 LMR...",
+          "source_url": "https://www.sedaily.com/article/20087852?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "아스트라 돌풍, 이번엔 정말 ‘칠천피’ 재돌파?…코스피, 6900선 회복 [...",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 코스닥 지수도 상승세를 나타내고...",
+          "source_url": "https://biz.heraldcorp.com/article/10864511?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, ‘가스 발생’ 난제 풀었다…LMR 배터리 대형 셀 상용화 성큼",
+          "publisher": "dizzotv.com",
+          "published_at": "2026-09-07T00:54:00Z",
+          "summary": "LG에너지솔루션과 서울대학교 연구진이 차세대 LMR(리튬망간리치) 배터리의 최대 난제로 꼽혀온 가스 발생 문제를 제어할 수 있는 기술을 확보했다. LG에너지솔루션은 7일 서울대 화학부 임종우 교수 연구진과 공동...",
+          "source_url": "https://www.dizzotv.com/site/data/html_dir/2026/09/07/2026090780029.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, LMR 대형 셀 수명 높였다···883회 뒤 에너지 92.2% 유...",
+          "publisher": "smartbizn.com",
+          "published_at": "2026-09-07T00:54:00Z",
+          "summary": "| 스마트비즈 = 김종훈 기자 | LG에너지솔루션은 서울대학교 화학부 임종우 교수 연구팀과 리튬망간리치(LMR) 배터리의 가스 발생을 줄이고 수명을 높이는 충·방전 조건을 개발했다고 7일 밝혔다. LMR은 비싼 코발트와...",
+          "source_url": "https://www.smartbizn.com/news/articleView.html?idxno=153167",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔-서울대, 차세대 'LMR 배터리' 상용화 난제 풀었다",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T00:54:00Z",
+          "summary": "뉴데일리 김수한 기자 = LG에너지솔루션이 서울대학교와 함께 차세대 'LMR(리튬망간리치)' 배터리의 상용화 최대 난제를 해결했다. LG에너지솔루션은 서울대학교 화학부 임종우 교수 연구진과 공동 연구를 통해 LMR...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700066.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대 공동연구, 차세대 LMR 배터리 상용화 앞당겼다",
+          "publisher": "widedaily.com",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "LG에너지솔루션이 코발트를 배제한 차세대 리튬망간리치(LMR) 배터리의 대형 셀 상용화에 청신호를 켰다. 7일 LG에너지솔루션은 임종우 서울대 화학부 교수 연구팀과의 공동 연구를 바탕으로 전기차용 LMR 대형 셀 적용...",
+          "source_url": "https://www.widedaily.com/news/articleView.html?idxno=300670",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션·서울대, LMR 배터리 가스 발생 줄였다…대형 셀 883회 충...",
+          "publisher": "seoultimes.news",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "2% 유지…네이처 커뮤니케이션즈 게재 [서울타임즈뉴스 = 허성미 기자] LG에너지솔루션이 서울대학교 화학부 임종우 교수 연구진과 LMR(리튬망간리치) 배터리의 충·방전 전압과 활성화 공정을 조정해 전기차용 대형...",
+          "source_url": "https://www.seoultimes.news/news/article.html?no=2000099575",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"땡큐, 오픈AI\"...코스피, 미국발 훈풍에 6,900선 탈환",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T00:51:00Z",
+          "summary": "시가총액 상위주 중 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 한지영 키움증권 연구원은 \"지난 금요일(4일)...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070134&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 코스피, 외국인·기관 순매수에 3%대 상승",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "LG에너지솔루션(0.42%)과 삼성바이오로직스(0.28%)도 상승 중이다. 코스닥도 상승세를 이어가고 있다. 같은 시각 코스닥 지수는 전 거래일보다 10.94포인트(1.34%) 오른 824.44를 기록하고 있다. 개인과 기관이 각각...",
+          "source_url": "https://www.newspim.com/news/view/20260907000202",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, 차세대 LMR 배터리 가스 발생 억제 기술 개발",
+          "publisher": "datanews.co.kr",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "LG에너지솔루션과 서울대학교 연구진이 차세대 LMR(리튬망간리치) 배터리의 안정성을 개선하는 핵심 기술을 확보했다. LG에너지솔루션은 임종우 서울대 화학부 교수 연구팀과의 공동 연구를 통해 LMR 배터리의...",
+          "source_url": "http://www.datanews.co.kr/news/article.html?no=146339",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, 차세대 LMR 배터리 상용화 앞당길 기술 확보",
+          "publisher": "socialvalue.kr",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "LG에너지솔루션과 서울대학교가 차세대 리튬망간리치(LMR) 배터리의 가스 발생과 용량 저하 문제를 개선하고 전기차용 대형 셀 적용 가능성을 높이는 핵심 기술을 확보했다. LG에너지솔루션은 서울대학교 화학부...",
+          "source_url": "https://www.socialvalue.kr/news/view/1065571862954116",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔-서울대, LMR 배터리 '가스 난제' 풀었다…상용화 성큼",
+          "publisher": "shinailbo.co.kr",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "LG에너지솔루션이 서울대학교와 손잡고 차세대 LMR(리튬망간리치) 배터리의 가스 발생 문제를 해결할 핵심 기술을 확보했다. LG에너지솔루션은 서울대학교 화학부 임종우 교수 연구진과 공동 연구를 통해 LMR 배터리의...",
+          "source_url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5059119",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션, 서울대와 차세대 LMR배터리 상용화 난제 해결",
+          "publisher": "etnews.com",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "LG에너지솔루션이 임종우 서울대 화학부 교수 연구진과 리튬망간리치(LMR)배터리의 안정성을 혁신적으로 개선할 수 있는 핵심 기술을 확보했다고 7일 밝혔다. LMR은 저렴한 망간을 주원료로 활용해 소재 비용을 획기적으로...",
+          "source_url": "https://www.etnews.com/20260907000086",
+          "relevance": "high"
+        },
+        {
+          "headline": "'불기둥' 삼성전자·SK하이닉스⋯코스피 6900선 복귀",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "삼성전기(1.78%), LG에너지솔루션(0.84%), 현대차(2.35%), 삼성바이오로직스(0.28%), KB금융(1.79%), 삼성생명(4.20%) 등 시가총액 상위 종목들도 일제히 상승하고 있다. 코스닥 지수는 전 거래일 대비 11.60(1.43%) 오른 825....",
+          "source_url": "http://www.inews24.com/view/2002535",
+          "relevance": "high"
+        },
+        {
+          "headline": "'아스트라 훈풍'에 반도체주 날았다…코스피 6900선 재탈환",
+          "publisher": "kado.net",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "시가총액 상위주 가운데 삼성전기는 2.50%, LG에너지솔루션은 0.42%, 현대차는 1.83% 오르고 있다. 반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 각각 하락했다. 업종별로는 전기·전자가 4.96% 상승했고...",
+          "source_url": "https://www.kado.net/news/articleView.html?idxno=2070949",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 훈풍에 3%대 급등 6900선 돌파…삼전3%·닉스5%↑",
+          "publisher": "beyondpost.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "삼성전자(3.91%), SK하이닉스(5.65%), 삼성전자우(2.77%), SK스퀘어(6.24%), 삼성전기(1.64%), LG에너지솔루션(0.70%), 현대차(2.61%), 삼성바이오로직스(0.35%), 삼성생명(3.87%), KB금융(1.69%) 전부 상승 중이다. 키움증권 한지영...",
+          "source_url": "http://www.beyondpost.co.kr/view.php?ud=202609070943067703be44c0aacd_30",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, 서울대와 차세대 LMR 배터리 안정성 높였다",
+          "publisher": "fetv.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "LG에너지솔루션과 서울대학교가 차세대 LMR(리튬망간리치) 배터리의 가스 발생을 억제하고 수명 안정성을 높이는 기술을 개발했다. 7일 LG에너지솔루션은 서울대 화학부 임종우 교수 연구팀과 공동 연구를 통해 LMR...",
+          "source_url": "https://www.fetv.co.kr/news/articleView.html?idxno=309697",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG에너지솔루션-서울대, LMR 배터리 가스 발생 난제 해결",
+          "publisher": "epnc.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "LG에너지솔루션과 서울대학교가 차세대 리튬망간리치(LMR) 배터리의 가스 발생을 억제하고 수명을 높이는 기술을 개발했다. LG에너지솔루션은 서울대 화학부 임종우 교수 연구진과 공동 연구를 통해 LMR 배터리의...",
+          "source_url": "https://www.epnc.co.kr/news/articleView.html?idxno=406596",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"코발트 없이 싸게\"…LG엔솔, 'LMR 배터리' 상용화 열었다",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T00:45:00Z",
+          "summary": "LG에너지솔루션과 서울대학교가 차세대 LMR(리튬망간리치) 배터리의 안정성을 혁신적으로 개선할 수 있는 핵심 기술을 확보했다. LG에너지솔루션은 서울대 화학부 임종우 교수 연구진과의 공동 연구를 통해 LMR...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070054&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, 서울대와 LMR 배터리 가스 발생 억제 기술 확보",
+          "publisher": "newslock.co.kr",
+          "published_at": "2026-09-07T00:44:00Z",
+          "summary": "LG에너지솔루션은 서울대 화학부 임종우 교수 연구진과 공동 연구를 통해 LMR 배터리의 전기차용 대형 셀 적용 가능성을 높이는 연구 성과를 확보했다고 7일 밝혔다. 연구 결과는 국제 학술지 '네이처 커뮤니케이션즈...",
+          "source_url": "http://www.newslock.co.kr/news/articleView.html?idxno=135604",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 삼전닉스 ‘쑥’…코스피 6900선 회복 [시황]",
+          "publisher": "dailian.co.kr",
+          "published_at": "2026-09-07T00:42:00Z",
+          "summary": "이 외에도 SK스퀘어(6.34%)·삼성전기(1.93%)·LG에너지솔루션(0.70%)·현대차(2.35%)·삼성바이오로직스(0.21%)·KB금융(1.69%)·삼성생명(4.03%) 등이 오르고 있다. 같은 시간 코스닥 지수는 전 거래일보다 13.41포인트(1.65...",
+          "source_url": "https://www.dailian.co.kr/news/view/1687085/?sc=Naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔·서울대, 차세대 LMR 배터리 난제 풀었다…883회 충방전 후 92.2% ...",
+          "publisher": "gpkorea.com",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "LG에너지솔루션과 서울대학교 공동 연구팀이 차세대 리튬망간리치(LMR) 배터리 상용화의 난제로 꼽혀온 가스 발생 문제를 줄이는 기술을 개발했다. LG에너지솔루션은 서울대 화학부 임종우 교수 연구팀과 공동 연구를...",
+          "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=146438",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 99,
+      "relevant_count": 99,
+      "span_hours": 2.98,
+      "oldest_relevant_at": "2026-09-07T00:40:00Z",
+      "collected_at": "2026-09-07T03:39:04.733749Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260813000255",
+          "published_at": "2026-08-13T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813000255"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260514001046",
+          "published_at": "2026-05-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514001046"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260312000217",
+          "published_at": "2026-03-12T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000217"
+        }
+      ],
+      "collected_at": "2026-09-07T03:39:04.481236Z",
+      "request_id": "a077de08-f70c-4449-96f8-a6fc9d5ce9a3",
+      "source_type": "dart",
+      "stock_code": "373220",
+      "company_name": "LG에너지솔루션"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260312000217",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "1) 사업과 관련된 중요한 지적재산권 보유현황\n- 당사는 영위하는 사업과 관련하여 2025년 12월 31일 기준 누적으로 등록 특허 국내 12,942건, 해외 38,464건 및 출원 중인 특허 국내 14,151건, 해외 24,547건이 있으며, 이 중 주요 특허권의 상세 내용은 다음과 같습니다.\n(1) 주요 특허 현황\n종류 | 취득일 | 내용 | 근거법령 | 취득소요인력/기간 | 상용화 여부\n특허권 | 2012년 10월 | 전기화학적 성능이 우수한 니켈계 리튬 이차전지용 전극 활물질에 관한 기술로 16년간 배타적사용권 보유(취득일 기준) | 특허법 | 5명/ 3년 4개월간 | 상용화단계\n2019년 3월 | 열전도성 수지층을 포함하는 배터리 모듈에 관한 기술로 16년간 배타적 사용권 보유(취득일 기준) | 특허법 | 5명/ 4년 1개월간 | 상용화단계\n2019년 4월 | 출력이 우수한 다층 음극에 관한 기술로 18년간 배타적 사용권 보유(취득일 기준) | 특허법 | 5명/ 2년 7개월간 | 상용화단계\n당사는 상기의 주요 특허권 외에도 다수의 특허권을 취득하여 보유 중이며, 이들은 대부분 배터리 등에 관한 특허로 회사의 주력사업 제품에 쓰이거나 향후 핵심 기능으로 활용될 가능성이 높습니다. 또한, 당사의 상표를 보호하기 위한 다수의 상표 특허를 보유하고 있습니다.\n2) 환경물질의 배출 또는 환경보호와 관련된 사항 등\n(1) 대기, 수질\n- 공정 변경, 원부원료 대체 등을 통해 오염물질을 발생원에서부터 저감하고 있으며, 발생된 오염물질은 방지시설에서 처리하여 배출량을 감소시키고 있습니다. 방지시설은 설비별 점검 목록에 따라 주기적으로 점검함으로써 최적 상태의 가동이 이루어질 수 있도록 하고 있으며, 향후 매년 기존 방지시설의 처리 효율을 검토하여 단계적으로 고효율의 최적 방지시설로 교체하고 노후화된 설비 또한 지속적으로 점검/교체하고 있습니다.\n(2) 토양",
+          "score": 0.509968,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 3. 원재료 및 생산설비",
+          "text": "(3) 생산과 영업에 중요한 재산의 변동 및 사유\n- 해당사항 없습니다.\n5) 주요 투자에 관한 사항\n'- 당사는 2025년 당기 중 신·증설 투자 및 품질 강화 투자 등에 총 10.5조원을 사용하였습니다. 향후에도 당사의 사업 경쟁력 강화를 위하여 경영 환경 및 시장 변화에 맞춰 적정한 투자를 집행해 나갈 것입니다.\n(기준일 : 2025년 12월 31일 ) | (단위 : 억원)\n사업부문 | 투자목적 | 투자기간 | 투자대상자산 | 투자내용 | 투자효과 | 당기 투자액 | 비고\n2차전지 | 신ㆍ증설 보완 | 2025.01-2025.12 | 건물ㆍ설비 등 | 생산 시설 신규/확장 투자 등 | 생산능력 증가 | 104,764 | 누적실적\n합 계 | 104,764 | -",
+          "score": 0.497697,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "- 토양오염 방지를 위해 특정 토양오염 관리대상시설의 설치에서부터 사용 후 폐쇄 때까지 철저하게 관리하고 사용 중인 관리대상시설에서 누출로 인해 토양으로 스며드는 것을 방지하기 위해 바닥을 콘크리트로 포장하는 등 불침투성 처리하였으며, 지상으로의 확산을 방지하기 위한 방지시설을 설치하고 주기적으로 점검하는 등 저장물질의 누출로 인한 토양오염의 예방 활동에 주력하고 있습니다.\n(3) 유해화학물질\n- 취급하는 유해화학물질을 입고에서부터 사용, 폐기시까지 철저하게 관리하고 누출 사고를 예방하기 위해 저장시설에 설치한 감지기 및 차단장치, 비상시 사용할 수 있는 보호구의 보관 상태를 점검하고 있으며, 주기적으로 유출대비 비상훈련을 실시하고 있습니다.\n(4) 제품환경 규제 대응\n- 전세계적인 제품에 대한 환경기준 및 규제 강화정책에 따라 R&D 및 구매단계에서부터 제품 내에 규제 물질이 사용되지 않도록 자재 구성성분 조사를 실시하고 있으며, 글로벌 규제 동향을 항시 모니터링하여 최신의 법규정보를 파악하고 고객에게 판매되는 모든 제품에 대하여 규제준수 여부를 체계적으로 점검하고 있습니다.\n(5) 폐기물\n- 자원의 재사용 및 재활용률을 높이기 위해 단순 소각, 매립되는 폐기물을 최소화하고, 사업장에서 배출되는 폐기물의 재활용을 적극 추진하여 환경 영향을 줄이고 자원순환체계로의 전환을 강력하게 추진하고 있습니다.\n(6) 온실가스 감축 및 에너지 절감\n- 기후변화와 국내외 관련 정책 변화에 능동적으로 대처하기 위해 신재생에너지 사용 및 중장기 온실가스 감축계획 수립, 배출권거래제에 대응하고 있으며, 이와 관련하여 고객사 및 대외기관에서 요구하는 관련 정보를 다양한 채널을 통해 제공하고 있습니다. 내부적으로 온실가스ㆍ에너지 Data를 효율적으로 관리하기 위해 웹기반의 배출권 관리 시스템을 운영하고 있으며, 배출권거래제의 효율적 대응을 위한 대응 역량 향상을 위한 노력도 지속하고 있습니다.\n3) 영업의 개황 등\n(1) 산업의 특성",
+          "score": 0.492945,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "(*) 위험회피회계를 적용하지 않는 파생상품입니다.\n② 이자율 위험\n이자율위험은 미래의 시장이자율 변동에 따라 예금 또는 차입금 등에서 발생하는 이자수익 및 이자비용이 변동될 위험으로서 이는 주로 변동금리부 조건의 예금과 차입금에서 발생하고 있습니다. 연결회사의 이자율위험관리의 목표는 이자율변동으로 인한 불확실성과 순이자비용의 최소화를 추구함으로써 기업의 가치를 극대화하는데 있습니다.\n연결회사는 내부자금 공유 확대를 통한 외부차입 최소화, 고금리 차입금 감축, 장/단기 차입구조 개선, 고정 대 변동이자 차입조건의 적정비율 유지, 일간/주간/월간 단위의 국내외 금리동향 모니터링 실시, 대응방안 수립 및 변동금리부 조건의 단기차입금과 예금을 적절히 운영함으로써 이자율변동에 따른 위험을 최소화하고 있습니다.\n당기말 및 전기말 현재 다른 모든 변수가 일정하고 이자율이 1%(100bp) 변동시 연결회사의 손익 및 자본에 미치는 영향은 다음과 같습니다.\n(단위: 백만원)\n구 분 | 손익에 대한 영향 | 자본에 대한 영향\n당기말 | 전기말 | 당기말 | 전기말\n상승시 | (75,104) | (46,125) | (75,104) | (46,125)\n하락시 | 75,104 | 46,125 | 75,104 | 46,125\n③ 가격위험\n연결회사는 지분상품에서 발생하는 가격변동위험에 노출되어 있습니다. 당기말 현재연결회사가 보유중인 상장지분상품 및 비상장지분상품은 109,048백만원으로, 다른 변수가 일정하고 지분상품의 가격이 10% 변동할 경우 가격변동이 자본에 미치는 영향은 10,905백만원(법인세효과 차감 전)입니다.\n(2) 신용위험",
+          "score": 0.483023,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "1) 위험관리\n- 연결회사는 여러 활동으로 인하여 시장위험, 신용위험 및 유동성위험과 같은 다양한 금융위험에 노출되어 있으며, 전반적인 위험관리정책은 재무성과에 잠재적으로 불리할 수 있는 효과를 최소화하는데 중점을 두고 있습니다. 연결회사는 특정 위험의 관리를 위해 파생상품을 이용하고 있습니다.\n위험관리는 이사회에서 승인한 정책에 따라 연결회사의 금융부서에 의해 이루어지고있으며, 연결회사의 금융부서는 연결회사의 현업부서들과 긴밀히 협력하여 재무위험을 식별, 평가 및 회피하고 있습니다. 이사회는 전반적인 위험관리에 대한 문서화된 정책, 외환위험, 이자율위험, 신용위험, 파생상품과 비파생상품의 이용 및 유동성을 초과하는 투자와 같은 특정 분야에 관한 문서화된 정책을 검토하고 승인합니다.\n(1) 시장위험\n① 외환위험\n연결회사는 국제적으로 영업활동을 영위하고 있어 외환위험, 특히 미국 달러화와 관련된 환율변동위험에 노출되어 있습니다. 외환위험은 미래예상거래, 인식된 자산과 부채와 관련하여 발생하고 있습니다.\n연결회사의 경영진은 연결회사 내의 회사들이 각각의 기능통화에 대한 외환위험을 관리하도록 하는 정책을 수립하고 있습니다. 연결회사는 환위험관리를 위해 별도의 전담 인원을 운용하고 있으며, 매매목적의 거래는 원칙적으로 배제한 통화선도, 통화스왑 등의 외환 파생상품을 헷지수단으로 이용하고 있습니다.\n연결회사는 해외사업장에 일정한 투자를 하고 있으며 이들 해외 사업장의 순자산은 외화환산 위험에 노출되어 있습니다. 이러한 환노출은 주로 관련 외화로 표시되는 차입금을 통해 관리되고 있습니다.\n당기말 및 전기말 현재 기능통화 이외의 외화로 표시된 화폐성자산 및 부채의 장부금액은 다음과 같습니다.\n(단위: 백만원)",
+          "score": 0.472166,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000217",
+      "collected_at": "2026-09-07T03:39:04.677472Z",
+      "request_id": "83be0fc1-5bf9-41eb-b0c4-fee9689e9816",
+      "source_type": "dart",
+      "stock_code": "373220",
+      "company_name": "LG에너지솔루션"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "LG에너지솔루션",
+      "stock_code": "373220",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:39:04.132756+00:00",
+        "to": "2026-09-07T03:39:04.132756+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 311,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 153.5,
+        "ratio": 2.03,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 26,
+        "neutral_count": 26,
+        "negative_count": 48
+      },
+      "top_topics": {
+        "expectations": [
+          "ESS 매출·생산세액공제 확대",
+          "차세대 LMR 배터리 상용화",
+          "전기차 수요 정체 완화",
+          "중장기 영업이익 회복"
+        ],
+        "concerns": [
+          "ESS 성과 반영 지연",
+          "유상증자 가능성",
+          "대주주 지분 매도 부담",
+          "시장 반등에서의 소외",
+          "영업이익 감소"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "ESS 매출과 생산세액공제 증가가 이익 개선으로 이어지길 기대한다.",
+          "posted_at": "2026-09-06T00:56:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "차세대 LMR 배터리 상용화 진전을 성장 요인으로 기대한다.",
+          "posted_at": "2026-09-06T23:37:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "전기차 수요 정체가 끝나가며 업황이 회복될 것으로 본다.",
+          "posted_at": "2026-09-07T00:27:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "향후 영업이익이 크게 늘어날 것이라는 전망에 기대를 건다.",
+          "posted_at": "2026-09-03T03:34:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "ESS 사업 성과가 주가에 반영되기까지 오래 걸릴 것을 우려한다.",
+          "posted_at": "2026-09-07T02:40:00+00:00",
+          "sentiment": "negative"
+        }
+      ],
+      "collected_at": "2026-09-07T03:39:04.132756+00:00",
+      "fgi_mean": 45.23,
+      "fgi_latest": {
+        "fgi": 52.54,
+        "label": "탐욕",
+        "as_of": "2026-09-07T03:15:00+00:00",
+        "post_count": 1,
+        "valence_percentile": 79.83
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "풍문또는보도에대한해명(미확정)              ",
+          "receipt_number": "20260812800134",
+          "published_at": "2026-08-12T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260812800134"
+        }
+      ],
+      "collected_at": "2026-09-07T03:39:04.605259Z",
+      "request_id": "7c968da0-22d8-4815-bc3e-fc3962e12770",
+      "source_type": "dart",
+      "stock_code": "373220",
+      "company_name": "LG에너지솔루션"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260812800134": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260812800134",
+        "document_type": "disclosure",
+        "content": "LG에너지솔루션/풍문 또는 보도에 대한 해명(미확정)/(2026.08.12)풍문 또는 보도에 대한 해명(미확정)\n2025-04-16 | 일자 풍문 또는 보도에 대한 해명(미확정)의 재공시 사항임\n1. 풍문 또는 보도의 내용 | LG에너지솔루션, ESS 10조 수주 관련 보도\n2. 풍문 또는 보도의 매체 | 한국경제\n3. 풍문 또는 보도의 발생일자 | 2025-04-16\n4. 풍문 또는 보도의 내용에 대한 해명내용\n가. 본 공시는 2025년 4월 16일 한국경제에서 보도한 상기 제목의 기사에 대한 해명 공시입니다. 나. 상기 기사에 언급된 ESS 수주와 관련하여 상당 수의 공급계약이 당사의 종속회사를 통해 체결된 바 있으며, 또한, 당사의 본사나 종속회사를 통해 유럽, 일본 등에서 다수의 고객들과 추가적인 ESS 공급도 논의 중입니다. 다. 현재 추가적으로 논의 중인 ESS 공급계약 중 향후 수시공시 관련 의무에 해당하는 구체적인 사항이 확정되는 시점 또는 6개월 이내 재공시 하도록 하겠습니다. (공시책임자) IR담당 황수연\n5. 재공시예정일 | 2027-02-11\n※ 관련공시 | 2025-04-16 풍문 또는 보도에 대한 해명(미확정) 2025-05-15 풍문 또는 보도에 대한 해명(미확정) 2025-08-14 풍문 또는 보도에 대한 해명(미확정) 2026-02-13 풍문 또는 보도에 대한 해명(미확정)",
+        "content_truncated": false,
+        "total_chars": 683,
+        "summary": "풍문또는보도에대한해명(미확정)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260812800134",
+        "collected_at": "2026-09-07T03:39:04.915378Z",
+        "report_name": "풍문또는보도에대한해명(미확정)              ",
+        "published_at": "2026-08-12T00:00:00Z",
+        "request_id": "d15d8b4b-e8e7-4336-aaac-980216b8af77",
+        "source_type": "dart"
+      }
+    },
+    "20260813000255": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260813000255",
+        "document_type": "disclosure",
+        "content": "(제 7 기 반기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 06월 30일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 8월 13일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 주식회사 엘지에너지솔루션\n대 표 이 사 : | 김 동 명\n본 점 소 재 지 : | 서울특별시 영등포구 여의대로 108, 타워1(여의도동)\n(전 화) 02-3777-1114\n(홈페이지) http://www.lgensol.com\n작 성 책 임 자 : | (직 책) 회계담당 (성 명) 박 성 필\n(전 화) 02-3777-1114\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n2. 회사의 연혁\n3. 자본금 변동사항\n4. 주식의 총수 등\n5. 정관에 관한 사항\nII. 사업의 내용\n1. 사업의 개요\n2. 주요 제품 및 서비스\n3. 원재료 및 생산설비\n4. 매출 및 수주상황\n5. 위험관리 및 파생거래\n6. 주요계약 및 연구개발활동\n7. 기타 참고사항\nIII. 재무에 관한 사항\n1. 요약재무정보\n2. 연결재무제표\n3. 연결재무제표 주석\n4. 재무제표\n5. 재무제표 주석\n6. 배당에 관한 사항\n7. 증권의 발행을 통한 자금조달에 관한 사항\n8. 기타 재무에 관한 사항\nIV. 이사의 경영진단 및 분석의견\n1. 예측정보에 대한 주의사항\n2. 개요\n3. 재무상태 및 영업실적\n4. 유동성 및 자금조달과 지출\n5. 부외거래\n6. 그 밖에 투자의사결정에 필요한 사항\nV. 회계감사인의 감사의견 등\n1. 외부감사에 관한 사항\n2. 내부통제에 관한 사항\nVI. 이사회 등 회사의 기관에 관한 사항\n1. 이사회에 관한 사항\n2. 감사제도에 관한 사항\n3. 주주총회 등에 관한 사항\nVII. 주주에 관한 사항\nVIII. 임원 및 직원 등에 관한 사항\n1. 임원 및 직원 등의 현황\n2. 임원의 보수 등\nIX. 계열회사 등에 관한 사항\nX. 대주주 등과의 거래내용\nXI. 그 밖에 투자자 보호를 위하여 필요한 사항\n1. 공시내용 진행 및 변경사항\n2. 우발부채 등에 관한 사항\n3. 제재 등과 관련된 사항\n4. 작성기준일 이후 발생한 주요사항 등 기타사항\nXII. 상세표\n1. 연결대상 종속회사 현황(상세)\n2. 계열회사 현황(상세)\n3. 타법인출자 현황(상세)\n【 전문가의 확인 】\n1. 전문가의 확인\n2. 전문가와의 이해관계\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n1. 연결대상 종속회사 개황\n연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | - | - | - | - | -\n비상장 | 25 | - | - | 25 | 16\n합계 | 25 | - | - | 25 | 16\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n1) 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | - | -\n- | -\n연결제외 | - | -\n- | -\n2) 회사의 법적ㆍ상업적 명칭\n- 국문 : 주식회사 엘지에너지솔루션\n- 영문 : LG ENERGY SOLUTION, LTD.\n3) 설립일자 및 존속기간\n- 2020년 12월 1일 기존의 ㈜LG화학에서 분할되어 신설되었습니다.\n4) 본사의 주소, 전화번호, 홈페이지 주소\n- 서울특별시 영등포구 여의대로 108, 타워1(여의도동)\n(전 화) 02-3777-1114\n(홈페이지) http://www.lgensol.com\n5) 중소기업 등 해당 여부\n중소기업 해당 여부 | 미해당\n벤처기업 해당 여부 | 미해당\n중견기업 해당 여부 | 미해당\n6) 주요 사업의 내용 및 향후 추진하려는 신규사업\n당사는 EV(Electric Vehicle), ESS(Energy Storage System), IT기기, 전동공구, LEV(Light Electric Vehicle) 등에 적용되는 전지 관련 제품의 연구, 개발, 제조, 판매하는 사업을 영위하고 있으며, 에너지솔루션 단일 사업부문으로 구성되어 있습니다.\nEV는 각 국의 환경규제와 친환경 정책 확대에 따른 수요 증가로 높은 성장 가능성이 있는 사업이며, ESS도 신재생 에너지 발전 및 발전된 전력의 효율적인 활용이 중요해짐에 따라 수요가 확대되고 있습니다. 또한, 스마트폰 및 웨어러블 등 IT기기 뿐만 아니라 전기자전거, 전동휠 등 신규 Application 수요도 증가하고 있습니다.\n당사는 2차전지 제조, 판매 외에도 미래의 지속적인 성장 동력 확보를 위한 신규 사업을 적극적으로 추진하고 있습니다. 오랜 기간 축적해 온 배터리 및 차량 관련 데이터를 활용하여 배터리의 전체 생애주기를 관리해 새로운 부가가치를 창출해 내는 BaaS(Battery-as-a-Service), 에너지 효율성 개선과 전력난 해소 목적의 EaaS(Energy-as-a-Service) 사업, 배터리 Recycle/Reuse 사업 등 새로운 사업 기회를 지속적으로 모색할 계획입니다.\n또한, 당사는 ESS 시스템 통합 분야에도 진출하여 단순 배터리 제조를 넘어 대규모 ESS를 직접 구축하고 SI(System Integration, 시스템 통합)까지 제공하는 통합 솔루션 역량을 확보하고 있습니다. 이를 기반으로 글로벌 ESS 시장 선점에 박차를 가할 계획입니다.\n※ 자세한 사항은 Ⅱ. 사업의 내용을 참조하시기 바랍니다.\n7) 신용평가에 관한 사항\n평가일 | 평가대상 | 평가대상의신용등급 | 평가회사(신용평가등급범위) | 평가구분\n2023.05.09 | 회사 | Baa1 | Moody's (미국) (Aaa~C) | 본평가\n2023.05.25 | 회사 | BBB+ | S&P (미국) (AAA~D) | 본평가\n2023.06.08 | 회사채 | AA | 한국신용평가 | 본평가\n2023.06.09 | 회사채 | AA | NICE신용평가 | 본평가\n2023.08.28 | 회사채 | BBB+ | S&P (미국) (AAA~D) | 수시평가\n2023.08.29 | 회사채 | Baa1 | Moody's (미국) (Aaa~C) | 수시평가\n2024.02.01 | 회사채 | AA | 한국신용평가 | 본평가\n2024.02.01 | 회",
+        "content_truncated": true,
+        "total_chars": 385900,
+        "summary": "반기보고서 (2026.06) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813000255",
+        "collected_at": "2026-09-07T03:39:11.981334Z",
+        "report_name": "반기보고서 (2026.06)",
+        "published_at": "2026-08-13T00:00:00Z",
+        "request_id": "9f426e0b-16b3-43f4-a062-7d12a9553823",
+        "source_type": "dart"
+      }
+    },
+    "20260514001046": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260514001046",
+        "document_type": "disclosure",
+        "content": "(제 7 기 1분기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 03월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 5월 14일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 주식회사 엘지에너지솔루션\n대 표 이 사 : | 김 동 명\n본 점 소 재 지 : | 서울특별시 영등포구 여의대로 108, 타워1(여의도동)\n(전 화) 02-3777-1114\n(홈페이지) http://www.lgensol.com\n작 성 책 임 자 : | (직 책) 회계담당 (성 명) 박 성 필\n(전 화) 02-3777-1114\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n2. 회사의 연혁\n3. 자본금 변동사항\n4. 주식의 총수 등\n5. 정관에 관한 사항\nII. 사업의 내용\n1. 사업의 개요\n2. 주요 제품 및 서비스\n3. 원재료 및 생산설비\n4. 매출 및 수주상황\n5. 위험관리 및 파생거래\n6. 주요계약 및 연구개발활동\n7. 기타 참고사항\nIII. 재무에 관한 사항\n1. 요약재무정보\n2. 연결재무제표\n3. 연결재무제표 주석\n4. 재무제표\n5. 재무제표 주석\n6. 배당에 관한 사항\n7. 증권의 발행을 통한 자금조달에 관한 사항\n8. 기타 재무에 관한 사항\nIV. 이사의 경영진단 및 분석의견\n1. 예측정보에 대한 주의사항\n2. 개요\n3. 재무상태 및 영업실적\n4. 유동성 및 자금조달과 지출\n5. 부외거래\n6. 그 밖에 투자의사결정에 필요한 사항\nV. 회계감사인의 감사의견 등\n1. 외부감사에 관한 사항\n2. 내부통제에 관한 사항\nVI. 이사회 등 회사의 기관에 관한 사항\n1. 이사회에 관한 사항\n2. 감사제도에 관한 사항\n3. 주주총회 등에 관한 사항\nVII. 주주에 관한 사항\nVIII. 임원 및 직원 등에 관한 사항\n1. 임원 및 직원 등의 현황\n2. 임원의 보수 등\nIX. 계열회사 등에 관한 사항\nX. 대주주 등과의 거래내용\nXI. 그 밖에 투자자 보호를 위하여 필요한 사항\n1. 공시내용 진행 및 변경사항\n2. 우발부채 등에 관한 사항\n3. 제재 등과 관련된 사항\n4. 작성기준일 이후 발생한 주요사항 등 기타사항\nXII. 상세표\n1. 연결대상 종속회사 현황(상세)\n2. 계열회사 현황(상세)\n3. 타법인출자 현황(상세)\n【 전문가의 확인 】\n1. 전문가의 확인\n2. 전문가와의 이해관계\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n회사의 개요는 기업공시서식 작성기준에 따라 분기보고서에 기재하지 않습니다.(반기ㆍ사업보고서에 기재 예정)\n2. 회사의 연혁\n회사의 연혁은 기업공시서식 작성기준에 따라 분기보고서에 기재하지 않습니다.(반기ㆍ사업보고서에 기재 예정)\n3. 자본금 변동사항\n자본금 변동사항은 기업공시서식 작성기준에 따라 분기보고서에 기재하지 않습니다.(반기ㆍ사업보고서에 기재 예정)\n4. 주식의 총수 등\n주식의 총수 등은 기업공시서식 작성기준에 따라 분기보고서에 기재하지 않습니다.(반기ㆍ사업보고서에 기재 예정)\n5. 정관에 관한 사항\n정관에 관한 사항은 기업공시서식 작성기준에 따라 분기보고서에 기재하지 않습니다.(반기ㆍ사업보고서에 기재 예정)\nII. 사업의 내용\n1. 사업의 개요\n당사는 지속 가능한 미래를 위한 배터리 기술 개발을 핵심 전략으로 삼고 EV(Electric Vehicle), ESS(Energy Storage System), IT기기, 전동공구, LEV(Light Electric Vehicle) 등에 적용되는 전지 관련 제품의 연구, 개발, 제조, 판매하는 사업을 영위하고 있으며, 에너지솔루션 단일 사업부문으로 구성되어 있습니다. 국내는 물론 미국, 폴란드, 중국 등 세계 주요 거점에 생산, 판매, R&D 네트워크를 구축하고 전 세계를 대상으로 사업을 전개하고 있습니다. 또한, 국내 공장 및 해외 생산법인에서 제품을 생산하고, 제품 판매는 본사 및 해외 생산법인 또는 해외 판매법인을 통해 진행되며, 매출 대부분은 본사 및 해외 생산법인 직접 판매로 발생하고 있습니다.\n당사는 2026년 1분기 누계 약 6조 5,550억원의 연결 매출액 및 기타수익(이하 표에서는 \"매출액\"으로 표기)과 약 2,078억원의 연결 영업손실을 기록하였습니다.\n당사는 끊임없는 배터리 연구개발과 신제품 출시 및 품질 혁신을 통해 에너지솔루션 산업을 대표하는 글로벌 기업으로 성장하였습니다. 중장기적 관점으로 EV용 배터리 시장은 EV 차량가격이 내연기관차와 동등한 수준까지 안정화되고, 주행거리/안전성 등의 우려가 해소되며 성장 모멘텀이 지속될 것으로 예상됩니다. 또한, ESS 시장은 신재생에너지의 보급 확산과 빅테크, AI 기업들의 전력수요로 안정적인 성장이 전망됩니다. EV와 ESS 외에도 신사업 영역의 확대로 당사 배터리 수요는 지속적으로 증가할 것으로 예상됩니다.\n당사는 향후 고성장이 예상되는 배터리 시장에서 선두 기업으로 영속하기 위해 집중적인 R&D 투자를 통해 철저히 미래를 준비하고, 제품 안전성 강화 및 품질 향상으로 고객별/포트폴리오별 최적의 솔루션을 도출할 것입니다. 또한, 글로벌 Operation 경쟁력을 확보하여 고객에게 안정적으로 물량을 공급하고 Sustainability 추진을 지속해 나가고자 합니다.\n당사는 앞으로도 친환경 기술 개발을 경영 전략의 핵심으로 삼아, 지속가능성과 기업 경쟁력을 함께 견인해 나가는 기업이 되도록 노력하겠습니다.\n2. 주요 제품 및 서비스\n1) 주요 제품 등의 현황\n(단위 : 백만원, %)\n사업부문 | 주 요 제 품 | 구체적용도 | 주요목표시장 | 수요자의 구성 및 특성 | 수요변동요인 | 제7기 1분기\n매출액 | 비율\n에너지솔루션 | EV용 배터리, ESS용 배터리,소형 Application용 배터리 등 | 2차전지 | 국내 및 해외 | 자동차 관련 업체 및정보통신업체 | 경기변동,정부정책 | 6,554,967 | 100.0%\n주1) 상기 금액은 누계 기준으로 작성되었습니다.\n2) 주요 제품의 가격변동추이\n(단위 : USD)\n사업부문 | 품 목 | 제7기 1분기 | 제6기 | 제5기\n에너지솔루션 | 소형 Application 배터리 | 1.11 | 1.14 ",
+        "content_truncated": true,
+        "total_chars": 284994,
+        "summary": "분기보고서 (2026.03) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514001046",
+        "collected_at": "2026-09-07T03:39:17.914330Z",
+        "report_name": "분기보고서 (2026.03)",
+        "published_at": "2026-05-14T00:00:00Z",
+        "request_id": "09b69712-1166-4983-b6fd-aeae793735cd",
+        "source_type": "dart"
+      }
+    },
+    "20260312000217": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260312000217",
+        "document_type": "disclosure",
+        "content": "(제 6 기)\n사업연도 | 2025년 01월 01일 | 부터\n2025년 12월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 3월 12일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 주식회사 엘지에너지솔루션\n대 표 이 사 : | 김 동 명\n본 점 소 재 지 : | 서울특별시 영등포구 여의대로 108, 타워1(여의도동)\n(전 화) 02-3777-1114\n(홈페이지) http://www.lgensol.com\n작 성 책 임 자 : | (직 책) 회계담당 (성 명) 박 성 필\n(전 화) 02-3777-1114\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n2. 회사의 연혁\n3. 자본금 변동사항\n4. 주식의 총수 등\n5. 정관에 관한 사항\nII. 사업의 내용\n1. 사업의 개요\n2. 주요 제품 및 서비스\n3. 원재료 및 생산설비\n4. 매출 및 수주상황\n5. 위험관리 및 파생거래\n6. 주요계약 및 연구개발활동\n7. 기타 참고사항\nIII. 재무에 관한 사항\n1. 요약재무정보\n2. 연결재무제표\n3. 연결재무제표 주석\n4. 재무제표\n5. 재무제표 주석\n6. 배당에 관한 사항\n7. 증권의 발행을 통한 자금조달에 관한 사항\n8. 기타 재무에 관한 사항\nIV. 이사의 경영진단 및 분석의견\nV. 회계감사인의 감사의견 등\n1. 외부감사에 관한 사항\n2. 내부통제에 관한 사항\nVI. 이사회 등 회사의 기관에 관한 사항\n1. 이사회에 관한 사항\n2. 감사제도에 관한 사항\n3. 주주총회 등에 관한 사항\nVII. 주주에 관한 사항\nVIII. 임원 및 직원 등에 관한 사항\n1. 임원 및 직원 등의 현황\n2. 임원의 보수 등\nIX. 계열회사 등에 관한 사항\nX. 대주주 등과의 거래내용\nXI. 그 밖에 투자자 보호를 위하여 필요한 사항\n1. 공시내용 진행 및 변경사항\n2. 우발부채 등에 관한 사항\n3. 제재 등과 관련된 사항\n4. 작성기준일 이후 발생한 주요사항 등 기타사항\nXII. 상세표\n1. 연결대상 종속회사 현황(상세)\n2. 계열회사 현황(상세)\n3. 타법인출자 현황(상세)\n【 전문가의 확인 】\n1. 전문가의 확인\n2. 전문가와의 이해관계\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n1. 연결대상 종속회사 개황\n연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | - | - | - | - | -\n비상장 | 23 | 2 | - | 25 | 16\n합계 | 23 | 2 | - | 25 | 16\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n1) 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | LG Energy Solution China Co., Ltd. | 당기 중 신설\nXensol Energy(Nanjing) Co.,Ltd | 당기 중 신설\n연결제외 | - | -\n- | -\n2) 회사의 법적ㆍ상업적 명칭\n- 국문 : 주식회사 엘지에너지솔루션\n- 영문 : LG ENERGY SOLUTION, LTD.\n3) 설립일자 및 존속기간\n- 2020년 12월 1일 기존의 ㈜LG화학에서 분할되어 신설되었습니다.\n4) 본사의 주소, 전화번호, 홈페이지 주소\n- 서울특별시 영등포구 여의대로 108, 타워1(여의도동)\n(전 화) 02-3777-1114\n(홈페이지) http://www.lgensol.com\n5) 중소기업 등 해당 여부\n중소기업 해당 여부 | 미해당\n벤처기업 해당 여부 | 미해당\n중견기업 해당 여부 | 미해당\n6) 주요 사업의 내용 및 향후 추진하려는 신규사업\n당사는 EV(Electric Vehicle), ESS(Energy Storage System), IT기기, 전동공구, LEV(Light Electric Vehicle) 등에 적용되는 전지 관련 제품의 연구, 개발, 제조, 판매하는 사업을 영위하고 있으며, 에너지솔루션 단일 사업부문으로 구성되어 있습니다.\nEV는 각 국의 환경규제와 친환경 정책 확대에 따른 수요 증가로 높은 성장 가능성이 있는 사업이며, ESS도 신재생 에너지 발전 및 발전된 전력의 효율적인 활용이 중요해짐에 따라 수요가 확대되고 있습니다. 또한, 스마트폰 및 웨어러블 등 IT기기 뿐만 아니라 전기자전거, 전동휠 등 신규 Application 수요도 증가하고 있습니다.\n당사는 2차전지 제조, 판매 외에도 미래의 지속적인 성장 동력 확보를 위한 신규 사업을 적극적으로 추진하고 있습니다. 오랜 기간 축적해 온 배터리 및 차량 관련 데이터를 활용하여 배터리의 전체 생애주기를 관리해 새로운 부가가치를 창출해 내는 BaaS(Battery-as-a-Service), 에너지 효율성 개선과 전력난 해소 목적의 EaaS(Energy-as-a-Service) 사업, 배터리 Recycle/Reuse 사업 등 새로운 사업 기회를 지속적으로 모색할 계획입니다.\n또한, 당사는 ESS 시스템 통합 분야에도 진출하여 단순 배터리 제조를 넘어 대규모 ESS를 직접 구축하고 SI(System Integration, 시스템 통합)까지 제공하는 통합 솔루션 역량을 확보하고 있습니다. 이를 기반으로 글로벌 ESS 시장 선점에 박차를 가할 계획입니다.\n※ 자세한 사항은 Ⅱ. 사업의 내용을 참조하시기 바랍니다.\n7) 신용평가에 관한 사항\n평가일 | 평가대상 | 평가대상의신용등급 | 평가회사(신용평가등급범위) | 평가구분\n2023.05.09 | 회사 | Baa1 | Moody's (미국) (Aaa~C) | 본평가\n2023.05.25 | 회사 | BBB+ | S&P (미국) (AAA~D) | 본평가\n2023.06.08 | 회사채 | AA | 한국신용평가 | 본평가\n2023.06.09 | 회사채 | AA | NICE신용평가 | 본평가\n2023.08.28 | 회사채 | BBB+ | S&P (미국) (AAA~D) | 수시평가\n2023.08.29 | 회사채 | Baa1 | Moody's (미국) (Aaa~C) | 수시평가\n2024.02.01 | 회사채 | AA | 한국신용평가 | 본평가\n2024.02.01 | 회사채 | AA | NICE신용",
+        "content_truncated": true,
+        "total_chars": 516813,
+        "summary": "사업보고서 (2025.12) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000217",
+        "collected_at": "2026-09-07T03:39:27.171480Z",
+        "report_name": "사업보고서 (2025.12)",
+        "published_at": "2026-03-12T00:00:00Z",
+        "request_id": "613118b7-2e75-46dd-83e0-94ddaeb6447b",
+        "source_type": "dart"
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260812800134",
+    "20260813000255",
+    "20260514001046",
+    "20260312000217"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:39:03.981738Z"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:03.982009Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:03.982297Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:03.982398Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:03.982488Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:03.982578Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:03.982660Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:04.358496Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:04.533694Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:04.637180Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:04.657138Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:04.694648Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-373220",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:04.764311Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

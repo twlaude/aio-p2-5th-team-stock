@@ -1,0 +1,1343 @@
+{
+  "company": {
+    "company_name": "한화에어로스페이스",
+    "stock_code": "012450"
+  },
+  "captured_at": "2026-09-07T03:42:13.513659+00:00",
+  "capture_finished_at": "2026-09-07T03:47:54.088909+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "한화에어로스페이스",
+      "stock_code": "012450",
+      "current_price": 1033000,
+      "change": -22000,
+      "change_rate": -2.09,
+      "volume": 54273,
+      "volume_change_rate": 87.09,
+      "avg_volume_20d": 171550,
+      "volume_ratio_20d": 0.56,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 95245,
+      "warnings": [],
+      "as_of": "2026-09-07T03:42:13.919417Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:42:13.919417Z"
+    },
+    "news": {
+      "request_id": "e929a95c-c46a-4351-8af9-e2fa12fb153e",
+      "status": "success",
+      "company_name": "한화에어로스페이스",
+      "stock_code": "012450",
+      "articles": [
+        {
+          "headline": "한화, 폴란드 국방전시회 'MSPO' 참가…유럽 시장 겨냥한다",
+          "publisher": "newsworks.co.kr",
+          "published_at": "2026-09-07T03:40:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 이달 8~11일(현지시간) 폴란드 키엘체에서 열리는 '제34회 국제 방위산업 전시회(MSPO 2026)'에 공동 참가한다고 7일 밝혔다. 양사는 274㎡ 규모 통합 전시관을 차리고 'Proven...",
+          "source_url": "https://www.newsworks.co.kr/news/articleView.html?idxno=852850",
+          "relevance": "high"
+        },
+        {
+          "headline": "[N2 포커스] 트럼프가 찍은 '천궁-II'는 어떤 무기?… 중동 넘어 우크라...",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T03:22:00Z",
+          "summary": "미사일과 통합체계는 LIG넥스원, 다기능레이더는 한화시스템, 발사대와 차량은 한화에어로스페이스가 각각 생산한다. 천궁-II는 고도 40㎞ 이하로 날아오는 탄도미사일과 항공기 등을 요격한다. 한국형 미사일방어체계...",
+          "source_url": "https://www.news2day.co.kr/article/20260907500122",
+          "relevance": "high"
+        },
+        {
+          "headline": "[한국판 스페이스X①] 한화 KAI 지분 확대...글로벌 우주항공 시대 '선도...",
+          "publisher": "startuptoday.co.kr",
+          "published_at": "2026-09-07T03:12:00Z",
+          "summary": "한화에어로스페이스 9.90%, 한화시스템 4.98%, 한화에어로스페이스USA 1.01%를 합친 것이다. 이로써 한화는 26.41%를 보유한 한국수출입은행에 이어 KAI의 2대 주주가 됐다. 불확실성이 걷히면서 업계의 시선은 김동관...",
+          "source_url": "https://www.startuptoday.co.kr/news/articleView.html?idxno=812078",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 'KoAct 배당성장액티브', 배당성장형 ETF 수익률·분배율 1위",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T03:08:00Z",
+          "summary": "주요 편입 종목으로는 △삼성전자우(22.8%) △SK하이닉스(21.9%) △KB금융(3.2%) △한화에어로스페이스(2.9%) △SK스퀘어(2.6%) 등이다. 총보수는 연 0.5%다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 단순히...",
+          "source_url": "https://www.fnnews.com/news/202609071157001852",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘한 발에 2000원 레이저로 드론 잡는다’⋯ 한화, 유럽 안방서 하늘 그...",
+          "publisher": "viva100.com",
+          "published_at": "2026-09-07T03:06:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 8일부터 11일까지 폴란드 키엘체에서 열리는 ‘제34회 국제 방위산업 전시회(MSPO 2026)’에 공동 출격한다. 이번 전시의 선봉에는 단돈 2000원 안팎으로 쏠 수 있는 레이저 대공무기...",
+          "source_url": "https://www.viva100.com/article/20260907500699",
+          "relevance": "high"
+        },
+        {
+          "headline": "[금융권 이모저모]삼성액티브운용, 배당성장 ETF 수익률·분배율 1위 外",
+          "publisher": "businessplus.kr",
+          "published_at": "2026-09-07T02:52:00Z",
+          "summary": "주요 편입 종목은 삼성전자우 22.8%, SK하이닉스 21.9%, KB금융 3.2%, 한화에어로스페이스 2.9%, SK스퀘어 2.6% 등이다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 현재 배당수익률이 높은 기업보다는...",
+          "source_url": "https://www.businessplus.kr/news/articleView.html?idxno=116471",
+          "relevance": "high"
+        },
+        {
+          "headline": "유럽 방산시장 잡아라..한화, 폴란드서 방공·무인·우주AI 총출동",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T02:43:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 오는 8~11일 폴란드 키엘체에서 열리는 '제34회 국제 방위산업 전시회(MSPO 2026)'에 공동 참가한다고 7일 밝혔다. 양사는 274㎡ 규모의 통합 전시관을 마련하고 유럽 지역의 방공망...",
+          "source_url": "https://www.fnnews.com/news/202609071136394829",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화, 폴란드 MSPO 참가…유럽 시장 공략 확대",
+          "publisher": "weekly.hankooki.com",
+          "published_at": "2026-09-07T02:42:00Z",
+          "summary": "사진=한화에어로스페이스  한화가 폴란드에서 K9 자주포와 천무 다련장로켓 수출로 구축한 신뢰를 바탕으로 지상·공중·해상·우주를 아우르는 차세대 방위 산업 솔루션을 대거 선보인다. 한화에어로스페이스와...",
+          "source_url": "https://weekly.hankooki.com/news/articleView.html?idxno=7182804",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 훈풍에 코스피 3% 급등…외국인·기관 1.6조 싹쓸이",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "반면 한화에어로스페이스(-2.18%), 삼성SDI(-0.73%), 셀트리온(-0.90%) 등은 내리고 있다. 업종별로 전기·전자(4.29%), 기계·장비(4.12%), 제조(3.35%) 등은 오르고 음식료·담배(-2.55%), 부동산(-1.15%), 섬유·의류(-1.11...",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063126",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화, 유럽서 위성영상 AI 분석 솔루션 공개…\"나토 방산 기여\"",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 오는 8∼11일 폴란드 키엘체에서 열리는 제34회 국제 방위산업 전시회(MSPO 2026)에 공동 참가한다고 7일 밝혔다. 한화시스템은 전시회 현장에서 'AI 솔루션 론칭 행사'를 열고...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907081000003?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화, 유럽 최대 방산 전시회서 종합 방산 솔루션 선보인다",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-07T02:37:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 오는 8~11일 폴란드 키엘체에서 열리는 ‘제34회 국제 방위산업 전시회(MSPO 2026)’에 공동으로 참가한다. 양사는 274㎡ 규모의 통합 전시관을 조성하고, ‘Proven Partnership....",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=02879846645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산운용 \"배당성장액티브, 동일 ETF 중 수익·분배율 1위\"",
+          "publisher": "smarttimes.co.kr",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "주요 편입 종목은 ▲삼성전자우(22.8%) ▲SK하이닉스(21.9%) ▲KB금융(3.2%) ▲ 한화에어로스페이스(2.9%) ▲SK스퀘어(2.6%) 등이다. 총 보수는 연 0.5%다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 단순히...",
+          "source_url": "http://www.smarttimes.co.kr/news/articleView.html?idxno=48744",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 113조 투자에 아산시 '초고속 행정'...인허가 10개월→3개월",
+          "publisher": "goodmorningcc.com",
+          "published_at": "2026-09-07T02:30:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 주요 기업들이 생산 거점을 두고 있어 대기업 투자가 협력업체와 소재·부품·장비 기업으로 이어질 수 있는 산업 생태계도...",
+          "source_url": "https://www.goodmorningcc.com/news/articleView.html?idxno=451895",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브운용 ‘KoAct 배당성장액티브’, 수익률·분배율 동반 1위",
+          "publisher": "megaeconomy.co.kr",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "주요 편입 종목은 삼성전자우 22.8%와 SK하이닉스 21.9%, KB금융 3.2%, 한화에어로스페이스 2.9%, SK스퀘어 2.6% 등이다. 삼성전자우와 SK하이닉스의 합산 비중은 44.7%로 전체 자산의 절반에 가깝다. 2024년 2월 상장한 이...",
+          "source_url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065579892530670",
+          "relevance": "high"
+        },
+        {
+          "headline": "K9 후속 수주 노리고 위성 AI 첫 공개…한화, 폴란드서 유럽 공략",
+          "publisher": "newsquest.co.kr",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 8일부터 11일까지 폴란드 키엘체에서 열리는 제34회 국제 방위산업 전시회 'MSPO 2026'에 공동 참가한다고 7일 밝혔다. 양사는 274㎡ 규모 통합 전시관을 마련하고 지상·공중·해상...",
+          "source_url": "https://www.newsquest.co.kr/news/articleView.html?idxno=300396",
+          "relevance": "high"
+        },
+        {
+          "headline": "아산시, '삼성 113조 투자' 전방위 행정 지원 나서",
+          "publisher": "breaknews.com",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 주요 기업이 입주해 있어 협력 생태계가 탄탄하며, KTX를 통해 서울 36분...",
+          "source_url": "http://www.breaknews.com/1234495",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산 KoAct 배당성장액티브, 배당성장 ETF 중 수익률·분배율...",
+          "publisher": "delighti.co.kr",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "주요 편입 종목은 삼성전자우(22.8%), SK하이닉스(21.9%), KB금융(3.2%), 한화에어로스페이스(2.9%), SK스퀘어(2.6%) 등이다. 현금흐름과 주주환원 수준이 높은 기업과 실적 개선이 기대되는 기업을 고루 담고 있다. 총보수는...",
+          "source_url": "https://www.delighti.co.kr/news/articleView.html?idxno=121420",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화, 폴란드서 다층방공·무인체계·우주AI 솔루션 제시",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-07T02:24:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 8~11일 폴란드 키엘체에서 열리는 ‘제34회 국제 방위산업 전시회(MSPO 2026)’에 공동 참가한다고 7일 밝혔다. 이번 전시회에는 전 세계 40여개국에서 1000여개 방산기업이...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622592",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화, 다층방공망·우주 AI 앞세워 유럽 방산시장 공략 확대",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T02:24:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 오는 8일부터 11일까지 폴란드 키엘체에서 열리는 '제34회 국제 방위산업 전시회(MSPO 2026)'에 공동 참가한다고 7일 밝혔다. 양사는 274㎡ 규모 통합 전시관을 마련하고 지상·공중...",
+          "source_url": "https://www.newspim.com/news/view/20260907000554",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 투자 이끌어 낸 '준비된 도시 아산'…기업하기 좋은 조건 갖춰",
+          "publisher": "nocutnews.co.kr",
+          "published_at": "2026-09-07T02:23:00Z",
+          "summary": "또 삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 국내외 주요 기업들이 아산에 생산 거점을 두고 있어, 대기업 투자가 곧바로 협력업체로 이어지는 구조가 잡혀 있다. 교통...",
+          "source_url": "https://www.nocutnews.co.kr/news/6573976?utm_source=naver&utm_medium=article&utm_campaign=20260907112229",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 'KoAct 배당성장액티브', 1년 수익률·분배율 1위",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-07T02:18:00Z",
+          "summary": "주요 편입 종목은 삼성전자우(22.8%), SK하이닉스(21.9%), KB금융(3.2%), 한화에어로스페이스(2.9%), SK스퀘어(2.6%) 등이다. 지성진 삼성액티브운용 매니저는 \"인공지능(AI) 투자 확대와 메모리 업황 개선을 바탕으로 이익...",
+          "source_url": "https://www.newsis.com/view/NISX20260907_0003778945",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화, K9 이어 다층방공망·우주 AI로 유럽 방산시장 정조준",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T02:18:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 8~11일 폴란드 키엘체에서 열리는 '제34회 국제 방위산업 전시회(MSPO 2026)'에 공동 참가한다고 7일 밝혔다. 양사는 '검증된 파트너십, 전략적 역량, 자주국방'이라는 슬로건을...",
+          "source_url": "https://view.asiae.co.kr/article/2026090711185110007",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화에어로, 크로아티아 '천무' 수출설에 \"고객과 협의 중… 확정된 바...",
+          "publisher": "fntoday.co.kr",
+          "published_at": "2026-09-07T02:16:00Z",
+          "summary": "한화에어로스페이스(012450)가 매일경제의 '한화 천무 크로아티아 수출' 보도와 관련해 \"고객과 협의 중이나 현재까지 확정된 사항은 없다\"고 7일 공시했다. 이번 공시는 지난 9월 5일 매일경제에서 보도된 크로아티아...",
+          "source_url": "https://www.fntoday.co.kr/news/articleView.html?idxno=392279",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화, 폴란드 MSPO서 '다층방공·우주 AI' 정조준…유럽 공략 2막 연다",
+          "publisher": "industrynews.co.kr",
+          "published_at": "2026-09-07T02:16:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 8일부터 11일까지 폴란드 키엘체에서 열리는 '제34회 국제 방위산업 전시회(MSPO 2026)'에 274㎡ 규모의 통합 전시관을 조성하고 공동 참가한다고 7일 밝혔다. 양사는 '검증된...",
+          "source_url": "https://www.industrynews.co.kr/news/articleView.html?idxno=85603",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화, 폴란드 MSPO 참가 차세대 방산 솔루션 공개",
+          "publisher": "businesskorea.co.kr",
+          "published_at": "2026-09-07T02:14:00Z",
+          "summary": "한화에어로스페이스와 한화시스템은 8일부터 11일까지 열리는 '제34회 국제 방위산업 전시회(MSPO 2026)'에 274㎡ 규모의 통합 전시관을 마련했다. 양사는 '검증된 파트너십, 전략적 역량, 자주국방'을 슬로건으로...",
+          "source_url": "https://www.businesskorea.co.kr/news/articleView.html?idxno=276306",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 훈풍에 3% 안팎 상승세…삼전닉스 3~5%↑",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T02:12:00Z",
+          "summary": "반면 한화에어로스페이스(-2.18%), 삼성SDI(-0.73%), 셀트리온(-0.90%) 등은 내리고 있다. 업종별로 전기·전자(4.29%), 기계·장비(4.12%), 제조(3.35%) 등은 오르고 음식료·담배(-2.55%), 부동산(-1.15%), 섬유·의류(-1.11...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907072500008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화·현대로템 등 124개 사 참여… 경남도, 16일 일자리 박람회",
+          "publisher": "hankookilbo.com",
+          "published_at": "2026-09-07T02:11:00Z",
+          "summary": "이번 박람회에는 한화오션, 한화에어로스페이스, 한화엔진, 한국항공우주산업(KAI), 현대로템, 두산에너빌리티, 효성중공업, 케이조선, 볼보 등 지역 대표 기업을 비롯해 총 124개 중견·수 기업이 참가해 현장 채용상담과...",
+          "source_url": "https://www.hankookilbo.com/news/article/A2026090616490003169?did=NA",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 이익 증가율 꺾였다, 원화 강세에도 웃을 '실적 개선주'는",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T02:07:00Z",
+          "summary": "이어 삼성전자 52.2%→55.2%(+3.0%p), 한국항공우주 4.2%→6.8%(+2.6%p), 이수페타시스 20.3%→22.3%(+2.0%p), 한화에어로스페이스 14.7%→16.1%(+1.4%p), 현대글로비스 5.7%→6.8%(+1.1%p), 삼성바이오로직스 44.4%→45.2%(+0.8%p), S-Oil 8.5%→9.3...",
+          "source_url": "https://www.newspim.com/news/view/20260906000155",
+          "relevance": "high"
+        },
+        {
+          "headline": "9월 주식 뭐 살까… 유망주 20개 뜯어보니",
+          "publisher": "m.skyedaily.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "반면 NAVER는 편입 이후 6.36%, KB금융은 6.72%, 한화에어로스페이스는 3.83% 하락했다. 하나증권이 집계한 올해 단기 투자유망종목의 연초 이후 누적 수익률은 73.58%로 코스피 대비 14.23%p 높았다. 직전 주간 수익률은 -1....",
+          "source_url": "https://m.skyedaily.com/news_view.html?ID=311094",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화에어로스페이스, K9에 '대드론 재머' 달았다... 우크라전이 바꾼 자...",
+          "publisher": "insight.co.kr",
+          "published_at": "2026-09-07T01:52:00Z",
+          "summary": "한화에어로스페이스의 K9 자주포에 적 드론 공격을 교란하는 '대드론 재머'를 탑재한 모습이 처음 공개됐다. 드론이 현대전의 핵심 전력으로 부상하면서 K9 역시 화력과 사거리 경쟁을 넘어 적 무인기 위협에서...",
+          "source_url": "https://www.insight.co.kr/news/572219",
+          "relevance": "high"
+        },
+        {
+          "headline": "“역시 삼성전자 압도적 1위” 브랜드 가치 ‘135조’…세계 홀린 K기업...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:47:00Z",
+          "summary": "방산에서는 한화에어로스페이스가 47위에서 23위로 뛰었고 현대로템은 94위에서 66위, 한화시스템은 106위에서 71위로 각각 순위를 끌어올렸다. 올해 국내 150대 브랜드의 전체 가치는 약 3570억달러로 지난해보다...",
+          "source_url": "https://www.sedaily.com/article/20087889?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[비즈 인사이트] 엠앤씨솔루션, 폴란드 MSPO 첫 참가…K-방산 넘어 유럽...",
+          "publisher": "moneystorm.kr",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "최근 한화에어로스페이스의 스페인 자주포 수주 등 해외 방산사업이 이어지고 있고, 현대로템에서도 페루 수출용으로 추정되는 K2 전차 관련 부품 발주가 이뤄지는 등 수주 환경이 조금씩 회복되고 있기 때문이다....",
+          "source_url": "https://www.moneystorm.kr/news/articleView.html?idxno=6274",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산운용 KoAct 배당성장액티브, 배당성장ETF 수익률·분배율...",
+          "publisher": "inthenews.co.kr",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "주요 편입종목으로는 ▲삼성전자우(22.8%) ▲SK하이닉스(21.9%) ▲KB금융(3.2%) ▲ 한화에어로스페이스(2.9%) ▲SK스퀘어(2.6%) 등 입니다. 총 보수는 연 0.5% 입니다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은...",
+          "source_url": "https://www.inthenews.co.kr/news/article.html?no=91494",
+          "relevance": "high"
+        },
+        {
+          "headline": "경남도, ‘일자리 종합박람회’ 개최…126개 사 607명 채용",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "경남을 대표하는 ▷두산에너빌리티 ▷한화에어로스페이스 ▷한화오션 ▷한국항공우주산업(KAI) ▷ 현대로템 등 주요 대기업도 부스를 마련한다. 다만 대기업은 자체 채용 절차 특성상 현장 직접 채용 대신 ‘채용...",
+          "source_url": "https://biz.heraldcorp.com/article/10864656?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "5차 누리호 '윈윈전략'...다중위성 정밀 궤도투입, 한화주도 발사체 전...",
+          "publisher": "seouleconews.com",
+          "published_at": "2026-09-07T01:36:00Z",
+          "summary": "누리호 체계종합기업인 한화에어로스페이스의 발사 운용 참여도 대폭 늘어난다. 5차 발사에서는 발사통제센터 관제설비의 75%를 한화에어로스페이스 인력이 항우연 연구진의 관리·감독 아래 실질적으로 운영한다. 이는...",
+          "source_url": "http://www.seouleconews.com/news/articleView.html?idxno=93563",
+          "relevance": "high"
+        },
+        {
+          "headline": "경남 일자리 종합박람회 16일 개최…두산에너빌·한화·KAI 등 참여",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "박람회에는 두산에너빌리티, 한화오션, 한화에어로스페이스, 한화엔진, 한국항공우주산업(KAI), 현대로템, 효성중공업, 케이조선, 볼보 등 경남을 대표하는 대기업과 중견·우수기업 등 124개 기업이 참여한다. 참여 기업은...",
+          "source_url": "https://www.news1.kr/local/busan-gyeongnam/6281926",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "반면 한화에어로스페이스(-1.90%), 삼성SDI(-0.55%) 등은 하락하고 있다. 업종별로는 전기·전자(4.59%), 기계(3.70%), 의료정밀(2.32%), 금융업(2.05%), 건설업(2.03%), 유통업(1.64%), 보험(1.62%), 운수창고(1.05%), IT서비스(0.91...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체주 강세에 3%가까이 급등…6,880선 돌파",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "반면 한화에어로스페이스(0.95%)와 삼성SDI(0.73%), 셀트리온(0.58%), 삼성화재(0.75%), 한화오션(0.23%) 등은 약세다. 한지영 키움증권 연구원은 이날 보고서에서 \"오픈AI의 GPT-6 아스트라 공개 이후 AI 수요 모멘텀이...",
+          "source_url": "https://www.news2day.co.kr/article/20260907500108",
+          "relevance": "high"
+        },
+        {
+          "headline": "'누리호 5차 발사 카운트다운'...한화에어로스페이스 역할 확대 눈길",
+          "publisher": "cwn.kr",
+          "published_at": "2026-09-07T01:10:00Z",
+          "summary": "한화에어로스페이스는 체계종합기업으로서 이번 5차 발사부터 발사통제센터 관제 설비의 75%를 실질적으로 담당한다. 연구기관 중심으로 이뤄졌던 발사 운용에 민간기업의 역할이 확대되는 것으로, 6차와 7차 발사에서는...",
+          "source_url": "https://www.cwn.kr/news/articleView.html?idxno=55434",
+          "relevance": "high"
+        },
+        {
+          "headline": "[인사이트] 美 육군 포병사업 진출한 한화… K-방산, 이젠 통합 전장 '진...",
+          "publisher": "kbiznews.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "미 육군이 추진하는 'Mobile Tactical Cannon(MTC)' 사업에서 한화에어로스페이스의 미국 자회사 한화디펜스USA가 K9 자주포를 기반으로 한 시제품 6문 공급 계약을 따냈다. 추가 12문 공급 옵션도 포함됐다. 미국의 포병 지원을...",
+          "source_url": "http://www.kbiznews.co.kr/news/articleView.html?idxno=114788",
+          "relevance": "high"
+        },
+        {
+          "headline": "'산업과 사람을 잇다'…16일 창원서 경남 일자리 종합박람회",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "한화오션·한화에어로스페이스·한화엔진·한국항공우주산업(KAI)·현대로템·두산에너빌리티·효성중공업·케이조선 등 경남을 대표하는 대기업, 중견·우수기업이 참여해 현장 채용 상담, 면접을 진행한다. 도는...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907052500052?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "누리호 5차 발사 한 달 앞으로…위성 15기 집결, 막바지 준비",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "◆한화에어로스페이스 발사 운용 참여 확대 누리호 발사 체계종합기업인 한화에어로스페이스의 역할도 이번 발사부터 더욱 확대된다. 5차 발사에서는 발사통제센터 관제 설비 가운데 약 75%를 한화에어로스페이스...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723191",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산 KoAct 배당성장액티브, 배당성장 ETF 중 수익률·분배율...",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-07T01:02:00Z",
+          "summary": "주요 편입 종목으로는 △삼성전자우(22.8%) △SK하이닉스(21.9%) △KB금융(3.2%) △한화에어로스페이스(2.9%) △SK스퀘어(2.6%) 등 현금흐름 및 주주환원이 우수한 기업과 실적 개선이 전망되는 기업들을 골고루 담고 있다....",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=02443606645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "출범 2년 맞은 우리투자증권, IB 존재감도 레벨업",
+          "publisher": "news.einfomax.co.kr",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "연합인포맥스 'IB별 인수/주관 종목'(화면번호 8452)에 따르면 우리투자증권은 올해에만 다수의 롯데그룹 계열사와 더불어 한화에어로스페이스, 포스코퓨처엠, 신세계, 대한항공, LG유플러스 등의 회사채 주관사로...",
+          "source_url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433684",
+          "relevance": "high"
+        },
+        {
+          "headline": "[K방산 빅뱅①] 세계는 '메가 방산' 전쟁…한화가 KAI 원하는 이유",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "7일 관련업계에 따르면 한화그룹의 KAI 지분은 한화에어로스페이스 9.90%, 한화시스템 4.98%, 한화에어로스페이스USA 1.01% 등 총 15.89%다. 지난 7월8일 12.44% 보유 사실을 공시하고 한화시스템이 연내 5000억원 한도에서 KAI...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484423",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브 \"배당성장액티브, 동일 ETF 중 수익·분배율 1위\"",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T00:53:00Z",
+          "summary": "개선되고 미래의 주주환원 확대 여력이 높은 우량 기업들을 발굴해 투자한다. 주요 편입 종목으로는 ▲삼성전자우(22.8%) ▲SK하이닉스(21.9%) ▲KB금융(3.2%) ▲ 한화에어로스페이스(2.9%) ▲SK스퀘어(2.6%) 등이다.",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907046400008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "113조원 투자 품은 아산…산업·교통·행정 경쟁력으로 미래 연다",
+          "publisher": "weekly.hankooki.com",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 국내외 주요 기업들이 생산 거점을 두고 있다. 대기업의 투자가 이뤄지면 협력업체와 관련 서비스 기업의 유입으로 이어지고...",
+          "source_url": "https://weekly.hankooki.com/news/articleView.html?idxno=7182717",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_9월 7일",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융, 한화에어로스페이스",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070004",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_8월 31일_오차율",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융, 한화에어로스페이스 지난주 빅터뉴스 시가총액 상위 15선 예상주가 평균 고가와 저가 오차율은 각각 2.56%와 8.10%를 기록했다.",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070002",
+          "relevance": "high"
+        },
+        {
+          "headline": "루마니아 방산협력, 장비 도입과 운용·생산 연계 확대",
+          "publisher": "dream.kotra.or.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "7월, 한화에어로스페이스 K9 자주포 54문 및 K10 탄약운반장갑차 36대 등 공급 계약 체결 - 2026년 2월, 루마니아 페트레슈티 현지 생산시설 착공식 개최 계약 이행 및 생산시설 건설 수주지원 활동 - 2026년 2월...",
+          "source_url": "http://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&bbsGbn=243&bbsSn=243&pNttSn=243756",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"자본차익에 월배당까지\"…삼성액티브 'KoAct 배당성장액티브', 1년 수익...",
+          "publisher": "thefairnews.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "주요 포트폴리오를 살펴보면 삼성전자우(22.8%), SK하이닉스(21.9%), KB금융(3.2%), 한화에어로스페이스(2.9%), SK스퀘어(2.6%) 등 실적 개선과 주주환원 여력이 풍부한 종목들로 구성됐다. 지성진 삼성액티브자산운용...",
+          "source_url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87253",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체주 급등에 코스피 6900선 회복…외인·기관 '쌍끌이'",
+          "publisher": "ezyeconomy.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "▲삼성생명은 4.71%, ▲신한지주는 2.36%, ▲한화에어로스페이스는 1.23% 오름세다. 코스닥도 상승세다. 코스닥지수는 전 거래일보다 1.16% 오른 822.91에 출발한 뒤 오전 9시10분 기준 824.00에 거래되고 있다....",
+          "source_url": "https://www.ezyeconomy.com/news/articleView.html?idxno=239410",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 장초반 3% 급등에 6900 안착 시도...톱텐 동반 상승",
+          "publisher": "opinionnews.co.kr",
+          "published_at": "2026-09-07T00:18:00Z",
+          "summary": "10위 이하에서도 삼성물산 3.81%, 한화에어로스페이스 1.52%, 신한지주 2.72%, 두산에너빌리티 0.88% 등 업종 불문 강세다. 유가증권시장에서 개인이 6445억원 순매도 중이지만 외국인과 기관이 3823억원...",
+          "source_url": "http://www.opinionnews.co.kr/news/articleView.html?idxno=144055",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 113조 투자에 아산시 발 빠른 대응…'기업이 성장하는 도시' 도약",
+          "publisher": "pointdaily.co.kr",
+          "published_at": "2026-09-07T00:16:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 국내외 주요 기업들이 생산 거점을 두고 있어 대기업 투자가 협력업체와 지역 산업 생태계로 확산될 수 있는 기반도 갖췄다....",
+          "source_url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=318205",
+          "relevance": "high"
+        },
+        {
+          "headline": "'KoAct 배당성장액티브', 배당성장 ETF 중 수익률·분배율 1위",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T00:13:00Z",
+          "summary": "주요 편입 종목은 ▲삼성전자우(22.8%) ▲SK하이닉스(21.9%) ▲KB금융(3.2%) ▲ 한화에어로스페이스(2.9%) ▲SK스퀘어(2.6%) 등이다. 총 보수는 연 0.5%다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 단순히...",
+          "source_url": "https://view.asiae.co.kr/article/2026090709130970194",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화에어로스페이스, 전몰·순직 군경 자녀 대상 '히어로즈 아카데미 캠...",
+          "publisher": "paxetv.com",
+          "published_at": "2026-09-07T00:10:00Z",
+          "summary": "지난 4일 경남 창원시 한화에어로스페이스 창원2사업장에서 진행된 '한화에어로스페이스 히어로즈 아카데미 캠프'에 참석한 학생들이 기념사진을 찍고 있다. [사진=한화에어로스페이스] 한화에어로스페이스가 전몰...",
+          "source_url": "http://www.paxetv.com/news/articleView.html?idxno=281143",
+          "relevance": "high"
+        },
+        {
+          "headline": "누리호 5차 발사 한 달 앞으로…위성 15기 최다",
+          "publisher": "yonhapnewstv.co.kr",
+          "published_at": "2026-09-07T00:09:00Z",
+          "summary": "또 처음으로 여러 기의 주탑재위성을 정밀하게 분리, 투입하는 기술이 적용되고, 체계종합기업 한화에어로스페이스의 발사 운용 역할도 한층 확대됩니다. 위성 15기는 전남 고흥 나로우주센터에 모두 입고됐으며 이번...",
+          "source_url": "http://www.yonhapnewstv.co.kr/news/MYH20260907090835YPO",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산 KoAct 배당성장액티브, 배당성장 ETF 중 수익률·분배율...",
+          "publisher": "pointdaily.co.kr",
+          "published_at": "2026-09-07T00:04:00Z",
+          "summary": "주요 편입 종목으로는 △삼성전자우(22.8%) △SK하이닉스(21.9%) △KB금융(3.2%) △한화에어로스페이스(2.9%) △SK스퀘어(2.6%) 등 현금흐름 및 주주환원이 우수한 기업과 실적 개선이 전망되는 기업들을 골고루 담고 있다....",
+          "source_url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=318197",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브운용 'KoAct 배당성장액티브', 수익률·분배율 1위",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T00:04:00Z",
+          "summary": "주요 편입 종목은 ▲삼성전자우 22.8% ▲SK하이닉스 21.9% ▲KB금융 3.2% ▲한화에어로스페이스 2.9% ▲SK스퀘어 2.6% 등이다. 총보수는 연 0.5%다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 단순히 현재...",
+          "source_url": "https://www.newspim.com/news/view/20260907000188",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 대규모 투자 품은 아산. 산업·교통·행정 경쟁력이 뒷받침",
+          "publisher": "gukjenews.com",
+          "published_at": "2026-09-07T00:04:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 주요 기업이 생산시설을 운영하고 있는 것도 강점이다. 대기업을 중심으로 형성된 산업 생태계가 협력업체와 소재·부품·장비...",
+          "source_url": "https://www.gukjenews.com/news/articleView.html?idxno=3686467",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]오픈AI발 호재에 반도체株↑…코스피 3%대 올라 6910선",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-07T00:03:00Z",
+          "summary": "신한지주(055550), 현대차(005380) 등은 2%대 오르고 있고 KB금융(105560), 한화에어로스페이스(012450), 기아(000270) 등이 1% 이상 상승하고 있다. 코스닥 시장은 전 거래일 대비 1.40%(11.36포인트) 오른 824.86을 기록...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=02214006645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브운용 'KoAct 배당성장', 1년 수익률 105%로 ETF 1위",
+          "publisher": "bizwork.co.kr",
+          "published_at": "2026-09-07T00:02:00Z",
+          "summary": "이밖에 KB금융 3.2%, 한화에어로스페이스 2.9%, SK스퀘어 2.6% 등을 담고 있다. 현금흐름과 주주환원 여력이 높은 기업과 실적 개선 가능성이 높은 종목을 함께 편입하는 전략이다. 총보수는 연 0.5%다. 지성진...",
+          "source_url": "https://www.bizwork.co.kr/news/articleView.html?idxno=418891",
+          "relevance": "high"
+        },
+        {
+          "headline": "[단독] 한화 오스탈USA '돌발 변수', 美 와일드캣 막판 대항 입찰 움직임...",
+          "publisher": "theguru.co.kr",
+          "published_at": "2026-09-06T23:56:00Z",
+          "summary": "한화에어로스페이스의 미국 법인인 한화디펜스USA는 미 해군 소형 수상함 및 군수 지원함 건조 역량을 확보하기 위해 10억 5000만 달러~12억 달러 규모의 오스탈USA 인수를 추진하고 있다. 이미 지난 2024년 약 1억 달러...",
+          "source_url": "https://www.theguru.co.kr/news/article.html?no=106751",
+          "relevance": "high"
+        },
+        {
+          "headline": "2조 '장거리 공대공' 수주전…한화 vs 현대로템·LIG 경쟁 예고",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-06T23:30:00Z",
+          "summary": "한화에어로스페이스와 현대로템·LIG D&A 컨소시엄이 이번 수주전에서 경쟁할 것으로 전망된다. 다만 현재 실제 제안서 제출 여부가 최종적으로 확정된 것은 아니다. 국방과학연구소는 제안서 접수 절차가 완료되는 대로...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723175",
+          "relevance": "high"
+        },
+        {
+          "headline": "[프리마켓 포커스] 美 반도체 훈풍에 투심 '활짝'… 삼전·SK하닉 강세",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-06T23:16:00Z",
+          "summary": "SK스퀘어(3.36%), 삼성전기(2.43%), 삼성물산(2.18%), 삼성생명(2.18%), 현대차(1.30%), 한화에어로스페이스(0.95%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.35%), KB금융(0.17%) 등이 강세다. 이날 국내 반도체주가 프리마켓...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727432",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전 3%·SK하닉 4%대 프리마켓 ‘강세’…이번 주 7000선 시험대",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-06T23:11:00Z",
+          "summary": "한화에어로스페이스(0.95%), 삼성SDI(0.91%), 현대모비스(0.71%), HD현대중공업(0.69%) 등도 강세다. 이번 주 국내 증시는 지난 금요일 발표된 미국 8월 비농업 고용 결과를 소화하면서 물가지표와 장기금리 흐름에...",
+          "source_url": "https://www.dt.co.kr/article/12082378?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "누리호 5차 발사 한달 앞으로…탑재 위성 15기 고흥 집결 완료",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-06T23:03:00Z",
+          "summary": "이번 발사에서는 처음으로 여러 기의 주탑재위성을 정밀하게 분리·투입하는 기술이 적용되고, 체계종합기업 한화에어로스페이스의 발사 운용 역할도 한층 확대된다. 위성 15기 나로우주센터 집결…9월 말 누리호 전체...",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000062990",
+          "relevance": "high"
+        },
+        {
+          "headline": "[ETF 리그테이블] [2026년 8월] 변동성 이겨낸 한화운용…태양광·그룹주...",
+          "publisher": "dealsite.co.kr",
+          "published_at": "2026-09-06T22:42:00Z",
+          "summary": "최대 편입 종목인 한화에어로스페이스가 20.17% 오르면서 수익률을 끌어올렸다. 한화에어로스페이스는 미 육군 자주포 현대화 사업에 참여해 K9 차륜형 자주포(K9MH) 시제품 공급 계약을 체결하며 미국 시장 진출...",
+          "source_url": "https://dealsite.co.kr/articles/168363",
+          "relevance": "high"
+        },
+        {
+          "headline": "누리호 5차 발사 한달 앞으로…위성 15기 우주로 간다",
+          "publisher": "slist.kr",
+          "published_at": "2026-09-06T21:42:00Z",
+          "summary": "사진=한국항공우주연구원 이번 발사에서는 처음으로 여러 기의 주탑재위성을 정밀하게 분리·투입하는 기술이 적용되고, 체계종합기업 한화에어로스페이스의 발사 운용 역할도 한층 확대된다. 7일 한국항공우주연구원...",
+          "source_url": "https://www.slist.kr/news/articleView.html?idxno=764060",
+          "relevance": "high"
+        },
+        {
+          "headline": "아산시, 삼성 113조 투자 맞춤 행정 총력",
+          "publisher": "jeonmae.co.kr",
+          "published_at": "2026-09-06T21:34:00Z",
+          "summary": "삼성전자와 삼성디스플레이를 비롯해 현대모비스, 코닝정밀소재, 한화에어로스페이스 등 국내외 주요 기업들이 생산시설을 운영하고 있다. 대기업의 신규 투자가 지역 협력기업과 부품·소재업체의 성장으로 연결될 수...",
+          "source_url": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1290627",
+          "relevance": "high"
+        },
+        {
+          "headline": "누리호 5차 발사 한 달 앞으로…위성 15기 우주로 간다",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-06T21:15:00Z",
+          "summary": "이번 발사에서는 처음으로 여러 기의 주탑재위성을 정밀하게 분리·투입하는 기술이 적용되고, 체계종합기업 한화에어로스페이스의 발사 운용 역할도 한층 확대된다. 위성 15기 나로우주센터 집결…9월 말 누리호 전체...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260904142600017?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "단 1주에 하한가…9월부터 막힌다",
+          "publisher": "magazine.hankyung.com",
+          "published_at": "2026-09-06T21:02:00Z",
+          "summary": "삼성전자, 기아, 한화에어로스페이스, 한화오션, 두산에너빌리티 등 6개 대형주가 프리마켓 시작과 함께 하한가로 체결된 일이다. 당시엔 한 기관이 여러 종목에 대해 실수로 하한가 주문을 낸 것으로 알려졌다. 국내...",
+          "source_url": "https://magazine.hankyung.com/money/article/202608141416c",
+          "relevance": "high"
+        },
+        {
+          "headline": "미국·스페인도 잡았다⋯한화에어로, K9 자주포 수출 비법은",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-06T21:01:00Z",
+          "summary": "한화에어로스페이스가 최근 미국과 스페인 수출을 잇달아 성사시키며 K9 자주포 운용국을 11개국으로 늘렸다. 완제품을 그대로 파는 방식에서 벗어나 각국의 지형·군 운용 개념·산업정책에 맞춰 제품을 개조하고 현지...",
+          "source_url": "http://www.inews24.com/view/2000703",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화 K9, 정찰 드론 직결해 사격 지령 60초 단축 정조준",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-06T17:56:00Z",
+          "summary": "한화에어로스페이스가 2026년 9월 3일(현지시각) 에스토니아에서 수직이착륙(VTOL) 무인기를 K9 자주포 사격통제장치에 직접 연결해 표적 타격 대응 주기를 획기적으로 줄이는 새 운용 체계를 공개했다. 아미...",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609061750431516fbbec65dfb_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화에어로 ‘히어로즈 캠프’… 순직군경-소방관 자녀 지원",
+          "publisher": "donga.com",
+          "published_at": "2026-09-06T15:31:00Z",
+          "summary": "한화에어로스페이스는 국가보훈부, 초록우산과 공동으로 경남 거제시와 창원시에서 전몰·순직 군인 경찰 소방관 유가족 자녀를 대상으로 진로 탐색을 돕는 교육 프로그램인 ‘히어로즈 아카데미 캠프’를 3, 4일 이틀에...",
+          "source_url": "https://www.donga.com/news/Economy/article/all/20260906/134614966/2",
+          "relevance": "high"
+        },
+        {
+          "headline": "“AI 데이터센터 발열 잡아라”… 정유사 ‘액체냉각’ 새 시장 경쟁",
+          "publisher": "donga.com",
+          "published_at": "2026-09-06T15:31:00Z",
+          "summary": "SK엔무브는 앞서 한화에어로스페이스와 함께 ESS용 액침냉각 제품을 개발해 선박용부터 양산 중이다. 최근에는 전기차까지 확대해 향후 2년간 개발 단계를 거쳐 상용화할 계획이다. 에쓰오일은 최근 인화점 250도...",
+          "source_url": "https://www.donga.com/news/Economy/article/all/20260906/134614964/2",
+          "relevance": "high"
+        },
+        {
+          "headline": "K9 자주포 만드는 한화에어로가 미국서 LNG 사업을?",
+          "publisher": "fntimes.com",
+          "published_at": "2026-09-06T15:02:00Z",
+          "summary": "한화에어로스페이스가 방위 산업 본고장인 미국에서 사업 영토를 넓히고 있다. 액화천연가스(LNG) 조달·트레이딩·물류를 전담하는 법인 ‘한화호라이즌USA’를 세웠고, 아칸소주에서는 탄약 생산시설 건립도 추진...",
+          "source_url": "https://www.fntimes.com/html/view.php?ud=20260904221032629dd55077bc2_18",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간ETF] 국제유가 반등에 원유 ETF 동반 강세…화장품·원자력 ETF는 두...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-06T14:00:00Z",
+          "summary": "한화에어로스페이스가 115만7,000원에서 105만5,000원으로 8.82% 내렸고, 현대로템(-8.84%), 한국항공우주(-4.96%), LIG디펜스앤에어로스페이스(-11.17%), 한화시스템(-9.23%)도 나란히 하락했다. 신재생에너지 테마의...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484304",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화에어로스페이스, '히어로즈 아카데미 캠프' 진행... 유가족 자녀 진...",
+          "publisher": "newslock.co.kr",
+          "published_at": "2026-09-06T13:32:00Z",
+          "summary": "한화에어로스페이스가 국가보훈부, 아동복지전문기관 초록우산과 지난 3~4일 경남 거제와 창원에서 '한화에어로스페이스 히어로즈 아카데미 캠프'를 진행했다고 6일 밝혔다. 이번 행사는 전몰∙순직한 군경∙소방관...",
+          "source_url": "http://www.newslock.co.kr/news/articleView.html?idxno=135600",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화에어로, '영웅의 자녀' 방산·항공우주 진로 체험 지원",
+          "publisher": "thelec.kr",
+          "published_at": "2026-09-06T13:24:00Z",
+          "summary": "한화에어로스페이스가 전몰·순직 군경과 소방관 유가족 자녀를 대상으로 방산·항공우주 분야 진로 체험 프로그램을 운영했다. 한화에어로스페이스는 국가보훈부, 초록우산과 지난 3~4일 경남 거제와 창원에서...",
+          "source_url": "https://www.thelec.kr/news/articleView.html?idxno=61873",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB증권, 9월 첫째주 삼성전자 등 7종목 매수 추천",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-06T13:18:00Z",
+          "summary": "한화에어로스페이스의 스페인 자주포 수주와 현대로템의 K2 관련 부품 발주 등으로 수주환경 개선 기대. 환율 하락은 수입부품 비중이 높은 사업구조상 수익성에 긍정적. 150억원 규모 자사주 매입·소각을...",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609060004",
+          "relevance": "high"
+        },
+        {
+          "headline": "경남 혁신기업 인재 구하기… 채용 이후까지 책임진다",
+          "publisher": "gnmaeil.com",
+          "published_at": "2026-09-06T12:34:00Z",
+          "summary": "대기업은 한화에어로스페이스, 한화엔진, 한화오션을 비롯해 두산에너빌리티, 한국항공우주산업(KAI), 효성중공업 창원공장, 현대로템, 케이조선, 볼보그룹코리아 등이 참여해 인재 모집에 나선다. 항공 분야는 KP항공산업...",
+          "source_url": "http://www.gnmaeil.com/news/articleView.html?idxno=594205",
+          "relevance": "high"
+        },
+        {
+          "headline": "푸틴과 오래 싸우면 못 버틴다?…유럽이 K9·천무 찾는 이유 [밀리터리...",
+          "publisher": "nownews.seoul.co.kr",
+          "published_at": "2026-09-06T12:02:00Z",
+          "summary": "한화에어로스페이스는 2022년 첫 K9 계약을 체결한 뒤 두 달도 지나지 않아 초기 물량 24문을 출고하며 빠른 공급 능력을 보여줬다. 천무 역시 완제품 수출에서 현지 생산 단계로 넘어가고 있다. 한화에어로스페이스와...",
+          "source_url": "https://nownews.seoul.co.kr/news/newsView.php?id=20260906601019&wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화에어로스페이스, '협력사 AI 역량 강화' 동반성장 세미나 개최",
+          "publisher": "nocutnews.co.kr",
+          "published_at": "2026-09-06T11:00:00Z",
+          "summary": "한화에어로스페이스가 협력사의 AI(인공지능) 활용 역량을 돕는 '동반성장 세미나'를 개최했다. 3일 경남 창원시 한화에어로스페이스 창원사업장에서 열린 '동반성장 CONNECT: ON' 세미나는 협력사 실무자 150여 명을...",
+          "source_url": "https://www.nocutnews.co.kr/news/6573730?utm_source=naver&utm_medium=article&utm_campaign=20260906075921",
+          "relevance": "high"
+        },
+        {
+          "headline": "패트리엇 모자라자 천궁-Ⅱ까지 눈독…트럼프가 韓 방공무기 찾는 이유...",
+          "publisher": "nownews.seoul.co.kr",
+          "published_at": "2026-09-06T10:01:00Z",
+          "summary": "중동 수출이 늘어나면서 LIG넥스원과 한화시스템, 한화에어로스페이스를 중심으로 천궁-Ⅱ 생산과 공급망도 확대되는 추세다. 이런 생산기반은 미국이 한국산 방공무기를 주목하게 만드는 배경 가운데 하나다. 미국이...",
+          "source_url": "https://nownews.seoul.co.kr/news/newsView.php?id=20260906601018&wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "ANH스트럭쳐, 코스닥 상장 '청신호'",
+          "publisher": "gnnews.co.kr",
+          "published_at": "2026-09-06T09:52:00Z",
+          "summary": "대한항공과 한국항공우주산업, 한화에어로스페이스 등 국내 우량 기업을 주 고객사로 다양한 프로젝트를 수행해 왔다. 복합재 기술력과 토탈 엔지니어링 역량을 바탕으로 지속적인 수주 확대를 이어가고 있으며...",
+          "source_url": "https://www.gnnews.co.kr/news/articleView.html?idxno=644846",
+          "relevance": "high"
+        },
+        {
+          "headline": "상장사 잇단 인적분할… 기초체력 따라 '밸류업 효과' 희비",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-06T09:30:00Z",
+          "summary": "주요 배당 수입원인 한화에어로스페이스·한화솔루션·한화생명이 존속회사에 남은 점을 들어 \"분할이 환원 재원을 훼손하지 않는다는 점이 중요하다\"고 평가했다. SK브로드밴드는 분할과 함께 총 3조800억원 규모의...",
+          "source_url": "https://www.fnnews.com/news/202609061828545072",
+          "relevance": "high"
+        },
+        {
+          "headline": "이사 수 줄이고 임기 조정…집중투표제 앞둔 대기업 ‘분주’",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-06T09:07:00Z",
+          "summary": "가령 한화그룹은 한화, 한화에어로스페이스(012450), 한화오션(042660)을 비롯한 주요 계열사들이 이사 임기를 기존 ‘2년 이내’에서 ‘3년 또는 3년 이내’로 확대했다. 한 번에 뽑는 이사 수를 줄이면 소수주주가 특정...",
+          "source_url": "https://www.sedaily.com/article/20087703?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "22번째 불꽃 쏘아 올린 한화… 26년 만에 재계 5위로 우뚝",
+          "publisher": "asiatoday.co.kr",
+          "published_at": "2026-09-06T09:02:00Z",
+          "summary": "이 가운데 삼성테크윈과 삼성탈레스의 사업은 현재 한화에어로스페이스와 한화시스템으로 이어졌다. 2023년에는 2조원 규모 유상증자로 대우조선해양 지분 49.3%를 확보하고 한화오션을 출범시켰다. 기존 육상...",
+          "source_url": "https://www.asiatoday.co.kr/kn/view.php?key=20260907010002205",
+          "relevance": "high"
+        },
+        {
+          "headline": "韓 150대 브랜드 가치 3570억달러… 전년比 4% 증가, 삼전닉스가 30%",
+          "publisher": "financialpost.co.kr",
+          "published_at": "2026-09-06T09:00:00Z",
+          "summary": "방산에서는 한화에어로스페이스가 118% 급등했고, 현대로템과 한국항공우주산업(KAI)도 큰 폭으로 올랐다. 반면, 현대차, LG는 뒷걸음질했다. 6일(현지 시각) 영국의 브랜드 평가 업체 브랜드 파이낸스가 발표한...",
+          "source_url": "https://www.financialpost.co.kr/news/articleView.html?idxno=274100",
+          "relevance": "high"
+        },
+        {
+          "headline": "이사 수 줄이고 임기 조정…집중투표제 앞두고 '분주'",
+          "publisher": "hankyung.com",
+          "published_at": "2026-09-06T08:40:00Z",
+          "summary": "예컨대 한화그룹은 ㈜한화, 한화에어로스페이스, 한화오션을 비롯한 주요 계열사가 이사 임기를 기존 ‘2년 이내’에서 ‘3년 또는 3년 이내’로 확대했다. 집중투표제는 여러 명의 이사를 한꺼번에 뽑을 때 주주가...",
+          "source_url": "https://www.hankyung.com/article/2026090668681",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화에어로스페이스, 협력사 AI 역량 강화…동반성장 세미나",
+          "publisher": "kukinews.com",
+          "published_at": "2026-09-06T08:36:00Z",
+          "summary": "쿠키뉴스=강종효 기자 | 한화에어로스페이스가 협력사 실무자들의 인공지능(AI) 활용 역량 강화를 위한 동반성장 세미나를 열었다. 한화에어로스페이스는 지난 3일 창원사업장에서 협력사 실무자 150여 명이 참여한...",
+          "source_url": "https://www.kukinews.com/article/view/kuk202609060036",
+          "relevance": "high"
+        },
+        {
+          "headline": "SK하이닉스 브랜드 가치 15.2% '껑충'…AI·HBM 효과에 국내 3위",
+          "publisher": "ccdailynews.com",
+          "published_at": "2026-09-06T08:32:00Z",
+          "summary": "한화에어로스페이스는 47위에서 23위, 현대로템은 94위에서 66위, 한화시스템은 106위에서 71위로 각각 순위를 끌어올렸다. 올해 국내 상위 10개 브랜드 가치는 1967억700만달러로 지난해보다 약 6% 증가했다. 상위...",
+          "source_url": "https://www.ccdailynews.com/news/articleView.html?idxno=2438767",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"삼전 브랜드 몸값만 135조 원\"… 국내 10대 기업 가치 2천억 달러",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-06T08:22:00Z",
+          "summary": "하나금융그룹, 메리츠금융그룹, 한화에어로스페이스, 현대로템, 한화시스템 등은 실적과 수출 성과에 힘입어 순위가 크게 올랐다. 브랜드 파이낸스는 한국의 브랜드 경쟁력이 첨단 제조와 혁신, 수출 경쟁력에...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604334",
+          "relevance": "high"
+        },
+        {
+          "headline": "하이마스 있어도 천무 18대 더 산다…크로아티아, 韓 무기 추가한 이유...",
+          "publisher": "nownews.seoul.co.kr",
+          "published_at": "2026-09-06T07:52:00Z",
+          "summary": "한화에어로스페이스가 발사대 18대와 탄약을 공급하고 폴란드 WB일렉트로닉스가 지휘통제체계 공급·통합을 맡는다. 전체 패키지는 계약 이후 24~36개월 안에 인도할 예정이다. 이미 크로아티아는 미국에서 M142 하이마스...",
+          "source_url": "https://nownews.seoul.co.kr/news/newsView.php?id=20260906601017&wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화에어로, 순직 군경 자녀 초청 캠프",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-06T07:32:00Z",
+          "summary": "K21 승차·진로 상담 등 진행 한화에어로스페이스가 국가보훈부, 아동복지전문기관 초록우산과 함께 지난 3~4일 경남 거제와 창원에서 '히어로즈 아카데미 캠프'를 열었다고 6일 밝혔다. 전몰·순직한 군인과 경찰...",
+          "source_url": "https://www.mk.co.kr/article/12145426",
+          "relevance": "high"
+        },
+        {
+          "headline": "이재명 국빈방문 앞두고⋯ 프랑스 대표 싱크탱크 “한화·로템·카이·L...",
+          "publisher": "viva100.com",
+          "published_at": "2026-09-06T07:14:00Z",
+          "summary": "이재명 대통령의 프랑스 국빈방문을 앞두고 현지 유력 정책연구기관에서 한화에어로스페이스·현대로템·한국항공우주산업(카이)·LIG 디펜스&에어로스페이스(LIG D&A) 등 이른바 ‘K-방산 4사’와 장기적 동맹을 구축해야...",
+          "source_url": "https://www.viva100.com/article/20260906500555",
+          "relevance": "high"
+        },
+        {
+          "headline": "[기고] 경상국립대학교 대풍을 기대한다",
+          "publisher": "idomin.com",
+          "published_at": "2026-09-06T07:12:00Z",
+          "summary": "사천·진주·창원을 잇는 대한민국 우주항공·방산의 핵심 거점으로서 한국항공우주산업(KAI), 한화에어로스페이스, 우주항공청(KASA) 등과 손잡고 신설·확대되는 우주항공방산대학과 AI컴퓨터공학부는 미래 첨단산업...",
+          "source_url": "https://www.idomin.com/news/articleView.html?idxno=2014186",
+          "relevance": "high"
+        },
+        {
+          "headline": "KF-21 '한국판 미티어' 수주전 마감…한화 vs 로템·LIG '입찰제재' 변수",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-06T07:02:00Z",
+          "summary": "한화에어로스페이스와 현대로템·LIG D&A 연합 간 경쟁 구도가 형성될 전망이다. 각 사의 기술력뿐 아니라 양측이 안고 있는 입찰제재 리스크가 수주 향방을 가를 주요 변수다. 6일 산업계에 따르면 국방과학연구소는...",
+          "source_url": "https://www.ajunews.com/view/20260906134950006",
+          "relevance": "high"
+        },
+        {
+          "headline": "[이슈]1400억 손실·4500억 계약 해지… 한화, KAI 장기투자 감당할까?(2...",
+          "publisher": "the-today.com",
+          "published_at": "2026-09-06T06:56:00Z",
+          "summary": "6일 관련 업계와 전자공시 자료를 종합하면 한화시스템과 한화에어로스페이스는 2019년부터 미국 UAM 기체 개발업체 오버에어에 투자했다. 한화는 오버에어의 전기수직이착륙기 개발과 UAM 상용화를 그룹의 미래...",
+          "source_url": "https://www.the-today.com/news/articleView.html?idxno=89563",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 20.77,
+      "oldest_relevant_at": "2026-09-06T06:56:00Z",
+      "collected_at": "2026-09-07T03:42:14.599881Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003198",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003198"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260513000860",
+          "published_at": "2026-05-13T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000860"
+        },
+        {
+          "report_name": "[첨부정정]사업보고서 (2025.12)",
+          "receipt_number": "20260319000633",
+          "published_at": "2026-03-19T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000633"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260316001112",
+          "published_at": "2026-03-16T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001112"
+        }
+      ],
+      "collected_at": "2026-09-07T03:42:15.558876Z",
+      "request_id": "48256ac7-e505-411d-b834-345ed4e04920",
+      "source_type": "dart",
+      "stock_code": "012450",
+      "company_name": "한화에어로스페이스"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260316001112",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "가. 시장위험 등 당사 및 당사의 연결 종속회사는 여러 활동으로 인하여 시장위험(환위험, 이자율위험등), 신용위험 및 유동성위험과 같은 다양한 재무위험에 노출되어 있습니다. 시장위험 등에 관한 내용은 'Ⅲ. 재무에 관한 사항' 중 '3. 연결재무제표 주석' 및 당사 '연결감사보고서 주석'의 '4. 재무위험관리'를 참고하시기 바랍니다. 나. 위험관리 정책 (1) 당사 및 당사의 연결 종속회사의 위험관리 체계를 구축하고 감독할 책임은 이사회에 있습니다. 이사회는 당사와 당사 연결 종속회사의 위험관리 정책을 개발하고 감독하고 있으며 중장기 경영계획 및 단기 경영전략에 대해 정기적으로 보고받고 승인하고 있습니다. 당사와 당사 연결 종속회사의 위험관리 정책은 당사가 직면한 위험을 식별 및 분석하고, 적절한 위험 한계치 및 통제를 설정하고, 위험이 한계치를 넘지 않도록 하기 위해 수립되었습니다. 위험관리 정책은 시장 상황과 당사의 활동의 변경을 반영하기 위해 정기적으로 검토되고 있습니다. 당사와 당사 연결 종속회사는 훈련 및 관리기준, 절차를 통해 모든 종업원들이 자신의 역할과 의무를 이해할 수 있는 엄격하고 구조적인 통제환경을 구축하는 것을 목표로 하고 있습니다.당사와 당사 연결 종속회사의 감사 및 감사위원회는 경영진이 당사와 당사 연결 종속회사의 위험관리 정책 및 절차를 준수하고 있는지를 어떻게 관리하는지 감독하고 당사와 당사 연결 종속회사가 직면한 위험과 관련하여 위험관리체계가 적절한지 검토합니다.(2) 당사와 당사 연결 종속회사는 시장위험 관리를 위해 파생상품계약을 체결하고 있으며 회사가 노출된 모든 시장위험을 헤지하는 것은 아닙니다. 자세한 사항은 본 보고서의 'Ⅱ. 사업의 내용' 중 '5. 위험관리 및 파생거래'의 '다. 파생상품 및 풋백옵션 거래현황'을 참고하시기 바랍니다.\n다. 파생상품 및 풋백옵션 거래현황",
+          "score": 0.48987,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "다. 지적재산권 관련 (1) 지적재산권 보유현황\n(단위 : 건)\n회사 | 구분 | 특허 | 디자인 | 실용신안 | 상표 | 프로그램 | 합계\n한화에어로스페이스㈜ | 출원중 | 372 | 19 | - | 46 | - | 437\n등록 | 1,177 | 39 | - | 27 | - | 1,243\n계 | 1,549 | 58 | - | 73 | - | 1,680\n한화시스템㈜ | 출원중 | 50 | - | - | 4 | - | 54\n등록 | 2,173 | 42 | - | 94 | - | 2,309\n계 | 2,223 | 42 | - | 98 | - | 2,363\n한화오션㈜ | 출원중 | 12,153 | 128 | 2,815 | 133 | - | 15,229\n등록 | 5,540 | 115 | 1,076 | 107 | 1,055 | 7,893\n계 | 17,693 | 243 | 3,891 | 240 | 1,055 | 23,122\n㈜쎄트렉아이 | 출원중 | 29 | - | - | 7 | - | 36\n등록 | 56 | - | - | 20 | - | 76\n계 | 85 | - | - | 27 | - | 112\n(2) 주요 지적재산권 현황(요약)\n회사 | 지적재산권종류 | 취득일 | 특허건수 | 근거법령 및법령상 보호받는 내용(독점적ㆍ배타적 사용기간) | 비고\n한화에어로스페이스㈜ | 특허 | 상세내역 참조 | 54 | 상세내역 참조 | 상세내역 참조\n한화시스템㈜ | 특허 | 상세내역 참조 | 30 | 상세내역 참조 | 상세내역 참조\n저작권 | 상세내역 참조 | 6 | 상세내역 참조 | 상세내역 참조\n상표권 | 상세내역 참조 | 18 | 상세내역 참조 | 상세내역 참조\n㈜쎄트렉아이 | 특허 | 상세내역 참조 | 38 | 상세내역 참조 | 상세내역 참조\n상표권 | 상세내역 참조 | 8 | 상세내역 참조 | 상세내역 참조\n※ 일부 종속회사는 보안관계상 해당 현황을 기재하지 않습니다.※ 세부 항목이 50행을 초과하여 상세내역은 XII. 상세표에 기재합니다.",
+          "score": 0.476057,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "라. 법률, 규정 등이 회사의 영업활동에 미치는 영향 당사 및 당사의 종속회사 중 방위사업을 영위하는 회사는 방위력 개선, 방위산업육성 및 군수품 조달 등 방위사업의 수행에 관한 사항을 정하는 \"방위사업법\", 국가를 당사자로 하는 계약에 관한 기본적인 사항을 정함으로써 계약업무를 원활하게 수행할 수 있도록 하기 위한 \"국가계약법\", 군사기밀을 보호하여 국가안전보장에 이바지하기 위한 \"군사기밀보호법\" 등에 대한 규제를 받습니다. 또한 IT서비스업을 영위하는 회사는 \"소프트웨어 산업진흥법\", \"정보통신망 이용촉진 및 정보보호 등에 관한 법률\" 등에 대한 규제를 받고 있습니다. 마. 환경관련 사항 [한화에어로스페이스㈜] (1) 제조공정의 환경영향 최소화한화에어로스페이스㈜는 제품 제조 활동에 따른 사업장 인근 환경에 미치는 영향을 최소화하기 위해 다양한 활동을 실시하고 있습니다.1) 환경오염물질 배출 기준 강화 : 당사 사업장은 대기 및 수질오염물질 배출에 대한 자체기준을 법적 기준보다 강화하여 설정하고 있으며, 지속적인 모니터링 관리와 시설투자를 통해 오염물질 배출량을 최소화할 수 있도록 노력하고 있습니다.2) 환경경영체계 구축 : 당사의 창원1사업장, 창원2사업장, 창원3사업장은 환경경영시스템 국제규격인 ISO14001을 구축, 인증, 운영하고 있으며, 이를 통해 환경측면에 대한 영향을 식별, 평가, 관리 및 개선함으로써 체계적으로 제조 공정에 따른 환경 영향을 관리하고 있습니다.3) 유해화학물질 사전검토 절차 운영 : 원부자재 및 생산시설 도입 전 화학물질 사전검토 절차를 통해 유해화학물질 함유 여부와 함유량을 확인하고 취급 가능 여부에 대해 판단하고 있으며, 대체할 물질이 있는 경우 유관부서 협조를 통해 비 유해화학물질 또는 유해ㆍ위험성이 상대적으로 낮은 화학물질을 취급할 수 있도록 권고하고 있습니다.4) 지역사회 환경 보전활동 : 지역사회 공헌 및 환경보전을 위해 각 사업장은 적극적으로 사내ㆍ외 환경보전프로그램을 운영 또는 참여하고 있습니다. 사업장 소재지에",
+          "score": 0.459507,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 1. 사업의 개요",
+          "text": "O 사업부문별 요약재무현황\n(단위 : 백만원, %)",
+          "score": 0.452316,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "니다. 당사는 이러한 초고해상도 위성을 자체 확보하여 직접 운영함으로써 위성영상 시장에서의 사업 경쟁력을 강화하고 있습니다. 더불어, 초소형 위성 등 New Space 시장에서의 기술 변화에 맞춰 경쟁력 있는 위성 포트폴리오를 갖추기 위한 연구개발을 지속하고 있습니다.\n나. 상표관리 및 고객관리 정책",
+          "score": 0.45007,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001112",
+      "collected_at": "2026-09-07T03:42:17.107172Z",
+      "request_id": "f6d2e994-a05c-4fb6-b4d3-bdb632a1985b",
+      "source_type": "dart",
+      "stock_code": "012450",
+      "company_name": "한화에어로스페이스"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "한화에어로스페이스",
+      "stock_code": "012450",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:42:13.629535+00:00",
+        "to": "2026-09-07T03:42:13.629535+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 412,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 303.75,
+        "ratio": 1.36,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 21,
+        "neutral_count": 25,
+        "negative_count": 54
+      },
+      "top_topics": {
+        "expectations": [
+          "추가 수주와 공시",
+          "해외 방산 수출 확대",
+          "미국 자주포 사업 기회",
+          "해외 방산·우주주 강세 파급"
+        ],
+        "concerns": [
+          "외국인 매도·공매도 압력",
+          "거래량 위축",
+          "수주 호재의 주가 반영 부진",
+          "추가 하락과 주요 가격대 이탈",
+          "수출 계약 보도 혼선"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "새로운 수주 공시가 가까워졌다는 기대가 있다.",
+          "posted_at": "2026-09-07T00:15:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "수주가 이어지며 사업 성장세가 지속될 것으로 기대한다.",
+          "posted_at": "2026-09-04T09:42:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "미국 궤도형 자주포 사업이 새로운 기회가 될 것으로 본다.",
+          "posted_at": "2026-09-04T01:41:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "천궁 수출 확대 가능성을 회사에 유리한 재료로 해석한다.",
+          "posted_at": "2026-09-04T20:14:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "미국 방산·우주주 강세가 주가에 이어지길 기대한다.",
+          "posted_at": "2026-09-03T22:56:00+00:00",
+          "sentiment": "positive"
+        }
+      ],
+      "collected_at": "2026-09-07T03:42:13.629535+00:00",
+      "fgi_mean": 44.5,
+      "fgi_latest": {
+        "fgi": 41.14,
+        "label": "공포",
+        "as_of": "2026-09-07T03:00:00+00:00",
+        "post_count": 1,
+        "valence_percentile": 22.61
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "풍문또는보도에대한해명(미확정)              ",
+          "receipt_number": "20260907800087",
+          "published_at": "2026-09-07T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800087"
+        },
+        {
+          "report_name": "단일판매ㆍ공급계약체결              ",
+          "receipt_number": "20260831800137",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "major",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800137"
+        },
+        {
+          "report_name": "[기재정정]기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260828800695",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800695"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260828800671",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800671"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260828001586",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828001586"
+        },
+        {
+          "report_name": "의결권대리행사권유참고서류",
+          "receipt_number": "20260820000394",
+          "published_at": "2026-08-20T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260820000394"
+        },
+        {
+          "report_name": "주주총회소집공고",
+          "receipt_number": "20260820000390",
+          "published_at": "2026-08-20T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260820000390"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260818000170",
+          "published_at": "2026-08-18T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818000170"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260818000165",
+          "published_at": "2026-08-18T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818000165"
+        },
+        {
+          "report_name": "풍문또는보도에대한해명(미확정)              ",
+          "receipt_number": "20260811800168",
+          "published_at": "2026-08-11T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260811800168"
+        }
+      ],
+      "collected_at": "2026-09-07T03:42:16.116045Z",
+      "request_id": "5be586d6-42fb-4e94-a4a3-799974e2e32a",
+      "source_type": "dart",
+      "stock_code": "012450",
+      "company_name": "한화에어로스페이스"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260831800137": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260831800137",
+        "document_type": "disclosure",
+        "content": "한화에어로스페이스/단일판매ㆍ공급계약체결/(2026.08.31)단일판매ㆍ공급계약체결\n1. 판매ㆍ공급계약 구분 | 상품공급\n- 체결계약명 | 스페인 K9 자주포 등 수출 실행계약 (Derivative Contract)\n2. 계약내역 | 계약금액(원) | -\n최근매출액(원) | 26,702,901,248,815\n매출액대비(%) | -\n대규모법인여부 | 해당\n3. 계약상대 | INDRA SISTEMAS S.A.\n- 회사와의 관계 | -\n4. 판매ㆍ공급지역 | 스페인\n5. 계약기간 | 시작일 | 2026-08-28\n종료일 | -\n6. 주요 계약조건 | 계약금ㆍ선급금 유무 | 유\n대금지급 조건 등 | (1차 선급금) 계약체결 후 20% 지급 (2차 선급금) 2026년 12월 31일 내 5% 지급\n7. 계약(수주)일자 | 2026-08-28\n8. 공시유보 관련내용 | 유보사유 | 경영상 비밀유지\n유보기한 | 2026-11-28\n9. 기타 투자판단과 관련한 중요사항\n- 상기 '2. 계약내역-계약금액(원)' 및 '5. 계약기간-종료일'은 비공개 사항으로 경영상의 비밀유지 사유 해소 이후 재공시할 예정입니다. - 상기 '2. 계약내역-최근매출액(원)'은 한화에어로스페이스의 2025년 연결기준 매출액입니다. - 상기 계약기간 및 금액 등은 진행과정에서 변경될 수 있습니다. - 본 공시는 2026년 3월 25일, 2026년 4월 24일, 2026년 7월 23일에 공시한 스페인 K9 자주포 수출 관련 '풍문 또는 보도에 대한 해명(미확정)'의 확정 공시입니다. - 당사는 본 공시로 2026년 7월 27일에 공시한 '투자판단 관련 주요경영사항'의 비밀유지 사유 해소에 대한 재공시를 갈음합니다.\n※ 관련공시 | 2026-03-25 풍문 또는 보도에 대한 해명(미확정) 2026-04-24 풍문 또는 보도에 대한 해명(미확정) 2026-07-23 풍문 또는 보도에 대한 해명(미확정) 2026-07-27 투자판단 관련 주요경영사항",
+        "content_truncated": false,
+        "total_chars": 965,
+        "summary": "단일판매ㆍ공급계약체결               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800137",
+        "collected_at": "2026-09-07T03:42:17.932071Z",
+        "report_name": "단일판매ㆍ공급계약체결              ",
+        "published_at": "2026-08-31T00:00:00Z",
+        "request_id": "65add52b-35ab-43fc-9acc-03f1da8eac2b",
+        "source_type": "dart"
+      }
+    },
+    "20260907800087": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260907800087",
+        "document_type": "disclosure",
+        "content": "한화에어로스페이스/풍문 또는 보도에 대한 해명(미확정)/(2026.09.07)풍문 또는 보도에 대한 해명(미확정)\n1. 풍문 또는 보도의 내용 | 한화 '천무' 크로아티아 수출\n2. 풍문 또는 보도의 매체 | 매일경제\n3. 풍문 또는 보도의 발생일자 | 2026-09-05\n4. 풍문 또는 보도의 내용에 대한 해명내용\n- 본 공시는 2026년 9월 5일 매일경제에 보도된 '한화 '천무' 크로아티아 수출' 관련 해명공시입니다. - 당사는 상기 크로아티아 천무 다연장로켓 공급과 관련하여 현재 고객과 협의 중에 있으며, 계약체결과 관련하여 아직 확정된 바는 없습니다. - 향후 구체적인 사항이 결정되는 시점 또는 1개월 이내에 재공시 하도록 하겠습니다. (공시책임자) 정 관 희\n5. 재공시예정일 | 2026-10-06\n※ 관련공시 | -",
+        "content_truncated": false,
+        "total_chars": 412,
+        "summary": "풍문또는보도에대한해명(미확정)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800087",
+        "collected_at": "2026-09-07T03:42:18.560748Z",
+        "report_name": "풍문또는보도에대한해명(미확정)              ",
+        "published_at": "2026-09-07T00:00:00Z",
+        "request_id": "f0e8ab73-2cde-4870-bf11-9ebf1653958b",
+        "source_type": "dart"
+      }
+    },
+    "20260811800168": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260811800168",
+        "document_type": "disclosure",
+        "content": "한화에어로스페이스/풍문 또는 보도에 대한 해명(미확정)/(2026.08.11)풍문 또는 보도에 대한 해명(미확정)\n1. 풍문 또는 보도의 내용 | [속보] 한화, 최대 1.7조원 들여 호주 오스탈 美사업부 인수 추진\n2. 풍문 또는 보도의 매체 | 매일경제\n3. 풍문 또는 보도의 발생일자 | 2026-08-11\n4. 풍문 또는 보도의 내용에 대한 해명내용\n- 본 공시는 2026년 8월 11일 매일경제에 보도된 '[속보] 한화, 최대 1.7조원 들여 호주 오스탈 美사업부 인수 추진' 관련 해명공시입니다. - 당사의 종속회사인 Hanwha Defense USA, Inc.는 미국 내 사업 기반을 확대하기 위한 다양한 방안을 모색하기 위해 오스탈 미국 사업부 인수를 검토하고 있으나, 현재까지 인수가격, 인수방식 및 시점 등 구체적인 사항은 확정된 바가 없습니다. - 본 건과 관련하여 추후 구체적인 사항이 확정되는 시점 또는 1개월 이내에 재공시 하도록 하겠습니다. (공시책임자) 정 관 희\n5. 재공시예정일 | 2026-09-10\n※ 관련공시 | -",
+        "content_truncated": false,
+        "total_chars": 533,
+        "summary": "풍문또는보도에대한해명(미확정)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260811800168",
+        "collected_at": "2026-09-07T03:42:19.215975Z",
+        "report_name": "풍문또는보도에대한해명(미확정)              ",
+        "published_at": "2026-08-11T00:00:00Z",
+        "request_id": "2a9cf416-9191-4a2c-9c76-440be254fec1",
+        "source_type": "dart"
+      }
+    },
+    "20260814003198": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    },
+    "20260513000860": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "EXTERNAL_API_ERROR",
+        "message": "외부 서비스 호출에 실패했습니다.",
+        "retryable": true
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260831800137",
+    "20260907800087",
+    "20260811800168",
+    "20260814003198",
+    "20260513000860"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:42:13.513699Z"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:42:13.513885Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:42:13.514128Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:42:13.514256Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:42:13.514356Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:42:13.514455Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:42:13.514565Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:42:13.698242Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:42:14.047638Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:42:14.630631Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:42:16.267220Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:42:16.813576Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-012450",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:42:17.176337Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

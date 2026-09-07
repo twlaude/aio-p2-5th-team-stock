@@ -5,10 +5,19 @@ from typing import Any
 from app.agents import StockAnalysisAgent
 from app.clients.base import MCPClientError
 from app.clients.disclosure import DisclosureMCPClient
-from app.providers.openai import NarrativeProvider
+from app.providers.openai import FunctionCall, NarrativeProvider, ProviderError
+from app.runtime.verifier import Violation, verify_narrative
 from app.schemas.analysis import Narrative, ToolFailure
 from app.services.analysis_builder.narrative import build_fallback_narrative
 from app.services.progress_reporter import ProgressReporter
+
+
+@dataclass
+class ReflectionEvent:
+    kind: str
+    detail: str
+    attempt: int
+    resolved: bool = False
 
 
 @dataclass
@@ -22,6 +31,8 @@ class AgentResult:
     completed_tools: list[str] = field(default_factory=list)
     failed_tools: list[str] = field(default_factory=list)
     failures: list[ToolFailure] = field(default_factory=list)
+    reflections: list[ReflectionEvent] = field(default_factory=list)
+    reflection_calls: int = 0
 
 
 class StockAgentRuntime:
@@ -30,11 +41,16 @@ class StockAgentRuntime:
         provider: NarrativeProvider,
         disclosure: DisclosureMCPClient,
         max_steps: int,
+        *,
+        reflection_enabled: bool = False,
+        max_reflections: int = 2,
     ) -> None:
         self.provider = provider
         self.disclosure = disclosure
         self.max_steps = max_steps
         self.profile = StockAnalysisAgent()
+        self.reflection_enabled = reflection_enabled
+        self.max_reflections = max(0, max_reflections)
 
     @staticmethod
     def _tools(receipt_numbers: list[str]) -> list[dict[str, Any]]:
@@ -62,6 +78,172 @@ class StockAgentRuntime:
         ]
 
     async def run(
+        self,
+        context: dict[str, Any],
+        receipt_numbers: list[str],
+        reporter: ProgressReporter,
+    ) -> AgentResult:
+        if self.reflection_enabled:
+            return await self._run_reflecting(context, receipt_numbers, reporter)
+        return await self._run_legacy(context, receipt_numbers, reporter)
+
+    def _call_error(
+        self, call: FunctionCall, allowed: set[str], used: set[str], tools_enabled: bool,
+    ) -> tuple[str | None, Violation | None]:
+        if call.name not in self.profile.allowed_tools or not tools_enabled:
+            return None, Violation("tool_selection_error", "현재 허용되지 않은 Tool입니다.")
+        try:
+            arguments = json.loads(call.arguments)
+        except (json.JSONDecodeError, TypeError):
+            return None, Violation("parameter_error", "arguments는 유효한 JSON Object여야 합니다.")
+        if not isinstance(arguments, dict) or not isinstance(arguments.get("receipt_number"), str):
+            return None, Violation("parameter_error", "receipt_number 문자열이 필요합니다.")
+        if set(arguments) != {"receipt_number"}:
+            return None, Violation("parameter_error", "receipt_number 외의 인자는 허용하지 않습니다.")
+        receipt = arguments["receipt_number"]
+        if receipt not in allowed or receipt in used or len(used) >= 2:
+            return None, Violation("tool_selection_error", "목록 밖·중복 접수번호 또는 상세 2건 상한 위반입니다.")
+        return receipt, None
+
+    async def _run_reflecting(
+        self, context: dict[str, Any], receipt_numbers: list[str], reporter: ProgressReporter,
+    ) -> AgentResult:
+        ordered = list(dict.fromkeys(receipt_numbers))[:5]
+        tools = self._tools(ordered)
+        active_tools = tools
+        result = AgentResult(build_fallback_narrative(context), "model_error")
+        verification_context = {
+            **context, "failed_tools": list(context.get("failed_tools") or []),
+            "data": {**context["data"], "disclosure_details": []},
+        }
+        used: set[str] = set()
+        pending: list[ReflectionEvent] = []
+        schema_retried = narrative_retried = feedback_pending = False
+        tools_closed = False
+        response_id = None
+        outputs: list[dict[str, Any]] = []
+
+        def stop(reason: str, message: str) -> AgentResult:
+            result.termination_reason = reason
+            result.failures.append(ToolFailure(
+                service="openai", status=reason, message=message, retryable=reason == "model_error",
+            ))
+            return result
+
+        await reporter.publish("llm_started", "analyzing", "running", "수집한 자료를 종합하고 있어요.", 70)
+        # Preserve the existing bound: one initial call, then at most max_steps continuations.
+        for step in range(self.max_steps + 1):
+            result.llm_calls += 1
+            result.reflection_calls += int(feedback_pending)
+            errors: list[Violation] = []
+            turn = None
+            try:
+                turn = (
+                    await self.provider.first_turn(context, active_tools) if response_id is None
+                    else await self.provider.next_turn(response_id, outputs, active_tools)
+                )
+            except ProviderError as error:
+                if not error.response_id:
+                    return stop("model_error", "Luna 분석을 완료하지 못해 기본 설명을 제공합니다.")
+                response_id = error.response_id
+                result.input_tokens += error.input_tokens
+                result.output_tokens += error.output_tokens
+                errors = [Violation("schema_mismatch", str(error))]
+            except Exception:
+                return stop("model_error", "Luna 분석을 완료하지 못해 기본 설명을 제공합니다.")
+            else:
+                response_id = turn.response_id
+                result.input_tokens += turn.input_tokens
+                result.output_tokens += turn.output_tokens
+                if not turn.calls:
+                    if turn.narrative is None:
+                        return stop("model_error", "Luna가 분석 문장을 반환하지 않았습니다.")
+                    errors = verify_narrative(turn.narrative, verification_context)
+                else:
+                    outputs = []
+                    for call in turn.calls:
+                        receipt, error = self._call_error(call, set(ordered), used, bool(active_tools))
+                        if error:
+                            errors.append(error)
+                            detail = {
+                                "status": "invalid_tool_call",
+                                "error": {"kind": error.kind, "message": error.detail},
+                                "allowed_receipt_numbers": ordered,
+                            }
+                        else:
+                            if step == self.max_steps:
+                                continue  # Inspect the rest of the batch before recording/terminating.
+                            used.add(receipt)
+                            await reporter.publish(
+                                "tool_started", "analyzing", "running",
+                                "중요한 공시의 상세 근거를 확인하고 있어요.", 80,
+                                tool_name=call.name, service="disclosure_mcp",
+                            )
+                            try:
+                                detail = await self.disclosure.get_disclosure_detail(receipt)
+                            except MCPClientError as error:
+                                detail = {"status": error.code, "error": {
+                                    "message": error.message, "retryable": error.retryable,
+                                }}
+                                result.failed_tools.append(call.name)
+                                verification_context["failed_tools"].append(call.name)
+                                result.failures.append(ToolFailure(
+                                    service=error.service, status=error.code,
+                                    message=error.message, retryable=error.retryable,
+                                ))
+                            else:
+                                result.completed_tools.append(call.name)
+                                verification_context["data"]["disclosure_details"].append(detail)
+                            result.tool_calls += 1
+                        outputs.append({
+                            "type": "function_call_output", "call_id": call.call_id,
+                            "output": json.dumps(detail, ensure_ascii=False),
+                        })
+
+            kinds = {error.kind for error in errors}
+            for event in pending:
+                can_verify = turn is not None and (
+                    not turn.calls or event.kind in {"tool_selection_error", "parameter_error"}
+                )
+                event.resolved = can_verify and event.kind not in kinds
+            pending = [event for event in pending if not event.resolved]
+            feedback_pending = bool(errors)
+            if errors:
+                detected = [ReflectionEvent(error.kind, error.detail, result.reflection_calls + 1) for error in errors]
+                result.reflections.extend(detected)
+                pending.extend(detected)
+                schema_error = "schema_mismatch" in kinds
+                prose_error = bool(kinds & {"hallucination", "inconsistency"})
+                if (
+                    result.reflection_calls >= self.max_reflections or step == self.max_steps
+                    or (schema_error and schema_retried) or (prose_error and narrative_retried)
+                ):
+                    return stop("reflection_exhausted", "성찰 상한 또는 재검증 실패로 기본 설명을 제공합니다.")
+                if schema_error or prose_error:
+                    tools_closed = True
+                    schema_retried |= schema_error
+                    narrative_retried |= prose_error
+                    outputs = [{"role": "user", "content": (
+                        "형식 오류 피드백: " if schema_error else "서술 검증 피드백: "
+                    ) + " / ".join(error.detail for error in errors)
+                        + " 제공된 자료만 사용해 위반을 수정하고 전체 JSON을 다시 반환하세요. Tool은 사용하지 마세요."}]
+                    active_tools = []
+                else:
+                    active_tools = tools if len(used) < 2 and not tools_closed else []
+            elif turn is not None and not turn.calls:
+                result.narrative = turn.narrative
+                result.termination_reason = "completed"
+                await reporter.publish(
+                    "llm_completed", "analyzing", "running", "자료 종합을 마쳤어요.", 90, service="openai",
+                )
+                return result
+            else:
+                if step == self.max_steps:
+                    return stop("max_steps_exceeded", "Agent 최대 반복 횟수를 초과했습니다.")
+                active_tools = tools if len(used) < 2 and not tools_closed else []
+        return stop("max_steps_exceeded", "Agent 최대 반복 횟수를 초과했습니다.")
+
+    async def _run_legacy(
         self,
         context: dict[str, Any],
         receipt_numbers: list[str],
