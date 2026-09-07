@@ -1,6 +1,6 @@
 """OpenDART 공시와 사업보고서 검색에 사용하는 스키마.
 
-공개 Tool의 필드명은 shared/contracts/disclosure/README.md를 기준으로 한다.
+공개 Tool의 필드명은 docs/specs/contracts/disclosure.md를 기준으로 한다.
 """
 
 from typing import Literal, NotRequired, TypedDict

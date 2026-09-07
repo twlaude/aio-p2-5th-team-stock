@@ -35,7 +35,7 @@ Frontend → Backend → MCP Client → 네 MCP의 분석 경로와, MCP Client 
 
 ## 4. 전체 시스템 구조와 상태 흐름
 
-Frontend(8501) → Backend(기본 8000) → MCP Client(8010) → Price/News/Disclosure/Community MCP(8020~8023)입니다. 운영 포트와 체크아웃은 [실행 폴더 문서](../operations/RUNTIME_FOLDERS.md)를 따릅니다.
+Frontend(8501) → Backend(기본 8000) → MCP Client(8010) → Price/News/Disclosure/Community MCP(8020~8023)입니다. 운영 포트와 체크아웃은 실행 폴더 문서를 따릅니다.
 
 <a href="diagrams/agent-state-flow.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="diagrams/agent-state-flow-dark.svg"><img src="diagrams/agent-state-flow.svg" alt="분석 Workflow와 Agent 성찰 상태 흐름" width="100%"></picture></a>
 
@@ -246,7 +246,7 @@ off의 `llm_calls`는 성공적으로 회수한 turn 중심이며 초기 실패 
 
 컨텍스트는 뉴스 5건, 정기공시 5건, 주요 공시 5건, 보고서 구절 5개로 제한합니다. 상세 조회 후보 번호는 매칭 공시 → 주요 공시 → 정기공시 순서로 중복 제거 후 5개, 실제 상세 호출은 on에서 최대 2건입니다. 커뮤니티는 집계·주제·대표 근거 등의 허용 필드만 전달합니다. 뉴스는 회사명 포함 제목·높은 관련도·최신순을 반영합니다. 토큰 예산에 맞춰 과거 대화를 자동 요약하는 별도 기능은 없습니다.
 
-Backend의 [Memory 가이드](../../backend/MEMORY_GUIDE.md)는 방향을 설명하는 문서이며, 실제 저장·전달 범위는 아래 코드 기준입니다. 과거 대화 조회·요약·프롬프트 재주입은 현재 분석 경로에 없습니다.
+Backend의 Memory 구현(`backend/app/services/memory/`)은 실제 저장·전달 범위는 아래 코드 기준입니다. 과거 대화 조회·요약·프롬프트 재주입은 현재 분석 경로에 없습니다.
 
 | 저장 위치 | 실제 내용·수명 | 근거 |
 | --- | --- | --- |
@@ -298,7 +298,7 @@ Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backen
 | `normal-07`, 성향 없음 | 모델 설명·개인화 null | completed·검증 통과 | PASS |
 | `empty_disclosures-01` | 목록 없으면 상세 미호출 | completed·상세 호출 0 | PASS |
 | `normal-09` | 검증 통과 모델 설명 | 목표주가 표현 교정 후 재검증 실패·reflection_exhausted | FAIL: 모델 채택 기준 |
-| `detail_failure-01` | 상세 실패 후 후속 응답 확인 | 자연 선택은 상세 호출 0·completed; 첫 호출 강제 보조 실측은 off 후속 HTTP 400 폴백 / on 실패 안내 서술 채택 | on PASS([v3 보조 실측](../archive/eval-results/agent_eval/context-v3/summary.md)) |
+| `detail_failure-01` | 상세 실패 후 후속 응답 확인 | 자연 선택은 상세 호출 0·completed; 첫 호출 강제 보조 실측은 off 후속 HTTP 400 폴백 / on 실패 안내 서술 채택 | on PASS([v3 보조 실측](../reports/agent-eval-results/context-v3/summary.md)) |
 | `price_failure-01` | 현재가 없으면 중단 | RequiredPriceError·LLM 0 | PASS: 중단 기준 |
 
 단위 테스트는 fake provider로 선택 오류·인자·Schema·서술 오류와 복구 상한을 검사합니다. 실측에서 발생하지 않은 오류 유형은 단위 테스트 증거로만 설명합니다. 지표의 검증 통과율이 모든 금융 사실의 정확성을 보증하지는 않습니다.
@@ -314,4 +314,4 @@ Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backen
 | off의 후속 요청 HTTP 400 | 기존 기준선 보존, on 이력 재전송 결과와 구분 |
 | 운영 배포와 시험 브랜치가 다름 | 배포 뒤 동일 조건 표본을 별도로 검증 |
 
-본 문서는 [최종 구조](FINAL_ARCHITECTURE.md), [연결 계약](../../shared/CONNECTION_CONTRACT.md), [분석 계약](../../shared/contracts/analysis/README.md)과 함께 읽습니다. 모델·성찰 실측의 수치와 한계는 [시험 보고서](../reports/agent-test-report.md)가 근거입니다.
+본 문서는 [최종 구조](FINAL_ARCHITECTURE.md), [연결 계약](../specs/CONNECTION_CONTRACT.md), [분석 계약](../specs/contracts/analysis.md)과 함께 읽습니다. 모델·성찰 실측의 수치와 한계는 [시험 보고서](../reports/agent-test-report.md)가 근거입니다.

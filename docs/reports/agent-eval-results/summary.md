@@ -225,4 +225,4 @@ v2 off: 금지어 검출 2건, 소스 실패 제한 누락 12건입니다. 두 �
 
 원본: [off.jsonl](off.jsonl), [on.jsonl](on.jsonl). 각 행에 전체 서술, 정규화된 모델 응답·요청 도구·피드백·오류, 검증 결과, 입력 컨텍스트, 기본 조회 실패, 실행 이벤트 및 픽스처 해시를 보존합니다. 인증 헤더·키·내부 추론·암호화 reasoning 데이터는 저장하지 않습니다.
 
-중단된 초안 규칙의 완료 관측 8행은 [interrupted_on.jsonl](interrupted_on.jsonl)에 보존하며 모든 지표에서 제외합니다. 중단 사유와 미완결 실행은 [하네스 안내](../../../../tests/scenarios/agent_eval/README.md#검증기-v2-재측정)에 기록했습니다.
+중단된 초안 규칙의 완료 관측 8행은 [interrupted_on.jsonl](interrupted_on.jsonl)에 보존하며 모든 지표에서 제외합니다. 중단 사유와 미완결 실행은 [하네스 안내](../../../tests/scenarios/agent_eval/README.md#검증기-v2-재측정)에 기록했습니다.

@@ -1,6 +1,6 @@
 # Agent 시험 하네스
 
-> 지난 실측 결과(v2·round1·context-v3 jsonl·summary)는 `docs/archive/eval-results/agent_eval/`에 보관합니다. 아래 명령을 다시 돌리면 결과는 이 폴더의 `results/`(git 미추적)에 새로 생깁니다.
+> 지난 실측 결과(v2·round1·context-v3 jsonl·summary)는 `docs/reports/agent-eval-results/`에 보관합니다. 아래 명령을 다시 돌리면 결과는 이 폴더의 `results/`(git 미추적)에 새로 생깁니다.
 
 실제 MCP 자료를 고정하고 동일한 30개 입력으로 자기 성찰 off/on을 비교합니다. 코드·프롬프트를 변경하지 않고 `AnalysisWorkflow`와 `StockAgentRuntime`의 실제 경로를 실행합니다. 모델은 `gpt-5.6-luna`입니다.
 
@@ -28,7 +28,7 @@ $PY tests/scenarios/agent_eval/report.py --out tests/scenarios/agent_eval/result
 
 Agent 원본 서술과 Workflow 종료 상태를 분리합니다. off의 런타임은 실패한 호출을 세지 않는 경로가 있어 `llm_calls`는 Provider 진입 수, `runtime_llm_calls`는 기존 카운터, `http_attempts`는 SDK 재시도를 포함한 HTTP 요청 수로 저장합니다. 성찰 재실행은 이벤트 개수가 아닌 `reflection_calls`를 사용합니다. 외부 검증은 기본/상세 실패와 성공 상세 자료를 동일하게 합칩니다.
 
-원본 JSONL에는 전체 모델 서술, 정규화된 Tool 요청과 응답 피드백, API 오류, 컨텍스트, 검증 결과, 실행 이벤트를 남깁니다. 내부 추론과 암호화 reasoning payload는 기록하지 않습니다. 수치는 [실측 요약](../../../docs/archive/eval-results/agent_eval/summary.md)에서 확인할 수 있습니다.
+원본 JSONL에는 전체 모델 서술, 정규화된 Tool 요청과 응답 피드백, API 오류, 컨텍스트, 검증 결과, 실행 이벤트를 남깁니다. 내부 추론과 암호화 reasoning payload는 기록하지 않습니다. 수치는 [실측 요약](../../../docs/reports/agent-eval-results/summary.md)에서 확인할 수 있습니다.
 
 ## 검증기 v2 재측정
 
@@ -72,4 +72,4 @@ $PY tests/scenarios/agent_eval/run_eval.py --mode on --detail-failure-probe --ou
 `excluded_from_metrics=true`로 기존 지표에서 제외합니다. 기존 `results/off.jsonl`, `on.jsonl`, `summary.md`는 v2 관측으로 유지합니다.
 `failure_reached`는 Collector 호출, `failure_feedback_delivered`는 Provider 후속 진입을 뜻하며 HTTP 성공을 보장하지 않습니다.
 `recovery_completed`는 두 조건과 Agent `completed`, 최종 verifier 통과를 모두 요구합니다. 실패 뒤 폴백이 있어도 복구 완료로 세지 않습니다.
-관측 결과와 남은 한계는 [v3 보조 검증 기록](../../../docs/archive/eval-results/agent_eval/context-v3/summary.md)에 기록합니다.
+관측 결과와 남은 한계는 [v3 보조 검증 기록](../../../docs/reports/agent-eval-results/context-v3/summary.md)에 기록합니다.

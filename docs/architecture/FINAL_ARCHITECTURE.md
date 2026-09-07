@@ -76,7 +76,6 @@ Community MCP를 기준 구현으로 사용한다.
 ├─ .env.example
 ├─ requirements.txt
 ├─ Dockerfile             # 실행 코드 완성 후 추가
-└─ GUIDE.md
 ```
 
 `server.py`에는 데이터 처리 로직을 넣지 않는다.
@@ -143,4 +142,4 @@ MVP에서는 MCP마다 별도 PostgreSQL 인스턴스를 만들지 않는다. �
 
 ## 9. 변경 규칙
 
-입출력 필드나 Tool 이름을 바꿀 때는 `shared/contracts/`를 먼저 수정한다. 서비스 구현과 문서는 계약 변경 후 함께 갱신한다.
+입출력 필드나 Tool 이름을 바꿀 때는 `docs/specs/contracts/`를 먼저 수정한다. 서비스 구현과 문서는 계약 변경 후 함께 갱신한다.

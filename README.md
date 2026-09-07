@@ -6,7 +6,7 @@
 
 `살래? 말래?`는 종목 추천, 목표주가, 수익률 예측을 제공하지 않습니다. 관심 온도는 시장의 관심 정도를 나타낼 뿐 상승 가능성이나 매수 점수가 아닙니다.
 
-아래 실행 절은 로컬 개발 기준입니다. VPS 운영 체크아웃·systemd·실제 포트는 [실행 폴더와 운영 상태](docs/operations/RUNTIME_FOLDERS.md)를, 환경변수는 [로컬 실행 체크리스트](docs/operations/LOCAL_RUN_ENV_CHECKLIST.md)를 따릅니다.
+아래 실행 절은 로컬 개발 기준입니다.
 
 데모 로그인은 `demo001`부터 `demo010`까지이며 공통 비밀번호는 `Demo1234!`입니다.
 
@@ -186,7 +186,7 @@ curl -X POST http://localhost:8000/api/v1/analyses \
   -d '{"query":"삼성전자"}'
 ```
 
-MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`과 `GUIDE.md`를 확인한 뒤 `python server.py`를 실행합니다. 포트는 Price 8020, News 8021, Disclosure 8022, Community 8023으로 고정합니다.
+MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`을 확인한 뒤 `python server.py`를 실행합니다. 포트는 Price 8020, News 8021, Disclosure 8022, Community 8023으로 고정합니다.
 
 ---
 
@@ -215,12 +215,12 @@ MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`과 
 | [에이전트 시험 결과 보고서](docs/reports/agent-test-report.md) | 실제 off/on 비교, 검증기 v1→v2 개선 이력, VPS 7일 부분실패 집계 |
 | [Backend 서술 채택 시험](docs/reports/agent-test-result-report_narrative-source.md) | 윤기화 담당 narrative_source 성공·실패 분기 검증 |
 | [Agent 상태 흐름도](docs/architecture/diagrams/agent-state-flow.mmd) | Workflow 기본 수집과 Agent 선택 조회·성찰·종료 |
-| [서비스 연결 계약](shared/CONNECTION_CONTRACT.md) | 포트, 시간 제한, 데이터 경계와 공통 표기 규칙 |
-| [세부 계약](shared/contracts/README.md) | Frontend·Backend·분석·MCP Tool·성향·오류 계약 색인 |
+| [서비스 연결 계약](docs/specs/CONNECTION_CONTRACT.md) | 포트, 시간 제한, 데이터 경계와 공통 표기 규칙 |
+| [세부 계약](docs/specs/contracts/README.md) | Frontend·Backend·분석·MCP Tool·성향·오류 계약 색인 |
 | [로컬 실행 체크리스트](docs/operations/LOCAL_RUN_ENV_CHECKLIST.md) | MCP 연결과 서비스별 환경변수·점검 명령 |
 | [Frontend 흐름](docs/specs/FRONTEND_FLOW.md) | 검색·로그인·근거·개인화 화면의 기준 흐름 |
 
-초기 아이디어와 폐기된 구조는 `docs/archive/`에 보관합니다. 현재 구현과 연결 기준은 위 최종 문서와 실제 코드를 우선합니다.
+현재 구현과 연결 기준은 위 최종 문서와 실제 코드를 우선합니다.
 
 ---
 

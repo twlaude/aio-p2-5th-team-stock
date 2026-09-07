@@ -143,7 +143,7 @@ export interface GuestAnalysisResponse {
   one_line_summary: string;
   detail: null;
   personalized_checkpoints: null;
-  /** 계약(shared/contracts/frontend_backend) 밖 — 비회원 결과 주변 앰비언트 키워드용 mock 전용 표시 필드. 라이브 백엔드엔 없음(undefined). */
+  /** 계약(docs/specs/contracts/frontend_backend.md) 밖 — 비회원 결과 주변 앰비언트 키워드용 mock 전용 표시 필드. 라이브 백엔드엔 없음(undefined). */
   topics_preview?: TopicPreview[];
 }
 
