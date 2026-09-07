@@ -245,13 +245,20 @@ export interface GapCheck {
   signals: GapSignal[];
 }
 
+/** news_attention(0~25)은 관련 기사 100건이 쌓이는 시간의 로그 스케일 — 6시간=25점, 7일=0점. 0.7 ≈ 16시간, 0.4 ≈ 44시간 */
+const NEWS_ATTENTION_WEIGHT = 25;
+const NEWS_PACE_FAST = 0.7;
+const NEWS_PACE_BRISK = 0.4;
+
 export function deriveGapCheck(input: {
   temperatureScore: number;
   evidenceLevel: EvidenceLevel;
   sources: AnalysisSource[];
   changeRate: number;
+  /** market_temperature.components.news_attention. 없으면(구버전 응답) 뉴스 속도 신호를 만들지 않는다 */
+  newsAttention?: number | null;
 }): GapCheck {
-  const { temperatureScore: heat, evidenceLevel, sources, changeRate } = input;
+  const { temperatureScore: heat, evidenceLevel, sources, changeRate, newsAttention = null } = input;
   const confirmSegments = evidenceLevelText(evidenceLevel).segments;
   const news = sources.filter((s) => s.source_type === "news");
   const disclosures = sources.filter((s) => s.source_type === "disclosure");
@@ -262,7 +269,11 @@ export function deriveGapCheck(input: {
   const positiveRatio = community && community.samples > 0 ? community.positive / community.samples : null;
 
   const signals: GapSignal[] = [];
-  if (news.length >= 4) signals.push({ text: reprintRatio >= 1.8 ? `비슷한 기사가 반복돼요 (${news.length}건이 ${reprint}번 재게재)` : `뉴스 ${news.length}건이 짧은 기간에 몰렸어요`, tone: reprintRatio >= 1.8 ? "warn" : "info" });
+  // 응답에 실리는 뉴스 출처는 최대 5건이라 건수는 "몰림"의 근거가 못 된다. 평소 대비 속도는 news_attention으로 본다.
+  const newsPace = typeof newsAttention === "number" && Number.isFinite(newsAttention) ? Math.max(0, Math.min(1, newsAttention / NEWS_ATTENTION_WEIGHT)) : null;
+  if (news.length >= 4 && reprintRatio >= 1.8) signals.push({ text: `비슷한 기사가 반복돼요 (${news.length}건이 ${reprint}번 재게재)`, tone: "warn" });
+  else if (newsPace !== null && newsPace >= NEWS_PACE_FAST) signals.push({ text: "관련 뉴스가 평소보다 훨씬 빠르게 쌓이고 있어요", tone: heat >= 60 ? "warn" : "info" });
+  else if (newsPace !== null && newsPace >= NEWS_PACE_BRISK) signals.push({ text: "관련 뉴스가 평소보다 빠르게 쌓이고 있어요", tone: "info" });
   if (disclosures.length === 0) signals.push({ text: "이 기간 공시로 확인된 내용이 없어요", tone: "warn" });
   else if (checks.unconfirmed.length > checks.confirmed.length) signals.push({ text: `공시로 확인된 것(${checks.confirmed.length})보다 아직 아닌 것(${checks.unconfirmed.length})이 많아요`, tone: "warn" });
   else if (checks.confirmed.length > 0) signals.push({ text: `공시·보고서로 확인된 항목 ${checks.confirmed.length}개`, tone: "ok" });

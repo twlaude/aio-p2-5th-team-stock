@@ -107,6 +107,8 @@ export interface AnalysisDetail {
     label: string;
     data_coverage: DataCoverage[];
     weight_covered: number;
+    /** 항목별 점수. volume_activity 30 · news_attention 25 · community_activity 25 · fear_greed_intensity 20 (없는 항목은 미수집) */
+    components?: Partial<Record<"volume_activity" | "news_attention" | "community_activity" | "fear_greed_intensity", number>>;
   };
   evidence_level: {
     level: EvidenceLevel;

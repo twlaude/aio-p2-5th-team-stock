@@ -285,6 +285,8 @@ function buildTemplateDetail(company: Company, template: TemplateAnalysis, parti
       label: partial ? "일부 확인" : template.temperature_label,
       data_coverage: coverage,
       weight_covered: partial ? 55 : 100,
+      // 뉴스 속도는 온도에 비례하는 예시값 (뜨거운 종목일수록 기사가 빨리 쌓인다)
+      components: { news_attention: Math.round((template.temperature_score / 100) * 25) },
     },
     evidence_level: {
       level: partial ? "medium" : template.evidence_level,

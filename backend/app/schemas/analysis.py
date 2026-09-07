@@ -27,6 +27,9 @@ class MarketTemperature(BaseModel):
     label: str
     data_coverage: list[str]
     weight_covered: int = Field(default=100, ge=0, le=100)
+    # MCP Client가 계산한 항목별 점수(volume_activity 30 · news_attention 25 · community_activity 25 · fear_greed_intensity 20).
+    # 프론트가 "뉴스가 평소보다 빠르게 쌓이는지" 같은 신호를 건수가 아니라 이 값으로 만든다.
+    components: dict[str, int] = Field(default_factory=dict)
 
 
 class MatchedDisclosure(BaseModel):
