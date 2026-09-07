@@ -3,6 +3,7 @@ import json
 from typing import Any
 
 from app.agents import StockAnalysisAgent
+from app.agents.policy import RISK_READ, action_risk
 from app.clients.base import MCPClientError
 from app.clients.disclosure import DisclosureMCPClient
 from app.providers.openai import FunctionCall, NarrativeProvider, ProviderError
@@ -90,7 +91,10 @@ class StockAgentRuntime:
     def _call_error(
         self, call: FunctionCall, allowed: set[str], used: set[str], tools_enabled: bool,
     ) -> tuple[str | None, Violation | None]:
-        if call.name not in self.profile.allowed_tools or not tools_enabled:
+        risk = action_risk(call.name, self.profile.allowed_tools)
+        if risk != RISK_READ:
+            return None, Violation("tool_selection_error", f"위험도 {risk}: 자동 실행하지 않습니다")
+        if not tools_enabled:
             return None, Violation("tool_selection_error", "현재 허용되지 않은 Tool입니다.")
         try:
             arguments = json.loads(call.arguments)
@@ -162,8 +166,16 @@ class StockAgentRuntime:
                 else:
                     outputs = []
                     for call in turn.calls:
+                        await reporter.publish(
+                            "model_selected_tool", "analyzing", "running", "모델이 Tool을 요청했어요.", 80,
+                            tool_name=call.name, owner="ai_agent",
+                        )
                         receipt, error = self._call_error(call, set(ordered), used, bool(active_tools))
                         if error:
+                            await reporter.publish(
+                                "policy_blocked_call", "analyzing", "running",
+                                f"{error.kind}: {error.detail}", 80, tool_name=call.name, owner="policy",
+                            )
                             errors.append(error)
                             detail = {
                                 "status": "invalid_tool_call",
@@ -228,6 +240,10 @@ class StockAgentRuntime:
                     ) + " / ".join(error.detail for error in errors)
                         + " 제공된 자료만 사용해 위반을 수정하고 전체 JSON을 다시 반환하세요. Tool은 사용하지 마세요."}]
                     active_tools = []
+                    await reporter.publish(
+                        "reflection_requested", "analyzing", "running",
+                        "형식·서술 검증 피드백으로 재호출합니다.", 80, owner="policy",
+                    )
                 else:
                     active_tools = tools if len(used) < 2 and not tools_closed else []
             elif turn is not None and not turn.calls:
@@ -315,8 +331,9 @@ class StockAgentRuntime:
             outputs = []
             for call in turn.calls:
                 try:
-                    if call.name not in self.profile.allowed_tools:
-                        raise ValueError("허용되지 않은 Tool입니다.")
+                    risk = action_risk(call.name, self.profile.allowed_tools)
+                    if risk != RISK_READ:
+                        raise ValueError(f"위험도 {risk}: 자동 실행하지 않습니다")
                     arguments = json.loads(call.arguments)
                     if not isinstance(arguments, dict):
                         raise ValueError("Tool arguments는 JSON Object여야 합니다.")

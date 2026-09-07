@@ -149,17 +149,23 @@ off는 비교 기준을 위해 기존 `previous_response_id` 전달 방식을 �
 
 `BACKEND_EVENT_URL`이 설정되면 Workflow 진행 메타데이터를 Backend에 전달한다. 설정되지 않으면 분석은 그대로 실행되며 이벤트는 외부로 전송하지 않는다.
 
-```text
-workflow_started
-collection_started
-tool_started
-tool_completed
-tool_failed
-llm_started
-llm_completed
-workflow_completed
-workflow_failed
-```
+모든 진행 이벤트 payload에는 `owner`가 포함된다. `publish(owner=...)`로 명시하지 않으면 Tool 시작·완료·실패는 `mcp`, 나머지는 `runtime`으로 기록한다.
+
+| 이벤트 | owner | 발생 조건 |
+| --- | --- | --- |
+| `workflow_started` | runtime | Workflow 시작 |
+| `collection_started` | runtime | 기본 자료 수집 시작 |
+| `tool_started` | mcp | 기본 또는 선택 상세 조회 시작 |
+| `tool_completed` | mcp | 기본 수집 완료 |
+| `tool_failed` | mcp | 기본 수집 실패 |
+| `llm_started` | runtime | 설명 생성 시작 |
+| `llm_completed` | runtime | 서술 채택 |
+| `llm_failed` | runtime | 성찰 off의 초기 Provider 실패 |
+| `workflow_completed` | runtime | 응답 조립 완료 |
+| `workflow_failed` | runtime | Workflow 시간 초과 |
+| `model_selected_tool` | ai_agent | 성찰 on: 모델의 Tool 요청, `tool_name` 포함 |
+| `policy_blocked_call` | policy | 성찰 on: Tool 선택·인자 오류, `message`에 kind 포함 |
+| `reflection_requested` | policy | 성찰 on: 스키마·서술 피드백 재호출 직전 |
 
 MCP 원문과 사용자 개인정보는 이벤트로 보내지 않는다. Backend의 이벤트 API와 Redis 저장 규격은 기화님·태웅님 협의 후 URL만 연결한다.
 

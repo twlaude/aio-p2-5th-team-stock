@@ -156,6 +156,8 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 7. `investment_profile`을 받으면 공통 분석과 성향 네 값으로 `personalized_checkpoints`를 OpenAI `gpt-5.6-luna`로 생성한다. 이 값은 Price·News·Disclosure·Community MCP에 전달하지 않는다.
 8. 기본 조회는 AI가 선택하지 않는다. Luna Agent에는 최근 공시 상세 조회 Tool만 허용하고, 기본 조회에 포함된 접수번호를 최대 2건까지 사용할 수 있다.
 
+진행 이벤트 payload에는 판단·실행 주체를 나타내는 `owner` 필드(`runtime`, `mcp`, `ai_agent`, `policy`)가 추가됩니다.
+
 ## 종료 이유
 
 성찰 기능은 기존 필드를 변경하지 않고 `trace_summary.reflections: int`를 추가합니다.

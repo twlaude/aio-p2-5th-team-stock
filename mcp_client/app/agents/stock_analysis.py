@@ -1,5 +1,6 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
+from app.agents.policy import TOOL_RISK
 from app.prompts import ANALYSIS_INSTRUCTIONS
 
 
@@ -12,3 +13,4 @@ class StockAnalysisAgent:
     example_question: str = "삼성전자"
     instructions: str = ANALYSIS_INSTRUCTIONS
     allowed_tools: frozenset[str] = frozenset({"get_disclosure_detail"})
+    tool_risks: dict[str, str] = field(default_factory=lambda: TOOL_RISK.copy())

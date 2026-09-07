@@ -3,6 +3,7 @@ import json
 import pytest
 
 from app.agents import StockAnalysisAgent
+from app.agents.policy import TOOL_RISK, action_risk
 from app.core.config import Settings
 from app.providers.openai import FunctionCall, ModelTurn
 from app.runtime import StockAgentRuntime
@@ -48,3 +49,25 @@ async def test_blocks_receipt_number_not_in_base_result():
 
 def test_agent_has_only_read_only_detail_tool():
     assert StockAnalysisAgent().allowed_tools == frozenset({"get_disclosure_detail"})
+
+
+@pytest.mark.parametrize("tool,allowed,risk", [
+    ("get_disclosure_detail", frozenset(TOOL_RISK), "read"),
+    ("get_stock_quote", frozenset({"get_disclosure_detail"}), "forbidden"),
+    ("place_order", frozenset({"place_order"}), "forbidden"),
+])
+def test_action_risk(tool, allowed, risk):
+    assert action_risk(tool, allowed) == risk
+
+
+@pytest.mark.asyncio
+async def test_progress_owner_defaults():
+    reporter = ProgressReporter(Settings(llm_provider="mock", backend_event_url=""), "request", "run")
+    for owner, events in {
+        "runtime": ["workflow_started", "workflow_completed", "workflow_failed",
+                    "collection_started", "llm_started", "llm_completed", "llm_failed"],
+        "mcp": ["tool_started", "tool_completed", "tool_failed"],
+    }.items():
+        for event in events:
+            await reporter.publish(event, "analyzing", "running", "[TEST] owner", 80)
+            assert reporter.events[-1]["owner"] == owner

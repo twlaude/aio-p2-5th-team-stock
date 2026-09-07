@@ -11,6 +11,7 @@ from app.runtime.verifier import verify_narrative
 from app.schemas.analysis import AnalysisRequest, Narrative, PersonalizedCheckpoints
 from app.services.analysis_builder.narrative import build_fallback_narrative
 from app.services.analysis_builder.scoring import calculate_evidence_level, calculate_market_temperature
+from app.services.progress_reporter import ProgressReporter
 from app.workflows.analysis import AnalysisWorkflow
 from app.workflows.factory import build_workflow
 from tests.helpers import FakeCollector, collected_data
@@ -78,6 +79,41 @@ def call(receipt=RECEIPTS[0], *, name="get_disclosure_detail", arguments=None, c
 
 def prose(context, **changes):
     return ModelTurn("final", narrative=build_fallback_narrative(context).model_copy(update=changes))
+
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize("enabled", [False, True])
+async def test_forbidden_tool_blocked_with_policy_trace(context, enabled):
+    provider = ScriptProvider(ModelTurn("blocked", calls=[call(name="place_order")]), prose(context))
+    disclosure = Disclosure()
+    reporter = ProgressReporter(Settings(llm_provider="mock", backend_event_url=""), "request", "run")
+    result = await StockAgentRuntime(provider, disclosure, 3, reflection_enabled=enabled).run(context, RECEIPTS, reporter)
+    assert disclosure.receipts == [] and result.tool_calls == 0
+    assert result.termination_reason == ("completed" if enabled else "invalid_tool_call")
+    if enabled:
+        blocked = next(e for e in reporter.events if e["event"] == "policy_blocked_call")
+        assert blocked["owner"] == "policy" and blocked["tool_name"] == "place_order"
+        assert "tool_selection_error" in blocked["message"] and "위험도 forbidden" in blocked["message"]
+    else:
+        assert [e["event"] for e in reporter.events] == ["llm_started"]
+        assert result.failures[0].message == "위험도 forbidden: 자동 실행하지 않습니다"
+
+
+@pytest.mark.asyncio
+async def test_reflection_trace_distinguishes_model_and_policy(context):
+    provider = ScriptProvider(ModelTurn("bad-call", calls=[call(arguments="{")]),
+                              ProviderError("[TEST] 형식 오류", "bad-json"), prose(context))
+    reporter = ProgressReporter(Settings(llm_provider="mock", backend_event_url=""), "request", "run")
+    result = await StockAgentRuntime(provider, Disclosure(), 3, reflection_enabled=True).run(context, RECEIPTS, reporter)
+    assert result.termination_reason == "completed" and result.reflection_calls == 2
+    events = reporter.events[1:-1]
+    assert [(e["event"], e["owner"]) for e in events] == [
+        ("model_selected_tool", "ai_agent"), ("policy_blocked_call", "policy"),
+        ("reflection_requested", "policy"),
+    ]
+    assert events[0]["tool_name"] == "get_disclosure_detail"
+    assert "parameter_error" in events[1]["message"]
+    assert all((e["step"], e["status"], e["progress_percent"]) == ("analyzing", "running", 80) for e in events)
 
 
 @pytest.mark.asyncio
