@@ -15,7 +15,7 @@ export function IntroClosing() {
       <section ref={trust} className={`intro-trust${trustSeen ? " is-seen" : ""}`} aria-labelledby="intro-trust-title">
         <div className="intro-trust__copy">
           <h2 id="intro-trust-title"><span className="intro-strike">추천</span>도, <br className="intro-mobile" /><span className="intro-strike">목표주가</span>도<br className="intro-desktop" /> 없어요.</h2>
-          <p><span className="intro-desktop">살래말래는 사라고도 팔라고도 하지 않아요. </span>결정은 직접, 확인할 재료는 저희가 챙겨요. 커뮤니티 반응은 사실이 아닌 시장 반응이라고 따로 표시해요.</p>
+          <p>살지 말지는 결국 스스로 정하는 일이니까요. 그 결정이 감이 아니라 근거에서 나오도록, 봐야 할 것들을 한자리에 모아 드려요.<span className="intro-desktop"> 사실은 사실대로, 반응은 반응대로.</span></p>
         </div>
         <div className="intro-materials">
           <p>한 줄에 붙는 재료</p>
