@@ -29,11 +29,15 @@ class ProgressReporter:
         *,
         tool_name: str | None = None,
         service: str | None = None,
+        owner: str | None = None,
     ) -> None:
+        if owner is None:
+            owner = "mcp" if event in {"tool_started", "tool_completed", "tool_failed"} else "runtime"
         payload = {
             "request_id": self.request_id,
             "run_id": self.run_id,
             "event": event,
+            "owner": owner,
             "step": step,
             "status": status,
             "message": message,

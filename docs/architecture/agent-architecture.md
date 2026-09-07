@@ -197,22 +197,25 @@ off의 `llm_calls`는 성공적으로 회수한 turn 중심이며 초기 실패 
 
 ## 11. Trace 설계
 
-| 진행 이벤트 10종 | 발생 위치·의미 |
-| --- | --- |
-| `workflow_started` | Workflow 진입 |
-| `collection_started` | 기본 자료 병렬 수집 시작 |
-| `tool_started` | 기본 또는 선택 상세 조회 시작 |
-| `tool_completed` | 기본 수집 정상 반환 |
-| `tool_failed` | 기본 수집 오류 |
-| `llm_started` | Agent 설명 생성 시작 |
-| `llm_completed` | 모델 서술 채택 경로 |
-| `llm_failed` | legacy 초기 Provider 예외 경로 |
-| `workflow_completed` | 응답 조립 완료 |
-| `workflow_failed` | Workflow 시간 초과 |
+| 진행 이벤트 13종 | owner | 발생 위치·의미 |
+| --- | --- | --- |
+| `workflow_started` | runtime | Workflow 진입 |
+| `collection_started` | runtime | 기본 자료 병렬 수집 시작 |
+| `tool_started` | mcp | 기본 또는 선택 상세 조회 시작 |
+| `tool_completed` | mcp | 기본 수집 정상 반환 |
+| `tool_failed` | mcp | 기본 수집 오류 |
+| `llm_started` | runtime | Agent 설명 생성 시작 |
+| `llm_completed` | runtime | 모델 서술 채택 경로 |
+| `llm_failed` | runtime | legacy 초기 Provider 예외 경로 |
+| `workflow_completed` | runtime | 응답 조립 완료 |
+| `workflow_failed` | runtime | Workflow 시간 초과 |
+| `model_selected_tool` | ai_agent | 성찰 on에서 모델이 요청한 function call마다 Tool 이름 기록 |
+| `policy_blocked_call` | policy | 성찰 on에서 Tool 선택·인자 오류 차단, message에 오류 kind 기록 |
+| `reflection_requested` | policy | 성찰 on에서 스키마·서술 피드백 재호출 직전 |
 
-요구 체크리스트에는 “9종”으로 적혀 있으나 현재 코드의 서로 다른 이름을 세면 10종입니다. 항상 모든 이벤트가 나오는 것은 아닙니다. on의 `stop()`은 실패 이벤트를 별도로 발행하지 않고 실패 목록을 반환하며, 상세 조회는 시작 이벤트 후 기본 수집과 같은 완료/실패 이벤트를 발행하지 않습니다.
+기존 10종에 성찰 on 전용 3종을 추가했습니다. 항상 모든 이벤트가 나오는 것은 아닙니다. on의 `stop()` 자체는 실패 목록을 반환하고 `llm_failed`를 발행하지 않습니다. Tool 선택·인자 오류는 종료 여부와 관계없이 `policy_blocked_call`로 기록하며, 스키마·서술 오류는 예산 안에서 재호출할 때만 `reflection_requested`를 기록합니다. 상세 조회는 시작 이벤트 후 기본 수집과 같은 완료/실패 이벤트를 발행하지 않습니다. off에는 새 이벤트 3종이 추가되지 않습니다.
 
-공통 payload는 `request_id`, `run_id`, `event`, `step`, `status`, `message`, `progress_percent`, `occurred_at`와 선택적인 `tool_name`, `service`입니다. Reporter는 메모리 `events`에 기록하고 Backend URL이 설정되면 2초 제한으로 전달합니다. 전달 실패는 경고 로그이며 분석을 중단하지 않습니다.
+공통 payload는 `request_id`, `run_id`, `event`, `owner`, `step`, `status`, `message`, `progress_percent`, `occurred_at`와 선택적인 `tool_name`, `service`입니다. `ProgressReporter.publish(owner=...)`로 주체를 지정하며, 생략 시 Tool 시작·완료·실패는 `mcp`, Workflow·수집·LLM 등 나머지는 `runtime`입니다. Reporter는 메모리 `events`에 기록하고 Backend URL이 설정되면 2초 제한으로 전달합니다. 전달 실패는 경고 로그이며 분석을 중단하지 않습니다.
 
 `TraceSummary`는 `tool_calls`, `llm_calls`, `completed_tools`, `failed_tools`, `duration_ms`, `reflections`입니다. 마지막 값은 이벤트 개수가 아니라 성찰 재호출 수이며 0일 때 직렬화에서 생략됩니다. 토큰 수와 ReflectionEvent 상세는 API TraceSummary에 없습니다. Backend 실황의 보관 범위는 14절에 기록합니다.
 
@@ -222,18 +225,20 @@ off의 `llm_calls`는 성공적으로 회수한 turn 중심이며 초기 실패 
 
 ## 13. Tool 위험도 정책
 
-| Tool | 위험도 | change 여부 | 실행 정책 |
-| --- | --- | --- | --- |
-| `get_stock_quote` | read | 없음 | Workflow 고정 호출 |
-| `search_news` | read | 없음 | Workflow 고정 호출 |
-| `get_recent_disclosures` | read | 없음 | Workflow 고정 호출 |
-| `get_material_disclosures` | read | 없음 | Workflow 고정 호출, 공시 필터 지정 |
-| `search_annual_report` | read | 없음 | Workflow 고정 호출 |
-| `get_community_reaction` | read | 없음 | Workflow 고정 호출 |
-| `get_disclosure_detail` | read | 없음 | Agent allowlist·번호 enum·중복 차단·상한 |
-| 매매·주문·외부 메시지 전송 | forbidden | 허용 없음 | Agent Schema와 allowlist에 없으므로 실행 불가 |
+| Tool | 위험도 | change 여부 | 실행 정책 | 코드 근거 |
+| --- | --- | --- | --- | --- |
+| `get_stock_quote` | read | 없음 | Workflow 고정 호출 | `policy.TOOL_RISK` |
+| `search_news` | read | 없음 | Workflow 고정 호출 | `policy.TOOL_RISK` |
+| `get_recent_disclosures` | read | 없음 | Workflow 고정 호출 | `policy.TOOL_RISK` |
+| `get_material_disclosures` | read | 없음 | Workflow 고정 호출, 공시 필터 지정 | `policy.TOOL_RISK` |
+| `search_annual_report` | read | 없음 | Workflow 고정 호출 | `policy.TOOL_RISK` |
+| `get_community_reaction` | read | 없음 | Workflow 고정 호출 | `policy.TOOL_RISK` |
+| `get_disclosure_detail` | read | 없음 | Agent allowlist·번호 enum·중복 차단·상한 | `policy.TOOL_RISK`, `StockAnalysisAgent.allowed_tools` |
+| 현재 변경 Tool 없음 | change | 등록 없음 | 등록되어도 자동 실행 차단 | `policy.CHANGE_TOOLS = frozenset()` |
+| `place_order`, `make_payment`, `send_message`, `update_profile` | forbidden | 허용 없음 | allowlist 포함 여부와 무관하게 차단 | `policy.FORBIDDEN_TOOLS` |
+| Agent allowlist 밖의 Tool | forbidden | 허용 없음 | 자동 실행 차단 | `policy.action_risk()` |
 
-read/change/forbidden은 문서상의 위험도 분류이며 코드에 별도 `action_risk()`나 승인 정책 엔진이 있는 것은 아닙니다. 기본 조회 함수와 단일 Agent allowlist가 해당 경계를 구현합니다.
+`mcp_client/app/agents/policy.py`의 `action_risk(tool_name, allowed_tools)`가 명시 금지 목록 또는 allowlist 밖이면 `forbidden`, 변경 목록이면 `change`, 그 외는 `TOOL_RISK` 값(미등록 기본 `read`)으로 판정합니다. `StockAnalysisAgent.tool_risks`는 7개 논리 Tool 분류의 독립 사본이며 기본 allowlist는 `get_disclosure_detail` 하나입니다. 기본 조회 6개는 Workflow 고정 호출이고 Agent 선택 경로를 통과하지 않습니다. Runtime은 성찰 on/off 모두 `action_risk()` 결과가 `read`일 때만 자동 실행하며, 차단 메시지에 위험도를 포함합니다. on은 `tool_selection_error` 피드백, off는 기존 `invalid_tool_call` 종료를 유지합니다. 승인 대기·승인 정책 엔진은 없습니다.
 
 ## 14. State 저장·멱등성·Memory
 
@@ -252,7 +257,7 @@ Backend의 [Memory 가이드](../../backend/MEMORY_GUIDE.md)는 방향을 설명
 | Redis `backend:last_event_at` | 마지막 발행 시각, TTL 없음 | Redis client |
 | Provider `ContextVar` | 현재 요청의 입력·출력·후속 호출용 암호화 reasoning | `mcp_client/app/providers/openai.py` |
 
-실황은 `backend/app/routers/admin/live_status_page.py`의 HTML+JS이며 PG/Redis snapshot과 두 Pub/Sub 알림으로 최근 검색·TTL·분석·실패를 표시합니다. **Backend에는 MCP Client의 10종 진행 이벤트를 수신·저장하는 라우트가 없습니다.** SSE도 그 진행 이벤트 스트림이 아닌 `short_term`/`analysis_run` 알림입니다.
+실황은 `backend/app/routers/admin/live_status_page.py`의 HTML+JS이며 PG/Redis snapshot과 두 Pub/Sub 알림으로 최근 검색·TTL·분석·실패를 표시합니다. **Backend에는 MCP Client의 13종 진행 이벤트를 수신·저장하는 라우트가 없습니다.** SSE도 그 진행 이벤트 스트림이 아닌 `short_term`/`analysis_run` 알림입니다.
 
 `analysis_runs`에는 `run_id`, `termination_reason`, TraceSummary, 토큰 수, 성찰 상세, 진행 이벤트 전문이 저장되지 않습니다. `personalized_checkpoints`는 MCP 원본 값이며 Backend가 조립한 최종 응답 전체를 저장하는 것은 아닙니다. 사용자 ID·개인화는 보관하지만 프롬프트·내부 추론·인증 헤더·키는 이 저장 경로에 포함되지 않습니다. 암호화 reasoning도 후속 재전송에만 쓰며 시험 JSONL에서 제외합니다.
 
