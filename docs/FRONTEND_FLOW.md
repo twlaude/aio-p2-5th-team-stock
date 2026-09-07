@@ -1,6 +1,6 @@
 # Frontend 화면 흐름
 
-화면 시안은 `docs/assets/이미지/`에 있다. 이미지는 최종 디자인이 아니라 배치 참고 자료다.
+초기 화면 시안은 `docs/archive/design-drafts/이미지/`에 보관한다. 최종 화면은 `frontend/tests/shots/`의 실제 스크린샷 기준이다.
 
 ## 1. 확정 사용자 흐름
 
@@ -17,7 +17,7 @@
 
 ## 2. 검색 화면
 
-참고 이미지: `docs/assets/이미지/01.png`
+참고 이미지: `docs/archive/design-drafts/이미지/01.png`
 
 - 서비스명 `살래? 말래?`
 - 기업명 또는 6자리 종목 코드 검색
@@ -29,7 +29,7 @@
 
 ## 3. 공개 결과 영역
 
-참고 이미지: `docs/assets/이미지/03.png`
+참고 이미지: `docs/archive/design-drafts/이미지/03.png`
 
 비회원과 회원에게 공통으로 표시한다.
 
@@ -43,7 +43,7 @@
 
 ## 4. 로그인과 Mock 사용자
 
-참고 이미지: `docs/assets/이미지/02.png`
+참고 이미지: `docs/archive/design-drafts/이미지/02.png`
 
 - Mock 사용자 10명 중 하나로 로그인
 - 사용자별 투자 경험, 위험 성향, 투자 기간, 선호 근거가 미리 준비됨
@@ -52,7 +52,7 @@
 
 ## 5. 회원 상세 영역
 
-참고 이미지: `docs/assets/이미지/04.png`
+참고 이미지: `docs/archive/design-drafts/이미지/04.png`
 
 한 결과 페이지에서 아래로 스크롤하는 방식으로 구현한다.
 

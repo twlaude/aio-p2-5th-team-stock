@@ -35,7 +35,7 @@
 |---|---|
 | `docs/` | 최종 설계·개발·발표 자료 |
 | `docs/archive/` | 초기 검토 문서 |
-| `docs/assets/` | 화면 시안과 이미지 프롬프트 |
+| `docs/archive/design-drafts/` | 초기 화면 시안(구현 완료 후 보관) |
 | `archive/` | 이전 실행 코드 |
 | `tests/` | 통합 검증할 때만 실행 |
 
