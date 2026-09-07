@@ -1,0 +1,1253 @@
+{
+  "company": {
+    "company_name": "삼성전기",
+    "stock_code": "009150"
+  },
+  "captured_at": "2026-09-07T03:38:49.292290+00:00",
+  "capture_finished_at": "2026-09-07T03:47:53.911265+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "삼성전기",
+      "stock_code": "009150",
+      "current_price": 1432000,
+      "change": 31000,
+      "change_rate": 2.21,
+      "volume": 255937,
+      "volume_change_rate": 41.1,
+      "avg_volume_20d": 730547,
+      "volume_ratio_20d": 0.62,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 456136,
+      "warnings": [],
+      "as_of": "2026-09-07T03:38:49.704857Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:38:49.704857Z"
+    },
+    "news": {
+      "request_id": "96622485-95ee-4d00-ac40-954d38c08bb3",
+      "status": "success",
+      "company_name": "삼성전기",
+      "stock_code": "009150",
+      "articles": [
+        {
+          "headline": "AI 투자 기대에 외인·기관 1.6조 '사자'…코스피 6900선 공방[장중시황...",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "SK스퀘어(402340)(5.86%), SK하이닉스(000660)(5.65%), 삼성전자(005930)(3.91%), 삼성생명(032830)(3.7%), 삼성전자우(005935)(2.19%), KB금융(105560)(1.57%), 현대차(005380)(1.43%), 삼성전기(009150)(1.28%), LG에너지솔루션(373220)(0.56...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6282070",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 훈풍에 코스피 3% 급등…외국인·기관 1.6조 싹쓸이",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "'반도체 투톱' 삼성전자·SK하이닉스 급등…업종별 차별화 양상 이에 '반도체 투 톱' 삼성전자와 SK하이닉스가 각각 3.91%, 5.53% 상승 중이고, 시가총액 상위주 가운데 SK스퀘어(5.67%), 삼성전기(1.50...",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063126",
+          "relevance": "high"
+        },
+        {
+          "headline": "애플도 접는다…삼성 폴더블에 도전장, 韓 부품사 수혜 기대",
+          "publisher": "theviewers.co.kr",
+          "published_at": "2026-09-07T02:38:00Z",
+          "summary": "LG이노텍은 카메라 모듈, 삼성전기는 AP용 반도체 기판과 MLCC를 탑재하는 것으로 알려졌다. 삼성전자와 SK하이닉스도 폴더블 아이폰 메모리 공급에 참여한다. 두 회사는 폴더블 아이폰에 탑재되는 12GB D램의 약 70%를...",
+          "source_url": "https://theviewers.co.kr/View.aspx?No=4215198",
+          "relevance": "high"
+        },
+        {
+          "headline": "[食전食후] AI·반도체 훈풍에 코스피 6900선 육박…외국인·기관 '쌍끌...",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "SK스퀘어(5.96%), 삼성전자우(2.14%), KB금융(1.57%), 현대차(1.43%), 삼성전기(1.28%), LG에너지솔루션(0.70%) 등도 오르고 있다. 특히 인공지능(AI) 연산 수요 확대 기대가 반도체주 투자심리를 끌어올리는 모습이다....",
+          "source_url": "https://www.ajunews.com/view/20260907112902463",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인·기관 사자에 코스피 3%대 상승세…6900 탈환 고지전",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "삼성전자와 SK하이닉스는 각각 3%대, 5%대 오름세를 이어가고 있고 SK스퀘어, 삼성전기, LG에너지솔루션, 현대차, 삼성바이오로직스, KB금융, 삼성생명이 모두 상승 중이다. 같은 시간 코스닥 지수는 1.64%(13.35포인트)...",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/07/QZ57IBRFANHSJAVOFB54QGKVTE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "인천시, 「2026 국제반도체기판 및 첨단패키징산업전(KPCA Show 2026)」 열...",
+          "publisher": "queen.co.kr",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "LG이노텍, 삼성전기, 심텍 등 주요 기업들이 반도체 핵심 소재·부품·장비와 첨단 패키징 기술을 선보이며, 도금·표면처리, 청정 시스템, 인공지능(AI), 로봇 등 다양한 분야의 최신 기술도 함께 소개된다. 전시 기간 중...",
+          "source_url": "http://www.queen.co.kr/news/articleView.html?idxno=462869",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 훈풍에 3% 안팎 상승세…삼전닉스 3~5%↑",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T02:12:00Z",
+          "summary": "이에 '반도체 투 톱' 삼성전자와 SK하이닉스가 각각 3.91%, 5.53% 상승 중이고, 시가총액 상위주 가운데 SK스퀘어(5.67%), 삼성전기(1.50%), LG에너지솔루션(0.28%) 등이 오르고 있다. 반면 한화에어로스페이스(-2.18...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907072500008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 메모리주 강세에 장 초반 3%대 상승...삼전 4%·SK하닉 6%↑",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "시가총액 상위 종목 가운데 삼성전기는 2.50%, LG에너지솔루션은 0.42%, 현대차는 1.83% 오르고 있다. 반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 하락 중이다. 업종별로는 기술주 급등 영향으로 전기...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317738",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 이익 증가율 꺾였다, 원화 강세에도 웃을 '실적 개선주'는",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T02:07:00Z",
+          "summary": "종목별로도 외국인은 SK하이닉스와 삼성전자를 각각 1조8181억원, 6405억원 순매도한 반면 삼성전기 2921억원, SK이노베이션 1170억원, 대한항공 835억원을 순매수했다. ◆ 이익률 개선株 뜬다…대한항공·한화엔진 등...",
+          "source_url": "https://www.newspim.com/news/view/20260906000155",
+          "relevance": "high"
+        },
+        {
+          "headline": "9월 주식 뭐 살까… 유망주 20개 뜯어보니",
+          "publisher": "m.skyedaily.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "기존 중장기 추천주 가운데 삼성SDI와 삼성전기, 삼양식품의 상승률이 두드러졌다. 하나증권 자료 기준 삼성SDI는 8월10일 편입 이후 19.39%, 삼성전기는 8월3일 이후 22.68% 올랐다. 삼양식품은 7월1일 편입 이후 26.63...",
+          "source_url": "https://m.skyedaily.com/news_view.html?ID=311094",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 장중 '반도체주 강세'에 3%대 오른 6890선, 코스닥도 1%대 올라",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "SK하이닉스가 5.89%로 가장 많이 오르고 있고 SK스퀘어(5.48%) 삼성전자(3.82%) 삼성생명(3.70%) 삼성전자우(2.35%) 현대차(1.69%) KB금융(1.54%) 삼성전기(1.53%) LG에너지솔루션(0.14%) 삼성바이오로직스(0.07%) 가 뒤를 잇고...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446528",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI 서버 투자에 PCB株 들썩…우리바이오·에이엔피 주가 신바람",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T01:52:00Z",
+          "summary": "삼성전기도 1.71% 상승한 142만5000원에 거래되며 대형 기판주 전반의 상승 흐름을 뒷받침하고 있다. AI 가속기와 고성능 반도체에 사용되는 다층기판 수요 확대 기대는 이수페타시스에도 긍정적으로 작용하고 있다....",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484487",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]코스피, 오픈AI발 호재에 6,900선 재탈환…삼전 4.3%·닉스 5.9% 급...",
+          "publisher": "kwnews.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.kwnews.co.kr/article/20260907500348",
+          "relevance": "high"
+        },
+        {
+          "headline": "아이폰 카메라 스펙 껑충… LG이노텍, 부품 단가·물량 쌍끌이 호재",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "삼성전기 역시 동반 상승하며 애플 부품 공급망 전반으로 매수세가 이어지는 모습이다. 소재와 기판 분야에서도 상승 종목이 늘고 있다. 슈피겐코리아와 이녹스첨단소재, LX세미콘이 오름세를 나타내고 있다. 영풍과...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484481",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 '쌍끌이' 매수에 6890선 훌쩍…3%대 강세",
+          "publisher": "mediapen.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "이 밖에 SK스퀘어(5.76%), 삼성생명(4.03%), 삼성전자우(2.30%), 삼성전기(1.86%), 현대차(1.83%), KB금융(1.42%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.07%) 등 주요 대형주가 모두 강세를 보이고 있다. 같은 시각...",
+          "source_url": "https://www.mediapen.com/news/view/1121704",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 업고 2.9%대 급등",
+          "publisher": "straightnews.co.kr",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "SK스퀘어도 5.57% 상승했고 삼성전자우와 삼성전기는 각각 2.19%, 1.50% 올랐다. 간밤 미국 증시에서 마이크론과 샌디스크 등 메모리 관련주가 급등하면서 국내 반도체주에도 매수세가 번졌다. 오픈AI의 신규 AI 모델...",
+          "source_url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310533",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등… 코스피 6,900선 재탈환",
+          "publisher": "fntoday.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%)이 상승 중이며 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등 시가총액 상위 종목 대다수가 상승 대열에 합류했다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.fntoday.co.kr/news/articleView.html?idxno=392276",
+          "relevance": "high"
+        },
+        {
+          "headline": "애플 첫 폴더블에 'K부품' 총출동 … 삼성·LG, 스마트폰 경쟁·부품은 ...",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "삼성디스플레이와 LG이노텍을 비롯해 삼성전자·SK하이닉스·삼성전기 등 국내 주요 기업들이 디스플레이부터 카메라, 메모리, 반도체 기판까지 핵심 부품 공급망에 포진하면서다. 스마트폰 완제품 시장에서는...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700094.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼화콘덴서, IT 넘어 자동차로… 전장용 부품 질주에 시장 주목",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T01:36:00Z",
+          "summary": "대형주 가운데서는 삼성전기도 1.86% 상승한 142만7000원을 기록하며 강세를 보이고 있다. AI 서버에 사용되는 고용량 MLCC와 전장 부품 수요가 늘어날 경우 관련 사업의 실적 개선이 가능하다는 기대가 매수세로 이어지고...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484471",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "시가총액 상위 종목 가운데서는 삼성전자(3.82%), SK하이닉스(6.19%), SK스퀘어(5.86%), 삼성전기(1.93%), LG에너지솔루션(0.42%), 현대차(1.69%), 삼성바이오로직스(0.21%), KB금융(1.63%), 삼성생명(3.78%), 삼성물산(2.72...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "한국발명진흥회, '대통령상' 향한 캠퍼스특허유니버시아드 발표심사 착...",
+          "publisher": "cstimes.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "이번 심사에 이름을 올린 곳은 삼성전자, 현대자동차, SK하이닉스, 포스코, 현대중공업, 한화오션, 삼성중공업, 현대삼호중공업, 현대미포조선, HJ중공업, 대선조선, 케이조선, 현대제철, 삼성전기, 서울반도체...",
+          "source_url": "https://www.cstimes.com/news/articleView.html?idxno=719604",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피,美오픈AI 호재에 6,900선…환율 23개월만에 1,330원대",
+          "publisher": "seouleconews.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자...",
+          "source_url": "http://www.seouleconews.com/news/articleView.html?idxno=93564",
+          "relevance": "high"
+        },
+        {
+          "headline": "범용인공지능(AGI) 시대 열렸다…코스피 6900탈환",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "SK스퀘어(5.38%), 삼성전기(1.36%), LG에너지솔루션(0.42%), 현대차(1.83%), KB금융(1.63%) 등 시가총액 상위주 대부분이 상승세다. 오픈AI '아스트라' 공개하며 AGI 도래선언 오픈AI는 아스트라를 공개하면서 AGI 시대의...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710234926245",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체주 강세에 3%가까이 급등…6,880선 돌파",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "이 밖에 시가총액 상위 종목에서는 삼성전자우(2.30%)와 SK스퀘어(5.48%), 삼성전기(1.21%), LG에너지솔루션(0.42%), 현대차(1.89%), 삼성바이오로직스(0.48%), KB금융(1.51%) 등이 오름세다. 반면 한화에어로스페이스(0.95...",
+          "source_url": "https://www.news2day.co.kr/article/20260907500108",
+          "relevance": "high"
+        },
+        {
+          "headline": "온디바이스 AI 테마 상승랠리… 칩스앤미디어·유니퀘스트는 차익실현에...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T01:24:00Z",
+          "summary": "기판과 부품 분야에서는 삼성전기와 심텍이 상승세를 기록하고 있다. 온디바이스 AI가 스마트폰을 넘어 PC와 가전 등으로 적용 범위를 넓힐 경우 고성능 반도체를 안정적으로 구동하기 위한 기판과 부품의 중요성도...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484466",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 순매수에 6900선 강세",
+          "publisher": "kfenews.co.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "시가총액 상위 종목은 삼성전자(4.01%), SK하이닉스(5.59%), SK스퀘어(5.96%), 삼성전자우(2.66%), 삼성전기(1.14%), 현대차(2.22%), LG에너지솔루션(1.26%), 삼성생명(4.20%), KB금융(1.45%), 삼성바이오로직스(0.41%) 등 모두 오르고...",
+          "source_url": "https://www.kfenews.co.kr/news/articleView.html?idxno=663954",
+          "relevance": "high"
+        },
+        {
+          "headline": "'7천피' 앞둔 코스피...반도체 훈풍에 SK하이닉스 5%대 강세 [fn오전시황...",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T01:20:00Z",
+          "summary": "SK스퀘어(5.28%), 삼성전기(1.28%), 삼성전자우(2.30%), 현대차(1.96%), KB금융(1.40%) 등도 강세를 나타내고 있다. LG에너지솔루션(0.56%)과 삼성바이오로직스(0.41%)도 강보합 중이다. 코스닥도 상승세를 이어가고 있다. 같은...",
+          "source_url": "https://www.fnnews.com/news/202609071010485002",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승",
+          "publisher": "news.sbs.co.kr",
+          "published_at": "2026-09-07T01:17:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중입니다. 반면 삼성SDI(-0.91%), 셀트리온...",
+          "source_url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008740759&plink=ORI&cooper=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍타고 3%대↑···6900선 회복",
+          "publisher": "finomy.com",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "△삼성전자우(2.45%) △SK스퀘어(5.48%) △삼성전기(1.07%) △LG에너지솔루션(1.12%) △현대차(1.69%) △삼성바이오로직스(0.69%) △KB금융(1.34%) △삼성생명(3.87%) 등이 상승하고 있다. 코스닥지수는 전 거래일보다 14....",
+          "source_url": "http://www.finomy.com/news/articleView.html?idxno=260879",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성전기 주가, 9월 7일 장중 1,415,000원 1.00% 상승",
+          "publisher": "topstarnews.net",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "7일 오전 10시 1분 기준, 네이버페이 증권에 따르면 삼성전기 주가가 현재 거래되고 있는 가운데 지난 종가 대비 상승세를 나타내고 있다. 현재 삼성전기는 1,415,000원에 거래되며 지난 종가 1,401,000원보다...",
+          "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16185258",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 오픈AI 호재…코스피 3%대 급등",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "다른 시가총액 상위주 가운데 SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%), 삼성전기(2.50%), 현대차(1.83%), LG에너지솔루션(0.42%) 등도 상승 중이다. 반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862662",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6910.78 출발...'로봇株 강세' LG전자는 12% 급등",
+          "publisher": "wolyo.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "이외에도 한미반도체는 8.04%, SK스퀘어는 7.01%, 삼성전기는 장중 고가 기준 5.28% 올랐다. 특히 LG전자는 장 시작과 동시에 12.16% 급등했다. LG전자의 미국 로봇 자회사 베어로보틱스가 최대 4000억원 규모의 상장 전...",
+          "source_url": "https://www.wolyo.co.kr/news/articleView.html?idxno=317424",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체주 훈풍…코스피, 3% 급등·6900 회복",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "SK스퀘어는 6.05% 급등했고 삼성전기(4.14%)도 4%대 상승세다. 이 밖에 삼성생명(3.87%), 삼성물산(3.0%), KB금융(1.34%), 현대차(1.04%), 삼성바이오로직스(0.41%) 등이 오름세를 이어가고 있다. 코스닥지수는 전일 대비 0....",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609070040",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 반등에 6800선 회복 … 삼전닉스 4% 강세",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "SK스퀘어는 6% 이상 급등했고 삼성전기, LG에너지솔루션, 현대차, 삼성바이오, KB금융 등도 상승 중이다. 같은 시간 코스닥 지수는 전 거래일 대비 0.94% 오른 821.45다. 개인이 446억원 순매수한 반면 외국인과 기관은...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700053.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전 3%·닉스 5% 오름세…‘오픈AI 훈풍’에 코스피 6900선 등락",
+          "publisher": "segye.com",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "SK스퀘어(5.38%), 삼성생명(3.19%), 삼성전자우(2.24%), 현대차(1.69%), KB금융(1.51%), 삼성전기(1.07%) 등 시총 상위 종목 대부분 상승하고 있다. 같은 시각 코스닥 지수는 전 거래일보다 14.04포인트(1.73%) 오른 827.54를...",
+          "source_url": "https://www.segye.com/newsView/20260907504947?OutUrl=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체주 훈풍 6900선 재등정… 삼전닉스 동반 강세",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-07T01:04:00Z",
+          "summary": "이밖에 삼성전자우(2.35%), SK스퀘어(5.67%), 삼성전기(1.21%), LG에너지솔루션(0.7%), 현대차(1.96%), 삼성바이오로직스(0.41%) 등이 상승하고 있다. 반면 삼성SDI(-0.18%), 셀트리온(-0.53%), 삼성화재(-0.9%) 등은 하락세다....",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169589",
+          "relevance": "high"
+        },
+        {
+          "headline": "애플 폴더블 출격…삼성·LG 수혜 본격화",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:01:00Z",
+          "summary": "■ 국내 부품주, 애플 폴더블 수혜 집중: 9일(현지시간) 출시되는 애플 첫 폴더블폰 핵심 부품을 삼성디스플레이·LG이노텍·삼성전기·SK하이닉스(000660) 등 국내 기업들이 주도 공급한다. 스마트폰 시장이 전년 대비...",
+          "source_url": "https://www.sedaily.com/article/20087830?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성전기 주가, 9월 7일 장중 1,414,000원 0.93% 상승",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T01:00:00Z",
+          "summary": "|중앙이코노미뉴스 김영진 기자|출처=네이버페이 증권 7일 오전 9시 53분 기준, 네이버페이 증권에 따르면 삼성전기는 지난 종가 1,401,000원보다 13,000원 상승한 1,414,000원을 기록하고 있다. 이는 약 0.93%의...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=545964",
+          "relevance": "high"
+        },
+        {
+          "headline": "아스트라 돌풍, 이번엔 정말 ‘칠천피’ 재돌파?…코스피, 6900선 회복 [...",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 코스닥 지수도 상승세를 나타내고...",
+          "source_url": "https://biz.heraldcorp.com/article/10864511?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관 모처럼 ‘쌍끌이’…코스피 3% 급등하며 6900선 회복[마켓시...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "SK스퀘어(402340)도 6.44% 뛰었고 삼성전기(009150)는 2.07% 상승하고 있다. 반도체 장비주에도 온기가 번지고 있다. 이오테크닉스(039030)가 6.32% 급등하고 있으며 원익IPS(240810)는 3.92%, 주성엔지니어링(036930)은 2.58...",
+          "source_url": "https://www.sedaily.com/article/20087844?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"땡큐, 오픈AI\"...코스피, 미국발 훈풍에 6,900선 탈환",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T00:51:00Z",
+          "summary": "시가총액 상위주 중 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 한지영 키움증권 연구원은 \"지난 금요일(4일)...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070134&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 코스피, 외국인·기관 순매수에 3%대 상승",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "SK스퀘어(6.05%), 삼성물산(4.09%), 삼성전기(3.64%), 삼성전자우(2.35%), 현대차(1.96%), KB금융(1.69%) 등도 강세를 나타내고 있다. LG에너지솔루션(0.42%)과 삼성바이오로직스(0.28%)도 상승 중이다. 코스닥도 상승세를...",
+          "source_url": "https://www.newspim.com/news/view/20260907000202",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍에 3%대 급등…6900선 회복",
+          "publisher": "ppss.kr",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "삼성전기와 현대차도 각각 2.50%, 1.83% 상승하고 있다. 업종별로도 반도체를 포함한 기술주 강세가 두드러진다. 전기·전자가 4.96% 상승한 가운데 제조업 3.95%, 금융 2.51%, 유통 2.45% 등 대부분 업종이 오르고 있다....",
+          "source_url": "https://www.ppss.kr/news/articleView.html?idxno=309118",
+          "relevance": "high"
+        },
+        {
+          "headline": "'아스트라 훈풍'에 반도체주 날았다…코스피 6900선 재탈환",
+          "publisher": "kado.net",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "시가총액 상위주 가운데 삼성전기는 2.50%, LG에너지솔루션은 0.42%, 현대차는 1.83% 오르고 있다. 반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 각각 하락했다. 업종별로는 전기·전자가 4.96% 상승했고...",
+          "source_url": "https://www.kado.net/news/articleView.html?idxno=2070949",
+          "relevance": "high"
+        },
+        {
+          "headline": "'불기둥' 삼성전자·SK하이닉스⋯코스피 6900선 복귀",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "삼성전기(1.78%), LG에너지솔루션(0.84%), 현대차(2.35%), 삼성바이오로직스(0.28%), KB금융(1.79%), 삼성생명(4.20%) 등 시가총액 상위 종목들도 일제히 상승하고 있다. 코스닥 지수는 전 거래일 대비 11.60(1.43%) 오른 825....",
+          "source_url": "http://www.inews24.com/view/2002535",
+          "relevance": "high"
+        },
+        {
+          "headline": "[1% 초고수의 개장선택] 로봇주 팔고 반도체주 샀다",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "삼성전자와 SK하이닉스뿐 아니라 삼성전기와 하나마이크론이 각각 순매수 3위와 4위에 올랐다. 반도체 공정 장비업체 피에스케이가 9위, 반도체 기판업체 심텍이 10위를 차지했다. 메모리 대형주부터 후공정, 장비...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723193",
+          "relevance": "high"
+        },
+        {
+          "headline": "애플 첫 폴더블폰 뜯어보니…핵심 부품은 '한국산' [영상PICK]",
+          "publisher": "metroseoul.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "삼성전기는 AP용 반도체 기판과 전류를 안정적으로 공급하는 MLCC를 공급하고, LG이노텍도 통신칩용 기판을 맡는다. 폴더블 아이폰은 가격이 2000~2500달러, 한화 약 270만~340만원에 달하는 초고가 제품으로 올해 출하량은...",
+          "source_url": "http://www.metroseoul.co.kr/article/20260907500057",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 훈풍에 3%대 급등 6900선 돌파…삼전3%·닉스5%↑",
+          "publisher": "beyondpost.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "삼성전자(3.91%), SK하이닉스(5.65%), 삼성전자우(2.77%), SK스퀘어(6.24%), 삼성전기(1.64%), LG에너지솔루션(0.70%), 현대차(2.61%), 삼성바이오로직스(0.35%), 삼성생명(3.87%), KB금융(1.69%) 전부 상승 중이다. 키움증권 한지영...",
+          "source_url": "http://www.beyondpost.co.kr/view.php?ud=202609070943067703be44c0aacd_30",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 삼전닉스 ‘쑥’…코스피 6900선 회복 [시황]",
+          "publisher": "dailian.co.kr",
+          "published_at": "2026-09-07T00:42:00Z",
+          "summary": "이 외에도 SK스퀘어(6.34%)·삼성전기(1.93%)·LG에너지솔루션(0.70%)·현대차(2.35%)·삼성바이오로직스(0.21%)·KB금융(1.69%)·삼성생명(4.03%) 등이 오르고 있다. 같은 시간 코스닥 지수는 전 거래일보다 13.41포인트(1.65...",
+          "source_url": "https://www.dailian.co.kr/news/view/1687085/?sc=Naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_9월 7일",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융, 한화에어로스페이스",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070004",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 코스피 3%대 급등…6900선 안팎 등락[개장시황]",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "SK스퀘어(402340)(6.63%), SK하이닉스(000660)(6.13%), 삼성물산(028260)(4.77%), 삼성전자(005930)(4.70%), 삼성생명(032830)(4.54%), 삼성전기(009150)(3.21%), 삼성전자우(005935)(3.03%), 현대차(005380)(2.35%), LG에너지솔루션(373220)(0.56...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6281791",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등…코스피 6900선 재탈환",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T00:37:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0....",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063013",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_8월 31일_오차율",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "빅터뉴스 빅터뉴스 기자 ▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융...",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070002",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6900선 돌파…외인·기관 매수에 대형주 동반 상승",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "삼성전기는 3.28%, LG에너지솔루션은 0.7%, 현대차는 2.48%, 삼성바이오로직스는 0.41%, KB금융은 1.45%, 삼성생명은 3.7% 올랐다. 코스닥도 상승세를 나타냈다. 같은 시각 코스닥지수는 전 거래일 대비 9.57p(1.18...",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145568",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전·하이닉스 장 초반 강세…코스피 6900선 출발[개장시황]",
+          "publisher": "newsway.co.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "삼성전자우는 2.09%, SK스퀘어는 5.67%, 삼성전기는 3.57% 오르고 있다. 코스닥은 전 거래일보다 9.41포인트(1.16%) 오른 822.91로 개장한 뒤 같은 시각 825.24를 나타내고 있다. 개인이 155억원을 순매수한 반면...",
+          "source_url": "https://www.newsway.co.kr/news/view?ud=2026090709254172940",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6900선 재탈환…외인·기관 반도체 사자 행진",
+          "publisher": "kmib.co.kr",
+          "published_at": "2026-09-07T00:35:00Z",
+          "summary": "현대차(1.83%), 삼성전기(2.50%), LG에너지솔루션(0.42%) 등도 오름세를 탄 반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11%)은 약세를 보였다. 업종별로는 전기·전자(4.96%)와 제조업(3.95%)이 장을 주도했으나...",
+          "source_url": "https://www.kmib.co.kr/article/view.asp?arcid=9000009650&cp=nv",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3%대 급등...6900선 회복",
+          "publisher": "cstimes.com",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "이 외에도 SK스퀘어(6.34%), 삼성전기(2.36%), 현대차(1.96%), 삼성생명(4.54%), 삼성물산(3.81%) 등 전 종목이 상승했다. 같은 시각 코스닥도 큰 폭으로 올랐다. 코스닥 지수는 전일 대비 11.41포인트(1.40%)  오른 824....",
+          "source_url": "https://www.cstimes.com/news/articleView.html?idxno=719581",
+          "relevance": "high"
+        },
+        {
+          "headline": "3% 상승 출발 코스피, 6900선 탈환 목전…삼전닉스도 큰폭 올라",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "삼성전자(4.11%), SK하이닉스(5.77%), SK스퀘어(6.05%), 삼성전기(4.14%), 현대차(1.04%), 삼성바이오로직스(0.41%), KB금융(1.34%), 삼성생명(3.87%), 삼성물산(3.0%) 등 전반적으로 오르고 있다. 코스닥은 전일 대비 7.76포인트...",
+          "source_url": "https://www.mk.co.kr/article/12145772",
+          "relevance": "high"
+        },
+        {
+          "headline": "[장초반 시황] 코스피 3% 급등 6900선 회복…美 반도체 훈풍에 SK하이닉...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "이밖에 삼성전자우(3.03%), 삼성전기(2.36%), KB금융(1.98%), 현대차(1.96%), 삼성바이오로직스(0.48%), LG에너지솔루션(0.42%) 등 시가총액 상위 10개 종목이 모두 상승세를 보이고 있다. 코스닥시장에서는 반도체 장비주가...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484428",
+          "relevance": "high"
+        },
+        {
+          "headline": "[인터뷰] 조상호 세종시장 \"서울은 경제·금융, 세종은 정치·행정…대...",
+          "publisher": "weekly.hankooki.com",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "특히 삼성전기의 8조 원 규모 공장 증설 투자계획은 세종시 출범 이후 단일 사업 기준 역대 최대 규모라는 점에서 조 시장이 기대를 걸고 있는 사업이다. 그가 궁극적으로 만들고 싶은 것은 단순히 '기업 몇 곳이 들어오는...",
+          "source_url": "https://weekly.hankooki.com/news/articleView.html?idxno=7182705",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승(종합)",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T00:33:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0....",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907031051008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3%대 상승 출발···삼전닉스 4~5%대 급등",
+          "publisher": "seoulfn.com",
+          "published_at": "2026-09-07T00:32:00Z",
+          "summary": "삼성전자(4.31%)와 SK하이닉스(5.89%)를 비롯해 삼성전자우(3.03%), SK스퀘어(6.24%), 삼성전기(2.36%) 등 반도체 관련 종목이 일제히 오르고 있다. LG에너지솔루션(0.42%), 현대차(1.83%), 삼성바이오로직스(0.41...",
+          "source_url": "https://www.seoulfn.com/news/articleView.html?idxno=637357",
+          "relevance": "high"
+        },
+        {
+          "headline": "[국내증시 개장시황] 국내 증시 강세 마감, 코스피 3.21% 상승",
+          "publisher": "tokenpost.kr",
+          "published_at": "2026-09-07T00:32:00Z",
+          "summary": "코스피 시가총액 상위 종목으로는 삼성전자(4.11%), SK하이닉스(5.77%), SK스퀘어(6.34%), 삼성전기(1.71%), 현대차(2.48%)가 상승 중이다. 같은 시각 코스닥지수는 10.13포인트(1.25%) 상승한 823.63에 거래 중이다....",
+          "source_url": "https://www.tokenpost.kr/news/market/403575",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체주 급등에 코스피 6900선 회복…외인·기관 '쌍끌이'",
+          "publisher": "ezyeconomy.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "▲삼성전자우(3.03%) ▲삼성전기(3.28%) 등 반도체 관련주도 동반 강세다. 이 밖에 ▲LG에너지솔루션(0.70%) ▲현대차(2.22%) ▲삼성바이오로직스(0.48%) ▲삼성물산(4.63%) ▲KB금융(1.45%) 등도 상승하고 있다....",
+          "source_url": "https://www.ezyeconomy.com/news/articleView.html?idxno=239410",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 호조에 3% 급등…6900선 회복",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "삼성전자우(3.03%), SK스퀘어(6.82%), 삼성전기(2.36%), LG에너지솔루션(0.70%), 현대차(1.96%), 삼성바이오로직스(0.48%), 삼성생명(1.98%), 삼성물산(4.54%) 등 모두 강세를 보이고 있다. 한지영 키움증권 연구원은 \"국내외...",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609070922344137923c501012_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 랠리에 3%대 급등...6900선 회복",
+          "publisher": "greened.kr",
+          "published_at": "2026-09-07T00:29:00Z",
+          "summary": "이 밖에도 삼성전자우(+2.61%), SK스퀘어(+6.34%), 삼성전기(+3.14%), LG에너지솔루션(+0.70%), 현대차(+2.48%), 삼성바이오로직스(+0.41%), 삼성물산(+4.50%), KB금융(+1.45%) 등이 강세를 보이고 있다. 업종별로는 반도체 업종의...",
+          "source_url": "https://www.greened.kr/news/articleView.html?idxno=349349",
+          "relevance": "high"
+        },
+        {
+          "headline": "[EBN 데이터센터] 코스피, 6800선 돌파 상승 출발…외국인·기관 동반 매...",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T00:28:00Z",
+          "summary": "삼성전자우는 2.82%, SK스퀘어는 5.86%, 삼성전기는 2.00% 각각 올랐다. LG에너지솔루션은 0.56%, 현대차는 1.83%, 삼성바이오로직스는 0.35%, 삼성생명은 4.37%, KB금융은 1.98% 상승했다. 반도체와 대형 정보기술 종목...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723188",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인·기관 동반 매수에 코스피 3%대 급등…삼성전자·SK하이닉스 강세",
+          "publisher": "ddaily.co.kr",
+          "published_at": "2026-09-07T00:26:00Z",
+          "summary": "SK스퀘어는 6.24%, 삼성전자우는 2.97%, 삼성전기는 2.28% 오르고 있다. 삼성생명도 4.62% 상승 중이며 KB금융과 현대차는 각각 1.92%, 1.83% 강세다. 다만 지수 급등에도 하락 종목이 상승 종목보다 많다....",
+          "source_url": "https://www.ddaily.co.kr/page/view/2026090709203719572",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 불붙자 코스피 6900선 돌파...외인·기관 '쌍끌이'",
+          "publisher": "digitaltoday.co.kr",
+          "published_at": "2026-09-07T00:26:00Z",
+          "summary": "삼성전기(3.07%), 삼성물산(4.50%), 현대차(2.22%), KB금융(1.51%), 삼성바이오로직스(0.48%), LG에너지솔루션(0.28%) 등도 상승하고 있다. 코스닥도 상승하고 있다. 같은 시각 코스닥은 전 거래일보다 10.08포인트(1.24...",
+          "source_url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=698601",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 훈풍에 3% '급등'…6900선 탈환",
+          "publisher": "newsworks.co.kr",
+          "published_at": "2026-09-07T00:22:00Z",
+          "summary": "이밖에 ▲삼성전자우(2.71%) ▲SK스퀘어(6.34%) ▲삼성전기(3.57%) ▲LG에너지솔루션(0.42%) ▲현대차(2.41%) ▲삼성바이오로직스(0.8%) ▲KB금융(1.86%) ▲삼성물산(3.95%) 등도 상승하고 있다. 한지영 키움증권 연구원은...",
+          "source_url": "https://www.newsworks.co.kr/news/articleView.html?idxno=852803",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3% 급등해 6900선 탈환... 삼성전자·하이닉스 동반 강세",
+          "publisher": "joseilbo.com",
+          "published_at": "2026-09-07T00:21:00Z",
+          "summary": "SK스퀘어와 삼성전기 등 반도체·IT 관련주뿐 아니라 금융·자동차 등 대형주 전반으로 온기가 확산되는 모습이다. 국내 반도체주를 끌어올린 것은 미국 시장에서 먼저 불붙은 메모리 랠리다. 지난 4일(현지시간)...",
+          "source_url": "http://www.joseilbo.com/news/news_read.php?uid=575183&class=53&grp=",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3% 급등하며 6900선 탈환...삼전 4%·하이닉스 5% 강세",
+          "publisher": "metroseoul.co.kr",
+          "published_at": "2026-09-07T00:20:00Z",
+          "summary": "이외에도 삼성전기(3.64%)와 삼성물산(3.81%)이 3%대 상승했으며, 현대차(1.83%), KB금융(1.69%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.35%) 등이 모두 올랐다. 같은 시각 코스닥지수는 전일보다 12.03포인트(1.48...",
+          "source_url": "http://www.metroseoul.co.kr/article/20260907500039",
+          "relevance": "high"
+        },
+        {
+          "headline": "'삼전닉스' 날았다…코스피, 3%대 급등에 6900선 회복",
+          "publisher": "news.tf.co.kr",
+          "published_at": "2026-09-07T00:20:00Z",
+          "summary": "시가총액 상위 10개 종목 모두 오름세다 상승률은 삼성전자(4.31%) SK하이닉스(5.95%) 삼성전자우(2.71%) SK스퀘어(5.76%) 삼성전기(3.57%) LG에너지솔루션(0.42%) 현대차(2.41%) 사성바이오로직스(0.48%) KB금융(1.86...",
+          "source_url": "https://news.tf.co.kr/read/economy/2362502.htm",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"AGI 시대 왔다\" 젠슨 황 한 마디에…삼전닉스 일제히 '불기둥'",
+          "publisher": "hankyung.com",
+          "published_at": "2026-09-07T00:20:00Z",
+          "summary": "SK스퀘어는 5.67% 오른 110만4000원, 삼성전자 우선주는 2.30% 오른 19만6000원, DB하이텍은 12.90% 오른 10만1400원, 삼성전기는 3.34% 오른 144만9000원에 거래 중이다. 이날 반도체 관련주의 상승세는 미국 오픈AI의 새 AI...",
+          "source_url": "https://www.hankyung.com/article/2026090776866",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 장초반 3% 급등에 6900 안착 시도...톱텐 동반 상승",
+          "publisher": "opinionnews.co.kr",
+          "published_at": "2026-09-07T00:18:00Z",
+          "summary": "이어 삼성전기 3.5%, LG에너지솔루션 0.56%, 현대차 1.96%, 삼성바이오로직스 0.35%, 삼성생명 3.7%, KB금융 1.98% 등이다. 10위 이하에서도 삼성물산 3.81%, 한화에어로스페이스 1.52%, 신한지주 2.72...",
+          "source_url": "http://www.opinionnews.co.kr/news/articleView.html?idxno=144055",
+          "relevance": "high"
+        },
+        {
+          "headline": "SK하이닉스 6% 급등…'GPT-6 아스트라'에 반도체株 강세 [핫종목]",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T00:16:00Z",
+          "summary": "삼성전자(005930)(4.31%), SK스퀘어(402340)(6.34%), 삼성전기(009150)(3.57%) 등 반도체 관련주도 동반 상승하고 있다. 반도체주 강세에는 오픈AI의 GPT-6 아스트라 공개 이후 AI 연산 수요가 확대될 것이라는 기대가 영향을...",
+          "source_url": "https://www.news1.kr/finance/general-stock/6281745",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 코스피 3%대 급등…삼성전자·SK하이닉스 강세에 6900선 터치",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T00:16:00Z",
+          "summary": "SK스퀘어(5.57%), 삼성전기(3.35%)도 강세다. 현대차(1.69%), KB금융(1.74%) 등도 오름세를 보이고 있다. 코스닥지수는 같은 시각 전 거래일보다 11.76포인트(1.45%) 오른 825.26을 기록 중이다. 개인이 236억원을 순매수하는...",
+          "source_url": "https://www.ajunews.com/view/20260907091118879",
+          "relevance": "high"
+        },
+        {
+          "headline": "[서울데이터랩]코스피, 개장 직후 3% 넘게 올라 6919.25 기록",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-07T00:16:00Z",
+          "summary": "SK스퀘어(402340)는 6.34%, 삼성물산(028260)은 4.50%, 삼성전기(009150)는 3.14%, 현대차(005380)는 2.48%, KB금융(105560)은 1.45% 각각 올랐다. LG에너지솔루션(373220)과 삼성바이오로직스(207940)도 각각 0.70%, 0.41...",
+          "source_url": "https://www.seoul.co.kr/news/economy/securities/2026/09/07/20260907500023?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[서울데이터랩]개장 직후 인기 검색 종목 20選",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-07T00:15:00Z",
+          "summary": "검색 상위권에서는 삼성전기(009150)와 한미반도체(042700)도 각각 4.00%, 6.52% 상승하며 강세를 보였다. LG전자(066570)는 21만8000원으로 8.19% 올라 주요 대형주 가운데 상대적으로 높은 상승률을 나타냈고...",
+          "source_url": "https://www.seoul.co.kr/news/economy/securities/2026/09/07/20260907500022?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 6900선 급등 출발…외인·기관 쌍끌이에 삼전·SK하닉 ‘강세’",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-07T00:14:00Z",
+          "summary": "삼성전기 역시 3%대 강세다. 삼성생명과 삼성물산은 각각 4%대 상승하고 있으며 현대모비스는 2%대, KB금융은 1%대 오르고 있다. 현대차와 두산에너빌리티, 신한지주, 기아 등도 강세다. 업종별로는 전기·전자가 4.99...",
+          "source_url": "https://www.dt.co.kr/article/12082392?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 3%대 상승 출발…코스닥도 1%↑",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-07T00:14:00Z",
+          "summary": "시가총액 상위 종목 중에선 삼성전자(4.11%), SK하이닉스(5.49%), SK스퀘어(6.05%), 삼성전기(3.64%), LG에너지솔루션(0.42%), 현대차(1.96%), 삼성바이오로직스(0.41%), KB금융(1.69%), 삼성물산(3.81%), 삼성생명(3.70%) 등 전...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622439",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장 시황] 코스피,상승 개장…미 고용 강세·AI 부양 심리 주도",
+          "publisher": "fieldnews.kr",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "삼성전자는 26만6000원(+4.11%)으로 거래 중이며, SK하이닉스는 173만8000원(+5.53%), 삼성전기는 144만9000원(+3.43%)을 나타냈다. SK스퀘어는 110만3000원(+5.96%)으로 반도체 계열사 전반이 강세를 보였다. 코스피에서는...",
+          "source_url": "http://www.fieldnews.kr/news/articleView.html?idxno=31324",
+          "relevance": "high"
+        },
+        {
+          "headline": "인천시, 산업과 MICE를 잇다… 국제반도체기판·첨단패키징산업전 개최",
+          "publisher": "siminsori.com",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "LG이노텍, 삼성전기, 심텍, 하나마이크론, 스태츠칩팩코리아 등 국내외 229개 기업이 참여하며, 총 895개 부스 규모로 역대 최대 규모로 열린다. 전시회에서는 반도체 산업의 핵심 소재·부품·장비를 비롯해 PCB와...",
+          "source_url": "https://www.siminsori.com/news/articleView.html?idxno=401388",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 메모리 반도체주 훈풍에…코스피도 3%대 상승 출발",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "이외에도 SK스퀘어, 삼성전기, 현대차, 삼성바이오로직스, 삼성생명, KB금융 등이 오르고 있는 가운데 LG에너지솔루션 홀로 하락 중이다. 같은 시간 코스닥 지수는 1.44%(11.74포인트) 오른 825.24를 가리키고 있다....",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/07/JG2ZCA4H3RH2FCJOCANWHFDKTA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3% 급등해 6900선 탈환 시도…삼전닉스↑",
+          "publisher": "hankyung.com",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "이 밖에 SK스퀘어(5.57%), 삼성전기(3.43%), 삼성물산(3.41%), 삼성생명(3.70%), KB금융(1.57%), 현대차(1.43%) 등 시가총액 상위 종목 대부분이 상승하고 있다. LG에너지솔루션과 삼성바이오로직스는 보합세다. 한지영...",
+          "source_url": "https://www.hankyung.com/article/2026090775696",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 금리 진정에 위험선호 회복… 코스피 3% 급반등",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "시가총액 상위 종목 가운데 SK스퀘어(5.86%), 삼성전기(4.00%), 삼성생명(3.87%), 삼성물산(3.13%), KB금융(1.40%), 현대차(1.30%), 삼성바이오로직스(0.28%) 등 대부분 종목이 상승세다. 지난 4일 발표된 미국의 8월 비농업...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727436",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 마이크론 등 반도체주 '급등' 속...코스피도 '급등 출발'",
+          "publisher": "choicenews.co.kr",
+          "published_at": "2026-09-07T00:10:00Z",
+          "summary": "시가총액 상위종목 중 SK스퀘어(+5.86%), 삼성전기(+3.50%), 삼성생명(+3.87%), 삼성물산(+3.00%), SK(+6.11%) 등이 급등 거래 중이다. 코스닥 지수는 오전 9시 3분 현재 직전거래일 대비 8.79포인트(1.08%) 상승한 822.29에서...",
+          "source_url": "http://www.choicenews.co.kr/news/articleView.html?idxno=171007",
+          "relevance": "high"
+        },
+        {
+          "headline": "SK스퀘어·SK하이닉스 5%대 폭등랠리… 반도체·밸류업 모멘텀 가열",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T00:10:00Z",
+          "summary": "금융 및 물산 계열사인 삼성생명과 삼성물산이 상승세를 나타내고 있으며, 첨단 IT 부품 공급을 담당하는 삼성전기도 동반 상승 흐름에 합류했다. 우선주인 삼성전자우 역시 주주환원 기대감 속에 오름세를 보이고...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484408",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6910.78 출발…삼전·하이닉스 강세",
+          "publisher": "wikitree.co.kr",
+          "published_at": "2026-09-07T00:08:00Z",
+          "summary": "삼성전기는 전 거래일 대비 49,000원(3.50%) 올라 1,450,000원에 거래되고 있다. 고가는 1,464,000원, 저가는 1,450,000원, 거래량은 17,899주이며 거래대금은 260억 3,600만 원(26,036백만 원)이다. 삼성전기의...",
+          "source_url": "https://www.wikitree.co.kr/articles/1157697",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]오픈AI발 호재에 반도체株↑…코스피 3%대 올라 6910선",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-07T00:03:00Z",
+          "summary": "삼성전자(005930), 삼성물산(028260)은 4%대 오름 폭을 기록 중이고 삼성전기(009150), 삼성생명(032830) 등이 3% 이상 상승하고 있다. 신한지주(055550), 현대차(005380) 등은 2%대 오르고 있고 KB금융(105560)...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=02214006645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "[삼성 유리기판 승부수] 삼성전기, '글라셈'으로 유리기판 양산 공급망...",
+          "publisher": "dealsite.co.kr",
+          "published_at": "2026-09-07T00:02:00Z",
+          "summary": "②스미모토화학·동우화인켐과 합작사 설립…유리 코어부터 기판 제조까지 삼성전기가 차세대 반도체 패키지용 유리기판 양산에 대비해 핵심 소재인 유리 코어부터 공정 장비까지 공급망 구축에 속도를 내고 있다. 일본...",
+          "source_url": "https://dealsite.co.kr/articles/168332",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성전기 협력사 30곳, 10월 필리핀 투자 실사 나선다",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-06T23:56:00Z",
+          "summary": "삼성전기의 1차 협력사 약 30곳이 10월 필리핀에서 투자 실사를 진행한다. 필리핀경제구역청(PEZA)은 현지시간 4일 삼성전기 필리핀법인(SEMPHIL)의 증설에 맞춰 삼성전기 1차 협력사 약 30곳이 10월 필리핀을 방문해...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82243",
+          "relevance": "high"
+        },
+        {
+          "headline": "[인터뷰] 이승환 한강유역환경청 청장",
+          "publisher": "todayenergy.kr",
+          "published_at": "2026-09-06T23:50:00Z",
+          "summary": "녹색기업 참여 및 ESG 경영에 관심 있는 제약·제조 분야의 4개 기업을 선정해서 올해 5월에 녹색기업 기술지원 사업 발대식을 통해 오랜 기간 녹색기업으로 ESG 경영을 추진해 온 삼성전기를 포함한 관내 우수 녹색기업과의...",
+          "source_url": "https://www.todayenergy.kr/news/articleView.html?idxno=302496",
+          "relevance": "high"
+        },
+        {
+          "headline": "[프리마켓 포커스] 美 반도체 훈풍에 투심 '활짝'… 삼전·SK하닉 강세",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-06T23:16:00Z",
+          "summary": "SK스퀘어(3.36%), 삼성전기(2.43%), 삼성물산(2.18%), 삼성생명(2.18%), 현대차(1.30%), 한화에어로스페이스(0.95%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.35%), KB금융(0.17%) 등이 강세다. 이날 국내 반도체주가 프리마켓...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727432",
+          "relevance": "high"
+        },
+        {
+          "headline": "[마켓 프리뷰] 美 증시 하락에도 반도체株 강세…코스피 반등 시도",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-06T23:14:00Z",
+          "summary": "SK스퀘어(3.17%), 한미반도체(2.83%), 삼성전기(2.71%) 등 주요 반도체·기술주도 동반 강세를 보이고 있다. 앞서 4일(현지시간) 뉴욕증시는 일제히 하락했다. 다우존스30산업평균지수는 0.51% 내렸고 S&P500지수와...",
+          "source_url": "https://www.ajunews.com/view/20260907075304672",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전 3%·SK하닉 4%대 프리마켓 ‘강세’…이번 주 7000선 시험대",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-06T23:11:00Z",
+          "summary": "삼성전기도 2.43% 강세다. 시가총액 상위 종목도 대부분 오르고 있다. 삼성생명은 2.18%, 삼성물산은 1.91%, 두산에너빌리티는 1.26%, 현대차는 1.30% 상승하고 있다. 한화에어로스페이스(0.95%), 삼성SDI(0.91%), 현대모비스...",
+          "source_url": "https://www.dt.co.kr/article/12082378?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[삼성 유리기판 승부수] FC-BGA 30년 기술, 유리기판에 심는다…관건은...",
+          "publisher": "dealsite.co.kr",
+          "published_at": "2026-09-06T23:02:00Z",
+          "summary": "① 대면적·고다층·미세회로 기술 활용…AI 패키지 대형화에 차세대 기판 선점 삼성전기가 차세대 반도체 패키지 기판으로 꼽히는 유리기판 사업에 속도를 내고 있다. 30년 이상 축적한 플립칩 볼그리드어레이(FC-BGA)...",
+          "source_url": "https://dealsite.co.kr/articles/168350",
+          "relevance": "high"
+        },
+        {
+          "headline": "[증시키워드] 노조 리스크 불거진 삼성전자…로보티즈 '정부 육성책'에...",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-06T23:00:00Z",
+          "summary": "7일 금융투자업계에 따르면 이날 장 시작 전 네이버페이증권 검색 상위 목록에는 삼성전자와 SK하이닉스, 두산에너빌리티, 삼성전기, 현대차 등이 최상위권에 포진했다. 삼성전자는 검색 점유율 17.50%로 1위를...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622372",
+          "relevance": "high"
+        },
+        {
+          "headline": "[애프터마켓 리뷰] ‘흑자전환’ 로보티즈 강세에 국내 로봇주 ‘동반 ...",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-06T22:52:00Z",
+          "summary": "SK스퀘어도 따라서 5.81% 상승, 삼성전기까지 4.30% 오른 반면, LG에너지솔루션은 1.37% 하락하면서 36만 원선에 마감했습니다. 코스닥도 살펴보시죠. 코스닥도 810포인트 선을 회복한 채 마감했는데요. 알테오젠 2.30% 상승...",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000333018?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더벨][지배구조 분석 | 우진아이엔에스] 규제권 진입 목전, 경영승계·...",
+          "publisher": "thebell.co.kr",
+          "published_at": "2026-09-06T22:02:00Z",
+          "summary": "한때 하이테크부문의 주요 발주처로 이름을 올리던 삼성물산, 삼성전기, 삼성전자 등으로부터 추가 수주를 올리지 못한 영향이다. 올해 들어서는 SK에코플랜트가 발주한 SK하이닉스 용인 클러스터의 설비·소방 공사와...",
+          "source_url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609021543394640106629",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 5.61,
+      "oldest_relevant_at": "2026-09-06T22:02:00Z",
+      "collected_at": "2026-09-07T03:38:51.170374Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003805",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003805"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002842",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002842"
+        }
+      ],
+      "collected_at": "2026-09-07T03:38:49.768428Z",
+      "request_id": "6cb23ccc-4ddf-4366-8fa8-a62268e57713",
+      "source_type": "dart",
+      "stock_code": "009150",
+      "company_name": "삼성전기"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260310003071",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "구 분 | 당기말 | 전기말\n5% 상승시 | 5% 하락시 | 5% 상승시 | 5% 하락시\nUSD | 29,960,543 | (29,960,543) | 49,811,014 | (49,811,014)\nEUR | 340,296 | (340,296) | 692,643 | (692,643)\nJPY | (3,569,285) | 3,569,285 | (1,888,045) | 1,888,045\nPHP | (4,273,291) | 4,273,291 | (2,276,649) | 2,276,649\nMXN | 92,987 | (92,987) | 16,627 | (16,627)\nVND | (1,405,737) | 1,405,737 | (927,319) | 927,319\nSGD | (95,265) | 95,265 | (124,643) | 124,643\nTWD | (203,719) | 203,719 | (141,911) | 141,911\n기타 | (63) | 63 | (16,999) | 16,999\n계 | 20,846,466 | (20,846,466) | 45,144,718 | (45,144,718)\n상기 민감도 분석은 보고기간말 현재 기능통화 이외의 외화로 표시된 화폐성 자산 및부채를 대상으로 하였습니다.\n(3) 기타 가격위험기타 가격위험은 이자율위험이나 환위험 이외의 시장가격의 변동으로 인하여 금융상품의 공정가치나 미래현금흐름이 변동할 위험이며, 당사의 공정가치측정금융자산 중 시장성 있는 지분증권은 가격변동위험에 노출되어 있으며, 보고기간말 현재 해당주식의 주가가 5% 변동시 상장지분상품의 가격변동이 기타포괄손익(기타포괄손익-공정가치측정금융자산평가손익)에 미치는 영향은 다음과 같습니다.\n(단위: 천원)\n구 분 | 5% 상승시 | 5% 하락시\n법인세효과 차감전 기타포괄손익 | 22,113,402 | (22,113,402)\n법인세효과 | (5,749,484) | 5,749,484\n법인세효과 차감후 기타포괄손익 | 16,363,918 | (16,363,918)\n나. 신용위험",
+          "score": 0.472293,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "(2) 환위험환위험은 환율의 변동으로 인하여 금융상품의 공정가치나 미래현금흐름이 변동할 위험입니다. 당사는 해외 영업활동과 해외 종속기업에 대한 순투자로 인하여 USD및 EUR 등의 환위험에 노출되어 있습니다. 보고기간말 현재 기능통화 이외의 외화로 표시된 화폐성자산 및 부채의 장부금액은 다음과 같습니다.\n(단위: 천원)\n구 분 | 당기말 | 전기말\n자 산 | 부 채 | 자 산 | 부 채\nUSD | 3,647,849,689 | 3,048,638,818 | 3,063,249,089 | 2,067,028,806\nEUR | 10,127,726 | 3,321,796 | 69,072,236 | 55,219,377\nJPY | 3,281,228 | 74,666,940 | 12,669,579 | 50,430,488\nPHP | 12,286,560 | 97,752,385 | 11,699,277 | 57,232,256\nMXN | 1,859,733 | - | 332,534 | -\nVND | 3,713,829 | 31,828,560 | 4,465,401 | 23,011,775\nSGD | 1,019,020 | 2,924,311 | 977,759 | 3,470,629\nTWD | 316,298 | 4,390,673 | 41,820 | 2,880,037\n기타 | 10,978 | 12,244 | 15,043 | 355,015\n계 | 3,680,465,061 | 3,263,535,727 | 3,162,522,738 | 2,259,628,383\n당사는 내부적으로 환율 변동에 대한 환위험을 정기적으로 측정하고 있습니다. 보고기간말 현재 각 외화에 대한 기능통화의 환율 5% 변동시 환율변동이 세전손익에 미치는 영향은 다음과 같습니다.\n(단위: 천원)",
+          "score": 0.457364,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "당사의 주요 금융부채는 차입금, 매입채무및기타채무, 리스부채 및 기타부채 등으로 구성되어 있으며, 이러한 금융부채는 영업활동을 위한 자금을 조달하기 위하여 발생하였습니다. 또한 당사는 영업활동에서 발생하는 매출채권, 현금 및 단기예금 등과 같은 다양한 금융자산도 보유하고 있습니다.\n당사의 금융자산 및 금융부채에서 발생할 수 있는 주요 위험은 시장위험, 신용위험 및 유동성위험입니다. 당사의 주요 경영진은 아래에서 설명하는 바와 같이, 각 위험별 관리절차를 검토하고 정책에 부합하는지 검토하고 있습니다. 또한 당사는 투기 목적의 파생상품거래를 실행하지 않는 것이 기본적인 정책입니다.\n당사의 재무위험 관리는 재경팀이 주관하고 있으며, 사업부, 국내ㆍ외 종속기업과 공조하여 주기적으로 재무위험의 측정ㆍ평가 및 헷지 등을 실행하고 있습니다. 가. 시장위험\n시장위험은 시장가격의 변동으로 인하여 금융상품의 공정가치가 변동할 위험입니다.시장위험은 이자율위험, 환위험 및 기타 가격위험의 세가지 유형으로 구성됩니다. 다음의 민감도 분석은 당기말 및 전기말과 관련되어 있습니다.\n(1) 이자율위험 이자율위험은 시장이자율의 변동으로 인하여 금융상품의 공정가치가 변동할 위험입니다. 당사는 이자율 변동으로 인한 불확실성의 최소화를 위한 정책을 수립 및 운용하고 있습니다. 보고기간말 현재 당사는 주로 변동이자부 차입금과 관련된 시장이자율의 변동위험에 노출되어 있습니다.\n보고기간말 현재 변동이자율이 적용되는 차입금은 738,267,028천원(전기말 : 602,647,615천원)이며, 다른 모든 변수가 동일하고 이자율이 100 basis points 변동하는 경우, 변동이자부 차입금의 이자비용이 당기 세전손익에 미치는 영향은 다음과 같습니다.\n(단위: 천원)\n구 분 | 당기말 | 전기말\n100 bp 상승시 | 100 bp 하락시 | 100 bp 상승시 | 100 bp 하락시\n이자비용 | (7,382,670) | 7,382,670 | (6,026,476) | 6,026,476",
+          "score": 0.450158,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "신용위험은 거래상대방이 의무를 이행하지 않아 재무손실이 발생할 위험입니다. 당사는 영업활동과 재무활동에서 신용위험에 노출되어 있습니다.(1) 매출채권및기타채권 등당사는 모든 신용거래 상대방에 대하여 신용검증절차를 수행하여 신용상태가 건전한 상대방과 거래하고 있습니다. 또한, 대손위험에 대한 당사의 노출정도가 중요하지 않은 수준으로 유지될 수 있도록 지속적으로 신용도를 재평가하는 등 매출채권및기타채권 잔액에 대한 지속적인 관리업무를 수행하고 있습니다. 당사의 대손위험에 대한 최대 노출정도는 다음과 같습니다.\n(단위: 천원)\n구 분 | 당기말 | 전기말\n매출채권 | 1,792,567,378 | 1,390,503,186\n기타채권 및 대여금 | 27,369,805 | 42,104,621\n당사는 상기 채권에 대해 매 보고기간말에 미래전망정보에 근거하여 기대신용손실을 평가합니다. 손상 방식은 신용위험의 유의적인 증가 여부에 따라 결정됩니다. 단, 매출채권에 대해 당사는 채권의 최초 인식시점부터 전체기간 기대신용손실을 인식하는 간편법을 적용합니다. 해외거래처에 대한 신용위험과 관련하여 한국무역보험공사 및 해외 현지보험회사 등과 보증보험계약을 체결하고 있습니다.(2) 기타의 자산현금, 단기예금 등으로 구성되는 당사의 기타의 자산으로부터 발생하는 신용위험은 거래상대방의 부도 등으로 발생합니다. 이러한 경우 당사의 신용위험 노출정도는 최대 해당 금융상품 장부금액과 동일한 금액이 될 것입니다. 한편, 당사는 우리은행 등의 금융기관에 현금및현금성자산 및 단기금융상품 등을 예치하고 있으며, 신용등급이 우수한 금융기관과 거래하고 있으므로 금융기관으로부터의 신용위험은 제한적입니다.\n다. 유동성위험",
+          "score": 0.419513,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "유동성위험은 만기까지 모든 금융계약상의 약정사항들을 이행할 수 있도록 자금을 조달하지 못할 위험입니다. 당사는 특유의 유동성 전략 및 계획을 통하여 자금부족에 따른 위험을 관리하고 있습니다. 당사는 금융상품의 만기와 영업현금흐름의 추정치를 고려하여 금융자산과 금융부채의 만기를 대응시키고 있습니다.\n다음은 금융부채의 만기에 따른 상환계획으로서 할인되지 않은 계약상 금액입니다. 금융부채의 잔존만기별 현금흐름은 할인되지 아니한 명목금액으로서 상환을 요구 받을 수 있는 기간 중 가장 이른 일자를 기준으로 작성되었습니다.\n(1) 당기말\n(단위: 천원)\n구 분 | 3개월 이내 | 3개월~1년 | 1년~5년 | 5년 초과 | 계\n매입채무및기타채무 | 1,031,714,713 | 25,228,229 | 1,440 | - | 1,056,944,382\n단기차입금 | 1,608,096,325 | 403,940,392 | - | - | 2,012,036,717\n장기차입금 | 1,958,426 | 5,984,080 | 194,898,603 | - | 202,841,109\n리스부채 | 7,855,497 | 20,580,235 | 58,602,085 | 10,276,828 | 97,314,645\n기타부채 | - | 5,549,418 | - | - | 5,549,418\n계 | 2,649,624,961 | 461,282,354 | 253,502,128 | 10,276,828 | 3,374,686,271\n(2) 전기말\n(단위: 천원)",
+          "score": 0.417331,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310003071",
+      "collected_at": "2026-09-07T03:38:49.697275Z",
+      "request_id": "976fad75-e51e-4330-a440-45970d85db90",
+      "source_type": "dart",
+      "stock_code": "009150",
+      "company_name": "삼성전기"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "삼성전기",
+      "stock_code": "009150",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:38:49.396633+00:00",
+        "to": "2026-09-07T03:38:49.396633+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 2035,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 1585.0,
+        "ratio": 1.28,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 30,
+        "neutral_count": 33,
+        "negative_count": 37
+      },
+      "top_topics": {
+        "expectations": [
+          "해외 MLCC·기판주 상승 파급",
+          "성장 모멘텀에 따른 추가 상승",
+          "외국인·기관 동반 매수",
+          "145만원 재도전"
+        ],
+        "concerns": [
+          "높은 PER과 고평가",
+          "외국인·기관 매도",
+          "대규모 기계적 매도 부담",
+          "반도체 대형주 대비 상승 부진",
+          "145만~147만원 저항"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "해외 MLCC·기판 업체 상승이 투자심리에 도움이 되길 기대한다.",
+          "posted_at": "2026-09-07T01:22:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "삼성전기의 성장 모멘텀을 높게 평가하며 추가 상승을 기대한다.",
+          "posted_at": "2026-09-07T01:36:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "외국인과 기관의 동반 매수에 주가 상승을 기대한다.",
+          "posted_at": "2026-09-07T01:08:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "145만원 수준에 다시 도전할 것으로 기대한다.",
+          "posted_at": "2026-09-07T02:16:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "높은 PER을 근거로 주가가 고평가됐다고 우려한다.",
+          "posted_at": "2026-09-07T01:46:00+00:00",
+          "sentiment": "negative"
+        }
+      ],
+      "collected_at": "2026-09-07T03:38:49.396633+00:00",
+      "fgi_mean": 48.22,
+      "fgi_latest": {
+        "fgi": 45.93,
+        "label": "중립",
+        "as_of": "2026-09-07T03:15:00+00:00",
+        "post_count": 1,
+        "valence_percentile": 28.07
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260904000177",
+          "published_at": "2026-09-04T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904000177"
+        },
+        {
+          "report_name": "단일판매ㆍ공급계약체결              ",
+          "receipt_number": "20260901800106",
+          "published_at": "2026-09-01T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "major",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901800106"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260812000559",
+          "published_at": "2026-08-12T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260812000559"
+        }
+      ],
+      "collected_at": "2026-09-07T03:38:50.180483Z",
+      "request_id": "72519535-3b7f-4f9c-ae8f-cacacf023539",
+      "source_type": "dart",
+      "stock_code": "009150",
+      "company_name": "삼성전기"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260901800106": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260901800106",
+        "document_type": "disclosure",
+        "content": "삼성전기/단일판매ㆍ공급계약체결/(2026.09.01)단일판매ㆍ공급계약체결\n1. 판매ㆍ공급계약 구분 | 기타 판매ㆍ공급계약\n- 체결계약명 | MLCC(Multilayer Ceramic Capacitor) 공급계약\n2. 계약내역 | 계약금액(원) | 1,072,219,807,696\n최근매출액(원) | 11,314,459,238,100\n매출액대비(%) | 9.5\n대규모법인여부 | 해당\n3. 계약상대 | 글로벌 대형기업\n- 회사와의 관계 | -\n4. 판매ㆍ공급지역 | -\n5. 계약기간 | 시작일 | 2027-01-01\n종료일 | 2027-12-31\n6. 주요 계약조건 | 계약금ㆍ선급금 유무 | 무\n대금지급 조건 등 | -\n7. 계약(수주)일자 | 2026-08-31\n8. 공시유보 관련내용 | 유보사유 | 경영상 비밀유지\n유보기한 | 2027-12-31\n9. 기타 투자판단과 관련한 중요사항\n- 상기 '2. 계약내역' 중 '계약금액'은 USD 778,946,464에 계약일(2026년 8월 31일)의 최초 고시 매매기준율(1 USD = 1,376.50 KRW)을 적용하여 산출함. - 상기 '2. 계약내역' 중 '최근매출액'은 2025년말 연결 재무제표 기준임. - 상기 계약금액 및 기간 등은 사업 과정상 변동될 수 있음. - 본 문서에 명시된 모든 일자는 한국 표준시(KST)를 기준으로 표기됨. - 계약상대방의 영업비밀 보호 요청에 따라 계약상대, 주요 계약조건은 유보기한일의 다음 영업일에 공개될 예정임. - 계약의 주요 내용이 경영상 비밀유지 필요로 인해 비공개되었으므로, 투자자는 계약의 변동 · 해지 가능성 등을 고려하여 신중히 투자하시기 바랍니다.\n※ 관련공시 | -",
+        "content_truncated": false,
+        "total_chars": 829,
+        "summary": "단일판매ㆍ공급계약체결               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901800106",
+        "collected_at": "2026-09-07T03:38:51.375545Z",
+        "report_name": "단일판매ㆍ공급계약체결              ",
+        "published_at": "2026-09-01T00:00:00Z",
+        "request_id": "25cd3bc2-8c21-487a-b5d7-7e05ddc1c7f2",
+        "source_type": "dart"
+      }
+    },
+    "20260814003805": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260814003805",
+        "document_type": "disclosure",
+        "content": "(제54기 반기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 06월 30일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 8월 14일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 삼성전기주식회사\n대 표 이 사 : | 장덕현\n본 점 소 재 지 : | 경기도 수원시 영통구 매영로 150(매탄동)\n(전 화) 031-210-5114\n(홈페이지) http://www.samsungsem.com\n작 성 책 임 자 : | (직 책) 재경팀장 (성 명) 이근목\n(전 화) 031-210-6102\n목 차\n【 대표이사 등의 확인 】 | ----------------------- | 1\nI. 회사의 개요\n1. 회사의 개요 | ----------------------- | 2\n2. 회사의 연혁 | ----------------------- | 5\n3. 자본금 변동사항 | ----------------------- | 7\n4. 주식의 총수 등 | ----------------------- | 8\n5. 정관에 관한 사항 | ----------------------- | 13\nII. 사업의 내용\n1. 사업의 개요 | ----------------------- | 16\n2. 주요 제품 및 서비스 | ----------------------- | 16\n3. 원재료 및 생산설비 | ----------------------- | 17\n4. 매출 및 수주상황 | ----------------------- | 21\n5. 위험관리 및 파생거래 | ----------------------- | 23\n6. 주요계약 및 연구개발활동 | ----------------------- | 29\n7. 기타 참고사항 | ----------------------- | 32\nIII. 재무에 관한 사항\n1. 요약재무정보 | ----------------------- | 45\n2. 연결재무제표 | ----------------------- | 47\n3. 연결재무제표 주석 | ----------------------- | 53\n4. 재무제표 | ----------------------- | 155\n5. 재무제표 주석 | ----------------------- | 160\n6. 배당에 관한 사항 | ----------------------- | 256\n7. 증권의 발행을 통한 자금조달에 관한 사항 | ----------------------- | 258\n8. 기타 재무에 관한 사항 | ----------------------- | 261\nIV. 이사의 경영진단 및 분석의견 | ----------------------- | 273\nV. 회계감사인의 감사의견 등\n1. 외부감사에 관한 사항 | ----------------------- | 275\n2. 내부통제에 관한 사항 | ----------------------- | 278\nVI. 이사회 등 회사의 기관에 관한 사항\n1. 이사회에 관한 사항 | ----------------------- | 282\n2. 감사제도에 관한 사항 | ----------------------- | 291\n3. 주주총회 등에 관한 사항 | ----------------------- | 296\nVII. 주주에 관한 사항 | ----------------------- | 300\nVIII. 임원 및 직원 등에 관한 사항\n1. 임원 및 직원 등의 현황 | ----------------------- | 307\n2. 임원의 보수 등 | ----------------------- | 315\nIX. 계열회사 등에 관한 사항 | ----------------------- | 335\nX. 대주주 등과의 거래내용 | ----------------------- | 359\nXI. 그 밖에 투자자 보호를 위하여 필요한 사항\n1. 공시내용 진행 및 변경사항 | ----------------------- | 361\n2. 우발부채 등에 관한 사항 | ----------------------- | 361\n3. 제재 등과 관련된 사항 | ----------------------- | 362\n4. 작성기준일 이후 발생한 주요사항 등 기타사항 | ----------------------- | 363\nXII. 상세표\n1. 연결대상 종속회사 현황(상세) | ----------------------- | 366\n2. 계열회사 현황(상세) | ----------------------- | 367\n3. 타법인출자 현황(상세) | ----------------------- | 387\n【 전문가의 확인 】\n1. 전문가의 확인 | ----------------------- | 388\n2. 전문가와의 이해관계 | ----------------------- | 388\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 회사의 법적ㆍ상업적 명칭 당사의 명칭은 삼성전기주식회사입니다. 영문명은 SAMSUNG ELECTRO-MECHANICS CO., LTD.입니다. 나. 설립일자 및 존속기간 당사는 1973년 8월 8일에 설립되었으며, 1979년 2월에 한국거래소에 주식을 상장하였습니다. 다. 본사의 주소, 전화번호, 홈페이지 주소 - 주 소 : 경기도 수원시 영통구 매영로 150(매탄동)- 전화번호 : 031-210-5114- 홈페이지 : http://www.samsungsem.com\n라. 연결대상 종속회사 현황(요약) 기업회계기준서(K-IFRS) 제1110호 '연결재무제표'에 의한 지배회사(최상위)인 당사의 연결대상 종속기업은 2026년 반기말 현재 15개사입니다.\n연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | - | - | - | - | -\n비상장 | 14 | 1 | - | 15 | 8\n합계 | 14 | 1 | - | 15 | 8\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n※ 연결대상 종속기업 중 국내상장 기업은 없습니다.※ 주요종속회사 여부 판단기준 : 최근사업연도(2025년)말 자산총",
+        "content_truncated": true,
+        "total_chars": 399985,
+        "summary": "반기보고서 (2026.06) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003805",
+        "collected_at": "2026-09-07T03:38:58.388994Z",
+        "report_name": "반기보고서 (2026.06)",
+        "published_at": "2026-08-14T00:00:00Z",
+        "request_id": "58c29559-6d97-4f80-acd6-16da4002c38f",
+        "source_type": "dart"
+      }
+    },
+    "20260515002842": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260515002842",
+        "document_type": "disclosure",
+        "content": "(제54기 1분기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 03월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 5월 15일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 삼성전기주식회사\n대 표 이 사 : | 장덕현\n본 점 소 재 지 : | 경기도 수원시 영통구 매영로 150(매탄동)\n(전 화) 031-210-5114\n(홈페이지) http://www.samsungsem.com\n작 성 책 임 자 : | (직 책) 재경팀장 (성 명) 이근목\n(전 화) 031-210-6102\n목 차\n【 대표이사 등의 확인 】 | ----------------------- | 1\nI. 회사의 개요\n1. 회사의 개요 | ----------------------- | 2\n2. 회사의 연혁 | ----------------------- | 2\n3. 자본금 변동사항 | ----------------------- | 2\n4. 주식의 총수 등 | ----------------------- | 2\n5. 정관에 관한 사항 | ----------------------- | 2\nII. 사업의 내용\n1. 사업의 개요 | ----------------------- | 3\n2. 주요 제품 및 서비스 | ----------------------- | 3\n3. 원재료 및 생산설비 | ----------------------- | 4\n4. 매출 및 수주상황 | ----------------------- | 8\n5. 위험관리 및 파생거래 | ----------------------- | 10\n6. 주요계약 및 연구개발활동 | ----------------------- | 16\n7. 기타 참고사항 | ----------------------- | 20\nIII. 재무에 관한 사항\n1. 요약재무정보 | ----------------------- | 32\n2. 연결재무제표 | ----------------------- | 35\n3. 연결재무제표 주석 | ----------------------- | 41\n4. 재무제표 | ----------------------- | 135\n5. 재무제표 주석 | ----------------------- | 140\n6. 배당에 관한 사항 | ----------------------- | 229\n7. 증권의 발행을 통한 자금조달에 관한 사항 | ----------------------- | 232\n8. 기타 재무에 관한 사항 | ----------------------- | 234\nIV. 이사의 경영진단 및 분석의견 | ----------------------- | 244\nV. 회계감사인의 감사의견 등\n1. 외부감사에 관한 사항 | ----------------------- | 246\n2. 내부통제에 관한 사항 | ----------------------- | 249\nVI. 이사회 등 회사의 기관에 관한 사항\n1. 이사회에 관한 사항 | ----------------------- | 250\n2. 감사제도에 관한 사항 | ----------------------- | 250\n3. 주주총회 등에 관한 사항 | ----------------------- | 250\nVII. 주주에 관한 사항 | ----------------------- | 255\nVIII. 임원 및 직원 등에 관한 사항\n1. 임원 및 직원 등의 현황 | ----------------------- | 261\n2. 임원의 보수 등 | ----------------------- | 267\nIX. 계열회사 등에 관한 사항 | ----------------------- | 269\nX. 대주주 등과의 거래내용 | ----------------------- | 270\nXI. 그 밖에 투자자 보호를 위하여 필요한 사항\n1. 공시내용 진행 및 변경사항 | ----------------------- | 272\n2. 우발부채 등에 관한 사항 | ----------------------- | 272\n3. 제재 등과 관련된 사항 | ----------------------- | 272\n4. 작성기준일 이후 발생한 주요사항 등 기타사항 | ----------------------- | 273\nXII. 상세표\n1. 연결대상 종속회사 현황(상세) | ----------------------- | 274\n2. 계열회사 현황(상세) | ----------------------- | 274\n3. 타법인출자 현황(상세) | ----------------------- | 274\n【 전문가의 확인 】\n1. 전문가의 확인 | ----------------------- | 274\n2. 전문가와의 이해관계 | ----------------------- | 274\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n기업공시서식 작성기준에 따라 분기보고서에는 회사의 개요를 기재하지 않았습니다.(반기/사업보고서에 기재 예정)\n2. 회사의 연혁\n기업공시서식 작성기준에 따라 분기보고서에는 회사의 연혁을 기재하지 않았습니다.(반기/사업보고서에 기재 예정)\n3. 자본금 변동사항\n기업공시서식 작성기준에 따라 분기보고서에는 자본금 변동사항을 기재하지 않았습니다. (반기/사업보고서에 기재 예정)\n4. 주식의 총수 등\n기업공시서식 작성기준에 따라 분기보고서에는 주식의 총수 등을 기재하지 않았습니다. (반기/사업보고서에 기재 예정)\n5. 정관에 관한 사항\n기업공시서식 작성기준에 따라 분기보고서에는 정관에 관한 사항을 기재하지 않았습니다. (반기/사업보고서에 기재 예정)\nII. 사업의 내용\n1. 사업의 개요\n당사는 수동소자(MLCC, Inductor, Chip Resistor 등)를 생산하는 컴포넌트 사업부문, 반도체패키지기판을 생산하는 패키지솔루션 사업부문, 카메라모듈을 생산하는 광학솔루션 사업부문의 총 3개 사업부문으로 구성되어 있습니다.지역별로는 국내를 비롯해 미주, 유럽, 일본, 중국, 동남아시아 등 각 지역의 특성과 시장 환경에 부합하는 생산법인, 판매법인 및 판매사무소를 운영하며 국내외 사업을 전개하고 있습니",
+        "content_truncated": true,
+        "total_chars": 229589,
+        "summary": "분기보고서 (2026.03) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002842",
+        "collected_at": "2026-09-07T03:39:03.940228Z",
+        "report_name": "분기보고서 (2026.03)",
+        "published_at": "2026-05-15T00:00:00Z",
+        "request_id": "9f738ce2-50c5-482c-9124-f0f43dc3bd2e",
+        "source_type": "dart"
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260901800106",
+    "20260814003805",
+    "20260515002842"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:38:49.292331Z"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:49.292625Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:49.292930Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:49.293067Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:49.293186Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:49.293301Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:38:49.293412Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:49.475188Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:49.712469Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:49.815535Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:49.901810Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:50.297196Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-009150",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:38:51.197469Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

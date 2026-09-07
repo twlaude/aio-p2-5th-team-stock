@@ -1,0 +1,1319 @@
+{
+  "company": {
+    "company_name": "삼성바이오로직스",
+    "stock_code": "207940"
+  },
+  "captured_at": "2026-09-07T03:40:00.864307+00:00",
+  "capture_finished_at": "2026-09-07T03:47:53.979378+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "삼성바이오로직스",
+      "stock_code": "207940",
+      "current_price": 1450000,
+      "change": 3000,
+      "change_rate": 0.21,
+      "volume": 14511,
+      "volume_change_rate": 31.96,
+      "avg_volume_20d": 49072,
+      "volume_ratio_20d": 0.52,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 25721,
+      "warnings": [],
+      "as_of": "2026-09-07T03:40:01.383066Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:40:01.383066Z"
+    },
+    "news": {
+      "request_id": "9b2734f9-e48f-4df4-b8ab-9192e87b2307",
+      "status": "success",
+      "company_name": "삼성바이오로직스",
+      "stock_code": "207940",
+      "articles": [
+        {
+          "headline": "금리·수급에 눌린 제약바이오…현장에선 글로벌 경쟁력 '레벨업'",
+          "publisher": "kpanews.co.kr",
+          "published_at": "2026-09-07T03:10:00Z",
+          "summary": "삼성바이오로직스는 지난달 약 3조원 규모의 유상증자를 결정했다. 증자비율은 4.9%로 단기적인 주식가치 희석 부담은 있지만 조달금액 대부분을 스위스 폴리펩타이드 인수와 송도 6공장 증설에 투입한다. 약...",
+          "source_url": "https://www.kpanews.co.kr/news/articleView.html?idxno=542963",
+          "relevance": "high"
+        },
+        {
+          "headline": "전통제약 축소·비급여사 확대…약가압박에 판관비 지출 양극화",
+          "publisher": "dailypharm.com",
+          "published_at": "2026-09-07T03:06:00Z",
+          "summary": "CDMO‧글로벌 신약‧에스테틱 등 비급여 사업 비중이 높은 8개 기업(삼성바이오로직스‧셀트리온‧SK바이오팜‧SK바이오사이언스‧파마리서치‧휴젤‧에스티팜‧메디톡스)의 매출은 1년 새 5조7325억원에서...",
+          "source_url": "https://www.dailypharm.com/user/news/342203?REFERER=NP",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI 투자 기대에 외인·기관 1.6조 '사자'…코스피 6900선 공방[장중시황...",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "56%), 삼성바이오로직스(207940)(0.21%) 등은 상승했다. 이날 국내 증시 강세는 지난 주말 미국 반도체주 랠리와 오픈AI의 GPT-6 아스트라 공개에 따른 AI 인프라 투자가 확대될 것이란 기대의 영향으로...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6282070",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인·기관 사자에 코스피 3%대 상승세…6900 탈환 고지전",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "삼성전자와 SK하이닉스는 각각 3%대, 5%대 오름세를 이어가고 있고 SK스퀘어, 삼성전기, LG에너지솔루션, 현대차, 삼성바이오로직스, KB금융, 삼성생명이 모두 상승 중이다. 같은 시간 코스닥 지수는 1.64%(13.35포인트)...",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/07/QZ57IBRFANHSJAVOFB54QGKVTE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "홍콩ELS 판매 은행 제재, 6000억대 과징금 행정소송 가나",
+          "publisher": "sidae.com",
+          "published_at": "2026-09-07T02:09:00Z",
+          "summary": "금융위가 금감원의 제재안을 공개적으로 돌려보낸 것은 2018년 삼성바이오로직스 분식회계 사태 이후 8년 만이다. 금감원은 지난 6월 임시 제재심을 열고 은행들의 위반 동기와 방법에 대한 평가 등을 조정했다. 이에...",
+          "source_url": "https://www.sidae.com/article/2026090709422729086",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 이익 증가율 꺾였다, 원화 강세에도 웃을 '실적 개선주'는",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T02:07:00Z",
+          "summary": "이어 삼성전자 52.2%→55.2%(+3.0%p), 한국항공우주 4.2%→6.8%(+2.6%p), 이수페타시스 20.3%→22.3%(+2.0%p), 한화에어로스페이스 14.7%→16.1%(+1.4%p), 현대글로비스 5.7%→6.8%(+1.1%p), 삼성바이오로직스 44.4%→45.2%(+0.8%p), S-Oil 8.5%→9.3...",
+          "source_url": "https://www.newspim.com/news/view/20260906000155",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 장중 '반도체주 강세'에 3%대 오른 6890선, 코스닥도 1%대 올라",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "SK하이닉스가 5.89%로 가장 많이 오르고 있고 SK스퀘어(5.48%) 삼성전자(3.82%) 삼성생명(3.70%) 삼성전자우(2.35%) 현대차(1.69%) KB금융(1.54%) 삼성전기(1.53%) LG에너지솔루션(0.14%) 삼성바이오로직스(0.07%) 가 뒤를 잇고...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446528",
+          "relevance": "high"
+        },
+        {
+          "headline": "9월 주식 뭐 살까… 유망주 20개 뜯어보니",
+          "publisher": "m.skyedaily.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "스카이데일리 이세희기자 = 중장기는 AI·방산·K푸드 주목 ▲ 하나증권이 9월 단기 투자유망종목으로 삼성바이오로직스와 삼성SDI, S-Oil, 대한항공 등 10개 종목을 새롭게 제시했다. 하나증권 하나증권이 9월 단기...",
+          "source_url": "https://m.skyedaily.com/news_view.html?ID=311094",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 '쌍끌이' 매수에 6890선 훌쩍…3%대 강세",
+          "publisher": "mediapen.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "이 밖에 SK스퀘어(5.76%), 삼성생명(4.03%), 삼성전자우(2.30%), 삼성전기(1.86%), 현대차(1.83%), KB금융(1.42%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.07%) 등 주요 대형주가 모두 강세를 보이고 있다. 같은 시각...",
+          "source_url": "https://www.mediapen.com/news/view/1121704",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 업고 2.9%대 급등",
+          "publisher": "straightnews.co.kr",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "LG에너지솔루션은 0.70%, 삼성바이오로직스는 0.07% 상승했다. 다만 지수 상승폭에 비해 시장 전체의 온도가 뜨겁다고 보기는 어려웠다. 유가증권시장에서 상승 종목은 443개, 하락 종목은 390개였다. 코스피가 3...",
+          "source_url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310533",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "시가총액 상위 종목 가운데서는 삼성전자(3.82%), SK하이닉스(6.19%), SK스퀘어(5.86%), 삼성전기(1.93%), LG에너지솔루션(0.42%), 현대차(1.69%), 삼성바이오로직스(0.21%), KB금융(1.63%), 삼성생명(3.78%), 삼성물산(2.72...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체주 강세에 3%가까이 급등…6,880선 돌파",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "이 밖에 시가총액 상위 종목에서는 삼성전자우(2.30%)와 SK스퀘어(5.48%), 삼성전기(1.21%), LG에너지솔루션(0.42%), 현대차(1.89%), 삼성바이오로직스(0.48%), KB금융(1.51%) 등이 오름세다. 반면 한화에어로스페이스(0.95...",
+          "source_url": "https://www.news2day.co.kr/article/20260907500108",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 순매수에 6900선 강세",
+          "publisher": "kfenews.co.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "시가총액 상위 종목은 삼성전자(4.01%), SK하이닉스(5.59%), SK스퀘어(5.96%), 삼성전자우(2.66%), 삼성전기(1.14%), 현대차(2.22%), LG에너지솔루션(1.26%), 삼성생명(4.20%), KB금융(1.45%), 삼성바이오로직스(0.41%) 등 모두 오르고...",
+          "source_url": "https://www.kfenews.co.kr/news/articleView.html?idxno=663954",
+          "relevance": "high"
+        },
+        {
+          "headline": "'7천피' 앞둔 코스피...반도체 훈풍에 SK하이닉스 5%대 강세 [fn오전시황...",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T01:20:00Z",
+          "summary": "LG에너지솔루션(0.56%)과 삼성바이오로직스(0.41%)도 강보합 중이다. 코스닥도 상승세를 이어가고 있다. 같은 시각 코스닥은 전 거래일보다 1.41% 오른 824.96을 기록하고 있다. 전거래일보다 1.16% 오른 822.91로 개장해...",
+          "source_url": "https://www.fnnews.com/news/202609071010485002",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍타고 3%대↑···6900선 회복",
+          "publisher": "finomy.com",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "△삼성전자우(2.45%) △SK스퀘어(5.48%) △삼성전기(1.07%) △LG에너지솔루션(1.12%) △현대차(1.69%) △삼성바이오로직스(0.69%) △KB금융(1.34%) △삼성생명(3.87%) 등이 상승하고 있다. 코스닥지수는 전 거래일보다 14....",
+          "source_url": "http://www.finomy.com/news/articleView.html?idxno=260879",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체주 훈풍…코스피, 3% 급등·6900 회복",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "이 밖에 삼성생명(3.87%), 삼성물산(3.0%), KB금융(1.34%), 현대차(1.04%), 삼성바이오로직스(0.41%) 등이 오름세를 이어가고 있다. 코스닥지수는 전일 대비 0.95% 오른 821.26에 거래되고 있다. 개인과 기관이 각각 506억원...",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609070040",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체주 훈풍 6900선 재등정… 삼전닉스 동반 강세",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-07T01:04:00Z",
+          "summary": "이밖에 삼성전자우(2.35%), SK스퀘어(5.67%), 삼성전기(1.21%), LG에너지솔루션(0.7%), 현대차(1.96%), 삼성바이오로직스(0.41%) 등이 상승하고 있다. 반면 삼성SDI(-0.18%), 셀트리온(-0.53%), 삼성화재(-0.9%) 등은 하락세다....",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169589",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관 모처럼 ‘쌍끌이’…코스피 3% 급등하며 6900선 회복[마켓시...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "현대차(005380)는 1.96%, KB금융(105560)은 1.98% 상승하고 있으며 삼성바이오로직스(207940)도 0.48% 강세다. 로봇주도 상승세를 보이고 있다. 로보티즈(108490)가 4.27%, 레인보우로보틱스(277810)가 1.63% 오르고 있다. 반면...",
+          "source_url": "https://www.sedaily.com/article/20087844?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 코스피, 외국인·기관 순매수에 3%대 상승",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "LG에너지솔루션(0.42%)과 삼성바이오로직스(0.28%)도 상승 중이다. 코스닥도 상승세를 이어가고 있다. 같은 시각 코스닥 지수는 전 거래일보다 10.94포인트(1.34%) 오른 824.44를 기록하고 있다. 개인과 기관이 각각...",
+          "source_url": "https://www.newspim.com/news/view/20260907000202",
+          "relevance": "high"
+        },
+        {
+          "headline": "'불기둥' 삼성전자·SK하이닉스⋯코스피 6900선 복귀",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "삼성전기(1.78%), LG에너지솔루션(0.84%), 현대차(2.35%), 삼성바이오로직스(0.28%), KB금융(1.79%), 삼성생명(4.20%) 등 시가총액 상위 종목들도 일제히 상승하고 있다. 코스닥 지수는 전 거래일 대비 11.60(1.43%) 오른 825....",
+          "source_url": "http://www.inews24.com/view/2002535",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 훈풍에 3%대 급등 6900선 돌파…삼전3%·닉스5%↑",
+          "publisher": "beyondpost.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "삼성전자(3.91%), SK하이닉스(5.65%), 삼성전자우(2.77%), SK스퀘어(6.24%), 삼성전기(1.64%), LG에너지솔루션(0.70%), 현대차(2.61%), 삼성바이오로직스(0.35%), 삼성생명(3.87%), KB금융(1.69%) 전부 상승 중이다. 키움증권 한지영...",
+          "source_url": "http://www.beyondpost.co.kr/view.php?ud=202609070943067703be44c0aacd_30",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 삼전닉스 ‘쑥’…코스피 6900선 회복 [시황]",
+          "publisher": "dailian.co.kr",
+          "published_at": "2026-09-07T00:42:00Z",
+          "summary": "이 외에도 SK스퀘어(6.34%)·삼성전기(1.93%)·LG에너지솔루션(0.70%)·현대차(2.35%)·삼성바이오로직스(0.21%)·KB금융(1.69%)·삼성생명(4.03%) 등이 오르고 있다. 같은 시간 코스닥 지수는 전 거래일보다 13.41포인트(1.65...",
+          "source_url": "https://www.dailian.co.kr/news/view/1687085/?sc=Naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_9월 7일",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융, 한화에어로스페이스",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070004",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 코스피 3%대 급등…6900선 안팎 등락[개장시황]",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "56%), 삼성바이오로직스(207940)(0.48%) 순으로 오르고 있다. 국내 증시 강세는 미국 반도체주 랠리의 영향으로 풀이된다. 지난 4일(현지시간) 뉴욕 증시는 8월 비농업 고용이 시장 예상치를 크게 웃돌면서 금리...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6281791",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_8월 31일_오차율",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "빅터뉴스 빅터뉴스 기자 ▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융...",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070002",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6900선 돌파…외인·기관 매수에 대형주 동반 상승",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "삼성전기는 3.28%, LG에너지솔루션은 0.7%, 현대차는 2.48%, 삼성바이오로직스는 0.41%, KB금융은 1.45%, 삼성생명은 3.7% 올랐다. 코스닥도 상승세를 나타냈다. 같은 시각 코스닥지수는 전 거래일 대비 9.57p(1.18...",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145568",
+          "relevance": "high"
+        },
+        {
+          "headline": "3% 상승 출발 코스피, 6900선 탈환 목전…삼전닉스도 큰폭 올라",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "삼성전자(4.11%), SK하이닉스(5.77%), SK스퀘어(6.05%), 삼성전기(4.14%), 현대차(1.04%), 삼성바이오로직스(0.41%), KB금융(1.34%), 삼성생명(3.87%), 삼성물산(3.0%) 등 전반적으로 오르고 있다. 코스닥은 전일 대비 7.76포인트...",
+          "source_url": "https://www.mk.co.kr/article/12145772",
+          "relevance": "high"
+        },
+        {
+          "headline": "[장초반 시황] 코스피 3% 급등 6900선 회복…美 반도체 훈풍에 SK하이닉...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "이밖에 삼성전자우(3.03%), 삼성전기(2.36%), KB금융(1.98%), 현대차(1.96%), 삼성바이오로직스(0.48%), LG에너지솔루션(0.42%) 등 시가총액 상위 10개 종목이 모두 상승세를 보이고 있다. 코스닥시장에서는 반도체 장비주가...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484428",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3%대 상승 출발···삼전닉스 4~5%대 급등",
+          "publisher": "seoulfn.com",
+          "published_at": "2026-09-07T00:32:00Z",
+          "summary": "LG에너지솔루션(0.42%), 현대차(1.83%), 삼성바이오로직스(0.41%), 삼성물산(4.54%), 삼성생명(3.95%), KB금융(1.86%)도 상승 중이다. 한지영 키움증권 연구원은 \"지난주 미국 반도체주가 강세를 보인 점을 고려하면...",
+          "source_url": "https://www.seoulfn.com/news/articleView.html?idxno=637357",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 호조에 3% 급등…6900선 회복",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "삼성전자우(3.03%), SK스퀘어(6.82%), 삼성전기(2.36%), LG에너지솔루션(0.70%), 현대차(1.96%), 삼성바이오로직스(0.48%), 삼성생명(1.98%), 삼성물산(4.54%) 등 모두 강세를 보이고 있다. 한지영 키움증권 연구원은 \"국내외...",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609070922344137923c501012_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체주 급등에 코스피 6900선 회복…외인·기관 '쌍끌이'",
+          "publisher": "ezyeconomy.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "이 밖에 ▲LG에너지솔루션(0.70%) ▲현대차(2.22%) ▲삼성바이오로직스(0.48%) ▲삼성물산(4.63%) ▲KB금융(1.45%) 등도 상승하고 있다. ▲삼성생명은 4.71%, ▲신한지주는 2.36%, ▲한화에어로스페이스는 1.23% 오름세다....",
+          "source_url": "https://www.ezyeconomy.com/news/articleView.html?idxno=239410",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 랠리에 3%대 급등...6900선 회복",
+          "publisher": "greened.kr",
+          "published_at": "2026-09-07T00:29:00Z",
+          "summary": "이 밖에도 삼성전자우(+2.61%), SK스퀘어(+6.34%), 삼성전기(+3.14%), LG에너지솔루션(+0.70%), 현대차(+2.48%), 삼성바이오로직스(+0.41%), 삼성물산(+4.50%), KB금융(+1.45%) 등이 강세를 보이고 있다. 업종별로는 반도체 업종의...",
+          "source_url": "https://www.greened.kr/news/articleView.html?idxno=349349",
+          "relevance": "high"
+        },
+        {
+          "headline": "[EBN 데이터센터] 코스피, 6800선 돌파 상승 출발…외국인·기관 동반 매...",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T00:28:00Z",
+          "summary": "LG에너지솔루션은 0.56%, 현대차는 1.83%, 삼성바이오로직스는 0.35%, 삼성생명은 4.37%, KB금융은 1.98% 상승했다. 반도체와 대형 정보기술 종목 전반의 강세가 지수 전반을 끌어올린 것으로 풀이된다. 시장 전반의...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723188",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 불붙자 코스피 6900선 돌파...외인·기관 '쌍끌이'",
+          "publisher": "digitaltoday.co.kr",
+          "published_at": "2026-09-07T00:26:00Z",
+          "summary": "삼성전기(3.07%), 삼성물산(4.50%), 현대차(2.22%), KB금융(1.51%), 삼성바이오로직스(0.48%), LG에너지솔루션(0.28%) 등도 상승하고 있다. 코스닥도 상승하고 있다. 같은 시각 코스닥은 전 거래일보다 10.08포인트(1.24...",
+          "source_url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=698601",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 순매수에 6890선 상승 출발···반도체주 강세",
+          "publisher": "smartbizn.com",
+          "published_at": "2026-09-07T00:24:00Z",
+          "summary": "기아(1.42%), LG에너지솔루션(0.70%), 삼성바이오로직스(0.41%) 등은 내렸다. 코스닥지수는 전 거래일보다 23.29포인트(1.19%) 오른 823.29에 거래되고 있다. 수급별로는 개인이 257억원 사들였고, 외국인과 기관이 각각...",
+          "source_url": "https://www.smartbizn.com/news/articleView.html?idxno=153165",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 훈풍에 3% '급등'…6900선 탈환",
+          "publisher": "newsworks.co.kr",
+          "published_at": "2026-09-07T00:22:00Z",
+          "summary": "이밖에 ▲삼성전자우(2.71%) ▲SK스퀘어(6.34%) ▲삼성전기(3.57%) ▲LG에너지솔루션(0.42%) ▲현대차(2.41%) ▲삼성바이오로직스(0.8%) ▲KB금융(1.86%) ▲삼성물산(3.95%) 등도 상승하고 있다. 한지영 키움증권 연구원은...",
+          "source_url": "https://www.newsworks.co.kr/news/articleView.html?idxno=852803",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3% 급등하며 6900선 탈환...삼전 4%·하이닉스 5% 강세",
+          "publisher": "metroseoul.co.kr",
+          "published_at": "2026-09-07T00:20:00Z",
+          "summary": "이외에도 삼성전기(3.64%)와 삼성물산(3.81%)이 3%대 상승했으며, 현대차(1.83%), KB금융(1.69%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.35%) 등이 모두 올랐다. 같은 시각 코스닥지수는 전일보다 12.03포인트(1.48...",
+          "source_url": "http://www.metroseoul.co.kr/article/20260907500039",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 장초반 3% 급등에 6900 안착 시도...톱텐 동반 상승",
+          "publisher": "opinionnews.co.kr",
+          "published_at": "2026-09-07T00:18:00Z",
+          "summary": "이어 삼성전기 3.5%, LG에너지솔루션 0.56%, 현대차 1.96%, 삼성바이오로직스 0.35%, 삼성생명 3.7%, KB금융 1.98% 등이다. 10위 이하에서도 삼성물산 3.81%, 한화에어로스페이스 1.52%, 신한지주 2.72...",
+          "source_url": "http://www.opinionnews.co.kr/news/articleView.html?idxno=144055",
+          "relevance": "high"
+        },
+        {
+          "headline": "[서울데이터랩]코스피, 개장 직후 3% 넘게 올라 6919.25 기록",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-07T00:16:00Z",
+          "summary": "LG에너지솔루션(373220)과 삼성바이오로직스(207940)도 각각 0.70%, 0.41% 상승했다. 개별 종목 가운데서는 진흥기업2우B가 16.93%, 우성이 16.68%, DB하이텍이 12.57%, 두산퓨얼셀이 12.54%, LG전자가 9.93% 오르며...",
+          "source_url": "https://www.seoul.co.kr/news/economy/securities/2026/09/07/20260907500023?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 3.34% 급등 출발, 코스닥도 820선 회복",
+          "publisher": "newskr.kr",
+          "published_at": "2026-09-07T00:14:00Z",
+          "summary": "SK스퀘어(+4.13%), 현대차(+1.56%), LG에너지솔루션(+0.84%), 삼성바이오로직스(+0.28%) 등도 상승하고 있다. 코스닥 시가총액 상위 종목은 종목별로 흐름이 엇갈리고 있다. HLB(+2.37%), 에코프로비엠(+1.51%), 에코프로(+0.97...",
+          "source_url": "http://www.newskr.kr/news/articleView.html?idxno=106149",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 3%대 상승 출발…코스닥도 1%↑",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-07T00:14:00Z",
+          "summary": "시가총액 상위 종목 중에선 삼성전자(4.11%), SK하이닉스(5.49%), SK스퀘어(6.05%), 삼성전기(3.64%), LG에너지솔루션(0.42%), 현대차(1.96%), 삼성바이오로직스(0.41%), KB금융(1.69%), 삼성물산(3.81%), 삼성생명(3.70%) 등 전...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622439",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3% 급등해 6900선 탈환 시도…삼전닉스↑",
+          "publisher": "hankyung.com",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "LG에너지솔루션과 삼성바이오로직스는 보합세다. 한지영 키움증권 연구원은 \"이번 주 코스피는 지난주 금요일 미국 8월 비농업 고용 결과, 미국 8월 소비자물가지수(CPI), 생산자물가지수(PPI) 등 인플레이션...",
+          "source_url": "https://www.hankyung.com/article/2026090775696",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 금리 진정에 위험선호 회복… 코스피 3% 급반등",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "시가총액 상위 종목 가운데 SK스퀘어(5.86%), 삼성전기(4.00%), 삼성생명(3.87%), 삼성물산(3.13%), KB금융(1.40%), 현대차(1.30%), 삼성바이오로직스(0.28%) 등 대부분 종목이 상승세다. 지난 4일 발표된 미국의 8월 비농업...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727436",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 메모리 반도체주 훈풍에…코스피도 3%대 상승 출발",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "이외에도 SK스퀘어, 삼성전기, 현대차, 삼성바이오로직스, 삼성생명, KB금융 등이 오르고 있는 가운데 LG에너지솔루션 홀로 하락 중이다. 같은 시간 코스닥 지수는 1.44%(11.74포인트) 오른 825.24를 가리키고 있다....",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/07/JG2ZCA4H3RH2FCJOCANWHFDKTA/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "[어제장 오늘장] 코스피 7000선 재도전…반도체주 흐름·외국인 수급 관...",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-06T23:31:00Z",
+          "summary": "반면 시장 관심이 다시 IT에 쏠리면서, LG에너지솔루션, 삼성바이오로직스 등이 하락했고, 고금리 수혜 기대가 한풀 꺾인 KB금융에서도 매물이 출회됐습니다. 코스닥 시총 상위 10개 종목 중에선 에코프로비엠 제외하고...",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000333046?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "[프리마켓 포커스] 美 반도체 훈풍에 투심 '활짝'… 삼전·SK하닉 강세",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-06T23:16:00Z",
+          "summary": "SK스퀘어(3.36%), 삼성전기(2.43%), 삼성물산(2.18%), 삼성생명(2.18%), 현대차(1.30%), 한화에어로스페이스(0.95%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.35%), KB금융(0.17%) 등이 강세다. 이날 국내 반도체주가 프리마켓...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727432",
+          "relevance": "high"
+        },
+        {
+          "headline": "[기후리더] 제약·바이오 부문 1위 '대웅제약'...A 이상은 3곳뿐",
+          "publisher": "newstree.kr",
+          "published_at": "2026-09-06T23:12:00Z",
+          "summary": "분석대상 14개사는 삼성바이오로직스, 셀트리온, 유한양행, GC녹십자, SK바이오팜, 한미약품, 일동제약, 보령, 종근당, 대웅제약, 동아에스티, 광동제약, 삼성에피스홀딩스, SK바이오사이언스 등이다....",
+          "source_url": "https://www.newstree.kr/newsView/ntr202608250020",
+          "relevance": "high"
+        },
+        {
+          "headline": "[K바이오 돈의 경로] 분할 뒤 성장투자축 이원화｜삼성바이오①",
+          "publisher": "bloter.net",
+          "published_at": "2026-09-06T23:00:00Z",
+          "summary": "삼성바이오로직스와 삼성바이오에피스는 매출 대부분을 각각 위탁개발생산(CDMO)과 바이오시밀러에서 내고 있다. 삼성바이오로직스는 자체 현금에 외부자본을 더해서 생산시설과 인수합병(M&A)에...",
+          "source_url": "https://www.bloter.net/news/articleView.html?idxno=672738",
+          "relevance": "high"
+        },
+        {
+          "headline": "에너지 조달 '판' 바뀐다…넓어진 韓기업 선택권",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-06T22:30:00Z",
+          "summary": "이 가운데 SK이터닉스와 삼성바이오로직스가 추진하는 물량이 태양광 100MW, 풍력 70MW 등 170MW로 가장 크다. 양사는 직접 PPA를 포함한 공급 방안을 검토하고 있다. 정부가 제12차 전력수급기본계획 수립 과정에서 제시한...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862237",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더벨][삼성바이오로직스 유상증자] 금감원 실무협의 개시…신고서 완성...",
+          "publisher": "thebell.co.kr",
+          "published_at": "2026-09-06T22:02:00Z",
+          "summary": "삼성바이오로직스 유상증자를 두고 금융감독원과 주관사단 간 실무 협의가 시작됐다. 증권신고서 제출 이후 신한투자증권과 NH투자증권이 금감원과 한 차례 미팅을 진행한 것으로 파악된다. 최근 유상증자를 둘러싼...",
+          "source_url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609030938100840103062",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성바이오로직스, 3조 유증…펩타이드 CDMO로 성장판 넓힌다[바이오리...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-06T22:02:00Z",
+          "summary": "삼성바이오로직스가 3조 원 규모의 유상증자를 발판으로 펩타이드 위탁개발생산(CDMO) 시장 공략에 속도를 낸다. 2조 7000억 원을 투입해 글로벌 펩타이드 CDMO 기업 폴리펩타이드그룹을 인수하고 기존 항체 중심의 사업...",
+          "source_url": "https://www.sedaily.com/article/20087596?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "모더나, 맞춤형 암백신 넘어 ‘범용 암백신’ 만든다",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-06T22:01:00Z",
+          "summary": "기존 RNA 간섭(RNAi) 기술에서 단백질 발현 분야로 기술 포트폴리오를 확대했다. 이 외에 위탁생산개발(CDMO)기업 삼성바이오로직스는 원료의약품(DS)부터 완제의약품(DP)까지 아우르는 mRNA 원스톱 서비스를 제공하고 있다.",
+          "source_url": "https://www.sedaily.com/article/20087571?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"우리 딸이 다녔으면\" 임원까지 쭉쭉 승진…100대기업 첫 1위 차지한 아...",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-06T22:00:00Z",
+          "summary": "삼성바이오로직스(5위·55.25점), 케이티(KT)·LG생활건강(공동 6위·55점), LG유플러스(9위·54점), 현대글로비스(11위·52점) 등이다. KT는 5년 새 여성 정규직 비율을 7.8%포인트 끌어올려 증가폭 1위를 기록했고...",
+          "source_url": "https://view.asiae.co.kr/article/2026090314455679316",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"너희 둘, 동기 아냐?\" 그래도 수천만원 차이 났다…남성 연봉 1억917만원...",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-06T22:00:00Z",
+          "summary": "현대자동차가 89.4%, KT 89.3%, 셀트리온 88.8%, 삼성바이오로직스 87.6%, 기아는 85.9%였다. 방산·소재기업이 이 지표 1위라는 점도 눈에 띈다. 여성 인력이 상대적으로 적은 업종이라고 해서 반드시 연봉 격차까지 클...",
+          "source_url": "https://view.asiae.co.kr/article/2026090315474201643",
+          "relevance": "high"
+        },
+        {
+          "headline": "사람이 만들던 약, AI·로봇이 만든다… 대형사 전유물 '자동화 공장' 제...",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-06T21:02:00Z",
+          "summary": "주목되는 점은 이러한 변화가 삼성바이오로직스 등 자본력이 큰 기업뿐 아니라 전통 중견 제약사까지 번지고 있다는 것이다. 국내 제약업계에서 생산 자동화를 일찍 도입한 대표적인 회사는 한미약품이다. 경기...",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169491",
+          "relevance": "high"
+        },
+        {
+          "headline": "상장 제약·바이오사 2Q 평균 매출 코스피 2116억원, 코스닥 557억원",
+          "publisher": "yakup.com",
+          "published_at": "2026-09-06T21:02:00Z",
+          "summary": "♦︎ 코스피 제약·바이오 기업 43개사코스피 제약·바이오 2분기 매출 규모를 살펴보면, 글로벌 경쟁력을 확고히 한 셀트리온과 삼성바이오로직스가 나란히 1조 3000억원의 벽을 돌파하며 초대형 제약...",
+          "source_url": "https://www.yakup.com/news/index.html?mode=view&cat=12&nid=332137",
+          "relevance": "high"
+        },
+        {
+          "headline": "기술 팔고 생산도 한다…K바이오, '수출+CDMO' 투트랙 가속",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-06T21:00:00Z",
+          "summary": "국내에서는 삼성바이오로직스가 CDMO 사업 확장에 적극적으로 나서고 있다. 삼성바이오로직스는 지난 7월 글로벌 펩타이드 CDMO 기업인 폴리펩타이드 그룹(PolyPeptide Group)을 약 2조7000억원에 인수하기로 했다. 국내 제약...",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145417",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성은 생산·셀트리온은 유통망‧SK바팜은 신약·…K바이오 ‘성장축’...",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-06T20:00:00Z",
+          "summary": "6일 업계에 따르면 삼성바이오로직스는 펩타이드 생산 역량, 셀트리온은 유럽 현지 유통·영업망, SK바이오팜은 후기 임상 단계 신약 후보물질을 각각 외부에서 확보하며 사업 확장에 나섰다. 삼성바이오로직스는 최근...",
+          "source_url": "https://www.etoday.co.kr/news/view/2621998",
+          "relevance": "high"
+        },
+        {
+          "headline": "[제물포럼] 인천대 공공의대 설립, 지금이 골든타임이다",
+          "publisher": "incheonilbo.com",
+          "published_at": "2026-09-06T09:06:00Z",
+          "summary": "인천은 세계적인 바이오 기업으로 이름을 올린 셀트리온과 삼성바이오로직스를 중심으로 새로운 성장동력을 얻었다. 셀트리온과 삼성바이오로직스가 지난 2002년, 2011년 각각 설립돼 인천에서 자리 잡으면서 인천은...",
+          "source_url": "https://www.incheonilbo.com/news/articleView.html?idxno=1331346",
+          "relevance": "high"
+        },
+        {
+          "headline": "바이오 메카 송도, 전력·용수 인프라 한계 속 지원 '全無'",
+          "publisher": "kihoilbo.co.kr",
+          "published_at": "2026-09-06T09:00:00Z",
+          "summary": "송도국제도시에는 삼성바이오로직스와 셀트리온이 생산시설을 운영하고 있으며 SK바이오사이언스와 롯데바이오로직스도 본사 인력을 송도로 이전할 예정이다. 최근 이재용 삼성전자 회장이 바이오산업에 대한 투자...",
+          "source_url": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=3033745",
+          "relevance": "high"
+        },
+        {
+          "headline": "한화·신세계도 쪼갠다…대기업 사업재편 핵심수단 된 인적분할",
+          "publisher": "hankyung.com",
+          "published_at": "2026-09-06T08:45:00Z",
+          "summary": "지난해 삼성바이오로직스도 순수 위탁개발생산(CDMO) 사업과 바이오시밀러 사업을 분리했다. 카카오, 현대홈쇼핑 등은 복합기업 디스카운트 해소와 핵심 사업 효율화를 위해 투자 부문과 사업 부문을 나누는 인적분할...",
+          "source_url": "https://www.hankyung.com/article/2026090669511",
+          "relevance": "high"
+        },
+        {
+          "headline": "재생에너지 직접 구매…전력거래시장 확대",
+          "publisher": "hankyung.com",
+          "published_at": "2026-09-06T08:24:00Z",
+          "summary": "대한태양광발전사업자협회-현대건설(태양광 9㎿), 육백산풍력발전-현대차그룹(풍력 30.8㎿), SK이터닉스-삼성바이오로직스(태양광·풍력 170㎿) 등이다. 현재 등록 용량은 총 844㎿에 달하며, 구매 희망 물량(수요·491㎿)이...",
+          "source_url": "https://www.hankyung.com/article/2026090668391",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘바이오 도시’ 인천, 스타트업 육성 기반 주목 [모두의 창업 프로젝트...",
+          "publisher": "kyeonggi.com",
+          "published_at": "2026-09-06T07:57:00Z",
+          "summary": "인천은 송도국제도시를 중심으로 삼성바이오로직스, 셀트리온, 롯데바이오로직스, SK바이오사이언스, 싸토리우스 등 글로벌 바이오 기업들이 모여 국내 최대 바이오 클러스터를 형성하고 있다. 이와 함께 K...",
+          "source_url": "https://www.kyeonggi.com/article/20260906580214",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성바이오로직스 3조 유상증자… \"기존 주주 가치 희석 제한적\"",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-06T07:54:00Z",
+          "summary": "삼성바이오로직스가 스위스 폴리펩타이드 그룹 인수와 제2바이오캠퍼스 증설을 위해 약 3조원 규모의 유상증자에 나선다. DS투자증권은 최근 보고서에서 대규모 자금 조달에도 신주 발행 규모가 전체 주식의 5% 안팎에...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484288",
+          "relevance": "high"
+        },
+        {
+          "headline": "[이슈+] 다시 만나는 삼성바이오 노사…투자·신뢰 '분수령'",
+          "publisher": "shinailbo.co.kr",
+          "published_at": "2026-09-06T06:30:00Z",
+          "summary": "삼성바이오로직스 노사가 함께 협상테이블에 앉는다. 이를 계기로 반년가량 지속돼온 노조 이슈가 종결되고 신뢰를 회복할지 업계 안팎의 관심이 모아진다. 이런 가운데 이 회사는 '글로벌 톱티어 CDMO(위탁개발생산)...",
+          "source_url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5059020",
+          "relevance": "high"
+        },
+        {
+          "headline": "[재계 인사이드] 삼성안에 있는 별도의 종합그룹, 삼성물산",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-06T04:00:00Z",
+          "summary": "삼성물산은 크게 건설부문과 무역을 하는 상사, 패션, 에버랜드와 골프장 등 리조트 부문, 종속회사인 삼성바이오로직스를 통한 바이오의약품 부문으로 구성돼 있다. ■ 2026년 상반기 매출 22조 4609억원, 영업이익 1조...",
+          "source_url": "https://www.news2day.co.kr/article/20260906500033",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성바이오로직스 노사, 오는 8일 사후조정 돌입…추석 전 타결 이룰까",
+          "publisher": "dnews.co.kr",
+          "published_at": "2026-09-06T00:20:00Z",
+          "summary": "임금·단체협약(임단협)을 놓고 8개월 넘게 평행선을 달려온 삼성바이오로직스와 회사 상생노동조합이 다음 주 인천지방노동위원회의 ‘사후조정’ 테이블에 마주 앉는다. 창사 이래 첫 전면 파업까지 겪은 양측이 외부...",
+          "source_url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609041535043460723",
+          "relevance": "high"
+        },
+        {
+          "headline": "양대지수 동반 상승, 삼성전자·SK하이닉스·원익IPS 껑충…미국 증시는...",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-05T22:26:00Z",
+          "summary": "반면 LG에너지솔루션은 1.92%, 삼성바이오로직스는 2.03% 하락했다. 코스닥에서도 반도체 장비주가 강세를 나타냈다. 원익IPS가 9.33% 급등한 11만4800원에 거래를 마쳤으며 주성엔지니어링은 6.13...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604018",
+          "relevance": "high"
+        },
+        {
+          "headline": "홍콩 ELS 제재 결론 이달 말 무게…내주 정례회의 불발",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-05T21:00:00Z",
+          "summary": "금융위가 금감원의 제재안을 공개적으로 반려한 것은 2018년 삼성바이오로직스 분식회계 사태 이후 8년 만이었다. 금감원은 이후 지난 6월 임시 제재심을 열고 은행들의 위반 동기와 방법에 대한 평가 등을 조정하면서...",
+          "source_url": "https://www.newsis.com/view/NISX20260904_0003777131",
+          "relevance": "high"
+        },
+        {
+          "headline": "트럼프 이중압박…K바이오 ‘영향 제한적’ 속 긴장",
+          "publisher": "mediapen.com",
+          "published_at": "2026-09-05T00:36:00Z",
+          "summary": "◆ 9월 29일 100% 관세 발효…K-바이오 영향은 제한적 삼성바이오로직스 미국 록빌 공장 전경./사진=삼성바이오로직스 약가 협약 확대와 맞물려 글로벌 제약사의 미국 생산기지 확보 압박도 한층 커질 전망이다. 트럼프...",
+          "source_url": "https://www.mediapen.com/news/view/1121510",
+          "relevance": "high"
+        },
+        {
+          "headline": "[바이오브리핑] 삼성바이오로직스, 추가 유증 선긋기",
+          "publisher": "sisajournal-e.com",
+          "published_at": "2026-09-04T22:00:00Z",
+          "summary": "삼성바이오로직스가 3조원 규모 유상증자 발표 이후 불거진 주주가치 희석 우려 달래기에 나섰다. 2034년까지 15조원 이상 투자가 예정돼 재무 부담을 낮추기 위해 유상증자를 선택했다는 설명이다. 현재 추가 유상증자...",
+          "source_url": "https://www.sisajournal-e.com/news/articleView.html?idxno=423510",
+          "relevance": "high"
+        },
+        {
+          "headline": "재평가·하반기 임상 결과 공개에 분주… 빅파마, 어디에 베팅?",
+          "publisher": "hitnews.co.kr",
+          "published_at": "2026-09-04T21:12:00Z",
+          "summary": "삼성바이오로직스가 글로벌 펩타이드 위탁개발생산(CDMO) 기업 폴리펩타이드그룹 인수를 위한 공개매수 설명서를 자사 홈페이지에 게시했다. 회사는 특수목적법인 자회사 삼성 펩타이드를 통해 매수 절차를 진행할...",
+          "source_url": "https://www.hitnews.co.kr/news/articleView.html?idxno=78923",
+          "relevance": "high"
+        },
+        {
+          "headline": "K-바이오, 미국 사업 ‘껑충’…관세 우려에도 현지화 속도",
+          "publisher": "dailypharm.com",
+          "published_at": "2026-09-04T21:02:00Z",
+          "summary": "GC녹십자의 경우 미국법인 매출이 78%, 삼성바이오로직스 미국법인은 91% 증가했다. 관세 불확실성이 이어지는 가운데 주요 기업들의 미국 사업은 단순한 수출 확대에서 현지 판매‧생산 기반을 강화하는 방향으로...",
+          "source_url": "https://www.dailypharm.com/user/news/342189?REFERER=NP",
+          "relevance": "high"
+        },
+        {
+          "headline": "[심층분석] 코스피 반등 장세속 대형주 동반 상승…시총 상위 10개 종목...",
+          "publisher": "thefairnews.co.kr",
+          "published_at": "2026-09-04T15:00:00Z",
+          "summary": "LG에너지솔루션과 삼성바이오로직스는 기관의 순매수에 힘입어 상승 마감했으며 셀트리온 역시 바이오 업종 전반의 투자심리 개선에 힘입어 거래량을 늘리며 흐름을 이어갔다. 자동차와 현대차그룹주도 안정적인 흐름을...",
+          "source_url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87148",
+          "relevance": "high"
+        },
+        {
+          "headline": "[증시 프리즘] 반도체·2차전지·바이오 삼각 편대…코스피 반등 장세 주...",
+          "publisher": "thefairnews.co.kr",
+          "published_at": "2026-09-04T15:00:00Z",
+          "summary": "삼성바이오로직스와 셀트리온 등 시가총액 상위 바이오 기업들의 거래량이 증가하면서 업종 전반에 온기가 돌았고 반도체에 이어 지수 상승을 견인하는 주요축으로 작동했다. 시장 전문가들은 특정 업종에만 매수세가...",
+          "source_url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87149",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 1%대 상승에 6600선 회복...SK스퀘어, 삼성전기 상승 VS KB금융, ...",
+          "publisher": "econonews.co.kr",
+          "published_at": "2026-09-04T12:30:00Z",
+          "summary": "07%), 삼성전기(3.93%), SK하이닉스(3.2%), 삼성전자(2.2%)는 상승 마감했다. 이에 반해 KB금융(-3.32%), 삼성바이오로직스(-2.03%), LG에너지솔루션(-1.92%), 삼성물산(-1.34%)은 하락 마감했다. 현대차는 보합 마감했다.",
+          "source_url": "http://www.econonews.co.kr/news/articleView.html?idxno=443904",
+          "relevance": "high"
+        },
+        {
+          "headline": "[증시 오늘] 코스피 6680선 반등",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-04T11:30:00Z",
+          "summary": "삼성전자이 2.10%, SK하이닉스 3.40%, LG에너지솔루션 1.10%, 삼성바이오로직스 0.80%, 현대차 1.50%, 기아 1.20%, 셀트리온 0.90%, KB금융 2.40%, 신한지주 1.80%, LG화학 0.50% 상승했다. 코스닥은 전 거래일 대비 23....",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609040017",
+          "relevance": "high"
+        },
+        {
+          "headline": "“엿새 만에 돌아온 그들”…외인·기관 ‘쌍끌이’에 코스피 1.6% 상승...",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-04T11:04:00Z",
+          "summary": "LG에너지솔루션(-1.92%), 삼성바이오로직스(-2.03%), KB금융(-3.32%) 등은 하락했다. 코스닥은 전장보다 23.29포인트(2.95%) 오른 813.50에 장을 마쳤다. 5거래일 만의 상승 전환이다. 지수는 전장보다 12.11포인트(1.53...",
+          "source_url": "https://biz.heraldcorp.com/article/10863364?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "'스카우트7 얼리어잡터' 삼성바이오로직스 일일 사원 체험",
+          "publisher": "enter.etoday.co.kr",
+          "published_at": "2026-09-04T10:30:00Z",
+          "summary": "'스카우트7 얼리어잡터'에서 삼성바이오로직스에 근무하는 직업계고 출신 실무자들을 만난다. 4일 방송되는 KBS1 '스카우트7 얼리어잡터'에서는 글로벌 바이오의약품 위탁개발생산(CDMO) 기업 삼성바이오로직스 인천...",
+          "source_url": "https://enter.etoday.co.kr/news/view/301973",
+          "relevance": "high"
+        },
+        {
+          "headline": "미국 금리 안정에 코스피 1.6% 상승…외국인·기관 6일 만에 '사자'",
+          "publisher": "koreareport.co.kr",
+          "published_at": "2026-09-04T09:46:00Z",
+          "summary": "반면 LG에너지솔루션(-1.9%), 삼성바이오로직스(-2.0%), KB금융(-3.3%) 등은 내렸다. 업종별로 정보기술(7.2%), 의료 정밀(3.9%), 전기·전자(2.4%) 등이 올랐으며 보험(-3.5%), 음식료·담배(-0.9%) 등은 내렸다. 코스닥은...",
+          "source_url": "https://www.koreareport.co.kr/news/articleView.html?idxno=52639",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더나은미래 경제브리핑] 코스피·코스닥 시총 상폐기준 강화 6개월 유예...",
+          "publisher": "futurechosun.com",
+          "published_at": "2026-09-04T09:38:00Z",
+          "summary": "반면 LG에너지솔루션(-1.92%)과 삼성바이오로직스(-2.03%), 삼성물산(-1.34%) 등은 하락했다. 같은 날 코스닥도 오랜만에 상승세를 보였다. 이날 코스닥 지수는 전 거래일 대비 23.29포인트(2.95%) 오른 813.50에 마감하면서...",
+          "source_url": "https://futurechosun.com/?p=159474",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인·기관 6거래일 만에 '사자'…코스피 1.64% 올라 6,687선 마감",
+          "publisher": "mediafine.co.kr",
+          "published_at": "2026-09-04T09:26:00Z",
+          "summary": "반면 LG에너지솔루션(-1.92%), 삼성바이오로직스(-2.03%), KB금융(-3.32%)은 하락했다. 코스닥지수도 23.29포인트(2.95%) 오른 813.50에 거래를 마치며 5거래일 만에 반등했다. 외국인과 기관이 각각 2천623억원...",
+          "source_url": "https://www.mediafine.co.kr/news/articleView.html?idxno=88820",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더벨][thebell note] 삼성바이오로직스의 두 번째 항해",
+          "publisher": "thebell.co.kr",
+          "published_at": "2026-09-04T08:42:00Z",
+          "summary": "최근 3조원 규모 유상증자를 결정한 삼성바이오로직스도 선택이 필요했다. 폴리펩타이드그룹 인수와 6공장 건설에는 대규모 자금이 필요하다. 차입을 늘리면 이자비용과 부채 부담이 커진다. 유상증자를 하면...",
+          "source_url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609011540179320108448",
+          "relevance": "high"
+        },
+        {
+          "headline": "[마감시황]코스피 1.64% 상승해 6687선…금리 안정 기대에 반도체株 강세",
+          "publisher": "namdonews.com",
+          "published_at": "2026-09-04T08:20:00Z",
+          "summary": "반대로 신한지주는 3.67% 하락했고 KB금융(-3.32%), 삼성바이오로직스(-2.03%), LG에너지솔루션(-1.92%) 등도 내렸다. 코스닥시장에서는 상승폭이 더욱 컸다. 코스닥지수는 전 거래일보다 23.29포인트(2.95%) 오른 813.50에...",
+          "source_url": "https://www.namdonews.com/news/articleView.html?idxno=922316",
+          "relevance": "high"
+        },
+        {
+          "headline": "[26.9.4 증시 인싸잇] 외국인·기관 쌍끌이… 반도체 질주에 코스피 반등",
+          "publisher": "mediawatch.kr",
+          "published_at": "2026-09-04T08:18:00Z",
+          "summary": "이밖에 삼성바이오로직스(-2.03%), LG에너지솔루션(-1.92%), 삼성생명(-1.82%), 삼성물산(-1.34%) 등도 내렸다. 코스닥은 23.29포인트(2.95%) 오른 813.50에 마감하며 810선을 회복했다. 802.32로 출발한 코스닥은 외국인과...",
+          "source_url": "https://www.mediawatch.kr/news/article.html?no=260914",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 미 국채금리 안정에 '외인·기관 복귀'로 1.64% 상승 마감",
+          "publisher": "delighti.co.kr",
+          "published_at": "2026-09-04T08:06:00Z",
+          "summary": "반면 LG에너지솔루션(-1.92%), 삼성바이오로직스(-2.03%), KB금융(-3.32%) 등은 내렸다. 코스닥 지수도 전장보다 23.29포인트(2.95%) 상승한 813.50에 거래를 마치며 5거래일 만에 상승세로 돌아섰다. 지수는 전장보다 12....",
+          "source_url": "https://www.delighti.co.kr/news/articleView.html?idxno=121370",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외인·기관 쌍끌이 매수에 1.64%↑ 마감…6600선 회복",
+          "publisher": "beyondpost.co.kr",
+          "published_at": "2026-09-04T08:00:00Z",
+          "summary": "삼성전자(2.20%), SK하이닉스(3.20%), 삼성전자우(4.07%), SK스퀘어(6.12%), 삼성전기(3.93%)는 올랐고, LG에너지솔루션(-1.92%), 삼성바이오로직스(-2.03%), KB금융(-3.32%), 삼성물산(-1.34%) 내렸다. 간밤 크리스토퍼 월러 미국...",
+          "source_url": "http://www.beyondpost.co.kr/view.php?ud=202609041655204192be44c0aacd_30",
+          "relevance": "high"
+        },
+        {
+          "headline": "[마감시황] 美 국채 금리 안정…코스피 1.6%↑",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-04T07:56:00Z",
+          "summary": "반면 KB금융(-3.32%), 삼성바이오로직스(-2.03%), LG에너지솔루션(-1.92%) 등은 내렸다. 업종별로는 정보기술(7.18%), 의료·정밀(3.86%), 전기·전자(2.44%) 등이 상승, 보험(-3.46%), 음식료·담배(-0.93%) 등은 하락했다....",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862344",
+          "relevance": "high"
+        },
+        {
+          "headline": "[마감시황] 외인·기관 돌아오자 코스피 1.64%↑...코스닥도 800선 회복",
+          "publisher": "polinews.co.kr",
+          "published_at": "2026-09-04T07:51:00Z",
+          "summary": "반면 KB금융(-3.32%), 삼성바이오로직스(-2.03%), LG에너지솔루션(-1.92%) 등은 하락했다. 시장 변동성도 낮아졌다. '한국형 공포지수'로 불리는 코스피200 변동성지수(VKOSPI)는 전 거래일보다 7.28% 내린 39.33으로...",
+          "source_url": "https://www.polinews.co.kr/news/articleView.html?idxno=742218",
+          "relevance": "high"
+        },
+        {
+          "headline": "[증시 프리즘] 외인 돌아오고 공포는 식었다…코스피, 다시 6,700선 겨냥...",
+          "publisher": "moneystorm.kr",
+          "published_at": "2026-09-04T07:50:00Z",
+          "summary": "반면 삼성바이오로직스(-2.03%), LG에너지솔루션(-1.92%), 삼성생명(-1.82%), 삼성물산(-1.34%), KB금융(-3.32%) 등은 하락했다. 특히 보험주는 금리 인상 기대가 약화되면서 약세가 두드러졌다. 삼성화재가 5.56% 급락한 것을...",
+          "source_url": "https://www.moneystorm.kr/news/articleView.html?idxno=6240",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체주 강세에 6687.21 마감...코스닥 5거래일 만에 반등",
+          "publisher": "futurechosun.com",
+          "published_at": "2026-09-04T07:50:00Z",
+          "summary": "반면 LG에너지솔루션(-1.92%)과 삼성바이오로직스(-2.03%), 삼성물산(-1.34%) 등은 하락했다. 같은 날 코스닥도 오랜만에 상승세를 보였다. 이날 코스닥 지수는 전 거래일 대비 23.29포인트(2.95%) 오른 813.50에...",
+          "source_url": "https://futurechosun.com/?p=159468",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 금리인상 경계 후퇴에 반도체 '방긋'⋯코스피 1.6%↑",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-04T07:48:00Z",
+          "summary": "반면 LG에너지솔루션(1.92%), 삼성바이오로직스(2.03%), KB금융(3.32%), 삼성물산(1.34%) 등 종목은 하락 마감했다. 간밤 크리스토퍼 월러 연방준비제도(Fed) 이사의 비둘기파 발언으로 시장의 금리인상 경계심이...",
+          "source_url": "http://www.inews24.com/view/2002204",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 오르자 개인 3.7조 던졌다…삼전 2.2% SK하닉 3.2% 상승[시황종합...",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-04T07:45:00Z",
+          "summary": "하락종목은 KB금융(105560)(-3.32%), 삼성바이오로직스(207940)(-2.03%), LG에너지솔루션(373220)(-1.92%), 삼성물산(028260)(-1.34%) 등이다. 이날 국내 증시 반등에는 미국 국채 금리의 상승세가 진정된 영향이 컸다....",
+          "source_url": "https://www.news1.kr/finance/market-exr/6280479",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성전자·SK하이닉스 반등…주식 강세 마감",
+          "publisher": "kjdaily.com",
+          "published_at": "2026-09-04T07:44:00Z",
+          "summary": "반면 LG에너지솔루션은 1.92%, 삼성바이오로직스는 2.03%, KB금융은 3.32% 하락했다. 업종별로는 정보기술이 7.18% 상승했다. 의료·정밀은 3.86%, 전기·전자는 2.44% 올랐다. 보험은 3.46%, 음식료·담배는 0.93% 하락했다....",
+          "source_url": "http://www.kjdaily.com/article.php?aid=1788507690685990227",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 1.64% 오른 6600대 마감…반도체株 강세",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-04T07:42:00Z",
+          "summary": "반면 LG에너지솔루션이 1.92%, 삼성바이오로직스가 2.03%, KB금융이 3.32%, 삼성물산이 1.34% 내렸다. 현대차는 보합으로 마감했다. 개별 종목에서는 서울식품우가 상한가인 29.86% 올라 상승률 1위에 올랐다....",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609040188",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 금리진정·자사주 매입 효과… 코스피 1.6% 상승",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-04T07:40:00Z",
+          "summary": "삼성전자(2.20%)와 SK하이닉스(3.20%), 삼성전자우(4.07%), SK스퀘어(6.12%), 삼성전기(3.93%)는 상승 마감했고 현대차는 보합, LG에너지솔루션(-1.92%), 삼성바이오로직스(-2.03%), KB금융(-3.32%), 삼성물산(-1.34%)은 '파란불'(매도...",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169522",
+          "relevance": "high"
+        },
+        {
+          "headline": "[코스피 지수선물 옵션] 삼성전자·SK하이닉스 오르고 금융주는 울상…...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-04T07:36:00Z",
+          "summary": "반면 LG에너지솔루션, 삼성바이오로직스, KB금융, 삼성생명, 신한지주, 하나금융지주, 삼성화재, 고려아연, 메리츠금융, LG화학, HMM, KT&G, 에이피알, LIG디펜스원, DB손해보험, 에코프로, 삼양식품, 크래프톤, 삼성에피스...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484048",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외인·기관 '쌍끌이'에 1.64% 상승…코스닥도 3% 가까이 급등",
+          "publisher": "goodkyung.com",
+          "published_at": "2026-09-04T07:34:00Z",
+          "summary": "삼성바이오로직스(-2.03%), LG에너지솔루션(-1.92%), 삼성생명(-1.82%), 삼성물산(-1.34%) 등도 내렸다. 코스닥 시장의 상승 탄력은 코스피보다 강했다. 코스닥지수는 전 거래일 대비 23.29포인트(2.95%) 오른 813.50에 장을...",
+          "source_url": "https://www.goodkyung.com/news/articleView.html?idxno=291026",
+          "relevance": "high"
+        },
+        {
+          "headline": "[마감시황] 금리 불안 진정에 코스피 6687선…반도체·증권주가 반등 주...",
+          "publisher": "kdfnews.com",
+          "published_at": "2026-09-04T07:32:00Z",
+          "summary": "반면 LG에너지솔루션, 삼성바이오로직스, KB금융은 하락했다. 미국 증시의 반등이 국내 위험자산 선호 회복으로 이어졌다. 크리스토퍼 월러 미국 연방준비제도 이사가 물가 둔화가 확인되면 이달 기준금리...",
+          "source_url": "http://www.kdfnews.com/news/articleView.html?idxno=187560",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美국채금리 안정과 외인·기관 매수세에 1.6% 상승",
+          "publisher": "getnews.co.kr",
+          "published_at": "2026-09-04T07:28:00Z",
+          "summary": "반면 LG에너지솔루션(-1.92%), 삼성바이오로직스(-2.03%), KB금융(-3.32%) 등은 내렸다. 업종별로 보면 정보기술(7.18%), 의료 정밀(3.86%), 전기·전자(2.44%) 등이 올랐으며 보험(-3.46%), 음식료·담배(-0.93%) 등은 내렸다....",
+          "source_url": "https://www.getnews.co.kr/news/articleView.html?idxno=879891",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 68.2,
+      "oldest_relevant_at": "2026-09-04T07:28:00Z",
+      "collected_at": "2026-09-07T03:40:01.782351Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003375",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003375"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002129",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002129"
+        },
+        {
+          "report_name": "[기재정정]사업보고서 (2025.12)",
+          "receipt_number": "20260515001658",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515001658"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260312001119",
+          "published_at": "2026-03-12T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001119"
+        }
+      ],
+      "collected_at": "2026-09-07T03:40:01.392469Z",
+      "request_id": "539ebb16-915d-4e0b-94e3-9408b9d9a34f",
+      "source_type": "dart",
+      "stock_code": "207940",
+      "company_name": "삼성바이오로직스"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "[기재정정]사업보고서 (2025.12)",
+      "receipt_number": "20260515001658",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "※ 상기 온실가스 배출량 및 에너지 사용량은 \"국가온실가스종합관리시스템\" 제출 자료입니다.※ 배출량 및 에너지 사용량은 외부 검증기관 검증 결과 등에 따라 변동될 수 있습니다.※ 녹색경영 관련 내용은 'XI. 그 밖에 투자자 보호를 위하여 필요한 사항'의 '4. 작성기준일 이후 발생한 주요사항 등 기타사항' 중 '다. 녹색경영'을 참고 바랍니다. 라. 업계의 현황(1) 산업의 특성 1) 블록버스터 바이오의약품 지속 개발 2000년 전후에 출시된 블록버스터 바이오의약품(자가면역질환 치료제, 항암제, 당뇨치료제 등)이 여전히 높은 매출 성장을 지속하고 있으며, 최근에는 알츠하이머, 비만치료제, 면역항암제, 고지혈증, 아토피 등 새로운 분야에서 유망 치료제 신약이 지속적으로 출시되고 있습니다. 2) 글로벌 제약사 및 중소형 바이오텍의 생산분야 아웃소싱 확대제약사들은 의약품 시판허가 및 판매수요 예측의 불확실성을 최소화하기 위해 대규모 자본투자가 소요되는 생산분야에서 전문 CMO를 활용하는 추세가 확대되고 있습니다. 한편, 적응증 다양화에 따라 생산 수요 변동성이 확대되면서 제약사는 이에 대응할 수 있는 유휴 생산시설 확보의 중요성이 증대되고 있습니다. 이러한 시장의 변화는 CMO 산업에 새로운 기회로 작용합니다.3) 바이오의약품 Modality의 복잡도 심화바이오의약품의 Modality가 점차 복잡해지며, 고도화된 개발 역량과 생산 기술이 요구되고 있습니다. 이에 따라 개발사들은 안정성과 효율성이 검증된 CDMO 플랫폼에 대한 의존도를 높여가고 있습니다.4) 공급 안정성 확보를 위한 복수 생산설비(Dual Sourcing) 수요 증가최근 각국의 의약품규제기관은 제약사들에게 의약품 공급 안정성 강화를 권고하고있습니다. 미국 FDA는 단일 Site에서만 생산되는 의약품에 대해서는 별도의\"Contingency Plan\" 수립을 요구하고 있습니다. 이러한 규제강화 흐름에 따라CMO를 활용해 복수 생산설비를 운영하는 사례가 확대되고 있습니다. (2) 산업의 성장성",
+          "score": 0.470858,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "가. 위험관리 정책 당사의 위험관리정책은 당사가 직면한 위험을 식별 및 분석하고, 적절한 위험 한계치및 통제를 설정하고, 위험이 한계치를 넘지 않도록 하기 위해 수립되었습니다. 위험관리정책과 시스템은 시장 상황과 당사의 활동의 변경을 반영하기 위해 정기적으로 검토되고 있습니다. 당사는 훈련 및 관리기준, 절차를 통해 모든 종업원들이 자신의 역할과 의무를 이해할 수 있는 엄격하고 구조적인 통제환경을 구축하는 것을 목표로 하고 있습니다.이사회는 경영진이 당사의 위험관리 정책 및 절차의 준수여부를 어떻게 관리하는지 감독하고, 당사의 위험관리체계가 적절한지 검토합니다.\n나. 신용위험 당사는 계약 체결단계부터 고객사의 재무정보 및 파이프라인 개발단계 등을 종합적으로 고려하여 신용등급을 평가하고 있습니다. 또한, 당사는 주기적으로 고객과 거래상대방의 재무상태와 과거 경험 및 기타 요소들을 고려하여 재무신용도를 평가하고 있습니다. 당사의 신용위험 최대노출액은 금융자산의 장부금액과 동일합니다. 신용위험에 관한 자세한 내용은 Ⅲ. 재무에 관한 사항'의 '3. 연결재무제표 주석' 및 '5. 재무제표 주석' '33번. 금융위험관리'를 참고하시기 바랍니다.\n다. 유동성위험 유동성위험이란 당사가 금융부채에 관련된 의무를 충족하는 데 어려움을 겪게 될 위험을 의미합니다. 당사의 유동성 관리방법은 재무적으로 어려운 상황에서도 받아들일 수 없는 손실이 발생하거나, 당사의 평판에 손상을 입힐 위험 없이, 만기일에 부채를 상환할 수 있는 충분한 유동성을 유지하도록 하는 것입니다.\n유동성위험관리에 대한 궁극적인 책임은 당사의 단기 및 중장기 자금조달과 유동성관리규정을 적절하게 관리하기 위한 기본정책을 수립하는 이사회에 있습니다.당사는 적정 유동성의 유지를 위하여 주기적인 자금수지 예측, 조정을 통해 유동성 위험을 관리하고 있습니다.\n유동성위험에 관한 자세한 내용은 Ⅲ. 재무에 관한 사항'의 '3. 연결재무제표 주석' 및 '5. 재무제표 주석' '33번. 금융위험관리'를 참고하시기 바랍니다.",
+          "score": 0.467775,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": ".당사는 적정 유동성의 유지를 위하여 주기적인 자금수지 예측, 조정을 통해 유동성 위험을 관리하고 있습니다.\n유동성위험에 관한 자세한 내용은 Ⅲ. 재무에 관한 사항'의 '3. 연결재무제표 주석' 및 '5. 재무제표 주석' '33번. 금융위험관리'를 참고하시기 바랍니다.\n라. 환위험 당사의 기능통화인 원화 외의 통화로 표시되는 판매, 구매 및 차입에 대해 환위험에 노출되어 있습니다. 이러한 거래들이 표시되는 주된 통화는 USD 등입니다. 당사는 환위험에 대한 회피가 필요하다고 판단되는 경우 통화선도거래 등을 통해 환위험을 관리할 수 있도록 계획을 수립하고 있습니다. 환위험에 관한 자세한 내용은 Ⅲ. 재무에 관한 사항'의 '3. 연결재무제표 주석' 및 '5. 재무제표 주석' '33번. 금융위험관리'를 참고하시기 바랍니다.\n마. 이자율위험 해당사항 없습니다.\n바. 자본관리 당사의 자본관리는 건전한 자본구조의 유지를 통한 주주이익의 극대화를 목적으로 하고 있으며, 최적 자본구조 달성을 위해 부채비율 등의 재무비율을 모니터링하여 필요한 경우 적절한 재무구조 개선방안을 실행하고 있습니다.\n자본관리에 관한 자세한 내용은 Ⅲ. 재무에 관한 사항'의 '3. 연결재무제표 주석' 및 '5. 재무제표 주석' '33번. 금융위험관리'를 참고하시기 바랍니다.\n사. 파생상품 및 풋백옵션 등 거래현황 해당사항 없습니다.",
+          "score": 0.463156,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "나. 사업과 관련된 중요한 지적재산권 보유현황 당사는 바이오의약품 CDMO 산업에서의 경쟁력을 높이기 위하여 지식재산권 확보 및 구축에 힘쓰고 있습니다.지속적인 바이오의약품 제조기술/설비 관련 연구개발을 통해서, 2020년 최초로 특허출원한 이래 매년 다수의 특허를 출원하고 있고 현재 70여 건(국내 기준)의 특허가 등록되어 있습니다. 이 특허(출원)들은 당사의 주요 사업분야인 바이오의약품 제조와 관련된 물질, 공정 및 설비 등에 대한 특허로서, 당사 주요/전략 서비스를 수행하기 위하여 쓰이거나 향후 활용될 예정입니다.또한, 사명 및 당사의 주요 사업분야 관련 서비스 및 상품, 슬로건 등에 부합하는 상표를 출원ㆍ등록하여 관련 브랜드를 관리하고 있습니다. 2020년 상반기에 CDMO서비스에 활용되는 자체 세포주 플랫폼을 개발하여, 그 상품명을 국내외에서 등록한 이후 당사의 CDO 서비스 플랫폼이 다양하게 출시됨에 따라, 신규 서비스 상표들을 국내외에 출원 및 등록하고 있습니다. 현재 국내외 120여 건의 등록 상표를 보유하고있으며 해당 상표들을 마케팅 및 홍보 목적으로 활용하는 중입니다.\n다. 환경 관련 규제사항\n당사의 환경 경영 방향은 서비스 및 물류를 포함한 Value Chain의 전 과정에서 환경적 영향을 고려하여 환경오염물질 저감 및 환경사고 예방에 최선을 다함으로써, 지속가능한 사회를 구현하는 것입니다. 이를 실천하기 위해 환경오염을 발생시킬 수 있는 배출원을 지속적으로 관리하여 환경오염사고를 사전 예방하고, 환경법규 및 규정을 준수함으로써 오염물질 저감을 위한 노력을 펼치고 있으며, 사업장에서 사용하는 모든 화학물질의 전 과정 관리를 통해 화학사고 예방에 적극적으로 임하고 있습니다. 더 나아가, 정부의 저탄소 녹색성장 정책과 기후변화 대응에 부응하기 위해 전세계적, 지역적 기후변화 추세와 기업에 미치는 영향을 지속적으로 모니터링하고, 이해관계자들에게 관련 정보를 투명하게 공개하고 있습니다.\n(사업장 관리 환경규제 준수 및 오염물질 저감)",
+          "score": 0.457627,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 4. 매출 및 수주상황",
+          "text": "구 분 | 내 용\n잠재 고객사 발굴 | 고객사 접촉 | ㆍ고객사 현황 조사(조직, 제품 수, 임상진행 현황, Capa 현황 등) ㆍ전시회 참가를 통한 고객 접촉, 당사 CMO 서비스 소개 등\n고객사의 CMO 제안요청 (RFP 발송) | 담당자 미팅 | ㆍ이메일, 전화, 고객사 방문 미팅 등 ㆍ미팅 회의록 작성\n수주 가능한 물량 확인 | ㆍ비밀유지계약 체결, CMO 소개자료(Capa 등) 제공, 송도 Site 방문 유치 등\n제안서 제출 | 리스크 검토 | ㆍ각 분야별 유관부서 검토 ㆍ재무 리스크: 차등 배치가격 검토 ㆍ법률 리스크: 기존 수주제품, 삼성 자체 제품과 비경쟁 여부 검토\n계약조건 검토 | ㆍ고객사의 공정 조건을 반영한 계약 조건 제안 ㆍ계약기간, 생산 가능시점, 가격, 서비스 제공범위, 최소보장물량, Capa Reserve 조건 등 고려\nCMO 선정 | 후보 CMO 선정 | ㆍ고객사에서 2~3개의 후보 CMO를 선정\n우선협상대상 CMO 선정 | ㆍ최종 평가를 통해 고객사에서 우선협상대상 CMO 선정\n계약조건 협의 | 리스크 검토 | ㆍ각 분야별 유관부서 검토 ㆍ재무 리스크: 최소보장/Reserve 물량, 서비스 매출 항목 등 ㆍ법률 리스크: Liability 범위, 비경쟁조항 등\n기본 계약조건 협의 | ㆍ주요 수주 계약 조건 협상 및 조정 ㆍ양해각서(MOU) 및 의향서(LOI) 작성\n세부 계약조건 협의 | ㆍ본 계약(Master Service Agreement) 조건 협의\n수주 계약 | 최종계약서 교환 | ㆍ수주 계약서 작성",
+          "score": 0.428769,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515001658",
+      "collected_at": "2026-09-07T03:40:01.472825Z",
+      "request_id": "e0e4ef91-5fc2-4fec-b97c-c892ee5c2b78",
+      "source_type": "dart",
+      "stock_code": "207940",
+      "company_name": "삼성바이오로직스"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "삼성바이오로직스",
+      "stock_code": "207940",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:40:01.060622+00:00",
+        "to": "2026-09-07T03:40:01.060622+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 191,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 178.75,
+        "ratio": 1.07,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 24,
+        "neutral_count": 16,
+        "negative_count": 60
+      },
+      "top_topics": {
+        "expectations": [],
+        "concerns": [
+          "공매도 공격으로 삼성바이오로직스 주가가 무너질 것이라는 패닉성 경고",
+          "종목 분위기나 주가 흐름이 차갑다는 약한 부정 정서"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "공매도 공격으로 삼성바이오로직스 주가가 무너질 것이라는 패닉성 경고",
+          "sentiment": "negative",
+          "posted_at": "2026-09-02T04:33:00+00:00"
+        },
+        {
+          "text": "주가가 하락 압력을 견디는지 관찰하는 약한 긍정",
+          "sentiment": "neutral",
+          "posted_at": "2026-09-02T05:33:00+00:00"
+        },
+        {
+          "text": "종목 분위기나 주가 흐름이 차갑다는 약한 부정 정서",
+          "sentiment": "negative",
+          "posted_at": "2026-09-02T08:55:00+00:00"
+        }
+      ],
+      "collected_at": "2026-09-07T03:40:01.060622+00:00",
+      "fgi_mean": 39.62,
+      "fgi_latest": {
+        "fgi": 35.26,
+        "label": "공포",
+        "as_of": "2026-09-07T03:15:00+00:00",
+        "post_count": 1,
+        "valence_percentile": 11.88
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "[기재정정]기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260903800071",
+          "published_at": "2026-09-03T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260903800071"
+        },
+        {
+          "report_name": "타법인주식및출자증권취득결정(종속회사의주요경영사항)              ",
+          "receipt_number": "20260831800556",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800556"
+        },
+        {
+          "report_name": "주주명부폐쇄기간또는기준일설정              ",
+          "receipt_number": "20260828800869",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800869"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260828800325",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800325"
+        },
+        {
+          "report_name": "증권신고서(지분증권)",
+          "receipt_number": "20260828001676",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828001676"
+        },
+        {
+          "report_name": "[기재정정]주요사항보고서(타법인주식및출자증권양수결정)",
+          "receipt_number": "20260828000016",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828000016"
+        },
+        {
+          "report_name": "주요사항보고서(유상증자결정)",
+          "receipt_number": "20260828000001",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "major",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828000001"
+        }
+      ],
+      "collected_at": "2026-09-07T03:40:01.912593Z",
+      "request_id": "90a0a594-69c5-470d-96ed-2796ddf39b0f",
+      "source_type": "dart",
+      "stock_code": "207940",
+      "company_name": "삼성바이오로직스"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260828000001": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260828000001",
+        "document_type": "disclosure",
+        "content": "주요사항보고서 / 거래소 신고의무 사항\n금융위원회 / 한국거래소 귀중 | 2026 년 8 월 28 일\n회 사 명 : | 삼성바이오로직스 주식회사\n대 표 이 사 : | 임 존 종 보\n본 점 소 재 지 : | 인천광역시 연수구 송도바이오대로 300\n(전 화) 032-455-3114\n(홈페이지) http://www.samsungbiologics.com\n작 성 책 임 자 : | (직 책) 경영지원센터장 | (성 명) 유 승 호\n(전 화) 032-455-3114\n유상증자 결정\n1. 신주의 종류와 수 | 보통주식 (주) | 2,270,000\n기타주식 (주) | -\n2. 1주당 액면가액 (원) | 2,500\n3. 증자전 발행주식총수 (주) | 보통주식 (주) | 46,290,951\n기타주식 (주) | -\n4. 자금조달의 목적 | 시설자금 (원) | 294,776,453,897\n영업양수자금 (원) | -\n운영자금 (원) | -\n채무상환자금 (원) | -\n타법인 증권취득자금 (원) | 2,706,163,546,103\n기타자금 (원) | -\n5. 증자방식 | 주주배정후 실권주 일반공모\n※ 기타주식에 관한 사항\n정관의 근거 | -\n주식의 내용 | -\n기타 | -\n6. 신주 발행가액 | 확정발행가 | 보통주식 (원) | -\n기타주식 (원) | -\n예정발행가 | 보통주식 (원) | 1,322,000 | 확정예정일 | 2026년 11월 04일\n기타주식 (원) | - | 확정예정일 | -\n7. 발행가 산정방법 | '24. 기타 투자판단에 참고할 사항- 가. 신주 발행가액 산정방법' 참고\n8. 신주배정기준일 | 2026년 10월 06일\n9. 1주당 신주배정주식수 (주) | 0.0392737657\n10. 우리사주조합원 우선배정비율 (%) | 20.0\n11. 청약예정일 | 우리사주조합 | 시작일 | 2026년 11월 09일\n종료일 | 2026년 11월 09일\n구주주 | 시작일 | 2026년 11월 09일\n종료일 | 2026년 11월 10일\n12. 납입일 | 2026년 11월 17일\n13. 실권주 처리계획 | '24. 기타 투자판단에 참고할 사항- 나. 신주의 배정방법 참조' 참고\n14. 신주의 배당기산일 | 2026년 01월 01일\n15. 신주권교부예정일 | -\n16. 신주의 상장예정일 | 2026년 11월 30일\n17. 대표주관회사(직접공모가 아닌 경우) | 신한투자증권(주)NH투자증권(주)한국투자증권(주)케이비증권(주)\n18. 신주인수권양도여부 | 예\n- 신주인수권증서의 상장여부 | 예\n- 신주인수권증서의 매매 및 매매의 중개를 담당할 금융투자업자 | 신한투자증권(주)NH투자증권(주)한국투자증권(주)케이비증권(주)\n19. 이사회결의일(결정일) | 2026년 08월 28일\n- 독립(사외)이사* 참석여부 | 참석 (명) | 4\n불참 (명) | -\n- 감사(감사위원) 참석여부 | 참석\n20. 증권신고서 제출대상 여부 | 예\n21. 제출을 면제받은 경우 그 사유 | -\n22. 청약이 금지되는 공매도 거래 기간 | 해당여부 | 예\n시작일 | 2026년 08월 31일\n종료일 | 2026년 11월 04일\n23. 공정거래위원회 신고대상 여부 | 미해당\n주1) 우리사주조합, 구주주 청약 및 초과청약 결과 발생한 실권주에 대해 2026년 11월 12일부터 2026년 11월 13일까지(2일간) 일반공모 청약을 진행할 예정입니다.\n주2) 상기 '23. 공정거래위원회 신고대상 여부'는 주요사항보고서 제출 현재 기준 청약 개시 전으로 확인 불가능하여 미해당으로 작성하며, 최종 발행가액 결정 또는 관계회사의 청약여부 등에 따라 변동 발생시 정정공시할 예정입니다.\n24. 기타 투자판단에 참고할 사항\n가. 신주 발행가액 산정방법\n「증권의 발행 및 공시 등에 관한 규정」제5-18조에 의거 주주배정 증자 시 가격산정 절차 폐지 및 가격산정의 자율화에 따라 발행가액을 자유롭게 산정할 수 있으나, 시장혼란 우려 및 기존 관행 등으로 「(舊)유가증권 발행 및 공시 등에 관한 규정」 제57조를 일부 준용하여 아래와 같이 산정합니다.\n① 예정발행가액 : 예정발행가액은 이사회결의일 전일(2026년 08월 27일)을 기산일로 하여 유가증권시장에서 성립된 거래대금을 거래량으로 가중산술평균한 1개월 가중산술평균주가, 1주일 가중산술평균주가 및 기산일 종가를 산술평균하여 산정한 가액과 기산일 종가 중 낮은 금액을 기준주가로 하여 할인율 15%를 적용, 증자비율은 유상증자 주식수/발행주식총수로 계산하여 아래의 산식에 의하여 산정된 발행가액(예정발행가액)으로 합니다. 단, 호가단위 미만은 호가단위로 절상하며, 그 가액이 액면가액 이하일 경우에는 액면가액을 발행가액으로 합니다.* 예정발행가액 = [기준주가 × (1-할인율)] / [1+(증자비율 × 할인율)]\n② 1차 발행가액 : 신주배정기준일 전 제3거래일을 기산일로 하여 유가증권시장에서 성립된 거래대금을 거래량으로 가중산술평균한 1개월 가중산술평균주가, 1주일 가중산술평균주가 및 기산일 종가를 산술평균하여 산정한 가액과 기산일 종가 중 낮은 금액을 1차 기준주가로 하며 할인율 15%를 적용, 증자비율은 유상증자 주식수/발행주식총수로 계산하여 아래의 산식에 의하여 산정된 발행가액으로 한다. 단, 호가단위 미만은 호가단위로 절상하며, 그 가액이 액면가액(2,500원) 이하인 경우 액면가액으로 한다.\n* 1차 발행가액 = [1차 기준주가 × (1-할인율)] / [1 + (증자비율 × 할인율)]\n③ 2차 발행가액 : 구주주 청약일 전 제3거래일을 기산일로 유가증권시장에서 성립된 거래대금을 거래량으로 가중산술평균한 1주일 가중산술평균주가 및 기산일 종가를 산술평균하여 산정한 가액과 기산일 종가 중 낮은 금액을 2차 기준주가로 하여 아래의 산식에 따라 결정하며 할인율은 15%를 적용한다. 단, 호가단위 미만은 호가단위로 절상하며, 할인율 적용에 따른 모집가액이 액면가액(2,500원) 이하일 경우에는 액면가액을 발행가액으로 한다.\n* 2차 발행가액 = 2차 기준주가 × (1-할인율)\n④ 확정 발행가액 : 확정 발행가액은 1차 발행가액과 2차 발행가액 중 낮은 가액으로 한다. 다만 자본시장과 금융투자업에 관한 법률",
+        "content_truncated": true,
+        "total_chars": 7524,
+        "summary": "주요사항보고서(유상증자결정) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828000001",
+        "collected_at": "2026-09-07T03:40:02.250302Z",
+        "report_name": "주요사항보고서(유상증자결정)",
+        "published_at": "2026-08-28T00:00:00Z",
+        "request_id": "bfc9527d-a3a6-4424-b6d7-797cae7de4ea",
+        "source_type": "dart"
+      }
+    },
+    "20260831800556": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260831800556",
+        "document_type": "disclosure",
+        "content": "삼성바이오로직스/타법인 주식 및 출자증권 취득결정(종속회사의 주요경영사항)/(2026.08.31)타법인 주식 및 출자증권 취득결정(종속회사의 주요경영사항)\n종속회사인 | Samsung Peptide AG | 의 주요경영사항 신고\n1. 발행회사 | 회사명 | PolyPeptide Group AG\n국적 | 스위스 (Switzerland) | 대표자 | Juan Jose Gonzalez\n자본금(원) | 612,742,956 | 회사와 관계 | -\n발행주식총수(주) | 33,125,001 | 주요사업 | 펩타이드 CDMO\n2. 취득내역 | 취득주식수(주) | 33,016,411\n취득금액(원) | 2,706,163,546,103\n자산총액(원) | 11,060,741,976,837\n자산총액대비(%) | 24.47\n3. 취득후 소유주식수 및 지분비율 | 소유주식수(주) | 33,016,411\n지분비율(%) | 100\n4. 취득방법 | 현금취득\n5. 취득목적 | 펩타이드 CDMO 기업 인수를 통한 사업 경쟁력 강화\n6. 취득예정일자 | 2026-11-13\n7. 이사회결의일(결정일) | 2026-08-31\n- 사외이사 참석여부 | 참석(명) | -\n불참(명) | -\n- 감사(사외이사가 아닌 감사위원)참석여부 | -\n8. 공정거래위원회 신고대상 여부 | 미해당\n9. 풋옵션 등 계약 체결여부 | 아니오\n- 계약내용 | -\n10. 기타 투자판단과 관련한 중요사항 | - 당사는 7월 20일 공시된 타법인 주식및 출자증권 양수 결정에 따라 스위스 자회사 Samsung Peptide AG를 설립하였으며, 본 공시는 Samsung Peptide AG의 공개매수 설명서가 스위스 당국의 승인을 획득함에 따라 진행하는 공시입니다. - 상기 '1. 발행회사'의 '자본금(원)'은 CHF 331,250.01에 2026년 7월 16일 최초 매매 기준율(CHF/KRW 1,849.79)을 적용한 금액이며, '발행주식총수(주)'는 본 보고서 제출일 현재 기준입니다. - 상기 '2. 취득내역'의 '취득주식수(주)'는 발행주식총수 33,125,001주에서 자기주식 108,590주를 제외한 취득 가능 최대 규모를 전제로 산정한 취득예정 주식수이며, 실제 취득주식수 및 취득 후 소유주식수·지분비율은 본 공개매수에 대한 주주들의 응모 결과 등에 따라 달라질 수 있습니다. '취득금액(원)'은 대상주식 1주당 공개매수가격 CHF 44.31에 위 취득주식수 33,016,411주를 곱한 CHF 1,462,957,171.41를 기준으로, 2026년 7월 16일 최초 매매 기준율(CHF/KRW 1,849.79)을 적용한 금액이며, 실제 취득금액은 본 공개매수의 응모 결과 및 매수 완료 시점의 적용 환율 등에 따라 달라질 수 있습니다. '자산총액(원)'은 2025년 12월 31일 현재 한국채택국제회계기준에 따라 작성된 당사의 연결재무제표 기준입니다 - 상기 '3. 취득후 소유주식수 및 지분비율'의 '지분비율(%)'은 '소유주식수(주)'를 자기주식을 제외한 발행주식총수로 나눈 비율입니다. - 상기 '5. 취득예정일자'는 본 공개매수에 따라 취득하는 주식의 결제예정일입니다. 구체적인 일정은 본 공개매수 절차의 진행상황, 공개매수 조건의 충족 또는 포기 여부, 기업결합 및 외국인투자 관련 승인 등 관계기관의 인허가 일정에 따라 변경될 수 있습니다. - 상기 '7.이사회 결의일(결정일)'은 Samsung Peptide AG가 대상 회사 주주 및 일반 투자자를 대상으로 공개매수 설명서를 공표한 날입니다. - 발행회사의 최대주주인 Draupnir Holding B.V.는 본 보고서 제출일 현재 보유하고 있는 발행회사 주식 18,375,000(지분율 55.65%=18,375,000/33,016,411)주 전부를 본 공개매수에 응모하기로 확약하였습니다. - 본 공개매수는 본 공개매수기간 종료 시점까지 유효하고 철회 불가능하게 응모된 주식(최대주주의 확약에 따라 최대주주가 본 공개매수에 응모할 주식 포함)수량이 발행회사의 완전희석 기준 자본금의 약 66.7(=2/3)% 이상일 경우 매수하는 것을 조건(이하 \"최소 응모조건\")으로 합니다. 이에 최소 응모조건에 미달하는 경우 응모 주식 전부를 매수하지 않습니다. - 본 공개매수의 최소 응모조건을 비롯한 공개매수 조건이 충족되지 않거나 포기되지 않는 경우 본건 주식 양수가 이루어지지 않을 수 있습니다. - 공개매수대금은 유상증자 등을 통한 방식으로 조달 예정입니다. - 상기 내용은 본 공개매수 및 관련 인허가 절차의 진행상황에 따라 변경될 수 있으며, 주요 사항이 변경되는 경우 관련 법령에 따라 최종 확정 후 정정공시할 예정입니다.\n※ 관련공시 | 2026-08-28 타법인 주식 및 출자증권 양수결정 2026-07-20 타법인 주식 및 출자증권 양수결정\n구분 | 자산총계 | 부채총계 | 자본총계 | 자본금 | 매출액 | 당기순이익\n당해 연도 | 1,410,209 | 828,686 | 581,523 | 613 | 669,198 | -36,143\n전년도 | 1,291,748 | 681,803 | 609,944 | 613 | 578,402 | -33,403\n전전년도 | 1,176,521 | 525,633 | 650,888 | 613 | 554,641 | -87,827\n종속회사명 | Samsung Peptide AG | 영문 | Samsung Peptide AG\n- 대표자 | McEvoy, Gerry\n- 주요사업 | 지분투자 및 자회사 관리\n- 주요종속회사 여부 | 미해당\n종속회사의 자산총액(원) | 174,611,000\n지배회사의 연결 자산총액(원) | 11,060,741,976,837\n지배회사의 연결 자산총액 대비(%) | 0.002",
+        "content_truncated": false,
+        "total_chars": 2786,
+        "summary": "타법인주식및출자증권취득결정(종속회사의주요경영사항)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800556",
+        "collected_at": "2026-09-07T03:40:02.521418Z",
+        "report_name": "타법인주식및출자증권취득결정(종속회사의주요경영사항)              ",
+        "published_at": "2026-08-31T00:00:00Z",
+        "request_id": "e96a60ca-cab1-442c-9d79-1a0573beefbe",
+        "source_type": "dart"
+      }
+    },
+    "20260814003375": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260814003375",
+        "document_type": "disclosure",
+        "content": "(제 16 기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 06월 30일 | 까지\n금융위원회\n한국거래소 귀중 | 2026 년 8 월 14 일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 삼성바이오로직스 주식회사\n대 표 이 사 : | 임 존 종 보\n본 점 소 재 지 : | 인천광역시 연수구 송도바이오대로 300\n(전 화) 032-455-3114\n(홈페이지) http://www.samsungbiologics.com\n작 성 책 임 자 : | (직 책) 경영지원센터장 (성 명) 유 승 호\n(전 화) 032-455-3114\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | - | - | - | - | -\n비상장 | 1 | 1 | - | 2 | 2\n합계 | 1 | 1 | - | 2 | 2\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n1-1. 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | Human Genome Sciences, Inc. | 인수\n- | -\n연결제외 | - | -\n- | -\n나. 회사의 법적ㆍ상업적 명칭 당사의 명칭은 \"삼성바이오로직스 주식회사\"이고, 영문명은 \"SAMSUNG BIOLOGICS CO.,LTD.\"입니다. 다. 설립일자 당사는 2011년 04월 22일 \"삼성바이오로직스 주식회사\"로 설립되었습니다. 라. 본사의 주소, 전화번호, 홈페이지 주소 본사의 주소 : 인천광역시 연수구 송도바이오대로 300 (송도동, 삼성바이오로직스)전화번호 : 032-455-3114홈페이지 : http://www.samsungbiologics.com 마. 중소기업 등 해당 여부 당사는 반기보고서 제출일 현재 중소기업기본법 제2조 및 중소기업기본법 시행령제3조에 의거 중소기업에 해당되지 않습니다.\n중소기업 해당 여부 | 미해당\n벤처기업 해당 여부 | 미해당\n중견기업 해당 여부 | 미해당\n바. 주요 사업의 내용 당사는 반기보고서 제출일 현재 CDMO(Contract Development and Manufacturing Organization) 사업을 영위하고 있으며, 글로벌 제약·바이오 기업을 대상으로 바이오의약품의 위탁생산 및 세포주/공정 개발 서비스를 제공하고 있습니다. 당기 기준으로 매출 비중은 제품 97.6%, 서비스 2.4%이며, 지역별 매출 비중은 유럽 소재 고객사 59.3%, 미국 소재 고객사 23.1%, 국내 16.7%, 기타 0.9% 입니다.\n사. 신용평가에 관한 사항 최근 당사 신용평가에 관한 사항은 다음과 같습니다.\n평가일 | 평가대상 유가증권 등 | 평가대상 유가증권의신용등급 | 평가회사(신용평가등급범위) | 평가구분\n2024.05.14 | 제 7-1, 7-2회 무보증 공모사채 | AA- | 한국신용평가 (AAA~D) | 정기평가\n2024.06.28 | 제 7-1, 7-2회 무보증 공모사채 | AA- | 한국기업평가 (AAA~D) | 정기평가\n2024.09.06 | 제 8-1, 8-2회 무보증 공모사채 | AA | NICE신용평가 (AAA~D) | 본평가\n2024.09.19 | 제 8-1, 8-2회 무보증 공모사채 | AA- | 한국기업평가 (AAA~D) | 본평가\n2024.11.28 | 제 7-2회 무보증 공모사채 | AA- | 한국신용평가 (AAA~D) | 수시평가\n2025.04.28 | 제 8-1, 8-2회 무보증 공모사채 | AA | NICE신용평가 (AAA~D) | 정기평가\n2025.05.08 | 제 7-2회 무보증 공모사채 | AA | 한국신용평가 (AAA~D) | 정기평가\n2025.05.12 | 제 7-2, 8-1, 8-2회 무보증 공모사채 | AA | 한국기업평가 (AAA~D) | 정기평가\n2026.04.20 | 제 7-2, 8-1, 8-2회 무보증 공모사채 | AA | 한국기업평가 (AAA~D) | 정기평가\n2026.06.24 | 제 8-1, 8-2회 무보증 공모사채 | AA | NICE신용평가 (AAA~D) | 정기평가\n2026.06.30 | 제 7-2회 무보증 공모사채 | AA | 한국신용평가 (AAA~D) | 정기평가\n[신용평가회사의 신용등급체계]- 한국신용평가 : 회사채회사채의 평가등급은 원리금 지급능력의 정도에 따라 AAA부터 D까지 10개 등급으로 분류됩니다. 등급 중 AAA부터 BBB까지는 원리금 상환능력이 인정되는 투자등급이며, BB에서 C까지는 환경변화에 따라 크게 영향을 받는 투기등급으로 분류됩니다.\n등급 | 회사채 등급의 정의\nAAA | 원리금 지급능력이 최상급임.\nAA | 원리금 지급능력이 매우 우수하지만 AAA의 채권보다는 다소 열위임.\nA | 원리금 지급능력은 우수하지만 상위등급보다 경제여건 및 환경악화에따른 영향을 받기 쉬운 면이 있음.\nBBB | 원리금 지급능력이 양호하지만 상위등급에 비해서 경제여건 및 환경악화에 따라 장래 원리금의 지급능력이 저하될 가능성을 내포하고 있음.\nBB | 원리금 지급능력이 당장은 문제가 되지 않으나 장래 안전에 대해서는단언할 수 없는 투기적인 요소를 내포하고 있음.\nB | 원리금 지급능력이 결핍되어 투기적이며 불황시에 이자지급이 확실하지 않음.\nCCC | 원리금 지급에 관하여 현재에도 불안요소가 있으며 채무불이행의위험이 커 매우 투기적임.\nCC | 상위등급에 비하여 불안요소가 더욱 큼.\nC | 채무불이행의 위험성이 높고 원리금 상환능력이 없음.\nD | 상환 불능상태임.\n※ 상기 등급 중 AA부터 B등급까지는 +, - 부호를 부가하여 동일 등급내에서의 우열을 나타냅니다. - 한국기업평가 : 회사채\n등급 | 회사채 등급의 정의\nAAA | 원리금 지급확실성이 최고 수준이다.\nAA | 원리금 지급확실성이 매우 높지만, AAA 등급에 비하여 다소 낮은 요소가 있다.\nA | 원리금 지급확실성이 높지만, 장래의 환경변화에 다소의 영향을 받을 가능성이 있다.\nBBB | 원리금 지급확실성이 있지만, 장래의 환경변화에 따라 저하될 가능성이 내포되어 있다.\nB",
+        "content_truncated": true,
+        "total_chars": 380456,
+        "summary": "반기보고서 (2026.06) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003375",
+        "collected_at": "2026-09-07T03:40:10.623605Z",
+        "report_name": "반기보고서 (2026.06)",
+        "published_at": "2026-08-14T00:00:00Z",
+        "request_id": "33051799-5a55-456d-af6b-0e93b7556240",
+        "source_type": "dart"
+      }
+    },
+    "20260515002129": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260515002129",
+        "document_type": "disclosure",
+        "content": "(제 16 기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 03월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026 년 5 월 15 일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 삼성바이오로직스 주식회사\n대 표 이 사 : | 임 존 종 보\n본 점 소 재 지 : | 인천광역시 연수구 송도바이오대로 300\n(전 화) 032-455-3114\n(홈페이지) http://www.samsungbiologics.com\n작 성 책 임 자 : | (직 책) 경영지원센터장 (성 명) 유 승 호\n(전 화) 032-455-3114\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | - | - | - | - | -\n비상장 | 1 | 1 | 0 | 2 | 2\n합계 | 1 | 1 | 0 | 2 | 2\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n1-1. 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | Human Genome Sciences, Inc. | 사업결합\n- | -\n연결제외 | - | -\n- | -\n2. 회사의 연혁\n회사의 연혁은 기업공시서식 작성기준에 따라 분기보고서에 기재하지 않습니다.(반기ㆍ사업보고서에 기재 예정)\n3. 자본금 변동사항\n자본금 변동사항은 기업공시서식 작성기준에 따라 분기보고서에 기재하지 않습니다.(반기ㆍ사업보고서에 기재 예정)\n4. 주식의 총수 등\n주식의 총수 등은 기업공시서식 작성기준에 따라 분기보고서에 기재하지 않습니다.(반기ㆍ사업보고서에 기재 예정)\n5. 정관에 관한 사항\n정관에 관한 사항은 기업공시서식 작성기준에 따라 분기보고서에 기재하지 않습니다.(반기ㆍ사업보고서에 기재 예정)\nII. 사업의 내용\n1. 사업의 개요\n가. 사업개요 삼성바이오로직스는 바이오의약품 위탁생산 및 세포주ㆍ공정 개발 서비스를 제공하는 CDMO(Contract Development and Manufacturing Organization) 사업을 영위하고 있습니다. 당사는 2022년 4월, 삼성바이오에피스㈜의 지분 100%를 취득함에 따라, 삼성바이오에피스㈜를 바이오의약품 개발 및 상업화 부문으로 편입 후,2025년 11월에는 순수지주회사로서 자회사 관리 및 신규 투자 등을 사업 목적으로 하고 삼성바이오에피스㈜의 지분을 100% 승계한 삼성에피스홀딩스㈜를 설립하기 위한 인적 분할 절차를 완료하여, 바이오의약품 개발 및 상업화 사업 부문을 분리하였습니다.2026년 1분기 연결 매출은 1조 2,571억원이며, 제품 매출 1조 2,227억원, 서비스 매출 344억원입니다. 지역별로는 유럽(54.6%)에서 대부분의 매출이 발생하고 있으며, 국내(24.4%), 미국(20.0%) 및 기타 지역(1.0%)에서도 안정적인 매출을 기록하고 있습니다. 나. 영업개황 삼성바이오로직스는 바이오의약품 위탁생산(CMO) 및 세포주 개발, 공정ㆍ제형ㆍ분석법 개발 등 초기 임상 단계까지 지원하는 위탁개발(CDO) 서비스를 제공하고 있습니다. 당사는 2025년 11월, 자회사 관리 및 신규 투자 등을 담당하는 삼성에피스홀딩스㈜를 설립하기 위한 인적분할 절차를 완료하며, 본연의 위탁개발생산(CDMO) 사업에 집중하기 위한 체제로의 전환을 완료하였습니다. 해당 분할을 통해, 바이오시밀러 사업과의 이해 상충 우려를 해소하고 독립적인 의사결정 체계를 강화함으로써, 순수 위탁개발생산(CDMO) 기업으로서의 글로벌 경쟁력을 더욱 강화할 계획입니다. 당사는 보고서 제출일 기준 인천 송도에 위치한 인천경제자유구역 내에 총 78만 5천리터(1공장 3만, 2공장 15만 5천, 3공장 18만, 4공장 24만, 5공장 18만 리터)의 생산 용량을 보유하고 있습니다. 2025년 12월에는 미국 Maryland주에 위치한 총 6만 리터 규모의 바이오의약품 생산시설을 보유한 글로벌 제약회사 GlaxoSmithKline Holdings(America) Inc의 자회사인 Human Genome Sciences, Inc.의 100% 지분 인수 계약을 체결했으며, 2026년 3월 인수 절차를 완료하였습니다. 해당 인수로 총 생산능력을 기존 78만 5천리터에서 84만 5천리터로 확대하였으며, 미국 생산 거점 확보를 통한 운영 유연성 및 글로벌 공급 안정성을 강화하였습니다. 또한 CMO뿐 아니라 CDO 사업에서도 성과를 확대하고 있습니다. 자체 세포주인 S-CHOice®을 비롯해 고농도 제형 플랫폼 S-Tensify™, 항체 후보 물질 선별 플랫폼 DEVELOPICK™, 고농도 제형 기술 S-HiCon™ 등을 개발, 마스터세포은행(MCB) 생산과 벡터 제작(Vector Construction) 서비스 내재화 역량 확보 등 고객사 향 제공 서비스를 고도화하기 위한 기술 경쟁력을 지속 강화하고 있습니다. 글로벌 영업 역량 강화를 위해 2023년 3월 미국 뉴저지에, 2025년에는 일본 도쿄에 각각 세일즈 오피스를 개소하여 고객 접점과 네트워크를 확대하고 있습니다.참고로 바이오의약품 시장은 2025년 약 5,387억 달러 규모로 전체 제약시장 내 42.7% 비중을 차지하며, 2030년까지 연평균 10.6%의 성장을 할 것으로 전망됩니다. (Evalaute Pharma 기반 내부 분석, 2025.10월 기준) 이에 따라 제약사들의 CDMO 활용도 증가하고 있으며, 동물세포 기반 항체의약품을 중심으로 대형 CMO들이 시장을 주도하고 있습니다. 2025년 기준 30만 리터 이상 글로벌 생산 Capacity를 보유한 주요 CDMO 업체는 당사를 포함해 스위스 Lonza, 중국 WuXi Biologics, 일본 FUJIFILM Holdings의 자회사인 FUJIFILM Biotechnologies가 있으며, FUJIFILM Biotechnologies의 경우 미국 등 해외 지역에서 증설을 진행 중인 가운데, 보고서 제출일 현재 기준 당사가 가장 큰 Capacity를 보유하고 있습니다. 당사는 항체의약품 중심의 CDMO 서",
+        "content_truncated": true,
+        "total_chars": 222231,
+        "summary": "분기보고서 (2026.03) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002129",
+        "collected_at": "2026-09-07T03:40:15.953522Z",
+        "report_name": "분기보고서 (2026.03)",
+        "published_at": "2026-05-15T00:00:00Z",
+        "request_id": "dba09503-3501-415b-bb7d-a2964bab9c0d",
+        "source_type": "dart"
+      }
+    },
+    "20260515001658": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260515001658",
+        "document_type": "disclosure",
+        "content": "정 정 신 고 (보고)\n2026년 05월 15일\n1. 정정대상 공시서류 : | 사업보고서 (2025.12)\n2. 정정대상 공시서류의 최초제출일 : | 2026 년 3 월 12 일\n3. 정정사항\n항 목 | 정정요구ㆍ명령관련 여부 | 정정사유 | 정 정 전 | 정 정 후\nVI. 이사회 등 회사의 기관에 관한 사항 1. 이사회에 관한 사항 나. 중요의결사항 등 | 아니오 | 기재누락 | 주1) | 주2)\n주1) 정정전\n나. 중요의결사항 등\n회차 | 개최일자 | 의 안 내 용 | 가결 여부 | 이사의 성명\n허근녕(출석률:100%) | 김유니스경희(출석률:100%) | 이창우(출석률:100%) | 서승환(출석률:100%) | 이호승(출석률:100%)\n1차 | '25.01.22 | 1. 2024년 재무제표, 영업보고서 및 2025년 경영계획 승인 건2. 2025년 ESG 공시 및 평가 대응 활동 계획 승인의 건3. 2025년 기후변화, 자연자본 활동 계획 승인의 건 | 가결가결가결 | 찬성찬성찬성 | 찬성찬성찬성 | 찬성찬성찬성 | 찬성찬성찬성 | 미해당\n2차 | '25.02.12 | [보고] 2024년 연결 내부회계관리제도 운영실태 보고[보고] 2024년 연결 내부회계관리제도 운영실태 평가 및 감사보고[보고] 2024년 감사실적 보고1. 내부회계관리규정 및 지침 개정 승인 건2. 정관 일부 변경의 건3. 주주총회 소집결의 및 회의목적사항 승인 건 | ---가결가결가결 | ---찬성찬성찬성 | ---찬성찬성찬성 | ---찬성찬성찬성 | ---찬성찬성찬성\n3차 | '25.03.14 | 1. 이사회 내 위원회 위원 선임의 건2. 선임사외이사 선임의 건3. 이사 보수한도 집행의 건4. 주요주주와의 거래 승인 건5. 유휴자재 기부의 건 | 가결가결가결가결가결 | 미해당 | 찬성찬성찬성찬성찬성 | 찬성찬성찬성찬성찬성 | 찬성찬성찬성찬성찬성 | 찬성찬성찬성찬성찬성\n4차 | '25.04.23 | [보고] 2025년 1분기 결산 실적[보고] 2024년 거버넌스 평가 결과 보고[보고] 준법지원 활동내역 및 준법경영방침1. 주요주주와의 거래 승인 건2. 특수관계인과의 거래 승인 건3. 2025년 안전보건계획 | ---가결가결가결 | ---찬성찬성찬성 | ---찬성찬성찬성 | ---찬성찬성찬성 | ---찬성찬성찬성\n5차 | '25.05.22 | 1. 분할계획서 승인의 건 | 가결 | 찬성 | 찬성 | 찬성 | 찬성\n6차 | '25.05.28 | 1. 수정 분할계획서 승인의 건 | 가결 | 찬성 | 찬성 | 찬성 | 찬성\n7차 | '25.07.14 | 1. 임시주주총회를 위한 주주명부 기준일 설정의 건 | 가결 | 찬성 | 찬성 | 찬성 | 찬성\n8차 | '25.07.23 | [보고] 2025년 상반기 결산 실적1. 주요주주와의 거래 승인 건2. 유휴자재 기부의 건3. ESG위원회 운영규정 개정의 건 | -가결가결가결 | -찬성찬성찬성 | -찬성찬성찬성 | -찬성찬성찬성 | -찬성찬성찬성\n9차 | '25.08.22 | 1. 수정 분할계획서 승인의 건 | 가결 | 찬성 | 찬성 | 찬성 | 찬성\n10차 | '25.10.02 | 1. 주주총회 소집결의 및 회의목적사항 승인 건 | 가결 | 찬성 | 찬성 | 찬성 | 찬성\n11차 | '25.10.28 | [보고] 2025년 3분기 결산 실적 | - | - | - | - | -\n12차 | '25.11.03 | 1. 분할 종료 보고총회에 갈음하는 공고 승인의 건2. 3단지 토지매매계약 승인의 건 | 가결가결 | 찬성찬성 | 찬성찬성 | 찬성찬성 | 찬성찬성\n13차 | '25.11.11 | 1. Cookie Project Binding Offer 승인 건 | 가결 | 찬성 | 찬성 | 찬성 | 찬성\n14차 | '25.12.18 | [보고] 주요 이슈 사항[보고] 2025년 임직원 인센티브 지급 건1. Cookie PJT 인수 진행 경과2. 특수관계인과의 거래 승인 건3. 주요주주와의 거래 승인 건4. 연말 불우이웃 기부 승인 건5. 노사 상생기금 출연 및 임직원 격려금 승인 건 | --가결가결가결가결가결 | --찬성찬성찬성찬성찬성 | --찬성찬성찬성찬성찬성 | --찬성찬성찬성찬성찬성 | --찬성찬성찬성찬성찬성\n15차 | '25.12.19 | 1. Cookie PJT 인수 최종 합의안 | 가결 | 찬성 | 찬성 | 찬성 | 찬성\n※ 2025년 3월 14일 제 14기 정기주주총회를 기준으로 허근녕 사외이사는 임기만료로 퇴임하였으며, 이호승 사외이사가 신규 선임되고 이창우 사외이사는 재선임되었습니다.\n주2) 정정후\n나. 중요의결사항 등\n회차 | 개최일자 | 의 안 내 용 | 가결 여부 | 이사의 성명\n존림(출석률:100%) | 김동중(출석률:100%) | 노균(출석률:100%) | 유승호(출석률:100%) | 허근녕(출석률:100%) | 김유니스경희(출석률:100%) | 이창우(출석률:100%) | 서승환(출석률:100%) | 이호승(출석률:100%)\n1차 | '25.01.22 | 1. 2024년 재무제표, 영업보고서 및 2025년 경영계획 승인 건2. 2025년 ESG 공시 및 평가 대응 활동 계획 승인의 건3. 2025년 기후변화, 자연자본 활동 계획 승인의 건 | 가결가결가결 | 찬성찬성찬성 | 찬성찬성찬성 | 찬성찬성찬성 | 미해당 | 찬성찬성찬성 | 찬성찬성찬성 | 찬성찬성찬성 | 찬성찬성찬성 | 미해당\n2차 | '25.02.12 | [보고] 2024년 연결 내부회계관리제도 운영실태 보고[보고] 2024년 연결 내부회계관리제도 운영실태 평가 및 감사보고[보고] 2024년 감사실적 보고1. 내부회계관리규정 및 지침 개정 승인 건2. 정관 일부 변경의 건3. 주주총회 소집결의 및 회의목적사항 승인 건 | ---가결가결가결 | ---찬성찬성찬성 | ---찬성찬성찬성 | ---찬성찬성찬성 | ---찬성찬성찬성 | ---찬성찬성찬성 | ---찬성찬성찬성 | ---찬성찬성찬성\n3차 | '25.03.14 | 1. 이사회 내 위원회 위원 선임의 건2. 선임사외이사 선임의 건3. 이사 보수한도 집행의 건4. 주요주주와의 거래 승인 건5. 유휴자재 기부의 건 | 가결가결가결가",
+        "content_truncated": true,
+        "total_chars": 465716,
+        "summary": "[기재정정]사업보고서 (2025.12) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515001658",
+        "collected_at": "2026-09-07T03:40:23.414788Z",
+        "report_name": "[기재정정]사업보고서 (2025.12)",
+        "published_at": "2026-05-15T00:00:00Z",
+        "request_id": "bf5b336e-fa39-4f1a-a190-38ceb4dd4216",
+        "source_type": "dart"
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260828000001",
+    "20260831800556",
+    "20260814003375",
+    "20260515002129",
+    "20260515001658"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:40:00.864357Z"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:00.864919Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:00.865246Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:00.865416Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:00.865540Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:00.865653Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:00.865856Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:01.197055Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:01.471928Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:01.501518Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:01.789656Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:01.814648Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-207940",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:02.023869Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

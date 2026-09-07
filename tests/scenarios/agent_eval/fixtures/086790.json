@@ -1,0 +1,1301 @@
+{
+  "company": {
+    "company_name": "하나금융지주",
+    "stock_code": "086790"
+  },
+  "captured_at": "2026-09-07T03:46:11.827545+00:00",
+  "capture_finished_at": "2026-09-07T03:47:54.302125+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "하나금융지주",
+      "stock_code": "086790",
+      "current_price": 138200,
+      "change": 3900,
+      "change_rate": 2.9,
+      "volume": 257336,
+      "volume_change_rate": 29.2,
+      "avg_volume_20d": 763591,
+      "volume_ratio_20d": 0.58,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 443670,
+      "warnings": [],
+      "as_of": "2026-09-07T03:46:12.379027Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:46:12.379027Z"
+    },
+    "news": {
+      "request_id": "c7167a6e-89a2-47ce-9212-e311e39b48e6",
+      "status": "success",
+      "company_name": "하나금융지주",
+      "stock_code": "086790",
+      "articles": [
+        {
+          "headline": "지주사 관련주 강세, 골프존홀딩스 두산 SK스퀘어 SK디스커버리 상승",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-07T02:50:00Z",
+          "summary": "LG와 효성, 하나금융지주도 비교적 높은 상승률을 기록하며 지주사 종목군 전반에 매수세가 유입되는 모습이다. 7일 오전 현재 골프존홀딩스는 전 거래일보다 7.23% 오른 7560원에 거래되고 있다. 이날 7270원에...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604474",
+          "relevance": "high"
+        },
+        {
+          "headline": "인천경제청, 송도와 청라 “글로벌 금융 거점 키운다”",
+          "publisher": "dnews.co.kr",
+          "published_at": "2026-09-07T02:02:00Z",
+          "summary": "오는 9월부터 연말까지 하나금융지주, 하나은행, 하나증권 등 10개 관계사 임직원 약 2,200명이 순차적으로 청라로 이전한다. 기존 상주 인력을 포함하면 하나드림타운에는 4,000명의 금융·IT 전문 인력이 근무하게 된다....",
+          "source_url": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609071007198870878",
+          "relevance": "high"
+        },
+        {
+          "headline": "“생산적 금융 늘려라”… 은행권, 채권 발행 급증",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T01:36:00Z",
+          "summary": "지주별로는 KB금융 110조원, 신한지주 110조원, 하나금융지주 100조원, 우리금융지주 80조원, NH농협 108조원 등이다. 금융위원회는 이달 중 포용 금융 이행 현황을 평가하는 ‘포용 금융 실적 종합 평가 체계’를...",
+          "source_url": "https://biz.chosun.com/stock/finance/2026/09/07/VDQLK37GWNFRHMULMK35XAOUQE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융지주, 환율 떨어지자 '두 번' 웃는다…순익 늘고 CET1 뛰어 주주...",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-07T01:24:00Z",
+          "summary": "하나금융지주의 올해 주주환원 여력이 원·달러 환율 하락에 힘입어 확대될 가능성이 커지고 있다. 상반기 실적을 끌어내렸던 환율이 3분기에는 반대로 순이익과 보통주자본(CET1)비율을 동시에 끌어올리는...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82269",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융지주, 그룹 20년사로 국제비즈니스대상 금상",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-06T23:54:00Z",
+          "summary": "하나금융그룹이 그룹 출범 20주년을 맞아 발간한 통합 역사서 '하나금융그룹 20년사'로 '2026 국제비즈니스대상(IBA)' 출판 부문 금상을 수상했다고 7일 밝혔다. '하나금융그룹 20년사'는 하나금융이 처음으로 계열사...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82245",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"명절 계란값 걱정마세요\" 하나금융, 전국 동네슈퍼 4천여곳에 'the착한...",
+          "publisher": "catchnews.kr",
+          "published_at": "2026-09-06T23:52:00Z",
+          "summary": "소상공인연합회는 전국 중소슈퍼마켓 체인 유통망을 활용해 상품 입점과 판매를 지원한다. 하나금융지주의 2023~2025년 매출액, 영업이익, 당기순이익 추이 [됴표 CatvhNews]",
+          "source_url": "https://www.catchnews.kr/news/articleView.html?idxno=128188",
+          "relevance": "high"
+        },
+        {
+          "headline": "금융지주 신종자본증권 완판 행렬…리테일 위축에도 기관 '뭉칫돈'",
+          "publisher": "news.einfomax.co.kr",
+          "published_at": "2026-09-06T23:42:00Z",
+          "summary": "하나금융지주 역시 지난 7월 이사회에서 최대 4천억원 한도의 신종자본증권 발행을 결의한 바 있다. 이처럼 금융지주의 신종자본증권에 준수한 기관 수요가 채워진 배경으로 업계는 기관의 집행 수요를 꼽고 있다....",
+          "source_url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433655",
+          "relevance": "high"
+        },
+        {
+          "headline": "[보험사 진단] [하나손해보험] 힘 싣는 하나금융…하나손보 ‘재도약’...",
+          "publisher": "topdaily.kr",
+          "published_at": "2026-09-06T23:35:00Z",
+          "summary": "2020년 하나금융지주 자회사로 편입된 뒤 하나손보로 사명을 바꾸면서 장기보험 중심으로 사업 포트폴리오를 확대해왔다. 상대적으로 장기보험 진출이 늦었던 만큼 상품 경쟁력 확보 차원의 신 담보 개발과 상품...",
+          "source_url": "https://www.topdaily.kr/articles/111810",
+          "relevance": "high"
+        },
+        {
+          "headline": "[Invest]9월 중순 청라行 본격화하는 하나금융…이전 준비에 연례 행사도...",
+          "publisher": "investchosun.com",
+          "published_at": "2026-09-06T22:02:00Z",
+          "summary": "청라 이전 시기와 맞물린 일부 연례 행사는 예년보다 규모를 축소하는 등 기존 업무 일정에도 변화가 생기고 있다.3일 금융권에 따르면 하나금융은 오는 14일부터 하나금융지주와 하나은행 일부 인력을 시작으로 청라...",
+          "source_url": "https://www.investchosun.com/site/data/html_dir/2026/09/05/2026090580032.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "[Who Is ?] 빈대인 BNK금융지주 대표이사 회장",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-06T22:02:00Z",
+          "summary": "김주성 전무는 하나은행 신용리스크관리부장과 하나금융지주 리스크관리팀장, 하나카드 리스크관리본부장 등을 거쳐 하나금융지주 그룹리스크총괄 부사장과 하나은행 리스크관리그룹장 부행장을 지냈다. 디지털...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446045",
+          "relevance": "high"
+        },
+        {
+          "headline": "김남구 회장의 35년 뚝심…아시아 대표 IB 정조준",
+          "publisher": "magazine.hankyung.com",
+          "published_at": "2026-09-06T21:02:00Z",
+          "summary": "지난 2023년에는 하나금융지주가 KDB생명 인수 우선협상대상자로 선정됐으나 실사 과정에서 대규모 자본 투입에 대한 부담 등을 이유로 인수 의사를 철회했다. 한투지주는 KDB생명 인수 시 최대 1조 원가량의 자본을...",
+          "source_url": "https://magazine.hankyung.com/money/article/202608186986c",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융 4000명 청라 집결…송도·청라 '글로벌 금융거점' 탄력",
+          "publisher": "dongponews.net",
+          "published_at": "2026-09-06T20:30:00Z",
+          "summary": "특히 하나금융지주와 하나은행, 하나증권 등 주요 계열사의 청라 이전은 단순한 기업 본사 이전을 넘어 금융기업과 핀테크·블록체인·데이터 등 연관 산업을 끌어들이는 '앵커 효과'를 가져올 것으로 기대된다....",
+          "source_url": "https://www.dongponews.net/news/articleView.html?idxno=60357",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융, 2판 9990원 ‘착한계란’ 12만판 푼다",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-06T20:05:00Z",
+          "summary": "하나금융지주가 추석을 앞두고 소상공인시장진흥공단(소진공), 소상공인연합회(소공연)와 함께 전국 동네슈퍼에 계란 12만판을 공급한다. 소비자 물가 부담을 낮추고 골목상권을 지원하기 위해서다. 하나금융은 지난...",
+          "source_url": "https://www.seoul.co.kr/news/peoples/2026/09/07/20260907023007?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "정치권·경제계·오월단체 \"스카이데일리 혁신·정론직필에 경의\" 격려",
+          "publisher": "m.skyedaily.com",
+          "published_at": "2026-09-06T13:04:00Z",
+          "summary": "특히 선포식에는 은행연합회를 비롯해 신한금융그룹, 하나금융지주, 하나증권, 삼성증권, KB국민카드, 우리은행, 우리카드, 카카오뱅크 등 금융권의 발길이 이어졌다. 국내 굴지의 기업들도 선포식을 찾아 격려했다....",
+          "source_url": "https://m.skyedaily.com/news_view.html?ID=311021",
+          "relevance": "high"
+        },
+        {
+          "headline": "[은행 뉴스브리핑] 하나금융 물가안정화 지원…'착한계란' 공급",
+          "publisher": "asiatime.co.kr",
+          "published_at": "2026-09-06T06:12:00Z",
+          "summary": "□ 하나금융 물가안정화 지원…'착한계란' 공급 하나금융지주가 4일 소상공인시장진흥공단, 소상공인연합회와 함께 '동네슈퍼 '착한계란' 공급 통한 물가안정화 지원' 업무협약을 맺었다. 이번 업무협약은...",
+          "source_url": "https://www.asiatime.co.kr/article/20260906500097",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융지주, 상반기보다 하반기가 좋다…밸류에이션도 매력",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-06T05:26:00Z",
+          "summary": "하나금융지주가 올해 하반기 상반기보다 개선된 실적을 내놓을 가능성이 커지고 있다. 신한투자증권은 환율 하락에 따른 긍정적인 효과와 안정적인 이익 흐름을 바탕으로 하나금융지주의 실적 정점 논란이 제한적일 것...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484252",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘착한계란’ 내놓은 하나금융…함영주 “포용금융 지속”",
+          "publisher": "ekn.kr",
+          "published_at": "2026-09-06T02:24:00Z",
+          "summary": "하나금융지주는 소상공인시장진흥공단·소상공인연합회와 함께 '동네슈퍼 착한계란 공급 통한 물가안정화 지원' 업무협약을 체결했다고 6일 밝혔다. 이번 협약은 민·관이 협력해 골목상권에 활력을 불어넣고...",
+          "source_url": "https://www.ekn.kr/web/view.php?key=20260906027441112",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융, 전국 동네슈퍼에 ‘착한계란’ 12만판 공급",
+          "publisher": "khan.co.kr",
+          "published_at": "2026-09-06T01:58:00Z",
+          "summary": "하나금융지주가 두 판에 9990원으로 판매하는 ‘착한계란’ 12만판을 전국 동네슈퍼에 공급한다. 하나금융은 지난 4일 서울 중구 명동사옥에서 소상공인시장진흥공단, 소상공인연합회와 ‘동네슈퍼 착한계란 공급을...",
+          "source_url": "https://www.khan.co.kr/article/202609061058001",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융, 동네슈퍼에 계란 12만판 푼다…60개 9990원",
+          "publisher": "newsworks.co.kr",
+          "published_at": "2026-09-05T23:30:00Z",
+          "summary": "하나금융지주가 추석을 앞두고 전국 동네슈퍼에 계란 약 12만판을 공급한다. 소비자는 계란 60개를 9990원에 구매할 수 있다. 하나금융은 소상공인시장진흥공단, 소상공인연합회와 '동네슈퍼 착한계란 공급을 통한...",
+          "source_url": "https://www.newsworks.co.kr/news/articleView.html?idxno=852749",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간 거래소 기관] 포스코인터내셔널 포스코DX SK이노베이션 신한지주...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-05T00:24:00Z",
+          "summary": "신한지주와 KB금융, 하나금융지주, DB손해보험, 메리츠금융지주, 우리금융지주, 삼성화재, 현대해상 등이 순매수 상위권에 포함됐다. 은행과 보험 등 금융주에 기관 자금이 유입된 것은 실적 개선과 주주환원 확대...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484099",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간 거래소 외국인] SK하이닉스·삼성전자 대거 팔고 우리금융지주·...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-05T00:18:00Z",
+          "summary": "외국인은 우리금융지주와 한국금융지주, 미래에셋증권, 키움증권을 사들였지만 신한지주와 KB금융, 하나금융지주, DB손해보험, 삼성화재, 현대해상은 순매도했다. 같은 금융업종 안에서도 종목별 수급 차이가 뚜렷하게...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484098",
+          "relevance": "high"
+        },
+        {
+          "headline": "거시환경 변수 속 금융株 중 유리한 순서는? [주末머니]",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-04T23:23:00Z",
+          "summary": "경우 대체로 헤지가 돼 있기 때문에 중립적\"이라고 설명했다. 메리츠증권은 최선호주로 은행 업종은 신한지주, 보험은 현대해상, 증권은 삼성증권을 제시했다. 하나금융지주(은행)와 DB손해보험(보험)은 차선호주로 제시했다.",
+          "source_url": "https://view.asiae.co.kr/article/2026090317244599269",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관, 삼전·하닉 팔고 삼성전기·SK이노 샀다…개인은 현대차 ‘...",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-04T20:34:00Z",
+          "summary": "신한지주(1019억원), LG에너지솔루션(894억원), 두산에너빌리티(828억원), 하나금융지주(790억원), POSCO홀딩스(597억원), KB금융(587억원)도 매수 상위 종목에 이름을 올렸다. 삼성SDI는 지난달 27일 하루에만 주가가 10.27...",
+          "source_url": "https://www.news2day.co.kr/article/20260905500005",
+          "relevance": "high"
+        },
+        {
+          "headline": "[공시] 9월 7일, 코스피 상장사 42개 종목 자사주 매수 신청",
+          "publisher": "newstnt.com",
+          "published_at": "2026-09-04T11:22:00Z",
+          "summary": "이어 SK하이닉스(000660) 65만주, ​신한지주(055550) 13만주, ​하나금융지주(086790) 5만주 순이다. 다음으로 셀트리온(068270)과 IPARK현대산업개발(294870)이 각각 4만주, ​현대지에프홀딩스(005440) 3만주...",
+          "source_url": "https://www.newstnt.com/news/articleView.html?idxno=716792",
+          "relevance": "high"
+        },
+        {
+          "headline": "[은행 뉴스브리핑] 'KB금융 골든라이프 챔피언십' 개막",
+          "publisher": "asiatime.co.kr",
+          "published_at": "2026-09-04T09:20:00Z",
+          "summary": "□ 하나금융 '하나금융 챔피언십' 개최 하나금융지주는 오는 17일부터 나흘간 안산 '더헤븐컨트리클럽'에서 한국여자프로골프협회(KLPGA) 정규투어 '하나금융 챔피언십(총상금 15억원, 우승상금 2억7000만원)'을 개최한다....",
+          "source_url": "https://www.asiatime.co.kr/article/20260904500344",
+          "relevance": "high"
+        },
+        {
+          "headline": "미국 운용사 캐피털그룹, 신한금융 3대 주주로…JB도 8% 육박",
+          "publisher": "whitepaper.co.kr",
+          "published_at": "2026-09-04T09:08:00Z",
+          "summary": "금융정보업체 에프앤가이드에 따르면 전날(3일) 종가 대비 최근 1년 주가 수익률은 신한지주 74.5%, 하나금융지주 67.9%, KB금융 61.4%, JB금융지주 33.9%, BNK금융지주 8.1% 순이었다. JB금융 시가총액은 5조9000억...",
+          "source_url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=266429",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인, 우리금융 3900억 순매수… 기관도 신한·KB·하나 사들여",
+          "publisher": "weekly.donga.com",
+          "published_at": "2026-09-04T08:13:00Z",
+          "summary": "같은 기간 기관은 신한지주(1478억 원), KB금융(1167억 원), 하나금융지주(964억 원), 우리금융지주(683억 원) 등을 골고루 매수했다. 반면 SK하이닉스(1조3689억 원)와 삼성전자(1조51억 원)는 대거 팔았다. 외국인도 같은...",
+          "source_url": "https://weekly.donga.com/3/all/11/6373825/1",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"외국인은 벌써 담았다\"··· 금리 오르자 4158억 몰린 '이 종목'",
+          "publisher": "greenpostkorea.co.kr",
+          "published_at": "2026-09-04T08:08:00Z",
+          "summary": "KB금융·신한지주·하나금융지주·우리금융지주 가운데 외국인이 가장 적극적으로 사들인 종목은 우리금융지주였다. 최근 은행주가 빠르게 오른 뒤 4일 일제히 조정을 받았지만, 금리 상승에 따른 이익 증가와...",
+          "source_url": "https://www.greenpostkorea.co.kr/news/articleView.html?idxno=307408",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 월러 '금리 동결' 발언에 환호…1.64% 오른 6687.21 마감",
+          "publisher": "newsian.co.kr",
+          "published_at": "2026-09-04T07:38:00Z",
+          "summary": "KB금융은 3.32%, 신한지주는 3.67%, 하나금융지주는 3.73%, 우리금융지주는 4.18% 각각 하락했다. 코스닥지수는 코스피보다 상승폭이 컸다. 코스닥은 23.29포인트(2.95%) 상승한 813.50에 마감했다. 서울 외환시장에서 원...",
+          "source_url": "http://www.newsian.co.kr/news/articleView.html?idxno=94812",
+          "relevance": "high"
+        },
+        {
+          "headline": "[코스피 지수선물 옵션] 삼성전자·SK하이닉스 오르고 금융주는 울상…...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-04T07:36:00Z",
+          "summary": "반면 LG에너지솔루션, 삼성바이오로직스, KB금융, 삼성생명, 신한지주, 하나금융지주, 삼성화재, 고려아연, 메리츠금융, LG화학, HMM, KT&G, 에이피알, LIG디펜스원, DB손해보험, 에코프로, 삼양식품, 크래프톤, 삼성에피스...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484048",
+          "relevance": "high"
+        },
+        {
+          "headline": "[칼럼] 생존을 넘어 도약으로, 중소기업의 ESG 경영이 필요한 이유",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-04T07:35:00Z",
+          "summary": "하나금융지주를 비롯한 주요 시중은행들은 ESG 평가 결과를 대출 승인 및 금리 결정의 핵심 기준으로 적용하고 있다. 정부 역시 2026년 기후테크 및 신재생에너지 관련 예산을 14조 원 이상으로 전년 대비 20% 증액하며...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609040560&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 금리 인상 우려 낮아졌나…기관·외인 동반 순매수에 코스피 1.64% 상...",
+          "publisher": "economist.co.kr",
+          "published_at": "2026-09-04T07:30:00Z",
+          "summary": "▲삼성전자우(4.07%) ▲SK스퀘어(6.12%) ▲삼성전기(3.93%) 등이 올랐다. 반면 고금리 기대감이 꺼지면서 그간 상승세를 보였던 ▲KB금융(-3.32%) ▲신한지주(-3.67%) ▲하나금융지주(-3.73%) 등 은행주는 하락했다.",
+          "source_url": "https://economist.co.kr/article/view/ecn202609040035",
+          "relevance": "high"
+        },
+        {
+          "headline": "월러 발언에 코스피 1.64%↑... 환율 장중 1340원대 [마감시황]",
+          "publisher": "m-i.kr",
+          "published_at": "2026-09-04T07:22:00Z",
+          "summary": "금융주는 최근 상승에 따른 차익실현 매물이 나오면서 KB금융과 신한지주, 하나금융지주, 우리금융지주 등이 약세를 보였다. 대외 불확실성은 남아 있다. JD 밴스 미국 부통령이 이란의 상선 공격 중단 전까지 대화에...",
+          "source_url": "https://www.m-i.kr/news/articleView.html?idxno=1410233",
+          "relevance": "high"
+        },
+        {
+          "headline": "[거래소 외국인] SK하이닉스 삼성전기 SK스퀘어 삼성전자우 한미반도체...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-04T07:00:00Z",
+          "summary": "반면 KB금융과 우리금융지주, 신한지주, 하나금융지주 등 금융주는 대거 순매도하며 엇갈린 투자 행보를 나타냈다. 한국거래소에 따르면 이날 외국인 순매수 상위 종목에는 SK하이닉스, 삼성전기, SK스퀘어, 삼성전자우...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484013",
+          "relevance": "high"
+        },
+        {
+          "headline": "[거래소 기관] 삼성전자· SK하이닉스 사고 대덕전자·현대차 팔았다",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-04T06:56:00Z",
+          "summary": "신한지주, KB금융, 하나금융지주, 우리금융지주 등이 순매수 상위권에 나란히 이름을 올렸다. 금융지주를 중심으로 기관의 매수세가 이어지는 모습이다. 운송과 산업재 관련 종목도 기관이 사들였다. 대한항공과 HD현대...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484010",
+          "relevance": "high"
+        },
+        {
+          "headline": "STO 시장 선점 경쟁 본격화… IT·증권주 중심으로 매수 온기 확산",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-04T05:24:00Z",
+          "summary": "아이티아이즈를 비롯해 KB금융, 하나금융지주, 신한지주가 하락세를 보이고 있다. 대형 금융지주사의 경우 최근 주가 상승에 따른 단기 차익 실현 매물이 나오는 데다, STO 모멘텀이 중소형 증권사와 핀테크 기업에...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=483936",
+          "relevance": "high"
+        },
+        {
+          "headline": "규제·세제 부담 커질수록 주목… '푸르지오 스타셀라49' 금융혜택 제공",
+          "publisher": "edu.donga.com",
+          "published_at": "2026-09-04T03:08:00Z",
+          "summary": "그룹 신사옥은 지난 5월 준공됐으며 다음 달부터 하나금융지주와 주요 계열사 조직이 순차적으로 이전할 예정이다. 이전이 마무리되면 약 2,800명의 임직원이 상주할 것으로 예상된다. 교통망 개선 기대감도 있다....",
+          "source_url": "https://edu.donga.com/news/articleView.html?idxno=111598",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융그룹, 안산 더헤븐CC서 '하나금융 챔피언십' 개최… 총상금 15억...",
+          "publisher": "nbntv.kr",
+          "published_at": "2026-09-04T02:26:00Z",
+          "summary": "이는 금융그룹 전반의 대외 신인도를 대폭 상향하고 장기 리테일 고객 생애 가치(LTV)를 탄탄히 다져, 하나금융지주의 기업가치를 안정적으로 우상향 지지하는 실질적인 모멘텀이 되기 때문이다. 결론적으로 철저한...",
+          "source_url": "https://www.nbntv.kr/news/articleView.html?idxno=340747",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융지주, 하나손보에 자본 투입 검토…내년 새 규제 대비",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-04T01:58:00Z",
+          "summary": "하나금융지주가 올해 3000억원을 지원한 하나손해보험에 추가 자본을 투입하는 방안을 검토하고 있다. 전체 지급여력비율은 금융당국 권고 수준을 웃돌고 있지만 내년부터 새로 관리되는 기본자본 K-ICS 비율이...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82207",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융지주, 17일 안산서 KLPGA 챔피언십 개최…총상금 15억원",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-04T01:30:00Z",
+          "summary": "하나금융그룹이 오는 17일부터 20일까지 나흘간 경기 안산 더헤븐컨트리클럽에서 KLPGA 정규투어 '하나금융그룹 챔피언십'을 개최한다고 4일 밝혔다. 올해로 8회째를 맞는 대회는 총상금 15억원, 우승상금 2억7000만원...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82196",
+          "relevance": "high"
+        },
+        {
+          "headline": "금리 상승에 은행 ETF 강세…NIM 개선·주주환원 기대",
+          "publisher": "cstimes.com",
+          "published_at": "2026-09-03T22:54:00Z",
+          "summary": "KB금융(5.85%), 신한지주(3.98%), 하나금융지주(4.52%), 우리금융지주(0.72%) 등이 올랐다. KODEX 은행은 KB금융·신한지주·하나금융지주·우리금융지주 등 주요 금융지주 비중이 높아 개별 은행주의 상승이 ETF 수익률에도...",
+          "source_url": "https://www.cstimes.com/news/articleView.html?idxno=719323",
+          "relevance": "high"
+        },
+        {
+          "headline": "[박수진의 금융人] 하나카드 성영수, '선택과 집중' 승부수…기업·글로...",
+          "publisher": "newswatch.kr",
+          "published_at": "2026-09-03T21:00:00Z",
+          "summary": "성 사장은 하나은행에서 외환사업단장, CIB그룹장(부행장), 기업그룹장 겸 기업디지털본부장(부행장) 등을, 하나금융지주에서 CIB본부장(부사장) 등을 지내다 2025년 1월1일 하나카드 대표이사로 임기를 시작했다. 성...",
+          "source_url": "http://www.newswatch.kr/news/articleView.html?idxno=80988",
+          "relevance": "high"
+        },
+        {
+          "headline": "“금리·환율까지 우주의 기운이 모이는중”…금융지주 주가 ‘불기둥’",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-03T20:48:00Z",
+          "summary": "최근 3개월 기준으로도 KB금융(13.60%), 신한지주(18.78%), 하나금융지주(19.23%), 우리금융지주(15.89%) 등 주요 금융지주 주가는 일제히 뚜렷한 우상향 곡선을 이어갔다. 같은 기간 반도체주의 가파른 조정으로 코스피 지수가...",
+          "source_url": "https://www.mk.co.kr/article/12144043",
+          "relevance": "high"
+        },
+        {
+          "headline": "불안한 증시엔 은행주 '방패' … 금리·실적·배당까지 '3박자'",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-03T19:10:00Z",
+          "summary": "KB금융지주(KB금융)는 5.20% 상승한 17만7900원, 하나금융지주는 3.41% 오른 13만9500원을 기록했다. 전문가들은 고금리 수혜와 함께 실적·배당을 모두 갖춘 방어주인 은행주 ETF에 투자하라고 조언한다. 김정현...",
+          "source_url": "https://www.mt.co.kr/stock/2026/09/04/2026090319385188915",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 '외국인 주주' 지형도...KB금융 79%·삼성전자우 76%, 금융주 장악",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-03T12:48:00Z",
+          "summary": "삼성전자우가 75.89%로 3위를 차지했고 유안타증권 68.78%, 하나금융지주 68.05%가 뒤따랐다. 신한지주도 62.04%로 10위에 이름을 올렸다. 외국인 보유 비중만 놓고 보면 국내 대표 반도체 기업보다 금융회사의 존재감이...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=483680",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융지주, 하반기 실적 개선 기대… 목표주가 16만원으로 상향 - 신...",
+          "publisher": "s-journal.co.kr",
+          "published_at": "2026-09-03T11:42:00Z",
+          "summary": "하나금융지주가 올 하반기에도 안정적 실적 흐름을 이어갈 것이라는 전망이 나왔다. 순이자이익 개선과 환율 효과, 자본 여력 확대에 따른 주주환원 강화 기대감이 반영되며 목표주가도 상향 조정됐다....",
+          "source_url": "https://www.s-journal.co.kr/news/articleView.html?idxno=43500",
+          "relevance": "high"
+        },
+        {
+          "headline": "[공시] 9월 4일, 코스피 상장사 45개 종목 자사주 매수 신청",
+          "publisher": "newstnt.com",
+          "published_at": "2026-09-03T09:56:00Z",
+          "summary": "이어 SK하이닉스 65만주, 신한지주(055550) 13만주, 보령(003850) 5만5천주, 하나금융지주(086790) 5만주, 셀트리온(068270)과 IPARK현대산업개발(294870)이 각각 4만주를 신청했다. 현대지에프홀딩스(005440)는...",
+          "source_url": "https://www.newstnt.com/news/articleView.html?idxno=716626",
+          "relevance": "high"
+        },
+        {
+          "headline": "캐피털그룹이 찍은 韓주식…KT&G·JB금융 늘렸다",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-03T09:34:00Z",
+          "summary": "3일 금융감독원 전자공시시스템에 올해 공시된 캐피털그룹의 투자자문사 캐피털리서치앤매니지먼트컴퍼니(CRMC)의 주식등의대량보유상황보고서를 분석한 결과 신한지주·JB금융지주·KB금융·하나금융지주...",
+          "source_url": "https://www.sedaily.com/article/20086983?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "중동 긴장에 코스피 장중 '털썩'...코스닥 800선 붕괴",
+          "publisher": "ytn.co.kr",
+          "published_at": "2026-09-03T09:33:00Z",
+          "summary": "삼성전자와 SK하이닉스가 소폭 하락했지만 KB금융과 신한지주, 하나금융지주 등 금융주가 급등했고 2차전지와 조선 등도 강세였습니다. [박석현 / 우리은행 애널리스트 : 미국과 이란 간의 전쟁 불확실성이 커지면서 이...",
+          "source_url": "https://www.ytn.co.kr/_ln/0102_202609031833042830",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나증권, 첫 외화 신종자본증권 발행 추진…S&P 'BBB' 평가",
+          "publisher": "econovill.com",
+          "published_at": "2026-09-03T09:04:00Z",
+          "summary": "S&P는 하나증권이 하나금융지주의 핵심 자회사라는 점을 감안해 그룹의 지원 가능성을 신용도에 반영했다. 다만 해당 증권이 직접·무담보 후순위 채무라는 점에서 한 단계, 이자 지급이 유예될 수 있다는 점에서 추가...",
+          "source_url": "https://www.econovill.com/news/articleView.html?idxno=749828",
+          "relevance": "high"
+        },
+        {
+          "headline": "금리상승·원화강세·주주환원 3박자 … 금융지주 주가 잘나가네",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-03T09:01:00Z",
+          "summary": "최근 3개월 기준으로도 KB금융(13.60%) 신한지주(18.78%) 하나금융지주(19.23%) 우리금융지주(15.89%) 등 금융지주 주가는 일제히 우상향 곡선을 그렸다. 같은 기간 반도체주 조정으로 코스피가 25.21% 급락한 것과 대조적인...",
+          "source_url": "https://www.mk.co.kr/article/12143731",
+          "relevance": "high"
+        },
+        {
+          "headline": "'중동 긴장 고조'...코스피 급락 후 강보합 마감",
+          "publisher": "ytn.co.kr",
+          "published_at": "2026-09-03T08:45:00Z",
+          "summary": "삼성전자와 SK하이닉스가 소폭 하락했지만 KB금융과 신한지주, 하나금융지주 등 금융주가 급등했고 2차전지와 조선 등도 강세였습니다. 반면 코스닥은 1.7% 하락해 18거래일 만에 700선으로 내려왔습니다. 원-달러...",
+          "source_url": "https://www.ytn.co.kr/_ln/0102_202609031745201889",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나증권, 첫 외화 신종자본증권 발행…S&P 'BBB' [fn마켓워치]",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-03T08:18:00Z",
+          "summary": "S&P는 하나증권이 하나금융지주의 핵심 자회사라는 점을 고려해 그룹 차원의 지원 가능성을 등급 산정에 반영했다. 다만 신종자본증권의 후순위 위험을 고려해 한 단계, 이자 지급 유예 위험을 반영해 추가로 한 단계...",
+          "source_url": "https://www.fnnews.com/news/202609031654136523",
+          "relevance": "high"
+        },
+        {
+          "headline": "[코스피 지수선물 옵션] 삼성전자·SK하이닉스 약세에도 금융·조선주 선...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-03T07:38:00Z",
+          "summary": "KB금융, 삼성생명, 신한지주, 하나금융지주, 삼성화재, 우리금융지주, 메리츠금융, DB손해보험, 기업은행, 한국금융지주, 삼성증권, NH투자증권 등이 일제히 상승했다. 미래에셋증권과 JB금융지주도 오름세를 나타냈다....",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=483650",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 0.26% 상승하며 강보합 마감",
+          "publisher": "issuenbiz.com",
+          "published_at": "2026-09-03T07:30:00Z",
+          "summary": "KB금융(5.20%), 신한지주(3.62%), 하나금융지주(3.41%), 미래에셋증권(0.61%), 메리츠금융지주(5.47%), 기업은행(1.44%) 등이 상승했다. 코스닥은 이날 전 거래일보다 13.77p(1.71%) 내린 790.21에 거래를 마쳤다. 코스닥은...",
+          "source_url": "http://www.issuenbiz.com/news/articleView.html?idxno=79428",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융지주 주가, 9월 3일 139,500원 3.41% 상승 마감",
+          "publisher": "topstarnews.net",
+          "published_at": "2026-09-03T07:28:00Z",
+          "summary": "3일 KRX 마감 기준, 네이버페이 증권에 따르면 하나금융지주는 139,500원에 마감하며 지난 종가 대비 4,600원, 3.41% 상승했다. 시가총액 38조 2,743억 원으로 코스피 시장에서 20위를 기록한...",
+          "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16182180",
+          "relevance": "high"
+        },
+        {
+          "headline": "[마켓펄스] \"기타법인이 살려낸 증시\"...개인·외국인·기관 '매도'",
+          "publisher": "ntoday.co.kr",
+          "published_at": "2026-09-03T07:20:00Z",
+          "summary": "특징주로는 원화 강세가 지속되며 KB금융(+5.20%), 우리금융지주(+0.43%), 하나금융지주(+3.41%) 등 금융 업종이 강세를 보였다. 또 트럼프가 알래스카 액화천연가스(LNG) 프로젝트에 한국과 일본 참여를 재차 언급하며...",
+          "source_url": "https://www.ntoday.co.kr/news/articleView.html?idxno=129152",
+          "relevance": "high"
+        },
+        {
+          "headline": "금리·유가 진정, 코스피 '상승'...하나금융·신한지주·KB금융 '껑충'",
+          "publisher": "choicenews.co.kr",
+          "published_at": "2026-09-03T07:12:00Z",
+          "summary": "원화 강세와 실적, 주주환원 등이 주목받은 금융지주 가운데 하나금융지주(3.41%), 신한지주(3.62%), KB금융(5.20%) 등이 껑충 뛰었다. 보험주에선 삼성생명(3.06%), 한화생명(5.89%), 삼성화재(6.85%) 등이 점프했다....",
+          "source_url": "http://www.choicenews.co.kr/news/articleView.html?idxno=170926",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 약세 딛고 0.26% 상승한 6579.48로 마감...금융·조선·건...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-03T07:10:00Z",
+          "summary": "KB금융이 5.20% 상승한 가운데 BNK금융지주가 4.49%, 신한지주가 3.62%, JB금융지주가 3.44%, 하나금융지주가 3.41% 올랐다. 기업은행은 1.44%, iM금융지주는 1.01%, 우리금융지주는 0.43% 상승했다. 보험주도 동반 강세를...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=483611",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 장 중 6500선 깨졌다 회복 마감…코스닥은 하락",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-03T07:07:00Z",
+          "summary": "반면 KB금융(+5.2%), 신한지주(+3.6%), 하나금융지주(+3.4%), 삼성생명(+3.0%) 등 금융 관련 종목은 상승 했다. LG에너지솔루션(+5.1%), 두산에너빌리티(+3.3%), HD현대중공업(+3.0%) 등도 3% 이상 상승율을 보였다....",
+          "source_url": "https://view.asiae.co.kr/article/2026090316074444085",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 꺾이자 코스피도 흔들…장중 급락 후 강보합[마감시황]",
+          "publisher": "newsway.co.kr",
+          "published_at": "2026-09-03T07:04:00Z",
+          "summary": "메리츠금융지주는 5.47%, KB금융은 5.20% 상승했고 신한지주와 하나금융지주도 각각 3.62%, 3.41% 올랐다. 코스닥 지수는 전 거래일(803.98)보다 13.77포인트(1.71%) 내린 790.21에 거래를 마쳤다. 코스닥 역시 장중...",
+          "source_url": "https://www.newsway.co.kr/news/view?ud=2026090315585195815",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6500선 지켰지만…개미 1조 '이탈'",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-03T07:03:00Z",
+          "summary": "KB금융(5.20%), 신한지주(3.62%), 하나금융지주(3.41%), 메리츠금융지주(5.47%), 기업은행(1.44%), 미래에셋증권(0.61%) 등이 상승했다. 이외 시가총액 상위 종목 중에서는 LG에너지솔루션(5.18%), 현대차(1.46%), 삼성생명(3....",
+          "source_url": "http://www.inews24.com/view/2001743",
+          "relevance": "high"
+        },
+        {
+          "headline": "[거래소 기관] KB금융 신한지주 우리금융지주 삼성화재 '왕성한 식욕'",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-03T06:58:00Z",
+          "summary": "KB금융과 신한지주를 비롯해 우리금융지주, 삼성화재, DB손해보험, 메리츠금융지주, 하나금융지주 등이 순매수 상위권에 포함됐다. 은행과 보험 등 금융업종 주요 종목에 기관의 매수세가 동시에 유입된 것이 눈에 띈다....",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=483618",
+          "relevance": "high"
+        },
+        {
+          "headline": "주주환원에 자회사 호재까지… 지주사주 '옥석 가리기'",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-03T06:30:00Z",
+          "summary": "KB금융, BNK금융지주, 신한지주, 하나금융지주, JB금융지주, iM금융지주, 한국금융지주, 우리금융지주 등이 상승세를 나타내고 있다. 배당과 자사주 매입·소각 등 주주환원 정책에 대한 기대가 투자심리를 뒷받침하고...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=483598",
+          "relevance": "high"
+        },
+        {
+          "headline": "본업 경쟁력 찾는다… 한미사이언스, 신약 개발 속도 내며 기업가치 제...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-03T06:08:00Z",
+          "summary": "삼성화재, 메리츠금융지주, KB금융, 하나금융지주, JB금융지주, 신한지주, 한국금융지주, 우리금융지주, 삼성증권, 미래에셋증권 등도 상승세를 나타내고 있다. 산업재와 자동차, 방산 관련주도 강세를 보이고 있다....",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=483577",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융, 연내 주주환원율 50% 채우나···4분기 3천억 소각해야",
+          "publisher": "newsfreezone.co.kr",
+          "published_at": "2026-09-03T05:38:00Z",
+          "summary": "하나금융지주가 연내 주주환원율 50%를 달성하려면 4분기에 3000억원 규모의 자사주 추가 매입·소각이 필요하다는 관측이 증권가에서 나오고 있다. 지난 2일 신한투자증권 리포트에...",
+          "source_url": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=707371",
+          "relevance": "high"
+        },
+        {
+          "headline": "금리 다시 오른다…은행주, 반등 타진 [종목+]",
+          "publisher": "hankyung.com",
+          "published_at": "2026-09-03T04:46:00Z",
+          "summary": "지수 구성 종목 중 우리금융지주(7.98%) 신한지주(6.97%) 하나금융지주(4.82%) KB금융(3.68%) 등이 강세를 나타냈다. 특히 지수 대비 주가 변동이 큰 종목으로 꼽히는 JB금융지주가 12.11% 뛰었다. 한국은행의 금리 인상이...",
+          "source_url": "https://www.hankyung.com/article/2026090309926",
+          "relevance": "high"
+        },
+        {
+          "headline": "금융지주 회장님들 자사주 수익률 '쏠쏠'",
+          "publisher": "newstomato.com",
+          "published_at": "2026-09-03T04:44:00Z",
+          "summary": "함영주 하나금융지주(086790) 회장의 경우 보유주식 평가이익이 13억원을 훌쩍 넘어서며 평가수익률이 210%에 달했고, 다른 지주 회장들도 수억 원대 이상의 평가이익을 기록했습니다. 3일 금융권에 따르면 임종룡...",
+          "source_url": "http://www.newstomato.com/ReadNews.aspx?no=1312407&inflow=N",
+          "relevance": "high"
+        },
+        {
+          "headline": "다시 매물로 나오는 롯데손보, 금융지주들 움직일까",
+          "publisher": "newsway.co.kr",
+          "published_at": "2026-09-03T04:40:00Z",
+          "summary": "앞서 인수 협상에 나섰던 신한금융지주와 보험 경쟁력 보강이 필요한 하나금융지주 등이 잠재 후보로 거론된다. 다만 기존 주식을 사들이는 비용에 자본확충 부담까지 더해져 사업 확장의 필요성이 실제 입찰로...",
+          "source_url": "https://www.newsway.co.kr/news/view?ud=2026090311234403805",
+          "relevance": "high"
+        },
+        {
+          "headline": "“주식 빼서 여기 넣자” 20조 몰리더니 주가도 터졌다 [나만없어]",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-03T04:40:00Z",
+          "summary": "신한지주(3.85%), 하나금융지주(4.00%), JB금융지주(3.44%), BNK금융지주(4.03%) 등 주요 금융주들도 일제히 강세다. 금융주의 강세에는 금리 인상으로 인한 순이자마진(NIM) 개선과 이자이익 증가에 대한 기대감이 반영됐다....",
+          "source_url": "https://www.seoul.co.kr/news/economy/securities/2026/09/03/20260903500136?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[서울데이터랩]코스피 시총상위주 장중 강세…KB금융 5%대 상승, LG에너...",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-03T04:32:00Z",
+          "summary": "KB금융(105560)이 17만9000원으로 5.85% 급등했고, 하나금융지주(086790)가 14만1000원으로 4.52%, 신한지주(055550)가 11만5000원으로 4.07% 상승했다. 삼성생명(032830)도 30만7000원으로 4.42% 오르며 금융 전반의 강세...",
+          "source_url": "https://www.seoul.co.kr/news/economy/securities/2026/09/03/20260903500132?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "15주년 맞은 스카이데일리… “잘못 바로잡고 결과로 신뢰 얻겠다”",
+          "publisher": "m.skyedaily.com",
+          "published_at": "2026-09-03T04:28:00Z",
+          "summary": "홀딩스홍순주상무, 하나금융지주황태병 부장, GS 칼텍스 PR1팀 김성우책임, 매일유업김세준팀장, 삼성생명안철현상무, 대우건설허현부장, 동아일보사 황태주 부장, 논형출판소재두대표, 마이서트 신인애대표,  518...",
+          "source_url": "https://m.skyedaily.com/news_view.html?ID=310963",
+          "relevance": "high"
+        },
+        {
+          "headline": "금리 발작에 삼전닉스 힘 빠지는데…\"여긴 금리 덕 본다\" 우르르",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-03T02:39:00Z",
+          "summary": "BNK금융지주는 4%대, 하나금융지주·신한지주·삼성화재·미래에셋생명·코리안리·롯데손해보험은 3%대 강세다. 업종 구성 종목 전반이 오름세를 형성했다. 증시에서 은행·보험주는 전통적인 금리 상승기...",
+          "source_url": "https://www.mt.co.kr/stock/2026/09/03/2026090311310680433",
+          "relevance": "high"
+        },
+        {
+          "headline": "상반기 급여 직원 1억·회장 19억…\"금융지주, 삼전닉스 안부럽네\"",
+          "publisher": "sidae.com",
+          "published_at": "2026-09-03T02:33:00Z",
+          "summary": "3일 금융권에 따르면 KB금융·신한지주·하나금융지주·우리금융지주·NH농협금융 등 5대 금융지주의 올해 상반기 직원 1인당 평균급여는 1억80만원으로 집계됐다. 지난해 같은 기간 9440만원보다 6.8% 증가했다....",
+          "source_url": "https://www.sidae.com/article/2026090307545257104",
+          "relevance": "high"
+        },
+        {
+          "headline": "[금융★들의 궤적] 하나 함영주, 4조 시대 열고 청라의 새 역사 쓴다",
+          "publisher": "bloter.net",
+          "published_at": "2026-09-03T02:15:00Z",
+          "summary": "하나금융지주와 하나은행, 하나증권, 하나카드 등 10개 관계사 임직원 약 2200명이 이달부터 연말까지 순차적으로 이동한다. 이번 이전은 하나금융이 장기간 추진해온 '하나드림타운'의 마지막 단계다. 2017년...",
+          "source_url": "https://www.bloter.net/news/articleView.html?idxno=672558",
+          "relevance": "high"
+        },
+        {
+          "headline": "[여의도 CEO 20년]⑦ 하나증권, 그룹 부회장이 되는 자리",
+          "publisher": "bloter.net",
+          "published_at": "2026-09-03T02:13:00Z",
+          "summary": "대부분 증권 대표를 맡으면서 하나금융지주 부회장 자리에 올랐는데, 계열사 최고경영자가 그룹 경영에 직접 참여하는 구조는 은행지주 계열 증권사 가운데 드문 사례다. 증권이 그룹 안에서 차지하는 무게가...",
+          "source_url": "https://www.bloter.net/news/articleView.html?idxno=672486",
+          "relevance": "high"
+        },
+        {
+          "headline": "금리 상승에 KB ‘불기둥’…금융·보험주 동반 강세 [줍줍리포트]",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-03T02:09:00Z",
+          "summary": "하나금융지주(086790)(3.93%), 신한지주(055550)(3.80%), 기업은행(024110)(2.40%), 우리금융지주(316140)(1.01%)도 동반 강세다. 보험주도 불을 뿜고 있다. 삼성화재(000810)는 4.26% 오른 68만 5000원, 삼성생명(032830)은 3.57% 상승한...",
+          "source_url": "https://www.sedaily.com/article/20086703?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개미를 위하여①] 국내주식 소수점 거래 '판' 키우는 카카오페이證",
+          "publisher": "newsdream.kr",
+          "published_at": "2026-09-03T02:06:00Z",
+          "summary": "또한 신풍제약, 심텍, 원익홀딩스, 카카오게임즈, 아주IB투자, 하나금융지주 등 다양한 테마도 갖추고 있다. 소수점 투자 선택의 폭이 넓을 수 밖에 없는 환경이다. 카카오페이증권도 이 정도 수준으로 종목 확대, 테마의...",
+          "source_url": "http://www.newsdream.kr/news/articleView.html?idxno=117369",
+          "relevance": "high"
+        },
+        {
+          "headline": "카뱅·케뱅에 발목…4대은행 상장주식 평가손익 4700억 급감",
+          "publisher": "kbanker.co.kr",
+          "published_at": "2026-09-03T02:06:00Z",
+          "summary": "대신 올해 2월과 4월 각각 392억원, 388억원을 들여 사들인 하나금융지주(0.12%)와 우리금융지주(0.16%) 지분에서 24억원, 43억원의 차손이 발생했다. 구조조정을 거친 태영건설 지분에서도 10억원의 평가 손실을 봤다....",
+          "source_url": "https://www.kbanker.co.kr/news/articleView.html?idxno=225831",
+          "relevance": "high"
+        },
+        {
+          "headline": "[N2 증시 풍향계] 철강 중소형株 '들썩'…금융株 줄줄이 강세, SNT에너지...",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-03T01:40:00Z",
+          "summary": "JB금융지주(6.55%)와 BNK금융지주(4.69%), 신한지주(4.52%), 하나금융지주(4.23%), iM금융지주(3.02%) 등도 줄줄이 오름세다. 케빈 워시 미국 연방준비제도(Fed) 의장은 지난달 28일(현지시간) 잭슨홀 경제정책 심포지엄에서...",
+          "source_url": "https://www.news2day.co.kr/article/20260903500100",
+          "relevance": "high"
+        },
+        {
+          "headline": "은행주 일제히 강세…JB금융지주 5%대 KB금융 4%대 상승",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-03T01:32:00Z",
+          "summary": "하나금융지주 역시 3%대 상승세다. 하나금융지주는 5000원, 3.71% 오른 13만9900원에 거래되고 있으며 장중 고가는 14만800원이다. 지방금융지주도 상승 대열에 합류했다. iM금융지주는 2.65% 오른 1만9360원에 거래되고...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=603462",
+          "relevance": "high"
+        },
+        {
+          "headline": "미국 국채 금리 치솟자 국내 은행株 일제히 '상승'",
+          "publisher": "gukjenews.com",
+          "published_at": "2026-09-03T01:26:00Z",
+          "summary": "BNK금융지주 4.49%, 신한지주 4.16%, 하나금융지주 3.78%, iM금융지주 2.86%, 우리금융지주 2.03% 각각 오르고 있다. 미국과 이란의 군사적 충돌로 미국 국채를 비롯한 주요국 금리가 치솟으면서 수혜를 입은...",
+          "source_url": "https://www.gukjenews.com/news/articleView.html?idxno=3683353",
+          "relevance": "high"
+        },
+        {
+          "headline": "5%가 마지노선…美 국채10년물 더 오르면 AI마저 꺾인다",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-03T01:25:00Z",
+          "summary": "KB금융(5.32%), 신한지주(3.89%), 하나금융지주(3.71%) 등 금리 상승 기대감에 은행주도 강한 모습이다. 주요국 장기채 금리가 급등하면서 전날 코스피는 3.99% 급락했는데 이날은 저가 매수세가 유입되며 반등에...",
+          "source_url": "https://view.asiae.co.kr/article/2026090310220214806",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나금융지주, 환율 하락에 실적·자본 '동반 개선'…주주환원 2.2조 전...",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-03T01:14:00Z",
+          "summary": "하나금융지주가 원·달러 환율 하락과 순이자마진(NIM) 개선에 힘입어 3분기 시장 기대치를 웃도는 실적을 거둘 것이란 전망이 나왔다. 환율 하락이 이익뿐 아니라 자본비율 개선으로 이어지면서 추가적인 주주환원...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82090",
+          "relevance": "high"
+        },
+        {
+          "headline": "[특징주] 글로벌 국채 금리 상승세에…금융株도 덩달아 오름세",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-03T01:01:00Z",
+          "summary": "KB금융, 하나금융지주, 우리금융지주도 모두 상승 중이다. 최근 국제유가가 오르고 인플레이션 우려가 커지면서 글로벌 주요국의 국채 금리가 급등했다. 금융주가 고금리 시기에 방어주의 역할을 하는 만큼...",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/03/3DBXFE3XYBBUBCAVYKZ75QO4WY/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "국채금리 급등에 은행주 연일 상승…JB금융 6.3%↑ [핫종목]",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-03T00:57:00Z",
+          "summary": "KB금융(105560)(5.44%), 신한지주(055550)(4.71%), BNK금융지주(138930)(4.69%), 하나금융지주(086790)(4.15%) 등 금융주도 일제히 강세다. 최근 국제유가 급등으로 인플레이션 우려가 커지면서 국내외 국채금리가 빠르게...",
+          "source_url": "https://www.news1.kr/finance/general-stock/6278567",
+          "relevance": "high"
+        },
+        {
+          "headline": "[특징주] 금융주, 글로벌 고금리 기조에 장 초반 '강세'",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-03T00:57:00Z",
+          "summary": "신한지주(4.52%), 하나금융지주(4.23%), 우리금융지주(2.61%) 등 다른 금융주도 동반 강세를 보이고 있다. 미국 국채 장기물 금리가 높은 수준을 유지하면서 금융주로 매수세가 몰렸다. 통상 금융주는 고금리 기조에...",
+          "source_url": "http://www.inews24.com/view/2001470",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 장 초반 1% 상승 중…코스닥은 하락 전환",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-03T00:56:00Z",
+          "summary": "KB금융(+5.5%), 삼성생명(+4.9%), 신한지주(+4.7%), 하나금융지주(+4.1%) 등 금융주의 상승세가 두드러진다. 같은 시각 코스닥 지수는 전 거래일 대비 2.65포인트(0.33%) 하락한 801.33에 거래 중이다. 개인이...",
+          "source_url": "https://view.asiae.co.kr/article/2026090309560679494",
+          "relevance": "high"
+        },
+        {
+          "headline": "[투데이's 특징주] 금융株 장 초반 '강세'···금리 인상기 투자 매력도...",
+          "publisher": "todaykorea.co.kr",
+          "published_at": "2026-09-03T00:48:00Z",
+          "summary": "같은 시간 하나금융지주(3.85%)와 신한지주(4.71%), 우리금융지주(2.03%) 등 주요 금융주들도 동반 강세를 보이고 있다. 국내 증시에서 주요 금융주들은 전날에 이어 상승세를 지속하고 있다. 이는 글로벌 국채 금리가 급등한...",
+          "source_url": "https://www.todaykorea.co.kr/news/articleView.html?idxno=405654",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 캐피털그룹, 신한지주 '5% 주주'로…KB·하나는 줄여",
+          "publisher": "econovill.com",
+          "published_at": "2026-09-03T00:42:00Z",
+          "summary": "한편 캐피털그룹은 최근 KB금융과 하나금융지주 지분은 축소했다. 캐피털그룹은 지난해 10월부터 올해 3월까지 하나금융지주 주식 293만3837주를 장내 매도했다. 이에 따라 지난해 9월 말 6.60%였던 지분율은 5.55%로...",
+          "source_url": "https://www.econovill.com/news/articleView.html?idxno=749726",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 장초반 0.6% 올라 6600선 회복...반도체 반등·금융주 강세",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-03T00:28:00Z",
+          "summary": "은행주에서는 JB금융지주가 4.91% 상승하고 있으며 KB금융, 신한지주, 하나금융지주도 강세를 보이고 있다. BNK금융지주와 우리금융지주, 기업은행, iM금융지주도 일제히 오르고 있다. 보험주에도 매수세가...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=483372",
+          "relevance": "high"
+        },
+        {
+          "headline": "환율하락 등으로 호실적…주주환원율 51% 기대되는 이 은행주[클릭 e종...",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-02T22:30:00Z",
+          "summary": "신한투자증권이 하나금융지주의 목표주가를 15만원에서 16만원으로 올렸다. 투자의견은 매수를 유지했다. 3일 은경완 신한투자증권 연구위원은 \"분기 실적 피크아웃 우려는 제한적이며, 주가순자산비율(PBR) 0.8배의...",
+          "source_url": "https://view.asiae.co.kr/article/2026090214455729635",
+          "relevance": "high"
+        },
+        {
+          "headline": "[Invest]하나·KB 훑은 조사4국…연말 금융권 세무조사 어디로 향하나",
+          "publisher": "investchosun.com",
+          "published_at": "2026-09-02T22:02:00Z",
+          "summary": "5월 하나금융지주·하나은행과 메리츠증권을 시작으로 6월 농협중앙회, 8월 KB국민은행까지 금융권을 중심으로 조사4국의 비정기 세무조사가 이어졌다.현재 진행 중인 국민은행 조사의 성격을 놓고도 여러 해석이 나오는...",
+          "source_url": "https://www.investchosun.com/site/data/html_dir/2026/09/02/2026090280200.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "[공시] 9월 3일, 코스피 상장사 50개 종목 자사주 매수 신청",
+          "publisher": "newstnt.com",
+          "published_at": "2026-09-02T10:24:00Z",
+          "summary": "하나금융지주(086790)는 5만주, IPARK현대산업개발(294870)과 셀트리온(068270)은 각각 4만주를 신청했다. 현대지에프홀딩스(005440)는 3만주, 현대퓨처넷(126560) 2만주, 크래프톤(259960) 1만3천주, 태원물산...",
+          "source_url": "https://www.newstnt.com/news/articleView.html?idxno=716470",
+          "relevance": "high"
+        },
+        {
+          "headline": "인천시금고 경쟁 본선 돌입...신한·하나 1금고 맞대결",
+          "publisher": "news.ifm.kr",
+          "published_at": "2026-09-02T09:44:00Z",
+          "summary": "하나금융은 이달부터 하나금융지주와 하나은행 등 10개 관계사 임직원 2200여명을 청라 그룹 헤드쿼터로 순차 이전할 예정이다. 기존 통합데이터센터 등을 포함하면 청라에서 근무하는 하나금융 임직원은 4000명 규모로...",
+          "source_url": "https://news.ifm.kr/news/articleView.html?idxno=478514",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"하나금융지주, 3분기 실적 기대...목표가↑\"-신한證",
+          "publisher": "betanews.net",
+          "published_at": "2026-09-02T09:02:00Z",
+          "summary": "하나금융지주에 대해 3분기 실적 개선이 기대된다는 전망이 나왔다. 신한투자증권은 하나금융지주에 대한 투자의견을 '매수'로 유지하고 목표주가를 150,000원에서 160,000원으로 상향 조정한다고 밝혔다. 또...",
+          "source_url": "https://www.betanews.net/article/view/beta202609020118",
+          "relevance": "high"
+        },
+        {
+          "headline": "글로벌 '큰손' 캐피털그룹 신한금융 3대 주주 복귀",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-02T08:55:00Z",
+          "summary": "금융권에 따르면 캐피털그룹은 작년부터 신한금융 지분을 조금씩 다시 사들인 것으로 알려졌다. 반면 캐피털그룹은 KB금융·하나금융지주 지분은 조금씩 줄이고 있는 것으로 파악됐다.",
+          "source_url": "https://www.mk.co.kr/article/12142588",
+          "relevance": "high"
+        },
+        {
+          "headline": "은행주 금리 상승·환율 하락 겹호재, KB금융지주 '금융 대장주' 다시 굳...",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-02T08:46:00Z",
+          "summary": "같은 기간 신한지주(6.15%), 하나금융지주(4.74%), 우리금융지주(8.66%) 등 국내 대표 금융지주 주가도 일제히 올랐다. 이 기간 코스피 지수가 5.07% 내린 것과 비교하면 은행업종의 상승세가 더욱 도드라진다. 금리 상황이...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446246",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나증권, 홍콩 푸투증권 VIP 초청 '국내 투자 설명회'",
+          "publisher": "econotelling.com",
+          "published_at": "2026-09-02T08:42:00Z",
+          "summary": "특히 아모레퍼시픽, JYP엔터테인먼트(JYP Ent.), 현대자동차(현대차), 하나금융지주, 한화오션, LG에너지솔루션, SK 등 국내 주요 기업과의 미팅이 진행됐다. 허태형 하나증권 해외영업본부 본부장은 \"앞으로도...",
+          "source_url": "http://www.econotelling.com/news/articleView.html?idxno=21233",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 99,
+      "relevant_count": 99,
+      "span_hours": 115.07,
+      "oldest_relevant_at": "2026-09-02T08:42:00Z",
+      "collected_at": "2026-09-07T03:46:12.583029Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "[기재정정]사업보고서 (2025.12)",
+          "receipt_number": "20260814004019",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814004019"
+        },
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003800",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003800"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002550",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002550"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260316001292",
+          "published_at": "2026-03-16T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001292"
+        }
+      ],
+      "collected_at": "2026-09-07T03:46:12.144257Z",
+      "request_id": "f2245584-f45e-42a9-bc45-9a7f0f03639b",
+      "source_type": "dart",
+      "stock_code": "086790",
+      "company_name": "하나금융지주"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260316001292",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "마. 사업부문별 산업의 현황 [은행업]",
+          "score": 0.471205,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "손해보험산업의 수입보험료 성장세는 소폭 감소하고 보험계약마진(CSM) 성장세도 점차 둔화될 것으로 전망됩니다. 그럼에도 고령화로 증가한 노후 비용 대비를 위해 치매, 간병, 유병자 등 시니어 상품의 수요가 증가하고 고연령층에 대한 간편심사 확대 등에 따라 보험계약마진(CSM) 확보가 용이한 장기보험 중심의 성장세가 이어질 것으로 전망됩니다. 한편 금리 하락, 제도 변화 등에 따른 보험계약마진(CSM) 감소로 보험손익이 둔화되며 금리 하락에 따른 채권 평가 이익 증가 등의 영향으로 투자손익은 증가할 것으로 예상됩니다. 또한 보험부채 현실화 등 제도 변화는 건전성에 부정적으로 작용할 것으로 예상됩니다. 자동차보험은 집중 호우에 의한 침수 피해 증가, 신차 구매 회복세 미약, 보험료 동결 등으로 인한 합산비율 증가로 수익성이 악화되어 적자 전환되었습니다. 금리하락 및 계리 가정 강화 등으로 인해 지급여력비율은 하락할 것으로 예상되며 추가 자본조달 필요성이 커지고 있습니다. 보험대리점(GA)은 불완전판매율, 유지율 등 판매과정에서 건전성 지표를 개선하며 성장세를 지속하나 생명보험사의 보장성 판매 강화 등의 영향으로 GA시장에서 손해보험사의 영향력은 약화될 것으로 예상됩니다. 현재 손해보험 시장은 상위 5개사가 시장점유율 약 80% 가량 과점하고 있는 상태이며, 자동차보험의 경우 시장점유율 약 90% 가량을 상위 5개사가 과점하고 있는 상태입니다. 따라서 규모의 경제를 구축하지 못한 일부 중소형사의 경우 경쟁력 부족으로 인하여 손해보험 시장점유율이 지속적으로 감소하는 추세이며, 상위사들을 중심으로 과점 체계는 더욱 공고해지고 있는 상황입니다. 이에 하나손해보험은 기존사업에서의 효율성을 지속 개선하고 있으며 채널 및 상품 등 손해보험업 본질의 핵심역량을 끊임없이 강화하고 있습니다. 또한 장기 보장성보험과 일반보험 매출 확대를 통해 자동차보험에 편중된 포트폴리오에서 탈피하여 수익성 중심의 안정적인 포트폴리오로 재편하고 있습니다. 특히 2025년에는 장기보험 중심의 매출",
+          "score": 0.461647,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "융 영업에 집중하면서 기업대출 경쟁 또한 강화되는 추세입니다. 한편, 새로운 사업자와의 경쟁도 심화되고 있습니다. 인터넷전문은행은 중금리 시장 확대, 주택담보대출과 오토론, 개인사업자 시장 진출 등 전통 은행들의 사업 영역에 진입하고 있습니다. 또한 빅테크 중심의 각종 금융플랫폼의 등장은 전통 은행들의 판매채널을 약화시켜 고객 유지 및 신규 고객 유치에 위협 요인으로 작용할 수 있습니다. 이에 은행들은 수익원 다변화를 위해 종합자산관리, 신탁, 유가증권 및 외환거래 등을 중심으로 수수료 수익 확대를 위한 영업전략에 주력하고 있으나 홍콩 ELS 사태로 인한 ELS 상품 판매 중단 및 평판 악화 등으로 비이자이익 확대에 어려움이 있고, 증권업과 보험업 등 타업권과의 경쟁도 불가피합니다.5) 규제환경의 변화 은행은 영리를 추구하는 주식회사로서 상법의 적용을 받으면서, 동시에 금융중개기능을 통해 국민경제에 중대한 영향을 미치고 있습니다. 이러한 특징 때문에 은행들은 건전성 유지를 위해 아래와 같은 법령과 규제를 받고 있습니다. 최근에는 혁신기술 도입을 통한 고객 편의 제고를 추구하되, 고객정보 보호 및 보안 강화를 동시에 요구하고 있으며, 이와는 별도로 최근에는 본인신용정보관리업 도입 등 데이터 활용을 위한 정책, 금융회사의 핀테크 기업 투자 활성화 등을 적극 추진하고 있습니다. 정부는 은행권 전반의 변화와 혁신을 촉진하기 위해 은행권 경영ㆍ영업관행ㆍ제도개선 TF를 출범, 6대 과제를 도출한 바 있으며, 제1과제인 은행권 경쟁 촉진 및 구조개선 유도 정책을 중심으로 우선 시행 중인 바 예대금리차 공시 확대, 지방은행 및 외은 지점 예대율 규제 개선, 온라인 대환대출서비스 등이 이미 시행되었습니다. 금융당국은 코로나19 시기 완화했던 유동성 규제를 정상화하는 과정에 있으며, 스트레스완충자본, 경기대응완충자본 적립 등 자본규제를 강화하고, 특별대손준비금 적립 요구권을 도입하는 등 은행들의 손실흡수능력을 제고하는 정책들이 도입되고 있습니다. 이는 은행들에게 자본 확보",
+          "score": 0.459856,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "이어갔습니다. 한편 증시 상승으로 유가증권 평가손익이 개선되었으나 채권금리 상승 및 여전채 스프레드 확대로 채권평가손익이 전분기 대비 악화되어 트레이딩 손익은 다소 조정받는 흐름을 보였습니다. 2026년 1/4분기 증권업은 증시 강세와 자본시장으로 자금이동 가속화 등 우호적 영업환경이 지속되어 브로커리지, WM을 중심으로 실적 개선세를 이어갈 전망입니다. 반도체 업황 상승 사이클이 지속되면서 코스피 대형주의 실적 호조가 이어지고 이에 따른 거래대금 증가와 고수익 위험자산 선호 확대에 힘입어 브로커리지 및 WM부문의 실적이 확대될 전망입니다. 하지만 금리 불확실성으로 기업들이 회사채 발행 시기를 관망하는 분위기가 확산되고 시중금리 상승에 따른 채권운용손익 감소로 IB 및 트레이딩 부문의 실적 개선세는 제한적일 전망입니다. 2025년 4/4분기 생명보험업은 보장성 중심의 판매가 이어지는 가운데 판매경쟁이 지속되면서 전년동기대비 유사한 수준의 성장성을 보였습니다. 수익성의 경우 사업비 지출 및 보험금 지급이 증가하면서 약화되었습니다. 한편, 요구자본 증가, 관련 규제 강화 예고 등으로 자본부담이 지속되었습니다. 손해보험업은 여전히 CSM 확보가 용이한 장기보험 중심으로 성장 중이나, 장기보험 신계약 건수가 전분기 대비 감소하여 CSM 증가세는 둔화되고 있습니다. CSM 예실차 손실 확대, 실손보험 손해율 상승, 자동차보험료 동결로 인한 손해율 증가 등으로 수익성은 약화되었습니다. 2026년 1/4분기 생명보험업은 GA 관리 감독 강화, 수수료 개편 등으로 판매채널 재편이 이루어지면서 성장성이 다소 둔화될 것으로 보이며, 이에 따라 수익성도 다소 약화되겠습니다. 한편, 손해율, 사업비 관련 가이드라인이 2/4분기부터 적용될 예정으로 상품 개발 등 선제적 대응이 이어질 것으로 보입니다. 기본자본 K-ICS 비율 제도 시행 예고에 따라 자본부담은 향후에도 지속될 것으로 예상됩니다. 손해보험업은 GA 채널 중심으로 장기보험이 안정적인 판매를 지속할 것으로 예상되는 가운데,",
+          "score": 0.456338,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 1. 사업의 개요",
+          "text": "국내 2개 지점의 신설계획이 있습니다. 은행의 재무건전성 지표는 BIS비율 17.62%, 유동성커버리지비율 105.51%, 대손충당금적립률 136.33% 등이며, 좀 더 자세한 사항은 2. 영업의 현황부터 5. 재무건전성 등 기타 참고사항의 내용을 참고하시기 바랍니다.\n하나증권은 투자매매업, 투자중개업, 투자자문업, 투자일임업, 신탁업 등을 영위하는 종합투자금융사업자로 규모면으로는 자기자본 6.1조원인 대형증권사로서의 면모를 갖추고 있습니다. 당사의 영업부문은 WM(Wealth Management), 홀세일, IB(Investment Bank), S&T(Sales&Trading)의 균형있는 포트폴리오를 구축하고 있습니다. WM은 개인투자자를 대상으로 하는 주식, 선물, 옵션 등의 위탁 매매 및 중개 서비스와 자산관리 상품을 제공하고 있으며, 홀세일은 기관 및 법인손님을 대상으로 금융상품을 판매하고 국내주식과 파생상품에 대한 중개업무를 수행합니다. IB는 기업의 자금조달 및 M&A를 포함한 기업금융 업무 전반을 수행하고 있으며, S&T는 채권, 장내외 파생상품 공급 및 헷지 운용과 함께 회사 자기자본 투자업무를 수행하고 있습니다. 2025년 말 금융시장은 미국 연방준비제도의 금리 인하 속도 조절과 통화정책 전환에 따른 시장의 불확실성, 지정학적 갈등의 장기화가 시장의 불안정성을 높이는 주요 요인으로 작동하였습니다. 또한 국내 가계부채 부담과 부동산 PF 리스크 관리가 금융시장 건전성에 중요한 변수로 부각된 만큼, 이러한 대내외적 변동성 장세는 당분간 지속될 것으로 전망됩니다. WM부문 수익은 개인투자자 중심의 거래가 활성화되어 증가하였으며, S&T부문은 상반기 선제적 채권 포지션 구축과 하반기 금리 환경 변화 대응을 통해 수익을 확대하였습니다. IB부문은 감소된 영업이익 속에서도 회사채 대표주관 실적개선을 통해 수익 구조의 질적 개선세를 보였습니다. 그 결과 당사는 2025년 연결기준 2,120억원의 당기순이익을 기록하였습니다. 2025년 4분기말 현재 자금조달 및 운용 현황을 살펴보면 평균잔액 56.8조로 전년말 대비 8.1조원이 증가하였습니다.",
+          "score": 0.44987,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001292",
+      "collected_at": "2026-09-07T03:46:12.412851Z",
+      "request_id": "c21e7bca-861d-40d3-bf31-356c09f858c0",
+      "source_type": "dart",
+      "stock_code": "086790",
+      "company_name": "하나금융지주"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "하나금융지주",
+      "stock_code": "086790",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:46:12.004395+00:00",
+        "to": "2026-09-07T03:46:12.004395+00:00"
+      },
+      "sample_size": 61,
+      "activity": {
+        "posts_7d": 70,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 31.75,
+        "ratio": 2.2,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 22,
+        "neutral_count": 17,
+        "negative_count": 22
+      },
+      "top_topics": {
+        "expectations": [
+          "장기 배당 수익",
+          "저평가 해소",
+          "기관 연속 매수",
+          "업종 선도주와의 격차 축소"
+        ],
+        "concerns": [
+          "저항선 돌파 실패와 급락",
+          "대체거래소 주가 약세",
+          "금융권 파업 영향",
+          "미국 금리·환율 불확실성"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "장기 보유와 배당 수익에 대한 신뢰를 보인다.",
+          "posted_at": "2026-09-05T00:33:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "현재 기업가치가 크게 저평가됐다고 판단한다.",
+          "posted_at": "2026-09-04T02:22:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "기관의 연속 매수를 긍정적인 수급 요인으로 본다.",
+          "posted_at": "2026-09-01T12:18:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "업종 선도 금융주와의 주가 격차 축소를 기대한다.",
+          "posted_at": "2026-09-01T02:11:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "롯데카드 인수 추진 여부를 관심 사안으로 거론한다.",
+          "posted_at": "2026-09-04T23:22:00+00:00",
+          "sentiment": "neutral"
+        }
+      ],
+      "collected_at": "2026-09-07T03:46:12.004395+00:00",
+      "fgi_mean": 48.25,
+      "fgi_latest": {
+        "fgi": 42.28,
+        "label": "중립",
+        "as_of": "2026-09-07T01:30:00+00:00",
+        "post_count": 1,
+        "valence_percentile": 29.02
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "[기재정정]주식소각결정              ",
+          "receipt_number": "20260826800245",
+          "published_at": "2026-08-26T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826800245"
+        },
+        {
+          "report_name": "[기재정정]주식소각결정              ",
+          "receipt_number": "20260826800242",
+          "published_at": "2026-08-26T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826800242"
+        },
+        {
+          "report_name": "최대주주등소유주식변동신고서              ",
+          "receipt_number": "20260825800356",
+          "published_at": "2026-08-25T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825800356"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260825000280",
+          "published_at": "2026-08-25T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825000280"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260819800197",
+          "published_at": "2026-08-19T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819800197"
+        },
+        {
+          "report_name": "[기재정정]일괄신고서",
+          "receipt_number": "20260814003925",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003925"
+        },
+        {
+          "report_name": "단기차입금증가결정(자회사의 주요경영사항)              ",
+          "receipt_number": "20260811800447",
+          "published_at": "2026-08-11T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260811800447"
+        }
+      ],
+      "collected_at": "2026-09-07T03:46:12.894563Z",
+      "request_id": "ac3afc64-a94e-4412-9d9f-3e78eccbeeed",
+      "source_type": "dart",
+      "stock_code": "086790",
+      "company_name": "하나금융지주"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260826800245": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260826800245",
+        "document_type": "disclosure",
+        "content": "하나금융지주/주식 소각 결정/(2026.08.26)주식 소각 결정\n정정일자 | 2026-08-26\n1. 정정관련 공시서류 | 주식소각결정\n2. 정정관련 공시서류제출일 | 2026-07-14\n3. 정정사유 | 주식 소각 예정일 결정에 따른 정정\n4. 정정사항\n정정항목 | 정정전 | 정정후\n7. 소각 예정일 | - | 2026-08-28\n11. 기타 투자판단과 관련한 중요사항 | (1) 상기 주식소각은 '상법 제343조 제1항' 단서규정에 따른 주식소각입니다. (2) 본 주식소각은 당사의 배당가능이익 범위 내에서 취득한 자기주식을 이사회 결의에 의하여 소각하는 것으로 발행주식총수는 감소하나, 자본금의 감소는 없습니다. (3) 상기 '1. 소각할 주식의 종류와 수 - 보통주식 (주)'는 자기주식 취득기간 중 주가 변동에 따라 1,647,341주로 변경되었습니다. (4) 상기 '4. 소각예정금액(원)'은 소각대상 주식의 취득가액입니다. 참고로 2026년 4월 24일 이사회에서 결의한 소각예정금액은 2,000억원 입니다. (5) 상기 '5. 소각을 위한 자기주식 취득 예정기간 - 종료일'은 결제일 기준입니다. 자기주식 취득과 관련한 자세한 사항은 2026년 7월 14일 공시한 '자기주식취득결과보고서'를 참고하시기 바랍니다. (6) 상기 '7. 소각예정일'은 관계기관과의 협의에 따라 결정될 예정입니다. (7) 상기 '9. 이사회결의일(결정일) - 감사(사외이사가 아닌 감사위원) 참석여부' 관련하여 당사의 감사위원은 전원 사외이사로 구성되어 있습니다. | (1) 상기 주식소각은 '상법 제343조 제1항' 단서규정에 따른 주식소각입니다. (2) 본 주식소각은 당사의 배당가능이익 범위 내에서 취득한 자기주식을 이사회 결의에 의하여 소각하는 것으로 발행주식총수는 감소하나, 자본금의 감소는 없습니다. (3) 상기 '1. 소각할 주식의 종류와 수 - 보통주식 (주)'는 자기주식 취득기간 중 주가 변동에 따라 1,647,341주로 변경되었습니다. (4) 상기 '4. 소각예정금액(원)'은 소각대상 주식의 취득가액입니다. 참고로 2026년 4월 24일 이사회에서 결의한 소각예정금액은 2,000억원 입니다. (5) 상기 '5. 소각을 위한 자기주식 취득 예정기간 - 종료일'은 결제일 기준입니다. 자기주식 취득과 관련한 자세한 사항은 2026년 7월 14일 공시한 '자기주식취득결과보고서'를 참고하시기 바랍니다. (6) 상기 '7. 소각예정일'은 관계기관과의 협의에 따라 변동될 수 있습니다. (7) 상기 '9. 이사회결의일(결정일) - 감사(사외이사가 아닌 감사위원) 참석여부' 관련하여 당사의 감사위원은 전원 사외이사로 구성되어 있습니다.\n-\n1. 소각할 주식의 종류와 수 | 보통주식 (주) | 1,647,341\n종류주식 (주) | -\n2. 발행주식 총수 | 보통주식 (주) | 274,367,748\n종류주식 (주) | -\n3. 1주당 가액(원) | 5,000\n4. 소각예정금액(원) | 199,800,139,700\n5. 소각을 위한 자기주식 취득 예정기간 | 시작일 | 2026-04-27\n종료일 | 2026-07-14\n6. 소각할 주식의 취득방법 | 장내매수\n7. 소각 예정일 | 2026-08-28\n8. 자기주식 취득 위탁 투자중개업자 | 하나증권\n9. 이사회결의일(결정일) | 2026-04-24\n- 사외이사 참석여부 | 참석(명) | 9\n불참(명) | 0\n- 감사(사외이사가 아닌 감사위원) 참석여부 | -\n10. 공정거래위원회 신고대상 여부 | 미해당\n11. 기타 투자판단과 관련한 중요사항 | (1) 상기 주식소각은 '상법 제343조 제1항' 단서규정에 따른 주식소각입니다. (2) 본 주식소각은 당사의 배당가능이익 범위 내에서 취득한 자기주식을 이사회 결의에 의하여 소각하는 것으로 발행주식총수는 감소하나, 자본금의 감소는 없습니다. (3) 상기 '1. 소각할 주식의 종류와 수 - 보통주식 (주)'는 자기주식 취득기간 중 주가 변동에 따라 1,647,341주로 변경되었습니다. (4) 상기 '4. 소각예정금액(원)'은 소각대상 주식의 취득가액입니다. 참고로 2026년 4월 24일 이사회에서 결의한 소각예정금액은 2,000억원 입니다. (5) 상기 '5. 소각을 위한 자기주식 취득 예정기간 - 종료일'은 결제일 기준입니다. 자기주식 취득과 관련한 자세한 사항은 2026년 7월 14일 공시한 '자기주식취득결과보고서'를 참고하시기 바랍니다. (6) 상기 '7. 소각예정일'은 관계기관과의 협의에 따라 변동될 수 있습니다. (7) 상기 '9. 이사회결의일(결정일) - 감사(사외이사가 아닌 감사위원) 참석여부' 관련하여 당사의 감사위원은 전원 사외이사로 구성되어 있습니다.\n※관련공시 | 2026-07-14 자기주식취득결과보고서 2026-04-24 자기주식 취득 결정",
+        "content_truncated": false,
+        "total_chars": 2345,
+        "summary": "[기재정정]주식소각결정               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826800245",
+        "collected_at": "2026-09-07T03:46:13.147033Z",
+        "report_name": "[기재정정]주식소각결정              ",
+        "published_at": "2026-08-26T00:00:00Z",
+        "request_id": "0eed4b11-c4eb-4c65-9e78-ff8bdfb6fbae",
+        "source_type": "dart"
+      }
+    },
+    "20260826800242": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260826800242",
+        "document_type": "disclosure",
+        "content": "하나금융지주/주식 소각 결정/(2026.08.26)주식 소각 결정\n정정일자 | 2026-08-26\n1. 정정관련 공시서류 | 주식소각결정\n2. 정정관련 공시서류제출일 | 2026-04-20\n3. 정정사유 | 주식 소각 예정일 결정에 따른 정정\n4. 정정사항\n정정항목 | 정정전 | 정정후\n7. 소각 예정일 | - | 2026-08-28\n11. 기타 투자판단과 관련한 중요사항 | (1) 상기 주식소각은 '상법 제343조 제1항' 단서규정에 따른 주식소각입니다. (2) 본 주식소각은 당사의 배당가능이익 범위 내에서 취득한 자기주식을 이사회 결의에 의하여 소각하는 것으로 발행주식총수는 감소하나, 자본금의 감소는 없습니다. (3) 상기 '1. 소각할 주식의 종류와 수 - 보통주식 (주)'는 자기주식 취득기간 중 주가 변동에 따라 1,750,497주로 변경되었습니다. (4) 상기 '2. 발행주식 총수 - 보통주식 (주)'는 정정공시 제출일(2026.04.20) 기준입니다. (2026년 4월 8일 3,958,066주 소각 완료) (5) 상기 '4. 소각예정금액(원)'은 소각대상 주식의 취득가액입니다. 참고로 2026년 1월 30일 이사회에서 결의한 소각예정금액은 2,000억원 입니다. (6) 상기 '5. 소각을 위한 자기주식 취득 예정기간 - 종료일'은 결제일 기준입니다. 자기주식 취득과 관련한 자세한 사항은 2026년 4월 20일 공시한 '자기주식취득결과보고서'를 참고하시기 바랍니다. (7) 상기 '7. 소각예정일'은 관계기관과의 협의에 따라 결정될 예정입니다. (8) 상기 '9. 이사회결의일(결정일) - 감사(사외이사가 아닌 감사위원) 참석여부' 관련하여 당사의 감사위원은 전원 사외이사로 구성되어 있습니다. | (1) 상기 주식소각은 '상법 제343조 제1항' 단서규정에 따른 주식소각입니다. (2) 본 주식소각은 당사의 배당가능이익 범위 내에서 취득한 자기주식을 이사회 결의에 의하여 소각하는 것으로 발행주식총수는 감소하나, 자본금의 감소는 없습니다. (3) 상기 '1. 소각할 주식의 종류와 수 - 보통주식 (주)'는 자기주식 취득기간 중 주가 변동에 따라 1,750,497주로 변경되었습니다. (4) 상기 '2. 발행주식 총수 - 보통주식 (주)'는 정정공시 제출일(2026.08.26) 기준입니다. (2026년 4월 8일 3,958,066주 소각 완료) (5) 상기 '4. 소각예정금액(원)'은 소각대상 주식의 취득가액입니다. 참고로 2026년 1월 30일 이사회에서 결의한 소각예정금액은 2,000억원 입니다. (6) 상기 '5. 소각을 위한 자기주식 취득 예정기간 - 종료일'은 결제일 기준입니다. 자기주식 취득과 관련한 자세한 사항은 2026년 4월 20일 공시한 '자기주식취득결과보고서'를 참고하시기 바랍니다. (7) 상기 '7. 소각예정일'은 관계기관과의 협의에 따라 변동될 수 있습니다. (8) 상기 '9. 이사회결의일(결정일) - 감사(사외이사가 아닌 감사위원) 참석여부' 관련하여 당사의 감사위원은 전원 사외이사로 구성되어 있습니다.\n-\n1. 소각할 주식의 종류와 수 | 보통주식 (주) | 1,750,497\n종류주식 (주) | -\n2. 발행주식 총수 | 보통주식 (주) | 274,367,748\n종류주식 (주) | -\n3. 1주당 가액(원) | 5,000\n4. 소각예정금액(원) | 199,800,081,800\n5. 소각을 위한 자기주식 취득 예정기간 | 시작일 | 2026-02-02\n종료일 | 2026-04-20\n6. 소각할 주식의 취득방법 | 장내매수\n7. 소각 예정일 | 2026-08-28\n8. 자기주식 취득 위탁 투자중개업자 | 하나증권\n9. 이사회결의일(결정일) | 2026-01-30\n- 사외이사 참석여부 | 참석(명) | 9\n불참(명) | 0\n- 감사(사외이사가 아닌 감사위원) 참석여부 | -\n10. 공정거래위원회 신고대상 여부 | 미해당\n11. 기타 투자판단과 관련한 중요사항 | (1) 상기 주식소각은 '상법 제343조 제1항' 단서규정에 따른 주식소각입니다. (2) 본 주식소각은 당사의 배당가능이익 범위 내에서 취득한 자기주식을 이사회 결의에 의하여 소각하는 것으로 발행주식총수는 감소하나, 자본금의 감소는 없습니다. (3) 상기 '1. 소각할 주식의 종류와 수 - 보통주식 (주)'는 자기주식 취득기간 중 주가 변동에 따라 1,750,497주로 변경되었습니다. (4) 상기 '2. 발행주식 총수 - 보통주식 (주)'는 정정공시 제출일(2026.08.26) 기준입니다. (2026년 4월 8일 3,958,066주 소각 완료) (5) 상기 '4. 소각예정금액(원)'은 소각대상 주식의 취득가액입니다. 참고로 2026년 1월 30일 이사회에서 결의한 소각예정금액은 2,000억원 입니다. (6) 상기 '5. 소각을 위한 자기주식 취득 예정기간 - 종료일'은 결제일 기준입니다. 자기주식 취득과 관련한 자세한 사항은 2026년 4월 20일 공시한 '자기주식취득결과보고서'를 참고하시기 바랍니다. (7) 상기 '7. 소각예정일'은 관계기관과의 협의에 따라 변동될 수 있습니다. (8) 상기 '9. 이사회결의일(결정일) - 감사(사외이사가 아닌 감사위원) 참석여부' 관련하여 당사의 감사위원은 전원 사외이사로 구성되어 있습니다.\n※관련공시 | 2026-04-20 자기주식취득결과보고서 2026-01-30 자기주식 취득 결정",
+        "content_truncated": false,
+        "total_chars": 2618,
+        "summary": "[기재정정]주식소각결정               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826800242",
+        "collected_at": "2026-09-07T03:46:13.342230Z",
+        "report_name": "[기재정정]주식소각결정              ",
+        "published_at": "2026-08-26T00:00:00Z",
+        "request_id": "ec65daeb-d49f-4837-8ae6-f3f085894593",
+        "source_type": "dart"
+      }
+    },
+    "20260814004019": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    },
+    "20260814003800": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    },
+    "20260515002550": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260826800245",
+    "20260826800242",
+    "20260814004019",
+    "20260814003800",
+    "20260515002550"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:46:11.827601Z"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:46:11.827881Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:46:11.828175Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:46:11.828319Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:46:11.828438Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:46:11.828555Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:46:11.828671Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:46:12.111003Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:46:12.214508Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:46:12.442831Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:46:12.540476Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:46:12.616107Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-086790",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:46:12.954634Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

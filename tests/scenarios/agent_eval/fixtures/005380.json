@@ -1,0 +1,1361 @@
+{
+  "company": {
+    "company_name": "현대차",
+    "stock_code": "005380"
+  },
+  "captured_at": "2026-09-07T03:39:27.204427+00:00",
+  "capture_finished_at": "2026-09-07T03:47:53.957484+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "현대차",
+      "stock_code": "005380",
+      "current_price": 388000,
+      "change": 4500,
+      "change_rate": 1.17,
+      "volume": 232458,
+      "volume_change_rate": 64.83,
+      "avg_volume_20d": 586532,
+      "volume_ratio_20d": 0.7,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 413098,
+      "warnings": [],
+      "as_of": "2026-09-07T03:39:27.618435Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:39:27.618435Z"
+    },
+    "news": {
+      "request_id": "8b79daaf-7a95-4fe5-9e38-dd53230e1652",
+      "status": "success",
+      "company_name": "현대차",
+      "stock_code": "005380",
+      "articles": [
+        {
+          "headline": "넥센타이어, 현대차 신형 아반떼에 신차용 타이어 공급",
+          "publisher": "dtnews24.com",
+          "published_at": "2026-09-07T03:24:00Z",
+          "summary": "넥센타이어 아반떼 신차용 공급 제품 3종. 넥센타이어 제공. 넥센타이어가 현대자동차의 '디 올 뉴 아반떼'에 신차용 타이어(OE)를 공급하며 글로벌 완성차 시장에서 제품 공급을 확대한다. 넥센타이어는 아반떼가...",
+          "source_url": "http://www.dtnews24.com/news/articleView.html?idxno=814970",
+          "relevance": "high"
+        },
+        {
+          "headline": "철강 관세 피해 美 갔는데… 현대제철 발목 잡은 '설비 관세'",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-07T03:14:00Z",
+          "summary": "현대제철과 포스코, 현대차·기아가 총 58억달러를 투입하는 사업으로 현대제철이 지분 50%, 포스코가 20%, 현대차와 기아가 각각 15%를 보유한다. 실제 건설은 인허가 절차를 마치는 대로 올해 4분기 시작해 2029년 양산에...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727450",
+          "relevance": "high"
+        },
+        {
+          "headline": "두 달 새 13% 내린 환율…원화 강세에 국내 증시 희비 엇갈려",
+          "publisher": "m-i.kr",
+          "published_at": "2026-09-07T03:04:00Z",
+          "summary": "반면 현대차·기아 등이 포함된 KRX 자동차지수는 같은 기간 약 10.2% 하락했다. 원화 가치가 높아지면 해외에서 달러로 벌어들인 매출을 원화로 환산할 때 금액이 줄어드는 만큼 수출기업 실적에 부담이 될 수 있다....",
+          "source_url": "https://www.m-i.kr/news/articleView.html?idxno=1410715",
+          "relevance": "high"
+        },
+        {
+          "headline": "울산·광주, 휴머노이드 기반 자동차 제조 AX 공동사업 구체화",
+          "publisher": "pressian.com",
+          "published_at": "2026-09-07T03:01:00Z",
+          "summary": "현대차 본관에서 울산 전기차공장에 대한 설명을 들은 뒤 생산·기술 현장을 둘러보며 미래 자동차 제조현장의 변화와 기술 적용 방향을 직접 확인할 예정이다. 이번 현장 견학은 미래 자동차 생산현장의 변화와 기술...",
+          "source_url": "https://www.pressian.com/pages/articles/2026090709003053042?utm_source=naver&utm_medium=search",
+          "relevance": "high"
+        },
+        {
+          "headline": "‘1조달러 호황’의 착시… 반도체 171% 뛸 때, 車·철강은 멈췄다[수출...",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T02:57:00Z",
+          "summary": "실제로 국내 대표 완성차 기업인 현대차는 지난달 해외에 25만4241대를 팔아 4년 7개월 만에 ‘글로벌 월 판매량 30만 대’를 밑도는 성적을 거뒀다. 2분기 글로벌 판매량은 99만1885대로 전년 동기 대비 6.9% 줄었다....",
+          "source_url": "https://www.munhwa.com/article/11615037?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철, 美 제철소 첫삽…\"아틀라스에 적용\"",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-07T02:56:00Z",
+          "summary": "지난 주말 기공식을 했는데, 정의선 현대차그룹 회장은 여기서 만든 철강을 자동차뿐 아니라 아틀라스 등... 제철소 지분은 현대제철 50%, 현대차와 기아가 각각 15%, 포스코가 나머지 20%를 보유합니다. 이번 기공식에는...",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000333126?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"화물차 구매·운행·교체 비용 줄여요\" 현대커머셜 '총소유비용' 절감...",
+          "publisher": "catchnews.kr",
+          "published_at": "2026-09-07T02:56:00Z",
+          "summary": "'대형트럭 비즈니스 안심케어'는 엑시언트·뉴파워트럭 등 현대차 대형트럭 차주가 사고나 보증수리로... 매각하면, 현대차 신차 구매 시 전용 금융 혜택을 제공하는 방식이다. 공인평가사의 무료 방문 진단과 경매 입찰...",
+          "source_url": "https://www.catchnews.kr/news/articleView.html?idxno=128211",
+          "relevance": "high"
+        },
+        {
+          "headline": "출고 7개월 전기차, 일주일 새 조수석 앞·뒤 유리 균열",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-07T02:55:00Z",
+          "summary": "두 차례 유리 파손의 정확한 원인은 확인되지 않은 상태다. 이에 따라 외부 충격에 따른 개별 파손인지, 유리 또는 장착 상태와 관련된 문제인지 등을 판단하기 위해서는 현대차 측의 점검과 원인 분석이 필요한 상황이다．",
+          "source_url": "https://www.newsis.com/view/NISX20260907_0003779061",
+          "relevance": "high"
+        },
+        {
+          "headline": "정의선, 美 8조 ‘쇳물 승부수’… 차 넘어 로봇·로켓까지",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T02:53:00Z",
+          "summary": "현대차그룹의 현지 전기로 제철소 건설로 260억 달러(약 34조9180억 원) 규모 ‘정의선표 대미투자’가... 7일 현대차그룹에 따르면, 정 회장은 지난 4일(현지시간) 미 루이지애나주 어센션 패리시 도널드슨빌에서 열린...",
+          "source_url": "https://www.munhwa.com/article/11615028?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차·포스코, 美 8조원 철강사업 본격화…현대제철 14.6억달러 출자",
+          "publisher": "thetracker.co.kr",
+          "published_at": "2026-09-07T02:46:00Z",
+          "summary": "kr 더트래커 = 현대차그룹과 포스코그룹이 미국에서 58억달러(약 8조원) 규모 철강 프로젝트를 본격화한다. 현대제철이 전체 지분의 절반을 보유하는 최대주주로 사업을 이끌고 포스코와 현대차·기아가 나머지...",
+          "source_url": "https://thetracker.co.kr/View.aspx?No=4215269",
+          "relevance": "high"
+        },
+        {
+          "headline": "[단독]카카오 독주 끝…서울 로보택시 운영권, 현대차·티머니도 땄다",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "현대차는 재도전 끝에 처음 진입했다. 완성차 업체가 서울 로보택시 플랫폼을 직접 운영하는 첫 사례다. 전국 82개 지역에서 운영해온 AI 수요 응답 배차 플랫폼 '셔클'을 투입할 것으로 전망된다. 티머니 컨소시엄이...",
+          "source_url": "https://www.mt.co.kr/tech/2026/09/07/2026090710530472531",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 관세 뚫으려 손잡은 현대제철-포스코, 루이지애나 ‘K-철강 동맹’ 셈...",
+          "publisher": "mydaily.co.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "현대차그룹의 북미 생산기지를 겨냥해 현지 자동차강판 공급망을 완성하려는 현대제철과 대규모 투자... 지분은 현대제철 50%, 현대차 15%, 기아 15%, 포스코 20%로 구성됐다. 현대차그룹이 전체 지분의 80%를 보유해 사업을...",
+          "source_url": "https://www.mydaily.co.kr/page/view/2026090711004760222",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI 투자 기대에 외인·기관 1.6조 '사자'…코스피 6900선 공방[장중시황...",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "SK스퀘어(402340)(5.86%), SK하이닉스(000660)(5.65%), 삼성전자(005930)(3.91%), 삼성생명(032830)(3.7%), 삼성전자우(005935)(2.19%), KB금융(105560)(1.57%), 현대차(005380)(1.43%), 삼성전기(009150)(1.28%), LG에너지솔루션(373220)(0.56...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6282070",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대위아, 국내 최초 '완전 무인지게차' 띄운다…내년 기아 화성공장 투...",
+          "publisher": "widedaily.com",
+          "published_at": "2026-09-07T02:40:00Z",
+          "summary": "이러한 청사진의 일환으로 현재 경기도 시흥시 힐스테이트 더웨이브시티에서는 현대차 및 현대건설과 손잡고 국내 최초의 공동주택 주차로봇 실증 사업도 순조롭게 진행하고 있다. 현대위아 관계자는 자사의 산업용...",
+          "source_url": "https://www.widedaily.com/news/articleView.html?idxno=300701",
+          "relevance": "high"
+        },
+        {
+          "headline": "넥센타이어, 신형 아반떼에 신차용 타이어 공급...지역별 맞춤 공략",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "넥센타이어는 현대차 디 올 뉴 아반떼에 신차용 타이어를 공급한다고 7일 밝혔다. 신형 아반떼에는 판매 지역에 따라 넥센타이어의 '엔프리즈 S(N'PRIZ S)', '엔블루 S(N'BLUE S)', '엔페라 프리머스(N'FERA Primus)' 등이 각각...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=545936",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 정몽구 재단, 라오스 현지 인재 육성 첫발",
+          "publisher": "koreastocknews.com",
+          "published_at": "2026-09-07T02:36:00Z",
+          "summary": "현대차 정몽구 재단(이사장 정무성)은 '라오스 현지 교육 지원 사업'을 새롭게 시작하고, 라오스... 재단은 교육을 통해 미래세대에게 '희망의 사다리'를 만들어야 한다는 설립자 정몽구 현대차그룹 명예회장의 인재 육성...",
+          "source_url": "http://www.koreastocknews.com/news/articleView.html?idxno=121028",
+          "relevance": "high"
+        },
+        {
+          "headline": "제네시스 마그마 레이싱, 美 론스타 르망 7위…\"WEC 최고 성적\"",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:35:00Z",
+          "summary": "7일 현대차에 따르면 제네시스 마그마 레이싱 팀의 GMR-001 하이퍼카 17호 차량은 6일(현지 시간) 미국 텍사스 오스틴 서킷 오브 디 아메리카스(COTA)에서 열린 론스타 르망에서 7위로 결승선을 통과했다. GMR-001 19호 차량은...",
+          "source_url": "https://www.news1.kr/industry/auto-industry/6282030",
+          "relevance": "high"
+        },
+        {
+          "headline": "[食전食후] AI·반도체 훈풍에 코스피 6900선 육박…외국인·기관 '쌍끌...",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "SK스퀘어(5.96%), 삼성전자우(2.14%), KB금융(1.57%), 현대차(1.43%), 삼성전기(1.28%), LG에너지솔루션(0.70%) 등도 오르고 있다. 특히 인공지능(AI) 연산 수요 확대 기대가 반도체주 투자심리를 끌어올리는 모습이다....",
+          "source_url": "https://www.ajunews.com/view/20260907112902463",
+          "relevance": "high"
+        },
+        {
+          "headline": "파업에 '연간 목표' 발목 잡힌 현대차…생산차질에도 '반전' 노린다 [주...",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T02:33:00Z",
+          "summary": "현대차가 10년 만의 전면 파업 여파로 올해 연간 판매 목표 달성에 난항이 예상된다는 증권가 평가가... 7일 유가증권시장에서 현대차는 3거래일째 상승세를 지속하고 있지만, 40만원 회복을 앞두고 상승 탄력이...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070162&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"디케이티, 휴머노이드 공급망 재편 수혜 기대\"…IBK투자증권 보고서",
+          "publisher": "irobotnews.com",
+          "published_at": "2026-09-07T02:32:00Z",
+          "summary": "▲보스턴다이나믹스 아틀라스와 현대차 로보틱스랩 MobED에 적용되는 충전 모듈은 4분기 대량 양산 전환 여부가 확정된다. ▲북미 완성차 업체 탑재용 배터리 보호 모듈 역시 고객사가 연간 수백만 대 규모의 양산을...",
+          "source_url": "https://www.irobotnews.com/news/articleView.html?idxno=48336",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인·기관 사자에 코스피 3%대 상승세…6900 탈환 고지전",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "삼성전자와 SK하이닉스는 각각 3%대, 5%대 오름세를 이어가고 있고 SK스퀘어, 삼성전기, LG에너지솔루션, 현대차, 삼성바이오로직스, KB금융, 삼성생명이 모두 상승 중이다. 같은 시간 코스닥 지수는 1.64%(13.35포인트)...",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/07/QZ57IBRFANHSJAVOFB54QGKVTE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 정몽구 재단, 라오스서 장학생 60명 선발",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:25:00Z",
+          "summary": "현대차 정몽구 재단은 ‘라오스 현지 교육지원사업’을 새롭게 시작하고, 4일 라오스 국립대에서 첫 장학생... 재단은 교육을 통해 미래세대에 ‘희망의 사다리’를 만들어야 한다는 설립자 정몽구 현대차그룹...",
+          "source_url": "https://biz.heraldcorp.com/article/10864818?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "관세장벽에 美서 손잡은 포스코·현대제철…韓 제조업 '공동생산' 시대",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T02:23:00Z",
+          "summary": "7일 현대차그룹에 따르면 현대제철과 포스코는 지난 4일(현지시간) 미국 루이지애나주 도널드슨빌에서... 현대제철이 지분 50%, 포스코가 20%, 현대차와 기아가 각각 15%를 보유한다. ◆ 50% 관세가 바꾼 경쟁의 문법…'K철강...",
+          "source_url": "https://www.newspim.com/news/view/20260907000523",
+          "relevance": "high"
+        },
+        {
+          "headline": "경상국립대, 진주 창업기업 투자·성장 지원 앞장",
+          "publisher": "daily.hankooki.com",
+          "published_at": "2026-09-07T02:22:00Z",
+          "summary": "㈜라이브워크는 사업단 지원을 통해 개발한 기술을 바탕으로 현대차·기아 1차 협력사에 선정됐으며, '쇼미더IR 레벨업' 프로그램을 통해 투자 협약사 및 대내외 협력 프로그램과의 연계 기회도 확보했다. ㈜이노보드는...",
+          "source_url": "https://daily.hankooki.com/news/articleView.html?idxno=1403239",
+          "relevance": "high"
+        },
+        {
+          "headline": "[산업소식] 현대차 정몽구 재단 라오스 인재 육성 나선다…국립대생 60...",
+          "publisher": "4th.kr",
+          "published_at": "2026-09-07T02:16:00Z",
+          "summary": "포쓰저널 박소연 기자 현대차 정몽구 재단은 '라오스 현지 교육 지원 사업'을 새롭게 시작하고, 2026년 9월 4일 라오스 국립대학교에서 장학증서 수여식을 개최했다./사진=현대차 정몽구 재단 현대차 정몽구 재단 라오스...",
+          "source_url": "http://www.4th.kr/news/articleView.html?idxno=2117576",
+          "relevance": "high"
+        },
+        {
+          "headline": "서산시, 임산부 전용 '행복버스' 7일 첫 운행… 성연면~도심 연결",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T02:16:00Z",
+          "summary": "현대차 사회공헌 연계로 결실 맺어 이번 사업은 현대자동차의 사회공헌 프로젝트인 '현대 유니버셜 솔루션'의 첫 번째 결실로 성사됐다. 서산시는 지난 7월 말 차량을 기증받은 이후 실무 점검과 이용자 사전 모집 등...",
+          "source_url": "https://www.g-enews.com/view.php?ud=20260907111040199020ae620e86_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 정몽구 재단, 라오스 국립대생 60명 장학 지원…현지 인재 육성",
+          "publisher": "etnews.com",
+          "published_at": "2026-09-07T02:13:00Z",
+          "summary": "현대차 정몽구 재단은 라오스 비엔티안 라오스 국립대에서 장학증서 수여식을 열고 '라오스 현지 교육 지원... 재단은 미래세대에게 '희망의 사다리'를 제공해야 한다는 설립자 정몽구 현대차그룹 명예회장의 인재 육성...",
+          "source_url": "https://www.etnews.com/20260907000191",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대커머셜, 대형트럭 구매·사고처리·교체 '차량 생애주기 금융지원'",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T02:12:00Z",
+          "summary": "대형트럭 비즈니스 안심케어는 현대차 엑시언트와 뉴파워트럭 차주가 차량 사고나 보증 수리로 인해 차량을 운행하지 못하는 경우, 이 기간 하루당 15만원씩 최대 500만원까지 보상한다. 서비스 가입 후 1년 동안 보장받을...",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609070951108801a6e8311f64_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "제네시스 마그마 레이싱, 美 WEC 7위…출전 후 최고 성적",
+          "publisher": "seoultimes.news",
+          "published_at": "2026-09-07T02:11:00Z",
+          "summary": "미국 텍사스 오스틴 서킷 오브 디 아메리카스에서 열린 FIA 월드 인듀어런스 챔피언십 5라운드 ‘론스타 르망’에서 톱10에 진입했다. 사진은 론스타 르망 레이스 톱10에 오른 제네시스 마그마 레이싱 장면. [사진=현대차]",
+          "source_url": "https://www.seoultimes.news/news/article.html?no=2000099582",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 메모리주 강세에 장 초반 3%대 상승...삼전 4%·SK하닉 6%↑",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "시가총액 상위 종목 가운데 삼성전기는 2.50%, LG에너지솔루션은 0.42%, 현대차는 1.83% 오르고 있다. 반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 하락 중이다. 업종별로는 기술주 급등 영향으로 전기...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317738",
+          "relevance": "high"
+        },
+        {
+          "headline": "[제네시스 10년, 그리고 넥스트①] '고급차'에서 독립 브랜드로…제네시...",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "대중차 중심이던 현대차그룹이 글로벌 고급차 시장에 본격적으로 도전하기 위해 띄운 승부수였다. 현재... 현대차는 2004년 1세대 제네시스 개발에 착수하면서 별도 고급차 브랜드 출범을 검토했다. 다만 당시에는...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723199",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철 \"美 제철소 연매출 40억달러 전망\"… 탄소 70% 줄인 車강판 '승...",
+          "publisher": "newscj.com",
+          "published_at": "2026-09-07T02:06:00Z",
+          "summary": "현대차·기아 미국 공장에 공급할 물량을 이미 확보한 가운데 저탄소 강판 생산을 경쟁력으로 삼아 연간 40억 달러 수준의 매출을 기대하고 있다. 7일 업계에 따르면 현대제철은 포스코, 현대차·기아와 함께 총 58억...",
+          "source_url": "https://www.newscj.com/news/articleView.html?idxno=3430575",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 정몽구 재단, 라오스서 첫 현지 장학사업…대학생 60명 지원",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-07T02:06:00Z",
+          "summary": "현대차 정몽구 재단은 ‘라오스 현지 교육 지원 사업’을 새롭게 시작하고 지난 4일 라오스 국립대에서 첫... 이는 교육을 통해 미래세대에 ‘희망의 사다리’를 제공한다는 정몽구 현대차그룹 명예회장의 인재 육성...",
+          "source_url": "https://www.dt.co.kr/article/12082429?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차·기아 8월 판매 전년比 5.9%↓…중견 3사도 동반 부진 [주간 CAR톡...",
+          "publisher": "joseilbo.com",
+          "published_at": "2026-09-07T02:05:00Z",
+          "summary": "현대차와 기아는 내수 부진 속에서 해외 판매 성과가 엇갈렸고, KGM·GM 한국사업장·르노코리아도 수출... ■ 현대차·기아, 8월 55만5249대 판매…전년比 5.9%↓ 현대차와 기아가 지난 8월 글로벌 시장에서 합산...",
+          "source_url": "http://www.joseilbo.com/news/news_read.php?uid=575195&class=17&grp=",
+          "relevance": "high"
+        },
+        {
+          "headline": "포스코, 현대제철 협력…‘해외 조강 1000만톤’ 확대",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:03:00Z",
+          "summary": "이어 올해 1월에는 ▷현대제철 50% ▷포스코 20% ▷현대차 15% ▷기아 15% 지분출자를 진행했다. 현대제철과 포스코는 각각 당진제철소와 광양제철소에서 대형 전기로를 운영하며 기술력을 확보해 왔다. 업계에서는...",
+          "source_url": "https://biz.heraldcorp.com/article/10864727?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 저탄소 생산시대 연 현대제철…정의선 “지속가능 미래 시작점”",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T02:03:00Z",
+          "summary": "현대제철이 지분 50%를 보유하고 현대차와 기아가 각각 15%, 포스코가 20% 참여한다. 특히, 제철소 내에서... 이곳에서 생산되는 철강은 현대차그룹은 물론 미국의 자동차 기업들이 차세대 모빌리티를 생산하는 데 큰...",
+          "source_url": "https://biz.heraldcorp.com/article/10864726?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[사설]美제철소 투자, 국내 산업 기반도 함께 키워야",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "현대제철과 포스코, 현대차·기아가 함께 세우는 미국 루이지애나 전기로 제철소가 첫 삽을 떴다. 58억달러를 투자해 연 270만t의 철강을 생산하는 대형 프로젝트다. 생산부터 수요까지 현지 공급망을 묶었다는 점도 주목할...",
+          "source_url": "https://view.asiae.co.kr/article/2026090709382645920",
+          "relevance": "high"
+        },
+        {
+          "headline": "20년 전 '새만금 대특구'외친 김민석…이제 '전북 황금시대' 보여줄 차례",
+          "publisher": "pressian.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "핵심과제로는 ▲3대 메가 프로젝트 2·3차 대기업 투자 후속계획에 전북 포함 ▲현대차 투자 초고속 확대... 무엇인지, 현대차 투자 '초고속 확대'를 위해 어떤 추가 투자계획을 추진하고 있는지에 대한 구체적인 설명을...",
+          "source_url": "https://www.pressian.com/pages/articles/2026090710464574948?utm_source=naver&utm_medium=search",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 장중 '반도체주 강세'에 3%대 오른 6890선, 코스닥도 1%대 올라",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "SK하이닉스가 5.89%로 가장 많이 오르고 있고 SK스퀘어(5.48%) 삼성전자(3.82%) 삼성생명(3.70%) 삼성전자우(2.35%) 현대차(1.69%) KB금융(1.54%) 삼성전기(1.53%) LG에너지솔루션(0.14%) 삼성바이오로직스(0.07%) 가 뒤를 잇고...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446528",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철 美제철소 'HPLS' 의미는",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:56:00Z",
+          "summary": "현대차그룹 정의선 회장이 기공식 환영사를 하고 있다. 미국 루이지애나주 도널슨빌에 터를 잡은 HPLS(현대... 지분은 현대제철 50%, 포스코 20%, 현대차·기아 각 15%씩 나눠 갖는다. HPLS는 제철소 내에서 원료부터 제품까지...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362714",
+          "relevance": "high"
+        },
+        {
+          "headline": "정주영 창업회장의 꿈 '수직계열화'…정의선, 美서도 해냈다",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:55:00Z",
+          "summary": "정의선 현대차그룹 회장은 조부인 고(故) 정주영 현대그룹 창업주의 '수직계열화'를 향한 꿈을 이어받아... HPLS는 현대제철과 포스코, 현대차, 기아가 공동 투자했다. 지분은 현대제철 50%, 포스코 20%, 현대차와 기아가...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710063818068",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]코스피, 오픈AI발 호재에 6,900선 재탈환…삼전 4.3%·닉스 5.9% 급...",
+          "publisher": "kwnews.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.kwnews.co.kr/article/20260907500348",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차, 파업에 5만대 차질…다올證 “연간 목표 밑돌지만 90% 만회”",
+          "publisher": "viva100.com",
+          "published_at": "2026-09-07T01:48:00Z",
+          "summary": "현대차가 지난달 발생한 노조 전면 파업과 1분기 중동발 생산 차질의 여파로 연간 판매 목표(415만대) 달성이... 7일 다올투자증권은 현대차에 대한 투자의견 ‘매수’와 목표주가 64만원을 유지했다. 단기적으로 생산...",
+          "source_url": "https://www.viva100.com/article/20260907500516",
+          "relevance": "high"
+        },
+        {
+          "headline": "“역시 삼성전자 압도적 1위” 브랜드 가치 ‘135조’…세계 홀린 K기업...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:47:00Z",
+          "summary": "반면 현대차와 기아 등 자동차 기업의 브랜드 가치는 나란히 뒷걸음질쳤다. 6일(현지시간) 영국의... 국내 2위인 현대차의 브랜드 가치는 248억2000만달러로 전년보다 6.1% 감소했다. 4위 기아 역시 104억1300만달러로...",
+          "source_url": "https://www.sedaily.com/article/20087889?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 '쌍끌이' 매수에 6890선 훌쩍…3%대 강세",
+          "publisher": "mediapen.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "이 밖에 SK스퀘어(5.76%), 삼성생명(4.03%), 삼성전자우(2.30%), 삼성전기(1.86%), 현대차(1.83%), KB금융(1.42%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.07%) 등 주요 대형주가 모두 강세를 보이고 있다. 같은 시각...",
+          "source_url": "https://www.mediapen.com/news/view/1121704",
+          "relevance": "high"
+        },
+        {
+          "headline": "미국서 반한 현대차, 본사로 불렀다⋯ 버카다, ‘차세대 AI 보안’ 전격...",
+          "publisher": "viva100.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "버카다는 현대차의 공식 초청을 받아 사내 ‘보안 캠페인’에서 차세대 클라우드 통합 보안 솔루션을 전격 시연한다고 7일 밝혔다. 지난달 31일과 이달 1일 강남 사옥에서 1차 시연을 마쳤고, 7일부터 9일까지는 현대차...",
+          "source_url": "https://www.viva100.com/article/20260907500547",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 업고 2.9%대 급등",
+          "publisher": "straightnews.co.kr",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "현대차가 2.22%, KB금융이 1.74%, 삼성생명이 4.03% 올랐다. LG에너지솔루션은 0.70%, 삼성바이오로직스는 0.07% 상승했다. 다만 지수 상승폭에 비해 시장 전체의 온도가 뜨겁다고 보기는 어려웠다. 유가증권시장에서...",
+          "source_url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310533",
+          "relevance": "high"
+        },
+        {
+          "headline": "'현대차 파업 여파, 계획 생산차질 5만대'...\"연내 만회 가능성 높다\"",
+          "publisher": "cwn.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "현대차가 올해 임금협상 과정에서 발생한 전면 파업 여파로 3분기 성장세 둔화가 불가피할 것이라는... 다올투자증권은 7일 현대차에 대해 투자의견 '매수'와 목표주가 64만원을 제시하며 이같이 분석했다. 유지웅...",
+          "source_url": "https://www.cwn.kr/news/articleView.html?idxno=55442",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등… 코스피 6,900선 재탈환",
+          "publisher": "fntoday.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%)이 상승 중이며 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등 시가총액 상위 종목 대다수가 상승 대열에 합류했다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.fntoday.co.kr/news/articleView.html?idxno=392276",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 ‘볼더’ 양산형 윤곽…인도 특허서 정통 오프로더 디자인 포착",
+          "publisher": "mydaily.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "인도 출시가 확정될 경우 현대차가 강점을 지닌 도심형 스포츠유틸리티차량(SUV)을 넘어 고급 오프로더 시장까지 영역을 넓히는 전환점이 될 전망이다. 7일 인도 특허청에 따르면 현대차는 지난 5월 볼더의 외관...",
+          "source_url": "https://www.mydaily.co.kr/page/view/2026090710175074354",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철 \"美 HPLS 연매출 40억달러 기대 … 탄소 70% 저감 강판이 강점...",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T01:38:00Z",
+          "summary": "현대차·기아와 포스코를 통해 전체 생산능력의 절반이 넘는 연간 140만톤의 초기 판매 물량을 확보한 데... 현대차와 기아 미국 공장에 각각 연간 40만톤씩 총 80만톤을 공급하기로 했으며 포스코 역시 60만톤의 판매...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700104.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "시가총액 상위 종목 가운데서는 삼성전자(3.82%), SK하이닉스(6.19%), SK스퀘어(5.86%), 삼성전기(1.93%), LG에너지솔루션(0.42%), 현대차(1.69%), 삼성바이오로직스(0.21%), KB금융(1.63%), 삼성생명(3.78%), 삼성물산(2.72...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철·포스코 '맞손'...美 생산으로 50% 관세 정면 돌파",
+          "publisher": "opinionnews.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "(왼쪽부터) 장인화 포스코그룹 회장, 제프 랜드리 루이지애나 주지사, 정의선 현대차그룹 회장, 트로이... HPLS는 현대제철이 지분 50%, 현대차와 기아가 각각 15%를 보유하는 등 현대차그룹이 모두 80%를 투자하고...",
+          "source_url": "http://www.opinionnews.co.kr/news/articleView.html?idxno=144066",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대커머셜, 현대차와 상용 차주 TCO 절감 금융 선보여",
+          "publisher": "pointdaily.co.kr",
+          "published_at": "2026-09-07T01:30:00Z",
+          "summary": "'대형트럭 비즈니스 안심케어'는 엑시언트, 뉴파워트럭 등 현대차 대형트럭 차주가 사고나 보증수리로 차를... 현대커머셜의 상용차 앱 '고트럭'의 '내 차 팔기'로 타던 차를 팔면 현대차 신차 구매 시 할인 혜택을 주는...",
+          "source_url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=318240",
+          "relevance": "high"
+        },
+        {
+          "headline": "넥센타이어, 현대차 ‘디 올 뉴 아반떼’에 신차용 타이어 공급",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T01:30:00Z",
+          "summary": "넥센타이어가 현대차의 준중형 세단 ‘디 올 뉴 아반떼’에 신차용 타이어(OE)를 공급한다고 7일 밝혔다. 디 올 뉴 아반떼는 이번에 8세대 완전변경을 거쳐 새롭게 출시됐다. 넥센타이어는 이번 공급을 시작으로 아반떼가...",
+          "source_url": "https://biz.chosun.com/industry/car/2026/09/07/7MAPUIFKDVFMLPBMTWPH36YCDE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "페로타임즈 손바닥뉴스 9월7일(월)",
+          "publisher": "ferrotimes.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "원 현대차그룹, 오만 첫 수소 시내버스 투입…240kW 충전망 구축 광양경자청, 제2차 발전계획 중간 점검... 해외판매 '버팀목'…현대차 KGM 부진 中 STS 생산 高수준…수출 급감, 내수로 무게 이동 SCFI 3500선 재돌파 美...",
+          "source_url": "http://www.ferrotimes.com/news/articleView.html?idxno=50213",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대자동차그룹·포스코그룹, 현대제철 미국 HPLS 전기로 제철소 기공식...",
+          "publisher": "wsobi.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "현대차그룹에서는 정의선 회장을 비롯해 현대제철 이보룡 사장, 현대차 호세 무뇨스(José Muñoz) 사장, 기아 송호성 사장, 현대차그룹 성 김 사장, 서강현 사장 등이 참석했다. 정의선 회장은 환영사를 통해 \"이곳에서...",
+          "source_url": "http://www.wsobi.com/news/articleView.html?idxno=317658",
+          "relevance": "high"
+        },
+        {
+          "headline": "버카다, 현대차 보안 캠페인서 차세대 물리 보안 기술 시연... '사이버-...",
+          "publisher": "boannews.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "이번 보안 캠페인은 현대차 임직원의 정보·물리 보안 의식을 제고하고 최첨단 기술 체험 기회를 제공하기 위해 마련됐다. 행사는 8월 31일부터 9월 1일까지 현대차 강남 사옥에서 1차로 진행됐으며, 7-9일 양재...",
+          "source_url": "https://www.boannews.com/news/articleView.html?idxno=145677",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피,美오픈AI 호재에 6,900선…환율 23개월만에 1,330원대",
+          "publisher": "seouleconews.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자...",
+          "source_url": "http://www.seouleconews.com/news/articleView.html?idxno=93564",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체주 강세에 3%가까이 급등…6,880선 돌파",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "이 밖에 시가총액 상위 종목에서는 삼성전자우(2.30%)와 SK스퀘어(5.48%), 삼성전기(1.21%), LG에너지솔루션(0.42%), 현대차(1.89%), 삼성바이오로직스(0.48%), KB금융(1.51%) 등이 오름세다. 반면 한화에어로스페이스(0.95...",
+          "source_url": "https://www.news2day.co.kr/article/20260907500108",
+          "relevance": "high"
+        },
+        {
+          "headline": "범용인공지능(AGI) 시대 열렸다…코스피 6900탈환",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "SK스퀘어(5.38%), 삼성전기(1.36%), LG에너지솔루션(0.42%), 현대차(1.83%), KB금융(1.63%) 등 시가총액 상위주 대부분이 상승세다. 오픈AI '아스트라' 공개하며 AGI 도래선언 오픈AI는 아스트라를 공개하면서 AGI 시대의...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710234926245",
+          "relevance": "high"
+        },
+        {
+          "headline": "BYD 공세가 드러낸 역설...전기차 시대 더 강해진 현대차의 '홈그라운드...",
+          "publisher": "e-science.co.kr",
+          "published_at": "2026-09-07T01:24:00Z",
+          "summary": "현대차·기아를 비롯해 테슬라, BMW, 메르세데스-벤츠 등은 지원 대상에 남았다. 이에 따라 아토3·돌핀·씰... BYD 때문에 더 선명해진 현대차의 힘…전국 1200여개 정비망 BYD의 약점을 들여다볼수록 오히려 현대차가...",
+          "source_url": "https://www.e-science.co.kr/news/articleView.html?idxno=134812",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 순매수에 6900선 강세",
+          "publisher": "kfenews.co.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "시가총액 상위 종목은 삼성전자(4.01%), SK하이닉스(5.59%), SK스퀘어(5.96%), 삼성전자우(2.66%), 삼성전기(1.14%), 현대차(2.22%), LG에너지솔루션(1.26%), 삼성생명(4.20%), KB금융(1.45%), 삼성바이오로직스(0.41%) 등 모두 오르고...",
+          "source_url": "https://www.kfenews.co.kr/news/articleView.html?idxno=663954",
+          "relevance": "high"
+        },
+        {
+          "headline": "'7천피' 앞둔 코스피...반도체 훈풍에 SK하이닉스 5%대 강세 [fn오전시황...",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T01:20:00Z",
+          "summary": "SK스퀘어(5.28%), 삼성전기(1.28%), 삼성전자우(2.30%), 현대차(1.96%), KB금융(1.40%) 등도 강세를 나타내고 있다. LG에너지솔루션(0.56%)과 삼성바이오로직스(0.41%)도 강보합 중이다. 코스닥도 상승세를 이어가고 있다. 같은...",
+          "source_url": "https://www.fnnews.com/news/202609071010485002",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승",
+          "publisher": "news.sbs.co.kr",
+          "published_at": "2026-09-07T01:17:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중입니다. 반면 삼성SDI(-0.91%), 셀트리온...",
+          "source_url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008740759&plink=ORI&cooper=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍타고 3%대↑···6900선 회복",
+          "publisher": "finomy.com",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "△삼성전자우(2.45%) △SK스퀘어(5.48%) △삼성전기(1.07%) △LG에너지솔루션(1.12%) △현대차(1.69%) △삼성바이오로직스(0.69%) △KB금융(1.34%) △삼성생명(3.87%) 등이 상승하고 있다. 코스닥지수는 전 거래일보다 14....",
+          "source_url": "http://www.finomy.com/news/articleView.html?idxno=260879",
+          "relevance": "high"
+        },
+        {
+          "headline": "넥센타이어, 신형 아반떼에 지역별 맞춤 신차용 타이어 공급",
+          "publisher": "econovill.com",
+          "published_at": "2026-09-07T01:12:00Z",
+          "summary": "넥센타이어가 현대차의 8세대 완전변경 모델 디 올 뉴 아반떼에 신차용 타이어(OE)를 공급한다고 7일 밝혔다. 국내와 북미 시장에는 사계절용 엔프리즈 S 16인치와 18인치가 장착된다. 엔프리즈 S는 미세한 홈을 적용한 3D...",
+          "source_url": "https://www.econovill.com/news/articleView.html?idxno=750027",
+          "relevance": "high"
+        },
+        {
+          "headline": "[타이어 Pick] 넥센, 신형 아반떼 OE 공급…금호, 넷플릭스 안전 캠페인",
+          "publisher": "lcnews.co.kr",
+          "published_at": "2026-09-07T01:10:00Z",
+          "summary": "7일 업계에 따르면, 독일 3사를 포함한 글로벌 완성차 업계에 신차용 타이어(OE)를 공급 중인 넥센타이어가 최근 출시한 현대차 준중형 세단 신형 아반떼에 16·18인치 OE 공급한다고 밝혔다. 신형 아반떼는 차체 크기가...",
+          "source_url": "https://www.lcnews.co.kr/news/articleView.html?idxno=207831",
+          "relevance": "high"
+        },
+        {
+          "headline": "중국차와 경쟁하려면 차 만드는 법부터 바꿔야... 현대차, 2030년까지 매...",
+          "publisher": "insight.co.kr",
+          "published_at": "2026-09-07T01:10:00Z",
+          "summary": "7일 자동차업계에 따르면 현대차는 최근 열린 '2026 CEO 인베스터 데이'에서 2030년 연결 기준 영업이익률 목표를 기존 8~9%에서 9% 이상으로 높였다. 이를 뒷받침할 핵심 수단으로 전사적인 원가 혁신을 제시했다.현대차가...",
+          "source_url": "https://www.insight.co.kr/news/572185",
+          "relevance": "high"
+        },
+        {
+          "headline": "車강판 넘어 로봇·우주까지 … 현대차그룹, 美 제철소로 '첨단소재' 영...",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T01:10:00Z",
+          "summary": "뉴데일리 주재용 기자 = 현대차그룹이 미국에서 철강을 시작으로 자동차와 로봇, 우주항공까지 아우르는 미래산업 밸류체인 구축에 나선다. 현대제철이 미국 루이지애나에 짓는 전기로 제철소를 현대차·기아의...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700060.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 정몽구 재단, 라오스 현지 교육 지원 사업 시작",
+          "publisher": "cnbnews.com",
+          "published_at": "2026-09-07T01:10:00Z",
+          "summary": "현대차 정몽구 재단이 라오스 학생들의 교육을 지원하는 사업을 새롭게 시작한다. 현대차 정몽구 재단은 라오스 현지 교육 지원 사업을 새롭게 시작하고 지난 4일 라오스 국립대학교에서 첫 장학생 60명을 대상으로...",
+          "source_url": "https://www.cnbnews.com/news/articleView.html?idxno=1014603",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 정몽구 재단, 라오스 대학생 60명에게 장학금 지원",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-07T01:09:00Z",
+          "summary": "현대차 정몽구 재단은 '라오스 현지 교육 지원 사업'을 새롭게 시작하며 지난 4일 라오스 국립대학교에서 첫... 재단은 교육을 통해 미래세대에게 '희망의 사다리'를 만들어야 한다는 설립자 정몽구 현대차그룹 명예회장의...",
+          "source_url": "https://www.mt.co.kr/industry/2026/09/07/2026090709580843958",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체주 훈풍…코스피, 3% 급등·6900 회복",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "이 밖에 삼성생명(3.87%), 삼성물산(3.0%), KB금융(1.34%), 현대차(1.04%), 삼성바이오로직스(0.41%) 등이 오름세를 이어가고 있다. 코스닥지수는 전일 대비 0.95% 오른 821.26에 거래되고 있다. 개인과 기관이 각각 506억원...",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609070040",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 오픈AI 호재…코스피 3%대 급등",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "다른 시가총액 상위주 가운데 SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%), 삼성전기(2.50%), 현대차(1.83%), LG에너지솔루션(0.42%) 등도 상승 중이다. 반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862662",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철 美 루이지애나 제철소, 연매출 40억달러 목표…\"탄소 70% 감축...",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "현대차·기아 미국 공장에 공급할 물량을 이미 확보한 가운데 저탄소 자동차강판을 앞세워 현지 판매처를 넓힌다. 현대제철은 포스코, 현대차·기아와 총 58억달러를 투자해 루이지애나주 어센션 페리시 도널드슨빌에...",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145581",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전 3%·닉스 5% 오름세…‘오픈AI 훈풍’에 코스피 6900선 등락",
+          "publisher": "segye.com",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "SK스퀘어(5.38%), 삼성생명(3.19%), 삼성전자우(2.24%), 현대차(1.69%), KB금융(1.51%), 삼성전기(1.07%) 등 시총 상위 종목 대부분 상승하고 있다. 같은 시각 코스닥 지수는 전 거래일보다 14.04포인트(1.73%) 오른 827.54를...",
+          "source_url": "https://www.segye.com/newsView/20260907504947?OutUrl=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철, 美 제철소 건설 첫삽···\"270만톤 규모\"",
+          "publisher": "cnbnews.com",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "이날 행사에는 정의선 현대차그룹 회장, 장인화 포스코그룹 회장 등 기업 최고경영진과 한미 정부 및... 올해 4분기 착공해 2029년 양산을 목표로 하며, 지분은 현대제철(50%), 포스코(20%), 현대차(15%), 기아(15%)가 나눈다....",
+          "source_url": "https://www.cnbnews.com/news/articleView.html?idxno=1014592",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 반등에 6800선 회복 … 삼전닉스 4% 강세",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "SK스퀘어는 6% 이상 급등했고 삼성전기, LG에너지솔루션, 현대차, 삼성바이오, KB금융 등도 상승 중이다. 같은 시간 코스닥 지수는 전 거래일 대비 0.94% 오른 821.45다. 개인이 446억원 순매수한 반면 외국인과 기관은...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700053.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체주 훈풍 6900선 재등정… 삼전닉스 동반 강세",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-07T01:04:00Z",
+          "summary": "이밖에 삼성전자우(2.35%), SK스퀘어(5.67%), 삼성전기(1.21%), LG에너지솔루션(0.7%), 현대차(1.96%), 삼성바이오로직스(0.41%) 등이 상승하고 있다. 반면 삼성SDI(-0.18%), 셀트리온(-0.53%), 삼성화재(-0.9%) 등은 하락세다....",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169589",
+          "relevance": "high"
+        },
+        {
+          "headline": "원달러 환율 뚝뚝…현대차, 품질보증 부채 부담 준다",
+          "publisher": "dealsite.co.kr",
+          "published_at": "2026-09-07T01:02:00Z",
+          "summary": "가파른 원화 강세를 두고 업계에서는 현대차가 그동안 환율에 맞춰 쌓아온 판매보증충당부채 부담도... 현대차가 금융감독원에 제출한 반기보고서에 따르면 올 상반기 판매보증충당부채는 9조5391억원으로...",
+          "source_url": "https://dealsite.co.kr/articles/168330",
+          "relevance": "high"
+        },
+        {
+          "headline": "[고금리의 귀환③] 고금리에 전기차 부담…배터리 3사, ESS로 '돌파구'",
+          "publisher": "news.einfomax.co.kr",
+          "published_at": "2026-09-07T01:02:00Z",
+          "summary": "조지아주 브라이언 카운티 엘러벨에 위치한 현대차-LG엔솔 배터리 공장 건설 현장[출처: 연합뉴스 자료사진] ◇ LG엔솔·삼성SDI 차입금 41조…현금도 늘었다 고금리는 배터리 업체의 자금조달 측면에서도 부담...",
+          "source_url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433689",
+          "relevance": "high"
+        },
+        {
+          "headline": "애플 폴더블 출격…삼성·LG 수혜 본격화",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:01:00Z",
+          "summary": "■ 현대차그룹, 미국 전기로 제철소 기공: 현대제철·포스코가 58억 달러(약 8조 원)를 투입하는... 50% 철강 관세 압박을 정면 돌파하는 현지 공급망 구축으로, 현대차·기아의 원가 경쟁력 강화와 미국 시장 점유율...",
+          "source_url": "https://www.sedaily.com/article/20087830?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[취재석] 포스코 노사 갈등으로 제기된 주 52시간제의 '불편한 진실'",
+          "publisher": "news.tf.co.kr",
+          "published_at": "2026-09-07T01:01:00Z",
+          "summary": "현대차의 미국 공장 신설에 이어 현대제철과 포스코의 루이지애나 제철소 8조 2000억 원 투자, 삼성전자의 미국 반도체 공장 설립 등이 대표적이다. 미국의 투자 요구라는 표면적 이유 외에도 국내의 경직된 노동 환경이...",
+          "source_url": "https://news.tf.co.kr/read/national/2362469.htm",
+          "relevance": "high"
+        },
+        {
+          "headline": "집중투표제 앞두고 이사회 줄였다…50대 그룹 이사 47명 감소",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:01:00Z",
+          "summary": "정의선 “美서 만든 철강, 아틀라스에도 적용” - 핵심 요약: 현대차(005380)그룹의 미국 내 첫 철강 생산기지인 ‘현대제철-포스코 루이지애나 제철소(HPLS)’가 첫 삽을 떴다. 정의선 현대차그룹 회장은 4일(현지...",
+          "source_url": "https://www.sedaily.com/article/20087840?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 랠리에 코스피 장중 6900선 회복…환율 23개월 만에 1330원대",
+          "publisher": "hidomin.com",
+          "published_at": "2026-09-07T01:00:00Z",
+          "summary": "SK스퀘어도 5.38% 오르고 있으며 삼성생명(3.70%), 삼성전자우(2.51%), 현대차(1.69%), KB금융(1.40%) 등 시가총액 상위 종목 대부분이 상승세다. 증권가에서는 최근 이어진 반도체주 매도 압력이 완화될 가능성에...",
+          "source_url": "https://www.hidomin.com/news/articleView.html?idxno=720058",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대제철, 美 루이지애나에 58억 달러 전기로 제철소 첫 삽",
+          "publisher": "lcnews.co.kr",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "기공식에는 정의선 현대차그룹 회장, 이보룡 현대제철 사장, 장인화 포스코그룹 회장, 제프 랜드리... 정의선 회장은 \"HPLS에서 생산되는 철강은 현대차그룹과 미국 완성차 기업들이 차세대 모빌리티를 생산하는 데...",
+          "source_url": "https://www.lcnews.co.kr/news/articleView.html?idxno=207825",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 정몽구 재단, 라오스에 '희망의 사다리'…첫 장학생 60명 선발",
+          "publisher": "newsinside.kr",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "현대차 정몽구 재단이 라오스를 시작으로 해외 현지 청년들의 교육 기회를 넓힌다. 한국 유학 장학생 지원을 넘어 현지에서 학업을 이어가는 인재까지 지원 범위를 확대했다. 현대차 정몽구 재단은 라오스 현지 교육 지원...",
+          "source_url": "https://www.newsinside.kr/news/articleView.html?idxno=4980840",
+          "relevance": "high"
+        },
+        {
+          "headline": "라이드플럭스, 타타대우 트럭에 레벨2+ 적용 추진",
+          "publisher": "tokenpost.kr",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "본지가 앞서 전한 현대차 자율주행 데이터 전략에서도 완성차 판매망과 실제 도로 데이터를 활용한 성능 개선 구조가 경쟁력의 축으로 제시된 바 있다. 라이드플럭스는 이미 화물 운송 분야에서 상용화 단계를 밟고 있다....",
+          "source_url": "https://www.tokenpost.kr/news/tech/403608",
+          "relevance": "high"
+        },
+        {
+          "headline": "아스트라 돌풍, 이번엔 정말 ‘칠천피’ 재돌파?…코스피, 6900선 회복 [...",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 코스닥 지수도 상승세를 나타내고...",
+          "source_url": "https://biz.heraldcorp.com/article/10864511?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 정몽구 재단, 라오스 현지 인재 육성 나서",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T00:54:00Z",
+          "summary": "현대차 정몽구 재단이 라오스 현지 인재 육성에 나선다. 현대차 정몽구 재단은 '라오스 현지 교육 지원 사업'을 새롭게 시작한다고 7일 밝혔다. 재단은 지난 4일 라오스 국립대학교에서 첫 장학생 60명을 대상으로 장학증서...",
+          "source_url": "http://www.inews24.com/view/2002509",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관 모처럼 ‘쌍끌이’…코스피 3% 급등하며 6900선 회복[마켓시...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "현대차(005380)는 1.96%, KB금융(105560)은 1.98% 상승하고 있으며 삼성바이오로직스(207940)도 0.48% 강세다. 로봇주도 상승세를 보이고 있다. 로보티즈(108490)가 4.27%, 레인보우로보틱스(277810)가 1.63% 오르고 있다. 반면...",
+          "source_url": "https://www.sedaily.com/article/20087844?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"땡큐, 오픈AI\"...코스피, 미국발 훈풍에 6,900선 탈환",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T00:51:00Z",
+          "summary": "시가총액 상위주 중 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 한지영 키움증권 연구원은 \"지난 금요일(4일)...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070134&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "원·달러 환율 1350원 전망…현대차·기아 4분기 실적 '원화 강세' 부담",
+          "publisher": "ppss.kr",
+          "published_at": "2026-09-07T00:51:00Z",
+          "summary": "유안타증권은 2023년 1분기부터 2026년 2분기까지 환율 효과로 현대차가 약 3조7000억원, 기아가 약 4조3000억원의 추가 영업이익을 거둔 것으로 추산했다. 향후 긍정 요인으로는 보스턴 다이내믹스(BD) 지분 가치...",
+          "source_url": "https://www.ppss.kr/news/articleView.html?idxno=309098",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍에 3%대 급등…6900선 회복",
+          "publisher": "ppss.kr",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "삼성전기와 현대차도 각각 2.50%, 1.83% 상승하고 있다. 업종별로도 반도체를 포함한 기술주 강세가 두드러진다. 전기·전자가 4.96% 상승한 가운데 제조업 3.95%, 금융 2.51%, 유통 2.45% 등 대부분 업종이 오르고 있다....",
+          "source_url": "https://www.ppss.kr/news/articleView.html?idxno=309118",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 코스피, 외국인·기관 순매수에 3%대 상승",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "SK스퀘어(6.05%), 삼성물산(4.09%), 삼성전기(3.64%), 삼성전자우(2.35%), 현대차(1.96%), KB금융(1.69%) 등도 강세를 나타내고 있다. LG에너지솔루션(0.42%)과 삼성바이오로직스(0.28%)도 상승 중이다. 코스닥도 상승세를...",
+          "source_url": "https://www.newspim.com/news/view/20260907000202",
+          "relevance": "high"
+        },
+        {
+          "headline": "정의선, 8조원 美 제철소 첫 삽…“아틀라스 넘어 스페이스X까지”",
+          "publisher": "mydaily.co.kr",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "자동차용 180만t과 일반용 90만t을 생산해 현대차와 기아에 각각 40만t, 포스코에 최소 60만t을 공급할... 현대차그룹의 현지 자동차 생산을 뒷받침하는 동시에 미국 완성차 업체를 비롯한 신규 고객 확보에도 탄력이 붙을...",
+          "source_url": "https://www.mydaily.co.kr/page/view/2026090709165799285",
+          "relevance": "high"
+        },
+        {
+          "headline": "현대차 인도법인, 3~4년 내 농촌 판매 비중 30% 목표…SUV 앞세워 공략 ...",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "6일(현지시간) 인도 비즈니스라인(The Hindu BusinessLine)에 따르면 타룬 가르그 현대차 인도법인 최고경영자... 현대차 인도법인의 농촌 판매 비중은 이미 빠르게 높아지고 있다. 올해 회계연도 1분기(FY27) 농촌 판매...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82262",
+          "relevance": "high"
+        },
+        {
+          "headline": "'불기둥' 삼성전자·SK하이닉스⋯코스피 6900선 복귀",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "삼성전기(1.78%), LG에너지솔루션(0.84%), 현대차(2.35%), 삼성바이오로직스(0.28%), KB금융(1.79%), 삼성생명(4.20%) 등 시가총액 상위 종목들도 일제히 상승하고 있다. 코스닥 지수는 전 거래일 대비 11.60(1.43%) 오른 825....",
+          "source_url": "http://www.inews24.com/view/2002535",
+          "relevance": "high"
+        },
+        {
+          "headline": "'아스트라 훈풍'에 반도체주 날았다…코스피 6900선 재탈환",
+          "publisher": "kado.net",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "시가총액 상위주 가운데 삼성전기는 2.50%, LG에너지솔루션은 0.42%, 현대차는 1.83% 오르고 있다. 반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 각각 하락했다. 업종별로는 전기·전자가 4.96% 상승했고...",
+          "source_url": "https://www.kado.net/news/articleView.html?idxno=2070949",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 훈풍에 3%대 급등 6900선 돌파…삼전3%·닉스5%↑",
+          "publisher": "beyondpost.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "삼성전자(3.91%), SK하이닉스(5.65%), 삼성전자우(2.77%), SK스퀘어(6.24%), 삼성전기(1.64%), LG에너지솔루션(0.70%), 현대차(2.61%), 삼성바이오로직스(0.35%), 삼성생명(3.87%), KB금융(1.69%) 전부 상승 중이다. 키움증권 한지영...",
+          "source_url": "http://www.beyondpost.co.kr/view.php?ud=202609070943067703be44c0aacd_30",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 2.89,
+      "oldest_relevant_at": "2026-09-07T00:46:00Z",
+      "collected_at": "2026-09-07T03:39:27.949626Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003521",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003521"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002418",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002418"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260318001394",
+          "published_at": "2026-03-18T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001394"
+        }
+      ],
+      "collected_at": "2026-09-07T03:39:27.711898Z",
+      "request_id": "857a04b7-5fa9-4894-97cc-d2c72a4cff9e",
+      "source_type": "dart",
+      "stock_code": "005380",
+      "company_name": "현대차"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260318001394",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 5. (금융업)재무건전성 등 기타 참고사항",
+          "text": "가. 산업의 특성 등 (1) 산업의 특성국내의 여신전문금융업은 2008년 말 글로벌 금융위기로 큰 폭으로 위축된 이후 지속적으로 성장세를 보이고 있으나 최근 국내시장이 성숙단계에 접어든 것으로 판단되어 시장규모가 큰 폭으로 증가될 가능성은 낮을 것으로 전망됩니다. 또한 자동차금융 부분에 대한 집중도 및 의존도가 매우 높아 영업환경을 좌우하는 가장 큰 변수는 자동차 내수시장의 성장률입니다.할부/리스사는 자본적정성 및 위험관리를 비롯한 여러 부문에서 감독당국이 정한 요건을 상시적으로 충족해야 하는 등 일정 수준의 사업 요건이 존재하기는 하나, 다른 금융권에 비해 상대적으로 진입장벽은 낮은 수준입니다. 기존 자동차금융시장은 캐피탈업권이 주요 경쟁하는 시장이었으나, 최근 은행 및 카드사 등 신규 경쟁자들의 시장 유입이 이어지고 있어 경쟁 강도는 점차 심화되고 있습니다.신용카드업은 카드사가 일정한 요건을 갖춘 회원에게 신용카드를 발급하고, 상품 및 용역을 판매·제공하는 가맹점과 계약을 체결한 후, 회원에 대하여 신용을 공여하는 대가로 수수료 등의 부가가치를 창출하는 산업입니다. 이외에도 카드사는 회원에게 현금서비스, 카드론 등 신용대출 서비스 및 기타 부가서비스를 제공함으로써 수익을 창출합니다. 전형적인 내수기반 산업으로 민간 소비 및 전반적인 경제상황과 정책적 변화에 따른 영향을 비교적 크게 받는 특성을 가지고 있습니다. 이외에도 IT기술의 발달로 인한 소비패턴의 변화, 금융시장의 전반적인 신용위험 수준 등 외부 요인에 민감도가 높습니다. 경제시스템 내에서 주요한 지급결제 기능을 담당하기 때문에 금융위원회의 허가를 얻어야만 시장진입이 가능한 점과, 현실적으로 안정적인 사업영위를 위한 높은 리스크 관리능력이 필요한 점을 감안하면 진입장벽이 높은 사업입니다. 자금운용을 신용에 의존하므로 위험관리능력이 기업의 수익성에 절대적인 영향을 미치는 High Risk 사업이며, 개인정보 유출 시 산업 전반에 끼치는 부정적인 영향이 큰 만큼 높은 수준의 IT 및 정보보안 기술이",
+          "score": 0.51256,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. (금융업)재무건전성 등 기타 참고사항",
+          "text": "리능력이 필요한 점을 감안하면 진입장벽이 높은 사업입니다. 자금운용을 신용에 의존하므로 위험관리능력이 기업의 수익성에 절대적인 영향을 미치는 High Risk 사업이며, 개인정보 유출 시 산업 전반에 끼치는 부정적인 영향이 큰 만큼 높은 수준의 IT 및 정보보안 기술이 요구됩니다. (2) 경쟁우위요소▣ 현대캐피탈",
+          "score": 0.507846,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. (금융업)재무건전성 등 기타 참고사항",
+          "text": "① Captive캐피탈사로서 확고한 경쟁우위\n'21년 9월 현대자동차그룹 직할경영체제로의 전환 및 '21년 12월 기아의 기존 재무투자자 보유 지분 20% 추가 취득으로 지분율이 크게 상승(79.8%→99.9%)하면서 현대자동차그룹과의 일체성이 더욱 강화되었습니다. 이를 통해 대내외 불확실성 지속 및 산업 내 높은 경쟁강도에도 불구하고 현대캐피탈은 현대자동차그룹의 전속금융사로서 현대자동차 및 기아의 확고한 시장 지배력을 바탕으로 할부/리스금융시장에서 독보적인 시장지위를 보유하고 있으며, 현대자동차그룹 인증중고차 사업 출범에 맞추어 중고차 금융서비스 또한 제공하고 있습니다. 나아가 전기차 사업 등 미래 모빌리티 관련 금융사업을 확대하여 현대자동차그룹과의 시너지를 창출해 나갈 예정이며, 이러한 안정적인 사업구조 기반의 우수한 수익성은 지속적으로 유지될 것으로 전망됩니다.\n② 체계적인 리스크 관리\n현대캐피탈은 보수적인 리스크 관리 기조를 기반으로 자산의 부실 위험을 최소화하고 있으며, 적극적인 충당금 적립 등 신용위험에 대한 선제적인 대응을 통해 손실 완충 능력을 제고하고 있습니다. 또한, 자동차금융 중심의 자산 포트폴리오로 우수한 자산건전성을 유지하고 있습니다.\n③ 풍부한 유동성과 재무적 융통성\n현대캐피탈은 대규모 현금성자산과 국내외 금융기관에 Credit Line을 보유하고 있어, 단기 유동성 위험이 매우 낮은 수준입니다. 또한 우량한 국내 및 글로벌 신용등급을 바탕으로 국내외 다변화된 차입 포트폴리오를 구축하여 차입 안정성을 확보 중이며, 자기 조달 위주의 매우 우수한 재무적 융통성을 보유하고 있습니다.\n④ 해외사업을 통한 수익기반 확대",
+          "score": 0.473431,
+          "match_type": "vector"
+        },
+        {
+          "section": "I. 회사의 개요 > 2. 회사의 연혁",
+          "text": "바. 그 밖에 경영활동과 관련된 중요한 사항의 발생내용",
+          "score": 0.455702,
+          "match_type": "vector"
+        },
+        {
+          "section": "I. 회사의 개요 > 1. 회사의 개요",
+          "text": "구분 | 국내신용등급체계 | 무디스(미국) | S&P(미국) | Fitch(미국) | 부 여 의 미\n기업어음 | A1 | - | - | - | 적기상환능력이 최고 수준이며, 그 안정성은 현단계에서 합리적으로 예측 가능한 장래의 환경에 영향을 받지 않을 만큼 높음\nA2 | - | - | - | 적기상환능력이 우수하지만, 그 안정성은 A1에 비하여 다소 열등한 요소가 있음\nA3 | - | - | - | 적기상환능력이 양호하지만, 그 안정성은 급격한 환경 변화에 따라 다소 영향을 받을 가능성이 있음\nB | - | - | - | 최소한의 적기상환능력은 인정되나, 그 안정성이 환경변화로 저하될 가능성이 있어 투기적인 요소를 내포하고 있음\nC | - | - | - | 적기상환능력 및 그 안정성이 매우 가변적이어서 투기적인 요소가 강함\nD | - | - | - | 현재 채무불이행 상태에 있음\n회사채 | AAA | Aaa | AAA | AAA | 원리금 지급확실성이 최고 수준임\nAA | Aa | AA | AA | 원리금 지급확실성이 매우 높지만, AAA등급에 비하여 다소 낮은 요소가 있음\nA | A | A | A | 원리금 지급확실성이 높지만, 장래의 환경변화에 다소 영향을 받을 가능성이 있음\nBBB | Baa | BBB | BBB | 원리금 지급확실성이 있지만, 장래의 환경변화에 따라 저하될 가능성이 내포되어 있음\nBB | Ba | BB | BB | 원리금 지급능력에 당면문제는 없으나, 장래의 안정성면에서는 투기적인 요소가 내포되어 있음\nB | B | B | B | 원리금 지급능력이 부족하여 투기적임\nCCC | Caa | CCC | CCC | 원리금의 채무불이행이 발생할 위험 요소가 내포되어 있음\nCC | Ca | CC | CC | 원리금의 채무불이행이 발생할 가능성이 높음\nC | C | C | C | 원리금의 채무불이행이 발생할 가능성이 지극히 높음\nD | - | D | D | 현재 채무불이행 상태에 있음\n기업신용등급(ICR) | AAA | Aaa | AAA | AAA | 채무상환능력이 최고 수준이며, 예측 가능한 장래의 환경변화에 영향을 받지 않을 만큼 안정적임\nAA | Aa | AA | AA | 채무상환능력이 매우 우수하며, 예측 가능한 장래의 환경변화에 영향을 받을 가능성이 낮음\nA | A | A | A | 채무상환능력이 우수하지만, 장래의 환경변화에 영향을 받을 가능성이 상위 등급에 비해서는 높음\nBBB | Baa | BBB | BBB | 채무상환능력은 있으나, 장래의 환경변화에 따라 저하될 가능성이 내포되어 있음\nBB | Ba | BB | BB | 최소한의 채무상환능력은 인정되나, 장래의 안정성면에서는 투기적 요소가 내포되어 있음\nB | B | B | B | 채무상환능력이 부족하며, 그 안정성이 가변적이어서 매우 투기적임\nCCC | Caa | CCC | CCC | 채무불이행이 발생할 가능성이 높음\nCC | Ca | CC | CC | 채무불이행이 발생할 가능성이 매우 높음",
+          "score": 0.441601,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001394",
+      "collected_at": "2026-09-07T03:39:27.638041Z",
+      "request_id": "5800d7a7-f65e-4c3b-b8ed-cc4816a29e88",
+      "source_type": "dart",
+      "stock_code": "005380",
+      "company_name": "현대차"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "현대차",
+      "stock_code": "005380",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:39:27.317258+00:00",
+        "to": "2026-09-07T03:39:27.317258+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 3178,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 1876.0,
+        "ratio": 1.69,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 36,
+        "neutral_count": 18,
+        "negative_count": 46
+      },
+      "top_topics": {
+        "expectations": [
+          "미국 강판 현지 조달과 관세 부담 완화",
+          "로보택시 상용화",
+          "엔비디아 협력 기반 자율주행 고도화",
+          "로봇 양산과 피지컬 AI 성장"
+        ],
+        "concerns": [
+          "관세와 환율 하락 부담",
+          "영업이익 감소와 판매 부진",
+          "노조 리스크",
+          "공매도 확대와 기관 매도",
+          "시장 대비 주가 반등 부진"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "미국 강판 현지 조달망이 관세 부담을 줄일 것으로 기대한다.",
+          "posted_at": "2026-09-07T02:39:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "아이오닉5 로보택시 상용화가 자율주행 사업에 힘을 보태길 기대한다.",
+          "posted_at": "2026-09-07T01:54:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "엔비디아 기술 개방으로 자율주행 개발이 빨라질 것으로 기대한다.",
+          "posted_at": "2026-09-07T01:23:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "자동차 공장의 로봇 양산 확대를 새 성장 동력으로 기대한다.",
+          "posted_at": "2026-09-07T01:15:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "관세와 환율 하락이 함께 부담으로 작용할 것을 우려한다.",
+          "posted_at": "2026-09-07T02:55:00+00:00",
+          "sentiment": "negative"
+        }
+      ],
+      "collected_at": "2026-09-07T03:39:27.317258+00:00",
+      "fgi_mean": 47.76,
+      "fgi_latest": {
+        "fgi": 43.65,
+        "label": "중립",
+        "as_of": "2026-09-07T03:15:00+00:00",
+        "post_count": 9,
+        "valence_percentile": 31.07
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260903800273",
+          "published_at": "2026-09-03T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260903800273"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260903800271",
+          "published_at": "2026-09-03T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260903800271"
+        },
+        {
+          "report_name": "생산재개(자율공시)              ",
+          "receipt_number": "20260902800437",
+          "published_at": "2026-09-02T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260902800437"
+        },
+        {
+          "report_name": "영업(잠정)실적(공정공시)              ",
+          "receipt_number": "20260901800400",
+          "published_at": "2026-09-01T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901800400"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260828800249",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800249"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260828800244",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800244"
+        },
+        {
+          "report_name": "주식소각결정              ",
+          "receipt_number": "20260826800261",
+          "published_at": "2026-08-26T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826800261"
+        },
+        {
+          "report_name": "장래사업ㆍ경영계획(공정공시)              ",
+          "receipt_number": "20260826800246",
+          "published_at": "2026-08-26T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826800246"
+        },
+        {
+          "report_name": "[기재정정]생산중단              ",
+          "receipt_number": "20260824800707",
+          "published_at": "2026-08-24T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260824800707"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260824000132",
+          "published_at": "2026-08-24T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260824000132"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260818000199",
+          "published_at": "2026-08-18T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818000199"
+        }
+      ],
+      "collected_at": "2026-09-07T03:39:28.203095Z",
+      "request_id": "c7bad3ac-7af5-4216-b639-73c26d1594b0",
+      "source_type": "dart",
+      "stock_code": "005380",
+      "company_name": "현대차"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260901800400": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260901800400",
+        "document_type": "disclosure",
+        "content": "현대자동차/영업(잠정)실적(공정공시)/(2026.09.01)영업(잠정)실적(공정공시)\n실적기간\n당기실적 | 2026-08-01 | ~ | 2026-08-31\n전기실적 | 2026-07-01 | ~ | 2026-07-31\n전년동기실적 | 2025-08-01 | ~ | 2025-08-31\n당기누계실적 | 2026-01-01 | ~ | 2026-08-31\n전년동기누적실적 | 2025-01-01 | ~ | 2025-08-31\n※ 동 정보는 잠정치로서 향후 확정치와는 다를 수 있음.\n1. 실적내용 | 단위 : 백만원, %\n구분 | 당기실적 | 전기실적 | 전기대비 | 전년동기실적 | 전년동기대비\n(-) | (-) | 증감율(%) | 흑자적자전환여부 | (-) | 증감율(%) | 흑자적자전환여부\n매출액 | 당해실적 | - | - | - | - | - | - | -\n누계실적 | - | - | - | - | - | - | -\n영업이익 | 당해실적 | - | - | - | - | - | - | -\n누계실적 | - | - | - | - | - | - | -\n법인세비용차감전계속사업이익 | 당해실적 | - | - | - | - | - | - | -\n누계실적 | - | - | - | - | - | - | -\n당기순이익 | 당해실적 | - | - | - | - | - | - | -\n누계실적 | - | - | - | - | - | - | -\n구분(단위:대,%) | 당기실적 (2026년8월) | 전기실적 (2026년7월) | 전기대비 증감율(%) | 흑자적자전환여부 | 전년동기실적 (2025년8월) | 전년동기 대비 증감율(%) | 흑자적자전환여부\n국내 | 34,333 | 48,113 | -28.6 | - | 58,330 | -41.1 | -\n해외 | 254,241 | 270,573 | -6.0 | - | 277,811 | -8.5 | -\n계 | 288,574 | 318,686 | -9.4 | - | 336,141 | -14.2 | -\n구분(단위:대,%) | 당기누적 (2026년 1~8월) | - | - | 흑자전환여부 | 전년동기누적 (2025년 1~8월) | 전년동기 누적대비 증감율(%) | 흑자전환여부\n국내 | 399,159 | - | - | - | 469,457 | -15.0 | -\n해외 | 2,176,201 | - | - | - | 2,269,158 | -4.1 | -\n계 | 2,575,360 | - | - | - | 2,738,615 | -6.0 | -\n2. 정보제공내역 | 정보제공자 | 커뮤니케이션센터\n정보제공대상자 | 언론사 등\n정보제공(예정)일자 | 공정공시 이후\n정보제공(예정)시간 | 공정공시 이후\n행사명(장소) | 보도자료 배포 등\n3. 연락처 | 관련부서 | 커뮤니케이션센터\n전화번호 | 02-3464-2149\n4. 기타 투자판단과 관련한 중요사항\n◎ 판매실적 주요내용 - '26년 8월 전 세계 시장서 총 28만 8,574대 판매, 전년 동월 대비 14.2% 감소 ·국내 시장서 3만 4,333대 판매, 전년 동월 대비 41.1% 감소 ·해외 시장서 25만 4,241대 판매, 전년 동월 대비 8.5% 감소 ※ 기타 세부내용은 첨부의 보도자료를 참조하시기 바랍니다.\n※ 관련공시 | -",
+        "content_truncated": false,
+        "total_chars": 1577,
+        "summary": "영업(잠정)실적(공정공시)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901800400",
+        "collected_at": "2026-09-07T03:39:28.554026Z",
+        "report_name": "영업(잠정)실적(공정공시)              ",
+        "published_at": "2026-09-01T00:00:00Z",
+        "request_id": "72291e5f-3648-485e-8511-87833ea04e18",
+        "source_type": "dart"
+      }
+    },
+    "20260826800261": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260826800261",
+        "document_type": "disclosure",
+        "content": "현대자동차/주식 소각 결정/(2026.08.26)주식 소각 결정\n1. 소각할 주식의 종류와 수 | 보통주식 (주) | 1,291,274\n종류주식 (주) | 1,214,332\n2. 발행주식 총수 | 보통주식 (주) | 204,757,766\n종류주식 (주) | 60,632,342\n3. 1주당 가액(원) | 5,000\n4. 소각예정금액(원) | 789,137,013,100\n5. 소각을 위한 자기주식 취득 예정기간 | 시작일 | -\n종료일 | -\n6. 소각할 주식의 취득방법 | 기취득 자기주식\n7. 소각 예정일 | 2026-08-31\n8. 자기주식 취득 위탁 투자중개업자 | -\n9. 이사회결의일(결정일) | 2026-08-26\n- 사외이사 참석여부 | 참석(명) | 6\n불참(명) | 1\n- 감사(사외이사가 아닌 감사위원) 참석여부 | -\n10. 공정거래위원회 신고대상 여부 | 미해당\n11. 기타 투자판단과 관련한 중요사항 | - 금번 주식 소각 결정은 기발표한 주주환원 정책에 따른 자기주식의 소각 건임. - 배당가능이익 범위 내에서 취득한 자기주식을 이사회 결의에 의하여 소각하는 것으로, 주식수만 줄고 자본금의 감소는 없음. - 자기주식 소각의 법적 근거 : 상법 제343조 제1항 단서 - 상기 1. 종류주식은 우선주 501,923주, 2우선주 706,883주, 3우선주 5,526주의 합계임. - 상기 4. 소각예정금액은 이사회결의일 전일 종가(2026년 8월 25일) 기준이며, 소각대상 자기주식의 평균취득단가에 소각 수량을 곱하여 산출한 이사회 결의일 현재 장부가액 기준으로는 476,385백만원임. - 상기 7. 소각 예정일은 관계 기관과의 협의 등에 따라 변경될 수 있음. - 상기 9. 감사(독립이사가 아닌 감사위원) 참석여부와 관련하여 당사의 감사위원회는 전원 독립이사로 구성되어 있음. - 금번 주식 소각은 기취득 자기주식의 소각 건으로, 별도 자기주식 처분 공시 대상에 해당하지 아니하며, 관련 사항을 본 공시에 기재함.\n※관련공시 | 2023-04-25 수시공시의무관련사항(공정공시)",
+        "content_truncated": false,
+        "total_chars": 1013,
+        "summary": "주식소각결정               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826800261",
+        "collected_at": "2026-09-07T03:39:28.745193Z",
+        "report_name": "주식소각결정              ",
+        "published_at": "2026-08-26T00:00:00Z",
+        "request_id": "a0c6e643-95c3-4e57-9fd9-d8c71b1f9140",
+        "source_type": "dart"
+      }
+    },
+    "20260814003521": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260814003521",
+        "document_type": "disclosure",
+        "content": "(제 59 기 반기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 06월 30일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 8월 14일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 현대자동차 주식회사\n대 표 이 사 : | 무뇨스 바르셀로 호세 안토니오\n본 점 소 재 지 : | 서울시 서초구 헌릉로 12 (양재동)\n(전 화) 02-3464-1114\n(홈페이지) http://www.hyundai.com\n작 성 책 임 자 : | (직 책) 재무관리실장 (성 명) 김 우 열\n(전 화) 02-3464-2246\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 개황 1. 연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | 2 | - | - | 2 | 2\n비상장 | 162 | 7 | 5 | 164 | 94\n합계 | 164 | 7 | 5 | 166 | 96\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n1-1. 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | 42DOT VIETNAM CO.,LTD | 당기 중 신규출자\n현대오토펀딩이에스지제사차유동화전문유한회사 | 당기 중 신규출자\n라이브업디비제이차주식회사 | 당기 중 신규출자\n현대무브 주식회사 | 당기 중 신규출자\n웰디비제삼차(주) | 당기 중 신규출자\n비케이디비제사차주식회사 | 당기 중 신규출자\n베리타스디비제팔차주식회사 | 당기 중 신규출자\n연결제외 | 주식회사 모션 | 당기 중 청산\n슈퍼시리즈제십이차유동화전문유한회사 | 당기 중 청산\n웰디비제이차(주) | 당기 중 청산\n비케이디비제일차주식회사 | 당기 중 청산\n42 Air, Inc | 당기 중 청산\n나. 회사의 법적·상업적 명칭 당사의 명칭은『현대자동차주식회사』라고 표기합니다.영문으로 HYUNDAI MOTOR COMPANY라고 표기하며 약식으로는 HMC로표기합니다. 다. 설립일자 당사는 1967년 12월 29일에 설립되었습니다. 라. 본사의 주소 등 - 주 소 : 서울특별시 서초구 헌릉로 12 (양재동)- 전화번호 : 02-3464-1114- 홈페이지 : https://www.hyundai.com 마. 중소기업 등 해당 여부\n중소기업 해당 여부 | 미해당\n벤처기업 해당 여부 | 미해당\n중견기업 해당 여부 | 미해당\n바. 주요사업의 내용 및 향후 추진하려는 신규사업 당사와 연결종속회사는 자동차와 자동차부품의 제조 및 판매, 차량정비 등의 사업을 운영하는 차량부문과 차량할부금융 및 결제대행업무 등의 사업을 운영하는 금융부문및 철도차량 제작 등의 사업을 운영하는 기타부문으로 구성되어 있으며, 자세한 내용은「Ⅱ. 사업의 내용」을 참조하시기 바랍니다.또한 당사의 ESG 경영에 대한 상세 내용은 당사의 홈페이지에 게재(홈페이지 주소 : https://www.hyundai.com/worldwide, 위치 : 회사소개 → 지속가능성 → 지속가능성 보고서)되어 있는 2026 지속가능성 보고서를 참조하시기 바라며, 2030전략에 대한 상세 내용은 II. 사업의 내용의 7. (제조서비스업)기타 참고사항의 사. 회사의 중ㆍ장기 전략을 참조하시기 바랍니다.\n사. 신용등급 내역 당사는 회사채 및 기업어음 발행 등의 목적에 의하여 또는 기타 수시평가에 의하여 신용평가 전문기관으로부터 평가를 받고 있으며, 공시 대상 기간 동안의 신용평가 현황은 다음과 같습니다.\n(1) 신용평가\n평가일 | 평가대상유가증권 등 | 신용등급 | 평가회사 | 평가구분\n2024-01-25 | 기업신용등급(ICR) | BBB+(Positive) | S&P(미국) | 수시평가\n2024-02-06 | A3(Stable) | Moody's(미국) | 수시평가\n2024-02-16 | A-(Stable) | Fitch(미국) | 수시평가\n2024-08-21 | A-(Stable) | S&P(미국) | 수시평가\n2024-11-07 | A-(Stable) | Fitch(미국) | 수시평가\n2025-01-22 | A-(Stable) | S&P(미국) | 수시평가\n2025-01-22 | A3(Stable) | Moody's(미국) | 수시평가\n2025-11-03 | A-(Stable) | Fitch(미국) | 수시평가\n2026-01-22 | A-(Stable) | S&P(미국) | 수시평가\n2026-02-13 | A-(Stable) | Fitch(미국) | 수시평가\n2024-03-18 | 회사채 | AA+(긍정적) | 한국신용평가 | 정기평가\n2024-04-01 | AAA(안정적) | NICE신용평가 | 정기평가\n2024-04-19 | AA+(긍정적) | 한국기업평가 | 정기평가\n2024-09-10 | AAA(안정적) | 한국신용평가 | 수시평가\n2024-10-31 | AAA(안정적) | 한국기업평가 | 수시평가\n2025-06-02 | AAA(안정적) | 한국신용평가 | 정기평가\n2025-06-05 | AAA(안정적) | NICE신용평가 | 정기평가\n2025-06-16 | AAA(안정적) | 한국기업평가 | 정기평가\n2026-06-10 | AAA(안정적) | 한국신용평가 | 정기평가\n2026-06-15 | AAA(안정적) | 한국기업평가 | 정기평가\n2026-06-17 | AAA(안정적) | NICE신용평가 | 정기평가\n(2) 신용등급체계 및 부여 의미\n구분 | 국내신용등급체계 | 무디스(미국) | S&P(미국) | Fitch(미국) | 부 여 의 미\n기업어음 | A1 | - | - | - | 적기상환능력이 최고 수준이며, 그 안정성은 현단계에서 합리적으로 예측 가능한 장래의 환경에 영향을 받지 않을 만큼 높음\nA2 | - | - | - | 적기상환능력이 우수하지만, 그 안정성은 A1에 비하여 다소 열등한 요소가 있음\nA3 | - | - | - | 적기상환능력이 양호하지만, 그 안정성은 급격한 환경 변화에 따라 다소 영향을 받을 가능성이 있음\nB | - | - | - | 최소한의 적기상환능력은 인정되나, 그 안정성이 환경변화로 저하될 ",
+        "content_truncated": true,
+        "total_chars": 674756,
+        "summary": "반기보고서 (2026.06) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003521",
+        "collected_at": "2026-09-07T03:39:39.540180Z",
+        "report_name": "반기보고서 (2026.06)",
+        "published_at": "2026-08-14T00:00:00Z",
+        "request_id": "af6f1411-48e3-43cc-b5b6-dcbf8c73fbe6",
+        "source_type": "dart"
+      }
+    },
+    "20260515002418": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260515002418",
+        "document_type": "disclosure",
+        "content": "(제 59 기 1분기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 03월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 5월 15일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 현대자동차 주식회사\n대 표 이 사 : | 무뇨스 바르셀로 호세 안토니오\n본 점 소 재 지 : | 서울시 서초구 헌릉로 12 (양재동)\n(전 화) 02-3464-1114\n(홈페이지) http://www.hyundai.com\n작 성 책 임 자 : | (직 책) 재무관리실장 (성 명) 김 우 열\n(전 화) 02-3464-2246\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\n2. 회사의 연혁\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\n3. 자본금 변동사항\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\n4. 주식의 총수 등\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\n5. 정관에 관한 사항\n기업공시서식 작성기준에 따라 분기보고서에는 본 항목을 기재하지 아니하였습니다.\nII. 사업의 내용\n당사와 연결종속회사(이하 연결실체)는 자동차와 자동차부품의 제조 및 판매, 차량정비 등의 사업을 운영하는 차량부문과 차량할부금융 및 결제대행업무 등의 사업을 운영하는 금융부문 및 철도차량 제작 등의 사업을 운영하는 기타부문으로 구성되어 있습니다. 각 부문별 매출비중은 2025년 기준으로 차량부문이 약 78%, 금융부문이 약 16%, 기타부문 약 6%이며, 각 부문별 주요사 현황은 아래와 같습니다.\n부문 | 주요사 | 주요제품\n차량부문 | 현대자동차, HMA, HME, HMCA, HMMA, HMMC 등 | 자동차 등\n금융부문 | 현대카드, 현대캐피탈, HCA 등 | 할부금융, 리스, 신용카드 등\n기타부문 | 현대로템 등 | 철도제작 등\n1. (제조서비스업)사업의 개요\n[차량부문]당사는 제59기 1분기 누계 약 98만대의 판매 실적을 바탕으로 연결기준 차량부문에서 약 35조원의 매출을 기록했습니다. 당사는 ① Manufacturing Excellence ② New Product Innovation : Hyundai & Genesis ③ Advanced Tech & SDV ④ Investing for the Future & Innovative Partnerships를 통해 당사만의 유연한 시장 대응 역량 기반으로 시장 불확실성에 대응하며 수익성을 제고해 나갈 것입니다. 상세 내용은 II. 사업의 내용의 7. (제조서비스업)기타 참고사항의 사. 회사의 중ㆍ장기 전략을 참조하시기 바랍니다.[기타부문]현대로템은 글로벌 종합기계 기업으로 1977년 창립되어 육ㆍ해ㆍ공을 아우르는 종합무기체계와 우주발사체, 미래무인체계 등을 수행하는 디펜스솔루션 사업, 국가 기간산업인 고속철 등 종합철도차량 제조, 철도시스템 솔루션, 철도 운영 및 유지보수 등을 영위하고 있는 레일솔루션 사업, 그리고 수소인프라솔루션, 산업용 로보틱스 및 프레스, 에코 제철설비 등을 제조ㆍ판매하는 에코플랜트 사업으로 구성되어 있습니다. 2026년 1분기 매출액은 1조 4,575억원이며 디펜스솔루션부문은 8,040억원으로 매출액의 55%, 레일솔루션부문은 5,432억원으로 매출액의 37%, 그리고 에코플랜트부문은 1,103억원으로 매출액의 8%이며, 수주잔고는 31조 1,749억원을 확보하고 있습니다.\n2. (제조서비스업)주요 제품 및 서비스\n차량부문과 기타부문의 주요 재무정보는 아래와 같습니다.\n(단위 : 백만원, %)\n구분 | 2026년 1분기(제59기) | 2025년(제58기) | 2024년(제57기)\n금액 | 비중 | 금액 | 비중 | 금액 | 비중\n차량부문 | 매출액 | 34,538,028 | 75.2 | 145,631,818 | 78.2 | 136,725,011 | 78.1\n영업이익 | 1,787,208 | 71.1 | 8,470,939 | 73.9 | 11,411,499 | 80.1\n총 자산 | 171,451,749 | 41.5 | 164,662,458 | 41.8 | 155,795,545 | 43.2\n기타부문 | 매출액 | 2,409,050 | 5.2 | 10,389,879 | 5.6 | 10,059,492 | 5.7\n영업이익 | 148,295 | 5.9 | 832,869 | 7.2 | 1,032,844 | 7.3\n총 자산 | 16,476,376 | 4.0 | 16,522,365 | 4.2 | 11,791,338 | 3.3\n※ 차량부문은 내부거래조정과 관련된 영업이익을 포함하고 있음.※ 매출액은 외부고객으로부터의 매출액을 의미함.※ 금융부문 주요 재무정보는 '(금융업)사업의 개요'에 별도 기재함.※ 총자산은 내부거래 등 연결조정을 제외한 단순합산 금액과 비중임. 연결실체의 제조서비스 사업은 승용, RV, 소형상용, 대형상용 등의 자동차와 자동차부품 생산 및 판매, 차량정비 등의 사업을 운영하는 차량부문과 철도차량 제작 등의 사업을 운영하는 기타부문으로 구성되어 있습니다. 각 부문별 제품 및 상품의 가격변동 현황은 단순 판매가격의 평균을 나타낸 것이며, 세부내용은 아래와 같습니다.\n(단위 : 천원)\n사업부문 | 구 분 | 2026년 1분기(제59기) | 2025년(제58기) | 2024년(제57기)\n차량부문 | 국내완성차 | 승용 | 56,436 | 56,170 | 53,978\nRV | 56,470 | 55,810 | 53,434\n소형상용 | 42,121 | 42,121 | 40,473\n대형상용 | 156,451 | 156,312 | 148,992\n해외완성차 | 승용 | 80,025 | 75,915 | 69,005\nRV | 84,296 | 80,442 | 73,876\n소형상용 | 84,329 | 78,817 | 72,052\n대형상용 | 85,410 | 135,095 | 353,864\n기타부문 | 철도차량 | 내수 | 2,100,000 | 2,200,000 | 3,000,000\n수출 | 3,",
+        "content_truncated": true,
+        "total_chars": 450667,
+        "summary": "분기보고서 (2026.03) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002418",
+        "collected_at": "2026-09-07T03:39:46.997190Z",
+        "report_name": "분기보고서 (2026.03)",
+        "published_at": "2026-05-15T00:00:00Z",
+        "request_id": "ea3a0d2f-75b3-4e69-a30e-bbde71a60eb4",
+        "source_type": "dart"
+      }
+    },
+    "20260318001394": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260318001394",
+        "document_type": "disclosure",
+        "content": "(제 58 기)\n사업연도 | 2025년 01월 01일 | 부터\n2025년 12월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 3월 18일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 현대자동차 주식회사\n대 표 이 사 : | 무뇨스 바르셀로 호세 안토니오\n본 점 소 재 지 : | 서울시 서초구 헌릉로 12 (양재동)\n(전 화) 02-3464-1114\n(홈페이지) http://www.hyundai.com\n작 성 책 임 자 : | (직 책) 재무관리실장 (성 명) 김 우 열\n(전 화) 02-3464-2246\n목 차\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 개황 1. 연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | 2 | - | - | 2 | 2\n비상장 | 164 | 13 | 15 | 162 | 94\n합계 | 166 | 13 | 15 | 164 | 96\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n1-1. 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | HYUNDAI CONNECTED MOBILITY MIDDLE EAST AND AFRICA INFORMATION TECHNOLOGY L.L.C (HCMMEA) | 당기 중 신규출자\n현대얼터너티브주식회사 | 당기 중 신규출자\nHyundai Motor Group Racing S.A.S. (HMGR) | 당기 중 신규출자\nHyundai Thanh Cong Vietnam Engine Manufacturing Co. Ltd | 당기 중 신규출자\n웰디비제이차㈜ | 당기 중 신규출자\nHyundai HK Funding Eight, LLC | 당기 중 신규출자\nHyundai HK Funding Nine, LLC | 당기 중 신규출자\n타이거대체일반사모부동산투자신탁318호 | 지분인수\n현대오토펀딩이에스지제삼차유동화전문유한회사 | 당기 중 신규출자\n비케이디비제일차주식회사 | 당기 중 신규출자\n주식회사 유모스원 | 합병\nChina Mobility (HK) Limited | 당기 중 신규출자\n슈퍼시리즈제십팔차유동화전문유한회사 | 당기 중 신규출자\n연결제외 | Hyundai Motor Investment, Inc. | 당기 중 청산\n오토피아제육십팔차유동화전문 유한회사 | 당기 중 청산\n오토피아제칠십차유동화전문 유한회사 | 당기 중 청산\n오토피아제육십육차유동화전문 유한회사 | 당기 중 청산\nBeijing Jingxianronghua Motor Sale Co., Ltd. | 당기 중 청산\n오토피아제육십구차유동화전문 유한회사 | 당기 중 청산\n오토피아제칠십일차유동화전문 유한회사 | 당기 중 청산\nBeijing Jingxian Motor Safeguard Service Co., Ltd. (BJMSS) | 당기 중 청산\n모비아(주) | 피합병\n주식회사 유비퍼스트대원 | 합병\nHyundai Rotem Company - Hyundai EUROTEM Demiryolu AraclariSAN. VE TIC. A.S. ORTAK GIRISIMI | 당기 중 청산\nHyundai Rotem Company - Hyundai EUROTEM Mahmutbey Projesi ORTAK GIRISIMI | 당기 중 청산\n슈퍼시리즈제십일차유동화전문 유한회사 | 당기 중 청산\n오토피아제육십칠차유동화전문 유한회사 | 당기 중 청산\n오토피아제칠십이차유동화전문 유한회사 | 당기 중 청산\n*) 당기 중 모비아㈜와 주식회사 유비퍼스트대원이 주식회사 유모스원으로 신설합병되었습니다.\n나. 회사의 법적·상업적 명칭 당사의 명칭은『현대자동차주식회사』라고 표기합니다.영문으로 HYUNDAI MOTOR COMPANY라고 표기하며 약식으로는 HMC로표기합니다. 다. 설립일자 당사는 1967년 12월 29일에 설립되었습니다. 라. 본사의 주소 등 - 주 소 : 서울특별시 서초구 헌릉로 12 (양재동)- 전화번호 : 02-3464-1114- 홈페이지 : https://www.hyundai.com 마. 중소기업 등 해당 여부\n중소기업 해당 여부 | 미해당\n벤처기업 해당 여부 | 미해당\n중견기업 해당 여부 | 미해당\n바. 주요사업의 내용 및 향후 추진하려는 신규사업 당사와 연결종속회사는 자동차와 자동차부품의 제조 및 판매, 차량정비 등의 사업을 운영하는 차량부문과 차량할부금융 및 결제대행업무 등의 사업을 운영하는 금융부문및 철도차량 제작 등의 사업을 운영하는 기타부문으로 구성되어 있으며, 자세한 내용은「Ⅱ. 사업의 내용」을 참조하시기 바랍니다.또한 당사의 ESG 경영에 대한 상세 내용은 당사의 홈페이지에 게재(홈페이지 주소 : https://www.hyundai.com, 위치 : 지속가능경영 → 지속가능성보고서)되어 있는 2025 지속가능성 보고서를 참조하시기 바라며, 2030전략에 대한 상세 내용은 II. 사업의 내용의 7. (제조서비스업)기타 참고사항의 사. 회사의 중ㆍ장기 전략을 참조하시기 바랍니다.\n사. 신용등급 내역 당사는 회사채 및 기업어음 발행 등의 목적에 의하여 또는 기타 수시평가에 의하여 신용평가 전문기관으로부터 평가를 받고 있으며, 공시 대상 기간 동안의 신용평가 현황은 다음과 같습니다.\n(1) 신용평가\n평가일 | 평가대상유가증권 등 | 신용등급 | 평가회사 | 평가구분\n2023-01-19 | 기업신용등급(ICR) | BBB+(Stable) | S&P(미국) | 수시평가\n2023-02-13 | Baa1(Positive) | Moody's(미국) | 수시평가\n2024-01-25 | BBB+(Positive) | S&P(미국) | 수시평가\n2024-02-06 | A3(Stable) | Moody's(미국) | 수시평가\n2024-02-16 | A-(Stable) | Fitch(미국) | 수시평가\n2024-08-21 | A-(Stable) | S&P(미국) | 수시평가\n2024-11-07 | A-(Stable) | Fitch(미국) | 수시평가\n2025-01-22 | A-(Stable) | S",
+        "content_truncated": true,
+        "total_chars": 917657,
+        "summary": "사업보고서 (2025.12) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001394",
+        "collected_at": "2026-09-07T03:40:00.812378Z",
+        "report_name": "사업보고서 (2025.12)",
+        "published_at": "2026-03-18T00:00:00Z",
+        "request_id": "ac68f9b8-3c22-4b98-b1a5-308aef72ed27",
+        "source_type": "dart"
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260901800400",
+    "20260826800261",
+    "20260814003521",
+    "20260515002418",
+    "20260318001394"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:39:27.204467Z"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:27.204706Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:27.204993Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:27.205183Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:27.205314Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:27.205431Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:39:27.205519Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:27.413314Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:27.653911Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:27.761148Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:27.835197Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:27.983917Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-005380",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:39:28.352014Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

@@ -1,0 +1,1388 @@
+{
+  "company": {
+    "company_name": "KB금융",
+    "stock_code": "105560"
+  },
+  "captured_at": "2026-09-07T03:41:09.374778+00:00",
+  "capture_finished_at": "2026-09-07T03:47:54.056542+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "KB금융",
+      "stock_code": "105560",
+      "current_price": 175250,
+      "change": 3250,
+      "change_rate": 1.89,
+      "volume": 305210,
+      "volume_change_rate": 22.71,
+      "avg_volume_20d": 1140124,
+      "volume_ratio_20d": 0.47,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 538208,
+      "warnings": [],
+      "as_of": "2026-09-07T03:41:09.811774Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:41:09.811774Z"
+    },
+    "news": {
+      "request_id": "49f9d4ad-c437-409f-878a-baceaa4a9a95",
+      "status": "success",
+      "company_name": "KB금융",
+      "stock_code": "105560",
+      "articles": [
+        {
+          "headline": "삼성 'KoAct 배당성장액티브', 배당성장형 ETF 수익률·분배율 1위",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T03:08:00Z",
+          "summary": "주요 편입 종목으로는 △삼성전자우(22.8%) △SK하이닉스(21.9%) △KB금융(3.2%) △한화에어로스페이스(2.9%) △SK스퀘어(2.6%) 등이다. 총보수는 연 0.5%다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 단순히...",
+          "source_url": "https://www.fnnews.com/news/202609071157001852",
+          "relevance": "high"
+        },
+        {
+          "headline": "박현경 이어 임희정 'KLPGA 200번째 출전'…무대는 '첫 메이저 우승' KB금...",
+          "publisher": "golfdigest.co.kr",
+          "published_at": "2026-09-07T03:08:00Z",
+          "summary": "자신에게 처음으로 메이저 우승컵을 안겼던 KB금융 골든라이프 챔피언십이기 때문이다. 임희정은 2019년 당시 KB금융 스타챔피언십이라는 이름으로 열렸던 대회에서 통산 세 번째 우승컵을 들어 올렸다. 대회 장소...",
+          "source_url": "https://www.golfdigest.co.kr/news/articleView.html?idxno=46850",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 316명이 AI 에이전트 개발…우수 과제 금융현장에 적용",
+          "publisher": "e-science.co.kr",
+          "published_at": "2026-09-07T03:08:00Z",
+          "summary": "| 이코노미사이언스 박성현 기자 | KB금융그룹이 임직원이 직접 개발한 인공지능(AI) 에이전트를 실제 금융업무에 적용하고 계열사 간 공동 활용하는 체계를 확대한다. KB금융은 지난 3일 서울 여의도 KB국민은행...",
+          "source_url": "https://www.e-science.co.kr/news/articleView.html?idxno=134858",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, '통합 AI 에이전트 경진대회' 개최...임직원 아이디어로 업무 혁...",
+          "publisher": "asiaa.co.kr",
+          "published_at": "2026-09-07T03:06:00Z",
+          "summary": "KB금융그룹은 지난 3일 서울 여의도 KB국민은행 신관에서 '2026 그룹 통합 AI 에이전트 경진대회'를 열어 임직원들이 발굴한 현장 과제를 AI 기술로 해결하는 혁신 사례를 공유했다고 7일 밝혔다. 이번 대회는 KB금융 7개...",
+          "source_url": "https://www.asiaa.co.kr/news/articleView.html?idxno=261403",
+          "relevance": "high"
+        },
+        {
+          "headline": "[금융권 이모저모]삼성액티브운용, 배당성장 ETF 수익률·분배율 1위 外",
+          "publisher": "businessplus.kr",
+          "published_at": "2026-09-07T02:52:00Z",
+          "summary": "주요 편입 종목은 삼성전자우 22.8%, SK하이닉스 21.9%, KB금융 3.2%, 한화에어로스페이스 2.9%, SK스퀘어 2.6% 등이다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 현재 배당수익률이 높은 기업보다는...",
+          "source_url": "https://www.businessplus.kr/news/articleView.html?idxno=116471",
+          "relevance": "high"
+        },
+        {
+          "headline": "[금융권 소식] KB금융ㆍ하나금융그룹ㆍ웰컴금융그룹(9.7)",
+          "publisher": "weeklytoday.com",
+          "published_at": "2026-09-07T02:50:00Z",
+          "summary": "지난 3일 서울 여의도 KB국민은행 신관에서 진행된 '2026 그룹 통합 AI 에이전트 경진대회'에서 대상 수상자와 박형주 KB금융지주 AI·DT추진본부장(왼쪽에서 네번째)이 기념촬영을 하고 있다. (사진=KB금융) ■ KB금융...",
+          "source_url": "http://www.weeklytoday.com/news/articleView.html?idxno=793260",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융 골든라이프 챔피언십 새 출발, 모두의 골프 축제",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T02:44:00Z",
+          "summary": "한국여자프로골프(KLPGA) 투어 메이저 대회인 KB금융 골든라이프 챔피언십이 새롭게 출발한다. 올해는 오는 10일부터 13일까지 나흘간 경기도 이천의 블랙스톤 골프클럽에서 펼쳐진다. 총상금 15억원, 우승상금은...",
+          "source_url": "https://view.asiae.co.kr/article/2026090711443328914",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성생명 & KB손해보험 등, 보험사 AI 활용 '가속', 초점은?",
+          "publisher": "choicenews.co.kr",
+          "published_at": "2026-09-07T02:44:00Z",
+          "summary": "그런가하면 KB손해보험도 이날 \"KB금융그룹 통합 인공지능(AI) 에이전트 경진대회에서 대상을 받았다\"고 밝혔다. KB손해보험 '고객의 KB'팀이 상담과 보상 업무 전 과정을 AI 기반으로 모니터링하고 평가하는 '고객 케어...",
+          "source_url": "http://www.choicenews.co.kr/news/articleView.html?idxno=171024",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, '그룹 통합 AI 경진대회' 개최… 임직원 아이디어로 AI 업무 혁신...",
+          "publisher": "insnews.co.kr",
+          "published_at": "2026-09-07T02:42:00Z",
+          "summary": "KB금융그룹이 임직원들의 아이디어로 개발한 인공지능(AI) 에이전트(Agent)를 실제 업무 현장에 적용하며 일하는 방식을 전환한다. KB금융그룹(이하 KB금융)은 지난 3일 서울 여의도 KB국민은행 신관에서 '2026 그룹 통합 AI...",
+          "source_url": "https://www.insnews.co.kr/news/articleView.html?idxno=92649",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI 투자 기대에 외인·기관 1.6조 '사자'…코스피 6900선 공방[장중시황...",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "SK스퀘어(402340)(5.86%), SK하이닉스(000660)(5.65%), 삼성전자(005930)(3.91%), 삼성생명(032830)(3.7%), 삼성전자우(005935)(2.19%), KB금융(105560)(1.57%), 현대차(005380)(1.43%), 삼성전기(009150)(1.28%), LG에너지솔루션(373220)(0.56...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6282070",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 AI 아이디어 겨뤘다…116개팀 참여 경진대회 개최",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-07T02:38:00Z",
+          "summary": "지난 3일, 서울 여의도 KB국민은행 신관에서 진행된 '2026 그룹 통합 AI 에이전트 경진대회'에서 대상 수상자와 박형주 KB금융지주 AI·DT추진본부장(왼쪽에서 네번째)이 기념촬영을 하고 있다. [KB금융그룹]  KB금융그룹이...",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145585",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융그룹, '2026 그룹 통합 AI 에이전트 경진대회' 개최",
+          "publisher": "ngonews.kr",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "KB금융그룹(회장 양종희)이 임직원들의 아이디어를 업무에 적극 활용하고 있다. KB금융그룹은 7일 \"지난 3일 서울 여의도 KB국민은행 신관에서 임직원들이 현장에서 발굴한 문제를 AI로 해결하고, 실질적인 업무...",
+          "source_url": "https://www.ngonews.kr/news/articleView.html?idxno=237411",
+          "relevance": "high"
+        },
+        {
+          "headline": "[食전食후] AI·반도체 훈풍에 코스피 6900선 육박…외국인·기관 '쌍끌...",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "SK스퀘어(5.96%), 삼성전자우(2.14%), KB금융(1.57%), 현대차(1.43%), 삼성전기(1.28%), LG에너지솔루션(0.70%) 등도 오르고 있다. 특히 인공지능(AI) 연산 수요 확대 기대가 반도체주 투자심리를 끌어올리는 모습이다....",
+          "source_url": "https://www.ajunews.com/view/20260907112902463",
+          "relevance": "high"
+        },
+        {
+          "headline": "20년 명승부 이어온 ‘KB 골든라이프 챔피언십’, 전 세대 골프 축제로...",
+          "publisher": "kmib.co.kr",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "한국여자프로골프(KLPGA) 투어를 대표하는 메이저 대회 ‘KB금융 스타챔피언십’은 지난 20년간 수많은 스타의 탄생과 잊을 수 없는 명승부로 한국 골프사를 수놓아왔다. 필드 위를 뜨겁게 달궜던 챔피언들의 드라마틱한...",
+          "source_url": "https://www.kmib.co.kr/article/view.asp?arcid=9000009716&cp=nv",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산운용 \"배당성장액티브, 동일 ETF 중 수익·분배율 1위\"",
+          "publisher": "smarttimes.co.kr",
+          "published_at": "2026-09-07T02:34:00Z",
+          "summary": "주요 편입 종목은 ▲삼성전자우(22.8%) ▲SK하이닉스(21.9%) ▲KB금융(3.2%) ▲ 한화에어로스페이스(2.9%) ▲SK스퀘어(2.6%) 등이다. 총 보수는 연 0.5%다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은 단순히...",
+          "source_url": "http://www.smarttimes.co.kr/news/articleView.html?idxno=48744",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 'AI 에이전트' 발굴 위해 '2026 그룹 통합 AI 에이전트 경진대회...",
+          "publisher": "techholic.co.kr",
+          "published_at": "2026-09-07T02:32:00Z",
+          "summary": "KB금융그룹은 실제 업무에 적용할 'AI 에이전트'를 발굴하기 위해 지난 3일 서울 여의도 KB국민은행 신관에서 열린 대회에는 KB금융지주, 은행, 증권, 손해보험, 카드, 라이프, 캐피탈 7개 계열사에서 총 116개 팀...",
+          "source_url": "http://www.techholic.co.kr/news/articleView.html?idxno=222761",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, AI 에이전트 경진대회 개최…“현장 업무를 AI로 바꾼다”",
+          "publisher": "viva100.com",
+          "published_at": "2026-09-07T02:30:00Z",
+          "summary": "KB금융그룹이 임직원이 직접 발굴한 업무 과제를 인공지능(AI) 에이전트로 해결하는 실전형 경진대회를 열고 그룹 차원의 AI 업무 전환에 속도를 낸다. 단순한 AI 기술 도입을 넘어 실제 업무에 적용할 수 있는 사례를...",
+          "source_url": "https://www.viva100.com/article/20260907500658",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브운용 ‘KoAct 배당성장액티브’, 수익률·분배율 동반 1위",
+          "publisher": "megaeconomy.co.kr",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "주요 편입 종목은 삼성전자우 22.8%와 SK하이닉스 21.9%, KB금융 3.2%, 한화에어로스페이스 2.9%, SK스퀘어 2.6% 등이다. 삼성전자우와 SK하이닉스의 합산 비중은 44.7%로 전체 자산의 절반에 가깝다. 2024년 2월 상장한 이...",
+          "source_url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065579892530670",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인·기관 사자에 코스피 3%대 상승세…6900 탈환 고지전",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "삼성전자와 SK하이닉스는 각각 3%대, 5%대 오름세를 이어가고 있고 SK스퀘어, 삼성전기, LG에너지솔루션, 현대차, 삼성바이오로직스, KB금융, 삼성생명이 모두 상승 중이다. 같은 시간 코스닥 지수는 1.64%(13.35포인트)...",
+          "source_url": "https://biz.chosun.com/stock/stock_general/2026/09/07/QZ57IBRFANHSJAVOFB54QGKVTE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "116개 팀 몰린 KB금융 AI 경진대회…우수과제 실제 업무로 옮긴다",
+          "publisher": "newswatch.kr",
+          "published_at": "2026-09-07T02:28:00Z",
+          "summary": "지난 3일 서울 여의도 KB국민은행 신관에서 진행된 '2026 그룹 통합 AI 에이전트 경진대회'에서 대상 수상자와 박형주 KB금융지주 AI·DT추진본부장(왼쪽 네 번째)이 기념촬영을 하고 있다. 사진=KB금융 | 뉴스워치...",
+          "source_url": "http://www.newswatch.kr/news/articleView.html?idxno=81015",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산 KoAct 배당성장액티브, 배당성장 ETF 중 수익률·분배율...",
+          "publisher": "delighti.co.kr",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "주요 편입 종목은 삼성전자우(22.8%), SK하이닉스(21.9%), KB금융(3.2%), 한화에어로스페이스(2.9%), SK스퀘어(2.6%) 등이다. 현금흐름과 주주환원 수준이 높은 기업과 실적 개선이 기대되는 기업을 고루 담고 있다. 총보수는...",
+          "source_url": "https://www.delighti.co.kr/news/articleView.html?idxno=121420",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 AI 아이디어 현장 적용…그룹 통합 경진대회 개최",
+          "publisher": "ezyeconomy.com",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "KB금융그룹이 임직원이 직접 발굴한 인공지능(AI) 아이디어를 업무 혁신으로 연결하기 위한 '2026 그룹 통합 AI 에이전트 경진대회'를 개최했다고 7일 밝혔다. 지난 3일 서울 여의도 KB국민은행 신관에서 열린 이번...",
+          "source_url": "https://www.ezyeconomy.com/news/articleView.html?idxno=239426",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더밸류 브리핑] 오늘의 KB금융 소식…KB금융그룹·KB국민은행",
+          "publisher": "thevaluenews.co.kr",
+          "published_at": "2026-09-07T02:24:00Z",
+          "summary": "KB금융그룹이 7개 계열사 임직원들이 참여해 현장 업무 혁신을 이끌 AI 에이전트를 발굴하는 ‘2026 그룹 통합 AI 에이전트 경진대회’를 개최했다. KB국민은행이 모바일 신분증 서비스의 보안성과 안정성을 인정받아...",
+          "source_url": "http://www.thevaluenews.co.kr/news/view.php?idx=201357",
+          "relevance": "high"
+        },
+        {
+          "headline": "[정해균의 Zoom-人] '약진'하는 삼성화재 출신들...어디까지 오를까",
+          "publisher": "newsinside.kr",
+          "published_at": "2026-09-07T02:24:00Z",
+          "summary": "박 전 대표는 KB금융지주와 KB국민은행에서 '유리천장'을 차례로 깨부순 인물로 유명하다. 그는 서울대에서 경영학을 전공하고 동 대학원에서 석사학위를 받았다.박 전 대표는 체이스맨해튼은행을 시작으로 조흥은행...",
+          "source_url": "https://www.newsinside.kr/news/articleView.html?idxno=4979487",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 아이디어로 AI 업무 혁신...'2026 그룹 통합 AI 에이전트...",
+          "publisher": "delighti.co.kr",
+          "published_at": "2026-09-07T02:22:00Z",
+          "summary": "지난 3일, 서울 여의도 KB국민은행 신관에서 진행된 '2026 그룹 통합 AI 에이전트 경진대회'에서 대상 수상자와 박형주 KB금융지주 AI·DT추진본부장(맨 오른쪽)이 기념촬영을 하고 있다. (사진=KB금융)  KB금융그룹이...",
+          "source_url": "https://www.delighti.co.kr/news/articleView.html?idxno=121416",
+          "relevance": "high"
+        },
+        {
+          "headline": "[금융 브리핑] 하나금융·KB금융·웰컴금융",
+          "publisher": "niceeconomy.co.kr",
+          "published_at": "2026-09-07T02:22:00Z",
+          "summary": "[사진 = KB금융그룹 제공] ◇ KB금융, '2026 그룹 통합 AI 에이전트 경진대회' 개최 KB금융그룹은 지난 3일 서울 여의도 KB국민은행 신관에서 '2026 그룹 통합 AI 에이전트 경진대회'를 개최했다고 7일 밝혔다. 이번...",
+          "source_url": "http://www.niceeconomy.co.kr/news/articleView.html?idxno=90855",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 'KoAct 배당성장액티브', 1년 수익률·분배율 1위",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-07T02:18:00Z",
+          "summary": "주요 편입 종목은 삼성전자우(22.8%), SK하이닉스(21.9%), KB금융(3.2%), 한화에어로스페이스(2.9%), SK스퀘어(2.6%) 등이다. 지성진 삼성액티브운용 매니저는 \"인공지능(AI) 투자 확대와 메모리 업황 개선을 바탕으로 이익...",
+          "source_url": "https://www.newsis.com/view/NISX20260907_0003778945",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 그룹 통합 AI 에이전트 경진대회…\"임직원 아이디어로 AI 업무 ...",
+          "publisher": "smarttimes.co.kr",
+          "published_at": "2026-09-07T02:16:00Z",
+          "summary": "KB금융그룹은 지난 3일 KB국민은행 신관에서 '2026 그룹 통합 AI 에이전트 경진대회'를 개최했다고 7일 밝혔다. 이번 경진대회는 실제 업무에 적용할 수 있는 AI 에이전트를 발굴하고 우수 사례를 그룹 전반으로...",
+          "source_url": "http://www.smarttimes.co.kr/news/articleView.html?idxno=48739",
+          "relevance": "high"
+        },
+        {
+          "headline": "웨이브 필드캠 9일 시작 \"가수 소유가 MC\"",
+          "publisher": "econovill.com",
+          "published_at": "2026-09-07T02:12:00Z",
+          "summary": "13일 KB금융 골든라이프 챔피언십을 시작으로 9월 20일 하나금융그룹 챔피언십, 10월 4일 하이트진로 챔피언십, 10월 11일 HJ중공업·동부건설 챔피언십, 10월 18일 아이스버그골프·서울신문 오픈, 11월 8일 대보 하우스디...",
+          "source_url": "https://www.econovill.com/news/articleView.html?idxno=750051",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI 사이버공격 고도화…우리은행, 모의해킹 대회로 대응",
+          "publisher": "srtimes.kr",
+          "published_at": "2026-09-07T02:10:00Z",
+          "summary": "화이트해커 양성 프로그램을 통해 보안 역량을 강화하려는 움직임이 이어지고 있다. 신한금융과 KB금융 등도 해킹방어대회와 정보보호 인재 육성 프로그램 등을 운영하며 사이버보안 전문인력 확보에 나서고 있다.",
+          "source_url": "http://www.srtimes.kr/news/articleView.html?idxno=211765",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더밸류 브리핑] 오늘의 KB금융 소식...KB증권·KB자산운용",
+          "publisher": "thevaluenews.co.kr",
+          "published_at": "2026-09-07T02:10:00Z",
+          "summary": "KB금융 계열사들이 금융소비자 보호와 지역사회 상생 활동을 강화한다. KB증권은 AI 기반 소비자보호 시스템을 금융상품 판매 현장부터 사후 민원 관리까지 확대 운영한다. KB자산운용은 임직원 봉사단을 통해 한부모...",
+          "source_url": "http://www.thevaluenews.co.kr/news/view.php?idx=201368",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 7개 계열사 AI 에이전트 경진대회 개최",
+          "publisher": "whitepaper.co.kr",
+          "published_at": "2026-09-07T02:04:00Z",
+          "summary": "화이트페이퍼, WHITEPAPER지난 3일 서울 여의도 KB국민은행 신관에서 진행된 '2026 그룹 통합 AI 에이전트 경진대회'에서 대상 수상자와 박형주 KB금융지주 AI·DT추진본부장(왼쪽 네 번째)이 기념촬영을 하고 있다. (사진...",
+          "source_url": "http://www.whitepaper.co.kr/news/articleView.html?idxno=266471",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 AI 아이디어 사업화…그룹 공동 자산으로 키운다",
+          "publisher": "ftoday.co.kr",
+          "published_at": "2026-09-07T02:04:00Z",
+          "summary": "KB금융그룹이 임직원이 직접 발굴한 업무 과제를 인공지능(AI) 에이전트로 구현하고 실제 현장 적용에 나선다. 계열사별로 개발한 우수 사례를 그룹 차원에서 공유해 업무 효율과 고객 서비스 개선에 활용할...",
+          "source_url": "http://www.ftoday.co.kr/news/articleView.html?idxno=364932",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, '2026 그룹 통합 AI 에이전트 경진대회' 개최",
+          "publisher": "cnbnews.com",
+          "published_at": "2026-09-07T02:04:00Z",
+          "summary": "KB금융그룹은 지난 3일 서울 여의도 KB국민은행 신관에서 '2026 그룹 통합 AI 에이전트 경진대회'를 개최했다고 7일 밝혔다. 이번 경진대회는 실제 업무에 쓸 수 있는 인공지능(AI) 에이전트를 찾고, 우수 사례를 그룹...",
+          "source_url": "https://www.cnbnews.com/news/articleView.html?idxno=1014622",
+          "relevance": "high"
+        },
+        {
+          "headline": "[키아프리즈 2026 결산] ‘실리’ 챙긴 프리즈, ‘역동’ 보인 키아프",
+          "publisher": "busan.com",
+          "published_at": "2026-09-07T02:03:00Z",
+          "summary": "재계에서는 프리즈 공식 협찬사인 신세계그룹의 정용진 회장과 신동빈 롯데그룹 회장, 한국 조각계를 후원해온 윤영달 크라운해태 회장, 양종희 KB금융그룹 회장이 전시장을 둘러봤다. 연예계 스타들도 미술 나들이에...",
+          "source_url": "https://www.busan.com/view/busan/view.php?code=2026090700261832810",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 장중 '반도체주 강세'에 3%대 오른 6890선, 코스닥도 1%대 올라",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "SK하이닉스가 5.89%로 가장 많이 오르고 있고 SK스퀘어(5.48%) 삼성전자(3.82%) 삼성생명(3.70%) 삼성전자우(2.35%) 현대차(1.69%) KB금융(1.54%) 삼성전기(1.53%) LG에너지솔루션(0.14%) 삼성바이오로직스(0.07%) 가 뒤를 잇고...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446528",
+          "relevance": "high"
+        },
+        {
+          "headline": "9월 주식 뭐 살까… 유망주 20개 뜯어보니",
+          "publisher": "m.skyedaily.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "반면 NAVER는 편입 이후 6.36%, KB금융은 6.72%, 한화에어로스페이스는 3.83% 하락했다. 하나증권이 집계한 올해 단기 투자유망종목의 연초 이후 누적 수익률은 73.58%로 코스피 대비 14.23%p 높았다. 직전 주간 수익률은 -1....",
+          "source_url": "https://m.skyedaily.com/news_view.html?ID=311094",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 AI 에이전트 경진대회…116개팀 실전 아이디어 경쟁",
+          "publisher": "the-today.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "KB금융그룹이 임직원이 직접 개발한 AI 에이전트를 실제 금융 업무에 적용한다. 현장에서 발굴한 아이디어를 계열사 전반으로 확산해 그룹 공동 AI 자산으로 축적한다는 구상이다. ◇그룹 7개사 116개팀 참여 KB금융은...",
+          "source_url": "https://www.the-today.com/news/articleView.html?idxno=89595",
+          "relevance": "high"
+        },
+        {
+          "headline": "JB금융그룹 인도네시아 현지 여신전문금융사 인수 당국 승인 받았다 : 김...",
+          "publisher": "huffingtonpost.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "2020년 KB금융그룹 손자회사로 편입됐고, 기업 대상 차량·중장비 금융이 주력이었다. 코로나19 이후 실적 부진을 겪다 흑자 전환에 성공했다. 2025년 말 기준 자카르타 본점과 8개 영업거점을 두고 있으며 임직원은...",
+          "source_url": "https://www.huffingtonpost.kr/article/260205",
+          "relevance": "high"
+        },
+        {
+          "headline": "금융권 디지털 확대... AI 에이전트 경진대회부터 홈 화면 개편까지",
+          "publisher": "pressman.kr",
+          "published_at": "2026-09-07T01:58:00Z",
+          "summary": "KB금융그룹은 서울 여의도 KB국민은행 신관에서 '2026 그룹 통합 AI 에이전트 경진대회'를 개최했다고 밝혔다. KB금융지주와 KB국민은행, KB증권, KB손해보험, KB카드, KB라이프, KB캐피탈 등 7개 계열사에서 총 116개 팀...",
+          "source_url": "https://www.pressman.kr/news/articleView.html?idxno=103534",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 7개 계열사 임직원 AI 경진대회…대상은 KB손보",
+          "publisher": "womentimes.co.kr",
+          "published_at": "2026-09-07T01:54:00Z",
+          "summary": "KB금융그룹은 지난 3일 서울 여의도 KB국민은행 신관에서 '2026 그룹 통합 AI 에이전트 경진대회'를 개최했다고 7일 밝혔다. 이번 경진대회는 실제 업무에 적용할 수 있는 AI 에이전트를 발굴하고, 우수 사례를 그룹...",
+          "source_url": "https://www.womentimes.co.kr/news/articleView.html?idxno=105995",
+          "relevance": "high"
+        },
+        {
+          "headline": "“역시 삼성전자 압도적 1위” 브랜드 가치 ‘135조’…세계 홀린 K기업...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:47:00Z",
+          "summary": "KB금융그룹도 13.7% 늘어난 83억달러를 기록했다. 이어 현대모비스가 66억달러(5.1%↑), 삼성물산이 62억5000만달러(3.3%↑)로 상위 10위권에 이름을 올렸다. 금융과 방산 기업의 약진은 10위권 밖에서도 두드러졌다....",
+          "source_url": "https://www.sedaily.com/article/20087889?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 '쌍끌이' 매수에 6890선 훌쩍…3%대 강세",
+          "publisher": "mediapen.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "이 밖에 SK스퀘어(5.76%), 삼성생명(4.03%), 삼성전자우(2.30%), 삼성전기(1.86%), 현대차(1.83%), KB금융(1.42%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.07%) 등 주요 대형주가 모두 강세를 보이고 있다. 같은 시각...",
+          "source_url": "https://www.mediapen.com/news/view/1121704",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 개발 AI 에이전트 업무에 적용…그룹 공동자산으로 확산",
+          "publisher": "todayeconomic.com",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "투데이e코노믹 = 우혜정 기자 | KB금융그룹이 임직원의 현장 경험과 아이디어를 바탕으로 개발한 인공지능(AI) 에이전트를 실제 업무에 적용하고 계열사 공동자산으로 확대한다. KB금융은 지난 3일 서울 여의도...",
+          "source_url": "https://www.todayeconomic.com/news/article.html?no=32013",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산운용 KoAct 배당성장액티브, 배당성장ETF 수익률·분배율...",
+          "publisher": "inthenews.co.kr",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "주요 편입종목으로는 ▲삼성전자우(22.8%) ▲SK하이닉스(21.9%) ▲KB금융(3.2%) ▲ 한화에어로스페이스(2.9%) ▲SK스퀘어(2.6%) 등 입니다. 총 보수는 연 0.5% 입니다. 지성진 삼성액티브자산운용 매니저는 \"배당성장 전략은...",
+          "source_url": "https://www.inthenews.co.kr/news/article.html?no=91494",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 업고 2.9%대 급등",
+          "publisher": "straightnews.co.kr",
+          "published_at": "2026-09-07T01:44:00Z",
+          "summary": "현대차가 2.22%, KB금융이 1.74%, 삼성생명이 4.03% 올랐다. LG에너지솔루션은 0.70%, 삼성바이오로직스는 0.07% 상승했다. 다만 지수 상승폭에 비해 시장 전체의 온도가 뜨겁다고 보기는 어려웠다. 유가증권시장에서...",
+          "source_url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310533",
+          "relevance": "high"
+        },
+        {
+          "headline": "[은행가] KB국민은행 'KB스타뱅킹 모바일 신분증' 外",
+          "publisher": "slist.kr",
+          "published_at": "2026-09-07T01:42:00Z",
+          "summary": "사진=KB금융그룹 KB금융그룹은 9월 10일부터 13일까지 블랙스톤 골프클럽 이천에서 KLPGA투어 메이저 대회 'KB금융 골든라이프 챔피언십'을 개최한다. 총상금 15억원과 우승상금 2억7000만원 규모로 국내 정상급 선수 120명이...",
+          "source_url": "https://www.slist.kr/news/articleView.html?idxno=764202",
+          "relevance": "high"
+        },
+        {
+          "headline": "웨이브, KLPGA 온라인 중계에서 선수 밀착 ‘필드캠’ 도입",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-07T01:41:00Z",
+          "summary": "KB금융 골든라이프 챔피업십부터 최종 라운드, 20일 하나금융그룹 챔피언십 최종 라운드, 10월 4일하이트진로 챔피언십 최종 라운드부터 10월 18일 아이스버그·서울신문 오픈을 비롯해 시즌 최종전 대보 하우스디...",
+          "source_url": "https://www.seoul.co.kr/news/sport/golf/2026/09/07/20260907500087?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융그룹, 임직원 아이디어로 AI 업무 혁신",
+          "publisher": "hbnpress.com",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "KB금융그룹은 지난 3일 서울 여의도 KB국민은행 신관에서 ‘2026 그룹 통합 AI 에이전트 경진대회’를 개최했다고 7일 밝혔다. 박형주 KB금융지주 AI·DT추진본부장(맨 오른쪽)이 지난 3일 서울 여의도 KB국민은행...",
+          "source_url": "https://hbnpress.com/news/view/1065577057655627",
+          "relevance": "high"
+        },
+        {
+          "headline": "인니 부코핀파이낸스, 매각 KB ·인수 JB '윈윈'",
+          "publisher": "straightnews.co.kr",
+          "published_at": "2026-09-07T01:38:00Z",
+          "summary": "KB금융그룹이 인도네시아 사업의 선택과 집중을 위해 비핵심 자회사를 정리하는 가운데 JB금융은 현지 영업망을 단숨에 확보해 동남아 금융시장 공략의 발판으로 삼게 돼 윈윈이라는 평가가 나온다. JB금융그룹은...",
+          "source_url": "https://www.straightnews.co.kr/news/articleView.html?idxno=310530",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, '2026 그룹 통합 AI 에이전트 경진대회' 개최…KB손해보험 '대상...",
+          "publisher": "public25.com",
+          "published_at": "2026-09-07T01:36:00Z",
+          "summary": "퍼블릭타임스=KB금융그룹이 계열사 임직원들이 직접 개발한 인공지능(AI) 에이전트 활용 사례를 공유하고 실제 업무 적용 가능성을 모색하는 자리를 마련했다. 다양한 금융 업무에 AI를 접목한 가운데 KB손해보험이...",
+          "source_url": "https://www.public25.com/news/articleView.html?idxno=54195",
+          "relevance": "high"
+        },
+        {
+          "headline": "“생산적 금융 늘려라”… 은행권, 채권 발행 급증",
+          "publisher": "biz.chosun.com",
+          "published_at": "2026-09-07T01:36:00Z",
+          "summary": "지주별로는 KB금융 110조원, 신한지주 110조원, 하나금융지주 100조원, 우리금융지주 80조원, NH농협 108조원 등이다. 금융위원회는 이달 중 포용 금융 이행 현황을 평가하는 ‘포용 금융 실적 종합 평가 체계’를...",
+          "source_url": "https://biz.chosun.com/stock/finance/2026/09/07/VDQLK37GWNFRHMULMK35XAOUQE/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "시가총액 상위 종목 가운데서는 삼성전자(3.82%), SK하이닉스(6.19%), SK스퀘어(5.86%), 삼성전기(1.93%), LG에너지솔루션(0.42%), 현대차(1.69%), 삼성바이오로직스(0.21%), KB금융(1.63%), 삼성생명(3.78%), 삼성물산(2.72...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, ‘AI 에이전트 경진대회’…116개 팀·316명 참여",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T01:30:00Z",
+          "summary": "KB금융그룹이 임직원 아이디어를 활용해 실제 금융 업무에 적용할 수 있는 인공지능(AI) 에이전트 발굴에 나섰다. 7일 금융권에 따르면 KB금융은 지난 3일 서울 여의도 KB국민은행 신관에서 임직원들이 현장에서 발굴한...",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609070915397741bb91c46fcd_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 AI 아이디어 경연…현장 혁신 이끈다",
+          "publisher": "donga.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "KB금융그룹이 ‘2026 그룹 통합 AI 에이전트 경진대회’를 열었다고 7일 밝혔다. 임직원이 실제 업무에 적용할 수 있는 AI 에이전트를 직접 발굴하고 우수 사례를 그룹 전반으로 확산하기 위해 행사를 준비했다....",
+          "source_url": "https://www.donga.com/news/Economy/article/all/20260907/134617600/1",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체주 강세에 3%가까이 급등…6,880선 돌파",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "이 밖에 시가총액 상위 종목에서는 삼성전자우(2.30%)와 SK스퀘어(5.48%), 삼성전기(1.21%), LG에너지솔루션(0.42%), 현대차(1.89%), 삼성바이오로직스(0.48%), KB금융(1.51%) 등이 오름세다. 반면 한화에어로스페이스(0.95...",
+          "source_url": "https://www.news2day.co.kr/article/20260907500108",
+          "relevance": "high"
+        },
+        {
+          "headline": "범용인공지능(AGI) 시대 열렸다…코스피 6900탈환",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "SK스퀘어(5.38%), 삼성전기(1.36%), LG에너지솔루션(0.42%), 현대차(1.83%), KB금융(1.63%) 등 시가총액 상위주 대부분이 상승세다. 오픈AI '아스트라' 공개하며 AGI 도래선언 오픈AI는 아스트라를 공개하면서 AGI 시대의...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710234926245",
+          "relevance": "high"
+        },
+        {
+          "headline": "“상품 설명 빠지면 AI가 잡는다”…KB증권, 민원 처리까지 소비자보호...",
+          "publisher": "ddaily.co.kr",
+          "published_at": "2026-09-07T01:24:00Z",
+          "summary": "KB금융그룹도 금융소비자 보호 체계를 강화하고 있다. 지난달 25일 KB증권을 비롯한 10개 계열사 금융소비자보호 총괄책임자가 참여한 협의회를 열고 상품·서비스 운영과 소비자보호 조직의 전문성 강화, 이상징후 조기...",
+          "source_url": "https://www.ddaily.co.kr/page/view/2026090709145464403",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 직원 만든 AI 현업 투입…검증 에이전트 계열사 공동자산화",
+          "publisher": "4th.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "포쓰저널 김지훈 기자 2026년 9월 3일 서울 여의도 KB국민은행 신관에서 진행된 '2026 그룹 통합 AI 에이전트 경진대회'에서 대상 수상자와 박형주 KB금융지주 AI·DT추진본부장(왼쪽에서 네번째)이 기념촬영을 하고 있다....",
+          "source_url": "http://www.4th.kr/news/articleView.html?idxno=2117559",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외국인·기관 순매수에 6900선 강세",
+          "publisher": "kfenews.co.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "시가총액 상위 종목은 삼성전자(4.01%), SK하이닉스(5.59%), SK스퀘어(5.96%), 삼성전자우(2.66%), 삼성전기(1.14%), 현대차(2.22%), LG에너지솔루션(1.26%), 삼성생명(4.20%), KB금융(1.45%), 삼성바이오로직스(0.41%) 등 모두 오르고...",
+          "source_url": "https://www.kfenews.co.kr/news/articleView.html?idxno=663954",
+          "relevance": "high"
+        },
+        {
+          "headline": "지금 확인하자…KB Pay 리브메이트 오늘의 퀴즈 '9월 7일' 정답",
+          "publisher": "wikitree.co.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "KB pay 퀴즈 (KB페이 오늘의 퀴즈)를 풀면 얻을 수 있는 포인트는 국민카드에서 운영하는 회원 멤버십인 KB페이를 포함한 KB금융그룹 통합 포인트이다. KB Pay 리브메이트 오늘의 퀴즈 정답을 통해 얻을 수 있는...",
+          "source_url": "https://www.wikitree.co.kr/articles/1157699",
+          "relevance": "high"
+        },
+        {
+          "headline": "금융권 'AI 에이전트 경진대회' 개최·국제비즈니스대상 금상 수상·'Wit...",
+          "publisher": "wsobi.com",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "KB금융이 '2026 그룹 통합 AI 에이전트 경진대회'를 개최한 한편, 하나금융은 '2026 국제비즈니스대상(IBA)'에서 출판 부문 금상을 수상했다. 동양생명은 'With우리 수호천사 프로젝트' 2차년도 사업을 실시하며, JB금융은...",
+          "source_url": "http://www.wsobi.com/news/articleView.html?idxno=317655",
+          "relevance": "high"
+        },
+        {
+          "headline": "'7천피' 앞둔 코스피...반도체 훈풍에 SK하이닉스 5%대 강세 [fn오전시황...",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T01:20:00Z",
+          "summary": "SK스퀘어(5.28%), 삼성전기(1.28%), 삼성전자우(2.30%), 현대차(1.96%), KB금융(1.40%) 등도 강세를 나타내고 있다. LG에너지솔루션(0.56%)과 삼성바이오로직스(0.41%)도 강보합 중이다. 코스닥도 상승세를 이어가고 있다. 같은...",
+          "source_url": "https://www.fnnews.com/news/202609071010485002",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 그룹 임직원 316명이 겨룬 'AI 에이전트' 경진대회 개최 ... 임직...",
+          "publisher": "worktoday.co.kr",
+          "published_at": "2026-09-07T01:16:00Z",
+          "summary": "서울 여의도 KB국민은행 신관에서 진행된 '2026 그룹 통합 AI 에이전트 경진대회'에서 대상 수상자와 박형주 KB금융지주 AI·DT추진본부장(왼쪽에서 네번째)이 기념촬영을 하고 있다. KB금융그룹은 지난 3일 서울 여의도...",
+          "source_url": "http://www.worktoday.co.kr/news/articleView.html?idxno=88913",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍타고 3%대↑···6900선 회복",
+          "publisher": "finomy.com",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "△삼성전자우(2.45%) △SK스퀘어(5.48%) △삼성전기(1.07%) △LG에너지솔루션(1.12%) △현대차(1.69%) △삼성바이오로직스(0.69%) △KB금융(1.34%) △삼성생명(3.87%) 등이 상승하고 있다. 코스닥지수는 전 거래일보다 14....",
+          "source_url": "http://www.finomy.com/news/articleView.html?idxno=260879",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 직원 아이디어로 AI 업무 혁신 이끈다",
+          "publisher": "pointdaily.co.kr",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "3일 서울 여의도 KB국민은행 신관에서 진행된 '2026 그룹 통합 AI 에이전트 경진대회'에서 대상 수상자와 박형주 KB금융지주 AI·DT추진본부장(왼쪽 네번째)이 기념촬영을 하고 있다. 사진=KB금융  KB금융그룹이 직원들의...",
+          "source_url": "https://www.pointdaily.co.kr/news/articleView.html?idxno=318236",
+          "relevance": "high"
+        },
+        {
+          "headline": "양종희 KB금융 회장, 국감 증인대 서나…출석하면 역대 세 번째(1부)",
+          "publisher": "the-today.com",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "양종희 KB금융그룹 회장이 오는 10월 열리는 국회 국정감사 증인으로 소환될 가능성이 제기되고 있다. 증인 채택 여부는 아직 확정되지 않았지만, KB국민은행의 주택담보대출 한도 축소와 KB금융의 지배구조 및 내부통제...",
+          "source_url": "https://www.the-today.com/news/articleView.html?idxno=89607",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 현장 문제 해결할 'AI 에이전트' 발굴…'경진대회' 성료",
+          "publisher": "100ssd.co.kr",
+          "published_at": "2026-09-07T01:12:00Z",
+          "summary": "대상, KB손해보험 '고객의 KB'팀 수상 KB금융그룹이 현장 문제를 해결할 AI 에이전트를 발굴하는 등 임직원 아이디어로 AI 업무 혁신을 가속화한다. KB금융은 지난 3일 서울 여의도 KB국민은행 신관에서 임직원들이...",
+          "source_url": "https://www.100ssd.co.kr/news/articleView.html?idxno=212571",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 아이디어로 AI 업무 혁신…'AI 에이전트 경진대회' 개최",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-07T01:12:00Z",
+          "summary": "KB금융그룹은 실제 업무에 적용할 'AI 에이전트'를 발굴하기 위해 '2026 그룹 통합 AI 에이전트 경진대회'를 열었다고 7일 밝혔다. 지난 3일 서울 여의도 KB국민은행 신관에서 열린 대회에는 KB금융지주, 은행, 증권...",
+          "source_url": "https://www.newsis.com/view/NISX20260907_0003778757",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체주 훈풍…코스피, 3% 급등·6900 회복",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "이 밖에 삼성생명(3.87%), 삼성물산(3.0%), KB금융(1.34%), 현대차(1.04%), 삼성바이오로직스(0.41%) 등이 오름세를 이어가고 있다. 코스닥지수는 전일 대비 0.95% 오른 821.26에 거래되고 있다. 개인과 기관이 각각 506억원...",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609070040",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 현장 아이디어로 업무 혁신… '2026 AI 에이전트 경진대회' 개최",
+          "publisher": "pointe.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "KB금융그룹이 지난 3일 서울 여의도 KB국민은행 신관에서 임직원들의 현장 경험과 AI 기술을 결합해 업무 방식을 바꾸는 '2026 그룹 통합 AI 에이전트 경진대회'를 열었다고 7일 밝혔다. 7개 계열사 116개 팀 경합… 실질적...",
+          "source_url": "https://www.pointe.co.kr/news/articleView.html?idxno=84366",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전 3%·닉스 5% 오름세…‘오픈AI 훈풍’에 코스피 6900선 등락",
+          "publisher": "segye.com",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "SK스퀘어(5.38%), 삼성생명(3.19%), 삼성전자우(2.24%), 현대차(1.69%), KB금융(1.51%), 삼성전기(1.07%) 등 시총 상위 종목 대부분 상승하고 있다. 같은 시각 코스닥 지수는 전 거래일보다 14.04포인트(1.73%) 오른 827.54를...",
+          "source_url": "https://www.segye.com/newsView/20260907504947?OutUrl=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 반등에 6800선 회복 … 삼전닉스 4% 강세",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "SK스퀘어는 6% 이상 급등했고 삼성전기, LG에너지솔루션, 현대차, 삼성바이오, KB금융 등도 상승 중이다. 같은 시간 코스닥 지수는 전 거래일 대비 0.94% 오른 821.45다. 개인이 446억원 순매수한 반면 외국인과 기관은...",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700053.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB Pay 리브메이트 오늘의 퀴즈 정답 9월 7일",
+          "publisher": "bntnews.co.kr",
+          "published_at": "2026-09-07T01:04:00Z",
+          "summary": "Kbpay 퀴즈 (KB페이 오늘의 퀴즈)를 풀면 얻을 수 있는 포인트는 국민카드에서 운영하는 회원 맴버십인 KB페이를 포함한 KB금융그룹 통합 포인트이다. KB Pay 리브메이트 오늘의 퀴즈 정답을 통해 얻을 수 있는...",
+          "source_url": "https://www.bntnews.co.kr/article/view/bnt202609070002",
+          "relevance": "high"
+        },
+        {
+          "headline": "'AI로 혁신 가속화'…KB금융 \"임직원 아이디어 그룹 전반에 확산\"",
+          "publisher": "ppss.kr",
+          "published_at": "2026-09-07T01:03:00Z",
+          "summary": "KB금융그룹은 9월 3일 서울 여의도에 위치한 KB국민은행 신관에서 '2026 그룹 통합 인공지능(AI) 에이전트 경진대회'를 개최했다고 9월 7일 밝혔다. 이 대회에는 KB금융 산하 7개 계열사의 임직원 총 316명이 116개 팀을...",
+          "source_url": "https://www.ppss.kr/news/articleView.html?idxno=309125",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브자산 KoAct 배당성장액티브, 배당성장 ETF 중 수익률·분배율...",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-07T01:02:00Z",
+          "summary": "주요 편입 종목으로는 △삼성전자우(22.8%) △SK하이닉스(21.9%) △KB금융(3.2%) △한화에어로스페이스(2.9%) △SK스퀘어(2.6%) 등 현금흐름 및 주주환원이 우수한 기업과 실적 개선이 전망되는 기업들을 골고루 담고 있다....",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=02443606645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, '2026 그룹 통합 AI 에이전트 경진대회' 개최",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:01:00Z",
+          "summary": "KB금융그룹은 지난 3일 서울 여의도 KB국민은행 신관에서 '2026그룹 통합 AI 에이전트 경진대회'를 개최했다고 7일 밝혔다. 이번 경진대회에는 KB금융지주, KB국민은행, KB증권, KB손해보험, KB카드, KB라이프, KB캐피탈...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710014255119",
+          "relevance": "high"
+        },
+        {
+          "headline": "[단독] 3.4조원 신안우이 '예타 사각지대'…출자액 반 토막 내 검증 피했...",
+          "publisher": "sisajournal.com",
+          "published_at": "2026-09-07T01:00:00Z",
+          "summary": "실제 재원 조달 내역을 보면 '주민참여대출'(1360억원)은 KB금융지주가, '군민펀드'(1000억원)는 산업은행이 각각 대출한 자금이다. 주민은 사실상 대출의 명의(도관) 역할만 맡은 셈이다. 관련 기관들의 설명도 엇갈렸다....",
+          "source_url": "https://www.sisajournal.com/news/articleView.html?idxno=385865",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성운용 CIO 출신 남동준에 KB WM 전문가 이상화 합류…텍톤투자자문 ...",
+          "publisher": "thepowernews.co.kr",
+          "published_at": "2026-09-07T01:00:00Z",
+          "summary": "삼성자산운용 총괄 최고투자책임자(CIO) 출신 남동준 대표가 이끄는 텍톤투자자문에 KB금융 계열에서 리서치와 WM, 금융상품 업무를 두루 경험한 이상화 전 KB국민은행 상무가 합류했다. 텍톤투자자문은 이상화 전...",
+          "source_url": "https://www.thepowernews.co.kr/view.php?ud=202609070929163655de3f0aa1be_7",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 AI 업무 혁신 가속화 ...'그룹 통합 AI데이터 경진대회'...",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T01:00:00Z",
+          "summary": "|중앙이코노미뉴스 문혜원 기자|KB금융그룹은 지난 3일, 서울 여의도 KB국민은행 신관에서 임직원들이 현장에서 발굴한 문제를 AI로 해결하고 실질적인 업무 혁신으로 연결하기 위한 '2026 그룹 통합 AI 에이전트...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=545958",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 랠리에 코스피 장중 6900선 회복…환율 23개월 만에 1330원대",
+          "publisher": "hidomin.com",
+          "published_at": "2026-09-07T01:00:00Z",
+          "summary": "SK스퀘어도 5.38% 오르고 있으며 삼성생명(3.70%), 삼성전자우(2.51%), 현대차(1.69%), KB금융(1.40%) 등 시가총액 상위 종목 대부분이 상승세다. 증권가에서는 최근 이어진 반도체주 매도 압력이 완화될 가능성에...",
+          "source_url": "https://www.hidomin.com/news/articleView.html?idxno=720058",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 현장 업무 혁신 이끌 'AI 에이전트' 발굴",
+          "publisher": "newslock.co.kr",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "KB금융그룹이 직원들의 실무 경험과 첨단 기술을 융합해 실질적인 업무 환경 개선을 도모하는 사내 혁신 경연을 성황리에 마무리했다. KB금융그룹(회장 양종희)은 서울 여의도 신관에서 실무 적용이 가능한 인공지능 모델...",
+          "source_url": "http://www.newslock.co.kr/news/articleView.html?idxno=135615",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성액티브 \"배당성장액티브, 동일 ETF 중 수익·분배율 1위\"",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T00:53:00Z",
+          "summary": "개선되고 미래의 주주환원 확대 여력이 높은 우량 기업들을 발굴해 투자한다. 주요 편입 종목으로는 ▲삼성전자우(22.8%) ▲SK하이닉스(21.9%) ▲KB금융(3.2%) ▲ 한화에어로스페이스(2.9%) ▲SK스퀘어(2.6%) 등이다.",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907046400008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관 모처럼 ‘쌍끌이’…코스피 3% 급등하며 6900선 회복[마켓시...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "현대차(005380)는 1.96%, KB금융(105560)은 1.98% 상승하고 있으며 삼성바이오로직스(207940)도 0.48% 강세다. 로봇주도 상승세를 보이고 있다. 로보티즈(108490)가 4.27%, 레인보우로보틱스(277810)가 1.63% 오르고 있다. 반면...",
+          "source_url": "https://www.sedaily.com/article/20087844?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 316명 참여 AI 경진대회 열었다",
+          "publisher": "tokenpost.kr",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "KB금융그룹이 7개 계열사 임직원 316명이 참여한 인공지능(AI) 에이전트 경진대회를 열고 우수 과제를 실제 업무에 적용하기로 했다. KB금융은 3일 서울 여의도 KB국민은행 신관에서 '2026 그룹 통합 AI 에이전트 경진대회...",
+          "source_url": "https://www.tokenpost.kr/news/ai/403603",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 코스피, 외국인·기관 순매수에 3%대 상승",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "SK스퀘어(6.05%), 삼성물산(4.09%), 삼성전기(3.64%), 삼성전자우(2.35%), 현대차(1.96%), KB금융(1.69%) 등도 강세를 나타내고 있다. LG에너지솔루션(0.42%)과 삼성바이오로직스(0.28%)도 상승 중이다. 코스닥도 상승세를...",
+          "source_url": "https://www.newspim.com/news/view/20260907000202",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, 임직원 대상 AI 에이전트 경진대회 개최…AI 업무 혁신 가속",
+          "publisher": "epnc.co.kr",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "KB금융그룹이 AI를 통한 업무 효율 향상을 모색하는 가운데 '2026 그룹 통합 AI 에이전트 경진대회'를 개최했다고 7일 밝혔다. 이번 대회는 실제 업무에 적용할 수 있는 AI 에이전트를 발굴하고 우수 사례를 그룹 전반으로...",
+          "source_url": "https://www.epnc.co.kr/news/articleView.html?idxno=406597",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나증권 “은행주, 3분기 실적 시즌 겨냥 매수 바람직..주간 KB금융 하...",
+          "publisher": "kpenews.com",
+          "published_at": "2026-09-07T00:48:00Z",
+          "summary": "가능성이 낮아지고 있다는 점에서 은행주에 대한 센티멘트 개선 효과는 지속될 수 있을 것으로 판단한다. 이번 주 은행 주간 선호 종목으로 KB금융(매수/목표가 22만원)과 하나금융(매수/목표가 16만6000원)을 제시한다.",
+          "source_url": "https://kpenews.com/View.aspx?No=4215085",
+          "relevance": "high"
+        },
+        {
+          "headline": "'불기둥' 삼성전자·SK하이닉스⋯코스피 6900선 복귀",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "삼성전기(1.78%), LG에너지솔루션(0.84%), 현대차(2.35%), 삼성바이오로직스(0.28%), KB금융(1.79%), 삼성생명(4.20%) 등 시가총액 상위 종목들도 일제히 상승하고 있다. 코스닥 지수는 전 거래일 대비 11.60(1.43%) 오른 825....",
+          "source_url": "http://www.inews24.com/view/2002535",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 훈풍에 3%대 급등 6900선 돌파…삼전3%·닉스5%↑",
+          "publisher": "beyondpost.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "삼성전자(3.91%), SK하이닉스(5.65%), 삼성전자우(2.77%), SK스퀘어(6.24%), 삼성전기(1.64%), LG에너지솔루션(0.70%), 현대차(2.61%), 삼성바이오로직스(0.35%), 삼성생명(3.87%), KB금융(1.69%) 전부 상승 중이다. 키움증권 한지영...",
+          "source_url": "http://www.beyondpost.co.kr/view.php?ud=202609070943067703be44c0aacd_30",
+          "relevance": "high"
+        },
+        {
+          "headline": "웨이브, KLPGA '필드캠' 도입…선수 18홀 밀착 중계",
+          "publisher": "news.mtn.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "실시간 채팅과 멀티뷰 기능도 도입해 골프 중계 서비스를 강화한다.웨이브는 오는 13일 KB금융 골든라이프 챔피언십 최종라운드를 시작으로 11월까지 KLPGA 주요 대회에서 필드캠을 운영한다고 7일 밝혔다.필드캠은...",
+          "source_url": "https://news.mtn.co.kr/news-detail/2026090709240577328",
+          "relevance": "high"
+        },
+        {
+          "headline": "KB금융, AI 에이전트 경진대회 개최... 업무 혁신 본격화",
+          "publisher": "handmk.com",
+          "published_at": "2026-09-07T00:44:00Z",
+          "summary": "KB금융그룹이 임직원들의 아이디어를 AI 기술과 결합해 실제 업무 혁신으로 연결하는 '2026 그룹 통합 AI 에이전트 경진대회'를 개최했다. 이번 대회에는 KB금융지주를 비롯해 KB국민은행, KB증권, KB손해보험 등 7개...",
+          "source_url": "https://www.handmk.com/news/articleView.html?idxno=42899",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 삼전닉스 ‘쑥’…코스피 6900선 회복 [시황]",
+          "publisher": "dailian.co.kr",
+          "published_at": "2026-09-07T00:42:00Z",
+          "summary": "이 외에도 SK스퀘어(6.34%)·삼성전기(1.93%)·LG에너지솔루션(0.70%)·현대차(2.35%)·삼성바이오로직스(0.21%)·KB금융(1.69%)·삼성생명(4.03%) 등이 오르고 있다. 같은 시간 코스닥 지수는 전 거래일보다 13.41포인트(1.65...",
+          "source_url": "https://www.dailian.co.kr/news/view/1687085/?sc=Naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"일하는 방식의 AI 전환\"…KB금융, 사내 'AI 에이전트' 우수 과제 현장 ...",
+          "publisher": "thefairnews.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "KB금융그룹은 지난 3일 서울 여의도 KB국민은행 신관에서 계열사 임직원들의 AI 혁신 아이디어를 발굴하는 '2026 그룹 통합 AI 에이전트 경진대회'를 개최했다고 7일 밝혔다. 이번 대회는 현장의 업무 경험과 AI 기술을...",
+          "source_url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87255",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_9월 7일",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융, 한화에어로스페이스",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070004",
+          "relevance": "high"
+        },
+        {
+          "headline": "앤키화이트햇, KB금융은행에 '오펜 AI DAST' 공급…침투테스트 자동화 구...",
+          "publisher": "epnc.co.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "이성권 엔키화이트햇 대표는 \"KB국민은행에 오펜 AI DAST를 공급한 것은 당사의 지능형 오펜시브 보안 기술력이 금융권의 엄격한 기준을 충족했음을 보여주는 의미 있는 성과\"라며 \"앞으로도 AI 보안 기술력을 바탕으로...",
+          "source_url": "https://www.epnc.co.kr/news/articleView.html?idxno=406595",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_8월 31일_오차율",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "빅터뉴스 빅터뉴스 기자 ▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융...",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070002",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6900선 돌파…외인·기관 매수에 대형주 동반 상승",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "삼성전기는 3.28%, LG에너지솔루션은 0.7%, 현대차는 2.48%, 삼성바이오로직스는 0.41%, KB금융은 1.45%, 삼성생명은 3.7% 올랐다. 코스닥도 상승세를 나타냈다. 같은 시각 코스닥지수는 전 거래일 대비 9.57p(1.18...",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145568",
+          "relevance": "high"
+        },
+        {
+          "headline": "이재근, 이번보다 다음이 더 주목되는 이유 [KB 차기 리더 탐구]",
+          "publisher": "press9.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "KB금융지주 차기 회장 선임 절차가 막바지로 접어든 가운데 이재근 KB금융 글로벌·자산관리(WM)·중소기업금융(SME) 부문장의 최종 후보군 진입이 눈길을 끈다. KB금융 회장후보추천위원회는 지난달 27일 양종희 현 회장과...",
+          "source_url": "http://www.press9.kr/news/articleView.html?idxno=82254",
+          "relevance": "high"
+        },
+        {
+          "headline": "웨이브, KLPGA투어 현장 밀착 필드캠 선봬… 채팅 기능도 도입",
+          "publisher": "m-i.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "KB금융 골든라이프 챔피업십 최종 라운드(13일)를 시작으로 하나금융그룹 챔피언십(20일), 하이트진로 챔피언십(10월 4일), HJ중공업·동부건설 챔피언십(10월 11일), 아이스버그골프·서울신문 오픈(가칭, 10월 18일), 대보...",
+          "source_url": "https://www.m-i.kr/news/articleView.html?idxno=1410604",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 3.09,
+      "oldest_relevant_at": "2026-09-07T00:36:00Z",
+      "collected_at": "2026-09-07T03:41:10.091691Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814004200",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814004200"
+        },
+        {
+          "report_name": "[기재정정]사업보고서 (2025.12)",
+          "receipt_number": "20260619000667",
+          "published_at": "2026-06-19T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260619000667"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002888",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002888"
+        },
+        {
+          "report_name": "[기재정정]사업보고서 (2025.12)",
+          "receipt_number": "20260324000835",
+          "published_at": "2026-03-24T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000835"
+        },
+        {
+          "report_name": "[기재정정]반기보고서 (2025.06)",
+          "receipt_number": "20260324000827",
+          "published_at": "2026-03-24T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000827"
+        },
+        {
+          "report_name": "[기재정정]사업보고서 (2024.12)",
+          "receipt_number": "20260324000822",
+          "published_at": "2026-03-24T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000822"
+        },
+        {
+          "report_name": "[기재정정]반기보고서 (2024.06)",
+          "receipt_number": "20260324000813",
+          "published_at": "2026-03-24T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000813"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260313001191",
+          "published_at": "2026-03-13T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313001191"
+        }
+      ],
+      "collected_at": "2026-09-07T03:41:10.253382Z",
+      "request_id": "7a788081-7e5b-4dad-ab6e-0517e3b94399",
+      "source_type": "dart",
+      "stock_code": "105560",
+      "company_name": "KB금융"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "[기재정정]사업보고서 (2025.12)",
+      "receipt_number": "20260324000835",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "신탁방식 사업수요는 지속적으로 증가할 전망입니다. 그러나 공사비 및 분담금 증가로 인해 신규 사업장의 경우 규모보다는 사업성 중심으로 재편될 것으로 예상되는 만큼, 핵심지역 내 우량 사업장 수주를 위한 업계의 경쟁이 치열해질 것으로 예상됩니다.\n□ 벤처캐피탈 및 PE업\n2025년 신규 벤처펀드 결성금액은 14.3조원으로 전년 대비 34.1% 증가하였으며, 벤처투자 금액은 14% 증가한 13.6조원을 달성하였습니다. 인공지능(AI), 바이오 등 주요 혁신 분야에 대한 투자가 활발히 이루어졌으며, 특히 민간 출자 확대가 신규 벤처펀드 결성을 견인하며 시장 회복세가 이어졌습니다.\n벤처캐피탈 산업은 벤처투자시장 활성화를 위한 정부의 지속적인 정책 지원과 민간 분야의 시장 참여 확대로 지속적인 성장이 전망됩니다. 이에 KB인베스트먼트는 민간 벤처모펀드 결성 및 CVC 등의 전략적 투자를 통해 관련 생태계 활성화에 기여할 계획입니다.\n(5) 보험업□ 손해보험업\n가. 사업부문별로 회사가 속해 있는 산업 전반의 현황\n(1) 사업의 현황\n장기보험은 금리 하락 등 경제지표의 불확실성과 보험업권 전반의 건전성 강화 압박 속에서, 건강 관련 고객 Needs도 계속 증가하여 인보험을 중심으로 성장세가 지속될 것으로 보입니다. 자동차보험은 손해율 악화에 따른 업계 기본보험료 인상, 등록대수 증가 등 시장 성장 기조 속에서도, 치료비 제도개선과 기후리스크에 따른 보험 손익 변동성 확대로, 업계 전반에 걸친 비우호적 손익 환경이 예상됩니다. 또한 일반보험은 국내 경기둔화 및 석유화학 업종 등 사업재편 영향으로 저성장 기조의 고착화와 업권내 요율경쟁 지속으로 인해 단순 외형 성장보다는 리스크 관리 역량과 수익성이 핵심 요소가 될 것으로 전망합니다. 이에 따라 KB라이프생명은 시장을 선도할 수 있는 선제적인 상품 제공 및 고객 서비스운영을 통해 시장 지위를 개선하고 나아가 CSM 확대를 가속화하여 지속적이고 안정적인 성장이 가능한 구조를 내재화하고자 합니다.",
+          "score": 0.510145,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "주) 실질적인 영업활동을 수행하지 않는 주요 종속회사에 대해서는 작성하지 않았습니다.\n(3) 시장점유율 추이\n[주식 수탁수수료 시장점유율 현황] | (단위: 백만원, %)\n구 분 | 25.01.01~'25.09.30 | 24.01.01~'24.12.31 | 23.01.01~'23.12.31 | '22.01.01~'22.12.31\n금액 | 점유율 | 금액 | 점유율 | 금액 | 점유율 | 금액 | 점유율\n당사 | 336,634 | 9.84% | 379,800 | 9.79% | 426,550 | 10.69% | 330,326 | 9.86%\n삼성증권 | 275,559 | 8.06% | 332,479 | 8.57% | 344,862 | 8.64% | 269,224 | 8.03%\nNH투자증권 | 315,300 | 9.22% | 357,959 | 9.23% | 373,060 | 9.35% | 304,002 | 9.07%\n미래에셋증권 | 348,436 | 10.19% | 397,069 | 10.23% | 395,940 | 9.93% | 321,645 | 9.60%\n한국투자증권 | 221,768 | 6.48% | 236,783 | 6.10% | 232,061 | 5.82% | 194,905 | 5.82%\n주) 상기 자료는 금융통계정보시스템(FISIS)의 통계자료를 기초로 작성하였고, 지분증권 위탁매매수수료를 기준으로 작성\n(4) 관련법령 및 감독규정\n금융투자업 전반 | 상법, 민법, 자본시장과 금융투자업에 관한 법률, 금융실명거래 및 비밀보장에 관한 법률,금융투자업규정, 증권의 발행 및 공시등에 관한 규정\n과세 | 소득세법, 법인세법, 농특세법, 조세특례제한법, 증권거래세법\n국제화 | 외국환거래법, 외국인투자촉진법\n기타 | 주식회사등의 외부감사에 관한 법률, 독점규제 및 공정거래에 관한 법률,근로자퇴직급여 보장법\n다. 시장경쟁요소 (1) 경쟁요인",
+          "score": 0.509252,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 2. 영업의 현황",
+          "text": "구분 | 2025년 | 2024년 | 2023년\n금액 | 비율 | 금액 | 비율 | 금액 | 비율\n생존 | 1,877,978 | 32.76 | 1,272,105 | 27.20 | 709,640 | 17.24\n사망 | 2,173,521 | 37.91 | 2,104,220 | 44.99 | 2,132,223 | 51.80\n생사혼합 | 622 | 0.01 | 774 | 0.02 | 44,611 | 1.08\n단체 | 1,390 | 0.02 | 1,520 | 0.03 | 1,531 | 0.04\n특별계정 | 1,679,679 | 29.30 | 1,298,159 | 27.76 | 1,228,146 | 29.84\n합계 | 5,733,190 | 100.00 | 4,676,778 | 100.00 | 4,116,151 | 100.00\n주) 특별계정은 원리금보장형 특별계정과 실적배당형 특별계정의 합\n마. 영업실적\n(1) 최근 3년간 영업실적\n(단위 : 백만원)\n구분 | 2025년 | 2024년 | 2023년\n보험영업수익 | 872,636 | 865,050 | 781,478\n보험영업비용 | 592,183 | 541,414 | 534,768\n투자영업수익 | 2,578,003 | 1,988,181 | 1,851,268\n투자영업비용 | 2,427,106 | 1,899,817 | 1,747,846\n기타영업손익 | (42,080) | (40,868) | (32,471)\n영업이익 | 389,270 | 371,132 | 317,661\n영업외손익 | 4,632 | (3,462) | (5,482)\n법인세비용차감전순이익 | 393,902 | 367,670 | 312,179\n법인세비용 | 149,931 | 98,266 | 78,076\n당기순이익 | 243,971 | 269,404 | 234,103\n주1) K-IFRS 연결재무제표 기준주2) 2023년은 보험금융손익 체계적배분 관련 등 회계정책의 변경으로 인해 2024년 말 소급재작성 되었음\n바. 주요 상품 및 서비스",
+          "score": 0.490462,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 재무건전성 등 기타 참고사항",
+          "text": "구 분 | 2025년말 | 2024년말 | 2023년말\n일반계정 | 보험계약부채 | 261,553 | 263,950 | 242,775\n보험계약자산 | 2,712 | 2,762 | 2,296\n재보험계약자산 | 14,748 | 14,318 | 15,555\n재보험계약부채 | 256 | 220 | 38\n투자계약부채 | 96,121 | 57,575 | 45,101\n특별계정 | 계약자적립금 | 644 | 564 | 613\n주1) 손해보험경영통일공시 기준으로 작성됨주2) 특별계정은 실적배당형퇴직연금의 특별계정임주3) 기업회계기준서 제1117호 및 제1109호 기준임\n(2) 지급여력비율\n(단위 : 백만원, %)\n구 분 | 2025년말 | 2024년말 | 2023년말\n지급여력(A) | 12,190,838 | 11,318,549 | 11,668,880\n지급여력기준(B) | 6,368,633 | 6,071,606 | 5,403,656\n지급여력비율(A/B) | 192.42 | 186.42 | 215.94\n주1) 2025년말 기준 수치는 잠정치로, 2026년 3월 이내에 확정치로 KB손해보험 사업보고서에 정정공시할 예정임주2) 2023년부터 K-ICS 방식으로 지급여력비율 산출\n(3) 주요경영효율지표\n(단위 : %)\n구 분 | 2025년말 | 2024년말 | 2023년말\nROA | 1.83 | 2.19 | 2.04\nROE | 13.50 | 14.09 | 12.20\n주1) 2023년 및 2024년은 K-IFRS 1117호 및 K-IFRS 1109호 재무제표 기준,\n주2) ROA : 당기순이익/((전회계연도말총자산+기말총자산)/2)×(4/경과분기수)\n총자산은 B/S상의 총자산에서 영업권 및 특별계정자산을 차감한 잔액임\n주3) ROE : 당기순이익/((전회계연도말자기자본+기말자기자본)/2)×(4/경과분기수)\n주4) 보험업감독업무시행세칙에 따른 업무보고서 작성기준 및 손해보험 경영통일공시기준으로 작성주5) 2023년의 경우 소급 재작성하였음\n[KB국민카드]\n(1) 주요경영지표 현황",
+          "score": 0.483564,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 2. 영업의 현황",
+          "text": "주1) 보험업감독업무시행세칙에 따른 업무보고서상 사업실적표 기준으로 작성됨\n주2) 당기 및 전기는 기업회계기준서 제1117호 기준임\n주3) 보험서비스비용에는 기타사업비용이 포함됨\n(2) 보험종목별 보유보험료, 순사업비 및 사업비 집행률 현황\n(단위 : 억원, %)\n구 분 | 2025년말 | 2024년말 | 2023년말\n보유보험료 (a) | 순사업비 (b) | 사업비집행률 (b/a) | 보유보험료 (a) | 순사업비 (b) | 사업비집행률 (b/a) | 보유보험료 (a) | 순사업비 (b) | 사업비집행률 (b/a)\n화 재 | 121 | 67 | 55.5 | 164 | 119 | 72.7 | 121 | 84 | 69.3\n해 상 | 280 | 75 | 26.7 | 328 | 135 | 41.1 | 336 | 76 | 22.5\n자동차 | 28,834 | 4,496 | 15.6 | 28,144 | 4,736 | 16.8 | 27,904 | 4,645 | 16.6\n보 증 | 1 | -2 | -221.7 | 1 | -1 | -113.5 | 1 | -2 | -174.3\n특 종 | 7,150 | 1,085 | 15.2 | 6,777 | 2,303 | 34.0 | 5,659 | 1,336 | 23.6\n해외원보험 | -43 | 39 | -90.5 | 38 | 62 | 164.9 | -13 | 98 | -734.1\n해외수재 | 1,185 | 316 | 26.7 | 138 | 10 | 7.0 | 78 | 18 | 23.6\n장 기 | 91,958 | 27,028 | 29.4 | 85,118 | 24,872 | 29.2 | 78,822 | 20,052 | 25.4\n개인연금 | 930 | 42 | 4.5 | 1,110 | 55 | 5.0 | 1,327 | 58 | 4.4\n합 계 | 130,415 | 33,147 | 25.4 | 121,819 | 32,291 | 26.5 | 114,234 | 26,365 | 23.1",
+          "score": 0.4831,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000835",
+      "collected_at": "2026-09-07T03:41:11.040999Z",
+      "request_id": "ca4c5901-67c8-4bc1-9442-c351917705ff",
+      "source_type": "dart",
+      "stock_code": "105560",
+      "company_name": "KB금융"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "KB금융",
+      "stock_code": "105560",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:41:09.491579+00:00",
+        "to": "2026-09-07T03:41:09.491579+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 136,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 65.25,
+        "ratio": 2.08,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 30,
+        "neutral_count": 34,
+        "negative_count": 36
+      },
+      "top_topics": {
+        "expectations": [
+          "KB금융이 연말까지 완만한 상승세를 이어갈 가능성을 기대한다.",
+          "금리 상승이 KB금융의 실적과 주가에 유리할 것으로 기대한다.",
+          "금융주 선호와 상대적 매력 인식",
+          "KB금융 동시호가 급변에 놀라는 반응"
+        ],
+        "concerns": [
+          "고금리가 오래 지속될 수 있다는 우려로 미국 증시가 하락했다고 평가한다.",
+          "기술적 돌파 뒤 조정을 예상하는 단기 경계감",
+          "해외 금융주와 달리 KB금융이 부진한 이유를 걱정스럽게 묻는다.",
+          "공매도 세력이 과도하게 움직인다는 불안과 불신이 있다.",
+          "자사주 매각으로 주가가 내린다고 보는 국내장 불신"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "고금리가 오래 지속될 수 있다는 우려로 미국 증시가 하락했다고 평가한다.",
+          "sentiment": "negative",
+          "posted_at": "2026-09-01T21:38:51+00:00"
+        },
+        {
+          "text": "두 금융주 사이에서 고민한 끝에 KB를 매수했지만 결과에 대한 확신은 드러내지 않는다.",
+          "sentiment": "neutral",
+          "posted_at": "2026-09-02T01:17:47+00:00"
+        },
+        {
+          "text": "KB금융이 연말까지 완만한 상승세를 이어갈 가능성을 기대한다.",
+          "sentiment": "positive",
+          "posted_at": "2026-09-02T00:45:41+00:00"
+        },
+        {
+          "text": "금리 상승이 KB금융의 실적과 주가에 유리할 것으로 기대한다.",
+          "sentiment": "positive",
+          "posted_at": "2026-09-01T23:45:42+00:00"
+        },
+        {
+          "text": "기술적 돌파 뒤 조정을 예상하는 단기 경계감",
+          "sentiment": "negative",
+          "posted_at": "2026-09-02T05:41:00+00:00"
+        }
+      ],
+      "collected_at": "2026-09-07T03:41:09.491579+00:00",
+      "fgi_mean": 48.76,
+      "fgi_latest": {
+        "fgi": 52.94,
+        "label": "극탐욕",
+        "as_of": "2026-09-06T05:45:00+00:00",
+        "post_count": 1,
+        "valence_percentile": 90.93
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260904800176",
+          "published_at": "2026-09-04T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904800176"
+        },
+        {
+          "report_name": "증권발행실적보고서",
+          "receipt_number": "20260831001290",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831001290"
+        },
+        {
+          "report_name": "투자설명서",
+          "receipt_number": "20260831000056",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831000056"
+        },
+        {
+          "report_name": "[첨부정정]증권신고서(채무증권)",
+          "receipt_number": "20260826000090",
+          "published_at": "2026-08-26T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826000090"
+        },
+        {
+          "report_name": "[발행조건확정]증권신고서(채무증권)",
+          "receipt_number": "20260825000482",
+          "published_at": "2026-08-25T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825000482"
+        },
+        {
+          "report_name": "[기재정정]증권신고서(채무증권)",
+          "receipt_number": "20260825000479",
+          "published_at": "2026-08-25T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825000479"
+        },
+        {
+          "report_name": "[기재정정]주요사항보고서(상각형조건부자본증권발행결정)",
+          "receipt_number": "20260825000422",
+          "published_at": "2026-08-25T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260825000422"
+        },
+        {
+          "report_name": "[기재정정]최대주주등소유주식변동신고서              ",
+          "receipt_number": "20260821800672",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821800672"
+        },
+        {
+          "report_name": "최대주주등소유주식변동신고서              ",
+          "receipt_number": "20260821800357",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821800357"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260820800325",
+          "published_at": "2026-08-20T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260820800325"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260820800322",
+          "published_at": "2026-08-20T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260820800322"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260820800320",
+          "published_at": "2026-08-20T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260820800320"
+        },
+        {
+          "report_name": "증권신고서(채무증권)",
+          "receipt_number": "20260819000353",
+          "published_at": "2026-08-19T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819000353"
+        },
+        {
+          "report_name": "[기재정정]주요사항보고서(상각형조건부자본증권발행결정)",
+          "receipt_number": "20260819000279",
+          "published_at": "2026-08-19T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819000279"
+        },
+        {
+          "report_name": "[기재정정]일괄신고서",
+          "receipt_number": "20260818000230",
+          "published_at": "2026-08-18T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260818000230"
+        }
+      ],
+      "collected_at": "2026-09-07T03:41:11.302460Z",
+      "request_id": "a2379462-46b9-494f-b1d9-40298548cc88",
+      "source_type": "dart",
+      "stock_code": "105560",
+      "company_name": "KB금융"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260814004200": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    },
+    "20260619000667": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "EXTERNAL_API_ERROR",
+        "message": "외부 서비스 호출에 실패했습니다.",
+        "retryable": true
+      }
+    },
+    "20260515002888": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    },
+    "20260324000835": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    },
+    "20260324000827": {
+      "error": {
+        "service": "disclosure_mcp",
+        "code": "MCP_TIMEOUT",
+        "message": "MCP Tool 실행이 시간 초과되었습니다.",
+        "retryable": true
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260814004200",
+    "20260619000667",
+    "20260515002888",
+    "20260324000835",
+    "20260324000827"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:41:09.374825Z"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:41:09.375230Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:41:09.375581Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:41:09.375753Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:41:09.375890Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:41:09.376009Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:41:09.376115Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:41:09.975968Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:41:10.054793Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:41:10.119011Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:41:10.534526Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:41:11.093548Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-105560",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:41:11.604599Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

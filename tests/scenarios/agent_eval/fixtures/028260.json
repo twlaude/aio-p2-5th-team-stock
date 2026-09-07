@@ -1,0 +1,1345 @@
+{
+  "company": {
+    "company_name": "삼성물산",
+    "stock_code": "028260"
+  },
+  "captured_at": "2026-09-07T03:40:23.467916+00:00",
+  "capture_finished_at": "2026-09-07T03:47:54.003278+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "삼성물산",
+      "stock_code": "028260",
+      "current_price": 378500,
+      "change": 11500,
+      "change_rate": 3.13,
+      "volume": 150207,
+      "volume_change_rate": 37.95,
+      "avg_volume_20d": 371186,
+      "volume_ratio_20d": 0.72,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 265795,
+      "warnings": [],
+      "as_of": "2026-09-07T03:40:23.871631Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:40:23.871631Z"
+    },
+    "news": {
+      "request_id": "747e9167-e751-487a-9d7c-c4bc9152d853",
+      "status": "success",
+      "company_name": "삼성물산",
+      "stock_code": "028260",
+      "articles": [
+        {
+          "headline": "출혈 경쟁 대신 '선택과 집중'…30조 목동 수주전 달군 선별수주",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T03:16:00Z",
+          "summary": "시공사 선정을 앞둔 8단지와 13단지는 각각 대우건설과 삼성물산의 단독 입찰 가능성에 무게가 실린다. 결국 핵심 입지로 꼽히는 소위 '대장 아파트'격인 7단지와 14단지 정도에서만 경쟁 입찰이 펼쳐질 것이라는...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723225",
+          "relevance": "high"
+        },
+        {
+          "headline": "패션업계, 서울·부산 신규 매장 오픈...시장 공략 강화",
+          "publisher": "wsobi.com",
+          "published_at": "2026-09-07T03:06:00Z",
+          "summary": "7일 패션업계에 따르면 이랜드월드가 운영하는 스파오(SPAO)와 삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일), LS네트웍스가 운영하는 스포츠 브랜드 프로-스펙스는 최근 각각 서울과 부산에서...",
+          "source_url": "http://www.wsobi.com/news/articleView.html?idxno=317669",
+          "relevance": "high"
+        },
+        {
+          "headline": "서울 정비사업 25곳 중 22곳 단독응찰…수주전 '옛말'되나",
+          "publisher": "sisajournal.com",
+          "published_at": "2026-09-07T03:05:00Z",
+          "summary": "공사비가 2조원대인 여의도 시범아파트 재건축은 지난달 1차 입찰에서 삼성물산만 참여해 유찰됐다. 첫 현장설명회에는 7개 건설사가 참석했지만 본입찰에는 삼성물산만 나섰다. 지난 3일 열린 2차 현장설명회에도...",
+          "source_url": "https://www.sisajournal.com/news/articleView.html?idxno=386249",
+          "relevance": "high"
+        },
+        {
+          "headline": "[공시]한양이엔지, 삼성물산 1480억 특급 수주",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-07T02:56:00Z",
+          "summary": "| 서울=한스경제 김종효 기자 | 한양이엔지는 삼성물산과 1480억5900만 원 규모의 P5 Ph1 일반배관1공구 공급계약을 체결했다고 7일 공시했다. 항목 내용 이번에 체결한 계약의 금액은 부가세 별도 기준 1480억5900만...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862706",
+          "relevance": "high"
+        },
+        {
+          "headline": "전남광주시·삼성, ‘청년지원 협력’ MOU",
+          "publisher": "munhwa.com",
+          "published_at": "2026-09-07T02:51:00Z",
+          "summary": "전남 광주=김대우 기자 전남광주시와 삼성전자·삼성물산이 업무협약(MOU)을 맺고 지역 청년단체·자립준비 청년 지원을 위해 맞손을 잡는다. 전남광주시는 7일 오전 광주청사 비즈니스룸에서 ‘전남광주시-삼성 청년지원...",
+          "source_url": "https://www.munhwa.com/article/11615016?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "판매 넘어 '경험'으로…패션업계, 오프라인 매장 역할 넓힌다",
+          "publisher": "kdfnews.com",
+          "published_at": "2026-09-07T02:48:00Z",
+          "summary": "사진=삼성물산 패션부문 패션 브랜드들이 오프라인 매장에 상품 판매 이상의 기능을 더하고 있다. 브랜드와 어울리는 외부 상품을 함께 제안하거나 스포츠 전시를 열고, 인기 IP와 체험 서비스를 집중시키는 등...",
+          "source_url": "http://www.kdfnews.com/news/articleView.html?idxno=187625",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드, '좀비 도시' 된다...'블러드시티 제로' 12일 오픈",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T02:37:00Z",
+          "summary": "삼성물산 리조트부문 에버랜드는 오는 12일부터 11월22일까지 가을축제 시그니처 호러 테마존인 '블러드시티 제로: 지옥의 문'을 운영한다고 7일 밝혔다. 올해 블러드시티는 영화 '해적', '공조2' 등을 연출한 이석훈 감독과...",
+          "source_url": "https://www.fnnews.com/news/202609071013076587",
+          "relevance": "high"
+        },
+        {
+          "headline": "“목동 잡아라” 건설사 홍보전 가열...대형사 ‘브랜드 라운지’ 잇따...",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T02:18:00Z",
+          "summary": "현대건설과 대우건설, DL이앤씨가 일찌감치 홍보 거점을 마련한 데 이어 롯데건설과 IPARK현대산업개발, 포스코이앤씨, GS건설, 삼성물산 등도 라운지 개관을 준비하면서 목동을 둘러싼 장외 수주전이 달아오르는...",
+          "source_url": "https://www.g-enews.com/view.php?ud=20260907101446433914b1077807_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "남성복 名家 삼성 갤럭시, 큐레이션 공간 '탈바꿈'",
+          "publisher": "shinailbo.co.kr",
+          "published_at": "2026-09-07T02:18:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 전략매장 'GLXY 스튜디오'를 신세계백화점 센텀시티점과 강남점에 순차적으로 출점하며 고객 외연 넓히기에 나서는 모습이다. 7일 삼성물산...",
+          "source_url": "https://www.shinailbo.co.kr/news/articleView.html?idxno=5059131",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 'GLXY', 신세계 센텀시티·강남점에 스튜디오 첫선",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T02:15:00Z",
+          "summary": "핵심 상품에 글로벌 브랜드 더해 폭넓은 남성 스타일 제안 삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)는 신세계백화점 센텀시티점과 강남점에 새로운 형태의 매장인 'GLXY 스튜디오'를...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907066000030?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 메모리주 강세에 장 초반 3%대 상승...삼전 4%·SK하닉 6%↑",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "삼성생명은 4.71%, 삼성물산은 3.81% 상승 중이다. 현재 국내 증시는 AI 기대가 다시 반도체 업황 개선 기대와 맞물리며 강한 반등 흐름을 보이고 있다. 시가총액 상위 종목 가운데 삼성전기는 2.50...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317738",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 이익 증가율 꺾였다, 원화 강세에도 웃을 '실적 개선주'는",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T02:07:00Z",
+          "summary": "8%p), 삼성물산 8.6%→9.0%(+0.4%p), HD한국조선해양 18.4%→18.5%(+0.1%p) 순으로 영업이익률이 개선될 전망이다. 이 연구원은 과거 같은 시장 환경에서 영업이익률 개선 가능성이 상대적으로 높았던 기업의 비중을 확대하는...",
+          "source_url": "https://www.newspim.com/news/view/20260906000155",
+          "relevance": "high"
+        },
+        {
+          "headline": "한양이엔지, 1481억 규모 공사 수주",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-07T02:02:00Z",
+          "summary": "한양이엔지는 삼성물산과 1481억원 규모의 P5 Ph1 일반배관1공구 공사 수주계약을 체결했다고 7일 공시했다. 이는 지난해 매출액 대비 13.24%에 해당하는 규모로 계약 기간은 오는 15일부터 내년 9월 30일까지다.",
+          "source_url": "https://www.newsis.com/view/NISX20260907_0003778929",
+          "relevance": "high"
+        },
+        {
+          "headline": "본업 살아나고, 주주환원 '주목'...KCC 주가 '장중 활짝'",
+          "publisher": "choicenews.co.kr",
+          "published_at": "2026-09-07T02:02:00Z",
+          "summary": "본업인 실리콘 사업의 수익성 회복 전망, 삼성물산 지분가치 기대감 등이 거론되는 가운데 이 같은 흐름이 나타나고 있다. KCC는 지난 6월 말 기준 삼성물산 지분 10.49%를 보유하고 있다. 지난 2015년 삼성물산...",
+          "source_url": "http://www.choicenews.co.kr/news/articleView.html?idxno=171019",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]코스피, 오픈AI발 호재에 6,900선 재탈환…삼전 4.3%·닉스 5.9% 급...",
+          "publisher": "kwnews.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.kwnews.co.kr/article/20260907500348",
+          "relevance": "high"
+        },
+        {
+          "headline": "“역시 삼성전자 압도적 1위” 브랜드 가치 ‘135조’…세계 홀린 K기업...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T01:47:00Z",
+          "summary": "이어 현대모비스가 66억달러(5.1%↑), 삼성물산이 62억5000만달러(3.3%↑)로 상위 10위권에 이름을 올렸다. 금융과 방산 기업의 약진은 10위권 밖에서도 두드러졌다. 하나금융그룹은 지난해 20위에서 올해 15위로...",
+          "source_url": "https://www.sedaily.com/article/20087889?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "GLXY 글로벌 브랜드 큐레이션 강화...센텀시티·강남점에 전략매장",
+          "publisher": "ktnews.com",
+          "published_at": "2026-09-07T01:42:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 대표 상품의 성장세를 바탕으로 글로벌 브랜드 큐레이션을 결합한 전략 매장 'GLXY 스튜디오'를 선보였다. GLXY의 대표 상품인 'G핏 팬츠'는...",
+          "source_url": "http://www.ktnews.com/news/articleView.html?idxno=148269",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등… 코스피 6,900선 재탈환",
+          "publisher": "fntoday.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%)이 상승 중이며 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등 시가총액 상위 종목 대다수가 상승 대열에 합류했다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://www.fntoday.co.kr/news/articleView.html?idxno=392276",
+          "relevance": "high"
+        },
+        {
+          "headline": "쏟아지는 데이터센터 공기단축 경쟁",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:38:00Z",
+          "summary": "◆설계 최적화·냉각 기술로 경쟁 확대 삼성물산은 설계 단계부터 참여해 공정과 비용을 최적화하는 전략을 추진한다. 2024년 11월 4000억원에 수주한 안산 글로벌 클라우드 센터에서는 사전 설계·시공 검토 서비스를...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362710",
+          "relevance": "high"
+        },
+        {
+          "headline": "[김욱성의 오늘 와인 한잔]칠레 와인의 서늘한 혁명, 비노스 배티그(Vin...",
+          "publisher": "sommeliertimes.com",
+          "published_at": "2026-09-07T01:34:00Z",
+          "summary": "김욱성은 경희대 국제경영학 박사출신으로, 삼성물산과 삼성인력개발원, 호텔신라에서 일하다가 와인의 세계에 빠져들어 프랑스 국제와인기구(OIV)와 Montpellier SupAgro에서 와인경영 석사학위를 받았다. 세계 25개국...",
+          "source_url": "https://www.sommeliertimes.com/news/articleView.html?idxno=131575",
+          "relevance": "high"
+        },
+        {
+          "headline": "하반기 최대 승부처 된 목동…건설사들 '전용 라운지' 열고 표심몰이",
+          "publisher": "theguru.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "앞서 압구정과 성수, 여의도 등 재건축 수주전은 현대건설과 삼성물산, GS건설 등 대형사 위주로 마무리됐다. 반면 5만여 가구 신도시급으로 재탄생하는 목동은 14개 단지에 이르는 만큼 건설사가 수주 기회를 나눠...",
+          "source_url": "https://www.theguru.co.kr/news/article.html?no=106762",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "시가총액 상위 종목 가운데서는 삼성전자(3.82%), SK하이닉스(6.19%), SK스퀘어(5.86%), 삼성전기(1.93%), LG에너지솔루션(0.42%), 현대차(1.69%), 삼성바이오로직스(0.21%), KB금융(1.63%), 삼성생명(3.78%), 삼성물산(2.72...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피,美오픈AI 호재에 6,900선…환율 23개월만에 1,330원대",
+          "publisher": "seouleconews.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있다. 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "http://www.seouleconews.com/news/articleView.html?idxno=93564",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승",
+          "publisher": "news.sbs.co.kr",
+          "published_at": "2026-09-07T01:17:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중입니다. 반면 삼성SDI(-0.91%), 셀트리온...",
+          "source_url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008740759&plink=ORI&cooper=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "'삼성물산 관심' 여의도 시범, 재건축 사업시행인가 임박",
+          "publisher": "arunews.com",
+          "published_at": "2026-09-07T01:16:00Z",
+          "summary": "삼성물산이 시공권에 관심을 보이는 서울 영등포구 여의도 시범아파트 재건축 사업시행인가가 임박했다. 앞으로 최고 59층 아파트 2,491세대로 탈바꿈된다. 구는 여의도 시범아파트 사업시행자인 한국자산신탁이...",
+          "source_url": "https://www.arunews.com/news/articleView.html?idxno=66840",
+          "relevance": "high"
+        },
+        {
+          "headline": "롯데건설, 4002억 도곡우성 수주…올해 6번째 정비사업",
+          "publisher": "fetv.co.kr",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "7월 기준 현대건설과 GS건설이 나란히 7조원대에 올라섰고 삼성물산이 4조원대로 뒤를 이었다. 롯데건설은 앞서 성동구 성수전략정비구역 제4지구 재개발(1조3492억원)과 안양 충훈부 공공재개발(7567억원), 성동구...",
+          "source_url": "https://www.fetv.co.kr/news/articleView.html?idxno=309710",
+          "relevance": "high"
+        },
+        {
+          "headline": "[건설 인당 생산성] 28개사 '총 직원 수 감소'…'운용전략'은 각양각색",
+          "publisher": "fetv.co.kr",
+          "published_at": "2026-09-07T01:10:00Z",
+          "summary": "2행은 건설 외 사업을 겸하는 회사의 건설부문만 별도재무제표 주석에서 뽑은 참고치다. 28개사 순위·합산에는 포함하지 않았다. 삼성물산은 부문별 매출원가를 공시하지 않아 1인당 매출총이익을 낼 수 없다.",
+          "source_url": "https://www.fetv.co.kr/news/articleView.html?idxno=309661",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체주 훈풍…코스피, 3% 급등·6900 회복",
+          "publisher": "sentv.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "이 밖에 삼성생명(3.87%), 삼성물산(3.0%), KB금융(1.34%), 현대차(1.04%), 삼성바이오로직스(0.41%) 등이 오름세를 이어가고 있다. 코스닥지수는 전일 대비 0.95% 오른 821.26에 거래되고 있다. 개인과 기관이 각각 506억원...",
+          "source_url": "https://www.sentv.co.kr/article/view/sentv202609070040",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 오픈AI 호재…코스피 3%대 급등",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "다른 시가총액 상위주 가운데 SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%), 삼성전기(2.50%), 현대차(1.83%), LG에너지솔루션(0.42%) 등도 상승 중이다. 반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862662",
+          "relevance": "high"
+        },
+        {
+          "headline": "건설업계 데이터센터 사업 드라이브…기술·인력 확보 총력",
+          "publisher": "asiatime.co.kr",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "삼성물산은 지난 5~6월 용인 데이터센터 전기시공과 기계 커미셔닝, 춘천 모듈러 데이터센터 건축·품질 분야 경력직을 채용했다. 대우건설은 데이터센터 시공현장의 설계와 전기·기계·사업관리 직군을 모집했고...",
+          "source_url": "https://www.asiatime.co.kr/article/20260907500078",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 갤럭시 라이프스타일, 브랜드 정체성과 글로벌 감각 ‘GLXY 스...",
+          "publisher": "fashionn.com",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "삼성물산의 갤럭시 라이프스타일(GLXY)이 고객의 스타일링 경험을 넓히는 전략 매장을 선보인다. 삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 브랜드 정체성에 감각적인 큐레이션을 결합한...",
+          "source_url": "http://www.fashionn.com/board/read_new.php?table=1006&number=62305",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드, '블러드시티' 10주년…이석훈 감독과 호러 콘텐츠 강화",
+          "publisher": "etnews.com",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "삼성물산 리조트부문 에버랜드는 오는 12일부터 11월 22일까지 72일간 가을축제 '블러드시티 제로 : 지옥의 문'을 운영한다고 7일 밝혔다. 2017년 시작한 블러드시티는 누적 방문객 1000만명 이상을 기록한 대표 호러...",
+          "source_url": "https://www.etnews.com/20260907000094",
+          "relevance": "high"
+        },
+        {
+          "headline": "아스트라 돌풍, 이번엔 정말 ‘칠천피’ 재돌파?…코스피, 6900선 회복 [...",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있다. 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "https://biz.heraldcorp.com/article/10864511?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드·롯데월드 물들인 '호러' … 영화감독·이토 준지 세계관 입힌...",
+          "publisher": "biz.newdaily.co.kr",
+          "published_at": "2026-09-07T00:54:00Z",
+          "summary": "7일 관련 업계에 따르면 삼성물산 리조트부문 에버랜드는 오는 12일부터 11월 22일까지 가을축제 시그니처 호러 테마존 ‘블러드시티 제로 : 지옥의 문’을 운영한다. 2017년 처음 선보인 블러드시티는 올해 10년차를 맞았다....",
+          "source_url": "https://biz.newdaily.co.kr/site/data/html/2026/09/07/2026090700049.html",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관 모처럼 ‘쌍끌이’…코스피 3% 급등하며 6900선 회복[마켓시...",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "삼성생명(032830)은 4.71%, 삼성물산(028260)은 3.88% 오르고 있다. 현대차(005380)는 1.96%, KB금융(105560)은 1.98% 상승하고 있으며 삼성바이오로직스(207940)도 0.48% 강세다. 로봇주도 상승세를 보이고 있다. 로보티즈(108490)...",
+          "source_url": "https://www.sedaily.com/article/20087844?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드, 좀비로 뒤덮인다…이머시브 호러 테마존 '블러드시티 제로' ...",
+          "publisher": "ajunews.com",
+          "published_at": "2026-09-07T00:52:00Z",
+          "summary": "삼성물산 리조트부문 에버랜드는 가을축제 시그니처 호러 테마존인 '블러드시티 제로 : 지옥의 문'을 오는 12일부터 11월 22일까지 72일간 운영한다고 7일 밝혔다. 올해로 10년 차를 맞은 블러드시티는 누적 관람객 1000만명...",
+          "source_url": "https://www.ajunews.com/view/20260907094359061",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"땡큐, 오픈AI\"...코스피, 미국발 훈풍에 6,900선 탈환",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T00:51:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있다. 시가총액 상위주 중 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0.11...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070134&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI '아스트라' 훈풍에 3%대 급등…6900선 회복",
+          "publisher": "ppss.kr",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "SK스퀘어도 6.44% 상승했고 삼성생명 4.71%, 삼성물산 3.81% 등 주요 대형주도 강세다. 삼성전기와 현대차도 각각 2.50%, 1.83% 상승하고 있다. 업종별로도 반도체를 포함한 기술주 강세가 두드러진다. 전기·전자가 4.96...",
+          "source_url": "https://www.ppss.kr/news/articleView.html?idxno=309118",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 코스피, 외국인·기관 순매수에 3%대 상승",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "SK스퀘어(6.05%), 삼성물산(4.09%), 삼성전기(3.64%), 삼성전자우(2.35%), 현대차(1.96%), KB금융(1.69%) 등도 강세를 나타내고 있다. LG에너지솔루션(0.42%)과 삼성바이오로직스(0.28%)도 상승 중이다. 코스닥도 상승세를...",
+          "source_url": "https://www.newspim.com/news/view/20260907000202",
+          "relevance": "high"
+        },
+        {
+          "headline": "'아스트라 훈풍'에 반도체주 날았다…코스피 6900선 재탈환",
+          "publisher": "kado.net",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "SK스퀘어는 6.44%, 삼성생명 4.71%, 삼성물산 3.81% 상승 중이다. 시가총액 상위주 가운데 삼성전기는 2.50%, LG에너지솔루션은 0.42%, 현대차는 1.83% 오르고 있다. 반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60...",
+          "source_url": "https://www.kado.net/news/articleView.html?idxno=2070949",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 3%대 급등해 6900선 탈환…외인·기관 '쌍끌이 매수'",
+          "publisher": "slist.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%) 등도 올랐다. 업종별로는 전기·전자가 4.96% 급등했고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등이 강세를 보였다. 반면 음식료·담배(-1.99%), 섬유·의류(-1.46%), 부동산...",
+          "source_url": "https://www.slist.kr/news/articleView.html?idxno=764200",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드, 이석훈 감독과 시네마틱 호러 ‘블러드시티’ 구현",
+          "publisher": "khan.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "삼성물산 리조트부문 에버랜드가 올가을 좀비로 뒤덮인 도시를 배경으로 한 이머시브(Immersive) 공포 체험을 선보인다. 에버랜드는 가을축제 대표 호러 테마존인 ‘블러드시티 제로: 지옥의 문(Blood City Zero: Hell Gate)’을...",
+          "source_url": "https://www.khan.co.kr/article/202609070940001",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 GLXY, 신세계 센텀시티·강남점에 ‘GLXY 스튜디오’ 오픈",
+          "publisher": "fashionbiz.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "GLXY 스튜디오 신세계 센텀시티점 삼성물산패션부문(부문장 박남영)의 남성 캐주얼 브랜드 'GLXY(갤럭시라이프스타일)'가 브랜드 정체성에 감각적인 큐레이션을 결합한 새로운 매장 ‘GLXY 스튜디오’를 부산 해운대구...",
+          "source_url": "https://www.fashionbiz.co.kr/article/229254",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_9월 7일",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:40:00Z",
+          "summary": "▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융, 한화에어로스페이스",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070004",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"좀비도시에서 탈출하라\"…에버랜드, 가을 호러 테마존 '블러드시티 제...",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "삼성물산 리조트부문 에버랜드는 가을축제 시그니처 호러 테마존 '블러드시티 제로: 지옥의 문'을 오는 12일부터 11월 22일까지 약 두 달간 운영한다고 7일 밝혔다. 블러드시티는 지난 2017년 오픈한 에버랜드의 대표적인...",
+          "source_url": "https://www.news1.kr/industry/hotel-tourism/6281726",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"역시 믿을 건 반도체?\" 코스피 3% 급등...美금리인상 우려에도 쑥",
+          "publisher": "mt.co.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "두 종목과 업무·지분으로 엮인 SK스퀘어는 6%대, 삼성물산과 삼성생명은 4%대 오르는 중이다. 코스닥은 같은 시각 전 거래일 대비 11.42포인트(1.40%) 상승한 824.92를 나타내고 있다. 코스닥은 이날 9.41포인트(1.16...",
+          "source_url": "https://www.mt.co.kr/stock/2026/09/07/2026090709282975262",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 패션 GLXY, 신세계 강남·센텀시티에 'GLXY 스튜디오' 첫선",
+          "publisher": "fnnews.com",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 '갤럭시 라이프스타일(GLXY)'이 스타일링 경험을 강화하는 매장을 선보인다. 7일 삼성물산 패션부문에 따르면 GLXY는 부산 신세계백화점 센텀시티점과 서울 신세계백화점...",
+          "source_url": "https://www.fnnews.com/news/202609070908267731",
+          "relevance": "high"
+        },
+        {
+          "headline": "[오늘의 유통가] 쿠팡, 가구 전용 보험상품 출시…3년간 파손·고장 보장...",
+          "publisher": "dealsite.co.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "◆삼성물산 패션부문, ‘GLXY 스튜디오’ 첫선 삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY가 신세계백화점 센텀시티점과 강남점에 전략 매장 ‘GLXY 스튜디오’를 열었다. 자체 대표 상품과 오어슬로우·골드윈...",
+          "source_url": "https://dealsite.co.kr/articles/168526",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 반도체 훈풍에 코스피 3%대 급등…6900선 안팎 등락[개장시황]",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T00:38:00Z",
+          "summary": "SK스퀘어(402340)(6.63%), SK하이닉스(000660)(6.13%), 삼성물산(028260)(4.77%), 삼성전자(005930)(4.70%), 삼성생명(032830)(4.54%), 삼성전기(009150)(3.21%), 삼성전자우(005935)(3.03%), 현대차(005380)(2.35%), LG에너지솔루션(373220)(0.56...",
+          "source_url": "https://www.news1.kr/finance/market-exr/6281791",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등…코스피 6900선 재탈환",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T00:37:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0....",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063013",
+          "relevance": "high"
+        },
+        {
+          "headline": "<빅터뉴스 주가 예측>코스피 시가총액 상위 15선_8월 31일_오차율",
+          "publisher": "bigtanews.co.kr",
+          "published_at": "2026-09-07T00:36:00Z",
+          "summary": "빅터뉴스 빅터뉴스 기자 ▲빅터뉴스 주간 코스피 15선 -삼성전자, SK하이닉스, SK스퀘어, 삼성전기, 현대차, LG에너지솔루션, 삼성생명, 삼성물산, 삼성바이오로직스, HD현대중공업, SK, 두산에너빌리티, 기아, KB금융...",
+          "source_url": "https://www.bigtanews.co.kr/article/view/big202609070002",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6900선 재탈환…외인·기관 반도체 사자 행진",
+          "publisher": "kmib.co.kr",
+          "published_at": "2026-09-07T00:35:00Z",
+          "summary": "시가총액 투톱인 삼성전자(4.31%)와 SK하이닉스(5.95%)가 가파르게 상승했고, 지주·금융사인 SK스퀘어(6.44%), 삼성생명(4.71%), 삼성물산(3.81%)도 동반 랠리를 펼쳤다. 현대차(1.83%), 삼성전기(2.50%), LG에너지솔루션...",
+          "source_url": "https://www.kmib.co.kr/article/view.asp?arcid=9000009650&cp=nv",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 패션 GLXY, 신세계 강남·센텀에 ‘GLXY 스튜디오’ 연다",
+          "publisher": "megaeconomy.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 주요 백화점을 중심으로 매장 형태를 확대한다. GLXY는 신세계백화점 센텀시티점과 강남점에 ‘GLXY 스튜디오’를 각각 열었다고 7일 밝혔다....",
+          "source_url": "https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065573159742169",
+          "relevance": "high"
+        },
+        {
+          "headline": "3% 상승 출발 코스피, 6900선 탈환 목전…삼전닉스도 큰폭 올라",
+          "publisher": "mk.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "삼성전자(4.11%), SK하이닉스(5.77%), SK스퀘어(6.05%), 삼성전기(4.14%), 현대차(1.04%), 삼성바이오로직스(0.41%), KB금융(1.34%), 삼성생명(3.87%), 삼성물산(3.0%) 등 전반적으로 오르고 있다. 코스닥은 전일 대비 7.76포인트...",
+          "source_url": "https://www.mk.co.kr/article/12145772",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3%대 급등...6900선 회복",
+          "publisher": "cstimes.com",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "이 외에도 SK스퀘어(6.34%), 삼성전기(2.36%), 현대차(1.96%), 삼성생명(4.54%), 삼성물산(3.81%) 등 전 종목이 상승했다. 같은 시각 코스닥도 큰 폭으로 올랐다. 코스닥 지수는 전일 대비 11.41포인트(1.40%)  오른 824....",
+          "source_url": "https://www.cstimes.com/news/articleView.html?idxno=719581",
+          "relevance": "high"
+        },
+        {
+          "headline": "신재생에너지 관련주 혼조세…태양광 약세 속 전력기기·에너지 인프라...",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-07T00:34:00Z",
+          "summary": "삼성물산도 37만7000원으로 2.72% 올랐고 한화는 14만200원으로 2.04% 상승했다. 태양광 및 신재생에너지 설비 관련 중소형주에서도 상승 종목이 나왔다. 다스코는 4.00% 오른 3770원을 기록했고 에스폴리텍은 4.21...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604435",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승(종합)",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T00:33:00Z",
+          "summary": "관련주인 SK스퀘어(6.44%)와 삼성생명(4.71%), 삼성물산(3.81%)도 오르고 있으며 시가총액 상위주 가운데에서는 삼성전기(2.50%), LG에너지솔루션(0.42%), 현대차(1.83%) 등이 상승 중이다. 반면 삼성SDI(-0.91%), 셀트리온(-0....",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907031051008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3%대 상승 출발···삼전닉스 4~5%대 급등",
+          "publisher": "seoulfn.com",
+          "published_at": "2026-09-07T00:32:00Z",
+          "summary": "LG에너지솔루션(0.42%), 현대차(1.83%), 삼성바이오로직스(0.41%), 삼성물산(4.54%), 삼성생명(3.95%), KB금융(1.86%)도 상승 중이다. 한지영 키움증권 연구원은 \"지난주 미국 반도체주가 강세를 보인 점을 고려하면...",
+          "source_url": "https://www.seoulfn.com/news/articleView.html?idxno=637357",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 호조에 3% 급등…6900선 회복",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "삼성전자우(3.03%), SK스퀘어(6.82%), 삼성전기(2.36%), LG에너지솔루션(0.70%), 현대차(1.96%), 삼성바이오로직스(0.48%), 삼성생명(1.98%), 삼성물산(4.54%) 등 모두 강세를 보이고 있다. 한지영 키움증권 연구원은 \"국내외...",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609070922344137923c501012_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체주 급등에 코스피 6900선 회복…외인·기관 '쌍끌이'",
+          "publisher": "ezyeconomy.com",
+          "published_at": "2026-09-07T00:30:00Z",
+          "summary": "이 밖에 ▲LG에너지솔루션(0.70%) ▲현대차(2.22%) ▲삼성바이오로직스(0.48%) ▲삼성물산(4.63%) ▲KB금융(1.45%) 등도 상승하고 있다. ▲삼성생명은 4.71%, ▲신한지주는 2.36%, ▲한화에어로스페이스는 1.23% 오름세다....",
+          "source_url": "https://www.ezyeconomy.com/news/articleView.html?idxno=239410",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 랠리에 3%대 급등...6900선 회복",
+          "publisher": "greened.kr",
+          "published_at": "2026-09-07T00:29:00Z",
+          "summary": "이 밖에도 삼성전자우(+2.61%), SK스퀘어(+6.34%), 삼성전기(+3.14%), LG에너지솔루션(+0.70%), 현대차(+2.48%), 삼성바이오로직스(+0.41%), 삼성물산(+4.50%), KB금융(+1.45%) 등이 강세를 보이고 있다. 업종별로는 반도체 업종의...",
+          "source_url": "https://www.greened.kr/news/articleView.html?idxno=349349",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 불붙자 코스피 6900선 돌파...외인·기관 '쌍끌이'",
+          "publisher": "digitaltoday.co.kr",
+          "published_at": "2026-09-07T00:26:00Z",
+          "summary": "삼성전기(3.07%), 삼성물산(4.50%), 현대차(2.22%), KB금융(1.51%), 삼성바이오로직스(0.48%), LG에너지솔루션(0.28%) 등도 상승하고 있다. 코스닥도 상승하고 있다. 같은 시각 코스닥은 전 거래일보다 10.08포인트(1.24...",
+          "source_url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=698601",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체 강세에 장 초반 3% 상승…6900선 회복",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-07T00:23:00Z",
+          "summary": "반도체 투톱이 지수 회복을 이끌고 있는 가운데 SK스퀘어, 삼성생명, 삼성물산, 신한지주 등 주요 시총 대형주도 2~4% 안팎 상승세를 보이며 비교적 안정적 흐름이 이어지고 있다. 장 초반 외국인과 기관이 각각...",
+          "source_url": "https://www.newsis.com/view/NISX20260907_0003778585",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체 훈풍에 3% '급등'…6900선 탈환",
+          "publisher": "newsworks.co.kr",
+          "published_at": "2026-09-07T00:22:00Z",
+          "summary": "이밖에 ▲삼성전자우(2.71%) ▲SK스퀘어(6.34%) ▲삼성전기(3.57%) ▲LG에너지솔루션(0.42%) ▲현대차(2.41%) ▲삼성바이오로직스(0.8%) ▲KB금융(1.86%) ▲삼성물산(3.95%) 등도 상승하고 있다. 한지영 키움증권 연구원은...",
+          "source_url": "https://www.newsworks.co.kr/news/articleView.html?idxno=852803",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3% 급등하며 6900선 탈환...삼전 4%·하이닉스 5% 강세",
+          "publisher": "metroseoul.co.kr",
+          "published_at": "2026-09-07T00:20:00Z",
+          "summary": "이외에도 삼성전기(3.64%)와 삼성물산(3.81%)이 3%대 상승했으며, 현대차(1.83%), KB금융(1.69%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.35%) 등이 모두 올랐다. 같은 시각 코스닥지수는 전일보다 12.03포인트(1.48...",
+          "source_url": "http://www.metroseoul.co.kr/article/20260907500039",
+          "relevance": "high"
+        },
+        {
+          "headline": "'삼전닉스' 날았다…코스피, 3%대 급등에 6900선 회복",
+          "publisher": "news.tf.co.kr",
+          "published_at": "2026-09-07T00:20:00Z",
+          "summary": "86%) 삼성물산(3.95%) 등이다. 같은 시각 코스닥은 전 거래일(813.50) 대비 1.51%(12.28포인트) 오른 825.78을 나타내고 있다. 이날 822.91로 개장한 코스닥 역시 오름세를 이어가는 모습이다. 개인이 132억원을...",
+          "source_url": "https://news.tf.co.kr/read/economy/2362502.htm",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 장초반 3% 급등에 6900 안착 시도...톱텐 동반 상승",
+          "publisher": "opinionnews.co.kr",
+          "published_at": "2026-09-07T00:18:00Z",
+          "summary": "10위 이하에서도 삼성물산 3.81%, 한화에어로스페이스 1.52%, 신한지주 2.72%, 두산에너빌리티 0.88% 등 업종 불문 강세다. 유가증권시장에서 개인이 6445억원 순매도 중이지만 외국인과 기관이 3823억원...",
+          "source_url": "http://www.opinionnews.co.kr/news/articleView.html?idxno=144055",
+          "relevance": "high"
+        },
+        {
+          "headline": "[서울데이터랩]코스피, 개장 직후 3% 넘게 올라 6919.25 기록",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-07T00:16:00Z",
+          "summary": "SK스퀘어(402340)는 6.34%, 삼성물산(028260)은 4.50%, 삼성전기(009150)는 3.14%, 현대차(005380)는 2.48%, KB금융(105560)은 1.45% 각각 올랐다. LG에너지솔루션(373220)과 삼성바이오로직스(207940)도 각각 0.70%, 0.41...",
+          "source_url": "https://www.seoul.co.kr/news/economy/securities/2026/09/07/20260907500023?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "단독 매장서 '큐레이션'으로···매장 실험 나서는 GLXY",
+          "publisher": "enewstoday.co.kr",
+          "published_at": "2026-09-07T00:15:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 매장의 경계를 허문다. GLXY는 신세계백화점 센텀시티점과 강남점에 전략 매장 'GLXY 스튜디오'를 잇달아 열었다고 7일 밝혔다. 센텀시티점은...",
+          "source_url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2467247",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 6900선 급등 출발…외인·기관 쌍끌이에 삼전·SK하닉 ‘강세’",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-07T00:14:00Z",
+          "summary": "삼성생명과 삼성물산은 각각 4%대 상승하고 있으며 현대모비스는 2%대, KB금융은 1%대 오르고 있다. 현대차와 두산에너빌리티, 신한지주, 기아 등도 강세다. 업종별로는 전기·전자가 4.99% 상승하며 지수 상승을...",
+          "source_url": "https://www.dt.co.kr/article/12082392?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 3%대 상승 출발…코스닥도 1%↑",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-07T00:14:00Z",
+          "summary": "시가총액 상위 종목 중에선 삼성전자(4.11%), SK하이닉스(5.49%), SK스퀘어(6.05%), 삼성전기(3.64%), LG에너지솔루션(0.42%), 현대차(1.96%), 삼성바이오로직스(0.41%), KB금융(1.69%), 삼성물산(3.81%), 삼성생명(3.70%) 등 전...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622439",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 금리 진정에 위험선호 회복… 코스피 3% 급반등",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "시가총액 상위 종목 가운데 SK스퀘어(5.86%), 삼성전기(4.00%), 삼성생명(3.87%), 삼성물산(3.13%), KB금융(1.40%), 현대차(1.30%), 삼성바이오로직스(0.28%) 등 대부분 종목이 상승세다. 지난 4일 발표된 미국의 8월 비농업...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727436",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 3% 급등해 6900선 탈환 시도…삼전닉스↑",
+          "publisher": "hankyung.com",
+          "published_at": "2026-09-07T00:12:00Z",
+          "summary": "이 밖에 SK스퀘어(5.57%), 삼성전기(3.43%), 삼성물산(3.41%), 삼성생명(3.70%), KB금융(1.57%), 현대차(1.43%) 등 시가총액 상위 종목 대부분이 상승하고 있다. LG에너지솔루션과 삼성바이오로직스는 보합세다. 한지영...",
+          "source_url": "https://www.hankyung.com/article/2026090775696",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 마이크론 등 반도체주 '급등' 속...코스피도 '급등 출발'",
+          "publisher": "choicenews.co.kr",
+          "published_at": "2026-09-07T00:10:00Z",
+          "summary": "시가총액 상위종목 중 SK스퀘어(+5.86%), 삼성전기(+3.50%), 삼성생명(+3.87%), 삼성물산(+3.00%), SK(+6.11%) 등이 급등 거래 중이다. 코스닥 지수는 오전 9시 3분 현재 직전거래일 대비 8.79포인트(1.08%) 상승한 822.29에서...",
+          "source_url": "http://www.choicenews.co.kr/news/articleView.html?idxno=171007",
+          "relevance": "high"
+        },
+        {
+          "headline": "SK스퀘어·SK하이닉스 5%대 폭등랠리… 반도체·밸류업 모멘텀 가열",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T00:10:00Z",
+          "summary": "금융 및 물산 계열사인 삼성생명과 삼성물산이 상승세를 나타내고 있으며, 첨단 IT 부품 공급을 담당하는 삼성전기도 동반 상승 흐름에 합류했다. 우선주인 삼성전자우 역시 주주환원 기대감 속에 오름세를 보이고...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484408",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]오픈AI발 호재에 반도체株↑…코스피 3%대 올라 6910선",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-07T00:03:00Z",
+          "summary": "삼성전자(005930), 삼성물산(028260)은 4%대 오름 폭을 기록 중이고 삼성전기(009150), 삼성생명(032830) 등이 3% 이상 상승하고 있다. 신한지주(055550), 현대차(005380) 등은 2%대 오르고 있고 KB금융(105560)...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=02214006645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 GLXY, 신세계 강남·센텀시티에 ‘스튜디오’ 첫선",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-07T00:02:00Z",
+          "summary": "이투데이=김재은 기자 | 브랜드 대표 상품에 글로벌 브랜드 큐레이션 결합…신규 고객층 공략 ‘G핏 팬츠’ 7~8월 매출 109%↑…D.TOUR 아우터·테크 니트도 구성 삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622421",
+          "relevance": "high"
+        },
+        {
+          "headline": "패션피플 놀이터 'GLXY 스튜디오' 매장 첫 선",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-06T23:43:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 브랜드 상품과 글로벌 브랜드를 함께 선보이는 새로운 매장 'GLXY 스튜디오'를 신세계백화점 센텀시티점과 강남점에 잇달아 열었다고 7일...",
+          "source_url": "https://view.asiae.co.kr/article/2026090708091946504",
+          "relevance": "high"
+        },
+        {
+          "headline": "“좀비 도시서 직접 탈출”…에버랜드, ‘블러드시티 제로’ 12일 개막",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-06T23:43:00Z",
+          "summary": "삼성물산 리조트부문 에버랜드는 가을축제 대표 호러 테마존인 ‘블러드시티 제로 : 지옥의 문’을 오는 12일부터 11월 22일까지 72일간 운영한다고 7일 밝혔다. 올해 블러드시티는 영화 ‘해적’, ‘공조2’ 등을 연출한...",
+          "source_url": "https://biz.heraldcorp.com/article/10864316?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "GLXY 대표 상품·글로벌 브랜드 한 자리에…'GLXY 스튜디오' 오픈",
+          "publisher": "newsis.com",
+          "published_at": "2026-09-06T23:39:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 브랜드 정체성에 감각적인 큐레이션을 결합한 새로운 매장 'GLXY 스튜디오'를 신규 오픈했다고 7일 밝혔다. GLXY는 국내 남성복 브랜드 갤럭시...",
+          "source_url": "https://www.newsis.com/view/NISX20260907_0003778449",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드, 호러 테마존 '블러드시티 제로' 오픈",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-06T23:39:00Z",
+          "summary": "이석훈 영화감독과 협업해 제작한 국내 최초의 야외 호러 이머시브 라이브 공연을 만나볼 수 있다. 사진은 에버랜드 '블러드시티' 좀비 분장 살롱. (삼성물산 리조트부문 제공. 재판매 및 DB금지) 2026.9.7/뉴스1",
+          "source_url": "https://www.news1.kr/photos/8091265",
+          "relevance": "high"
+        },
+        {
+          "headline": "9월 4일 주식시장 주요공시",
+          "publisher": "catchnews.kr",
+          "published_at": "2026-09-06T23:39:00Z",
+          "summary": "52%) 규모 공급계약(2차전지 제조장비) 체결(계약기간:2026-09-04~2026-09-30) ▶세보엠이씨, 삼성물산과 429.83억원(최근 매출액대비 6%) 규모 공급계약(평택 설비공사2) 체결(계약기간:2026-09-07~2027-09-30) ▶엠오티...",
+          "source_url": "https://www.catchnews.kr/news/articleView.html?idxno=128193",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산, 신세계百 강남점·센텀시티점 'GLXY 스튜디오' 오픈",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-06T23:36:00Z",
+          "summary": "삼성물산(028260) 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 브랜드 정체성에 감각적인 큐레이션을 결합한 새로운 매장 'GLXY 스튜디오'를 부산 해운대구 신세계백화점 센텀시티점과 서울 서초구...",
+          "source_url": "https://www.news1.kr/industry/distribution/6281622",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 패션, GLXY 스튜디오로 남성 캐주얼 접점 강화",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-06T23:32:00Z",
+          "summary": "'GLXY 스튜디오' 신세계백화점 센텀시티점 (사진=삼성물산 패션부문) 남성복 브랜드 매장이 자사 상품만 판매하는 공간에서 스타일 전체를 제안하는 공간으로 확장되고 있다. 삼성물산 패션부문의 남성 캐주얼...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484376",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 패션부문 '갤럭시', 글로벌 브랜드 더한 '스튜디오'로 거점 상...",
+          "publisher": "m-i.kr",
+          "published_at": "2026-09-06T23:30:00Z",
+          "summary": "삼성물산 GLXY가 대표 상품과 글로벌 브랜드를 함께 선보이는 'GLXY 스튜디오'를 신세계백화점 센텀시티점과 강남점에 열고 신규 고객 확보에 나섰다. 사진=삼성물산 패션부문 제공 매일일보 = 강소슬 기자  |  삼성물산...",
+          "source_url": "https://www.m-i.kr/news/articleView.html?idxno=1410530",
+          "relevance": "high"
+        },
+        {
+          "headline": "[정비사업 디코드] 삼성·롯데·GS·포스코·IPARK현산, 미아2구역 시공...",
+          "publisher": "smarttoday.co.kr",
+          "published_at": "2026-09-06T23:28:00Z",
+          "summary": "전까지 삼성물산 건설부문과 롯데건설, GS건설, 포스코이앤씨 관계자들이 수시로 드나들었다”고 밝혔다. 재개발 구역 인근 시장 내 B 공인중개사 관계자는 “삼성물산이 홍보에 공을 많이 들였다”며...",
+          "source_url": "https://www.smarttoday.co.kr/ko-kr/articles/111217",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드, 이머시브 호러 테마존 '블러드시티 제로' 12일 오픈",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-06T23:27:00Z",
+          "summary": "시그니처 호러 테마존인 '블러드시티 제로 : 지옥의 문'을 오는 12일부터 오픈한다고 7일 밝혔다. 사진은 에버랜드가 지난해 선보였던 '블러드시티' 테마존. 2026.9.7 [삼성물산 리조트부문 제공. 재판매 및 DB 금지]",
+          "source_url": "https://www.yna.co.kr/view/PYH20260907023300013?input=1196m",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드, 이머시브 호러 테마존 '블러드시티 제로' 12일 오픈",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-06T23:27:00Z",
+          "summary": "가을축제 시그니처 호러 테마존인 '블러드시티 제로 : 지옥의 문'을 오는 12일부터 오픈한다고 7일 밝혔다. 사진은 에버랜드 '블러드시티' 좀비 분장 살롱. 2026.9.7 [삼성물산 리조트부문 제공. 재판매 및 DB 금지]",
+          "source_url": "https://www.yna.co.kr/view/PYH20260907023100013?input=1196m",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"1000만명 몰린 호러 성지\"…에버랜드, 영화감독 손잡고 좀비 도심 탈출...",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-06T23:21:00Z",
+          "summary": "삼성물산 리조트 부문이 운영하는 에버랜드가 가을 축제 시그니처 호러 테마존인 '블러드시티 제로 : 지옥의 문'을 오는 12일부터 11월 22일까지 72일간 운영하며 관객 주도형 이머시브 호러 콘텐츠를 선보인다고 7일...",
+          "source_url": "https://view.asiae.co.kr/article/2026090708212924487",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"좀비 영화 주인공이 되다\"…에버랜드, 몰입형 호러 '블러드시티 제로'...",
+          "publisher": "thefairnews.co.kr",
+          "published_at": "2026-09-06T23:20:00Z",
+          "summary": "삼성물산 리조트부문 에버랜드는 가을 시즌 시그니처 호러 테마존인 '블러드시티 제로 : 지옥의 문'을 오는 12일부터 11월 22일까지 72일간 운영한다고 7일 밝혔다. 올해 10년 차를 맞이한 블러드시티는 영화 '해적', '공조2...",
+          "source_url": "https://www.thefairnews.co.kr/news/articleView.html?idxno=87226",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 패션 GLXY, '스튜디오'로 매장 전략 전환...글로벌 브랜드 큐레...",
+          "publisher": "popcornnews.net",
+          "published_at": "2026-09-06T23:20:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 브랜드 상품과 글로벌 브랜드를 함께 선보이는 전략 매장 'GLXY 스튜디오'를 선보이며 오프라인 매장 경쟁력 강화에 나섰다. GLXY는 7일 부산...",
+          "source_url": "http://www.popcornnews.net/news/articleView.html?idxno=132008",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드, 호러 테마존 '블러드시티 제로' 12일 오픈",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-06T23:19:00Z",
+          "summary": "제작한 국내 최초의 야외 호러 이머시브 라이브 공연을 만나볼 수 있다. 에버랜드가 지난해 선보였던 '블러드시티' 테마존에서 모델들이 기념촬영을 하고 있다. (삼성물산 리조트부문 제공. 재판매 및 DB금지) 2026.9.7/뉴스1",
+          "source_url": "https://www.news1.kr/photos/8091255",
+          "relevance": "high"
+        },
+        {
+          "headline": "에버랜드 '블러드시티 제로'에서 추억 남겨요",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-06T23:19:00Z",
+          "summary": "제작한 국내 최초의 야외 호러 이머시브 라이브 공연을 만나볼 수 있다. 에버랜드가 지난해 선보였던 '블러드시티' 테마존에서 모델들이 기념촬영을 하고 있다. (삼성물산 리조트부문 제공. 재판매 및 DB금지) 2026.9.7/뉴스1",
+          "source_url": "https://www.news1.kr/photos/8091256",
+          "relevance": "high"
+        },
+        {
+          "headline": "[프리마켓 포커스] 美 반도체 훈풍에 투심 '활짝'… 삼전·SK하닉 강세",
+          "publisher": "the-biz.co.kr",
+          "published_at": "2026-09-06T23:16:00Z",
+          "summary": "SK스퀘어(3.36%), 삼성전기(2.43%), 삼성물산(2.18%), 삼성생명(2.18%), 현대차(1.30%), 한화에어로스페이스(0.95%), LG에너지솔루션(0.42%), 삼성바이오로직스(0.35%), KB금융(0.17%) 등이 강세다. 이날 국내 반도체주가 프리마켓...",
+          "source_url": "http://www.the-biz.co.kr/news/articleView.html?idxno=727432",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더벨]삼성물산 미국 파트너 된 IMM인베, '인프라 확장' 맞손",
+          "publisher": "thebell.co.kr",
+          "published_at": "2026-09-06T23:12:00Z",
+          "summary": "삼성물산이 미국 태양광·에너지저장장치(ESS) 사업 확대를 위한 재무적투자자(FI)로 IMM인베스트먼트를 낙점했다. 실제 자금 집행 가능성과 거래 종결 안정성 등을 종합적으로 평가한 결과다. 이번 투자로...",
+          "source_url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609021636358640101793",
+          "relevance": "high"
+        },
+        {
+          "headline": "나진상가-KKR 데이터센터-삼성물산까지…IMM의 변신",
+          "publisher": "dealsite.co.kr",
+          "published_at": "2026-09-06T23:12:00Z",
+          "summary": "4일 업계에 따르면 삼성물산은 미국 에너지저장장치(ESS)·태양광 개발 사업 확장을 위한 재무적투자자(FI)로 IMM인베스트먼트를 낙점했다. IMM인베는 글랜우드크레딧과 메리츠금융그룹, 미래에셋그룹과 경쟁했는데...",
+          "source_url": "https://dealsite.co.kr/articles/168331",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전 3%·SK하닉 4%대 프리마켓 ‘강세’…이번 주 7000선 시험대",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-06T23:11:00Z",
+          "summary": "삼성생명은 2.18%, 삼성물산은 1.91%, 두산에너빌리티는 1.26%, 현대차는 1.30% 상승하고 있다. 한화에어로스페이스(0.95%), 삼성SDI(0.91%), 현대모비스(0.71%), HD현대중공업(0.69%) 등도 강세다. 이번 주 국내 증시는 지난...",
+          "source_url": "https://www.dt.co.kr/article/12082378?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 패션 GLXY, 신개념 매장 'GLXY 스튜디오'…센텀시티·강남점 동...",
+          "publisher": "ftoday.co.kr",
+          "published_at": "2026-09-06T23:00:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 브랜드 정체성에 감각적인 큐레이션을 결합한 새로운 전략 매장 'GLXY 스튜디오'를 부산 신세계백화점 센텀시티점과 서울 신세계백화점 강남점에...",
+          "source_url": "http://www.ftoday.co.kr/news/articleView.html?idxno=364895",
+          "relevance": "high"
+        },
+        {
+          "headline": "[오늘의 IR] 기아ㆍ에코프로비엠ㆍ자이에스앤디 등",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-06T22:34:00Z",
+          "summary": "및 사업내용 설명 △기아, 해외지역 방문 IR (Non-Deal Roadshow) 실시 △롯데에너지머티리얼즈, 해외 기관투자자를 대상으로 한 NDR진행 △삼성물산, 증권사 주관 컨퍼런스 참석 △LG화학, 회사소개 및 사업현황 설명",
+          "source_url": "https://www.etoday.co.kr/news/view/2622353",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성물산 GLXY, 'GLXY 스튜디오'로 남성 캐주얼 편집 공간 승부수",
+          "publisher": "newsroad.co.kr",
+          "published_at": "2026-09-06T22:34:00Z",
+          "summary": "삼성물산 패션부문의 남성 캐주얼 브랜드 GLXY(갤럭시 라이프스타일)가 브랜드 정체성과 글로벌 감각을 결합한 새로운 콘셉트 매장 'GLXY 스튜디오'를 선보이며 남성 편집형 캐주얼 시장 공략에 속도를 낸다. GLXY는...",
+          "source_url": "http://www.newsroad.co.kr/news/articleView.html?idxno=63874",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 5.11,
+      "oldest_relevant_at": "2026-09-06T22:34:00Z",
+      "collected_at": "2026-09-07T03:40:24.253782Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814002969",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814002969"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515001895",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515001895"
+        },
+        {
+          "report_name": "사업보고서 (2025.12)",
+          "receipt_number": "20260312000856",
+          "published_at": "2026-03-12T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000856"
+        }
+      ],
+      "collected_at": "2026-09-07T03:40:24.597981Z",
+      "request_id": "59948132-25a6-4de8-87e0-64049482c357",
+      "source_type": "dart",
+      "stock_code": "028260",
+      "company_name": "삼성물산"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260312000856",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "가. 주요 시장위험\n당사는 보유중인 외화 채권/채무에 대해 환율과 이자율 변동으로 인해 수취 및 지급해야 할 이자금액 및 원금의 변동 위험이 있으며, 이에 대한 위험회피 등의목적으로 은행과 파생상품 계약을 맺고 있습니다.\n(1) 환율변동위험\n당사는 글로벌 영업활동을 수행함에 따라 기능통화와 다른 외화의 수입과 지출이발생하고 있으며, 이로 인해 환율변동위험에 노출되는 환포지션의 주요 통화로는USD, EUR, JPY 등이 있습니다. 당사는 사업의 성격 및 환율 변동위험 대처수단의 유무 등을 고려하여회사별 헷지정책을 선택하고 있습니다. 또한 당사는 외화로 표시된 채권과 채무관리 시스템을 통하여 환노출 위험을 주기적으로 평가, 관리 및 보고하고 있습니다.\n(2) 주가변동위험당사는 전략적 목적 등으로 상장 및 비상장주식에 투자하고 있습니다.이를 위하여 직접적 또는 간접적 투자수단을 이용하고 있으며,공시대상기간 매기말 현재 상장주식의 주당 가격이 약 1% 변동할 경우기타포괄손익의 변동금액은 다음과 같습니다.\n(단위 : 백만원)\n구분 | 제62기 | 제61기 | 제60기\n상장주식 장부가액 | 44,749,564 | 21,680,828 | 28,904,632\n기타포괄손익 변동금액 | 332,541 | 161,522 | 215,340\n(3) 이자율 위험\n당사는 가격변동으로 인한 재무제표 항목(금융부채)의 가치변동 위험 및 투자, 차입에서 비롯한 이자비용의 변동위험 등의 이자율 변동위험에 노출되어 있습니다. 이러한 당사의 이자율 변동위험은 채권 등 이자지급 부채의 발행에서 비롯됩니다. 이에 당사는 이자율 변동으로 인한 불확실성과 금융비용의 최소화를 위한 정책을수립 및 운용하고 있으며 주기적인 금리동향 모니터링 및 대응방안 수립을 통해이자율 위험을 관리하고 있습니다.\n나. 위험관리정책 (위험관리 전략)당사는 환관리 규칙(규정)에 따라 환율 변동 위험을 사전적으로 파악하고 관리함으로써 환 위험을 배제 또는 축소시켜 환율 변동에 따른 자산/부채 영향이최소화 되도록 관리하고 있습니다.",
+          "score": 0.524845,
+          "match_type": "vector"
+        },
+        {
+          "section": "I. 회사의 개요 > 1. 회사의 개요",
+          "text": "등 급 | 의 미\nAaa | 채무상환능력 최상, 신용위험 최소\nAa1 Aa2 Aa3 | 채무상환능력 높음, 신용위험 매우 낮음\nA1 A2 A3 | 채무상환능력 중상, 신용위험 낮음\nBaa1 Baa2 Baa3 | 채무상환능력 중간, 신용위험 크지 않으나투기적 요소가 있음\nBa1 Ba2 Ba3 | 투기적 성향, 신용위험 상당함\nB1 B2 B3 | 투기적 성향, 신용위험 높음\nCaa | 투기적 성향 높음, 신용위험 매우 높음\nCa | 투기적 성향 매우 높음, 가까운 시일 내부도발생 가능, 원리금 상환가능성 존재\nC | 부도 상태, 원리금 상환가능성 낮음\n자. 회사의 주권상장(또는 등록ㆍ지정)여부 및 특례상장에 관한 사항\n주권상장(또는 등록ㆍ지정)현황 | 주권상장(또는 등록ㆍ지정)일자 | 특례상장 유형\n유가증권시장 상장 | 2014년 12월 18일 | 해당사항 없음",
+          "score": 0.472122,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "및 자재ㆍ장비등 리소스 확보를 통한 해외사업 역량을 강화해 나가고 있습니다.아울러, 시장, 고객의 신뢰 확보를 위해 핵심고객을 밀착 관리하고 현장의 고객만족도 조사를 시행하는 등 고객과의 Long-term Relationship 구축을 통해반복수주를 추진하고 있습니다.\n[상사부문] (1) 산업의 특성 등□ 산업의 특성 및 개요 상사부문은 화학, 철강, 에너지, 소재 등의 분야에서 트레이딩, 사업개발 및 운영을포함한 다각적인 사업을 진행하고 있습니다. 트레이딩은 지역적 수요/공급의 불균형, 가격 차이 등을 활용하여공급자와 수요자를 연결시켜 주는 거래 중개 및 판매 영업으로,글로벌 경기 변동, 원자재 시황 등의 영향을 받습니다. 사업개발, 운영사업은 글로벌 경기 변동 이외에도 국가별 정치, 경제 상황 등다양한 요인들을 종합적으로 고려해야 하는 특성이 있습니다.□ 산업의 성장성 제조업체의 자체 수출 역량 확대로 상사의 수출 대행 기능은 축소되고 있으나,다양한 기능 제공을 통해 새로운 가치를 창출해 나가고 있습니다. 상사는 영업 수익성 제고, 경영 효율 개선, 리스크 관리 체계 고도화를추진하는 한편 지속적인 영업력 강화로 이러한 변화에 대응하고 있습니다. □ 경기 변동의 특성 상사부문의 트레이딩 영업은 국내 경기는 물론 선진국 및 신흥국 경제 성장 등의글로벌 경기 변동, 달러ㆍ엔화 등 국제 환율 추이, 국제 원자재 가격 동향에 따라사업 실적에 영향을 받을 수 있어 경기 변동에 대한 선제적 대응이 필요합니다.\n(2) 국내외 시장여건 □ '25년 국내외 시장 여건\n세계경제는 미국발 관세전쟁에 따른 무역환경의 급격한 변화와 지정학적 긴장 속에서도 3.3%의 성장률을 기록하였습니다. AI 및 반도체 분야의 대폭적인 투자와 민간 부문에서의 견조한 수요로 보호무역주의의 충격을 상쇄했으며, 인플레이션의 하향 안정화로 전 세계적인 금융여건이 완화된 것이 성장의 핵심동력이 되었습니다.",
+          "score": 0.456904,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "반면, 아시아(64억불)는 9.9%, 중남미(13.8억불)는 9.3% 감소하였습니다.사업별로는 건축(72.2억불)은 37.8%, 플랜트(352.7억불)은 45.2%로 전년대비 증가하였으나, 토목(14.6억불)은 15.2%, 전기(18.2억불)은 8.6% 감소하였습니다.\n(기타 통신 및 용역사업 등은 제외)※ 참고 자료·IHS Markit·해외건설협회 (수주통계)\n□ 당사 시장점유율'25년 당사의 국내 수주 규모는 10.1조원으로국내 건설시장 전체 수주 222조원 중 약 4.5%를 차지하고 있으며,'25년 당사의 해외 수주 규모는 69.7억불로국내기업의 전체 해외건설 수주 472.7억불 중 약 14.7%를 차지하고 있습니다.※ 참고 자료·대한건설협회 (월간건설경제동향)·해외건설협회 (수주통계)\n(3) 경쟁력을 좌우하는 요인 및 회사의 경쟁우위 요소전통적으로 시공 경험, 수주 영업력, 대외 신인도 등이 시장에서 경쟁우위 요인으로작용해왔으나, 수요자의 니즈가 고급화, 다양화되면서 기술력, 품질, 안전, 서비스,친환경성, 브랜드 등도 중요한 경쟁 요소가 되고 있습니다.또한, 시공 능력과 함께 사업 기획력, 설계ㆍ엔지니어링 능력, 자금조달 및계약ㆍ클레임 관리 역량 등도 경쟁력의 핵심요소로 부각되고 있으며, EPC에서 벗어나 사업 개발부터 운영에 이르는 토탈 솔루션 제공 사업자로 시장에서 입지를 다져가고 있습니다. 당사는 초고층빌딩, 하이테크 시설, 도로ㆍ철도, 항만, 발전 플랜트, 주택 등\n각 상품별로 업계 최고 수준의 기술력을 확보하고 있으며, 지속적인 건설 기술",
+          "score": 0.455006,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "다.또한 노동집약적 특성이 있어 대부분의 국내 패션기업은 기획/디자인 영역에주력하는 한편, 생산은 국내외 협력업체를 통한 제품 완사입 및 외주 임가공 등의방식으로 운영하고 있습니다. 따라서 외부 협력업체와의 생산 체계 및 협업 수준역시 사업의 중요한 변수로 작용합니다.\n□ 산업의 성장성국내 패션시장이 성숙기에 진입함으로써 성장성에 대한 높은 기대가 어려운상황에서 삶의 질에 대한 욕구 증대, 경험을 중시하는 소비 확산, 가심비 중시 경향등의 영향으로 시장과 고객의 니즈는 보다 다변화, 세분화되고 있습니다. 이러한변화와 함께 패션이 개인의 정체성을 표현하는 일종의 문화 상품으로 변모함에 따라새로운 사업 가능성 역시 지속적으로 창출되고 있습니다. 또한 탄탄한 고객 충성도를 확보한 패션 브랜드의 경우 외부환경 변화에 따른영향을 상대적으로 덜 받는다는 점에서 기능적 가치 이상의 심리적, 사회적부가가치를 제공하며, 브랜드의 성장성 역시 여전히 높게 평가받고 있습니다. 한편 해외 패션 시장은 중국, 인도, 동남아시아 개발도상국을 중심으로 국내시장보다 높은 성장세를 보이고 있습니다. 해외 시장의 다양한 기회를 활용하기 위한당사의 단계적인 해외 진출 노력이 이어지고 있어 향후 글로벌 시장에서의 새로운기회 창출 및 성장이 기대되고 있습니다. □ 경기변동의 특성 한국 패션산업은 내수 의존도가 높기 때문에 국내 경제성장률과 실질 소득수준, 그리고 의류 소비심리와 구매 패턴의 변화 등에 크게 영향을 받고 있습니다. 또한, 최근에는 소비 양극화 현상의 심화에 따라 패션 상품의 복종별, 가격대별소비 행동에 있어 그 격차가 커지고 있습니다. 패션산업은 기후 및 날씨 변화에 민감하기 때문에 급격한 날씨 변화에도대응 가능한 탄력적 사업 운영 전략이 요구됩니다. 또한 S/S(봄/여름) 보다는상대적으로 고가의 상품이 주를 이루는 F/W(가을/겨울)의 매출 비중이 높은계절적 특성이 있습니다.\n(2) 국내외 시장여건 □ 시장전망 및 경쟁상황",
+          "score": 0.445778,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000856",
+      "collected_at": "2026-09-07T03:40:24.578243Z",
+      "request_id": "7b54f12b-8cec-4744-a7dd-cc35b980a08c",
+      "source_type": "dart",
+      "stock_code": "028260",
+      "company_name": "삼성물산"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "삼성물산",
+      "stock_code": "028260",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:40:23.620456+00:00",
+        "to": "2026-09-07T03:40:23.620456+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 261,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 135.0,
+        "ratio": 1.93,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 24,
+        "neutral_count": 30,
+        "negative_count": 46
+      },
+      "top_topics": {
+        "expectations": [
+          "삼성전자 보유 지분 가치 상승",
+          "삼성전자 자사주 소각 수혜",
+          "시장 반등에 따른 주가 회복",
+          "실적 개선의 주가 반영",
+          "기관 매수 유입"
+        ],
+        "concerns": [
+          "기관 매도와 수급 부담",
+          "급락과 지지선 이탈",
+          "실적의 주가 반영 부족",
+          "삼성바이오로직스 유상증자 여파"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "삼성전자 지분 보유가 주가 상승에 힘을 보탤 것으로 본다.",
+          "posted_at": "2026-09-07T02:48:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "삼성전자 자사주 소각이 보유 지분 가치에 미칠 효과를 기대한다.",
+          "posted_at": "2026-09-04T00:29:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "코스피 반등이 삼성물산 주가 회복으로 이어지길 기대한다.",
+          "posted_at": "2026-09-05T01:20:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "좋은 실적이 주가 상승으로 이어지길 기대한다.",
+          "posted_at": "2026-09-04T01:13:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "시간외 시장에서 기관 매수가 유입되길 기대한다.",
+          "posted_at": "2026-09-04T06:39:00+00:00",
+          "sentiment": "positive"
+        }
+      ],
+      "collected_at": "2026-09-07T03:40:23.620456+00:00",
+      "fgi_mean": 44.47,
+      "fgi_latest": {
+        "fgi": 44.26,
+        "label": "중립",
+        "as_of": "2026-09-07T02:45:00+00:00",
+        "post_count": 1,
+        "valence_percentile": 44.46
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260904800636",
+          "published_at": "2026-09-04T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904800636"
+        },
+        {
+          "report_name": "단일판매ㆍ공급계약체결              ",
+          "receipt_number": "20260831800689",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "major",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800689"
+        },
+        {
+          "report_name": "[기재정정]단일판매ㆍ공급계약체결              ",
+          "receipt_number": "20260831800587",
+          "published_at": "2026-08-31T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "major",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800587"
+        },
+        {
+          "report_name": "[기재정정]타법인주식및출자증권취득결정(종속회사의주요경영사항)              ",
+          "receipt_number": "20260828800834",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800834"
+        },
+        {
+          "report_name": "유상증자결정(종속회사의주요경영사항)              ",
+          "receipt_number": "20260828800769",
+          "published_at": "2026-08-28T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "major",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800769"
+        },
+        {
+          "report_name": "최대주주등소유주식변동신고서              ",
+          "receipt_number": "20260824800613",
+          "published_at": "2026-08-24T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260824800613"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260821800764",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821800764"
+        },
+        {
+          "report_name": "[기재정정]단일판매ㆍ공급계약체결              ",
+          "receipt_number": "20260819800608",
+          "published_at": "2026-08-19T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "major",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819800608"
+        },
+        {
+          "report_name": "기업설명회(IR)개최(안내공시)              ",
+          "receipt_number": "20260810800544",
+          "published_at": "2026-08-10T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260810800544"
+        }
+      ],
+      "collected_at": "2026-09-07T03:40:25.003553Z",
+      "request_id": "0cc203a5-b73b-4028-9946-c44d3df937f6",
+      "source_type": "dart",
+      "stock_code": "028260",
+      "company_name": "삼성물산"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260831800689": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260831800689",
+        "document_type": "disclosure",
+        "content": "삼성물산/단일판매ㆍ공급계약체결/(2026.08.31)단일판매ㆍ공급계약체결\n1. 판매ㆍ공급계약 구분 | 공사수주\n- 체결계약명 | 압구정아파트지구 특별계획구역4 재건축정비사업\n2. 계약내역 | 계약금액(원) | 2,115,400,000,000\n최근매출액(원) | 40,742,240,967,149\n매출액대비(%) | 5.19\n대규모법인여부 | 해당\n3. 계약상대 | 압구정아파트지구 특별계획구역4 재건축정비사업조합\n- 회사와의 관계 | -\n4. 판매ㆍ공급지역 | 서울특별시 강남구 압구정동 481번지 일대\n5. 계약기간 | 시작일 | -\n종료일 | -\n6. 주요 계약조건 | 계약금ㆍ선급금 유무 | 무\n대금지급 조건 등 | 공사 진행에 따라 청구 및 지급\n7. 계약(수주)일자 | 2026-08-31\n8. 공시유보 관련내용 | 유보사유 | -\n유보기한 | -\n9. 기타 투자판단과 관련한 중요사항\n- 공사개요 : 공동주택 및 부대복리시설 건설 공사 - 상기 2항의 계약금액은 부가가치세 제외 금액임. - 상기 2항의 최근 매출액은 2025년말 연결 재무제표 기준임. - 상기 5항의 계약기간은 공사기간이며, 공사기간은 착공일로부터 68개월임. - 공사기간, 계약금액 등은 공사진행 과정상 변동될 수 있음.\n※ 관련공시 | 2026-05-26 투자판단 관련 주요경영사항",
+        "content_truncated": false,
+        "total_chars": 652,
+        "summary": "단일판매ㆍ공급계약체결               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800689",
+        "collected_at": "2026-09-07T03:40:25.250244Z",
+        "report_name": "단일판매ㆍ공급계약체결              ",
+        "published_at": "2026-08-31T00:00:00Z",
+        "request_id": "ae220f38-4cf2-4b54-af3a-d55859ef9f96",
+        "source_type": "dart"
+      }
+    },
+    "20260831800587": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260831800587",
+        "document_type": "disclosure",
+        "content": "삼성물산/단일판매ㆍ공급계약체결/(2026.08.31)단일판매ㆍ공급계약체결\n정정일자 | 2026-08-31\n1. 정정관련 공시서류 | 단일판매ㆍ공급계약 체결\n2. 정정관련 공시서류제출일 | 2026-03-12\n3. 정정사유 | 계약금액 변경\n4. 정정사항\n정정항목 | 정정전 | 정정후\n2. 계약내역 - 계약금액(원) | 1,379,170,000,000 | 1,699,710,000,000\n2. 계약내역 - 매출액대비(%) | 3.28 | 4.04\n9. 기타 투자판단과 관련한 중요사항 | ※ 직전 변경 계약금액은 4,380억원임. | ※ 직전 변경 계약금액은 약 13,792억원임.\n-\n1. 판매ㆍ공급계약 구분 | 공사수주\n- 체결계약명 | [P4 Ph2(하동)] FAB동/복합동 마감공사\n2. 계약내역 | 계약금액(원) | 1,699,710,000,000\n최근매출액(원) | 42,103,238,027,336\n매출액대비(%) | 4.04\n대규모법인여부 | 해당\n3. 계약상대 | 삼성전자 주식회사\n- 회사와의 관계 | 계열회사\n4. 판매ㆍ공급지역 | 삼성전자 주식회사 평택사업장\n5. 계약기간 | 시작일 | 2023-07-15\n종료일 | 2027-12-31\n6. 주요 계약조건 | 계약금ㆍ선급금 유무 | 무\n대금지급 조건 등 | 공사 진행에 따라 청구 및 지급\n7. 계약(수주)일자 | 2026-03-12\n8. 공시유보 관련내용 | 유보사유 | -\n유보기한 | -\n9. 기타 투자판단과 관련한 중요사항\n- 상기 계약은 '23.7.6일 체결한 최초 계약 '[P4 Ph2(하동)] FAB동/복합동 마감공사' (100억, '22년말 연결재무제표 기준 매출액의 0.02%)에 대한 변경계약임. ※ 직전 변경 계약금액은 약 13,792억원임. - 공사개요 : 평택 4기 하층동편 마감공사 - 상기 2항의 계약금액은 부가가치세가 제외된 금액임. - 상기 2항의 최근 매출액은 2024년말 연결 재무제표 기준임. - 상기 5항의 계약기간은 공사기간임. - 공사기간, 계약금액 등은 공사진행 과정상 변동될 수 있음.\n※ 관련공시 | 2026-03-12 단일판매ㆍ공급계약체결",
+        "content_truncated": false,
+        "total_chars": 1041,
+        "summary": "[기재정정]단일판매ㆍ공급계약체결               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800587",
+        "collected_at": "2026-09-07T03:40:25.456590Z",
+        "report_name": "[기재정정]단일판매ㆍ공급계약체결              ",
+        "published_at": "2026-08-31T00:00:00Z",
+        "request_id": "bb2052a2-7f71-42ac-a682-8ad1f4a8aa33",
+        "source_type": "dart"
+      }
+    },
+    "20260828800834": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260828800834",
+        "document_type": "disclosure",
+        "content": "삼성물산/타법인 주식 및 출자증권 취득결정(종속회사의 주요경영사항)/(2026.08.28)타법인 주식 및 출자증권 취득결정(종속회사의 주요경영사항)\n정정일자 | 2026-08-28\n1. 정정관련 공시서류 | 타법인 주식 및 출자증권 취득결정(종속회사의 주요경영사항)\n2. 정정관련 공시서류제출일 | 2026-07-20\n3. 정정사유 | 자금조달 방법 변경\n4. 정정사항\n정정항목 | 정정전 | 정정후\n10. 기타 투자판단과 관련한 중요사항 | - 금번 공시는 삼성바이오로직스(주)가 PolyPeptide Group AG의 주식 33,016,411주를 양수하기로 결정함에 따른 사항임. - 공개매수대금의 일부를 차입금으로 조달 예정이나, 추후 기타 조달 방식 검토 가능하며, 구체적인 차입조건 혹은 조달 방안이 확정되는 경우 관련 내용은 정정공시 예정입니다. | - 금번 공시는 삼성바이오로직스(주)가 PolyPeptide Group AG의 주식 33,016,411주를 양수하기로 결정한 사항 관련하여 진행하는 정정공시임. - 인수자금은 유상증자 등을 통해 조달 예정이나, 진행과정에서 변동 발생 시 보유자금을 활용 예정입니다.\n-\n종속회사인 | 삼성바이오로직스(주) | 의 주요경영사항 신고\n1. 발행회사 | 회사명 | PolyPeptide Group AG\n국적 | 스위스 (Switzerland) | 대표자 | Juan Jose Gonzalez\n자본금(원) | 612,742,956 | 회사와 관계 | -\n발행주식총수(주) | 33,125,001 | 주요사업 | 펩타이드 CDMO\n2. 취득내역 | 취득주식수(주) | 33,016,411\n취득금액(원) | 2,706,163,546,103\n자산총액(원) | 86,532,745,699,428\n자산총액대비(%) | 3.13\n3. 취득후 소유주식수 및 지분비율 | 소유주식수(주) | 33,016,411\n지분비율(%) | 100\n4. 취득방법 | 현금취득\n5. 취득목적 | 펩타이드 CDMO 기업 인수를 통한 사업 경쟁력 강화\n6. 취득예정일자 | 2026-11-30\n7. 이사회결의일(결정일) | 2026-07-17\n- 사외이사 참석여부 | 참석(명) | 4\n불참(명) | 0\n- 감사(사외이사가 아닌 감사위원)참석여부 | -\n8. 공정거래위원회 신고대상 여부 | 미해당\n9. 풋옵션 등 계약 체결여부 | 아니오\n- 계약내용 | -\n10. 기타 투자판단과 관련한 중요사항 | - 금번 공시는 삼성바이오로직스(주)가 PolyPeptide Group AG의 주식 33,016,411주를 양수하기로 결정한 사항 관련하여 진행하는 정정공시임. - 상기 '1. 발행회사'의 '자본금'은 CHF 331,250.01에 2026년 7월 16일 최초 매매 기준율(CHF/KRW 1,849.79)을 적용한 금액이며, '발행주식총수(주)'는 본 보고서 제출일 현재 기준입니다. - 상기 '2. 취득내역'의 '취득주식수(주)'는 발행주식총수 33,125,001주에서 자기주식 108,590주를 제외한 양수 가능 최대 규모를 전제로 산정한 취득예정 주식수이며, 실제 취득주식수 및 취득후 소유주식수·지분비율은 본 공개매수에 대한 주주들의 응모 결과 등에 따라 달라질 수 있습니다. '취득금액(원)'은 대상주식 1주당 공개매수가격 CHF 44.31에 위 양수주식수 33,016,411주를 곱한 CHF 1,462,957,171.41를 기준으로, 2026년 7월 16일 최초 매매 기준율(CHF/KRW 1,849.79)을 적용한 금액이며, 실제 취득금액은 본 공개매수의 응모 결과 및 매수 완료 시점의 적용 환율 등에 따라 달라질 수 있습니다. '자산총액(원)'은 2025년 12월 31일 현재 한국채택국제회계기준에 따라 작성된 삼성물산(주)의 연결재무제표 기준입니다. - 상기 '3. 취득후 소유주식수 및 지분비율'의 '지분비율(%)'은 '소유주식수(주)'에서 발행주식총수에서 자기주식을 제외한 주식수로 나눈 비율입니다. - 상기 '6. 취득예정일자'는 본 공개매수에 따라 취득하는 주식의 결제예정일입니다. 구체적인 일정은 본 공개매수 절차의 진행상황, 공개매수 조건의 충족 또는 포기 여부, 기업결합 및 외국인투자 관련 승인 등 관계기관의 인허가 일정에 따라 변경될 수 있습니다. - 상기 '7. 이사회결의일(결정일)'은 삼성바이오로직스(주)의 이사회결의일임. - 기타 세부내역은 첨부된 '외부평가기관의 평가의견서'를 참조하시기 바랍니다. - 삼성바이오로직스(주)는 직접 또는 본 공개매수 개시 전에 스위스 소재 자회사를 설립한 다음 해당 자회사를 통하여 스위스 증권거래소에 상장된 발행회사의 기명주식을 공개매수 방식으로 취득할 예정입니다. 이에 향후 자회사 설립 등을 통해 공개매수자가 최종 확정되는 경우 공시할 예정입니다. - 발행회사의 최대주주인 Draupnir Holding B.V.는 본 보고서 제출일 현재 보유하고 있는 발행회사 주식 18,375,000(지분율 55.65%=18,375,000/33,016,411)주 전부를 본 공개매수에 응모하기로 확약하였습니다. - 본 공개매수는 본 공개매수기간 종료 시점까지 유효하고 철회 불가능하게 응모된 주식(최대주주의 확약에 따라 최대주주가 본 공개매수에 응모할 주식 포함)수량이 발행회사의 완전희석 기준 자본금의 약 66.7(=2/3)% 이상일 경우 매수하는 것을 조건(이하 \"최소 응모조건\")으로 합니다. 이에 최소 응모조건에 미달하는 경우 응모 주식 전부를 매수하지 않습니다. - 본 공개매수의 최소 응모조건을 비롯한 공개매수 조건이 충족되지 않거나 포기되지 않는 경우 본건 주식 양수가 이루어지지 않을 수 있습니다. - 인수자금은 유상증자 등을 통해 조달 예정이나, 진행과정에서 변동 발생 시 보유자금을 활용 예정입니다. - 상기 내용은 본 공개매수 및 관련 인허가 절차의 진행상황에 따라 변경될 수 있으며, 주요 사항이 변경되는 경우 관련 법령에 따라 최종 확정되는 경우 정정공시할 예정입니다.\n※ 관련공시 | 2026-07-20 타법인 주식 및 출자증권 취득결정(종속회사의 주요경영사항)\n구분 | 자산총계 | 부채총계 | 자본총계 | 자본금 | 매출액 | 당기순이익\n당해",
+        "content_truncated": true,
+        "total_chars": 3406,
+        "summary": "[기재정정]타법인주식및출자증권취득결정(종속회사의주요경영사항)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800834",
+        "collected_at": "2026-09-07T03:40:25.716920Z",
+        "report_name": "[기재정정]타법인주식및출자증권취득결정(종속회사의주요경영사항)              ",
+        "published_at": "2026-08-28T00:00:00Z",
+        "request_id": "9213e547-b28e-45d3-95e6-c74511de0605",
+        "source_type": "dart"
+      }
+    },
+    "20260828800769": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260828800769",
+        "document_type": "disclosure",
+        "content": "삼성물산/유상증자결정(종속회사의 주요경영사항)/(2026.08.28)유상증자결정(종속회사의 주요경영사항)\n종속회사인 | 삼성바이오로직스 | 의 주요경영사항 신고\n1. 신주의 종류와 수 | 보통주식(주) | 2,270,000\n종류주식(주) | -\n2. 1주당 액면가액(원) | 2,500\n3. 증자전 발행주식총수(주) | 보통주식(주) | 46,290,951\n종류주식(주) | -\n4. 자금조달의 목적 | 시설자금(원) | 294,776,453,897\n영업양수자금(원) | -\n운영자금(원) | -\n채무상환자금(원) | -\n타법인 증권 취득자금(원) | 2,706,163,546,103\n기타자금(원) | -\n5. 증자방식 | 주주배정후실권주일반공모\n6. 신주 발행가액 | 확정발행가 | 보통주식(원) | -\n종류주식(원) | -\n예정발행가 | 보통주식(원) | 1,322,000 | 확정 예정일 | 2026-11-04\n종류주식(원) | - | 확정 예정일 | -\n7. 발행가 산정방법 | '22. 기타 투자판단과 관련한 중요사항 - 가. 신주 발행가액 산정방법' 참고\n8. 신주배정기준일 | 2026-10-06\n9. 1주당 신주배정주식수(주) | 0.0392737657\n10. 우리사주조합원 우선배정비율(%) | 20.0\n11. 청약예정일 | 우리사주조합 | 시작일 | 2026-11-09\n종료일 | 2026-11-09\n구주주 | 시작일 | 2026-11-09\n종료일 | 2026-11-10\n12. 납입일 | 2026-11-17\n13. 실권주 처리계획 | '22. 기타 투자판단과 관련한 중요사항 - 나. 신주의 배정방법' 참고\n14. 신주의 배당기산일 | 2026-01-01\n15. 신주권교부예정일 | -\n16. 대표주관회사(직접공모가 아닌 경우) | 신한투자증권(주), NH투자증권(주), 한국투자증권(주), 케이비증권(주)\n17. 신주인수권양도여부 | 해당\n18. 이사회결의일(결정일) | 2026-08-28\n- 사외이사 참석여부 | 참석(명) | 4\n불참(명) | -\n- 감사(사외이사가 아닌 감사위원)참석 여부 | 참석\n19. 증권신고서 제출대상 여부 | 예\n20. 제출을 면제받은 경우 그 사유 | -\n21. 공정거래위원회 신고대상 여부 | 아니오\n22. 기타 투자판단과 관련한 중요사항 | - 금번 공시는 삼성바이오로직스(주)의 유상증자 결정에 따른 사항임. 가. 신주 발행가액 산정방법 「증권의 발행 및 공시 등에 관한 규정」제5-18조에 의거 주주배정 증자 시 가격산정 절차 폐지 및 가격산정의 자율화에 따라 발행가액을 자유롭게 산정할 수 있으나, 시장혼란 우려 및 기존 관행 등으로 「(舊)유가증권 발행 및 공시 등에 관한 규정」 제57조를 일부 준용하여 아래와 같이 산정합니다. ① 예정발행가액 : 예정발행가액은 이사회결의일 전일(2026년 08월 27일)을 기산일로 하여 유가증권시장에서 성립된 거래대금을 거래량으로 가중산술평균한 1개월 가중산술평균주가, 1주일 가중산술평균주가 및 기산일 종가를 산술평균하여 산정한 가액과 기산일 종가 중 낮은 금액을 기준주가로 하여 할인율 15%를 적용, 증자비율은 유상증자 주식수/발행주식총수로 계산하여 아래의 산식에 의하여 산정된 발행가액(예정발행가액)으로 합니다. 단, 호가단위 미만은 호가단위로 절상하며, 그 가액이 액면가액 이하일 경우에는 액면가액을 발행가액으로 합니다. * 예정발행가액 = [기준주가 × (1-할인율)] / [1+(증자비율 × 할인율)] ② 1차 발행가액 : 신주배정기준일 전 제3거래일을 기산일로 하여 유가증권시장에서 성립된 거래대금을 거래량으로 가중산술평균한 1개월 가중산술평균주가, 1주일 가중산술평균주가 및 기산일 종가를 산술평균하여 산정한 가액과 기산일 종가 중 낮은 금액을 1차 기준주가로 하며 할인율 15%를 적용, 증자비율은 유상증자 주식수/발행주식총수로 계산하여 아래의 산식에 의하여 산정된 발행가액으로 한다. 단, 호가단위 미만은 호가단위로 절상하며, 그 가액이 액면가액(2,500원) 이하인 경우 액면가액으로 한다. * 1차 발행가액 = [1차 기준주가 × (1-할인율)] / [1 + (증자비율 × 할인율)] ③ 2차 발행가액 : 구주주 청약일 전 제3거래일을 기산일로 유가증권시장에서 성립된 거래대금을 거래량으로 가중산술평균한 1주일 가중산술평균주가 및 기산일 종가를 산술평균하여 산정한 가액과 기산일 종가 중 낮은 금액을 2차 기준주가로 하여 아래의 산식에 따라 결정하며 할인율은 15%를 적용한다. 단, 호가단위 미만은 호가단위로 절상하며, 할인율 적용에 따른 모집가액이 액면가액(2,500원) 이하일 경우에는 액면가액을 발행가액으로 한다. * 2차 발행가액 = 2차 기준주가 × (1-할인율) ④ 확정 발행가액 : 확정 발행가액은 1차 발행가액과 2차 발행가액 중 낮은 가액으로 한다. 다만 자본시장과 금융투자업에 관한 법률 제165조의6 및 증권의 발행 및 공시 등에 관한 규정 제5-15조의2에 의거하여 1차 발행가액과 2차 발행가액 중 낮은 가액이 청약일 전 과거 제3거래일부터 제5거래일까지의 가중산술평균주가를 기준주가로 하여 40% 할인율을 적용하여 산정한 가격보다 낮은 경우 청약일전 과거 제3거래일부터 제5거래일까지의 가중산술평균주가에서 40% 할인율을 적용하여 산정한 가격을 확정발행가액으로 한다. 단, 호가 단위 미만은 호가 단위로 절상하며, 확정 발행가액이 액면가액(2,500원) 이하일 경우에는 액면가액을 발행가액으로 한다. * 확정 발행가액 = Max{Min[1차 발행가액, 2차 발행가액], 기준주가의 60%} ※ 일반공모 발행가액은 우리사주조합 및 구주주 청약 시에 적용된 확정 발행가액을 동일하게 적용합니다. 나. 신주의 배정방법 ① 우리사주조합 총 발행예정주식 2,270,000주의 20%에 해당하는 454,000주는 「자본시장과 금융투자업에 관한 법률」제165조의7에 따라 우리사주조합에 우선 배정합니다. ② 구주주 청약 : 신주배정기준일(2026년 10월 06일) 18시 현재 주주명부에 등재된 주주(이하 “구주주”라 한다)에게 본 주식을 1주당 0.0392737657주를 곱하여 산정된 배정주식수(단, 1주 미만은",
+        "content_truncated": true,
+        "total_chars": 6908,
+        "summary": "유상증자결정(종속회사의주요경영사항)               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800769",
+        "collected_at": "2026-09-07T03:40:25.917232Z",
+        "report_name": "유상증자결정(종속회사의주요경영사항)              ",
+        "published_at": "2026-08-28T00:00:00Z",
+        "request_id": "b7e0b2e9-5f53-4d8b-8708-44aa9c29d3bb",
+        "source_type": "dart"
+      }
+    },
+    "20260819800608": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260819800608",
+        "document_type": "disclosure",
+        "content": "삼성물산/단일판매ㆍ공급계약체결/(2026.08.19)단일판매ㆍ공급계약체결\n정정일자 | 2026-08-19\n1. 정정관련 공시서류 | 단일판매ㆍ공급계약 체결\n2. 정정관련 공시서류제출일 | 2025-12-12\n3. 정정사유 | 계약기간 변경\n4. 정정사항\n정정항목 | 정정전 | 정정후\n5. 계약기간 - 종료일 | 2030-02-28 | 2030-06-30\n9. 기타 투자판단과 관련한 중요사항 | - 금번 공시는 카타르 Dukhan Solar Power Plant Project 낙찰통지서(Letter of Award) 수령 공시 이후 '25.12.11일 본계약이 체결되어 해당 내용을 공시하는 건임. | - (삭제)\n-\n1. 판매ㆍ공급계약 구분 | 공사수주\n- 체결계약명 | ENGINEERING, PROCUREMENT, INSTALLATION AND COMMISSIONING OF DUKHAN SOLAR POWER PLANT\n2. 계약내역 | 계약금액(원) | 1,540,071,611,480\n최근매출액(원) | 42,103,238,027,336\n매출액대비(%) | 3.66\n대규모법인여부 | 해당\n3. 계약상대 | QatarEnergy (카타르)\n- 회사와의 관계 | -\n4. 판매ㆍ공급지역 | 카타르\n5. 계약기간 | 시작일 | 2025-09-01\n종료일 | 2030-06-30\n6. 주요 계약조건 | 계약금ㆍ선급금 유무 | 유\n대금지급 조건 등 | 공사 진행에 따라 청구 및 지급\n7. 계약(수주)일자 | 2025-12-11\n8. 공시유보 관련내용 | 유보사유 | -\n유보기한 | -\n9. 기타 투자판단과 관련한 중요사항\n- 공사개요: 2,000MW 규모 태양광 발전소 건설 - 상기 2항의 계약금액은 총 공사금액 USD 1,047,382,760.80에 대해 2025년 12월 11일자 최초 매매기준율(1,470.40KRW/USD)을 적용함. - 상기 2항의 최근 매출액은 2024년말 연결 재무제표 기준임. - 상기 5항의 계약기간은 공사기간임. - 상기 계약금액 및 공사기간 등은 공사진행 과정상 변동될 수 있음.\n※ 관련공시 | 2025-08-25 투자판단 관련 주요경영사항 2025-09-16 투자판단 관련 주요경영사항 2025-12-12 단일판매ㆍ공급계약체결",
+        "content_truncated": false,
+        "total_chars": 1106,
+        "summary": "[기재정정]단일판매ㆍ공급계약체결               공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819800608",
+        "collected_at": "2026-09-07T03:40:26.109600Z",
+        "report_name": "[기재정정]단일판매ㆍ공급계약체결              ",
+        "published_at": "2026-08-19T00:00:00Z",
+        "request_id": "6093c504-3be8-47ed-bcdf-14a283465f70",
+        "source_type": "dart"
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260831800689",
+    "20260831800587",
+    "20260828800834",
+    "20260828800769",
+    "20260819800608"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:40:23.467962Z"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:23.468252Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:23.468668Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:23.468857Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:23.468976Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:23.469089Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:40:23.469199Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:23.755707Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:24.041404Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:24.288570Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:24.606829Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:24.677790Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-028260",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:40:25.067432Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}

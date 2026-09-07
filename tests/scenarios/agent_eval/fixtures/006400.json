@@ -1,0 +1,1260 @@
+{
+  "company": {
+    "company_name": "삼성SDI",
+    "stock_code": "006400"
+  },
+  "captured_at": "2026-09-07T03:45:13.222695+00:00",
+  "capture_finished_at": "2026-09-07T03:47:54.200407+00:00",
+  "data": {
+    "price": {
+      "status": "success",
+      "company_name": "삼성SDI",
+      "stock_code": "006400",
+      "current_price": 541000,
+      "change": -7000,
+      "change_rate": -1.28,
+      "volume": 196842,
+      "volume_change_rate": 75.99,
+      "avg_volume_20d": 475270,
+      "volume_ratio_20d": 0.72,
+      "volume_basis": "intraday_pace",
+      "volume_as_of": "2026-09-07",
+      "projected_volume": 340845,
+      "warnings": [],
+      "as_of": "2026-09-07T03:45:13.774234Z",
+      "source_name": "한국투자증권 Open API",
+      "collected_at": "2026-09-07T03:45:13.774234Z"
+    },
+    "news": {
+      "request_id": "ffeec381-d8d8-4d55-809f-0770cb5ac769",
+      "status": "success",
+      "company_name": "삼성SDI",
+      "stock_code": "006400",
+      "articles": [
+        {
+          "headline": "ESS 3차 입찰, 승부처는 배점표",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T03:28:00Z",
+          "summary": "1·2차 입찰의 누적 낙찰물량 점유율은 삼성SDI 56%, SK온 25%, LG에너지솔루션 19%다. 1차(2025년 7월)에서는 삼성SDI가 76%를 가져갔지만 2차(2월)에서는 SK온이 50%를 수주하며 판도가 뒤집혔다. 문제는 가격이다. kWh당...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362731",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 훈풍에 코스피 3% 급등…외국인·기관 1.6조 싹쓸이",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T02:41:00Z",
+          "summary": "반면 한화에어로스페이스(-2.18%), 삼성SDI(-0.73%), 셀트리온(-0.90%) 등은 내리고 있다. 업종별로 전기·전자(4.29%), 기계·장비(4.12%), 제조(3.35%) 등은 오르고 음식료·담배(-2.55%), 부동산(-1.15%), 섬유·의류(-1.11...",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063126",
+          "relevance": "high"
+        },
+        {
+          "headline": "애플도 접는다…삼성 폴더블에 도전장, 韓 부품사 수혜 기대",
+          "publisher": "theviewers.co.kr",
+          "published_at": "2026-09-07T02:38:00Z",
+          "summary": "삼성SDI와 덕산네오룩스, LG화학은 삼성디스플레이의 M16 OLED 소재 공급망에 참여하고 있으며, 비에이치는 폴더블 OLED용 FPCB를 공급한다. LG이노텍은 카메라 모듈, 삼성전기는 AP용 반도체 기판과 MLCC를 탑재하는 것으로...",
+          "source_url": "https://theviewers.co.kr/View.aspx?No=4215198",
+          "relevance": "high"
+        },
+        {
+          "headline": "전기차 배터리 시장 20% 커졌는데…K-배터리 점유율 '뒷걸음'",
+          "publisher": "news1.kr",
+          "published_at": "2026-09-07T02:26:00Z",
+          "summary": "삼성SDI는 10위권에 들지 못했다. 반면 CATL을 비롯한 중국계 업체들은 빠르게 몸집을 키우며 시장 지배력을 한층 강화했다. 7일 시장조사기관 SNE리서치에 따르면 올해 1~7월 세계 각국에 신규 등록된...",
+          "source_url": "https://www.news1.kr/industry/general-industry/6281994",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 훈풍에 3% 안팎 상승세…삼전닉스 3~5%↑",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T02:12:00Z",
+          "summary": "반면 한화에어로스페이스(-2.18%), 삼성SDI(-0.73%), 셀트리온(-0.90%) 등은 내리고 있다. 업종별로 전기·전자(4.29%), 기계·장비(4.12%), 제조(3.35%) 등은 오르고 음식료·담배(-2.55%), 부동산(-1.15%), 섬유·의류(-1.11...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907072500008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 메모리주 강세에 장 초반 3%대 상승...삼전 4%·SK하닉 6%↑",
+          "publisher": "thepublic.kr",
+          "published_at": "2026-09-07T02:08:00Z",
+          "summary": "반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 하락 중이다. 업종별로는 기술주 급등 영향으로 전기·전자가 4.96% 오르고 있다. 제조는 3.95%, 금융은 2.51%, 유통은 2.45% 상승 중이다. 음식료·담배는 1.99...",
+          "source_url": "https://www.thepublic.kr/news/articleView.html?idxno=317738",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스모신소재, 피노와 150억 원 규모 신주인수계약 체결",
+          "publisher": "cctimes.kr",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "삼성SDI도 2026년 4월 FINO의 제3자배정 유상증자에 300억 원을 투자해 지분 7.44%를 취득한 바 있다. 코스모신소재는 이번 투자를 계기로 피노의 글로벌 네트워크와 이차전지 소재사 업 역량을 연계해 그룹 차원의...",
+          "source_url": "http://www.cctimes.kr/news/articleView.html?idxno=925767",
+          "relevance": "high"
+        },
+        {
+          "headline": "9월 주식 뭐 살까… 유망주 20개 뜯어보니",
+          "publisher": "m.skyedaily.com",
+          "published_at": "2026-09-07T02:00:00Z",
+          "summary": "스카이데일리 이세희기자 = 중장기는 AI·방산·K푸드 주목 ▲ 하나증권이 9월 단기 투자유망종목으로 삼성바이오로직스와 삼성SDI, S-Oil, 대한항공 등 10개 종목을 새롭게 제시했다. 하나증권 하나증권이 9월 단기...",
+          "source_url": "https://m.skyedaily.com/news_view.html?ID=311094",
+          "relevance": "high"
+        },
+        {
+          "headline": "[속보]코스피, 오픈AI발 호재에 6,900선 재탈환…삼전 4.3%·닉스 5.9% 급...",
+          "publisher": "kwnews.co.kr",
+          "published_at": "2026-09-07T01:50:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중이다. 그러나 음식료·담배(-1.99...",
+          "source_url": "https://www.kwnews.co.kr/article/20260907500348",
+          "relevance": "high"
+        },
+        {
+          "headline": "전기차 배터리 시장 장악한 중국...1~7월 합산 점유율 70% 돌파",
+          "publisher": "livebiz.today",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "삼성SDI는 10위 안에 들지 못해 1~7월 배터리 사용량 데이터가 제공되지 않았다. 상위 10위개사 중 LG에너지솔루션(3위), 파나소닉(6위), SK온(8위)을 제외하고 나머지 7개사는 중국 업체들이었다. 중국 기업들의...",
+          "source_url": "https://www.livebiz.today/news/articleView.html?idxno=204681",
+          "relevance": "high"
+        },
+        {
+          "headline": "아이폰 카메라 스펙 껑충… LG이노텍, 부품 단가·물량 쌍끌이 호재",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-07T01:46:00Z",
+          "summary": "배터리와 소재주 가운데서는 삼성SDI와 LG화학도 약세를 기록하고 있다. 아이폰 테마가 전반적으로 상승하고 있지만 각 기업의 사업 비중과 수급 여건에 따라 차별화가 나타나는 양상이다. 아이폰 관련 부품주에 대한...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484481",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등… 코스피 6,900선 재탈환",
+          "publisher": "fntoday.co.kr",
+          "published_at": "2026-09-07T01:40:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 약세를 보이고 있다. 업종별로는 기술주 랠리에 힘입어 전기·전자(4.96%)가 폭등했고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등이 오름세를 타고 있다. 반면...",
+          "source_url": "https://www.fntoday.co.kr/news/articleView.html?idxno=392276",
+          "relevance": "high"
+        },
+        {
+          "headline": "대출금리 7%대, 배터리 3사 에너지저장 전환",
+          "publisher": "tokenpost.kr",
+          "published_at": "2026-09-07T01:38:00Z",
+          "summary": "삼성SDI의 차입금은 12조1109억원으로 같은 기간 1조2000억원 이상 증가했다. 두 회사의 총차입금은 41조2343억원으로 반년 만에 7조8383억원 늘었다. 다만 LG에너지솔루션의 현금 및 현금성자산은 지난해 말...",
+          "source_url": "https://www.tokenpost.kr/news/tech/403654",
+          "relevance": "high"
+        },
+        {
+          "headline": "헝가리, 배터리 산업 '3진 아웃제' 도입…삼성SDI 공장 직접 거론",
+          "publisher": "impacton.net",
+          "published_at": "2026-09-07T01:36:00Z",
+          "summary": "삼성SDI 괴드공장 사례로 제시…셈코프는 6월 생산허가 정지 마자르 총리는 새 제재 방안을 설명하면서 삼성SDI의 헝가리 괴드 공장을 예로 들었다. 해당 공장은 2022년과 2023년에 배출 기준 초과로 과태료를 냈다. 마자르...",
+          "source_url": "http://www.impacton.net/news/articleView.html?idxno=20237",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 출시에 코스피 강세 메모리 공급 부족…SK하이닉스 6...",
+          "publisher": "smedaily.co.kr",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "반면 한화에어로스페이스(-1.90%), 삼성SDI(-0.55%) 등은 하락하고 있다. 업종별로는 전기·전자(4.59%), 기계(3.70%), 의료정밀(2.32%), 금융업(2.05%), 건설업(2.03%), 유통업(1.64%), 보험(1.62%), 운수창고(1.05%), IT서비스(0.91...",
+          "source_url": "http://www.smedaily.co.kr/news/articleView.html?idxno=362709",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성SDI 주가, 9월 7일 장중 544,000원 0.73% 하락",
+          "publisher": "topstarnews.net",
+          "published_at": "2026-09-07T01:32:00Z",
+          "summary": "7일 오전 10시 22분 기준, 네이버페이 증권에 따르면 삼성SDI 주가는 현재 544,000원에 거래되며 지난 종가인 548,000원 대비 4,000원 하락한 0.73%를 기록하고 있다. 이날 삼성SDI는 554,000원에 시가를 형성한...",
+          "source_url": "https://www.topstarnews.net/news/articleView.html?idxno=16185302",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피,美오픈AI 호재에 6,900선…환율 23개월만에 1,330원대",
+          "publisher": "seouleconews.com",
+          "published_at": "2026-09-07T01:28:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중이다. 그러나 음식료·담배(-1.99...",
+          "source_url": "http://www.seouleconews.com/news/articleView.html?idxno=93564",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 반도체주 강세에 3%가까이 급등…6,880선 돌파",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T01:26:00Z",
+          "summary": "반면 한화에어로스페이스(0.95%)와 삼성SDI(0.73%), 셀트리온(0.58%), 삼성화재(0.75%), 한화오션(0.23%) 등은 약세다. 한지영 키움증권 연구원은 이날 보고서에서 \"오픈AI의 GPT-6 아스트라 공개 이후 AI 수요 모멘텀이...",
+          "source_url": "https://www.news2day.co.kr/article/20260907500108",
+          "relevance": "high"
+        },
+        {
+          "headline": "1~7월 글로벌 전기차 배터리 시장서 중국 점유율 72.8%, K배터리 점유율...",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-07T01:22:00Z",
+          "summary": "삼성SDI는 지난 3월부터 10위권 밖에 머물고 있다. LG에너지솔루션 배터리 사용량은 60.3GWh로 지난해 같은 기간보다 4.5% 늘었다. 점유율은 8.3%로 1년 새 1.3%포인트 감소했다. SK온 배터리 사용량은 22.3GWh로...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446521",
+          "relevance": "high"
+        },
+        {
+          "headline": "LG엔솔, 차세대 LMR 배터리 안정성 높였다",
+          "publisher": "4th.kr",
+          "published_at": "2026-09-07T01:18:00Z",
+          "summary": "삼성SDI는 전기차용 LFP 배터리 등 다양한 프로젝트 수주를 추진하는 한편 미국에서 ESS용 각형 LFP 배터리 양산을 준비하고 있다. 소재업계에서는 포스코퓨처엠이 LMR 양극재 1세대 제품 개발과 양산 기술 확보를 마치고...",
+          "source_url": "http://www.4th.kr/news/articleView.html?idxno=2117562",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승",
+          "publisher": "news.sbs.co.kr",
+          "published_at": "2026-09-07T01:17:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중입니다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중입니다. 그러나 음식료·담배(-1....",
+          "source_url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008740759&plink=ORI&cooper=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "글로벌 배터리 20% 성장할 때 LG·SK는 제자리…中 점유율 72.8%",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-07T01:16:00Z",
+          "summary": "삼성SDI는 사용량 감소가 이어지면서 이번에 상위 10개사 명단에 이름을 올리지 못했다. SNE리서치가 공개한 1~6월 비중국 시장 기준 삼성SDI의 배터리 사용량은 10.5GWh로 전년 동기보다 29.0% 감소했다. 중국...",
+          "source_url": "https://www.g-enews.com/view.php?ud=2026090709560256133084322ec9_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "1.1조 담보 잡힌 삼성SDI, 美 정책자금 보증 변경···ESS '승부수'",
+          "publisher": "newsfreezone.co.kr",
+          "published_at": "2026-09-07T01:14:00Z",
+          "summary": "삼성SDI가 완성차 파트너사인 스텔란티스와 합작해 미국 현지에 설립한 배터리 법인 스타플러스에너지의 채무보증 조건을 변경 공시했다. 이번 이사회 결의는 새로운 자금을 유치한 신규 조달 건이 아니라, 지난 2024년...",
+          "source_url": "https://www.newsfreezone.co.kr/news/articleView.html?idxno=707773",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장시황] 오픈AI 호재…코스피 3%대 급등",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-07T01:08:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11%) 등은 내리고 있다. 업종별로는 전기·전자(4.96%), 제조(3.95%), 금융(2.51%), 유통(2.45%) 등이 상승, 음식료·담배(-1.99%), 섬유·의류(-1.46%), 부동산(-0.98...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862662",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 약 3% 뛴 6800선…코스닥도 약 2% 가까이 상승",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-07T01:07:00Z",
+          "summary": "시가총액 상위 20개 종목별로도 두산에너빌리티(+6.19%), SK(+5.41%) 등 18개 종목의 주가가 상승했으며, 삼성SDI(-0.73%), 셀트리온(-0.48%) 등 2개 종목에서만 주가가 떨어졌다. 코스닥은 13.88포인트(1.71%) 상승한...",
+          "source_url": "https://view.asiae.co.kr/article/2026090710072234147",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스모신소재, 피노에 150억원 투자…이차전지 공급망 협력 강화",
+          "publisher": "jbnews.com",
+          "published_at": "2026-09-07T01:06:00Z",
+          "summary": "삼성SDI도 지난 3월 피노의 제3자배정 유상증자에 300억원을 투자해 지분 7%대를 취득한 바 있다. 이번 투자는 코스모신소재의 충청권 생산기지 확장 흐름과도 맞닿아 있다. 코스모신소재는 현재 충주 목행동 공장에서...",
+          "source_url": "https://www.jbnews.com/news/articleView.html?idxno=1510961",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 美 반도체주 훈풍 6900선 재등정… 삼전닉스 동반 강세",
+          "publisher": "it.chosun.com",
+          "published_at": "2026-09-07T01:04:00Z",
+          "summary": "반면 삼성SDI(-0.18%), 셀트리온(-0.53%), 삼성화재(-0.9%) 등은 하락세다. 코스닥은 전 거래일 대비 14.02(1.72%) 오른 827.52를 기록하고 있다. 지난주 뉴욕 증시는 3대 지수가 모두 하락했지만 반도체 업종은 강세를...",
+          "source_url": "https://it.chosun.com/news/articleView.html?idxno=2023092169589",
+          "relevance": "high"
+        },
+        {
+          "headline": "[고금리의 귀환③] 고금리에 전기차 부담…배터리 3사, ESS로 '돌파구'",
+          "publisher": "news.einfomax.co.kr",
+          "published_at": "2026-09-07T01:02:00Z",
+          "summary": "스텔란티스와 삼성SDI의 미국 합작법인 '스타플러스 에너지(SPE)' 전경[출처: 연합뉴스 자료사진] ◇ 美 자동차금리 아직 7%대…연준 인상 땐 하락세 제동 7일 미국 연준에 따르면 지난 5월 미국 상업은행의 60개월...",
+          "source_url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433689",
+          "relevance": "high"
+        },
+        {
+          "headline": "[고금리의 귀환①] 금리 1%p 오를 때…삼성·SK·LG 누가 가장 아픈가",
+          "publisher": "news.einfomax.co.kr",
+          "published_at": "2026-09-07T01:02:00Z",
+          "summary": "금리 상승하면 세전이익 일제히 감소 LG에너지솔루션[373220], 삼성SDI[006400], SK온 등 이차전지 업계는 금리가 오르는 경우 상당한 타격을 받는 것으로 나타났다. LG에너지솔루션은 이자율이 1%p 오르면 세전이익이...",
+          "source_url": "https://news.einfomax.co.kr/news/articleView.html?idxno=4433691",
+          "relevance": "high"
+        },
+        {
+          "headline": "아스트라 돌풍, 이번엔 정말 ‘칠천피’ 재돌파?…코스피, 6900선 회복 [...",
+          "publisher": "biz.heraldcorp.com",
+          "published_at": "2026-09-07T00:56:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 코스닥 지수도 상승세를 나타내고 있다. 코스닥은 전장보다 9.41포인트(1.16%) 오른 822.91로 출발해 1%대 상승률을 보인다. 개인이 372억원...",
+          "source_url": "https://biz.heraldcorp.com/article/10864511?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"땡큐, 오픈AI\"...코스피, 미국발 훈풍에 6,900선 탈환",
+          "publisher": "wowtv.co.kr",
+          "published_at": "2026-09-07T00:51:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 한지영 키움증권 연구원은 \"지난 금요일(4일) 미국 반도체주 랠리가 시사하듯이 국내외 반도체주에 대한 지속적인 매도 압력도...",
+          "source_url": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202609070134&t=NN",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스모신소재, 삼성SDI 투자한 피노에 150억 베팅…이차전지 공급망 동...",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-07T00:50:00Z",
+          "summary": "삼성SDI가 지난 4월 피노에 300억원을 투자한 데 이어 코스모신소재까지 주주로 합류하면서 전구체와 양극재, LFP(리튬인산철) 등 이차전지 소재 공급망을 둘러싼 협력 관계가 확대될 전망이다. 7일 코스모신소재는...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=545944",
+          "relevance": "high"
+        },
+        {
+          "headline": "'아스트라 훈풍'에 반도체주 날았다…코스피 6900선 재탈환",
+          "publisher": "kado.net",
+          "published_at": "2026-09-07T00:47:00Z",
+          "summary": "반면 삼성SDI는 0.91%, 셀트리온은 0.11%, 삼성화재는 0.60% 각각 하락했다. 업종별로는 전기·전자가 4.96% 상승했고 제조 3.95%, 금융 2.51%, 유통 2.45% 등도 오름세다. 음식료·담배는 1.99%, 섬유·의류는 1.46%, 부동산은...",
+          "source_url": "https://www.kado.net/news/articleView.html?idxno=2070949",
+          "relevance": "high"
+        },
+        {
+          "headline": "[1% 초고수의 개장선택] 로봇주 팔고 반도체주 샀다",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-07T00:46:00Z",
+          "summary": "삼성SDI 역시 0.91% 떨어졌지만 순매수 5위였다. 반도체 대형주에는 상승 추세를 따라붙는 매수가, 최근 조정을 받은 실적주에는 낙폭을 활용한 매수가 동시에 유입된 것으로 분석된다. 피지컬 AI 기대감으로 단기간...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723193",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI '아스트라' 호재에 반도체 폭등…코스피 6900선 재탈환",
+          "publisher": "jnilbo.com",
+          "published_at": "2026-09-07T00:37:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중이다. 그러나 음식료·담배(-1.99...",
+          "source_url": "https://www.jnilbo.com/news/articleView.html?idxno=90000063013",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피 6900선 재탈환…외인·기관 반도체 사자 행진",
+          "publisher": "kmib.co.kr",
+          "published_at": "2026-09-07T00:35:00Z",
+          "summary": "현대차(1.83%), 삼성전기(2.50%), LG에너지솔루션(0.42%) 등도 오름세를 탄 반면 삼성SDI(-0.91%), 삼성화재(-0.60%), 셀트리온(-0.11%)은 약세를 보였다. 업종별로는 전기·전자(4.96%)와 제조업(3.95%)이 장을 주도했으나...",
+          "source_url": "https://www.kmib.co.kr/article/view.asp?arcid=9000009650&cp=nv",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 오픈AI발 호재에 6,900선 탈환…코스닥은 1% 상승(종합)",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-07T00:33:00Z",
+          "summary": "반면 삼성SDI(-0.91%), 셀트리온(-0.11%), 삼성화재(-0.60%) 등은 하락 중이다. 업종별로 기술주 급등에 전기·전자(4.96%)가 오르고 있고 제조(3.95%), 금융(2.51%), 유통(2.45%) 등도 상승 중이다. 그러나 음식료·담배(-1.99...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260907031051008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "“변동성 고점 지났다…2차전지·AI로 주도주 확산”<NH투자證>",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-07T00:22:00Z",
+          "summary": "신용·레버리지 축소로 증시 정상화 국면 진입 할인율·실적·정책 ‘3박자’…2차전지 재평가 주목 반도체 코어 유지…LG엔솔·삼성SDI·SKT 등 관심 [사진=연합뉴스] [뉴스투데이=염보라 기자] 국내 증시의 하락 변동성을...",
+          "source_url": "https://www.news2day.co.kr/article/20260907500031",
+          "relevance": "high"
+        },
+        {
+          "headline": "[서울데이터랩]개장 직후 인기 검색 종목 20選",
+          "publisher": "seoul.co.kr",
+          "published_at": "2026-09-07T00:15:00Z",
+          "summary": "삼성SDI(006400)는 54만5000원으로 0.55% 하락했고, 알테오젠(196170)은 28만7000원으로 0.52% 밀렸다. 한화오션(042660)은 0.35% 내린 8만6500원, 삼성중공업(010140)은 1.40% 하락한 2만1100원, POSCO홀딩스(005490)는 0.74...",
+          "source_url": "https://www.seoul.co.kr/news/economy/securities/2026/09/07/20260907500022?wlog_tag3=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[애널픽] 반도체 다음은 'AI·2차전지'…\"주도주 확산 주목\"",
+          "publisher": "theviewers.co.kr",
+          "published_at": "2026-09-06T23:58:00Z",
+          "summary": "이날 NH투자증권은 반도체를 코어로 유지하는 전략을 제시했다. 여기에 2차전지와 국내 AI 플랫폼, 서비스를 추가하는 방식이다. 관심 종목으로는 LG에너지솔루션, 삼성SDI, SK텔레콤, NHN을 제시했다.",
+          "source_url": "https://theviewers.co.kr/View.aspx?No=4215019",
+          "relevance": "high"
+        },
+        {
+          "headline": "썬볼트, 킨텍스 'K-BATTERY SHOW 2026' 참가",
+          "publisher": "enetnews.co.kr",
+          "published_at": "2026-09-06T23:58:00Z",
+          "summary": "삼성SDI, LG에너지솔루션, CATL, BYD 등 세계 정상급 제조사의 셀을 사용하며, 12V부터 84V까지 장비 사양에 맞춘 설계가 가능하고, 고전압 배터리의 주문 제작에도 대응해 고객이 원하는 스펙에 맞는 고전압·고용량...",
+          "source_url": "https://www.enetnews.co.kr/news/articleView.html?idxno=54109",
+          "relevance": "high"
+        },
+        {
+          "headline": "[강성기 칼럼] 막내린 '중국 공장' 시대'…초격차 기술로 공급망 주도해...",
+          "publisher": "thevaluenews.co.kr",
+          "published_at": "2026-09-06T23:40:00Z",
+          "summary": "국내 배터리 3사(LG에너지솔루션·삼성SDI·SK온)가 북미와 유럽 현지 합작공장을 대거 늘리고 있지만, 역설적으로 중국산 핵심 소재 없이는 공장을 돌릴 수 없는 한계에 부딪힌 것이 대표적이다. 특히 기술적 대체...",
+          "source_url": "http://www.thevaluenews.co.kr/news/view.php?idx=201351",
+          "relevance": "high"
+        },
+        {
+          "headline": "[개장 전 주요 공시] 셀트리온·SOOP·태영건설·SKC 등",
+          "publisher": "g-enews.com",
+          "published_at": "2026-09-06T23:32:00Z",
+          "summary": "삼성SDI는 미국 에너지 계열사 StarPlus Energy LLC가 1조 1489억원에 대한 담보를 제공을 결정했다고 4일 공시했다. StarPlus Energy LLC는 미국 에너지부와 연방금융은행으로부터 5조 6178억원 중 규모 자금을 조달한다....",
+          "source_url": "https://www.g-enews.com/view.php?ud=202609070828462460923c501012_1",
+          "relevance": "high"
+        },
+        {
+          "headline": "배터리 3사 부채비율 뜯어보니",
+          "publisher": "datanews.co.kr",
+          "published_at": "2026-09-06T23:20:00Z",
+          "summary": "같은 기간 LG에너지솔루션은 157.1%, 삼성SDI는 77.5%였다. SK온은 배터리사업 생산능력 확대에 따른 투자 부담과 수익성 부진으로 출범 이후 높은 부채비율을 이어왔다. 이 회사의 부채비율은 2022년 말 258.2%에서...",
+          "source_url": "http://www.datanews.co.kr/news/article.html?no=146322",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼전 3%·SK하닉 4%대 프리마켓 ‘강세’…이번 주 7000선 시험대",
+          "publisher": "dt.co.kr",
+          "published_at": "2026-09-06T23:11:00Z",
+          "summary": "한화에어로스페이스(0.95%), 삼성SDI(0.91%), 현대모비스(0.71%), HD현대중공업(0.69%) 등도 강세다. 이번 주 국내 증시는 지난 금요일 발표된 미국 8월 비농업 고용 결과를 소화하면서 물가지표와 장기금리 흐름에...",
+          "source_url": "https://www.dt.co.kr/article/12082378?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 다음은 2차전지·AI 플랫폼…NH證 “LG엔솔·삼성SDI·SKT·NHN 주목...",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-06T23:02:00Z",
+          "summary": "관심 종목으로는 LG에너지솔루션과 삼성SDI, SK텔레콤, NHN을 꼽았다. 나정환 NH투자증권 연구원은 7일 “7월 급락을 키운 레버리지 ETF와 감마 헷지 등 신용 요인이 상당 부분 해소됐다”며 “이제는 ‘더 떨어지는가’보다...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622374",
+          "relevance": "high"
+        },
+        {
+          "headline": "[증시키워드] 노조 리스크 불거진 삼성전자…로보티즈 '정부 육성책'에...",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-06T23:00:00Z",
+          "summary": "삼성SDI는 직전 거래일 1.67% 오른 54만8000원에 거래를 마친 뒤 장전 검색 점유율 1.81%를 기록했다. 네이버는 이해진 창업자가 3일 성남 본사에서 브룩필드자산운용의 브루스 플랫 회장을 만나 AI 팩토리 사업 확장을...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622372",
+          "relevance": "high"
+        },
+        {
+          "headline": "하나證 “2차전지 비중확대⋯미국 BESS 탈중국 수혜 주목”",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-06T22:58:00Z",
+          "summary": "하나증권에 따르면 배터리 대형주 3사 합산 유니버스인 LG에너지솔루션, 삼성SDI, SK이노베이션 주가는 한 주간 0.6% 하락했지만 코스피 수익률 -1.5%를 0.9%포인트 웃돌았다. SK이노베이션은 한 주간 18.3% 상승했다....",
+          "source_url": "https://www.etoday.co.kr/news/view/2622370",
+          "relevance": "high"
+        },
+        {
+          "headline": "\"주도주 확산 국면…AI 플랫폼과 2차전지 편입할 때\"",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-06T22:50:00Z",
+          "summary": "나 연구원은 “포트폴리오 관점에서 반도체를 코어로 유지하면서 2차전지와 국내 AI 플랫폼·서비스를 확산 대상으로 편입하는 접근이 유효하다”며 관심 종목으로 LG에너지솔루션(373220), 삼성SDI(006400), SK텔레콤...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=01958166645577824&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "'잊혀진 테마' 2차전지의 귀환…ESS 타고 투자심리 회복",
+          "publisher": "ebn.co.kr",
+          "published_at": "2026-09-06T22:38:00Z",
+          "summary": "지난달 엘앤에프는 100.14% 급등했으며 포스코퓨처엠과 삼성SDI도 각각 45.60%, 45.34% 상승했다. 같은 기간 국내 증시의 대표적인 AI·반도체주인 삼성전자와 SK하이닉스는 각각 0.95%, 2.56% 하락했다. 시장에서는...",
+          "source_url": "https://www.ebn.co.kr/news/articleView.html?idxno=1723168",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체 다음은 이것?…다시 불붙은 2차전지 ETF",
+          "publisher": "dailian.co.kr",
+          "published_at": "2026-09-06T22:04:00Z",
+          "summary": "국내 기업 중엔 배터리를 생산하는 LG에너지솔루션·삼성SDI를 비롯해 양극재 등 소재를 만드는 포스코퓨처엠·에코프로비엠·엘앤에프 등이 있다. 한동안 2차전지주는 전기차 시장의 캐즘(일시적 수요 정체)...",
+          "source_url": "https://www.dailian.co.kr/news/view/1686635/?sc=Naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더벨][삼성바이오로직스 유상증자] 금감원 실무협의 개시…신고서 완성...",
+          "publisher": "thebell.co.kr",
+          "published_at": "2026-09-06T22:02:00Z",
+          "summary": "주주배정 후 실권주 일반공모 방식이라도 소액주주에게 조달 부담을 지운다는 비판에서 자유롭지 못한 데다 지난해부터 삼성SDI, 한화솔루션 등의 유상증자를 두고 소액주주들이 집회에 나서거나 주주행동 플랫폼 '액트...",
+          "source_url": "https://www.thebell.co.kr/free/content/ArticleView.asp?key=202609030938100840103062",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 관세 피해 공장 옮겼더니…한국 기업, 美 공급망 핵심으로",
+          "publisher": "geconomy.co.kr",
+          "published_at": "2026-09-06T21:48:00Z",
+          "summary": "LG에너지솔루션과 삼성SDI, SK온 등 국내 배터리 3사는 미국에 대규모 생산능력을 구축했다. GM·포드·스텔란티스 등 글로벌 완성차 업체와 합작하거나 현지 생산거점을 확보하면서 북미 전기차 공급망의 핵심 축으로 자리...",
+          "source_url": "https://www.geconomy.co.kr/news/article.html?no=323418",
+          "relevance": "high"
+        },
+        {
+          "headline": "AI 전력난·탈중국 훈풍에… 2차전지 ETF 고공행진 [마이머니]",
+          "publisher": "segye.com",
+          "published_at": "2026-09-06T21:04:00Z",
+          "summary": "◆“실적 기반 옥석 가리기 필수” 업계에 따르면 가파르게 성장하는 북미 ESS 시장을 선점하기 위해 삼성SDI와 LG에너지솔루션 등 국내 주요 배터리 기업들은 현지 생산라인 증설에 박차를 가하고 있다. 올...",
+          "source_url": "https://www.segye.com/newsView/20260906508212?OutUrl=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 공장 건설은 공세적 생존 전략… 관세 넘어 공급망 동맹으로",
+          "publisher": "hankookilbo.com",
+          "published_at": "2026-09-06T19:30:00Z",
+          "summary": "'K배터리' 3사 LG에너지솔루션(약 170억 달러)·삼성SDI(60억 달러 이상)·SK온(약 30억 달러)은 2020년 전후로 총 260억 달러(약 35조 원)를 쏟아부으며 미국 내 생산 거점을 구축했다. 제너럴모터스(GM), 포드, 스텔란티스 등...",
+          "source_url": "https://www.hankookilbo.com/news/article/A2026090615130001242?did=NA",
+          "relevance": "high"
+        },
+        {
+          "headline": "오픈AI 새 모델 '아스트라' 공개에 필라델피아 반도체 3.4% 급등… 코스...",
+          "publisher": "cbci.co.kr",
+          "published_at": "2026-09-06T15:00:00Z",
+          "summary": "외국인 순매수 상위 종목에는 우리금융지주, 한미반도체, SK스퀘어, 대한항공, SK이노베이션 등이 포함됐고, 순매도 상위에는 SK하이닉스, 삼성전자, 삼성SDI, 두산에너빌리티, 효성중공업이 올랐다. 지난주 글로벌...",
+          "source_url": "https://www.cbci.co.kr/news/articleView.html?idxno=604295",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성 투자·인구 증가 천안마저 미분양관리지역 지정",
+          "publisher": "daejonilbo.com",
+          "published_at": "2026-09-06T09:16:00Z",
+          "summary": "천안은 삼성전자와 삼성SDI를 비롯한 대기업 생산시설과 다수의 산업단지를 갖춘 충남 최대 도시다. 지난 7월 총인구는 70만 9679명으로, 지난해 5월 70만 명을 넘어선 지 1년여 만에 71만 명 돌파를 앞두고 있다. 특히...",
+          "source_url": "https://www.daejonilbo.com/news/articleView.html?idxno=2299106",
+          "relevance": "high"
+        },
+        {
+          "headline": "국내 3차 ESS 수주전 임박…사업 규모 2조원대 커질듯",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-06T04:36:00Z",
+          "summary": "삼성SDI 일체형 에너지저장장치(ESS) 배터리 솔루션 삼성 배터리 박스(SBB) 2.0.(사진=삼성SDI) 1차와 2차 누적으로 보면 삼성SDI가 물량 629MW로 전체 물량의 55.8%를 차지했다. SK온은 284MW로 25.2%를, LG에너지솔루션은 215MW로...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=01584246645577496&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "[기획]배터리부터 가전까지 DPP 규제 확산…韓 아직 걸음마",
+          "publisher": "m-i.kr",
+          "published_at": "2026-09-06T04:00:00Z",
+          "summary": "'인터배터리 2026' 내 LG에너지솔루션과 삼성SDI 배터리 부스를 둘러보는 참관객들. 사진=연합뉴스 매일일보 = 김채은 기자  |  유럽연합(EU)이 배터리를 시작으로 철강·섬유·타이어·가전 등 산업 전반에 '디지털 제품...",
+          "source_url": "https://www.m-i.kr/news/articleView.html?idxno=1410118",
+          "relevance": "high"
+        },
+        {
+          "headline": "[기획]'디지털 제품여권' 필수 시대…데이터가 수출 경쟁력",
+          "publisher": "m-i.kr",
+          "published_at": "2026-09-06T04:00:00Z",
+          "summary": "삼성SDI의 원통형 배터리. 사진=연합뉴스 매일일보 = 김채은 기자  |  유럽연합(EU)의 디지털제품여권(DPP) 도입이 본격화하면서 제품 데이터를 관리하고 입증하는 능력이 새로운 수출 경쟁력으로 떠오르고 있다. 기존에는...",
+          "source_url": "https://www.m-i.kr/news/articleView.html?idxno=1410116",
+          "relevance": "high"
+        },
+        {
+          "headline": "[재계 인사이드] 삼성안에 있는 별도의 종합그룹, 삼성물산",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-06T04:00:00Z",
+          "summary": "현재 삼성에는 삼성생명과 삼성화재와 같은 금융계열사도 있지만, 핵심 사업분야는 삼성전자와 삼성전기, 삼성SDI, 삼성SDS 등 반도체 및 전자 전기사업으로 영역이 좁은 편이다. 삼성전자의 스마트폰과 TV 냉장고 등...",
+          "source_url": "https://www.news2day.co.kr/article/20260906500033",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간증시] 코스피 한주간 1.50%↓...이번 주는 상승 출발 기대감 ↑",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-06T01:44:00Z",
+          "summary": "외국인 주간 순매도 상위 종목은 SK하이닉스(1조909억원), 삼성전자(5,181억원), 삼성SDI[006400](1,728억원), 두산에너빌리티[034020](1,568억원), 효성중공업[298040](1,119억원) 순이었다. 이 가운데 두산에너빌리티와...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484229",
+          "relevance": "high"
+        },
+        {
+          "headline": "한국 기술 브랜드 가치 세계 3위…삼성·SK하이닉스 AI 수요에 급성장",
+          "publisher": "ziksir.com",
+          "published_at": "2026-09-06T01:02:00Z",
+          "summary": "삼성SDI는 브랜드 가치 9억7700만달러로 글로벌 반도체 브랜드 26위에 올랐다. 브랜드 가치는 전년 대비 29% 줄었지만 BSI는 61.9점에서 71점으로 상승했다. 전자·가전 분야에서는 코웨이의 성장세가 눈에 띄었다....",
+          "source_url": "https://www.ziksir.com/news/articleView.html?idxno=145524",
+          "relevance": "high"
+        },
+        {
+          "headline": "북미 ESS가 당긴 LFP 전환…K-배터리 3사 양산 경쟁 본격화 [위클리배터...",
+          "publisher": "ddaily.co.kr",
+          "published_at": "2026-09-06T00:00:00Z",
+          "summary": "LG에너지솔루션이 북미 에너지저장장치(ESS) 시장에서 먼저 생산 기반을 확보한 가운데 삼성SDI와 SK온도 수주와 현지 생산라인 구축에 속도를 내면서죠. 그동안 중국 업체들이 주도해 온 LFP 시장에서 국내 업체들의...",
+          "source_url": "https://www.ddaily.co.kr/page/view/2026090602175365903",
+          "relevance": "high"
+        },
+        {
+          "headline": "내 집 마련 실탄 늘어난 삼성맨…동탄·천안까지 ‘삼세권’ 효과 누릴...",
+          "publisher": "dailian.co.kr",
+          "published_at": "2026-09-05T22:31:00Z",
+          "summary": "삼성전자가 천안캠퍼스에 10조원을 들여 고대역폭 메모리(HBM) 팹 현대화에 나서며, 삼성SDI는 천안캠퍼스에 9조 원을 투자해 모빌리티와 AI 서버 시장을 겨냥한 차세대 배터리 마더라인을 구축한다. 이에 더해...",
+          "source_url": "https://www.dailian.co.kr/news/view/1686423/?sc=Naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[코스피·코스닥지수] 오픈AI발 AI 혁신에 반도체주 들썩...한국 증시 반...",
+          "publisher": "lecturernews.com",
+          "published_at": "2026-09-05T22:29:00Z",
+          "summary": "반면 SK하이닉스, 삼성전자, 삼성SDI, 두산에너빌리티, 효성중공업 등은 순매도 상위 종목에 올랐다. 시장 변동성도 높은 수준을 유지했다. 코스피200 변동성지수(VKOSPI)는 전주보다 10.75포인트(21.47%) 내린 39.33으로...",
+          "source_url": "https://www.lecturernews.com/news/articleView.html?idxno=210147",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성전자 저리대출에 웃는 삼세권...동탄·영통 이어 천안까지 후끈",
+          "publisher": "newsway.co.kr",
+          "published_at": "2026-09-05T22:00:00Z",
+          "summary": "삼성전자와 삼성SDI가 천안캠퍼스에만 19조원, 아산 온양캠퍼스에 6조원을 투입해 HBM 팹 현대화와 배터리·AI 반도체 생산 시설을 확충할 예정인 만큼 일대 신규 일자리 유입에 따른 주택 매수세도 함께 늘어날 것으로...",
+          "source_url": "https://www.newsway.co.kr/news/view?ud=2026090410503516095",
+          "relevance": "high"
+        },
+        {
+          "headline": "전기차 빈자리 ESS가 채운다…K배터리 3사, 美서 새 성장축 확보",
+          "publisher": "inews24.com",
+          "published_at": "2026-09-05T21:01:00Z",
+          "summary": "삼성SDI는 미국 인디애나주 스타플러스에너지(SPE)의 전기차 배터리 생산라인 일부를 ESS용으로 전환하고 있다. 올해 4분기 현지에서 LFP 기반 ESS 배터리 양산을 시작할 예정이다. 지난해 12월 미국에서 2조원 이상...",
+          "source_url": "http://www.inews24.com/view/2001292",
+          "relevance": "high"
+        },
+        {
+          "headline": "[마켓인사이트] 오픈AI발 인공지능 혁신…韓반도체 다시 뛰나",
+          "publisher": "yna.co.kr",
+          "published_at": "2026-09-05T21:00:00Z",
+          "summary": "외국인 주간 순매도 상위 종목은 SK하이닉스(1조909억원), 삼성전자(5천181억원), 삼성SDI(1천728억원), 두산에너빌리티(1천568억원), 효성중공업(1천119억원) 등이다. '한국형 공포지수'로 불리는 코스피200 변동성 지수...",
+          "source_url": "https://www.yna.co.kr/view/AKR20260905021700008?input=1195m",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성전자, 무주택 임직원에 5억원 저리대출⋯'삼세권' 수요 늘까",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-05T05:02:00Z",
+          "summary": "삼성SDI는 천안캠퍼스에 차세대 배터리 생산라인을 구축할 예정이다. 한 업계 관계자는 \"부동산 시장의 지역별 옥석 가리기가 심화하는 가운데, 대규모 기업 투자와 실질적인 임직원 금융 지원이 맞물린 곳은 배후...",
+          "source_url": "https://www.etoday.co.kr/news/view/2621916",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성SDI, 삼성D 5% 팔아 4.45조 확보...잔여 10.76%도 지분법 적용 전망",
+          "publisher": "insight.co.kr",
+          "published_at": "2026-09-05T04:24:00Z",
+          "summary": "삼성SDI가 삼성디스플레이 지분 약 5%를 매각해 4조4500억원을 확보하면서도 잔여 지분에 대한 지분법 적용을 이어갈 전망이다. 당장 필요한 투자재원은 마련하면서 삼성디스플레이의 실적을 지분율만큼 반영할 수...",
+          "source_url": "https://www.insight.co.kr/news/572034",
+          "relevance": "high"
+        },
+        {
+          "headline": "아이케미칼, WAVE 2026서 배터리 소재 '수성 바인더'... \"토탈 솔루션\"",
+          "publisher": "kr.aving.net",
+          "published_at": "2026-09-05T03:50:00Z",
+          "summary": "삼성SDI를 비롯한 국내 주요 이차전지 기업의 생산·물류 환경에 대응해 배터리 제품의 보관과 운송에 필요한 포장 솔루션을 개발했으며, PNT 머터리얼즈 등 관련 기업으로 적용 영역을 넓히고 있다. 아이케미칼은 WAVE...",
+          "source_url": "https://kr.aving.net/news/articleView.html?idxno=1813956",
+          "relevance": "high"
+        },
+        {
+          "headline": "엔화, 이틀 새 5엔 급등…155엔대 진입에 ‘강세 베팅’ 확산",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-05T03:19:00Z",
+          "summary": "이 상품은 LG에너지솔루션(373220)과 삼성SDI(006400)를 각각 27.65%, 27.14% 담아 두 종목 비중이 54%를 넘고, 나머지는 LS ELECTRIC(010120)과 효성중공업(298040) 등 전력기기와 ESS 소재·부품, 전고체 핵심 소재 기업에 분산했다....",
+          "source_url": "https://www.sedaily.com/article/20087494?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "“美 8월 고용 서프라이즈”...연준 9월 인상론 재점화",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-05T03:18:00Z",
+          "summary": "해당 ETF는 LG에너지솔루션(27.65%)과 삼성SDI(27.14%)를 축으로 전력기기·ESS 소재·전고체 핵심 소재 기업에 분산 투자하는 구조다. SNE리서치에 따르면 올 상반기 세계 ESS용 리튬이온 배터리 출하량은 461.3GWh로 전년...",
+          "source_url": "https://www.sedaily.com/article/20087492?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "9월 1주차 삼성SDI 주가 하락세 마감",
+          "publisher": "joongangenews.com",
+          "published_at": "2026-09-05T02:28:00Z",
+          "summary": "|중앙이코노미뉴스 김영진 기자|  4일 KRX 마감 기준, 네이버페이 증권에 따르면 삼성SDI는 9월 4일 548,000원으로 장을 마감했다. 출처=네이버페이증권 이는 직전 거래일 종가인 539,000원 대비 9,000원 상승한...",
+          "source_url": "https://www.joongangenews.com/news/articleView.html?idxno=545832",
+          "relevance": "high"
+        },
+        {
+          "headline": "[이번주 증시]삼성전자·SK하이닉스 44조 거래",
+          "publisher": "kjdaily.com",
+          "published_at": "2026-09-05T01:12:00Z",
+          "summary": "알테오젠은 1조5천93억원으로 9위, 삼성SDI는 1조4천468억원으로 10위를 기록했다. 거래대금 상위 10개 종목의 누적 거래대금만 약 61조5천226억원이다. 상위 50개 종목 전체 거래대금의 71.2%가 상위 10개 종목에...",
+          "source_url": "http://www.kjdaily.com/article.php?aid=1788570691685992227",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간 거래소 기관] 포스코인터내셔널 포스코DX SK이노베이션 신한지주...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-05T00:24:00Z",
+          "summary": "2차전지 관련주에서는 삼성SDI와 LG화학, LG에너지솔루션, POSCO홀딩스가 기관 순매수 목록에 포함됐다. 업종 전반의 수급이 강하게 나타났다기보다는 대형주를 중심으로 선별적인 매수가 이뤄진 것으로 보인다. 반도체...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484099",
+          "relevance": "high"
+        },
+        {
+          "headline": "[주간 거래소 외국인] SK하이닉스·삼성전자 대거 팔고 우리금융지주·...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-05T00:18:00Z",
+          "summary": "삼성SDI와 두산에너빌리티, 효성중공업 등도 외국인이 매도한 주요 종목으로 집계됐다. 전력기기 관련주의 매도세도 눈에 띄었다. 두산에너빌리티와 효성중공업, HD현대일렉트릭, LS ELECTRIC, 산일전기가 순매도 상위권에...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484098",
+          "relevance": "high"
+        },
+        {
+          "headline": "공채 시즌 열린 재계···AI·로봇 '미래 인재' 확보전 본격화",
+          "publisher": "sisajournal-e.com",
+          "published_at": "2026-09-04T23:10:00Z",
+          "summary": "올해 상반기에는 삼성전자와 삼성디스플레이, 삼성전기, 삼성SDI 등 18개 관계사가 신입사원 채용에 참여했다. 하반기 공채 역시 조만간 구체적인 일정과 모집 직무가 공개될 전망이다. 삼성전자는 이에 앞서 R&D 분야...",
+          "source_url": "https://www.sisajournal-e.com/news/articleView.html?idxno=423531",
+          "relevance": "high"
+        },
+        {
+          "headline": "[더딥] 기다렸다, 꿈의 배터리…‘2027년 전고체 양산’ 돈 버는 곳은?",
+          "publisher": "theguru.co.kr",
+          "published_at": "2026-09-04T23:02:00Z",
+          "summary": "“2027년, 전고체 배터리가 온다.” 삼성SDI는 2027년 하반기 전고체 배터리 양산을 목표로 하고 있습니다. 그런데 세계 1위 배터리 기업 CATL의 쩡위친 회장은 2030년 이전 대규모 적용에 회의적인 전망을 내놨습니다. 같은...",
+          "source_url": "https://www.theguru.co.kr/news/article.html?no=106535",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성SDI 돈 벌자마자 성과급 50% 캡 논란 [많이 본 경제기사]",
+          "publisher": "biz.sbs.co.kr",
+          "published_at": "2026-09-04T23:00:00Z",
+          "summary": "삼성SDI가 적자 늪에서 빠져나와 올해 연간 흑자가 유력한 가운데, 성과급 문제가 도마 위에 올랐습니다. 돈을 벌게 됐으니, 성과급에 대한 근로자들의 기대도 자연스레 커질 텐데, 회사가 연봉 절반을 성과급 상한선으로...",
+          "source_url": "https://biz.sbs.co.kr/article_hub/20000332609?division=NAVER",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관, 삼전·하닉 팔고 삼성전기·SK이노 샀다…개인은 현대차 ‘...",
+          "publisher": "news2day.co.kr",
+          "published_at": "2026-09-04T20:34:00Z",
+          "summary": "기관 순매수 1위는 삼성SDI로 3026억원에 달했다. 신한지주(1019억원), LG에너지솔루션(894억원), 두산에너빌리티(828억원), 하나금융지주(790억원), POSCO홀딩스(597억원), KB금융(587억원)도 매수 상위 종목에 이름을...",
+          "source_url": "https://www.news2day.co.kr/article/20260905500005",
+          "relevance": "high"
+        },
+        {
+          "headline": "반도체서 2차전지로 순환매…한달 새 21% 쑥 [ETF 줌인]",
+          "publisher": "sedaily.com",
+          "published_at": "2026-09-04T09:14:00Z",
+          "summary": "KODEX 전고체배터리ESS TOP2플러스는 국내 대표 배터리 기업인 삼성SDI와 LG에너지솔루션을 비롯해 ESS와 전고체 배터리 밸류체인을 구성하는 기업에 분산 투자하는 상품이다. 이날 기준 LG에너지솔루션과 삼성SDI의...",
+          "source_url": "https://www.sedaily.com/article/20087390?ref=naver",
+          "relevance": "high"
+        },
+        {
+          "headline": "[공시]삼성SDI, 미국 계열사 채무보증 및 담보 감축",
+          "publisher": "hansbiz.co.kr",
+          "published_at": "2026-09-04T08:26:00Z",
+          "summary": "| 서울=한스경제 김종효 기자 | 삼성SDI는 미국 계열회사인 스타플러스 에너지의 차입금 규모 축소에 따라 타인에 대한 채무보증 및 담보제공 금액을 변경했다고 4일 공시했다. 구분 변경 전 (USD 기준) 변경 후...",
+          "source_url": "http://www.hansbiz.co.kr/news/articleView.html?idxno=862355",
+          "relevance": "high"
+        },
+        {
+          "headline": "[김대준의 증시산책] '핫'해진 2차전지, 기대요인과 주의사항은",
+          "publisher": "weekly.hankooki.com",
+          "published_at": "2026-09-04T08:20:00Z",
+          "summary": "지난해 5월 독일 뮌헨에서 열린 유럽 최대 에너지 전시회 '더 스마터 E 유럽 2025' 어워드 위너로 선정된 삼성SDI의 고출력 무정전전원장치(UPS)용 배터리 'U8A1'. 사진=삼성SDI 코스피가 연일 제자리걸음을 하고 있다. 다만 6...",
+          "source_url": "https://weekly.hankooki.com/news/articleView.html?idxno=7182331",
+          "relevance": "high"
+        },
+        {
+          "headline": "빨라진 韓 LFP 양산 판도…추격 속도 내는 삼성SDI·SK온 [배터리레이다...",
+          "publisher": "ddaily.co.kr",
+          "published_at": "2026-09-04T08:18:00Z",
+          "summary": "LG에너지솔루션이 중국과 북미를 중심으로 ESS용 LFP 양산에 먼저 나선 가운데 삼성SDI와 SK온도 각각 미국과 국내 생산거점을 활용한 양산 준비에 속도를 내면서다. 후발주자들의 생산 시점이 잇따라 가시화되면서...",
+          "source_url": "https://www.ddaily.co.kr/page/view/2026090416533565253",
+          "relevance": "high"
+        },
+        {
+          "headline": "K배터리 3사 흑자 반등…ESS 효과",
+          "publisher": "yonhapmidas.com",
+          "published_at": "2026-09-04T08:16:00Z",
+          "summary": "7분기 만에 동시 실적 반등 LG에너지솔루션, 삼성SDI, SK온이 지난 7월 30일 일제히 올해 2분기 실적을 발표하고 각각 1천133억원, 2천38억원, 8천218억원의 영업이익을 올렸다고 밝혔다. 3개 회사가 모두 흑자를 기록한...",
+          "source_url": "https://www.yonhapmidas.com/news/articleView.html?idxno=10568",
+          "relevance": "high"
+        },
+        {
+          "headline": "외국인, 우리금융 3900억 순매수… 기관도 신한·KB·하나 사들여",
+          "publisher": "weekly.donga.com",
+          "published_at": "2026-09-04T08:13:00Z",
+          "summary": "외국인의 순매도 상위 10개 종목은 SK하이닉스, 삼성전자, 삼성SDI, 두산에너빌리티, 효성중공업, 신한지주, KB금융, 하나금융지주, DB손해보험, HD현대일렉트릭이었다. 이번 주 기관 순매수 1위 종목은...",
+          "source_url": "https://weekly.donga.com/3/all/11/6373825/1",
+          "relevance": "high"
+        },
+        {
+          "headline": "국내서 밀린 LG엔솔? 'AI 전력 대폭발' 북미서 ESS '독주 체제' 가속",
+          "publisher": "newsquest.co.kr",
+          "published_at": "2026-09-04T07:52:00Z",
+          "summary": "2차 시장에서는 SK온이 284㎿, 삼성SDI가 202㎿를 확보하며 LG엔솔보다 많은 물량을 가져갔다. 가격뿐 아니라 비가격 평가 요소까지 수주에 영향을 미치면서 국내 시장에서 경쟁력을 회복하는 것이 과제로 남았다. 다만...",
+          "source_url": "https://www.newsquest.co.kr/news/articleView.html?idxno=300328",
+          "relevance": "high"
+        },
+        {
+          "headline": "52조원 ESS 시장 열린다…배터리 3사 LFP ‘증설 경쟁’",
+          "publisher": "dealsite.co.kr",
+          "published_at": "2026-09-04T07:52:00Z",
+          "summary": "연평균 15GWh 수요 전망에도 국내 생산능력 5GWh 미만…LG엔솔·삼성SDI·SK온 대응 속도 국내 에너지저장장치(ESS) 시장의 가파른 확대가 예상되는 반면 이를 뒷받침할 국내 LFP 배터리 생산능력은 크게 부족한...",
+          "source_url": "https://dealsite.co.kr/articles/168454",
+          "relevance": "high"
+        },
+        {
+          "headline": "에브리봇모빌리티, 로봇체어 유통망 확대…홈쇼핑 완판·백화점 입점",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-04T07:52:00Z",
+          "summary": "삼성SDI 배터리를 탑재해 1회 충전 시 최대 38km까지 주행할 수 있도록 설계됐다. 실내뿐 아니라 외출과 쇼핑 등 실외 이동에도 활용할 수 있는 제품이다. 에브리봇모빌리티는 홈쇼핑과 백화점 등으로 유통 채널을...",
+          "source_url": "https://www.newspim.com/news/view/20260904000888",
+          "relevance": "high"
+        },
+        {
+          "headline": "삼성SDI, 美 합작사 스타플러스에너지에 5.6조 조달 담보 제공",
+          "publisher": "newspim.com",
+          "published_at": "2026-09-04T07:44:00Z",
+          "summary": "삼성SDI가 미국 합작법인 스타플러스에너지(StarPlus Energy)의 차입에 지분을 담보로 제공한다. 삼성SDI는 4일 스타플러스에너지의 차입과 관련해 1조1489억원 규모의 담보 제공을 결정했다고 공시했다. 삼성SDI가...",
+          "source_url": "https://www.newspim.com/news/view/20260904000879",
+          "relevance": "high"
+        },
+        {
+          "headline": "[오늘의 주요공시] 현대건설ㆍ삼성SDIㆍ큐리언트 등",
+          "publisher": "etoday.co.kr",
+          "published_at": "2026-09-04T07:40:00Z",
+          "summary": "이투데이=임하은 기자 | △현대건설, 중대재해 사망자 발생...샤힌 에틸렌시설 건설공사 현장서 추락 △삼성SDI, 타인에 대한 채무보증 결정...계열사 StarPlus Energy에 2.8조 규모 △톱텍, 현대모비스 체코법인과...",
+          "source_url": "https://www.etoday.co.kr/news/view/2622085",
+          "relevance": "high"
+        },
+        {
+          "headline": "[코스피 지수선물 옵션] 삼성전자·SK하이닉스 오르고 금융주는 울상…...",
+          "publisher": "pinpointnews.co.kr",
+          "published_at": "2026-09-04T07:36:00Z",
+          "summary": "4일 한국거래소에 따르면 이날 개별주식선물 시장에서는 삼성전자와 SK하이닉스를 비롯해 SK스퀘어, 삼성전기, 한화에어로스페이스, 삼성SDI, SK, NAVER, 한미반도체, SK텔레콤, 두산, 삼성SDS, HD현대, S-Oil, 카카오...",
+          "source_url": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=484048",
+          "relevance": "high"
+        },
+        {
+          "headline": "코스피, 외인·기관 '쌍끌이'에 1.64% 상승…코스닥도 3% 가까이 급등",
+          "publisher": "goodkyung.com",
+          "published_at": "2026-09-04T07:34:00Z",
+          "summary": "삼성전자우(4.07%)와 삼성전기(3.93%), SK하이닉스(3.20%), 삼성전자(2.20%), 삼성SDI(1.67%) 등도 강세로 거래를 마쳤다. 반면 금융주와 일부 대형주는 약세를 면치 못했다. 신한지주는 3.67% 떨어졌고 KB금융도 3.32...",
+          "source_url": "https://www.goodkyung.com/news/articleView.html?idxno=291026",
+          "relevance": "high"
+        },
+        {
+          "headline": "에코프로비엠 유상증자 축소에도 인니 니켈 투자 '뚝심', 이동채 전고체...",
+          "publisher": "businesspost.co.kr",
+          "published_at": "2026-09-04T07:30:00Z",
+          "summary": "2027년부터 생산할 고체 전해질과 전고체 배터리용 양극재는 최대 고객사인 삼성SDI에 공급될 것으로 예상된다. 삼성SDI는 내년 하반기 전고체 배터리셀 생산을 추진하고 있다. 에코프로비엠 관계자는 비즈니스포스트와...",
+          "source_url": "https://www.businesspost.co.kr/BP?command=article_view&num=446446",
+          "relevance": "high"
+        },
+        {
+          "headline": "美 훈풍, 코스피 '활짝'...미래에셋증권 '껑충' vs 우리금융 '추락'",
+          "publisher": "choicenews.co.kr",
+          "published_at": "2026-09-04T07:26:00Z",
+          "summary": "2차전지주 가운데 삼성SDI가 ESS(에너지저장장치) 기대감 속에 1.67% 올랐고 LG에너지솔루션(LG엔솔)은 1.92% 하락했다. 제약바이오주에선 삼성바이오로직스가 2.03% 내렸다. 자동차주 가운데 기아가 0.71% 하락했다....",
+          "source_url": "http://www.choicenews.co.kr/news/articleView.html?idxno=170964",
+          "relevance": "high"
+        },
+        {
+          "headline": "에브리봇모빌리티, 로봇체어 홈쇼핑 완판 이어 백화점 입점",
+          "publisher": "edaily.co.kr",
+          "published_at": "2026-09-04T07:16:00Z",
+          "summary": "또 삼성SDI 배터리를 탑재해 1회 충전 시 최대 38㎞까지 주행이 가능하다. 오프라인 소비자 접점 역시 빠르게 확대되는 추세다. 에브리봇모빌리티는 전국 150여 개 공식 대리점을 기반으로 체험·상담·판매·AS를 통합...",
+          "source_url": "https://www.edaily.co.kr/News/Read?newsId=04155766645576840&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+          "relevance": "high"
+        },
+        {
+          "headline": "외인·기관 '쌍끌이' 매수…코스피·코스닥 상승 마감",
+          "publisher": "view.asiae.co.kr",
+          "published_at": "2026-09-04T07:13:00Z",
+          "summary": "시가총액 상위 종목에서는 SK스퀘어(6.12%), SK(5.14%), 삼성전자우(4.07%), 삼성전기(3.93%), SK하이닉스(3.20%), 삼성전자(2.20%), 삼성SDI(1.67%) 등이 오름세로 장을 마쳤다. 반면 신한지주(-3.67%), KB금융(-3.32...",
+          "source_url": "https://view.asiae.co.kr/article/2026090416130561964",
+          "relevance": "high"
+        },
+        {
+          "headline": "호텔신라 지분 0.03%p 감소…삼성생명 특별계정 매도 영향",
+          "publisher": "tokenpost.kr",
+          "published_at": "2026-09-04T07:08:00Z",
+          "summary": "계열사인 삼성전자가 200만4717주(5.01%), 삼성증권이 120만주(3.00%), 삼성카드가 52만4863주(1.31%), 삼성SDI가 2만9316주(0.08%)를 각각 보유했다. 발행회사 임원인 이부진은 30만주(0.75%), 한인규는 4800주(0.01%), 진정구는...",
+          "source_url": "https://www.tokenpost.kr/news/market/402324",
+          "relevance": "high"
+        }
+      ],
+      "result_count": 100,
+      "relevant_count": 100,
+      "span_hours": 68.62,
+      "oldest_relevant_at": "2026-09-04T07:08:00Z",
+      "collected_at": "2026-09-07T03:45:14.006125Z"
+    },
+    "disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "반기보고서 (2026.06)",
+          "receipt_number": "20260814003578",
+          "published_at": "2026-08-14T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003578"
+        },
+        {
+          "report_name": "분기보고서 (2026.03)",
+          "receipt_number": "20260515002408",
+          "published_at": "2026-05-15T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "periodic",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002408"
+        }
+      ],
+      "collected_at": "2026-09-07T03:45:13.754052Z",
+      "request_id": "449613b9-f991-4f29-820c-6b0627a767e5",
+      "source_type": "dart",
+      "stock_code": "006400",
+      "company_name": "삼성SDI"
+    },
+    "annual_report": {
+      "status": "success",
+      "report_name": "사업보고서 (2025.12)",
+      "receipt_number": "20260310002954",
+      "report_year": 2025,
+      "report_type": "annual",
+      "matched_passages": [
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "수요도 크게 성장하고 있습니다. ③ 경기변동의 특성전자재료 사업은 IT 산업 경기변동에 많은 영향을 받으나, 지속적인 사업 포트폴리오다변화, 차세대 기술 개발, 신제품의 적기 출시 등을 통해 경기변동에 따른 리스크를 최소화하는 사업구조를 구축하고 있습니다.④ 시장여건\n2026년 반도체 시장은 AI 분야의 투자가 더욱 활발해지면서 고성능ㆍ고효율을 중심으로 질적ㆍ양적 성장세를 이어갈 것으로 전망됩니다.특히 고대역폭 메모리(HBM) 수요는 지속 증가되고, 첨단 패키징 기술의 혁신이 가속화될 것으로 예상됩니다. 또한 모바일/PC등의 On-Device AI의 확산이 본격화됨에 따라, 저전력 고성능 메모리의 수요도 크게 증가할 것으로 전망됩니다.(출처 : SDI 마케팅 자체 조사)디스플레이 시장은 폴더블/롤러블 등 Flexible 폼팩터로의 변화와 함께 지속적인 성장이 예상됩니다. 모바일과 IT 분야에서는 OLED가 프리미엄 패널의 표준으로 더욱 확고히 자리매김할 것으로 전망됩니다.특히 노트북 및 태블릿 등 IT 패널에서 탠덤(Tandem) 구조 적용이 확대되어, 고효율 OLED 소재의 수요도 크게 증가할 것으로 전망됩니다.(출처 : SDI 마케팅 자체 조사)\n⑤ 회사의 경쟁우위 요소전자재료 사업은 IT업체와의 긴밀한 기술협력 및 지속적인 R&D 투자를 통한 핵심 기술을 선제적으로 확보하는 것이 매우 중요합니다.당사는 국내외 고객사 및 파트너사를 포함한 벨류체인 전반에 걸친 전략적 협력 체계를 구축하고 있으며, 이러한 점을 토대로 기존 제품의 업그레이드와 신규 소재 개발을 추진해 차별화된 경쟁력으로 삼고 있습니다.\n(3) 주요 제품 시장점유율\n구 분 | 제56기 | 제55기 | 제54기 | 비 고\n소형전지 | 13% | 15% | 17% | - 산정기준 : 시장 조사기관 TSR 보고서 기준 적용\nE M C | 6% | 6% | 6% | - 당사 산정\n라. 사업부문별 주요 재무정보\n(1) 연결기준 사업부문별 재무정보\n(단위 : 백만원)",
+          "score": 0.479846,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 5. 위험관리 및 파생거래",
+          "text": "가. 시장위험관리 당사는 여러 활동으로 인하여 신용위험, 유동성위험 및 시장위험과 같은 다양한 금융위험에 노출되어 있으며, 전반적인 위험관리정책은 재무성과에 잠재적으로 불리할 수 있는 효과를 최소화하는데 중점을 두고 있습니다.\n(1) 신용위험신용위험이란 고객이나 거래상대방이 금융상품에 대한 계약상의 의무를 만족시키지못할 경우 당사에게 발생하는 재무적인 손실입니다. 당사가 노출된 신용위험은 주로 각 고객의 개별적인 특성의 영향을 받습니다. 대부분의 고객들이 당사와 다년간 거래해 오고 있으며, 손실은 자주 발생하지 않았습니다. 당사는 대금결제조건을 결정하기이전에 신규 거래처에 대해 개별적으로 신용도를 검토하고 있으며, 기존 거래처에 대해서는 신용도를 재평가하여 검토하고 있습니다.\n당사는 매출채권과 투자자산에 대해 발생할 것으로 예상되는 손실에 대해 충당금을설정하고 있습니다. 당사는 신용위험을 관리하기 위하여 회수가 지연되는 금융자산에 대하여는 회수지연 현황 및 회수대책이 보고되고 있으며 지연사유에 따라 적절한 조치를 취하고 있습니다. 또한 당사는 일부 금융자산에 대하여 보험계약을 체결하여 신용위험을 헷지하고 있습니다.\n① 신용위험에 대한 노출\n금융자산의 장부금액은 신용위험에 대한 최대노출정도를 나타냅니다. 당사는 현금및현금성자산을 신용등급이 우수한 금융기관에 예치하고 있어, 금융기관으로부터의 신용위험은 제한적입니다. 당기말과 전기말 현재 당사의 신용위험에 대한 최대 노출정도는 다음과 같습니다.\n(단위: 천원)\n구 분 | 당기말 | 전기말\n현금및현금성자산 | 1,803,910,245 | 1,884,990,633\n매출채권및기타채권 | 2,391,034,465 | 3,282,074,209\n국공채 | 385,905 | 345,050\n금융상품 | 100,109,654 | 100,193,606\n보증금 | 189,380,343 | 134,953,882\n합 계 | 4,484,820,612 | 5,402,557,380\n② 손상차손",
+          "score": 0.474711,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 6. 주요계약 및 연구개발활동",
+          "text": "가. 경영상의 주요계약 당사의 공시서류 작성기준일 현재 회사의 재무상태에 중요한 영향을 미치는 일상적인 영업활동 이외의 비경상적인 중요계약 내용은 하기와 같습니다.당사는 계약상 기밀에 해당되어 관련 내용을 공시할 경우 회사에 손실을 초래할 수있다고 판단되는 사항은 기재를 생략하였습니다.\n(1) 합작법인 StarPlus Energy 2공장 건설 계약\n계약 상대방 | 항목 | 내용\n스텔란티스(Stellantis) | 계약 유형 | 배터리 공장 건설 계약\n계약 목적 및 내용 | 스텔란티스社와 미국 내 합작법인인StarPlus Energy社의 2공장 건설\n※ 기타 자세한 사항은 당사가 2023년 9월 27일자로 전자공시시스템(DART)에 공시한 '투자판단 관련 주요경영사항'을 참고하시기 바랍니다.\n(2) 현대자동차社와 배터리 공급 계약\n계약 상대방 | 항목 | 내용\n현대자동차 | 계약 유형 | 배터리 공급 계약\n계약 목적 및 내용 | 2026년부터 7년간 현대자동차社의 유럽向전기차에 들어갈 배터리 공급\n※ 기타 자세한 사항은 당사가 2023년 10월 23일자로 전자공시시스템(DART)에 공시한 '수시공시의무관련사항(공정공시)'을 참고하시기 바랍니다.\n(3) 제너럴모터스(GM)社와 합작투자계약 체결\n계약 상대방 | 항목 | 내용\n제너럴모터스(GM) | 계약 유형 | 합작투자계약\n계약 목적 및 내용 | GM社와 미국 내 합작법인 설립 및신규 배터리 공장 설립\n※ 기타 자세한 사항은 당사가 2024년 8월 28일자로 전자공시시스템(DART)에 공시한 '투자판단 관련 주요경영사항'을 참고하시기 바랍니다.\n(4) 편광필름 사업 양도\n계약 상대방 | 항목 | 내용\n우시헝신광전재료유한공사(Wuxi Hengxin Optoelectronic Materials) | 계약 유형 | 편광필름 사업 양도\n계약 목적 및 내용 | 전자재료사업부의 경쟁력 제고를 위해편광필름 사업 양도",
+          "score": 0.441924,
+          "match_type": "vector"
+        },
+        {
+          "section": "I. 회사의 개요 > 1. 회사의 개요",
+          "text": "등급체계 | 등급부여 의미\nAAA | 원리금 지급 확실성이 최고 수준이며, 현단계에서 합리적으로 예측가능한 장래의 어떠한 환경변화에도 영향을 받지 않을 만큼 안정적임\nAA | 원리금 지급 확실성이 매우 높지만 AAA 등급에 비해 다소 열등한 요소가 있음\nA | 원리금 지급 확실성이 높지만 장래 급격한 환경변화에 따라 다소 영향을 받을 가능성이 있음\nBBB | 원리금 지급 확실성은 인정되지만 장래 환경변화로 원리금 지급 확실성이 저하될 가능성이 있음\nBB | 원리금 지급 확실성에 당면 문제는 없지만 장래의 안정성 면에서는 투기적 요소가 내포되어 있음\nB | 원리금 지급 확실성이 부족하여 투기적이며, 장래의 안정성에 대해서는 현단계에서 단언할 수 없음\nCCC | 채무불이행이 발생할 가능성을 내포하고 있어 매우 투기적임\nCC | 채무불이행이 발생할 가능성이 높아 상위등급에 비해 불안요소가 더욱 많음\nC | 채무불이행이 발생할 가능성이 극히 높고 현단계에서는 장래 회복될 가능성이 없을 것으로 판단됨\nD | 원금 또는 이자가 지급불능 상태에 있음\n아. 회사의 주권상장(또는 등록ㆍ지정)여부 및 특례상장에 관한 사항\n주권상장(또는 등록ㆍ지정)현황 | 주권상장(또는 등록ㆍ지정)일자 | 특례상장 유형\n유가증권시장 상장 | 1979년 02월 27일 | 해당사항 없음",
+          "score": 0.44037,
+          "match_type": "vector"
+        },
+        {
+          "section": "II. 사업의 내용 > 7. 기타 참고사항",
+          "text": "하고 있습니다.한편, 최근 고에너지밀도, 고안전성을 보유한 각형전지에 대한 수요가 높아지고 있으며, 당사만의 고유한 각형 기술력을 바탕으로 시장 수요에 대응하고 있습니다. 당사는 앞으로도 차별화된 기술력을 강화하여 성장하는 리튬이온 2차전지 시장을 선도해 나가겠습니다.\n(2) 전자재료부문① 산업의 특성전자재료 사업은 반도체 및 디스플레이 등 IT 사업의 산업 사이클과 변화의 트렌드를 정확히 예측하고, 차별화된 기술을 바탕으로 신규 제품을 적시에 출시하여야 하는기술집약형 사업입니다.② 산업의 성장성반도체 소재는 반도체 업체들의 생산량 확대에 영향을 받고 있으며, AI용 반도체 등 수요 확대에 따라 관련 소재의 수요도 지속 성장할 것으로 전망됩니다.디스플레이 소재는 고해상도, 고색재현 등 고기능성의 차별화된 소재의 요구가 증가되고 있으며, 특히 OLED 패널은 모바일/IT 제품과 TV에서의 채용이 증가하고 있어OLED 소재 수요도 크게 성장하고 있습니다. ③ 경기변동의 특성전자재료 사업은 IT 산업 경기변동에 많은 영향을 받으나, 지속적인 사업 포트폴리오다변화, 차세대 기술 개발, 신제품의 적기 출시 등을 통해 경기변동에 따른 리스크를 최소화하는 사업구조를 구축하고 있습니다.④ 시장여건",
+          "score": 0.43718,
+          "match_type": "vector"
+        }
+      ],
+      "filtered_out": 0,
+      "available_years": [
+        2025
+      ],
+      "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002954",
+      "collected_at": "2026-09-07T03:45:13.922230Z",
+      "request_id": "633408d4-ca5a-41db-85bd-62ad344cba5b",
+      "source_type": "dart",
+      "stock_code": "006400",
+      "company_name": "삼성SDI"
+    },
+    "community": {
+      "status": "success",
+      "company_name": "삼성SDI",
+      "stock_code": "006400",
+      "source_name": "태웅님 커뮤니티 서버",
+      "source_detail": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+      "sample_status": "sufficient",
+      "period": {
+        "from": "2026-08-31T03:45:13.366209+00:00",
+        "to": "2026-09-07T03:45:13.366209+00:00"
+      },
+      "sample_size": 100,
+      "activity": {
+        "posts_7d": 1376,
+        "lookback_days": 7,
+        "weekly_avg_prev_28d": 711.25,
+        "ratio": 1.93,
+        "baseline_days": 28
+      },
+      "sentiment": {
+        "positive_count": 32,
+        "neutral_count": 33,
+        "negative_count": 35
+      },
+      "top_topics": {
+        "expectations": [
+          "국내외 ESS 시장 확대",
+          "각형 배터리 경쟁력",
+          "전고체 배터리와 로봇 수요",
+          "영업이익 흑자전환 기대",
+          "미국 공장 자금 확보"
+        ],
+        "concerns": [
+          "신용거래 증가 부담",
+          "상승장 대비 주가 부진",
+          "기관 매도와 반도체 수급 쏠림",
+          "전고체 생산 준비 지연 의구심",
+          "단기 하락 추세 우려"
+        ]
+      },
+      "representative_evidence": [
+        {
+          "text": "미국 ESS 시장에서 각형 배터리 경쟁력을 기대한다.",
+          "posted_at": "2026-09-06T09:35:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "국내 ESS 시장 확대를 성장 기회로 보고 있다.",
+          "posted_at": "2026-09-06T00:23:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "전고체 배터리 계약과 로봇용 수요 확대를 기대한다.",
+          "posted_at": "2026-09-06T23:30:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "영업이익 흑자전환을 주장하며 주가 상승을 기대한다.",
+          "posted_at": "2026-09-07T02:22:00+00:00",
+          "sentiment": "positive"
+        },
+        {
+          "text": "미국 공장 자금 조달을 긍정적으로 평가한다.",
+          "posted_at": "2026-09-06T09:51:00+00:00",
+          "sentiment": "positive"
+        }
+      ],
+      "collected_at": "2026-09-07T03:45:13.366209+00:00",
+      "fgi_mean": 49.97,
+      "fgi_latest": {
+        "fgi": 44.13,
+        "label": "공포",
+        "as_of": "2026-09-07T03:15:00+00:00",
+        "post_count": 6,
+        "valence_percentile": 12.15
+      },
+      "note": "표본은 15분 버킷당 균등 샘플링된 투자 관련 글의 LLM 판정 결과이며 원문은 포함하지 않는다."
+    },
+    "material_disclosures": {
+      "status": "success",
+      "disclosures": [
+        {
+          "report_name": "타인에대한담보제공결정              ",
+          "receipt_number": "20260904800542",
+          "published_at": "2026-09-04T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904800542"
+        },
+        {
+          "report_name": "타인에대한채무보증결정              ",
+          "receipt_number": "20260904800510",
+          "published_at": "2026-09-04T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904800510"
+        },
+        {
+          "report_name": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "receipt_number": "20260826000215",
+          "published_at": "2026-08-26T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826000215"
+        },
+        {
+          "report_name": "[첨부추가]주요사항보고서(타법인주식및출자증권양도결정)",
+          "receipt_number": "20260821000464",
+          "published_at": "2026-08-21T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260821000464"
+        },
+        {
+          "report_name": "투자판단관련주요경영사항              ",
+          "receipt_number": "20260811800246",
+          "published_at": "2026-08-11T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260811800246"
+        },
+        {
+          "report_name": "최대주주등소유주식변동신고서              ",
+          "receipt_number": "20260811800212",
+          "published_at": "2026-08-11T00:00:00Z",
+          "document_type": "disclosure",
+          "disclosure_kind": "other",
+          "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260811800212"
+        }
+      ],
+      "collected_at": "2026-09-07T03:45:14.251104Z",
+      "request_id": "d5f85b43-f63a-4a24-86a9-25c3044d0a62",
+      "source_type": "dart",
+      "stock_code": "006400",
+      "company_name": "삼성SDI"
+    },
+    "failures": [],
+    "completed_tools": [
+      "get_stock_quote",
+      "search_news",
+      "get_recent_disclosures",
+      "get_material_disclosures",
+      "search_annual_report",
+      "get_community_reaction"
+    ],
+    "failed_tools": []
+  },
+  "details": {
+    "20260814003578": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260814003578",
+        "document_type": "disclosure",
+        "content": "(제 57 기 반기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 06월 30일 | 까지\n금융위원회\n한국거래소 귀중 | 2026년 8월 14일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 삼성SDI 주식회사\n대 표 이 사 : | 최주선\n본 점 소 재 지 : | 경기도 용인시 기흥구 공세로 150-20\n(전 화) 031-288-4114\n(홈페이지) http://www.samsungsdi.co.kr\n작 성 책 임 자 : | (직 책) 재경팀장 (성 명) 김윤태\n(전 화) 02-2255-2660\n목 차\nI | 회사의 개요 - - - - - -- -- -- - - - - -- - - - - -- - - - - -- - - - - - | 2\nII | 사업의 내용 - - - - - -- -- -- - - - - -- - - - - -- - - - - -- - - - - - | 16\nⅢ | 재무에 관한 사항 - - - -- -- -- - - - - -- - - - - -- - - - - -- - - - - | 36\nⅣ | 이사의 경영진단 및 분석의견 - - - - - - - - - - - - - - - - - - - - - - - | 219\nⅤ | 회계감사인의 감사의견 등- - - - - - - - - - - - - - - - - - - - - - - - - | 221\nⅥ | 이사회 등 회사의 기관에 관한 사항 - - - - - - - - - - - - - - - - - - - - | 227\nⅦ | 주주에 관한 사항 - - - - - - - - - - - - - - - - - - - - - - - - - - - - | 254\nⅧ | 임원 및 직원 등에 관한 사항 - - - - - - - - - - - - - - - - - - - - - - - | 261\nⅨ | 계열회사 등에 관한 사항 - - - - - - - - - - - - - - - - - - - - - - -- - | 286\nⅩ | 대주주 등과의 거래 내용 - - - - - - - - - - - - - - - - - - - - - - - - - | 313\nXI | 그 밖에 투자자 보호를 위하여 필요한 사항 - - - - - - - - - - - - - - --- | 316\nXII | 상세표 - - -- - -- - - - - - - - - - - - - - - - - - - - - - - - - - - -- | 326\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n가. 연결대상 종속회사 현황(요약)\n(단위 : 사)\n구분 | 연결대상회사수 | 주요종속회사수\n기초 | 증가 | 감소 | 기말\n상장 | - | - | - | - | -\n비상장 | 22 | - | - | 22 | 14\n합계 | 22 | - | - | 22 | 14\n※상세 현황은 '상세표-1. 연결대상 종속회사 현황(상세)' 참조\n1-1. 연결대상회사의 변동내용\n구 분 | 자회사 | 사 유\n신규연결 | - | -\n- | -\n연결제외 | - | -\n- | -\n구분 | 제57기 반기 | 제56기 | 제55기\n연결대상회사 | 1) Samsung SDI Japan Co., Ltd. (\"SDIJ\")2) Samsung SDI America, Inc. (\"SDIA\")3) Samsung SDI Hungary Zrt. (\"SDIHU\")4) Samsung SDI Europe GmbH (\"SDIEU\")5) Samsung SDI Battery Systems GmbH (\"SDIBS\")6) Samsung SDI Vietnam Co., Ltd. (\"SDIV\")7) Samsung SDI Energy Malaysia Sdn, Bhd. (\"SDIEM\")8) Tianjin Samsung SDI Co., Ltd. (\"TSDI\")9) Samsung SDI (Hong Kong) Ltd. (\"SDIHK\")10) Samsung SDI China Co., Ltd. (\"SDIC\")11) Samsung SDI-ARN(Xi'An) Power Battery Co., Ltd. (\"SAPB\")12) Samsung SDI (Tianjin) Battery Co., Ltd. (\"SDITB\")13) 에스티엠(주) (\"STM\")14) Novaled GmbH (\"NOVALED\")15) SVIC15호 신기술사업투자조합 (\"SVIC15\")16) SVIC24호 신기술사업투자조합 (\"SVIC24\")17) SVIC49호 신기술사업투자조합 (\"SVIC49\")18) Samsung SDI India Private Limited (\"SDII\")19) StarPlus Energy LLC. (\"STARPLUS\")20) Samsung SDI Southeast Asia PTE. LTD. (\"SDISEA\")21) SDI-GM Synergy Cells Holdings LLC.22) SDI-GM Synergy Cells LLC. | 1) Samsung SDI Japan Co., Ltd. (\"SDIJ\")2) Samsung SDI America, Inc. (\"SDIA\")3) Samsung SDI Hungary Zrt. (\"SDIHU\")4) Samsung SDI Europe GmbH (\"SDIEU\")5) Samsung SDI Battery Systems GmbH (\"SDIBS\")6) Samsung SDI Vietnam Co., Ltd. (\"SDIV\")7) Samsung SDI Energy Malaysia Sdn, Bhd. (\"SDIEM\")8) Tianjin Samsung SDI Co., Ltd. (\"TSDI\")9) Samsung SDI (Hong Kong) Ltd. (\"SDIHK\")10) Samsung SDI China Co., Ltd. (\"SDIC\")11) Samsung SDI-ARN(Xi'An) Power Battery Co., Ltd. (\"SAPB\")12) Samsung SDI (Tianjin) Battery Co., Ltd. (\"SDITB\")13) 에스티엠(주) (\"STM\")14) Novaled GmbH (\"NOVALED\")15) SVIC15호 신기술사업투자조합 (\"SVIC15\")16) S",
+        "content_truncated": true,
+        "total_chars": 405086,
+        "summary": "반기보고서 (2026.06) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003578",
+        "collected_at": "2026-09-07T03:45:24.601578Z",
+        "report_name": "반기보고서 (2026.06)",
+        "published_at": "2026-08-14T00:00:00Z",
+        "request_id": "ba7c075e-827c-46bb-bb2f-c92707452174",
+        "source_type": "dart"
+      }
+    },
+    "20260515002408": {
+      "data": {
+        "status": "success",
+        "receipt_number": "20260515002408",
+        "document_type": "disclosure",
+        "content": "(제 57 기 1분기)\n사업연도 | 2026년 01월 01일 | 부터\n2026년 03월 31일 | 까지\n금융위원회\n한국거래소 귀중 | 2026 년 5 월 15 일\n제출대상법인 유형 : | 주권상장법인\n면제사유발생 : | 해당사항 없음\n회 사 명 : | 삼성SDI 주식회사\n대 표 이 사 : | 최주선\n본 점 소 재 지 : | 경기도 용인시 기흥구 공세로 150-20\n(전 화) 031-288-4114\n(홈페이지) http://www.samsungsdi.co.kr\n작 성 책 임 자 : | (직 책) 재경팀장 (성 명) 김윤태\n(전 화) 02-2255-2660\n목 차\nI | 회사의 개요 - - - - - -- -- -- - - - - -- - - - - -- - - - - -- - - - - - | 3\nII | 사업의 내용 - - - - - -- -- -- - - - - -- - - - - -- - - - - -- - - - - - | 4\nⅢ | 재무에 관한 사항 - - - -- -- -- - - - - -- - - - - -- - - - - -- - - - - | 24\nⅣ | 이사의 경영진단 및 분석의견 - - - - - - - - - - - - - - - - - - - - - - - | 193\nⅤ | 회계감사인의 감사의견 등- - - - - - - - - - - - - - - - - - - - - - - - - | 195\nⅥ | 이사회 등 회사의 기관에 관한 사항 - - - - - - - - - - - - - - - - - - - - | 199\nⅦ | 주주에 관한 사항 - - - - - - - - - - - - - - - - - - - - - - - - - - - - | 205\nⅧ | 임원 및 직원 등에 관한 사항 - - - - - - - - - - - - - - - - - - - - - - - | 211\nⅨ | 계열회사 등에 관한 사항 - - - - - - - - - - - - - - - - - - - - - - -- - | 220\nⅩ | 대주주 등과의 거래 내용 - - - - - - - - - - - - - - - - - - - - - - - - - | 221\nXI | 그 밖에 투자자 보호를 위하여 필요한 사항 - - - - - - - - - - - - - - --- | 223\nXII | 상세표 - - -- - -- - - - - - - - - - - - - - - - - - - - - - - - - - - -- | 229\n【 대표이사 등의 확인 】\nI. 회사의 개요\n1. 회사의 개요\n기업공시서식 작성기준에 따라 분기보고서에는 회사의 개요를 기재하지 않았습니다.(반기 및 사업보고서에 기재)\n2. 회사의 연혁\n기업공시서식 작성기준에 따라 분기보고서에는 회사의 연혁을 기재하지 않았습니다.(반기 및 사업보고서에 기재)\n3. 자본금 변동사항\n기업공시서식 작성기준에 따라 분기보고서에는 자본금 변동사항을 기재하지 않았습니다. (반기 및 사업보고서에 기재)\n4. 주식의 총수 등\n기업공시서식 작성기준에 따라 분기보고서에는 주식의 총수 등을 기재하지 않았습니다. (반기 및 사업보고서에 기재)\n5. 정관에 관한 사항\n기업공시서식 작성기준에 따라 분기보고서에는 정관에 관한 사항을 기재하지 않았습니다. (반기 및 사업보고서에 기재)\nII. 사업의 내용\n1. 사업의 개요\n당사는 중ㆍ대형전지, 소형전지 등의 리튬이온 2차전지를 생산/판매하는 에너지솔루션 사업부문과 반도체 및 디스플레이 소재 등을 생산/판매하는 전자재료 사업부문을 영위하고 있습니다.\n당사의 2026년 1분기 매출은 3조 5,764억원으로 전년동기 대비 12.6% 증가했으며, 영업이익은 전년동기 대비 2,785억원 증가한 적자 1,556억원입니다.에너지솔루션 부문 매출액은 전체 매출액의 94%를 차지하며 전년동기 대비 3,735억원 증가한 3조 3,544억원이며, 영업이익은 2,758억원 증가한 적자 1,766억원입니다.전자재료 부문의 매출액은 전체 매출액의 6%를 차지하며 전년동기 대비 261억원 증가한 2,220억원이며, 영업이익은 27억원 증가한 210억원입니다.\n[에너지솔루션 사업부문]리튬이온 2차전지 산업은 고안전성, 고용량, 고출력 기술 확보를 통해 응용 분야를 지속적으로 넓혀 가고 있습니다.자동차용 중형전지는 유럽 등 주요 국가들의 친환경정책, 완성차 업체들의 다양한 전기차 모델 출시, 전기차의 주행거리 및 경제성 개선으로 중장기적으로 지속 성장을하고 있습니다.전력저장장치인 ESS용 대형전지도 국내외 국가들의 신재생 발전 확대와 AI 산업 성장에 따른 전력 수요 증가 속에 높은 성장이 지속되고 있습니다.\n소형전지는 스마트폰, Note PC, 전동공구 등의 휴대 제품 뿐만 아니라 자동차용 전지에도 사용되고 있고, 최근 E-Bike, E-Scooter 등 Micro-Mobility용 및 데이터센터용 BBU(Battery Back-up Unit) 등 다양하게 적용 영역을 넓혀 가고 있습니다.\n[전자재료 사업부문]반도체 소재는 반도체 업체들의 생산량 확대에 영향을 받고 있으며, AI용 반도체 등 수요 확대에 따라 관련 소재의 수요도 지속 성장할 것으로 전망됩니다.디스플레이 소재는 고해상도, 고색재현 등 고기능성의 차별화된 소재의 요구가 증가되고 있으며, 특히 OLED 패널은 모바일/IT 제품과 TV에서의 채용이 증가하고 있어OLED 소재 수요도 크게 성장하고 있습니다.상세내용은 7. 기타 참고사항의 다. 사업부문별 현황을 참고하시기 바랍니다.\n2. 주요 제품 및 서비스\n가. 주요 제품 등의 현황\n당사는 전기자동차, 전력저장장치(ESS), 스마트폰 등에 사용되는 2차전지와 반도체및 디스플레이 소재 등의 전자재료 제품을 판매하고 있습니다.각 사업부문별 매출액 및 매출 비중은 다음과 같습니다.\n(단위 : 백만원, %)\n사업부문 | 매출유형 | 품 목 | 구체적용도 | 주요상표 등 | 매출액(비율)\n에너지솔루션 | 제품 및 기타 매출 | 소형전지 등 | 전기자동차용, 전력저장장치(ESS)용, 스마트폰용 배터리 등 | PRiMX | 3,354,339 (94%)\n전자재료 | EMC 등 | 반도체 소재, 디스플레이 소재 등 | 스타콤 등",
+        "content_truncated": true,
+        "total_chars": 217914,
+        "summary": "분기보고서 (2026.03) 공시 원문 앞부분",
+        "source_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002408",
+        "collected_at": "2026-09-07T03:45:29.774360Z",
+        "report_name": "분기보고서 (2026.03)",
+        "published_at": "2026-05-15T00:00:00Z",
+        "request_id": "2c616fb7-52c8-4123-8784-2fe64e78d9bd",
+        "source_type": "dart"
+      }
+    }
+  },
+  "receipt_numbers": [
+    "20260814003578",
+    "20260515002408"
+  ],
+  "events": [
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "collection_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "가격·뉴스·공시·커뮤니티 자료를 확인하고 있어요.",
+      "progress_percent": 10,
+      "occurred_at": "2026-09-07T03:45:13.222755Z"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:13.223088Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:13.223387Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:13.223514Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:13.223641Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:13.223806Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_started",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료를 확인하고 있어요.",
+      "progress_percent": 15,
+      "occurred_at": "2026-09-07T03:45:13.224005Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "community_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:13.454802Z",
+      "tool_name": "get_community_reaction",
+      "service": "community_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:13.808395Z",
+      "tool_name": "get_recent_disclosures",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:13.947352Z",
+      "tool_name": "search_annual_report",
+      "service": "disclosure_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "news_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:14.036584Z",
+      "tool_name": "search_news",
+      "service": "news_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "price_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:14.054975Z",
+      "tool_name": "get_stock_quote",
+      "service": "price_mcp"
+    },
+    {
+      "request_id": "test-capture-006400",
+      "run_id": "test-capture",
+      "event": "tool_completed",
+      "step": "collecting",
+      "status": "running",
+      "message": "disclosure_mcp 자료 확인을 마쳤어요.",
+      "progress_percent": 55,
+      "occurred_at": "2026-09-07T03:45:14.329503Z",
+      "tool_name": "get_material_disclosures",
+      "service": "disclosure_mcp"
+    }
+  ],
+  "privacy": "Credential and individual account fields/emails are removed."
+}
