@@ -69,8 +69,9 @@ function CommunityBody({ community, summary, visible }: { community: CommunityEv
             ))}
           </div>
           {fgi !== null && mood && fgiText ? (
-            <div className={`analysis-community-fgi analysis-community-fgi--${mood}${visible ? " analysis-community-fgi--live" : ""}`} aria-label={`공포탐욕 지수 ${fgi} ${fgiText}`}>
+            <div className={`analysis-community-fgi analysis-community-fgi--${mood}${visible ? " analysis-community-fgi--live" : ""}`} aria-label={`공포탐욕 지수 ${Math.round(fgi)} ${fgiText}`}>
               <div className="analysis-community-fgi__gauge">
+                <div className="analysis-community-fgi__dial">
                 <svg viewBox="0 0 160 92" role="img" aria-hidden="true">
                   <defs>
                     <linearGradient id="analysis-fgi-spectrum" x1="0" y1="0" x2="1" y2="0">
@@ -84,10 +85,14 @@ function CommunityBody({ community, summary, visible }: { community: CommunityEv
                   <path className="analysis-community-fgi__spectrum" d="M24 78 A56 56 0 0 1 136 78" pathLength="100" />
                   <path className="analysis-community-fgi__fill" d="M24 78 A56 56 0 0 1 136 78" pathLength="100" style={{ "--fgi-width": visible ? fgi : 0 } as CSSProperties} />
                 </svg>
-                <div className="analysis-community-fgi__value">{fgi}</div>
+                {/* 서버 값은 소수(51.89 등) — 아크 안엔 정수만 넣는다. 구간 판정은 원래 값으로 */}
+                <div className="analysis-community-fgi__value">{Math.round(fgi)}</div>
+                <span className="analysis-community-fgi__cap analysis-community-fgi__cap--low" aria-hidden="true">극도 공포</span>
+                <span className="analysis-community-fgi__cap analysis-community-fgi__cap--high" aria-hidden="true">극도 탐욕</span>
+                </div>
                 <div className="analysis-community-fgi__label">{fgiText}</div>
               </div>
-              <Mascot className="analysis-community-fgi__mascot" size={84} state={FGI_MASCOT[mood]} />
+              <Mascot className="analysis-community-fgi__mascot" size={64} state={FGI_MASCOT[mood]} />
             </div>
           ) : null}
         </div>
