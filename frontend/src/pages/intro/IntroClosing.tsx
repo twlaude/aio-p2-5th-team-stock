@@ -27,7 +27,7 @@ export function IntroClosing() {
           <div className="intro-wordmark" aria-label="살래? 말래?">살래<span>?</span> 말래<span>?</span></div>
           <Mascot state="wink" size={120} className="intro-ending__mascot" />
         </div>
-        <h2 id="intro-ending-title">궁금했던 그 종목,<br className="intro-mobile" /> 지금 살펴볼까요?</h2>
+        <h2 id="intro-ending-title">끌리는 그 종목,<br className="intro-mobile" /> 왜 끌리는지부터 볼까요?</h2>
         <IntroCta ending />
       </section>
     </>
