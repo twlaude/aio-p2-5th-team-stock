@@ -11,9 +11,9 @@
 
 ## 1. 시스템 업무 흐름
 
-<a href="diagrams/db-business-flow.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="diagrams/db-business-flow-dark.svg"><img src="diagrams/db-business-flow.svg" alt="DB 업무 흐름" width="100%"></picture></a>
+<a href="../architecture/diagrams/db-business-flow.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="../architecture/diagrams/db-business-flow-dark.svg"><img src="../architecture/diagrams/db-business-flow.svg" alt="DB 업무 흐름" width="100%"></picture></a>
 
-[Mermaid 원본](diagrams/db-business-flow.mmd)
+[Mermaid 원본](../architecture/diagrams/db-business-flow.mmd)
 
 회원가입은 `users`·`user_profiles`를 같은 트랜잭션에서 생성합니다. 분석 결과는 `analysis_runs`, 회원의 최근 검색은 TTL 1,800초 Redis에 저장합니다. Disclosure MCP는 `companies`로 지원 기업을 확인하고 최근 공시는 `disclosures`에 upsert하며, 정기보고서는 `annual_reports` SQL 선필터 뒤 해당 `report_chunks.embedding`의 cosine distance top-k를 반환합니다.
 
@@ -58,9 +58,9 @@
 
 논리 ERD는 SQL 타입과 인덱스를 제외하고 업무 엔티티의 의미와 관계를 표현합니다. Backend DB와 Disclosure DB 사이에는 물리 FK가 없으므로 두 영역을 관계선 없이 나눕니다. `근거 청크`의 종목 코드는 논리적으로 기업을 식별하지만 현재 서로 다른 DB 경계이며 FK로 강제하지 않습니다.
 
-<a href="diagrams/logical-erd.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="diagrams/logical-erd-dark.svg"><img src="diagrams/logical-erd.svg" alt="논리 ERD" width="100%"></picture></a>
+<a href="../architecture/diagrams/logical-erd.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="../architecture/diagrams/logical-erd-dark.svg"><img src="../architecture/diagrams/logical-erd.svg" alt="논리 ERD" width="100%"></picture></a>
 
-[Mermaid 원본](diagrams/logical-erd.mmd)
+[Mermaid 원본](../architecture/diagrams/logical-erd.mmd)
 
 ### 3.1 업무별 카디널리티
 
@@ -80,9 +80,9 @@
 
 물리 ERD는 `db/schema.sql`과 `mcp_servers/disclosure_mcp/db/schema.sql`에 선언된 실제 8개 테이블과 키를 나타냅니다. 도식은 모든 컬럼을 포함하며, 복합 UNIQUE·CHECK·기본값의 상세는 5장에 정의합니다.
 
-<a href="diagrams/physical-erd.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="diagrams/physical-erd-dark.svg"><img src="diagrams/physical-erd.svg" alt="물리 ERD" width="100%"></picture></a>
+<a href="../architecture/diagrams/physical-erd.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="../architecture/diagrams/physical-erd-dark.svg"><img src="../architecture/diagrams/physical-erd.svg" alt="물리 ERD" width="100%"></picture></a>
 
-[Mermaid 원본](diagrams/physical-erd.mmd)
+[Mermaid 원본](../architecture/diagrams/physical-erd.mmd)
 
 `rag_chunks`와 Disclosure DB의 `companies` 사이에는 FK가 없고 Redis는 관계형 테이블이 아니므로 물리 ERD에서 제외합니다.
 

@@ -128,7 +128,7 @@ docker compose up -d
 하나당 하나만 만들어 재사용한다 — pytest가 테스트마다 새 이벤트 루프를 띄우기 때문에(운영은
 루프가 하나뿐이라 사실상 싱글턴) 필요한 장치다. 새 I/O 코드를 짤 때 `def`로 만들고 그 안에서
 동기 DB/Redis 호출을 쓰면 다시 스레드풀 병목으로 돌아가니, 반드시 `async def` + `await`로 짠다.
-자세한 배경은 `docs/BACKEND_CONCURRENCY_FINDINGS.md` 참고.
+자세한 배경은 `docs/reports/BACKEND_CONCURRENCY_FINDINGS.md` 참고.
 
 ## 개인화는 MCP Client 책임
 

@@ -19,7 +19,7 @@
 | Frontend | React 검색·로그인·공개/회원 근거·개인화·오류 화면 연결 완료 | 사용자 검수와 실행 환경별 회귀 확인 |
 | DB·Redis | 분석 이력 저장·성향·최근 검색 TTL·실황 연동 구현 완료 | 데이터 수명·관측 범위 점검 |
 | 서비스 Docker | 저장소에 Dockerfile 6개, Disclosure Dockerfile 없음 | 전체 컨테이너 완성을 주장하지 않음; VPS는 systemd 운영 |
-| 필수 Agent 산출물 | [설계서](agent-architecture.md)·[시험 보고서](agent-test-report.md)·상태 흐름도 작성 | 문맥 검증 한계·실측 미도달 항목 유지 |
+| 필수 Agent 산출물 | [설계서](../architecture/agent-architecture.md)·[시험 보고서](../reports/agent-test-report.md)·상태 흐름도 작성 | 문맥 검증 한계·실측 미도달 항목 유지 |
 
 ## 2. 개발 시작 전 공통 규칙
 
@@ -32,7 +32,7 @@
 
 ## 3. 구현된 개발 단계
 
-아래는 초기 순서의 구현 상태를 현재 코드에 맞춰 정리한 것입니다. 서비스별 초기 Mock에서 실제 API·저장소 연결까지 진행했으며, 운영 위치는 [실행 폴더 문서](RUNTIME_FOLDERS.md)에 별도로 기록합니다.
+아래는 초기 순서의 구현 상태를 현재 코드에 맞춰 정리한 것입니다. 서비스별 초기 Mock에서 실제 API·저장소 연결까지 진행했으며, 운영 위치는 [실행 폴더 문서](../operations/RUNTIME_FOLDERS.md)에 별도로 기록합니다.
 
 ### A. Price·News·Disclosure MCP
 
@@ -135,4 +135,4 @@ Community MCP의 구조를 복사하지 말고 구조와 책임 분리 방식을
 - Provider 요청 내 이력 재전송, MCP별 캐시와 Backend 최근 검색 상태 분리
 - Runtime의 요청별 토큰 계수(Backend 분석 이력에는 토큰 미저장)
 
-모델·호출 방식은 현재 `mcp_client/app/core/config.py`와 `app/providers/openai.py` 기준입니다. 실제 off/on 결과와 비용 계수의 분모는 [에이전트 시험 결과 보고서](agent-test-report.md)에 기록합니다.
+모델·호출 방식은 현재 `mcp_client/app/core/config.py`와 `app/providers/openai.py` 기준입니다. 실제 off/on 결과와 비용 계수의 분모는 [에이전트 시험 결과 보고서](../reports/agent-test-report.md)에 기록합니다.

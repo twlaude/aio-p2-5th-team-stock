@@ -85,8 +85,8 @@ Disclosure 담당자는 DB 담당자와 pgvector 테이블만 함께 확정한�
 
 Backend의 로컬 기본은 8000이지만 팀 VPS 운영 포트는 8001입니다. 관측 당시 8000은 `/root/stock_insight_solo/backend`의 별도 서비스였습니다. 로컬 명령의 포트를 운영 포트로 간주하지 않습니다.
 
-운영 체크아웃 HEAD는 `e6d611c858caa16ea4059148a4f4ef1fa5b1dfdd`였습니다. 성찰 구현 `94ee2d7`과 v2 검증기 `52eff44`는 해당 HEAD의 조상이 아니며, 배포 파일에 성찰 설정·`reflection_calls`·`runtime/verifier.py`도 없었습니다. 이 확인은 체크아웃 상태이며 프로세스가 모든 최신 파일을 재로딩했다는 증거까지 뜻하지 않습니다. [시험 보고서](agent-test-report.md)의 성찰 비교는 작업 브랜치 기준입니다.
+운영 체크아웃 HEAD는 `e6d611c858caa16ea4059148a4f4ef1fa5b1dfdd`였습니다. 성찰 구현 `94ee2d7`과 v2 검증기 `52eff44`는 해당 HEAD의 조상이 아니며, 배포 파일에 성찰 설정·`reflection_calls`·`runtime/verifier.py`도 없었습니다. 이 확인은 체크아웃 상태이며 프로세스가 모든 최신 파일을 재로딩했다는 증거까지 뜻하지 않습니다. [시험 보고서](../reports/agent-test-report.md)의 성찰 비교는 작업 브랜치 기준입니다.
 
-현재 Backend에는 인증·회원가입·성향·Memory·분석·관리자 실황이, Frontend에는 React 분석 화면이 구현되어 있습니다. MCP Client와 네 MCP도 실제 연동 코드가 있으며 이번 캡처·기존 시험의 범위는 [설계서](agent-architecture.md)와 [시험 보고서](agent-test-report.md)에 기록합니다. 저장소 Dockerfile은 6개이며 Disclosure에는 없어 전체 Docker 배포 완료로 표시하지 않습니다.
+현재 Backend에는 인증·회원가입·성향·Memory·분석·관리자 실황이, Frontend에는 React 분석 화면이 구현되어 있습니다. MCP Client와 네 MCP도 실제 연동 코드가 있으며 이번 캡처·기존 시험의 범위는 [설계서](../architecture/agent-architecture.md)와 [시험 보고서](../reports/agent-test-report.md)에 기록합니다. 저장소 Dockerfile은 6개이며 Disclosure에는 없어 전체 Docker 배포 완료로 표시하지 않습니다.
 
 이 관측에서는 서비스 시작·재시작·중단·배포·환경 변경을 수행하지 않았습니다. 로컬 실행은 [체크리스트](LOCAL_RUN_ENV_CHECKLIST.md)를 따릅니다.

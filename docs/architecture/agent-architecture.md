@@ -35,11 +35,11 @@ Frontend → Backend → MCP Client → 네 MCP의 분석 경로와, MCP Client 
 
 ## 4. 전체 시스템 구조와 상태 흐름
 
-Frontend(8501) → Backend(기본 8000) → MCP Client(8010) → Price/News/Disclosure/Community MCP(8020~8023)입니다. 운영 포트와 체크아웃은 [실행 폴더 문서](RUNTIME_FOLDERS.md)를 따릅니다.
+Frontend(8501) → Backend(기본 8000) → MCP Client(8010) → Price/News/Disclosure/Community MCP(8020~8023)입니다. 운영 포트와 체크아웃은 [실행 폴더 문서](../operations/RUNTIME_FOLDERS.md)를 따릅니다.
 
-<a href="../doc/diagrams/agent-state-flow.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="../doc/diagrams/agent-state-flow-dark.svg"><img src="../doc/diagrams/agent-state-flow.svg" alt="분석 Workflow와 Agent 성찰 상태 흐름" width="100%"></picture></a>
+<a href="diagrams/agent-state-flow.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="diagrams/agent-state-flow-dark.svg"><img src="diagrams/agent-state-flow.svg" alt="분석 Workflow와 Agent 성찰 상태 흐름" width="100%"></picture></a>
 
-[Mermaid 원본](../doc/diagrams/agent-state-flow.mmd)은 아래 코드와 동일합니다.
+[Mermaid 원본](diagrams/agent-state-flow.mmd)은 아래 코드와 동일합니다.
 
 ```mermaid
 flowchart TD
@@ -125,7 +125,7 @@ flowchart TD
 
 off도 이름·JSON·목록·중복은 검사하지만 추가 키와 실행 직전 2건 상한은 강제하지 않습니다. 2건 조회 뒤 다음 모델 요청에서 Tool을 비제공하는 legacy 동작을 유지합니다. on의 강화 검사를 off와 같은 정책으로 설명하지 않습니다.
 
-Provider는 `parallel_tool_calls=False`, strict JSON Schema, `max_output_tokens=1200`, `store=False`를 사용합니다. on 후속 호출은 요청별 `ContextVar`에 보관한 입력·출력과 암호화 reasoning 항목을 재전송합니다. off는 기존 `previous_response_id` 방식을 유지하며 별도 실측에서 HTTP 400이 발생했습니다([시험 보고서](agent-test-report.md)).
+Provider는 `parallel_tool_calls=False`, strict JSON Schema, `max_output_tokens=1200`, `store=False`를 사용합니다. on 후속 호출은 요청별 `ContextVar`에 보관한 입력·출력과 암호화 reasoning 항목을 재전송합니다. off는 기존 `previous_response_id` 방식을 유지하며 별도 실측에서 HTTP 400이 발생했습니다([시험 보고서](../reports/agent-test-report.md)).
 
 ## 9. 공통 Python Agent Loop
 
@@ -241,7 +241,7 @@ read/change/forbidden은 문서상의 위험도 분류이며 코드에 별도 `a
 
 컨텍스트는 뉴스 5건, 정기공시 5건, 주요 공시 5건, 보고서 구절 5개로 제한합니다. 상세 조회 후보 번호는 매칭 공시 → 주요 공시 → 정기공시 순서로 중복 제거 후 5개, 실제 상세 호출은 on에서 최대 2건입니다. 커뮤니티는 집계·주제·대표 근거 등의 허용 필드만 전달합니다. 뉴스는 회사명 포함 제목·높은 관련도·최신순을 반영합니다. 토큰 예산에 맞춰 과거 대화를 자동 요약하는 별도 기능은 없습니다.
 
-Backend의 [Memory 가이드](../backend/MEMORY_GUIDE.md)는 방향을 설명하는 문서이며, 실제 저장·전달 범위는 아래 코드 기준입니다. 과거 대화 조회·요약·프롬프트 재주입은 현재 분석 경로에 없습니다.
+Backend의 [Memory 가이드](../../backend/MEMORY_GUIDE.md)는 방향을 설명하는 문서이며, 실제 저장·전달 범위는 아래 코드 기준입니다. 과거 대화 조회·요약·프롬프트 재주입은 현재 분석 경로에 없습니다.
 
 | 저장 위치 | 실제 내용·수명 | 근거 |
 | --- | --- | --- |
@@ -268,7 +268,7 @@ Backend의 [Memory 가이드](../backend/MEMORY_GUIDE.md)는 방향을 설명하
 | `GET /internal/v1/mcp-status` | 네 MCP 연결·Tool 발견 상태 |
 | `GET /api/v1/admin/live-status` | 관리자용 최근 실행·집계·연동 상태 |
 
-Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backend는 `agent_first` 정책과 OpenAI 실패 목록을 확인해 Agent 서술 채택 또는 규칙 조립을 선택합니다. 해당 경계의 별도 검증은 [윤기화 담당 시험](agent-test-result-report_narrative-source.md)에 있습니다.
+Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backend는 `agent_first` 정책과 OpenAI 실패 목록을 확인해 Agent 서술 채택 또는 규칙 조립을 선택합니다. 해당 경계의 별도 검증은 [윤기화 담당 시험](../reports/agent-test-result-report_narrative-source.md)에 있습니다.
 
 ## 16. 파일별 책임
 
@@ -285,7 +285,7 @@ Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backen
 
 ## 17. 테스트 기준과 대표 사례
 
-아래 결과는 v2 `on.jsonl` 반복 1 기준입니다. 상세 서술과 Trace, 비정상 원인별 결과는 [시험 보고서](agent-test-report.md)를 참조합니다.
+아래 결과는 v2 `on.jsonl` 반복 1 기준입니다. 상세 서술과 Trace, 비정상 원인별 결과는 [시험 보고서](../reports/agent-test-report.md)를 참조합니다.
 
 | 실제 입력 | 기대 | 실제 결과 | 판정 |
 | --- | --- | --- | --- |
@@ -293,7 +293,7 @@ Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backen
 | `normal-07`, 성향 없음 | 모델 설명·개인화 null | completed·검증 통과 | PASS |
 | `empty_disclosures-01` | 목록 없으면 상세 미호출 | completed·상세 호출 0 | PASS |
 | `normal-09` | 검증 통과 모델 설명 | 목표주가 표현 교정 후 재검증 실패·reflection_exhausted | FAIL: 모델 채택 기준 |
-| `detail_failure-01` | 상세 실패 후 후속 응답 확인 | 자연 선택은 상세 호출 0·completed; 첫 호출 강제 보조 실측은 off 후속 HTTP 400 폴백 / on 실패 안내 서술 채택 | on PASS([v3 보조 실측](../tests/scenarios/agent_eval/results/context-v3/summary.md)) |
+| `detail_failure-01` | 상세 실패 후 후속 응답 확인 | 자연 선택은 상세 호출 0·completed; 첫 호출 강제 보조 실측은 off 후속 HTTP 400 폴백 / on 실패 안내 서술 채택 | on PASS([v3 보조 실측](../../tests/scenarios/agent_eval/results/context-v3/summary.md)) |
 | `price_failure-01` | 현재가 없으면 중단 | RequiredPriceError·LLM 0 | PASS: 중단 기준 |
 
 단위 테스트는 fake provider로 선택 오류·인자·Schema·서술 오류와 복구 상한을 검사합니다. 실측에서 발생하지 않은 오류 유형은 단위 테스트 증거로만 설명합니다. 지표의 검증 통과율이 모든 금융 사실의 정확성을 보증하지는 않습니다.
@@ -309,4 +309,4 @@ Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backen
 | off의 후속 요청 HTTP 400 | 기존 기준선 보존, on 이력 재전송 결과와 구분 |
 | 운영 배포와 시험 브랜치가 다름 | 배포 뒤 동일 조건 표본을 별도로 검증 |
 
-본 문서는 [최종 구조](FINAL_ARCHITECTURE.md), [연결 계약](../shared/CONNECTION_CONTRACT.md), [분석 계약](../shared/contracts/analysis/README.md)과 함께 읽습니다. 모델·성찰 실측의 수치와 한계는 [시험 보고서](agent-test-report.md)가 근거입니다.
+본 문서는 [최종 구조](FINAL_ARCHITECTURE.md), [연결 계약](../../shared/CONNECTION_CONTRACT.md), [분석 계약](../../shared/contracts/analysis/README.md)과 함께 읽습니다. 모델·성찰 실측의 수치와 한계는 [시험 보고서](../reports/agent-test-report.md)가 근거입니다.
