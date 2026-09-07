@@ -9,4 +9,4 @@
 | `이미지/03.png` | 공개 요약 결과 |
 | `이미지/04.png` | 회원 상세 근거 |
 
-화면 이동 순서와 공개 범위는 이미지보다 `docs/FRONTEND_FLOW.md`를 우선한다. 이전 전체 흐름 이미지와 생성 프롬프트는 `docs/archive/`에 보관한다.
+화면 이동 순서와 공개 범위는 이미지보다 `docs/specs/FRONTEND_FLOW.md`를 우선한다. 이전 전체 흐름 이미지 생성 프롬프트는 `docs/archive/image-prompts/`에 보관한다.

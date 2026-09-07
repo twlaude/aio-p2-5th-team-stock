@@ -298,7 +298,7 @@ Frontend가 MCP Client나 MCP 서버를 직접 호출하지 않습니다. Backen
 | `normal-07`, 성향 없음 | 모델 설명·개인화 null | completed·검증 통과 | PASS |
 | `empty_disclosures-01` | 목록 없으면 상세 미호출 | completed·상세 호출 0 | PASS |
 | `normal-09` | 검증 통과 모델 설명 | 목표주가 표현 교정 후 재검증 실패·reflection_exhausted | FAIL: 모델 채택 기준 |
-| `detail_failure-01` | 상세 실패 후 후속 응답 확인 | 자연 선택은 상세 호출 0·completed; 첫 호출 강제 보조 실측은 off 후속 HTTP 400 폴백 / on 실패 안내 서술 채택 | on PASS([v3 보조 실측](../../tests/scenarios/agent_eval/results/context-v3/summary.md)) |
+| `detail_failure-01` | 상세 실패 후 후속 응답 확인 | 자연 선택은 상세 호출 0·completed; 첫 호출 강제 보조 실측은 off 후속 HTTP 400 폴백 / on 실패 안내 서술 채택 | on PASS([v3 보조 실측](../archive/eval-results/agent_eval/context-v3/summary.md)) |
 | `price_failure-01` | 현재가 없으면 중단 | RequiredPriceError·LLM 0 | PASS: 중단 기준 |
 
 단위 테스트는 fake provider로 선택 오류·인자·Schema·서술 오류와 복구 상한을 검사합니다. 실측에서 발생하지 않은 오류 유형은 단위 테스트 증거로만 설명합니다. 지표의 검증 통과율이 모든 금융 사실의 정확성을 보증하지는 않습니다.
