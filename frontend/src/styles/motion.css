@@ -105,6 +105,39 @@
   0% { opacity: 0.5; } 50% { opacity: 1; } 100% { opacity: 0.5; }
 }
 
+/* 공포탐욕 무드 (커뮤니티 카드 게이지 + 마스코트) */
+@keyframes shiver {
+  0% { transform: translate(-1.6px, 0) rotate(-1.2deg); } 50% { transform: translate(1.6px, 0.6px) rotate(1.2deg); } 100% { transform: translate(-1.6px, 0) rotate(-1.2deg); }
+}
+
+@keyframes moodShiver {
+  0% { transform: translateX(-0.6px); } 50% { transform: translateX(0.6px); } 100% { transform: translateX(-0.6px); }
+}
+
+@keyframes moodGlow {
+  0%, 100% { opacity: 0.4; } 50% { opacity: 1; }
+}
+
+@keyframes cashpulse {
+  0%, 100% { transform: scale(1); } 50% { transform: scale(1.22); }
+}
+
+@keyframes cashspin {
+  0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(0.15); }
+}
+
+@keyframes drip {
+  0%, 55% { opacity: 0; transform: scaleY(0.2); } 70% { opacity: 1; transform: scaleY(1); } 100% { opacity: 0; transform: scaleY(1) translateY(10px); }
+}
+
+@keyframes drool {
+  0% { opacity: 0; transform: scaleY(0.3); } 30% { opacity: 1; transform: scaleY(1); } 80% { opacity: 1; transform: scaleY(1.35) translateY(3px); } 100% { opacity: 0; transform: scaleY(1.4) translateY(8px); }
+}
+
+@keyframes coin {
+  0% { opacity: 0; transform: translateY(8px) scale(0.5) rotate(0deg); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(-22px) scale(1.05) rotate(180deg); }
+}
+
 /* motion 4b-15 */
 @keyframes searchShake {
   0%, 100% { transform: translateX(0); } 20% { transform: translateX(-6px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(4px); }

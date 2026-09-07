@@ -182,26 +182,39 @@ export function deriveDisclosureChecks(sources: AnalysisSource[]): DisclosureChe
   };
 }
 
-export function fgiLabel(fgi: number | null | undefined) {
-  if (typeof fgi !== "number" || !Number.isFinite(fgi)) {
+/** 공포탐욕 구간. 게이지 색·배경·마스코트 표정이 이 키 하나를 따라간다. */
+export type FgiMood = "xfear" | "fear" | "neutral" | "greed" | "xgreed";
+
+const FGI_MOOD_LABEL: Record<FgiMood, string> = {
+  xfear: "극도 공포",
+  fear: "공포",
+  neutral: "중립",
+  greed: "탐욕",
+  xgreed: "극도 탐욕",
+};
+
+export function fgiMood(fgi: number | null | undefined): FgiMood | null {
+  if (typeof fgi !== "number" || !Number.isFinite(fgi) || fgi < 0 || fgi > 100) {
     return null;
   }
   if (fgi <= 24) {
-    return "극도 공포";
+    return "xfear";
   }
   if (fgi <= 44) {
-    return "공포";
+    return "fear";
   }
   if (fgi <= 55) {
-    return "중립";
+    return "neutral";
   }
   if (fgi <= 74) {
-    return "탐욕";
+    return "greed";
   }
-  if (fgi <= 100) {
-    return "극도 탐욕";
-  }
-  return null;
+  return "xgreed";
+}
+
+export function fgiLabel(fgi: number | null | undefined) {
+  const mood = fgiMood(fgi);
+  return mood ? FGI_MOOD_LABEL[mood] : null;
 }
 
 export function evidenceLevelText(level: EvidenceLevel): EvidenceLevelView {

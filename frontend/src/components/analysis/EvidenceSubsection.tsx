@@ -1,7 +1,8 @@
 import { AlertCircle, CheckCircle2, ExternalLink, FileText, MessageCircle, Newspaper } from "lucide-react";
 import { useState, type CSSProperties } from "react";
 
-import { type CommunityEvidence, type DisclosureChecks, type EvidenceItem, type TopicEvidence, fgiLabel } from "./deriveEvidence";
+import { Mascot, type MascotState } from "../mascot/Mascot";
+import { type CommunityEvidence, type DisclosureChecks, type EvidenceItem, type FgiMood, type TopicEvidence, fgiLabel, fgiMood } from "./deriveEvidence";
 import "./evidenceSubsection.css";
 import { useInView } from "./useInView";
 
@@ -36,9 +37,13 @@ function metaText(kind: EvidenceKind, count: number, community: CommunityEvidenc
 }
 
 
+/* 공포탐욕 구간 → 마스코트 표정. 중립은 평소 얼굴 그대로. */
+const FGI_MASCOT: Record<FgiMood, MascotState> = { xfear: "scared", fear: "worried", neutral: "idle", greed: "greedy", xgreed: "ecstatic" };
+
 function CommunityBody({ community, summary, visible }: { community: CommunityEvidence | null | undefined; summary: string | null; visible: boolean }) {
   const fgi = typeof community?.fgi === "number" ? Math.max(0, Math.min(100, community.fgi)) : null;
-  const fgiText = fgiLabel(community?.fgi);
+  const mood = fgiMood(fgi);
+  const fgiText = fgiLabel(fgi);
   const metrics = community
     ? [
         ["긍정", community.positive, "positive"],
@@ -63,14 +68,26 @@ function CommunityBody({ community, summary, visible }: { community: CommunityEv
               </div>
             ))}
           </div>
-          {fgi !== null && fgiText ? (
-            <div className="analysis-community-fgi" aria-label={`공포탐욕 지수 ${fgi}`}>
-              <svg viewBox="0 0 160 92" role="img" aria-hidden="true">
-                <path className="analysis-community-fgi__track" d="M24 78 A56 56 0 0 1 136 78" pathLength="100" />
-                <path className="analysis-community-fgi__fill" d="M24 78 A56 56 0 0 1 136 78" pathLength="100" style={{ "--fgi-width": visible ? fgi : 0 } as CSSProperties} />
-              </svg>
-              <div className="analysis-community-fgi__value">{fgi}</div>
-              <div className="analysis-community-fgi__label">{fgiText}</div>
+          {fgi !== null && mood && fgiText ? (
+            <div className={`analysis-community-fgi analysis-community-fgi--${mood}${visible ? " analysis-community-fgi--live" : ""}`} aria-label={`공포탐욕 지수 ${fgi} ${fgiText}`}>
+              <div className="analysis-community-fgi__gauge">
+                <svg viewBox="0 0 160 92" role="img" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="analysis-fgi-spectrum" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0" stopColor="var(--c-down)" />
+                      <stop offset="0.45" stopColor="#9aa8a0" />
+                      <stop offset="0.55" stopColor="#9aa8a0" />
+                      <stop offset="1" stopColor="var(--c-up)" />
+                    </linearGradient>
+                  </defs>
+                  <path className="analysis-community-fgi__track" d="M24 78 A56 56 0 0 1 136 78" pathLength="100" />
+                  <path className="analysis-community-fgi__spectrum" d="M24 78 A56 56 0 0 1 136 78" pathLength="100" />
+                  <path className="analysis-community-fgi__fill" d="M24 78 A56 56 0 0 1 136 78" pathLength="100" style={{ "--fgi-width": visible ? fgi : 0 } as CSSProperties} />
+                </svg>
+                <div className="analysis-community-fgi__value">{fgi}</div>
+                <div className="analysis-community-fgi__label">{fgiText}</div>
+              </div>
+              <Mascot className="analysis-community-fgi__mascot" size={84} state={FGI_MASCOT[mood]} />
             </div>
           ) : null}
         </div>

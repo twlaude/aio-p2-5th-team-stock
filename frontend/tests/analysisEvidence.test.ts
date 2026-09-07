@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { countOf, deriveCommunity, deriveDisclosureChecks, deriveItems, deriveTopics, evidenceLevelText, fgiLabel } from "../src/components/analysis/deriveEvidence";
+import { countOf, deriveCommunity, deriveDisclosureChecks, deriveItems, deriveTopics, evidenceLevelText, fgiLabel, fgiMood } from "../src/components/analysis/deriveEvidence";
 import { lastSessionVolumeDescription, temperatureDescription } from "../src/components/analysis/GaugeCard";
 import samsungFixture from "../src/mocks/analyses/samsung.json";
 import type { AnalysisDetail } from "../src/services/backend_api/client";
@@ -23,6 +23,15 @@ describe("analysis evidence derivation", () => {
       topics: deriveTopics(samsung.member_detail.sources),
     });
     expect(fgiLabel(68)).toBe("탐욕");
+  });
+
+  it("maps the fear-greed index to a mood band and label together", () => {
+    expect([0, 24, 25, 44, 45, 55, 56, 74, 75, 100].map(fgiMood)).toEqual(["xfear", "xfear", "fear", "fear", "neutral", "neutral", "greed", "greed", "xgreed", "xgreed"]);
+    expect(fgiLabel(12)).toBe("극도 공포");
+    expect(fgiLabel(88)).toBe("극도 탐욕");
+    expect(fgiMood(null)).toBeNull();
+    expect(fgiMood(101)).toBeNull();
+    expect(fgiLabel(Number.NaN)).toBeNull();
   });
 
   it("keeps partial responses without community meta empty", () => {
