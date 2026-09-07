@@ -43,3 +43,31 @@ $PY tests/scenarios/agent_eval/report.py --out tests/scenarios/agent_eval/result
 `--rescore-off`는 Settings·Provider·Workflow를 생성하지 않아 인증값 없이 동작합니다. 원본 narrative·context·호출 수·소요 시간·종료 사유는 유지하며 `verifier`와 `rescoring`만 바꿉니다. `rescoring`에는 원본 파일 SHA-256, 재채점 시각, 추가 LLM/HTTP 호출 0회를 기록합니다. `report.py`는 round1이 있으면 v1/v2 비교 표와 보존된 Provider 후속 호출 링크를 함께 생성합니다. off의 일관성 상승은 규칙 변경의 효과이며 모델 응답 자체의 개선으로 해석하지 않습니다.
 
 `results/interrupted_on.jsonl`은 v2 경계 검토 중 중단한 초안 규칙의 8개 완료 관측입니다. 과거 사실의 `예상보다` 제외와 실제 개행·탭 검출 보완 전에 실행했으며 최종 지표에서 제외합니다. 9번째 실행은 중단으로 완결 행을 회수하지 못했습니다. 최종 `on.jsonl`은 보완된 규칙으로 60건 전부 새로 측정한 파일입니다.
+
+## 검증기 v3와 상세 실패 보조 Scenario (fix_plan 4)
+
+v3는 수집한 해당 소스 원문과 일치하는 직접 인용 및 수치를 제시하지 않는 명시적 부정만 목표주가 예외로 인정합니다.
+인용에 출처·보도 동사가 없거나 수치·출처가 원문과 다르면 위반입니다. 인용문 밖의 목표주가와 매수 지시는 별도로 검사합니다.
+뉴스·공시·커뮤니티 요약의 제한 안내는 조회 불가·수집 실패·자료 부재·확인 불가의 동등 표현을 인정하고,
+사업 사건의 실패, 다른 소스만의 제한, 이중 부정은 인정하지 않습니다. 간접 인용과 일반적인 의미 추론은 지원하지 않습니다.
+
+기존 30케이스는 상세 선택 호출이 없어 실패 주입 도달이 양쪽 0/6이었습니다. 이를 보완하는 별도 Scenario는
+기존 `detail_failure-01` 픽스처·주입을 사용하고 첫 실제 API 요청의 `tool_choice`만 `get_disclosure_detail`로 지정합니다.
+모델이 허용 enum의 접수번호를 선택하고 실제 Runtime이 도구를 실행하면, 픽스처 Collector가 상세 실패를 주입합니다.
+후속 요청부터는 기존 Provider의 choice·off/on 이력 전달 방식과 성찰 상한을 그대로 사용합니다.
+실제 MCP 서버에는 접속하지 않습니다. 이 시험은 자연 선택 정확도나 실제 MCP 장애 복구율을 측정하지 않습니다.
+
+```bash
+set -o pipefail
+PY=/root/.venvs/team5-mcp-client/bin/python
+$PY -m pytest tests/scenarios/agent_eval/test_harness.py -q 2>&1 | sed -u 's/^/[TEST] /'
+$PY tests/scenarios/agent_eval/run_eval.py --mode off --detail-failure-probe --out tests/scenarios/agent_eval/results/context-v3 2>&1 | sed -u 's/^/[TEST] /'
+$PY tests/scenarios/agent_eval/run_eval.py --mode on --detail-failure-probe --out tests/scenarios/agent_eval/results/context-v3 2>&1 | sed -u 's/^/[TEST] /'
+```
+
+각 모드는 1회만 실행하며 `--repeat`는 보조 Scenario에 적용하지 않습니다. 재실행은 새 출력 디렉터리가 필요합니다.
+`detail_failure_off.jsonl`·`detail_failure_on.jsonl`은 상세 호출·실패 주입·후속 피드백·HTTP 오류·모델 서술을 보존하고
+`excluded_from_metrics=true`로 기존 지표에서 제외합니다. 기존 `results/off.jsonl`, `on.jsonl`, `summary.md`는 v2 관측으로 유지합니다.
+`failure_reached`는 Collector 호출, `failure_feedback_delivered`는 Provider 후속 진입을 뜻하며 HTTP 성공을 보장하지 않습니다.
+`recovery_completed`는 두 조건과 Agent `completed`, 최종 verifier 통과를 모두 요구합니다. 실패 뒤 폴백이 있어도 복구 완료로 세지 않습니다.
+관측 결과와 남은 한계는 [v3 보조 검증 기록](results/context-v3/summary.md)에 기록합니다.

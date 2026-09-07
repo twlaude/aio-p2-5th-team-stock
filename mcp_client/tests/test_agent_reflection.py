@@ -297,6 +297,74 @@ def test_verifier_detects_directives_and_predictions(context, text):
     assert "추천·예측 금지 표현" in violations[0].detail
 
 
+@pytest.mark.parametrize("text,valid", [
+    ("목표주가를 제시하지 않습니다.", True),
+    ("목표 주가를 예측하는 것이 아닙니다.", True),
+    ("목표주가 상향과 직접 연결되는 공시 내용은 확인되지 않았어요.", True),
+    ("목표주가 관련 재평가를 직접 확인하는 공시는 없으며 별도 확인이 필요합니다.", True),
+    ('기사에서 “목표주가 30만원”이라고 보도했습니다.', True),
+    ('뉴스에서 "목표주가 30만원"을 인용했습니다.', True),
+    ('기사에서 “목표주가 50만원”이라고 보도했습니다.', False),
+    ('커뮤니티에서 “목표주가 30만원”이라고 언급했습니다.', False),
+    ('뉴스도 있었고 공시에서 “목표주가 30만원”이라고 보도했습니다.', False),
+    ('“목표주가 30만원”입니다.', False),
+    ('기사에서 “목표주가 30만원”이라고 보도했습니다. 매수하세요.', False),
+    ('기사에서 “목표주가 30만원”이라고 보도했으며 목표주가는 50만원입니다.', False),
+    ("목표주가를 제시하지 않지만 목표주가는 30만원입니다.", False),
+    ("목표주가는 30만원이며 근거는 확인되지 않았어요.", False),
+    ("목표주가를 제시하지 않고 30만원을 추천합니다.", False),
+    ("목표주가가 삼십만원이며 이를 부정하는 공시는 없습니다.", False),
+    ("목표주가를 제시하지 않는 것은 아닙니다.", False),
+    ("목표주가 상향을 확인할 수 없는 것은 아닙니다.", False),
+])
+def test_target_price_exceptions_are_grounded_and_local(context, text, valid):
+    context["data"]["news"] = {"articles": [{"headline": "증권사 목표주가 30만원 제시"}]}
+    narrative = prose(context, news_summary=text).narrative
+    assert (verify_narrative(narrative, context) == []) is valid
+
+
+@pytest.mark.parametrize("source,tool", [("news", "search_news"),
+    ("community", "get_community_reaction"), ("disclosure", "get_disclosure_detail")])
+@pytest.mark.parametrize("text,valid", [
+    ("자료가 외부 API 오류로 확인되지 않았어요.", True),
+    ("자료를 확인할 수 없어요.", True),
+    ("데이터가 제공되지 않아 판단할 수 없어요.", True),
+    ("조회 불가로 표본이 없어요.", True),
+    ("데이터 수집에 실패했습니다.", True),
+    ("자료 조회가 외부 API 오류로 실패해 분위기를 판단하기 어려워요.", True),
+    ("자료 확인이 어려워요.", True),
+    ("조회 실패 없이 데이터를 확인했습니다.", False),
+    ("임상 실패 관련 자료를 확인했습니다.", False),
+    ("자료를 확인할 수 없는 것은 아닙니다.", False),
+    ("자료를 확인하지 못한 것은 아닙니다.", False),
+    ("자료가 없지는 않습니다.", False),
+    ("성공한 자료입니다.", False),
+])
+def test_limitation_equivalents_do_not_accept_business_failure(context, source, tool, text, valid):
+    context["failed_tools"] = [tool]
+    narrative = prose(context, **{f"{source}_summary": text}).narrative
+    assert (verify_narrative(narrative, context) == []) is valid
+
+
+@pytest.mark.parametrize("text", ["뉴스 조회에 실패했습니다.",
+    "뉴스 조회에 실패했으며, 커뮤니티 반응은 긍정입니다.",
+    "뉴스 조회에 실패했으며 커뮤니티 반응은 긍정입니다."])
+def test_other_source_limitation_cannot_cover_failed_community(context, text):
+    context["failed_tools"] = ["get_community_reaction"]
+    assert verify_narrative(prose(context, community_summary=text).narrative, context)
+
+
+@pytest.mark.asyncio
+async def test_context_exceptions_avoid_unnecessary_reflection(context):
+    context["failed_tools"] = ["search_news"]
+    clean = prose(context, news_summary="뉴스 자료가 외부 API 오류로 확인되지 않았어요.",
+                  disclosure_summary="목표주가 관련 재평가를 직접 확인하는 공시는 없으며 추가 확인이 필요합니다.")
+    provider = ScriptProvider(clean)
+    result = await StockAgentRuntime(provider, Disclosure(), 3, reflection_enabled=True).run(context, RECEIPTS, Reporter())
+    assert result.termination_reason == "completed" and result.reflection_calls == 0
+    assert len(provider.inputs) == 1 and result.narrative == clean.narrative
+
+
 def test_receipt_grounding_and_member_profile_are_independent(context):
     narrative = prose(context, disclosure_summary=f"공시 {RECEIPTS[0]}를 확인했습니다.").narrative
     assert verify_narrative(narrative, context) == []

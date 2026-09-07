@@ -8,6 +8,7 @@ import hashlib
 import json
 from pathlib import Path
 from time import monotonic
+from unittest.mock import patch
 
 from capture_fixtures import HERE, clean, required_receipts, settings_for
 from app.clients.base import MCPClientError
@@ -128,6 +129,23 @@ class ObservedAgent(StockAgentRuntime):
         return deepcopy(self.result)  # Workflow mutates personalized_checkpoints after return.
 
 
+class ForcedDetailProvider(ObservedProvider):
+    """Test-only first-request choice; the real SDK, history and runtime still execute."""
+
+    async def first_turn(self, context, tools):
+        assert len(tools) == 1 and tools[0]["name"] == "get_disclosure_detail"
+        assert tools[0]["parameters"]["properties"]["receipt_number"]["enum"]
+        create = self._client.responses.create
+
+        async def forced_create(**kwargs):
+            kwargs["tool_choice"] = {"type": "function", "name": "get_disclosure_detail"}
+            self.turns[-1]["request_tool_choice"] = kwargs["tool_choice"]
+            return await create(**kwargs)
+
+        with patch.object(self._client.responses, "create", forced_create):
+            return await super().first_turn(context, tools)
+
+
 def selection_result(turns, receipts, completed):
     calls = [(call, turn["allowed_tools"]) for turn in turns for call in turn["calls"]]
     used, violations = set(), []
@@ -155,10 +173,11 @@ def selection_result(turns, receipts, completed):
             "requested_calls": len(calls), "violations": violations}
 
 
-async def evaluate(case, mode, repeat, fixtures):
+async def evaluate(case, mode, repeat, fixtures, *, force_detail=False):
     fixture = json.loads((fixtures / f"{case['stock_code']}.json").read_text())
     settings = settings_for(mode)
-    collector, provider = FixtureCollector(fixture, case), ObservedProvider(settings)
+    collector = FixtureCollector(fixture, case)
+    provider = (ForcedDetailProvider if force_detail else ObservedProvider)(settings)
     agent = ObservedAgent(provider, collector, settings.max_agent_steps,
                           reflection_enabled=mode == "on", max_reflections=settings.agent_max_reflections)
     workflow = AnalysisWorkflow(settings, collector, agent)
@@ -214,6 +233,30 @@ async def evaluate(case, mode, repeat, fixtures):
                context=context, events=collector.reporter.events,
                duration_ms=round((monotonic() - started) * 1000))
     return clean(row, (settings.openai_api_key,))
+
+
+async def detail_failure_probe(args):
+    """A forced function call tests failure handling, not natural tool selection accuracy."""
+    case = next(case for case in json.loads((HERE / "cases.json").read_text())
+                if case["kind"] == "detail_failure")
+    case = {**case, "case_id": "aux-forced-detail-failure"}
+    args.out.mkdir(parents=True, exist_ok=True)
+    with (args.out / f"detail_failure_{args.mode}.jsonl").open("x") as stream:
+        row = await evaluate(case, args.mode, 1, args.fixtures, force_detail=True)
+        outputs = [json.loads(item["output"]) for turn in row["turns"] for item in turn.get("feedback", [])
+                   if item.get("type") == "function_call_output"]
+        reached = any(call["injected_failure"] for call in row["detail_calls"])
+        delivered = any(output.get("status") == "injected_failure" for output in outputs)
+        row.update(experiment="forced_detail_failure", included_in_metrics=False, excluded_from_metrics=True,
+                   protocol="first real API request forces get_disclosure_detail; subsequent tool_choice unchanged; MCP fixture failure",
+                   failure_reached=reached, failure_feedback_delivered=delivered,
+                   recovery_completed=reached and delivered and row["termination_reason"] == "completed"
+                   and row["verifier"]["passed"])
+        stream.write(json.dumps(row, ensure_ascii=False) + "\n")
+    print(f"[TEST] detail failure {args.mode}: reached={reached} feedback={delivered} "
+          f"outcome={row['termination_reason']} recovery={row['recovery_completed']}", flush=True)
+    if not reached or not delivered:
+        raise RuntimeError("[TEST] Auxiliary scenario did not reach the injected failure and follow-up")
 
 
 def rescore_off(source, out):
@@ -302,13 +345,17 @@ if __name__ == "__main__":
     parser.add_argument("--out", type=Path, default=HERE / "results")
     parser.add_argument("--fixtures", type=Path, default=HERE / "fixtures")
     parser.add_argument("--continuation-probe", action="store_true")
+    parser.add_argument("--detail-failure-probe", action="store_true")
     parser.add_argument("--rescore-off", type=Path, help="Regrade original off JSONL without API calls")
     args = parser.parse_args()
     if args.repeat < 1:
         parser.error("--repeat must be positive")
+    if sum(bool(value) for value in (args.rescore_off, args.continuation_probe, args.detail_failure_probe)) > 1:
+        parser.error("Select only one probe or offline rescore")
     if args.rescore_off:
         if args.mode != "off" or args.continuation_probe:
             parser.error("--rescore-off requires --mode off and no --continuation-probe")
         rescore_off(args.rescore_off, args.out)
     else:
-        asyncio.run(continuation_probe(args) if args.continuation_probe else run(args))
+        asyncio.run(detail_failure_probe(args) if args.detail_failure_probe else
+                    continuation_probe(args) if args.continuation_probe else run(args))
