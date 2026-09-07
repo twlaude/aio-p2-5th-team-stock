@@ -51,9 +51,9 @@
 .intro-blobs i:nth-child(1) { right: 12%; top: 10%; background: var(--c-pale); animation: heroBlobA 26s ease-in-out infinite; }
 .intro-blobs i:nth-child(2) { right: 2%; bottom: 2%; background: var(--c-primary); animation: heroBlobB 30s ease-in-out infinite; }
 .intro-blobs i:nth-child(3) { left: 15%; top: 0; background: var(--c-pale); animation: heroBlobB 22s ease-in-out infinite reverse; }
-.intro-hero__scene { position: relative; min-width: 0; min-height: min(560px, 52dvh); display: flex; align-items: flex-end; justify-content: center; }
-.intro-hero__mascot { position: absolute; left: 0; bottom: 40px; width: clamp(64px, 10vw, 150px); height: auto; }
-.intro-hero__phone { position: relative; z-index: 1; min-width: 0; margin-left: clamp(48px, 6vw, 96px); }
+.intro-hero__scene { position: relative; min-width: 0; min-height: min(560px, 52dvh); display: flex; align-items: flex-end; justify-content: center; gap: clamp(16px, 2.5vw, 40px); }
+.intro-hero__mascot { position: relative; flex: 0 0 auto; width: clamp(64px, 10vw, 150px); height: auto; margin-bottom: 40px; }
+.intro-hero__phone { position: relative; z-index: 1; min-width: 0; }
 .intro-phone-float { animation: intro-float 6s ease-in-out -1.5s infinite; }
 .intro-phone {
   --phone-scale: 1; width: min(280px, 100%); padding: 14px 14px 18px;
