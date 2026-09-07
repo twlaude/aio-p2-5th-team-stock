@@ -268,6 +268,35 @@ def test_verifier_detects_source_failures_and_accepts_limitations(context, sourc
     assert verify_narrative(narrative, context) == []
 
 
+@pytest.mark.parametrize("text", [
+    "27만원 부근 매도벽이 관찰됩니다.", "개인 매수세가 유입됐습니다.",
+    "기관 순매수와 외국인 순매도가 함께 나타났습니다.",
+    "장중 매수 우위에서 매도 우위로 바뀌었습니다.",
+    "기관 매수와 외국인 매도가 확인됐습니다.",
+    "주가 상승이 예상보다 빨랐습니다.", "하락이 예상보다 컸습니다.",
+    "상승할 경우를 가정한 민감도를 설명합니다.",
+])
+def test_verifier_accepts_supply_demand_facts(context, text):
+    assert verify_narrative(prose(context, one_line_summary=text).narrative, context) == []
+
+
+@pytest.mark.parametrize("text", [
+    "매수하세요.", "매도 추천입니다.", "보유하세요.",
+    "지금 사도 좋습니다.", "가격이 상승할 것입니다.",
+    "매수해 보세요.", "매수 시점입니다.", "사세요.", "파세요.",
+    "목표주가는 30만원입니다.", "가격이 오를 것입니다.", "가격이 내릴 것입니다.",
+    "하락할 것입니다.", "상승이 예상됩니다.", "하락이 예상됩니다.",
+    "급등할 전망입니다.", "급락할 전망입니다.", "매수해야 합니다.",
+    "매도하는 게 좋습니다.", "매수 타이밍입니다.", "매도 기회입니다.",
+    "매도벽이 있지만 매수하세요.", "기관 매수 추천입니다.",
+    "매수\n하세요.", "상승이\t예상됩니다.",
+])
+def test_verifier_detects_directives_and_predictions(context, text):
+    violations = verify_narrative(prose(context, one_line_summary=text).narrative, context)
+    assert len(violations) == 1 and violations[0].kind == "inconsistency"
+    assert "추천·예측 금지 표현" in violations[0].detail
+
+
 def test_receipt_grounding_and_member_profile_are_independent(context):
     narrative = prose(context, disclosure_summary=f"공시 {RECEIPTS[0]}를 확인했습니다.").narrative
     assert verify_narrative(narrative, context) == []

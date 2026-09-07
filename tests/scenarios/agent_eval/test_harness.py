@@ -9,7 +9,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from capture_fixtures import HERE, clean, required_receipts
-from run_eval import FixtureCollector, evaluate, selection_result
+from run_eval import FixtureCollector, evaluate, rescore_off, selection_result
 from report import load_rows, metrics, ratio
 from app.clients.base import MCPClientError
 from app.providers.openai import FunctionCall, ModelTurn, OpenAINarrativeProvider, ProviderError
@@ -129,7 +129,7 @@ def test_timeout_preserves_executed_tool_and_reflection_counts(monkeypatch):
         self.test_next_calls += 1
         if self.test_next_calls == 1:
             narrative = build_fallback_narrative(self.test_context)
-            narrative.news_summary = "[TEST] 매수"
+            narrative.news_summary = "[TEST] 매수하세요."
             return ModelTurn("test-2", narrative=narrative)
         await asyncio.sleep(1)
     monkeypatch.setattr(OpenAINarrativeProvider, "first_turn", first)
@@ -156,3 +156,28 @@ def test_report_rejects_duplicate_missing_or_unpaired_rows(tmp_path):
 def test_redaction_preserves_public_company_data():
     assert clean({"company_name": "삼성전자", "username": "private", "content": "secret alice@example.com"},
                  ("secret",)) == {"company_name": "삼성전자", "content": "[REDACTED] [REDACTED_EMAIL]"}
+
+
+def test_rescore_preserves_observations_without_provider_or_settings(tmp_path, monkeypatch):
+    import run_eval
+    def forbidden(*args, **kwargs):
+        pytest.fail("Offline rescoring must not construct settings or provider")
+    monkeypatch.setattr(run_eval, "settings_for", forbidden)
+    monkeypatch.setattr(run_eval, "ObservedProvider", forbidden)
+    rows = [json.loads(line) for line in (HERE / "results/round1/off.jsonl").read_text().splitlines()]
+    source = tmp_path / "original.jsonl"
+    content = "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows)
+    source.write_text(content)
+    rescore_off(source, tmp_path)
+    assert source.read_text() == content
+    updated = [json.loads(line) for line in (tmp_path / "off.jsonl").read_text().splitlines()]
+    for before, after in zip(rows, updated, strict=True):
+        assert after["rescoring"]["llm_calls"] == after["rescoring"]["http_attempts"] == 0
+        assert {key: value for key, value in after.items() if key not in {"verifier", "rescoring"}} == {
+            key: value for key, value in before.items() if key != "verifier"}
+        if before["narrative"] is None:
+            assert after["verifier"]["passed"] is None
+    assert any(before["verifier"]["passed"] != after["verifier"]["passed"]
+               for before, after in zip(rows, updated, strict=True))
+    with pytest.raises(FileExistsError):
+        rescore_off(source, tmp_path)

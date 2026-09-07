@@ -27,3 +27,19 @@ $PY tests/scenarios/agent_eval/report.py --out tests/scenarios/agent_eval/result
 Agent 원본 서술과 Workflow 종료 상태를 분리합니다. off의 런타임은 실패한 호출을 세지 않는 경로가 있어 `llm_calls`는 Provider 진입 수, `runtime_llm_calls`는 기존 카운터, `http_attempts`는 SDK 재시도를 포함한 HTTP 요청 수로 저장합니다. 성찰 재실행은 이벤트 개수가 아닌 `reflection_calls`를 사용합니다. 외부 검증은 기본/상세 실패와 성공 상세 자료를 동일하게 합칩니다.
 
 원본 JSONL에는 전체 모델 서술, 정규화된 Tool 요청과 응답 피드백, API 오류, 컨텍스트, 검증 결과, 실행 이벤트를 남깁니다. 내부 추론과 암호화 reasoning payload는 기록하지 않습니다. 수치는 [실측 요약](results/summary.md)에서 확인할 수 있습니다.
+
+## 검증기 v2 재측정
+
+기존 결과 5개 파일은 `results/round1/`에 원본 그대로 보존했습니다. off는 저장된 narrative/context를 새 검증기로 재채점하고 on만 실제 OpenAI로 30케이스를 2회 실행합니다. 새 출력 파일이 없는 상태에서 다음 순서로 실행합니다.
+
+```bash
+set -o pipefail
+PY=/root/.venvs/team5-mcp-client/bin/python
+$PY tests/scenarios/agent_eval/run_eval.py --mode off --rescore-off tests/scenarios/agent_eval/results/round1/off.jsonl --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
+$PY tests/scenarios/agent_eval/run_eval.py --mode on --repeat 2 --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
+$PY tests/scenarios/agent_eval/report.py --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
+```
+
+`--rescore-off`는 Settings·Provider·Workflow를 생성하지 않아 인증값 없이 동작합니다. 원본 narrative·context·호출 수·소요 시간·종료 사유는 유지하며 `verifier`와 `rescoring`만 바꿉니다. `rescoring`에는 원본 파일 SHA-256, 재채점 시각, 추가 LLM/HTTP 호출 0회를 기록합니다. `report.py`는 round1이 있으면 v1/v2 비교 표와 보존된 Provider 후속 호출 링크를 함께 생성합니다. off의 일관성 상승은 규칙 변경의 효과이며 모델 응답 자체의 개선으로 해석하지 않습니다.
+
+`results/interrupted_on.jsonl`은 v2 경계 검토 중 중단한 초안 규칙의 8개 완료 관측입니다. 과거 사실의 `예상보다` 제외와 실제 개행·탭 검출 보완 전에 실행했으며 최종 지표에서 제외합니다. 9번째 실행은 중단으로 완결 행을 회수하지 못했습니다. 최종 `on.jsonl`은 보완된 규칙으로 60건 전부 새로 측정한 파일입니다.

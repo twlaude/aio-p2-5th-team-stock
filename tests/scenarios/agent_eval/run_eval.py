@@ -13,8 +13,8 @@ from capture_fixtures import HERE, clean, required_receipts, settings_for
 from app.clients.base import MCPClientError
 from app.providers.openai import OpenAINarrativeProvider
 from app.runtime.agent import StockAgentRuntime
-from app.runtime.verifier import verify_narrative
-from app.schemas.analysis import AnalysisRequest, CollectedData, ToolFailure
+from app.runtime.verifier import VERIFIER_VERSION, verify_narrative
+from app.schemas.analysis import AnalysisRequest, CollectedData, Narrative, ToolFailure
 from app.workflows.analysis import AnalysisWorkflow, RequiredPriceError
 
 
@@ -204,7 +204,8 @@ async def evaluate(case, mode, repeat, fixtures):
                http_attempts=provider.http_attempts, tool_calls=len(collector.detail_calls),
                reflection_calls=reflection_calls, runtime_result_available=result is not None,
                reflections=[asdict(item) for item in result.reflections] if result else [],
-               verifier={"passed": not violations if result else None, "violations": violations},
+               verifier={"passed": not violations if result else None, "violations": violations,
+                         "version": VERIFIER_VERSION},
                narrative=result.narrative.model_dump() if result else None,
                failures=[item.model_dump() for item in result.failures] if result else [],
                source_failures=[item.model_dump() for item in collector.data.failures],
@@ -213,6 +214,28 @@ async def evaluate(case, mode, repeat, fixtures):
                context=context, events=collector.reporter.events,
                duration_ms=round((monotonic() - started) * 1000))
     return clean(row, (settings.openai_api_key,))
+
+
+def rescore_off(source, out):
+    """Regrade saved prose/context only; never construct settings, provider or workflow."""
+    content = source.read_bytes()
+    rows = [json.loads(line) for line in content.splitlines()]
+    if any(row["mode"] != "off" or "rescoring" in row for row in rows):
+        raise ValueError("Rescoring requires original off observations")
+    metadata = {"source_sha256": hashlib.sha256(content).hexdigest(),
+                "rescored_at": datetime.now(timezone.utc).isoformat(), "llm_calls": 0,
+                "http_attempts": 0}
+    for row in rows:
+        narrative = Narrative.model_validate(row["narrative"]) if row["narrative"] is not None else None
+        violations = [asdict(item) for item in verify_narrative(narrative, row["context"])] if narrative else []
+        row["verifier"] = {"passed": not violations if narrative else None,
+                           "violations": violations, "version": VERIFIER_VERSION}
+        row["rescoring"] = metadata
+    out.mkdir(parents=True, exist_ok=True)
+    with (out / "off.jsonl").open("x") as stream:
+        for row in rows:
+            stream.write(json.dumps(row, ensure_ascii=False) + "\n")
+    print(f"[TEST] offline rescore rows={len(rows)} llm=0 http=0 verifier={VERIFIER_VERSION}", flush=True)
 
 
 async def run(args):
@@ -279,7 +302,13 @@ if __name__ == "__main__":
     parser.add_argument("--out", type=Path, default=HERE / "results")
     parser.add_argument("--fixtures", type=Path, default=HERE / "fixtures")
     parser.add_argument("--continuation-probe", action="store_true")
+    parser.add_argument("--rescore-off", type=Path, help="Regrade original off JSONL without API calls")
     args = parser.parse_args()
     if args.repeat < 1:
         parser.error("--repeat must be positive")
-    asyncio.run(continuation_probe(args) if args.continuation_probe else run(args))
+    if args.rescore_off:
+        if args.mode != "off" or args.continuation_probe:
+            parser.error("--rescore-off requires --mode off and no --continuation-probe")
+        rescore_off(args.rescore_off, args.out)
+    else:
+        asyncio.run(continuation_probe(args) if args.continuation_probe else run(args))

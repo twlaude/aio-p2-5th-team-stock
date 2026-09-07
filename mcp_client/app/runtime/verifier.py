@@ -9,9 +9,15 @@ from app.schemas.analysis import Narrative
 
 RECEIPT_PATTERN = re.compile(r"(?<!\d)\d{14}(?!\d)")
 LIMITATIONS = ("확인하지 못", "조회하지 못", "자료가 없", "실패")
-PROHIBITED_TERMS = (
-    "매수", "매도", "사세요", "파세요", "목표주가", "오를 것", "내릴 것",
-    "상승할", "하락할", "보유하세요", "보유해야",
+VERIFIER_VERSION = "v2_action_patterns"
+# Require directive endings: 매도벽, 매수세, 순매수/순매도, 매수/매도 우위,
+# 기관 매수 and 외국인 매도 alone are supply/demand facts, not advice.
+PROHIBITED_PATTERN = re.compile(
+    r"(?:매수|매도|보유)\s*(?:를\s*)?"
+    r"(?:하세요|하십시오|하셔야|해야|하는\s*게|추천|시점|타이밍|기회|해\s*보)"
+    r"|사세요|파세요|사도\s*좋|목표\s*주가"
+    r"|(?:오를|내릴|상승할|하락할)\s*것"
+    r"|(?:상승|하락)(?:이|을)?\s*예상(?!보다)|급등할|급락할"
 )
 SOURCE_TOOLS = {
     "news": {"search_news"},
@@ -39,6 +45,14 @@ def _receipts(value: Any) -> set[str]:
     return set()
 
 
+def _texts(value: Any):
+    if isinstance(value, str):
+        yield value
+    elif isinstance(value, (dict, list)):
+        for item in value.values() if isinstance(value, dict) else value:
+            yield from _texts(item)
+
+
 def verify_narrative(narrative: Narrative, context: dict[str, Any]) -> list[Violation]:
     data = context.get("data") or {}
     # News/community text cannot promote an injected receipt into official evidence.
@@ -62,7 +76,8 @@ def verify_narrative(narrative: Narrative, context: dict[str, Any]) -> list[Viol
         summary = getattr(narrative, f"{source}_summary")
         if failed and not any(marker in summary for marker in LIMITATIONS):
             violations.append(Violation("inconsistency", f"{source}_summary에 조회 실패 제한을 명시해야 합니다."))
-    terms = [term for term in PROHIBITED_TERMS if term in text]
+    terms = list(dict.fromkeys(term for value in _texts(narrative.model_dump())
+                              for term in PROHIBITED_PATTERN.findall(value)))
     if terms:
         violations.append(Violation("inconsistency", "추천·예측 금지 표현입니다: " + ", ".join(terms)))
     if (context.get("investment_profile") is not None) != (narrative.personalized_checkpoints is not None):
