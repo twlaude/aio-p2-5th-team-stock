@@ -4,7 +4,7 @@
 
 현재 개발 지시로 사용하지 않는다. 구현 기준은 다음 문서다.
 
-- `docs/FINAL_ARCHITECTURE.md`
-- `docs/DEVELOPMENT_PLAN.md`
+- `docs/architecture/FINAL_ARCHITECTURE.md`
+- `docs/planning/DEVELOPMENT_PLAN.md`
 - `shared/CONNECTION_CONTRACT.md`
 - 각 실행 폴더의 `GUIDE.md`

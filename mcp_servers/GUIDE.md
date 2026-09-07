@@ -69,4 +69,4 @@ error
 
 ## 이전 단일 MCP 골격
 
-초기 단일 서버 골격은 `archive/legacy/stock_mcp`에 보관한다. 현재 구현 대상으로 사용하지 않는다.
+초기 단일 서버 골격은 `docs/archive/legacy-code/stock_mcp`에 보관한다. 현재 구현 대상으로 사용하지 않는다.
