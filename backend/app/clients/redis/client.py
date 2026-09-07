@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timezone
 from typing import Any
 
 import redis.asyncio as redis
@@ -49,6 +50,7 @@ async def publish_event(event: dict[str, Any]) -> None:
     """실황 페이지(SSE)에 즉시 알리기 위한 Pub/Sub 발행. 구독자가 없어도 안전하다."""
     client = await _client_resource.get()
     await client.publish(EVENTS_CHANNEL, json.dumps(event, ensure_ascii=False, default=str))
+    await client.set("backend:last_event_at", datetime.now(timezone.utc).isoformat())
 
 
 async def snapshot_short_term() -> list[dict[str, Any]]:
