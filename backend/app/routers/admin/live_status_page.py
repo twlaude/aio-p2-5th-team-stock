@@ -56,21 +56,21 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
     <p id="postgres-status"></p>
     <table><thead><tr><th>DB 이름</th><th>용량 MB</th><th>접속 수</th></tr></thead><tbody id="databases-body"></tbody></table>
     <table><thead><tr><th>테이블 (백엔드 DB)</th><th>row 수</th></tr></thead><tbody id="tables-body"></tbody></table>
-    <table><thead><tr><th>전체</th><th>24시간</th><th>24시간 성공률</th><th>마지막 요청 시각</th></tr></thead><tbody id="analysis-body"></tbody></table>
+    <table><thead><tr><th>전체</th><th>24시간</th><th>24시간 성공률</th><th>마지막 요청 시각 (KST)</th></tr></thead><tbody id="analysis-body"></tbody></table>
   </section>
 
   <section>
     <h2>Redis</h2>
     <p class="desc">회원이 최근에 뭘 검색했는지 30분간만 기억하는 임시 저장소 + 실시간 이벤트 통로. 아래 '활성 단기 Memory'가 비어 있는데 방금 검색이 있었다면 여기 상태를 의심.</p>
     <p id="redis-status"></p>
-    <table><thead><tr><th>연결</th><th>키 개수</th><th>단기메모리 키 수</th><th>메모리 사용량</th><th>접속 클라이언트</th><th>가동일수</th><th>마지막 이벤트 시각</th></tr></thead><tbody id="redis-body"></tbody></table>
+    <table><thead><tr><th>연결</th><th>키 개수</th><th>단기메모리 키 수</th><th>메모리 사용량</th><th>접속 클라이언트</th><th>가동일수</th><th>마지막 이벤트 시각 (KST)</th></tr></thead><tbody id="redis-body"></tbody></table>
   </section>
 
   <section>
     <h2>지금 활성 단기 Memory (Redis, TTL 30분)</h2>
     <p class="desc">지금 이 순간 누가 어떤 종목을 봤는지 (30분 지나면 사라짐).</p>
     <table id="short-term-table">
-      <thead><tr><th>user_id</th><th>최근 검색 종목</th><th>종목코드</th><th>검색 시각</th><th>남은 TTL</th></tr></thead>
+      <thead><tr><th>user_id</th><th>최근 검색 종목</th><th>종목코드</th><th>검색 시각 (KST)</th><th>남은 TTL</th></tr></thead>
       <tbody></tbody>
     </table>
   </section>
@@ -79,7 +79,7 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
     <h2>최근 분석 요청 (PostgreSQL analysis_runs)</h2>
     <p class="desc">사용자가 종목 분석을 누를 때마다 한 줄. 여기 안 뜨면 요청이 백엔드까지 못 온 것.</p>
     <table id="runs-table">
-      <thead><tr><th>시각</th><th>사용자</th><th>종목</th><th>상태</th><th>부분 실패</th></tr></thead>
+      <thead><tr><th>시각 (KST)</th><th>사용자</th><th>종목</th><th>상태</th><th>부분 실패</th></tr></thead>
       <tbody></tbody>
     </table>
   </section>
@@ -89,11 +89,17 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
     <p class="desc">실패했거나 일부 서버가 답을 못 준 분석만 모은 것. 같은 서버 이름이 반복되면 그 서버가 문제.</p>
     <p id="failures-status" class="desc"></p>
     <table><thead><tr><th>서버</th><th>최근 7일 실패 횟수</th></tr></thead><tbody id="failure-counts-body"></tbody></table>
-    <table><thead><tr><th>시각</th><th>사용자</th><th>종목</th><th>상태</th><th>실패한 서버</th></tr></thead><tbody id="failures-body"></tbody></table>
+    <table><thead><tr><th>시각 (KST)</th><th>사용자</th><th>종목</th><th>상태</th><th>실패한 서버</th></tr></thead><tbody id="failures-body"></tbody></table>
   </section>
 
 <script>
 const escapeHtml = value => String(value ?? '-').replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
+// 서버·DB는 UTC로 기록한다. 화면은 보는 사람 위치와 무관하게 KST 고정으로 찍는다.
+const kst = value => {
+  if (value == null || value === '') return '-';
+  const d = new Date(value);
+  return isNaN(d) ? String(value) : d.toLocaleString('sv-SE', {timeZone: 'Asia/Seoul', hour12: false});
+};
 const statusHtml = ok => `<span class="status-${ok ? 'success' : 'internal_error'}">${ok ? 'ok' : 'down'}</span>`;
 function fillTable(id, rows, columns, empty = '기록 없음') {
   document.getElementById(id).innerHTML = rows.length
@@ -120,15 +126,15 @@ async function loadSystem() {
     blockStatus('redis-status', r, 'Redis');
     fillTable('databases-body', pg.databases.map(d => [d.name, d.size_mb, d.connections].map(escapeHtml)), 3, '조회할 수 없음');
     fillTable('tables-body', pg.tables.map(t => [t.name, t.rows].map(escapeHtml)), 2, '조회할 수 없음');
-    fillTable('analysis-body', pg.ok ? [[`${a.total}건`, `${a.last_24h}건`, a.success_rate_24h == null ? '-' : `${a.success_rate_24h}%`, a.last_requested_at].map(escapeHtml)] : [], 4, '조회할 수 없음');
-    fillTable('redis-body', [[statusHtml(r.ok), ...[r.keys_in_db, r.short_term_keys, r.used_memory_human, r.connected_clients, r.uptime_days, r.last_event_at].map(value => escapeHtml(r.ok ? value : null))]], 7);
+    fillTable('analysis-body', pg.ok ? [[`${a.total}건`, `${a.last_24h}건`, a.success_rate_24h == null ? '-' : `${a.success_rate_24h}%`, kst(a.last_requested_at)].map(escapeHtml)] : [], 4, '조회할 수 없음');
+    fillTable('redis-body', [[statusHtml(r.ok), ...[r.keys_in_db, r.short_term_keys, r.used_memory_human, r.connected_clients, r.uptime_days, kst(r.last_event_at)].map(value => escapeHtml(r.ok ? value : null))]], 7);
     document.getElementById('failures-status').textContent = pg.ok ? '' : 'PostgreSQL 조회 실패로 실패 기록을 확인할 수 없음';
     fillTable('failure-counts-body', data.failures.by_service_7d.map(f => [f.service, f.count].map(escapeHtml)), 2, pg.ok ? '기록 없음' : '조회할 수 없음');
     fillTable('failures-body', data.failures.recent.map(run => [
-      ...[run.requested_at, run.user_id ?? '비회원', `${run.company_name} (${run.stock_code})`, run.status].map(escapeHtml),
+      ...[kst(run.requested_at), run.user_id ?? '비회원', `${run.company_name} (${run.stock_code})`, run.status].map(escapeHtml),
       failBadges((run.partial_failures ?? []).map(f => Object.fromEntries(Object.entries(f).map(([key, value]) => [key, escapeHtml(value)]))))
     ]), 5, pg.ok ? '기록 없음' : '조회할 수 없음');
-    updated.textContent = `시스템 현황 갱신: ${new Date(data.checked_at).toLocaleTimeString('en-GB', {hour12: false})}`;
+    updated.textContent = `시스템 현황 갱신: ${kst(data.checked_at)} KST`;
     updated.className = 'sub';
   } catch (error) {
     updated.textContent = `시스템 현황 갱신 실패: ${error.message} · 표시된 값은 이전 조회 결과 · 30초 후 재시도`;
@@ -145,7 +151,7 @@ function renderShortTerm(items) {
         <td>${i.user_id}</td>
         <td>${i.recent_company_name ?? ''}</td>
         <td>${i.recent_stock_code ?? ''}</td>
-        <td>${i.searched_at ?? ''}</td>
+        <td>${kst(i.searched_at)}</td>
         <td>${i.ttl_seconds}s</td>
       </tr>`).join('')
     : '<tr><td colspan="5" class="empty">활성 키 없음</td></tr>';
@@ -160,7 +166,7 @@ function buildRunRow(run, isNew) {
   const tr = document.createElement('tr');
   if (isNew) tr.className = 'new-row';
   tr.innerHTML = `
-    <td>${run.requested_at ?? ''}</td>
+    <td>${kst(run.requested_at)}</td>
     <td>${run.user_id ?? '비회원'}</td>
     <td>${run.company_name ?? ''} (${run.stock_code ?? ''})</td>
     <td class="status-${run.status}">${run.status}</td>
