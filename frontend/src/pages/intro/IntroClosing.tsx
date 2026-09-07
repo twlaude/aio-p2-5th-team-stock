@@ -3,7 +3,7 @@ import { useInView } from "motion/react";
 import { Mascot } from "../../components/mascot/Mascot";
 import { IntroCta } from "./IntroHero";
 
-const MATERIALS = [["현재가", "장 마감 기준"], ["뉴스", "최근 기사, 출처 표시"], ["전자공시", "공식 자료"], ["커뮤니티 반응", "사실이 아닌 시장 반응"]];
+const MATERIALS = [["현재가", "장 마감 기준"], ["뉴스", "최근 기사, 출처 표시"], ["전자공시", "공식 자료"], ["커뮤니티 반응", "투자자들의 체감 반응"]];
 
 export function IntroClosing() {
   const trust = useRef<HTMLElement>(null);
