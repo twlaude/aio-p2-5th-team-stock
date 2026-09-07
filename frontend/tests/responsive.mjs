@@ -373,7 +373,7 @@ async function resultState(browser, viewport, prefix) {
     await page.waitForFunction(() => Boolean(localStorage.getItem("sallae.auth.session")));
     await page.getByLabel("기업명 또는 종목코드 6자리").fill("삼성전자");
     await page.getByRole("button", { name: /살펴보기/ }).click();
-    const why = page.getByRole("button", { name: "어떤 근거로 봤나요?" });
+    const why = page.getByRole("button", { name: "왜 이렇게 판단했나요?" });
     await why.waitFor();
     await why.click();
     await revealEvidence(page, label);

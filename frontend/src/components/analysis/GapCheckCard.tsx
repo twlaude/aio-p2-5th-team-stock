@@ -55,7 +55,7 @@ export function GapCheckCard({ id, gap, index }: GapCheckCardProps) {
           </ul>
         ) : null}
         <p className="analysis-gap__advice">{gap.advice}</p>
-        <div className="analysis-gap__footer">온도차는 어떤 정보를 먼저 볼지 순서를 정하는 기준이에요.</div>
+        <div className="analysis-gap__footer">온도차는 매수·매도 신호가 아니라 "확인 순서"를 정하는 기준이에요.</div>
       </div>
     </section>
   );

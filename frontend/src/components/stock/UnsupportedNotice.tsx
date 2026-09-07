@@ -25,7 +25,7 @@ export function UnsupportedNotice({ query, message, onSelectCompany }: Unsupport
       <div className="unsupported-notice" role="alert">
         <Mascot state="oops" size={64} />
         <div className="unsupported-notice__text">
-          <h2>아직 {displayQuery} 종목은 살펴볼 수 없어요</h2>
+          <h2>아직 {displayQuery} 분석은 제공하지 않아요</h2>
           <p>{description}</p>
         </div>
       </div>

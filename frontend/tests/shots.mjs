@@ -165,12 +165,12 @@ async function guestShot(browser, gate) {
   await goto(page);
   await page.getByLabel("기업명 또는 종목코드 6자리").fill("삼성전자");
   await page.getByRole("button", { name: /살펴보기/ }).click();
-  await page.getByRole("button", { name: "어떤 근거로 봤나요?" }).waitFor();
+  await page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).waitFor();
   await page.waitForTimeout(1900);
   const ambient = await page.locator(".result-ambient__topic").count();
   if (ambient < 6) throw new Error(`${name} expected ambient topics around one-liner, got ${ambient}`);
   if (gate) {
-    await page.getByRole("button", { name: "어떤 근거로 봤나요?" }).click();
+    await page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).click();
     await page.getByText("여기부터는 로그인이 필요해요").waitFor();
   }
   await save(page, name);
@@ -199,7 +199,7 @@ async function memberShot(browser, viewport, name, pathname = "/") {
     await page.getByRole("button", { name: /살펴보기/ }).click();
   }
   await page.getByText("커뮤니티 반응").first().waitFor();
-  await page.getByRole("button", { name: "어떤 근거로 봤나요?" }).click();
+  await page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).click();
   await revealCards(page);
   await page.locator(".analysis-personal-card").scrollIntoViewIfNeeded();
   await page.waitForTimeout(1100);
@@ -236,7 +236,7 @@ async function communityShot(browser) {
   await goto(page);
   await page.getByLabel("기업명 또는 종목코드 6자리").fill("삼성전자");
   await page.getByRole("button", { name: /살펴보기/ }).click();
-  await page.getByRole("button", { name: "어떤 근거로 봤나요?" }).click();
+  await page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).click();
   await page.locator("#evidence-community").scrollIntoViewIfNeeded();
   await page.waitForTimeout(900);
   const topicChips = await page.locator(".analysis-evidence-topic").count();
@@ -276,7 +276,7 @@ async function mobileGateAndLogin(browser) {
   await goto(gate.page);
   await gate.page.getByLabel("기업명 또는 종목코드 6자리").fill("삼성전자");
   await gate.page.getByRole("button", { name: /살펴보기/ }).click();
-  await gate.page.getByRole("button", { name: "어떤 근거로 봤나요?" }).click();
+  await gate.page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).click();
   await gate.page.getByText("여기부터는 로그인이 필요해요").waitFor();
   await assertNoOverflow(gate.page, "mobile-gate");
   const fits = await gate.page.evaluate(() => {

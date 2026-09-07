@@ -25,8 +25,8 @@ export function IntroHero() {
         <i /><i /><i />
       </motion.div>
       <div className="intro-hero__copy">
-        <h1 id="intro-title"><span>살 땐 사더라도,</span><span>왜 사는지는 <br className="intro-mobile" />알고요.</span></h1>
-        <p className="intro-hero__sub">감으로 하는 투자는 이제 그만. 뉴스·공시·시장 반응을 모아, 이 종목을 왜 보고 있는지 한 줄로 정리해 줘요.</p>
+        <h1 id="intro-title"><span>살 땐 사더라도,</span><span>왜 사는지 <br className="intro-mobile" />알고 사요.</span></h1>
+        <p className="intro-hero__sub">감으로 하는 투자는 이제 그만. 뉴스·공시·시장 반응을 모아, 이 종목을 왜 보고 있는지 한 줄로 정리해 드려요.</p>
         <IntroCta />
       </div>
       <div className="intro-hero__scene">

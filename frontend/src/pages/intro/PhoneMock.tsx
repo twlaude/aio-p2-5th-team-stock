@@ -17,7 +17,7 @@ export function PhoneMock() {
       <div className="intro-phone__verdict" aria-hidden="true">
         <span>우리는 지금 이렇게 보고 있어요!</span>
         <p>{INTRO_SENTENCE}</p>
-        <b>어떤 근거로 봤나요?</b>
+        <b>왜 이렇게 판단했나요?</b>
       </div>
     </div>
   );
