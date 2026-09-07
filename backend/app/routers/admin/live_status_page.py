@@ -28,6 +28,25 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
   .hint { color: #8b949e; font-size: 12px; margin-top: 6px; }
   .desc { color: #8b949e; font-size: 12px; }
   .guide { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 12px; font-size: 13px; }
+  /* 표는 폭이 좁아지면 자기 안에서만 가로 스크롤. 페이지 자체는 가로로 안 밀린다. */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 12px; }
+  .table-wrap:last-child { margin-bottom: 0; }
+  @media (max-width: 640px) { .table-wrap:not(.narrow) { mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); } }
+  .narrow { max-width: 420px; }
+  /* 한 섹션 안의 표들은 나란히(넓을 때) 또는 세로(좁을 때). 표끼리 열 어긋남이 안 보이게 각자 카드로 나눈다. */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px 24px; align-items: start; }
+  .card h3 { font-size: 12px; color: #8b949e; font-weight: normal; margin: 8px 0 4px; }
+  /* 요약 숫자는 표 대신 타일. 열 수가 화면 폭에 맞춰 줄어든다. */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 8px 0 12px; }
+  .stat { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 8px 10px; min-width: 0; }
+  .stat .k { font-size: 11px; color: #8b949e; margin-bottom: 2px; }
+  .stat .v { font-size: 14px; overflow-wrap: anywhere; }
+  @media (max-width: 640px) {
+    body { padding: 14px; }
+    h1 { font-size: 16px; }
+    table { font-size: 12px; }
+    th, td { padding: 5px 6px; }
+  }
 </style>
 </head>
 <body>
@@ -39,7 +58,7 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
   <section>
     <h2>서비스 상태판</h2>
     <p class="desc">우리 서비스를 이루는 서버 5개가 살아있는지. 분석이 안 돌거나 느리면 여기부터. 빨간 게 있으면 그 서버가 죽은 것.</p>
-    <table><thead><tr><th>이름</th><th>하는 일</th><th>상태</th><th>응답 ms</th><th>비고</th></tr></thead><tbody id="services-body"></tbody></table>
+    <div class="table-wrap"><table><thead><tr><th>이름</th><th>하는 일</th><th>상태</th><th>응답 ms</th><th>비고</th></tr></thead><tbody id="services-body"></tbody></table></div>
   </section>
 
   <section>
@@ -54,42 +73,45 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
     <h2>PostgreSQL</h2>
     <p class="desc">분석 기록·회원·공시 데이터가 쌓이는 DB. 데이터가 안 쌓이거나 로그인이 안 되면 여기.</p>
     <p id="postgres-status"></p>
-    <table><thead><tr><th>DB 이름</th><th>용량 MB</th><th>접속 수</th></tr></thead><tbody id="databases-body"></tbody></table>
-    <table><thead><tr><th>테이블 (백엔드 DB)</th><th>row 수</th></tr></thead><tbody id="tables-body"></tbody></table>
-    <table><thead><tr><th>전체</th><th>24시간</th><th>24시간 성공률</th><th>마지막 요청 시각 (KST)</th></tr></thead><tbody id="analysis-body"></tbody></table>
+    <div class="stats" id="analysis-stats"></div>
+    <div class="cards">
+      <div class="card"><h3>팀 DB</h3><div class="table-wrap"><table><thead><tr><th>DB 이름</th><th>용량 MB</th><th>접속 수</th></tr></thead><tbody id="databases-body"></tbody></table></div></div>
+      <div class="card"><h3>테이블별 행 수</h3><div class="table-wrap"><table><thead><tr><th>DB</th><th>테이블</th><th>row 수</th></tr></thead><tbody id="tables-body"></tbody></table></div></div>
+    </div>
   </section>
 
   <section>
     <h2>Redis</h2>
     <p class="desc">회원이 최근에 뭘 검색했는지 30분간만 기억하는 임시 저장소 + 실시간 이벤트 통로. 아래 '활성 단기 Memory'가 비어 있는데 방금 검색이 있었다면 여기 상태를 의심.</p>
     <p id="redis-status"></p>
-    <table><thead><tr><th>연결</th><th>키 개수</th><th>단기메모리 키 수</th><th>메모리 사용량</th><th>접속 클라이언트</th><th>가동일수</th><th>마지막 이벤트 시각 (KST)</th></tr></thead><tbody id="redis-body"></tbody></table>
+    <div class="stats" id="redis-stats"></div>
+    <div class="card"><h3>키 목록 (최대 50개)</h3><div class="table-wrap narrow"><table><thead><tr><th>키</th><th>타입</th><th>남은 TTL</th></tr></thead><tbody id="redis-keys-body"></tbody></table></div></div>
   </section>
 
   <section>
     <h2>지금 활성 단기 Memory (Redis, TTL 30분)</h2>
     <p class="desc">지금 이 순간 누가 어떤 종목을 봤는지 (30분 지나면 사라짐).</p>
-    <table id="short-term-table">
+    <div class="table-wrap"><table id="short-term-table">
       <thead><tr><th>user_id</th><th>최근 검색 종목</th><th>종목코드</th><th>검색 시각 (KST)</th><th>남은 TTL</th></tr></thead>
       <tbody></tbody>
-    </table>
+    </table></div>
   </section>
 
   <section>
     <h2>최근 분석 요청 (PostgreSQL analysis_runs)</h2>
     <p class="desc">사용자가 종목 분석을 누를 때마다 한 줄. 여기 안 뜨면 요청이 백엔드까지 못 온 것.</p>
-    <table id="runs-table">
+    <div class="table-wrap"><table id="runs-table">
       <thead><tr><th>시각 (KST)</th><th>사용자</th><th>종목</th><th>상태</th><th>부분 실패</th></tr></thead>
       <tbody></tbody>
-    </table>
+    </table></div>
   </section>
 
   <section>
     <h2>최근 실패 기록</h2>
     <p class="desc">실패했거나 일부 서버가 답을 못 준 분석만 모은 것. 같은 서버 이름이 반복되면 그 서버가 문제.</p>
     <p id="failures-status" class="desc"></p>
-    <table><thead><tr><th>서버</th><th>최근 7일 실패 횟수</th></tr></thead><tbody id="failure-counts-body"></tbody></table>
-    <table><thead><tr><th>시각 (KST)</th><th>사용자</th><th>종목</th><th>상태</th><th>실패한 서버</th></tr></thead><tbody id="failures-body"></tbody></table>
+    <div class="table-wrap narrow"><table><thead><tr><th>서버</th><th>최근 7일 실패 횟수</th></tr></thead><tbody id="failure-counts-body"></tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>시각 (KST)</th><th>사용자</th><th>종목</th><th>상태</th><th>실패한 서버</th></tr></thead><tbody id="failures-body"></tbody></table></div>
   </section>
 
 <script>
@@ -106,6 +128,10 @@ function fillTable(id, rows, columns, empty = '기록 없음') {
     ? rows.map(row => `<tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>`).join('')
     : `<tr><td colspan="${columns}" class="empty">${escapeHtml(empty)}</td></tr>`;
 }
+function fillStats(id, pairs) {
+  document.getElementById(id).innerHTML = pairs.map(([k, v]) => `<div class="stat"><div class="k">${escapeHtml(k)}</div><div class="v">${v}</div></div>`).join('');
+}
+const ttlText = ttl => ttl === -1 ? '만료 없음' : ttl == null || ttl < 0 ? '-' : `${ttl}s`;
 function blockStatus(id, block, label) {
   const node = document.getElementById(id);
   node.className = `status-${block.ok ? 'success' : 'internal_error'}`;
@@ -125,13 +151,18 @@ async function loadSystem() {
     blockStatus('postgres-status', pg, 'PostgreSQL');
     blockStatus('redis-status', r, 'Redis');
     fillTable('databases-body', pg.databases.map(d => [d.name, d.size_mb, d.connections].map(escapeHtml)), 3, '조회할 수 없음');
-    fillTable('tables-body', pg.tables.map(t => [t.name, t.rows].map(escapeHtml)), 2, '조회할 수 없음');
-    fillTable('analysis-body', pg.ok ? [[`${a.total}건`, `${a.last_24h}건`, a.success_rate_24h == null ? '-' : `${a.success_rate_24h}%`, kst(a.last_requested_at)].map(escapeHtml)] : [], 4, '조회할 수 없음');
-    fillTable('redis-body', [[statusHtml(r.ok), ...[r.keys_in_db, r.short_term_keys, r.used_memory_human, r.connected_clients, r.uptime_days, kst(r.last_event_at)].map(value => escapeHtml(r.ok ? value : null))]], 7);
+    fillTable('tables-body', pg.tables.map(t => [t.database, t.name, t.rows].map(escapeHtml)), 3, '조회할 수 없음');
+    fillStats('analysis-stats', [['분석 요청 전체', pg.ok ? `${a.total}건` : '-'], ['최근 24시간', pg.ok ? `${a.last_24h}건` : '-'],
+      ['24시간 성공률', pg.ok && a.success_rate_24h != null ? `${a.success_rate_24h}%` : '-'], ['마지막 요청 (KST)', pg.ok ? escapeHtml(kst(a.last_requested_at)) : '-']]);
+    const rv = value => escapeHtml(r.ok ? value : null);
+    fillStats('redis-stats', [['연결', statusHtml(r.ok)], ['키 개수', rv(r.keys_in_db)], ['단기메모리 키', rv(r.short_term_keys)], ['메모리 사용량', rv(r.used_memory_human)],
+      ['접속 클라이언트', rv(r.connected_clients)], ['가동일수', rv(r.uptime_days)], ['마지막 이벤트 (KST)', rv(kst(r.last_event_at))]]);
+    fillTable('redis-keys-body', (r.keys ?? []).map(k => [k.name, k.type, ttlText(k.ttl_seconds)].map(escapeHtml)), 3, r.ok ? '키 없음' : '조회할 수 없음');
     document.getElementById('failures-status').textContent = pg.ok ? '' : 'PostgreSQL 조회 실패로 실패 기록을 확인할 수 없음';
     fillTable('failure-counts-body', data.failures.by_service_7d.map(f => [f.service, f.count].map(escapeHtml)), 2, pg.ok ? '기록 없음' : '조회할 수 없음');
     fillTable('failures-body', data.failures.recent.map(run => [
-      ...[kst(run.requested_at), run.user_id ?? '비회원', `${run.company_name} (${run.stock_code})`, run.status].map(escapeHtml),
+      ...[kst(run.requested_at), run.user_id ?? '비회원', `${run.company_name} (${run.stock_code})`].map(escapeHtml),
+      `<span class="status-${escapeHtml(run.status)}">${escapeHtml(run.status)}</span>`,
       failBadges((run.partial_failures ?? []).map(f => Object.fromEntries(Object.entries(f).map(([key, value]) => [key, escapeHtml(value)]))))
     ]), 5, pg.ok ? '기록 없음' : '조회할 수 없음');
     updated.textContent = `시스템 현황 갱신: ${kst(data.checked_at)} KST`;
