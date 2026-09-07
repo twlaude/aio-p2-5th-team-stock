@@ -118,9 +118,10 @@ Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 
 ├── infra/          PostgreSQL/pgvector · Redis Docker Compose
 ├── shared/         서비스 연결 계약과 지원 기업 Snapshot
 ├── tests/          계약·통합·발표 시나리오 테스트
-├── docs/           문서 전부 (architecture·specs·planning·operations·reports·archive)
-└── archive/        현재 실행하지 않는 이전 코드
+└── docs/           문서 전부 (architecture·specs·planning·operations·reports)
 ```
+
+각 폴더의 실행법·하위 구조·환경변수는 그 폴더의 `README.md`에 있습니다 (`backend/`, `mcp_client/`, `mcp_servers/`, `frontend/`, `shared/`, `db/`, `infra/`, `tests/`).
 
 ### 보안 원칙
 
