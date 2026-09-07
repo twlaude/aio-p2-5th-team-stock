@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { Nav } from "./components/common/Nav";
 import { HomePage } from "./pages/home/HomePage";
+import { IntroPage } from "./pages/intro/IntroPage";
 import { LoginPage } from "./pages/login/LoginPage";
 import type { LoginResponse, UserProfile } from "./services/backend_api/client";
 import { AUTH_EXPIRED_EVENT } from "./services/backend_api/live";
@@ -35,6 +36,7 @@ export function App() {
       <SearchProvider token={session?.token}>
         <main className="page-shell">
           <Routes>
+            <Route path="/intro" element={<IntroPage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage onLogin={handleLogin} session={session} />} />
           </Routes>
