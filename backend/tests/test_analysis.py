@@ -117,7 +117,7 @@ def test_backend_composes_when_agent_failed(client, member_token, monkeypatch):
     body = response.json()
 
     assert body["one_line_summary"].startswith("뉴스는 HBM 메모리에 쏠려 있고")
-    assert body["personalized_checkpoints"]["personal_summary"].startswith("무리 없는 구간이에요.")
+    assert body["personalized_checkpoints"]["personal_summary"].startswith("관심과 근거가 균형을 이루고 있어요.")
 
 
 def test_member_personal_summary_uses_risk_gap_rule(client, member_token, monkeypatch):
@@ -129,8 +129,8 @@ def test_member_personal_summary_uses_risk_gap_rule(client, member_token, monkey
     )
 
     assert response.json()["personalized_checkpoints"]["personal_summary"] == (
-        "무리 없는 구간이에요. 삼성전자는 관심과 확인된 재료가 비슷해요. "
-        "손실을 피하는 걸 우선하는 오래 들고 가는 편인 당신은 HBM 메모리 실적 흐름만 꾸준히 보면 돼요."
+        "관심과 근거가 균형을 이루고 있어요. 삼성전자는 시장의 관심과 확인된 재료가 비슷해요. "
+        "손실을 피하는 걸 우선하는 오래 들고 가는 편이라면 HBM 메모리 실제 흐름만 꾸준히 따라가면 돼요."
     )
 
 
