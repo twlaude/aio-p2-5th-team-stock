@@ -195,7 +195,7 @@ v2는 매도벽·매수세·순매수·순매도·매수/매도 우위·기관 �
 
 ### 6.4 VPS 최근 7일 다건 표본
 
-Backend 보고서의 “VPS OpenAI 실패율 다건 표본” 과제를 읽기 전용 SQL로 보완했습니다. `/root/team5_deploy/backend/.env`의 접속정보를 프로그램 내부에서만 읽고 `stock_insight_team.public.analysis_runs`를 `REPEATABLE READ READ ONLY` 트랜잭션으로 집계한 후 rollback했습니다. 인증정보·사용자별 행은 보고서에 포함하지 않습니다.
+Backend 보고서의 “VPS OpenAI 실패율 다건 표본” 과제를 읽기 전용 SQL로 보완했습니다. `/srv/team5/deploy/backend/.env`의 접속정보를 프로그램 내부에서만 읽고 `stock_insight_team.public.analysis_runs`를 `REPEATABLE READ READ ONLY` 트랜잭션으로 집계한 후 rollback했습니다. 인증정보·사용자별 행은 보고서에 포함하지 않습니다.
 
 | 항목 | 실측 |
 | --- | --- |
@@ -304,7 +304,7 @@ off의 28.57%→76.79%는 같은 응답을 재채점한 효과이며 모델 개�
 
 [Backend narrative_source 분기 시험](agent-test-result-report_narrative-source.md)은 성공 서술 채택·실패 시 규칙 조립을 담당합니다. 해당 문서는 수정하지 않았습니다. 그 문서의 VPS 단일 표본 “조건부 PASS”를 재판정하지 않고, 미해결 다건 정량화를 이 보고서 6.4절에서 보완합니다.
 
-이번 문서 확정 전 `/root/.venvs/team5-mcp-client/bin/python -m pytest -q`를 `mcp_client/`에서 실행해 122 passed, 같은 Python의 `-m pytest tests/contract -q`를 저장소 루트에서 실행해 2 passed를 확인했습니다. 모든 시험 출력에는 `[TEST]`를 붙였습니다. 서비스·Agent 코드는 이번 문서 작업에서 변경하지 않았습니다.
+이번 문서 확정 전 `/srv/team5/venvs/mcp-client/bin/python -m pytest -q`를 `mcp_client/`에서 실행해 122 passed, 같은 Python의 `-m pytest tests/contract -q`를 저장소 루트에서 실행해 2 passed를 확인했습니다. 모든 시험 출력에는 `[TEST]`를 붙였습니다. 서비스·Agent 코드는 이번 문서 작업에서 변경하지 않았습니다.
 
 ## 10. 결론
 

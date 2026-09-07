@@ -81,6 +81,8 @@ Disclosure 담당자는 DB 담당자와 pgvector 테이블만 함께 확정한�
 | `com.twmoon.team5-community-mcp.service` | `mcp_servers/community_mcp` | 8023 |
 | `com.twmoon.team5-frontend.service` | `frontend` | 8501 |
 
+운영 체크아웃은 `/srv/team5/deploy`(main 자동 pull), 실행 계정은 `team5`, Python 가상환경은 `/srv/team5/venvs/<서비스>`, 서비스 로그는 `/srv/team5/logs/<유닛>.log`입니다 (2026-09-07 기준).
+
 Backend의 로컬 기본은 8000이지만 팀 VPS 운영 포트는 8001입니다. 관측 당시 8000은 `/root/stock_insight_solo/backend`의 별도 서비스였습니다. 로컬 명령의 포트를 운영 포트로 간주하지 않습니다.
 
 운영 체크아웃 HEAD는 `e6d611c858caa16ea4059148a4f4ef1fa5b1dfdd`였습니다. 성찰 구현 `94ee2d7`과 v2 검증기 `52eff44`는 해당 HEAD의 조상이 아니며, 배포 파일에 성찰 설정·`reflection_calls`·`runtime/verifier.py`도 없었습니다. 이 확인은 체크아웃 상태이며 프로세스가 모든 최신 파일을 재로딩했다는 증거까지 뜻하지 않습니다. [시험 보고서](agent-test-report.md)의 성찰 비교는 작업 브랜치 기준입니다.
