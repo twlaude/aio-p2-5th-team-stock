@@ -1,6 +1,8 @@
 # Redis Infrastructure
 
-Redis Docker 실행 설정, 포트, TTL과 영구 DB와의 경계 설명이 들어갈 위치다.
+Redis Docker 실행 설정, 포트, TTL과 영구 DB와의 경계 설명이 있는 폴더다.
+
+현재 이 폴더에는 별도 파일이 없다. 
 
 ## 실행
 

@@ -2,48 +2,39 @@
 
 ## 1. 실행 원칙
 
-- 개발 중에는 팀원 컴퓨터에서 서비스를 나눠 실행한다.
-- 주소와 포트는 `.env`로 연결한다.
-- 발표 전에는 한 컴퓨터에서도 전체 Docker 구성이 실행되게 준비한다.
-- 외부 API 실패에 대비해 모든 서비스에 Mock 모드를 둔다.
+- 운영 기준은 VPS다. 일곱 서비스가 `systemd` 유닛으로 24시간 실행되며 `main`이 바뀌면 5분 주기 자동배포가 pull 후 바뀐 서비스만 재시작한다.
+- 개발 중에는 팀원 컴퓨터에서 서비스를 나눠 실행할 수 있다. 주소와 포트는 `.env`로 연결한다.
+- 외부 API 실패에 대비해 Backend·MCP Client·MCP 서버에 Mock 모드를 둔다. 발표 시연은 VPS 실서버를 쓰고, 네트워크 문제 시 로컬 Mock으로 대체한다.
 
-## 2. 네 대의 컴퓨터 배치 예시
+## 2. 운영 배치 (VPS)
 
-| 컴퓨터 | 실행 대상 |
-|---|---|
-| A | Frontend, Backend, PostgreSQL/pgvector, Redis |
-| B | MCP Client, Price MCP |
-| C | News MCP, Community MCP |
-| D | Disclosure MCP |
+| 서비스 | 포트 | 비고 |
+|---|---:|---|
+| Frontend | 8501 | 발표 시연 주소, Backend 프록시 포함 |
+| Backend | 8001 | 로컬 기본값은 8000 |
+| MCP Client | 8010 | |
+| Price MCP | 8020 | 한국투자증권 실서버 |
+| News MCP | 8021 | |
+| Disclosure MCP | 8022 | |
+| Community MCP | 8023 | |
+| PostgreSQL / Redis | 5432 / 6379 | 중앙 인스턴스 |
 
-이 배치는 담당자 이름을 확정하는 표가 아니다. 중요한 점은 일곱 서비스의 포트와 주소를 유지하는 것이다.
+체크아웃·유닛 이름·확인 시각은 [실행 폴더와 운영 상태](RUNTIME_FOLDERS.md) 6절을 따른다. 로컬 분산 실행 시에도 위 포트를 유지하고, 다른 컴퓨터는 `localhost`가 아니라 서버 컴퓨터의 내부 IP를 사용한다.
 
-## 3. 고정 포트
-
-| 서비스 | 포트 |
-|---|---:|
-| Backend | 8000 |
-| MCP Client | 8010 |
-| Price MCP | 8020 |
-| News MCP | 8021 |
-| Disclosure MCP | 8022 |
-| Community MCP | 8023 |
-| Frontend | 8501 |
-| PostgreSQL | 5432 |
-| Redis | 6379 |
-
-모든 서버는 분산 실행 시 `0.0.0.0`에 바인딩한다. 다른 컴퓨터는 `localhost`가 아니라 서버 컴퓨터의 내부 IP를 사용한다.
-
-## 4. 실행 확인 순서
+## 3. 시연 전 확인 순서
 
 1. PostgreSQL/pgvector와 Redis
-2. Community MCP
-3. Price·News·Disclosure MCP
-4. MCP Client
-5. Backend
-6. Frontend
-7. 삼성전자 전체 왕복
-8. 미지원 기업과 일부 MCP 실패 시나리오
+2. Price·News·Disclosure·Community MCP (`/health`)
+3. MCP Client (`/internal/v1/mcp-status`로 네 MCP 연결 확인)
+4. Backend (`/health`)
+5. Frontend
+6. 삼성전자 전체 왕복 (비회원 → 로그인 → 회원 근거)
+7. 미지원 기업과 일부 MCP 실패 시나리오
+8. 관리자 실황 페이지(`/api/v1/admin/live-status`)에서 최근 요청·부분실패 확인
+
+## 4. 제출 산출물
+
+발표는 README 기반으로 진행한다. 필수 산출물 두 개는 [에이전트 아키텍처 설계서](agent-architecture.md)와 [에이전트 시험 결과 보고서](agent-test-report.md)이며, README 5절 문서표와 6절 팀별 작성 영역에 연결되어 있다.
 
 ## 5. 20분 발표 흐름
 

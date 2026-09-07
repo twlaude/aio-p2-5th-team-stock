@@ -1,6 +1,8 @@
 # PostgreSQL Infrastructure
 
-PostgreSQL·pgvector Docker 실행 설정과 영구 Volume 설명이 들어갈 위치다.
+PostgreSQL·pgvector Docker 실행 설정과 영구 Volume 설명이 있는 폴더다.
+
+현재 이 폴더에는 별도 파일이 없다. 
 
 ## 실행
 
