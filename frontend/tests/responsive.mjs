@@ -28,13 +28,13 @@ const VIEWPORTS = ALL_VIEWPORTS.filter(({ width, height }) => (
 ));
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const log = (message) => console.log(`[TEST] ${message}`);
+const log = (message) => String(message).split(/\r?\n/).forEach((line) => console.log(`[TEST] ${line}`));
 
 function pipe(stream, label) {
   stream.setEncoding("utf8");
   stream.on("data", (chunk) => {
     for (const line of chunk.split(/\r?\n/).filter(Boolean)) {
-      console.log(`[TEST:${label}] ${line}`);
+      console.log(`[TEST] [${label}] ${line}`);
     }
   });
 }
@@ -118,7 +118,7 @@ function watchErrors(page, label) {
 }
 
 async function trackedPage(browser, label, viewport) {
-  const coarse = viewport.width <= 600;
+  const coarse = viewport.width <= 600 || viewport.height <= 520;
   const context = await browser.newContext({
     viewport,
     deviceScaleFactor: 1,
@@ -180,6 +180,10 @@ async function inspectLayout(page, { checkTargets, checkEvidenceGaps }) {
     const offscreen = [];
     for (const element of document.body.querySelectorAll("*")) {
       if (!isRendered(element)) continue;
+      // The marquee is intentionally clipped; still measure its viewport and
+      // every stage/phone child. Decorative blobs and screen-reader text have no visual bounds.
+      if (element.closest(".intro-blobs, .intro-steps__sr")
+        || element.parentElement?.closest(".intro-rail__viewport")) continue;
       const rect = element.getBoundingClientRect();
       const scroller = horizontalScrollerFor(element);
       if (scroller) {
@@ -208,7 +212,7 @@ async function inspectLayout(page, { checkTargets, checkEvidenceGaps }) {
 
     const smallTargets = [];
     if (shouldCheckTargets) {
-      for (const element of document.querySelectorAll("button, a")) {
+      for (const element of document.querySelectorAll("button, a, .intro-rail__viewport")) {
         if (!isRendered(element)) continue;
         const height = element.getBoundingClientRect().height;
         if (height < 44 - tolerance / 2) {
@@ -381,12 +385,104 @@ async function resultState(browser, viewport, prefix) {
   }
 }
 
+async function inspectIntro(page) {
+  return page.evaluate(() => {
+    const visible = (el) => el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true });
+    const outside = (a, b) => a.left < b.left - 1 || a.right > b.right + 1 || a.top < b.top - 1 || a.bottom > b.bottom + 1;
+    const stageOverflow = [];
+    for (const stage of document.querySelectorAll(".intro-stage")) {
+      if (!visible(stage)) continue;
+      for (const child of stage.querySelectorAll(".intro-stage__piece, .intro-stage__bubble, .intro-stage__tags span")) {
+        if (visible(child) && outside(child.getBoundingClientRect(), stage.getBoundingClientRect())) stageOverflow.push(child.className);
+      }
+    }
+    const clippedText = [];
+    for (const el of document.querySelectorAll(".intro-content *")) {
+      if (!visible(el) || el.closest(".intro-steps__sr") || !(el instanceof HTMLElement)) continue;
+      for (const node of el.childNodes) {
+        if (node.nodeType !== Node.TEXT_NODE || !node.textContent.trim()) continue;
+        const range = document.createRange();
+        range.selectNodeContents(node);
+        const box = el.getBoundingClientRect();
+        // Glyph bounds can exceed a tight line-height without being clipped.
+        if ([...range.getClientRects()].some((rect) => rect.left < box.left - 1 || rect.right > box.right + 1
+          || (/hidden|clip/.test(getComputedStyle(el).overflowY) && outside(rect, box)))) clippedText.push(el.className || el.tagName);
+      }
+    }
+    const hero = [...document.querySelectorAll(".intro-hero h1, .intro-hero__sub, .intro-hero .intro-cta, .intro-hero .intro-caption")]
+      .map((el) => ({ element: el.className || el.tagName, visible: visible(el), bottom: +(el.getBoundingClientRect().bottom + scrollY).toFixed(1) }));
+    const rail = document.querySelector(".intro-rail__viewport");
+    const sticky = document.querySelector(".intro-steps__sticky");
+    const stickyVisible = visible(sticky);
+    const stickyTooTall = stickyVisible && parseFloat(getComputedStyle(sticky).top) + sticky.offsetHeight > innerHeight;
+    const railRows = new Set([...rail.querySelectorAll(".intro-rail__group:first-child li")].map((el) => Math.round(el.getBoundingClientRect().top))).size;
+    return { hero, stageOverflow, clippedText, documentWidth: document.documentElement.scrollWidth,
+      stageMode: stickyVisible ? "sticky" : "inline", stickyTooTall, railRows,
+      shellWidth: document.querySelector(".page-shell").clientWidth,
+      railOverflow: getComputedStyle(rail).overflowX, viewport: { width: innerWidth, height: innerHeight } };
+  });
+}
+
+async function introState(browser, viewport, prefix, reduced = false) {
+  const label = `/intro ${prefix}${reduced ? " reduced-motion" : ""}`;
+  const { context, page, assertClean, coarse } = await trackedPage(browser, label, viewport);
+  const failures = [];
+  try {
+    if (reduced) await page.emulateMedia({ reducedMotion: "reduce" });
+    await goto(page, "/intro");
+    await page.locator(".intro-hero h1").waitFor();
+    await page.evaluate(() => document.fonts.ready);
+    await page.waitForTimeout(900);
+    const check = async (phase) => {
+      const measured = await inspectIntro(page);
+      log(`${label} ${phase} ${JSON.stringify(measured)}`);
+      if (measured.hero.length !== 4 || measured.hero.some(({ bottom, visible }) => !visible || bottom > viewport.height) || measured.stageOverflow.length
+        || measured.clippedText.length || measured.documentWidth > viewport.width || measured.stickyTooTall
+        || (reduced && measured.railRows !== 2)
+        || !["hidden", "auto"].includes(measured.railOverflow)) failures.push(`${phase}: ${JSON.stringify(measured)}`);
+      try { await assertResponsive(page, `${label} ${phase}`, { coarse }); } catch (error) { failures.push(error.message); }
+    };
+    await check("hero");
+    // Traverse the whole page before fullPage capture so all in-view reveals run.
+    const height = await page.evaluate(() => document.documentElement.scrollHeight);
+    for (let y = 0; y < height; y += viewport.height * 0.7) {
+      await page.evaluate((top) => scrollTo({ top, behavior: "instant" }), y);
+      await page.waitForTimeout(80);
+    }
+    for (let step = 1; step <= 3; step += 1) {
+      await page.locator(`.intro-step[data-step="${step}"]`).evaluate((el) => {
+        scrollTo({ top: el.getBoundingClientRect().top + scrollY - innerHeight * 0.43 + 20, behavior: "instant" });
+      });
+      const sticky = page.locator(".intro-steps__sticky");
+      if (await sticky.isVisible()) await sticky.locator(`[data-stage="${reduced ? 3 : step}"]`).waitFor();
+      else await page.locator(`.intro-step[data-step="${step}"] .intro-stage`).scrollIntoViewIfNeeded();
+      await page.waitForTimeout(2000);
+      await check(`stage-${step}`);
+      if (await sticky.isVisible() && !reduced) {
+        await sticky.screenshot({ path: path.join(SHOTS, `${prefix}-intro-stage-${step}.png`) });
+      }
+    }
+    await page.locator(".intro-ending").scrollIntoViewIfNeeded();
+    await page.waitForTimeout(1000);
+    await page.evaluate(() => scrollTo({ top: 0, behavior: "instant" }));
+    await page.waitForTimeout(2000);
+    await save(page, `intro_${prefix}${reduced ? "_reduced" : ""}`);
+    assertClean();
+    if (failures.length) throw new Error(`${label} failed:\n${failures.join("\n")}`);
+    log(`${label} PASS (hero within viewport, stages 1/2/3, overflow=0, clipped-text=0, console-errors=0)`);
+  } finally {
+    await context.close();
+  }
+}
+
 async function runViewport(browser, viewport) {
   const prefix = `${viewport.width}x${viewport.height}`;
   log(`${prefix} matrix started`);
   await loginState(browser, viewport, prefix);
   await loadingState(browser, viewport, prefix);
   await resultState(browser, viewport, prefix);
+  await introState(browser, viewport, prefix);
+  if (["390x844", "1440x900"].includes(prefix)) await introState(browser, viewport, prefix, true);
   log(`${prefix} matrix completed`);
 }
 
@@ -403,10 +499,12 @@ async function main() {
   try {
     server = await startServer();
     browser = await chromium.launch({ executablePath: CHROME, headless: true, args: ["--no-sandbox"] });
+    const failures = [];
     for (const viewport of VIEWPORTS) {
-      await runViewport(browser, viewport);
+      try { await runViewport(browser, viewport); } catch (error) { log(error.message); failures.push(error.message); }
     }
-    log(`responsive matrix completed: ${VIEWPORTS.length} viewports x 3 states`);
+    if (failures.length) throw new Error(`${failures.length} viewport(s) failed; see measurements above`);
+    log(`responsive matrix completed: ${VIEWPORTS.length} viewports x 4 states (+ reduced-motion at 390/1440)`);
   } finally {
     if (browser) await browser.close();
     await stopServer(server);

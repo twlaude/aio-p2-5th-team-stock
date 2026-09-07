@@ -87,7 +87,7 @@ Dockerfile은 `node:22-alpine`에서 `npm ci`, `npm run build`를 수행하고 V
 - 카드·리스트 행처럼 재사용되는 UI는 `container-type: inline-size`와 `@container`로 부모 폭에 반응시킨다.
 - 그리드는 우선 `auto-fit`과 `minmax()`로 구성하고, 칩은 `flex-wrap`으로 줄바꿈한다.
 - 포인터가 coarse면 탭 타깃을 최소 44px로 만들고, hover 효과는 `(hover: hover)` 안에만 둔다.
-- 전체 매트릭스는 `node tests/responsive.mjs`로 10개 뷰포트 × 3개 상태를 headless 검증한다.
+- 전체 매트릭스는 `node tests/responsive.mjs`로 10개 뷰포트 × 4개 상태(로그인·로딩·회원 결과·`/intro`)를 headless 검증한다. `/intro`는 전체 스크롤·3단계·첫 화면 CTA/캡션·카드/텍스트 경계와 390/1440px reduced-motion 2행 레일도 확인한다.
 
 ## Env
 
