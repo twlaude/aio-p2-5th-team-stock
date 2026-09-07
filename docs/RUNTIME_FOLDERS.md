@@ -2,7 +2,7 @@
 
 ## 1. 반드시 실행하는 서비스
 
-완성 시 아래 일곱 서비스를 각각 독립 프로세스 또는 Docker 컨테이너로 실행한다.
+아래 일곱 서비스가 구현되어 있습니다. 표의 포트는 로컬 기본값이며, 6절의 VPS 운영 값과 구분합니다.
 
 | 폴더 | 포트 | 역할 |
 |---|---:|---|
@@ -54,7 +54,7 @@
 └─ GUIDE.md
 ```
 
-MCP 서버의 진입점은 루트 `server.py`, Backend는 `app/main.py`, Frontend는 `app.py`로 통일한다.
+MCP 서버와 MCP Client의 진입점은 각 폴더의 `server.py`, Backend는 `app/main.py`, Frontend는 Vite의 `index.html`·`src/main.tsx`입니다. Frontend는 Python `app.py`를 실행하지 않습니다.
 
 ## 5. 권장 관리 배치
 
@@ -67,15 +67,24 @@ MCP 서버의 진입점은 루트 `server.py`, Backend는 `app/main.py`, Fronten
 
 Disclosure 담당자는 DB 담당자와 pgvector 테이블만 함께 확정한다. 다른 MCP는 원본 데이터를 중앙 DB에 저장하지 않는다.
 
-## 6. 현재 실행 가능 상태
+## 6. VPS 운영 상태와 로컬 개발 구분
 
-| 서비스 | 상태 |
-|---|---|
-| Community MCP | 단독 실행과 테스트 가능 |
-| Backend | `/health`만 가능 |
-| Frontend | 최소 화면만 가능 |
-| MCP Client | 아직 실행 불가 |
-| Price MCP | 아직 실행 불가 |
-| News MCP | 아직 실행 불가 |
-| Disclosure MCP | 아직 실행 불가 |
-| 전체 Docker | 아직 실행 불가 |
+2026-09-07 13:33:40 KST에 systemd의 ActiveState/SubState, WorkingDirectory와 실제 LISTEN 포트를 읽기 전용으로 확인했습니다. 아래 일곱 unit은 모두 `active/running`이었습니다. 작업용 worktree와 운영 체크아웃 `/root/team5_deploy`는 별개입니다.
+
+| systemd unit | 운영 체크아웃 아래 WorkingDirectory | 실제 포트 |
+|---|---|---:|
+| `com.twmoon.team5-backend.service` | `backend` | 8001 |
+| `com.twmoon.team5-mcp-client.service` | `mcp_client` | 8010 |
+| `com.twmoon.team5-price-mcp.service` | `mcp_servers/price_mcp` | 8020 |
+| `com.twmoon.team5-news-mcp.service` | `mcp_servers/news_mcp` | 8021 |
+| `com.twmoon.team5-disclosure-mcp.service` | `mcp_servers/disclosure_mcp` | 8022 |
+| `com.twmoon.team5-community-mcp.service` | `mcp_servers/community_mcp` | 8023 |
+| `com.twmoon.team5-frontend.service` | `frontend` | 8501 |
+
+Backend의 로컬 기본은 8000이지만 팀 VPS 운영 포트는 8001입니다. 관측 당시 8000은 `/root/stock_insight_solo/backend`의 별도 서비스였습니다. 로컬 명령의 포트를 운영 포트로 간주하지 않습니다.
+
+운영 체크아웃 HEAD는 `e6d611c858caa16ea4059148a4f4ef1fa5b1dfdd`였습니다. 성찰 구현 `94ee2d7`과 v2 검증기 `52eff44`는 해당 HEAD의 조상이 아니며, 배포 파일에 성찰 설정·`reflection_calls`·`runtime/verifier.py`도 없었습니다. 이 확인은 체크아웃 상태이며 프로세스가 모든 최신 파일을 재로딩했다는 증거까지 뜻하지 않습니다. [시험 보고서](agent-test-report.md)의 성찰 비교는 작업 브랜치 기준입니다.
+
+현재 Backend에는 인증·회원가입·성향·Memory·분석·관리자 실황이, Frontend에는 React 분석 화면이 구현되어 있습니다. MCP Client와 네 MCP도 실제 연동 코드가 있으며 이번 캡처·기존 시험의 범위는 [설계서](agent-architecture.md)와 [시험 보고서](agent-test-report.md)에 기록합니다. 저장소 Dockerfile은 6개이며 Disclosure에는 없어 전체 Docker 배포 완료로 표시하지 않습니다.
+
+이 관측에서는 서비스 시작·재시작·중단·배포·환경 변경을 수행하지 않았습니다. 로컬 실행은 [체크리스트](LOCAL_RUN_ENV_CHECKLIST.md)를 따릅니다.

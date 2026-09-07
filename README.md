@@ -6,7 +6,7 @@
 
 `살래? 말래?`는 종목 추천, 목표주가, 수익률 예측을 제공하지 않습니다. 관심 온도는 시장의 관심 정도를 나타낼 뿐 상승 가능성이나 매수 점수가 아닙니다.
 
-전체 서비스는 로컬에서 실행합니다. 실행 순서와 환경변수는 아래 실행 절과 [로컬 실행 체크리스트](docs/LOCAL_RUN_ENV_CHECKLIST.md)를 따릅니다.
+아래 실행 절은 로컬 개발 기준입니다. VPS 운영 체크아웃·systemd·실제 포트는 [실행 폴더와 운영 상태](docs/RUNTIME_FOLDERS.md)를, 환경변수는 [로컬 실행 체크리스트](docs/LOCAL_RUN_ENV_CHECKLIST.md)를 따릅니다.
 
 데모 로그인은 `demo001`부터 `demo010`까지이며 공통 비밀번호는 `Demo1234!`입니다.
 
@@ -26,8 +26,8 @@
 |---|---|
 | ① 종목 검색 | 기업명 또는 6자리 종목 코드를 입력합니다 |
 | ② 지원 여부 확인 | Backend가 `shared/supported_companies.json`의 KOSPI 시가총액 상위 20종목인지 먼저 확인합니다 |
-| ③ 자료 수집 | MCP Client가 현재가, 최근 뉴스, 최근 공시, 사업보고서, 커뮤니티 반응을 병렬 조회합니다 |
-| ④ 규칙 계산 | 평소 대비 거래량·뉴스·커뮤니티 활동과 FGI로 관심 온도를, 공시·보고서 유무로 근거 수준을 계산합니다 |
+| ③ 자료 수집 | MCP Client가 현재가, 최근 뉴스, 정기공시, 최근 주요 공시, 사업보고서, 커뮤니티 반응의 6개 작업을 병렬 실행합니다 |
+| ④ 규칙 계산 | 거래량·뉴스·커뮤니티 활동과 FGI로 관심 온도를, 최근 30일 주요 공시와 현재 이슈의 매칭으로 근거 수준을 계산합니다 |
 | ⑤ Agent 설명 | `gpt-5.6-luna`가 수집된 근거를 설명하고, 필요할 때만 최근 공시 상세를 최대 2건 추가 조회합니다 |
 | ⑥ 접근 수준 적용 | 비회원은 가격과 한 줄 결론을 보고, 회원은 상세 근거와 성향별 확인 포인트까지 봅니다 |
 
@@ -66,7 +66,7 @@ Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 
 
 ### 요청 한 건의 흐름
 
-사용자 요청은 Frontend → Backend → MCP Client 순으로 이동합니다. MCP Client가 기본 Tool 5개를 병렬 호출하고 관심 온도·근거 수준을 계산한 뒤 Agent에 제한된 근거를 전달합니다. 전체 시퀀스와 실제 Tool 이름은 [서비스 흐름도](doc/diagrams/service-flow.mmd)에 정리했습니다.
+사용자 요청은 Frontend → Backend → MCP Client 순으로 이동합니다. MCP Client가 기본 Tool 6개를 병렬 호출하고 관심 온도·근거 수준을 계산한 뒤 Agent에 제한된 근거를 전달합니다. Agent가 선택하는 Tool은 `get_disclosure_detail` 하나입니다. 최신 분기·성찰·종료 조건과 논리 Tool/실제 MCP 이름의 구분은 [에이전트 설계서](docs/agent-architecture.md)와 [상태 흐름도](doc/diagrams/agent-state-flow.mmd)에 정리했습니다.
 
 ### Backend 계층
 
@@ -96,7 +96,7 @@ Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 
 | MCP 서버 | FastMCP Streamable HTTP, HTTPX |
 | 데이터베이스 | PostgreSQL, pgvector, `text-embedding-3-small` 1536차원 |
 | 외부 데이터 | 한국투자증권 Open API, NAVER API HUB, OpenDART, 커뮤니티 FGI API |
-| 인프라 | Docker, Docker Compose |
+| 인프라 | 로컬 PostgreSQL·Redis Docker Compose, VPS 서비스별 systemd |
 | 테스트 | pytest, Vitest, Playwright Core |
 
 ### 폴더 구조
@@ -212,9 +212,28 @@ MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`과 
 | [DB 설계서](doc/DB설계서.md) | Backend DB와 Disclosure DB의 테이블·인덱스·벡터 검색 설계 |
 | [화면 설계서](doc/화면설계서.md) | 단일 페이지 상태, 로그인, 공개·회원 화면과 이동 흐름 |
 | [최종 아키텍처](docs/FINAL_ARCHITECTURE.md) | 서비스 책임과 확정 연결 구조 |
+| [에이전트 아키텍처 설계서](docs/agent-architecture.md) | Profile, 노드·분기, State·Trace, Tool 정책, Memory, 성찰·폴백 |
+| [에이전트 시험 결과 보고서](docs/agent-test-report.md) | 실제 off/on 비교, 검증기 v1→v2 개선 이력, VPS 7일 부분실패 집계 |
+| [Backend 서술 채택 시험](docs/agent-test-result-report_narrative-source.md) | 윤기화 담당 narrative_source 성공·실패 분기 검증 |
+| [Agent 상태 흐름도](doc/diagrams/agent-state-flow.mmd) | Workflow 기본 수집과 Agent 선택 조회·성찰·종료 |
 | [서비스 연결 계약](shared/CONNECTION_CONTRACT.md) | 포트, 시간 제한, 데이터 경계와 공통 표기 규칙 |
 | [세부 계약](shared/contracts/README.md) | Frontend·Backend·분석·MCP Tool·성향·오류 계약 색인 |
 | [로컬 실행 체크리스트](docs/LOCAL_RUN_ENV_CHECKLIST.md) | MCP 연결과 서비스별 환경변수·점검 명령 |
 | [Frontend 흐름](docs/FRONTEND_FLOW.md) | 검색·로그인·근거·개인화 화면의 기준 흐름 |
 
 초기 아이디어와 폐기된 구조는 `docs/archive/`에 보관합니다. 현재 구현과 연결 기준은 위 최종 문서와 실제 코드를 우선합니다.
+
+---
+
+## 6. 팀별 작성 영역
+
+| 항목 | 내용 |
+|---|---|
+| 팀명 | 엔코어 AI 오케스트레이션 1기 2차 프로젝트 5팀 |
+| 팀원 및 역할 | [개발 계획의 팀 구성·역할](doc/plan.md#1-팀-구성), 위 4절 팀 표 |
+| 프로젝트 기간 | [개발 계획 일정](doc/plan.md#6-일정) 기준 2026-08-31 착수~09-04 통합·문서화, 이후 발표 준비 기간 |
+| 저장소 | [twlaude/aio-p2-5th-team-stock](https://github.com/twlaude/aio-p2-5th-team-stock) |
+| 외부 API 및 도구 | 한국투자증권 Open API, NAVER API HUB, OpenDART, 커뮤니티 FGI API, OpenAI Responses·임베딩, FastMCP |
+| 필수 Agent 산출물 | [아키텍처 설계서](docs/agent-architecture.md), [시험 결과 보고서](docs/agent-test-report.md) |
+| 추가 산출물 | API·DB·화면 설계서, 개발 계획, Mermaid 원본과 라이트/다크 SVG, [30케이스 하네스·원본 실측](tests/scenarios/agent_eval/README.md), Backend 서술 채택 시험 |
+| 제출 확인 근거 | 문서에 실제 구현·원본 지표·남은 한계를 기록하며, 성찰 브랜치 실측과 VPS 운영 이력을 구분합니다 |
