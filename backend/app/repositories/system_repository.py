@@ -64,7 +64,9 @@ async def snapshot() -> tuple[dict, dict]:
         await cur.execute("""
             SELECT requested_at, user_id, company_name, stock_code, status, partial_failures
             FROM analysis_runs
-            WHERE status != 'success' OR coalesce(partial_failures, '[]'::jsonb) != '[]'::jsonb
+            -- 위 서버별 집계와 같은 7일 창을 본다. 창이 다르면 집계엔 있는 서버가 목록엔 없어 보인다.
+            WHERE requested_at >= now() - interval '7 days'
+              AND (status != 'success' OR coalesce(partial_failures, '[]'::jsonb) != '[]'::jsonb)
             ORDER BY requested_at DESC LIMIT 20
         """)
         recent = await cur.fetchall()
