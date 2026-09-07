@@ -7,6 +7,7 @@ from app.core.admin_auth import require_admin
 from app.core.config import settings
 from app.repositories import analysis_repository
 from app.routers.admin.live_status_page import render_live_status_html
+from app.routers.admin import system_status
 
 router = APIRouter(prefix="/admin", tags=["admin"])
 
@@ -16,6 +17,11 @@ _KEEPALIVE_SECONDS = 15
 @router.get("/live-status", response_class=HTMLResponse, dependencies=[Depends(require_admin)])
 def live_status_page() -> str:
     return render_live_status_html(settings.mcp_server_urls)
+
+
+@router.get("/live-status/system", dependencies=[Depends(require_admin)])
+async def live_status_system() -> dict:
+    return await system_status.snapshot()
 
 
 @router.get("/live-status/snapshot", dependencies=[Depends(require_admin)])
