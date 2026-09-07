@@ -15,7 +15,7 @@
 .analysis-evidence-subsection__retry:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
 .analysis-evidence-subsection--shimmer .analysis-evidence-subsection__surface::after { position: absolute; inset: 0; z-index: 2; content: ""; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.72), transparent); transform: translateX(-100%); animation: analysis-section-shimmer 600ms ease; }
 
-.analysis-community-grid { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 28px; align-items: stretch; }
+.analysis-community-grid { display: grid; grid-template-columns: minmax(0, 1fr) 268px; gap: 28px; align-items: stretch; }
 .analysis-community-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 14px; }
 .analysis-community-metric { display: grid; gap: 9px; min-width: 0; padding: 18px; border: 1px solid var(--c-line); border-radius: var(--r-md); background: rgba(255, 255, 255, 0.72); }
 .analysis-community-metric__number { color: var(--c-ink); font-size: var(--fs-h1); font-weight: 900; line-height: 1; }
@@ -26,13 +26,26 @@
 .analysis-community-metric__fill--positive { background: var(--c-primary); }
 .analysis-community-metric__fill--neutral { background: #d1d5db; }
 .analysis-community-metric__fill--negative { background: var(--c-danger); }
-.analysis-community-fgi { position: relative; display: grid; place-items: center; align-content: end; min-height: 160px; padding: 16px 16px 18px; border: 1px solid var(--c-line); border-radius: var(--r-md); background: rgba(241, 249, 243, 0.78); }
-.analysis-community-fgi svg { width: 156px; height: 92px; overflow: visible; }
-.analysis-community-fgi path { fill: none; stroke-linecap: round; stroke-width: 14; }
+/* 공포탐욕 게이지 — 구간(--mood*)이 게이지·라벨·배경·마스코트 볼을 한 번에 정한다. 공포=하락 파랑, 탐욕=상승 빨강 */
+.analysis-community-fgi { --mood: var(--c-primary); --mood-deep: var(--c-primary-deep); --mood-bg: rgba(241, 249, 243, 0.78); --mascot-mood: var(--mood-deep); --mascot-cheek: var(--c-cheek); position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 6px; min-height: 160px; padding: 14px 14px 16px; overflow: hidden; border: 1px solid var(--c-line); border-radius: var(--r-md); background: var(--mood-bg); transition: background 600ms ease; }
+.analysis-community-fgi--xfear { --mood: var(--c-down); --mood-deep: #1f4fb0; --mood-bg: #e8f0ff; --mascot-cheek: #cfe0ff; }
+.analysis-community-fgi--fear { --mood: #5b8ee6; --mood-deep: #2f5fb8; --mood-bg: #eef3fd; --mascot-cheek: #dbe6fb; }
+.analysis-community-fgi--neutral { --mood: #9aa8a0; --mood-deep: #5f6c66; --mood-bg: #f3f5f3; }
+.analysis-community-fgi--greed { --mood: #f0803d; --mood-deep: #c85c1c; --mood-bg: #fff2e8; }
+.analysis-community-fgi--xgreed { --mood: var(--c-up); --mood-deep: #b32e26; --mood-bg: #ffe9e6; --mascot-cheek: #ff9a8c; }
+.analysis-community-fgi > * { position: relative; z-index: 1; }
+.analysis-community-fgi__gauge { display: grid; place-items: center; min-width: 0; }
+.analysis-community-fgi__gauge svg { width: 140px; height: 82px; overflow: visible; }
+.analysis-community-fgi__gauge path { fill: none; stroke-linecap: round; stroke-width: 14; }
 .analysis-community-fgi__track { stroke: #f4eeea; }
-.analysis-community-fgi__fill { stroke: var(--c-primary); stroke-dasharray: var(--fgi-width) 100; transition: stroke-dasharray 900ms ease-out 180ms; }
-.analysis-community-fgi__value { margin-top: -34px; color: var(--c-ink); font-size: var(--fs-h2); font-weight: 900; line-height: 1; }
-.analysis-community-fgi__label { margin-top: 6px; color: var(--c-primary-deep); font-size: 13px; font-weight: 700; }
+.analysis-community-fgi__spectrum { stroke: url(#analysis-fgi-spectrum); opacity: 0.35; }
+.analysis-community-fgi__fill { stroke: var(--mood); stroke-dasharray: var(--fgi-width) 100; transition: stroke-dasharray 900ms ease-out 180ms, stroke 600ms ease; }
+.analysis-community-fgi__value { margin-top: -32px; color: var(--c-ink); font-size: var(--fs-h2); font-weight: 900; line-height: 1; }
+.analysis-community-fgi__label { margin-top: 6px; color: var(--mood-deep); font-size: 13px; font-weight: 700; transition: color 600ms ease; }
+.analysis-community-fgi__mascot { width: 78px; height: 91px; margin-bottom: -6px; }
+/* 극도 공포: 상자가 마스코트와 같은 리듬으로 아주 살짝 떨린다. 극도 탐욕: 배경이 붉게 숨쉰다 */
+.analysis-community-fgi--xfear.analysis-community-fgi--live { animation: moodShiver 0.14s linear infinite; }
+.analysis-community-fgi--xgreed.analysis-community-fgi--live::after { position: absolute; inset: -40%; z-index: 0; content: ""; background: radial-gradient(circle at 70% 80%, rgba(224, 72, 62, 0.22), transparent 55%); animation: moodGlow 1.6s ease-in-out infinite; pointer-events: none; }
 .analysis-topic-area { display: grid; gap: 10px; }
 .analysis-topic-area__title { color: var(--c-sub); font-size: 13px; font-weight: 700; }
 .analysis-topic-list { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -85,6 +98,7 @@
   .analysis-community-metric__number { font-size: var(--fs-h1); }
   .analysis-community-metric__track, .analysis-community-metric__fill { height: 8px; }
   .analysis-community-fgi { grid-column: 1 / -1; width: 100%; min-height: 150px; }
+  .analysis-community-fgi__gauge { justify-self: center; }
 }
 
 @container (inline-size < 30rem) {
@@ -97,5 +111,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .analysis-evidence-subsection, .analysis-evidence-subsection--visible, .analysis-evidence-subsection--visible .analysis-community-metric__fill, .analysis-community-fgi__fill { transition: opacity 160ms ease; transform: none; }
-  .analysis-evidence-subsection__failed-state, .analysis-evidence-subsection--shimmer .analysis-evidence-subsection__surface::after { animation: none; }
+  .analysis-evidence-subsection__failed-state, .analysis-evidence-subsection--shimmer .analysis-evidence-subsection__surface::after, .analysis-community-fgi--live, .analysis-community-fgi--live::after { animation: none; }
 }
