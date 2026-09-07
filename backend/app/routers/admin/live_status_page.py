@@ -27,6 +27,14 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
   pre { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 10px 12px; font-size: 12px; overflow-x: auto; }
   .hint { color: #8b949e; font-size: 12px; margin-top: 6px; }
   .desc { color: #8b949e; font-size: 12px; }
+  .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 20px; }
+  .toolbar .sub { margin-bottom: 0; }
+  .tz-toggle { display: flex; align-items: center; gap: 8px; }
+  .tz-btn { background: #161b22; color: #8b949e; border: 1px solid #30363d; padding: 4px 10px; font-size: 12px; cursor: pointer; }
+  .tz-btn:first-of-type { border-radius: 6px 0 0 6px; }
+  .tz-btn:last-of-type { border-radius: 0 6px 6px 0; border-left: none; }
+  .tz-btn.active { background: #1f6feb33; color: #58a6ff; border-color: #58a6ff; }
+  .tz-btn:last-of-type.active { border-left: 1px solid #58a6ff; }
   .guide { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 12px; font-size: 13px; }
   /* 표는 폭이 좁아지면 자기 안에서만 가로 스크롤. 페이지 자체는 가로로 안 밀린다. */
   .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 12px; }
@@ -53,7 +61,13 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
   <h1><span class="dot"></span>실시간 실황</h1>
   <div class="sub" id="conn-status">연결 중...</div>
   <p class="guide">이 페이지는 살래말래 서버가 지금 어떤 상태인지 보는 곳. 뭔가 안 되면 ① 서비스 상태판 → ② DB/Redis → ③ 실패 기록 순서로 보면 원인이 좁혀진다.</p>
-  <div class="sub" id="system-updated">시스템 현황 조회 중...</div>
+  <div class="toolbar">
+    <div class="sub" id="system-updated">시스템 현황 조회 중...</div>
+    <div class="tz-toggle" title="시각 표시 기준. KST=한국 시간, UTC=서버가 기록한 원본 값">
+      <span class="desc">시각 표시</span>
+      <button type="button" class="tz-btn" data-tz="KST" onclick="setTz('KST')">KST</button><button type="button" class="tz-btn" data-tz="UTC" onclick="setTz('UTC')">UTC</button>
+    </div>
+  </div>
 
   <section>
     <h2>서비스 상태판</h2>
@@ -92,7 +106,7 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
     <h2>지금 활성 단기 Memory (Redis, TTL 30분)</h2>
     <p class="desc">지금 이 순간 누가 어떤 종목을 봤는지 (30분 지나면 사라짐).</p>
     <div class="table-wrap"><table id="short-term-table">
-      <thead><tr><th>user_id</th><th>최근 검색 종목</th><th>종목코드</th><th>검색 시각 (KST)</th><th>남은 TTL</th></tr></thead>
+      <thead><tr><th>user_id</th><th>최근 검색 종목</th><th>종목코드</th><th>검색 시각 <span class="tz"></span></th><th>남은 TTL</th></tr></thead>
       <tbody></tbody>
     </table></div>
   </section>
@@ -101,7 +115,7 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
     <h2>최근 분석 요청 (PostgreSQL analysis_runs)</h2>
     <p class="desc">사용자가 종목 분석을 누를 때마다 한 줄. 여기 안 뜨면 요청이 백엔드까지 못 온 것.</p>
     <div class="table-wrap"><table id="runs-table">
-      <thead><tr><th>시각 (KST)</th><th>사용자</th><th>종목</th><th>상태</th><th>부분 실패</th></tr></thead>
+      <thead><tr><th>시각 <span class="tz"></span></th><th>사용자</th><th>종목</th><th>상태</th><th>부분 실패</th></tr></thead>
       <tbody></tbody>
     </table></div>
   </section>
@@ -111,17 +125,32 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
     <p class="desc">실패했거나 일부 서버가 답을 못 준 분석만 모은 것. 같은 서버 이름이 반복되면 그 서버가 문제.</p>
     <p id="failures-status" class="desc"></p>
     <div class="table-wrap narrow"><table><thead><tr><th>서버</th><th>최근 7일 실패 횟수</th></tr></thead><tbody id="failure-counts-body"></tbody></table></div>
-    <div class="table-wrap"><table><thead><tr><th>시각 (KST)</th><th>사용자</th><th>종목</th><th>상태</th><th>실패한 서버</th></tr></thead><tbody id="failures-body"></tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>시각 <span class="tz"></span></th><th>사용자</th><th>종목</th><th>상태</th><th>실패한 서버</th></tr></thead><tbody id="failures-body"></tbody></table></div>
   </section>
 
 <script>
 const escapeHtml = value => String(value ?? '-').replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
-// 서버·DB는 UTC로 기록한다. 화면은 보는 사람 위치와 무관하게 KST 고정으로 찍는다.
-const kst = value => {
+// 서버·DB는 UTC로 기록한다. 화면은 기본 KST, 버튼으로 원본 UTC(서버 기록값)로 바꿀 수 있다. 선택은 브라우저에 기억.
+const TZ = {KST: 'Asia/Seoul', UTC: 'UTC'};
+let tzMode = 'KST';
+try { if (localStorage.getItem('live-status-tz') === 'UTC') tzMode = 'UTC'; } catch (_) {}
+const fmtTime = value => {
   if (value == null || value === '') return '-';
   const d = new Date(value);
-  return isNaN(d) ? String(value) : d.toLocaleString('sv-SE', {timeZone: 'Asia/Seoul', hour12: false});
+  return isNaN(d) ? String(value) : d.toLocaleString('sv-SE', {timeZone: TZ[tzMode], hour12: false});
 };
+// 원본 값을 datetime 속성에 남겨두면 토글 때 다시 가져오지 않고 화면만 다시 포맷할 수 있다.
+const ts = value => value == null || value === '' ? '-' : `<time datetime="${escapeHtml(value)}">${escapeHtml(fmtTime(value))}</time>`;
+function applyTz() {
+  document.querySelectorAll('time[datetime]').forEach(el => { el.textContent = fmtTime(el.getAttribute('datetime')); });
+  document.querySelectorAll('.tz').forEach(el => { el.textContent = `(${tzMode})`; });
+  document.querySelectorAll('.tz-btn').forEach(btn => { btn.classList.toggle('active', btn.dataset.tz === tzMode); });
+}
+function setTz(mode) {
+  tzMode = mode;
+  try { localStorage.setItem('live-status-tz', mode); } catch (_) {}
+  applyTz();
+}
 const statusHtml = ok => `<span class="status-${ok ? 'success' : 'internal_error'}">${ok ? 'ok' : 'down'}</span>`;
 function fillTable(id, rows, columns, empty = '기록 없음') {
   document.getElementById(id).innerHTML = rows.length
@@ -129,7 +158,7 @@ function fillTable(id, rows, columns, empty = '기록 없음') {
     : `<tr><td colspan="${columns}" class="empty">${escapeHtml(empty)}</td></tr>`;
 }
 function fillStats(id, pairs) {
-  document.getElementById(id).innerHTML = pairs.map(([k, v]) => `<div class="stat"><div class="k">${escapeHtml(k)}</div><div class="v">${v}</div></div>`).join('');
+  document.getElementById(id).innerHTML = pairs.map(([k, v]) => `<div class="stat"><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
 }
 const ttlText = ttl => ttl === -1 ? '만료 없음' : ttl == null || ttl < 0 ? '-' : `${ttl}s`;
 function blockStatus(id, block, label) {
@@ -153,20 +182,21 @@ async function loadSystem() {
     fillTable('databases-body', pg.databases.map(d => [d.name, d.size_mb, d.connections].map(escapeHtml)), 3, '조회할 수 없음');
     fillTable('tables-body', pg.tables.map(t => [t.database, t.name, t.rows].map(escapeHtml)), 3, '조회할 수 없음');
     fillStats('analysis-stats', [['분석 요청 전체', pg.ok ? `${a.total}건` : '-'], ['최근 24시간', pg.ok ? `${a.last_24h}건` : '-'],
-      ['24시간 성공률', pg.ok && a.success_rate_24h != null ? `${a.success_rate_24h}%` : '-'], ['마지막 요청 (KST)', pg.ok ? escapeHtml(kst(a.last_requested_at)) : '-']]);
+      ['24시간 성공률', pg.ok && a.success_rate_24h != null ? `${a.success_rate_24h}%` : '-'], [`마지막 요청 <span class="tz"></span>`, pg.ok ? ts(a.last_requested_at) : '-']]);
     const rv = value => escapeHtml(r.ok ? value : null);
     fillStats('redis-stats', [['연결', statusHtml(r.ok)], ['키 개수', rv(r.keys_in_db)], ['단기메모리 키', rv(r.short_term_keys)], ['메모리 사용량', rv(r.used_memory_human)],
-      ['접속 클라이언트', rv(r.connected_clients)], ['가동일수', rv(r.uptime_days)], ['마지막 이벤트 (KST)', rv(kst(r.last_event_at))]]);
+      ['접속 클라이언트', rv(r.connected_clients)], ['가동일수', rv(r.uptime_days)], [`마지막 이벤트 <span class="tz"></span>`, r.ok ? ts(r.last_event_at) : '-']]);
     fillTable('redis-keys-body', (r.keys ?? []).map(k => [k.name, k.type, ttlText(k.ttl_seconds)].map(escapeHtml)), 3, r.ok ? '키 없음' : '조회할 수 없음');
     document.getElementById('failures-status').textContent = pg.ok ? '' : 'PostgreSQL 조회 실패로 실패 기록을 확인할 수 없음';
     fillTable('failure-counts-body', data.failures.by_service_7d.map(f => [f.service, f.count].map(escapeHtml)), 2, pg.ok ? '기록 없음' : '조회할 수 없음');
     fillTable('failures-body', data.failures.recent.map(run => [
-      ...[kst(run.requested_at), run.user_id ?? '비회원', `${run.company_name} (${run.stock_code})`].map(escapeHtml),
+      ts(run.requested_at), ...[run.user_id ?? '비회원', `${run.company_name} (${run.stock_code})`].map(escapeHtml),
       `<span class="status-${escapeHtml(run.status)}">${escapeHtml(run.status)}</span>`,
       failBadges((run.partial_failures ?? []).map(f => Object.fromEntries(Object.entries(f).map(([key, value]) => [key, escapeHtml(value)]))))
     ]), 5, pg.ok ? '기록 없음' : '조회할 수 없음');
-    updated.textContent = `시스템 현황 갱신: ${kst(data.checked_at)} KST`;
+    updated.innerHTML = `시스템 현황 갱신: ${ts(data.checked_at)} <span class="tz"></span>`;
     updated.className = 'sub';
+    applyTz();  // 새로 만든 .tz 표기 채우기 (30초 갱신마다)
   } catch (error) {
     updated.textContent = `시스템 현황 갱신 실패: ${error.message} · 표시된 값은 이전 조회 결과 · 30초 후 재시도`;
     updated.className = 'sub status-internal_error';
@@ -182,7 +212,7 @@ function renderShortTerm(items) {
         <td>${i.user_id}</td>
         <td>${i.recent_company_name ?? ''}</td>
         <td>${i.recent_stock_code ?? ''}</td>
-        <td>${kst(i.searched_at)}</td>
+        <td>${ts(i.searched_at)}</td>
         <td>${i.ttl_seconds}s</td>
       </tr>`).join('')
     : '<tr><td colspan="5" class="empty">활성 키 없음</td></tr>';
@@ -197,7 +227,7 @@ function buildRunRow(run, isNew) {
   const tr = document.createElement('tr');
   if (isNew) tr.className = 'new-row';
   tr.innerHTML = `
-    <td>${kst(run.requested_at)}</td>
+    <td>${ts(run.requested_at)}</td>
     <td>${run.user_id ?? '비회원'}</td>
     <td>${run.company_name ?? ''} (${run.stock_code ?? ''})</td>
     <td class="status-${run.status}">${run.status}</td>
@@ -234,6 +264,7 @@ function connect() {
   };
 }
 
+applyTz();
 loadSystem();
 setInterval(loadSystem, 30000);
 loadSnapshot();
