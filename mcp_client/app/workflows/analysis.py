@@ -171,6 +171,9 @@ class AnalysisWorkflow:
                 temperature = calculate_market_temperature(data)
                 evidence = calculate_evidence_level(data, temperature.data_coverage)
                 context = self._context(request, data, temperature, evidence)
+                if self.agent.reflection_enabled:
+                    context["failed_tools"] = list(data.failed_tools)
+                    context["partial_failures"] = [item.model_dump() for item in data.failures]
                 receipt_numbers = self._receipt_numbers(data, evidence)
                 agent_result = await self.agent.run(context, receipt_numbers, reporter)
         except TimeoutError:
@@ -240,6 +243,7 @@ class AnalysisWorkflow:
                 completed_tools=[*data.completed_tools, *agent_result.completed_tools],
                 failed_tools=[*data.failed_tools, *agent_result.failed_tools],
                 duration_ms=duration_ms,
+                reflections=agent_result.reflection_calls,
             ),
         )
         await reporter.publish(

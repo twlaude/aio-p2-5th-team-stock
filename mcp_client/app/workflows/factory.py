@@ -34,7 +34,11 @@ def build_workflow(settings: Settings) -> AnalysisWorkflow:
         if settings.llm_provider == "mock"
         else OpenAINarrativeProvider(settings)
     )
-    agent = StockAgentRuntime(provider, disclosure, settings.max_agent_steps)
+    agent = StockAgentRuntime(
+        provider, disclosure, settings.max_agent_steps,
+        reflection_enabled=settings.agent_reflection_enabled,
+        max_reflections=settings.agent_max_reflections,
+    )
     return AnalysisWorkflow(settings, collector, agent)
 
 

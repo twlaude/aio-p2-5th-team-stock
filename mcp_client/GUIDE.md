@@ -55,6 +55,49 @@ Community 기본 응답에 `fgi_latest`가 포함되므로 `get_fear_greed_index
 
 조회 Tool뿐이므로 Human Approval은 요구하지 않는다. 추후 저장·전송·주문 Tool이 생기면 별도 승인 정책을 추가한다.
 
+### 자기 성찰과 검증
+
+서비스는 기본적으로 `AGENT_REFLECTION_ENABLED=true`, `AGENT_MAX_REFLECTIONS=2`를 사용합니다.
+감지한 오류를 분류하여 수정 피드백을 전달하고, 다음 응답을 다시 검증합니다.
+
+| 오류 유형 | 감지 기준 | 수정 전략 |
+|---|---|---|
+| `tool_selection_error` | 허용 외 Tool, 기본 목록 밖·중복 접수번호, 상세 2건 상한 | 실행을 차단하고 허용 접수번호와 오류를 `function_call_output`으로 반환합니다. |
+| `parameter_error` | JSON 파싱 실패, 객체가 아닌 인자, 접수번호 누락·타입 오류, 추가 인자 | 인자 오류를 `function_call_output`으로 반환합니다. |
+| `schema_mismatch` | 응답 ID가 있는 Provider JSON 검증 오류 | 형식 오류를 user 메시지로 전달하고 Tool 없이 한 번 재요청합니다. |
+| `hallucination` / `inconsistency` | 미확인 접수번호, 실패 소스 제한 누락, 추천·예측 표현, 투자 성향 불일치 | 위반 목록을 user 메시지로 전달하고 Tool 없이 한 번 재검증합니다. |
+
+`app/runtime/verifier.py`는 서술 전체의 14자리 DART 접수번호를 공시·사업보고서·상세 조회·근거 수준의
+구조화된 `receipt_number`와 대조합니다. 뉴스·커뮤니티 본문에 등장한 숫자는 공식 접수번호로 인정하지 않습니다.
+뉴스·공시·커뮤니티 실패는 `failed_tools`, `partial_failures`와 소스 상태로 판정합니다.
+실패한 소스의 요약에는 `확인하지 못`, `조회하지 못`, `자료가 없`, `실패` 중 하나가 있어야 합니다.
+추천·예측 검사는 `PROHIBITED_TERMS`의 문자열 포함 규칙입니다. 인용이나 부정문도 검출될 수 있으며,
+검증 통과가 서술의 모든 사실을 검증했다는 의미는 아닙니다.
+투자 성향이 없으면 `personalized_checkpoints`는 null, 있으면 객체여야 합니다.
+
+추가 LLM 호출은 오류 종류를 합쳐 요청당 최대 2회입니다. 여러 오류를 한 번에 피드백하면 재실행은 1회입니다.
+스키마 보정과 서술 보정은 각각 요청당 1회이며, 재검증 실패·성찰 예산 소진 시 기존 규칙 기반 서술로 폴백하고
+`reflection_exhausted`로 종료합니다. 모든 후속 호출은 기존 `max_agent_steps` 예산도 사용합니다.
+기존 반복문의 실제 호출 상한은 최초 호출 1회와 후속 최대 3회이며, 성찰이 이 상한을 늘리지는 않습니다.
+해소된 오류는 최종 실패 목록에 넣지 않고 `AgentResult.reflections`에만 기록합니다.
+각 `ReflectionEvent(kind, detail, attempt, resolved)`는 오류 종류·정제된 설명·수정 시도 번호·후속 검증의 해소 여부를 담습니다.
+미해결 이벤트는 다음 응답에도 유지하며, Tool 응답만으로 서술 오류가 해소되었다고 기록하지 않습니다.
+예산이 없어 실행하지 못한 오류도 다음 시도 번호로 기록하고 `resolved=false`로 남깁니다.
+`AgentResult.reflection_calls`와 응답의 `trace_summary.reflections`는 실제 피드백 재호출 수입니다.
+0일 때 응답 필드는 생략되며 기본값은 0입니다. 성찰 모드의 `llm_calls`는 스키마 오류·호출 실패도 포함합니다.
+
+`AGENT_REFLECTION_ENABLED=false`는 기존 Runtime 경로, Provider 요청, Workflow 컨텍스트와 응답 직렬화를 유지합니다.
+기존 세 인자 `StockAgentRuntime(provider, disclosure, max_steps)` 호출도 off로 유지하고, 서비스 factory가 설정을 명시 전달합니다.
+기존에는 서술 내용 검증이 없었으므로 off는 스키마를 통과한 부적합 서술도 그대로 채택합니다.
+따라서 적용 전 시험에서 서술 오류를 무조건 폴백으로 간주하면 안 됩니다.
+
+on의 Provider는 `next_turn(previous_response_id, ...)`를 요청 내부의 응답 ID와 대조한 뒤,
+`store=False`를 유지하면서 이전 입력·출력과 피드백을 재전송합니다.
+암호화된 reasoning item도 함께 유지하고, 동시 요청은 `ContextVar`로 분리합니다.
+이 기록은 요청 메모리에만 존재하며 로그·Trace·DB에 저장하지 않습니다.
+이는 [Responses API의 수동 대화 상태 관리](https://developers.openai.com/api/docs/guides/conversation-state)에 따른 방식입니다.
+off는 비교 기준을 위해 기존 `previous_response_id` 전달 방식을 보존합니다.
+
 ## 시장 관심 온도 v2 기준
 
 ```text

@@ -108,6 +108,7 @@ class TraceSummary(BaseModel):
     completed_tools: list[str]
     failed_tools: list[str]
     duration_ms: int
+    reflections: int = Field(default=0, ge=0, exclude_if=lambda value: value == 0)
 
 
 class AnalysisResponse(BaseModel):

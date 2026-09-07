@@ -158,6 +158,17 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 
 ## 종료 이유
 
+성찰 기능은 기존 필드를 변경하지 않고 `trace_summary.reflections: int`를 추가합니다.
+이 값은 오류 피드백 때문에 실제 실행한 추가 LLM 호출 수이며, 기본값은 0입니다.
+0이면 직렬화에서 생략하므로 기존 off 응답은 동일한 필드·값을 유지합니다.
+한 응답에서 여러 오류가 발생해도 피드백 재호출이 한 번이면 1로 셉니다.
+상세 오류 이력은 Runtime의 `AgentResult.reflections`에만 남기고 분석 응답에는 원문·Prompt를 추가하지 않습니다.
+on에서는 스키마 검증에 실패한 호출과 실패한 Provider 호출도 `llm_calls`에 포함합니다.
+기존 off에서는 성공한 Provider 반환만 세는 기준을 유지합니다.
+성찰 예산은 기본 2회이고 기존 Agent 단계 상한 안에서 사용합니다.
+해소된 성찰 오류는 `partial_failures`에 추가하지 않으며, 기존 MCP 실패가 있으면 부분 성공을 유지합니다.
+`reflection_exhausted`는 성찰 예산 또는 단계 예산 부족, 스키마·서술 재검증 실패에 따른 폴백 종료입니다.
+
 ```text
 completed
 no_data
@@ -167,4 +178,5 @@ invalid_tool_call
 mcp_tool_error
 max_steps_exceeded
 workflow_timeout
+reflection_exhausted
 ```
