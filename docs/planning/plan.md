@@ -49,7 +49,7 @@
 | 맡는 파일 | `docs/`, `shared/`, `mcp_client/`, `mcp_servers/price_mcp/` |
 | 산출물 | 최종 아키텍처, 서비스 연결 계약, 단일 Stock Analysis Agent Workflow, Price MCP, 발표 자료와 시연 흐름 |
 | 기본 Workflow | 현재가, 최근 뉴스, 정기공시, 최근 30일 주요 공시, 사업보고서 검색, 커뮤니티 반응의 6개 기본 조회를 결정적으로 병렬 호출합니다 |
-| Agent 경계 | 기본 조회 결과를 설명하고, 필요한 경우 기본 목록에 있는 접수번호의 `get_disclosure_detail`만 최대 2건 추가 조회합니다. 모델 호출은 최초 1회 + 후속 최대 3회이며, 서술 검증에 걸리면 성찰 재호출 2회 이내에서 교정하고 넘으면 기본 서술로 종료합니다. 상세는 [에이전트 아키텍처 설계서](../docs/agent-architecture.md) |
+| Agent 경계 | 기본 조회 결과를 설명하고, 필요한 경우 기본 목록에 있는 접수번호의 `get_disclosure_detail`만 최대 2건 추가 조회합니다. 모델 호출은 최초 1회 + 후속 최대 3회이며, 서술 검증에 걸리면 성찰 재호출 2회 이내에서 교정하고 넘으면 기본 서술로 종료합니다. 상세는 [에이전트 아키텍처 설계서](../architecture/agent-architecture.md) |
 | 가격 범위 | 한국투자증권 실전투자 REST 현재가를 조회하고 종목별 60초 캐시를 적용합니다. 실제 API 실패를 가짜 가격으로 대체하지 않습니다 |
 | 완료 기준 | `POST /internal/v1/common-analyses`가 규칙 기반 관심 온도·근거 수준과 Agent 설명을 계약 형식으로 반환합니다. 현재가 실패는 전체 실패, 나머지 Tool 실패는 확인된 자료를 유지한 부분 성공으로 구분합니다 |
 
@@ -137,6 +137,6 @@
 | 서비스명 | `살래? 말래?` |
 | 기본 브랜치 | `main` — 통합 검증과 리뷰가 끝난 결과만 반영합니다 |
 | 실행 단위 | Frontend, Backend, MCP Client, Price·News·Disclosure·Community MCP의 일곱 서비스 |
-| 필수 산출물 | `doc/`의 API 명세서·DB 설계서·화면 설계서·개발 계획, `doc/diagrams/`의 Mermaid 원본, 루트 `README.md` |
-| 기준 문서 | `docs/FINAL_ARCHITECTURE.md`, `shared/CONNECTION_CONTRACT.md`, `shared/contracts/` |
+| 필수 산출물 | `docs/specs/`의 API 명세서·DB 설계서·화면 설계서, `docs/planning/plan.md`, `docs/architecture/diagrams/`의 Mermaid 원본, `docs/architecture/agent-architecture.md`·`docs/reports/agent-test-report.md`, 루트 `README.md` |
+| 기준 문서 | `docs/architecture/FINAL_ARCHITECTURE.md`, `shared/CONNECTION_CONTRACT.md`, `shared/contracts/` |
 | 최종 확인 | 문서 경로·링크, 고정 포트, 데모 계정, 비밀 값 미포함, Mermaid 문법, 전체 왕복과 미지원·부분 실패 시나리오를 확인합니다 |

@@ -2,7 +2,7 @@
 
 주식 정보 도우미 **살래? 말래?**의 Backend REST API, MCP Client 내부 API, 네 MCP 서버의 Tool 명세입니다. 이 서비스는 종목을 추천하지 않으며 현재가·뉴스·전자공시·커뮤니티 반응을 연결해 사용자가 확인할 정보를 설명합니다.
 
-- 지원 범위: [`shared/supported_companies.json`](../shared/supported_companies.json)의 2026년 9월 1일 기준 KOSPI 시가총액 상위 20개 보통주 기업
+- 지원 범위: [`shared/supported_companies.json`](../../shared/supported_companies.json)의 2026년 9월 1일 기준 KOSPI 시가총액 상위 20개 보통주 기업
 - Backend: `http://BACKEND_HOST:8000` · Swagger: `/docs`
 - MCP Client: `http://MCP_CLIENT_HOST:8010`
 - MCP 서버: FastMCP Streamable HTTP `/mcp`
@@ -529,8 +529,8 @@ Health는 `status:ok`, `service:community_mcp`, `mock` 여부를 반환합니다
 
 | 영역 | 파일 |
 |---|---|
-| 공통 계약 | [`shared/CONNECTION_CONTRACT.md`](../shared/CONNECTION_CONTRACT.md), [`shared/contracts/errors/README.md`](../shared/contracts/errors/README.md) |
-| Backend | [`shared/contracts/frontend_backend/README.md`](../shared/contracts/frontend_backend/README.md), `backend/app/main.py`, `backend/app/routers/*/router.py`, `backend/app/schemas/*.py` |
-| MCP Client | [`shared/contracts/analysis/README.md`](../shared/contracts/analysis/README.md), `mcp_client/app/api/routes.py`, `mcp_client/app/schemas/analysis.py` |
-| MCP Tool | [`shared/contracts/price/README.md`](../shared/contracts/price/README.md), [`news`](../shared/contracts/news/README.md), [`disclosure`](../shared/contracts/disclosure/README.md), [`community`](../shared/contracts/community/README.md), 각 `mcp_servers/*/app/tools/*.py` |
-| 투자 성향 | [`shared/contracts/user_profile/README.md`](../shared/contracts/user_profile/README.md), `backend/app/schemas/profile.py` |
+| 공통 계약 | [`shared/CONNECTION_CONTRACT.md`](../../shared/CONNECTION_CONTRACT.md), [`shared/contracts/errors/README.md`](../../shared/contracts/errors/README.md) |
+| Backend | [`shared/contracts/frontend_backend/README.md`](../../shared/contracts/frontend_backend/README.md), `backend/app/main.py`, `backend/app/routers/*/router.py`, `backend/app/schemas/*.py` |
+| MCP Client | [`shared/contracts/analysis/README.md`](../../shared/contracts/analysis/README.md), `mcp_client/app/api/routes.py`, `mcp_client/app/schemas/analysis.py` |
+| MCP Tool | [`shared/contracts/price/README.md`](../../shared/contracts/price/README.md), [`news`](../../shared/contracts/news/README.md), [`disclosure`](../../shared/contracts/disclosure/README.md), [`community`](../../shared/contracts/community/README.md), 각 `mcp_servers/*/app/tools/*.py` |
+| 투자 성향 | [`shared/contracts/user_profile/README.md`](../../shared/contracts/user_profile/README.md), `backend/app/schemas/profile.py` |

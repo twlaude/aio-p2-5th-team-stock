@@ -34,7 +34,7 @@
 
 ## 4. 제출 산출물
 
-발표는 README 기반으로 진행한다. 필수 산출물 두 개는 [에이전트 아키텍처 설계서](agent-architecture.md)와 [에이전트 시험 결과 보고서](agent-test-report.md)이며, README 5절 문서표와 6절 팀별 작성 영역에 연결되어 있다.
+발표는 README 기반으로 진행한다. 필수 산출물 두 개는 [에이전트 아키텍처 설계서](../architecture/agent-architecture.md)와 [에이전트 시험 결과 보고서](../reports/agent-test-report.md)이며, README 5절 문서표와 6절 팀별 작성 영역에 연결되어 있다.
 
 ## 5. 20분 발표 흐름
 
