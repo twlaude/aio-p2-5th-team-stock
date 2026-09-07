@@ -73,17 +73,17 @@ flowchart TD
 
 ## 5. Agent Profile 공통 구조
 
-현재 코드의 `StockAnalysisAgent` dataclass에는 세 필드만 있습니다. 제출용 Profile의 나머지 필드는 아래처럼 정의하며 실제 코드 필드와 구분합니다.
+`app/agents/stock_analysis.py`의 `StockAnalysisAgent` dataclass가 Profile이며 Runtime이 `allowed_tools`를 실행 경계로 사용합니다. `instructions`는 `app/prompts/analysis.py`의 `ANALYSIS_INSTRUCTIONS`를 그대로 참조합니다.
 
-| 필드 | 값 또는 요약 | 코드 반영 여부 |
-| --- | --- | --- |
-| `agent_id` | `stock-analysis` | `app/agents/stock_analysis.py` |
-| `name` | Stock Analysis Agent | 문서 정의, dataclass 필드 없음 |
-| `description` | 네 소스의 현재 상황과 공식 근거를 설명하는 주식 정보 도우미 | 문서 정의, dataclass 필드 없음 |
-| `goal` | 네 종류의 자료를 비교해 추천 없이 현재 관심 정도와 확인 근거를 설명한다. | dataclass 실제 기본값 |
-| `example_question` | 삼성전자 | 문서 정의, Backend는 회사명/6자리 코드 완전일치만 지원 |
-| `instructions` | 지시·예측 금지, 계산 결과 유지, 출처 없는 사실 금지, 제한 명시, 성향별 확인 순서 | Profile 필드는 없고 `app/prompts/analysis.py`의 `ANALYSIS_INSTRUCTIONS`로 전달 |
-| `allowed_tools` | `frozenset({"get_disclosure_detail"})` | dataclass 및 Runtime 검사 |
+| 필드 | 값 또는 요약 |
+| --- | --- |
+| `agent_id` | `stock-analysis` |
+| `name` | Stock Analysis Agent |
+| `goal` | 네 종류의 자료를 비교해 추천 없이 현재 관심 정도와 확인 근거를 설명한다. |
+| `description` | 현재가·뉴스·공시·커뮤니티 반응을 근거로 현재 상황을 설명하는 주식 정보 도우미. 추천·목표주가·예측은 하지 않는다. |
+| `example_question` | 삼성전자 (Backend는 회사명 또는 6자리 코드 완전일치만 지원) |
+| `instructions` | 지시·예측 금지, 계산 결과 유지, 출처 없는 사실 금지, 제한 명시, 성향별 확인 순서 (`ANALYSIS_INSTRUCTIONS`) |
+| `allowed_tools` | `frozenset({"get_disclosure_detail"})` |
 
 ## 6. Agent별 설계
 
