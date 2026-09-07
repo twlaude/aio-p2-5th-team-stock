@@ -78,6 +78,23 @@ pre {
   gap: 12px;
 }
 
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: var(--r-pill);
+  color: var(--c-body);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  background: var(--c-tint);
+  color: var(--c-ink);
+}
+
 .nav__caption {
   color: var(--c-sub);
   font-size: 13px;
