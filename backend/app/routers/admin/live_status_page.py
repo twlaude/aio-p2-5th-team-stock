@@ -122,7 +122,7 @@ _HTML_TEMPLATE = """<!DOCTYPE html>
 
   <section>
     <h2>최근 실패 기록</h2>
-    <p class="desc">실패했거나 일부 서버가 답을 못 준 분석만 모은 것. 같은 서버 이름이 반복되면 그 서버가 문제.</p>
+    <p class="desc">최근 7일 동안 실패했거나 일부 서버가 답을 못 준 분석만 모은 것. 같은 서버 이름이 반복되면 그 서버가 문제. 왼쪽은 7일 전체 집계, 오른쪽은 그중 최신 20건이라 오래된 실패는 집계에만 남는다.</p>
     <p id="failures-status" class="desc"></p>
     <div class="table-wrap narrow"><table><thead><tr><th>서버</th><th>최근 7일 실패 횟수</th></tr></thead><tbody id="failure-counts-body"></tbody></table></div>
     <div class="table-wrap"><table><thead><tr><th>시각 <span class="tz"></span></th><th>사용자</th><th>종목</th><th>상태</th><th>실패한 서버</th></tr></thead><tbody id="failures-body"></tbody></table></div>
