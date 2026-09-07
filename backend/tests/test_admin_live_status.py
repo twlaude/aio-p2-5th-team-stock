@@ -68,8 +68,11 @@ def test_system_shape_and_independent_health(client, monkeypatch):
     assert all(url.path == "/health" for url in urls)
     assert body["postgres"]["ok"] is True
     assert all(isinstance(d["size_mb"], (int, float)) for d in body["postgres"]["databases"])
-    assert len(body["postgres"]["tables"]) == 4
+    tables = body["postgres"]["tables"]
+    assert {t["database"] for t in tables} == {d["name"] for d in body["postgres"]["databases"]}
+    assert all(isinstance(t["rows"], int) for t in tables)
     assert body["redis"]["ok"] is True
+    assert all({"name", "type", "ttl_seconds"} <= set(k) for k in body["redis"]["keys"])
 
 
 def test_system_survives_postgres_and_redis_failure(client, monkeypatch):

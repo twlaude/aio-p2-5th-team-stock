@@ -8,6 +8,8 @@ import redis.asyncio as redis
 from app.core.config import _MCP_SERVER_PORTS, settings
 from app.repositories import system_repository
 
+_MAX_KEYS = 50  # 키 목록은 상태 확인용이라 이 이상은 보여주지 않는다
+
 _ROLES = {
     "mcp_client": "4개 MCP를 묶어서 LLM 분석을 만드는 곳",
     "price_mcp": "주가·시세(한국투자증권 API)",
@@ -51,15 +53,22 @@ async def _postgres() -> tuple[dict, dict]:
 
 async def _redis() -> dict:
     result = {"ok": False, "error": None, "keys_in_db": 0, "used_memory_human": "",
-              "connected_clients": 0, "uptime_days": 0, "short_term_keys": 0, "last_event_at": None}
+              "connected_clients": 0, "uptime_days": 0, "short_term_keys": 0, "last_event_at": None, "keys": []}
     try:
         async with asyncio.timeout(5):
             async with redis.from_url(settings.redis_url, decode_responses=True, socket_timeout=3) as client:
                 info = await client.info()
                 result.update(keys_in_db=await client.dbsize(), uptime_days=info["uptime_in_days"],
                               **{key: info[key] for key in ("used_memory_human", "connected_clients")})
-                keys = {key async for key in client.scan_iter(match="backend:short_term:*")}
-                result.update(short_term_keys=len(keys), last_event_at=await client.get("backend:last_event_at"), ok=True)
+                names = sorted([key async for key in client.scan_iter(count=100)])[:_MAX_KEYS]
+                async with client.pipeline(transaction=False) as pipe:
+                    for name in names:
+                        pipe.type(name).ttl(name)
+                    meta = await pipe.execute()
+                keys = [{"name": name, "type": meta[i * 2], "ttl_seconds": meta[i * 2 + 1]}
+                        for i, name in enumerate(names)]
+                result.update(keys=keys, short_term_keys=sum(k["name"].startswith("backend:short_term:") for k in keys),
+                              last_event_at=await client.get("backend:last_event_at"), ok=True)
     except Exception as exc:
         result["error"] = str(exc) or type(exc).__name__
     return result
