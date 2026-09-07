@@ -171,7 +171,7 @@ async function guestShot(browser, gate) {
   if (ambient < 6) throw new Error(`${name} expected ambient topics around one-liner, got ${ambient}`);
   if (gate) {
     await page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).click();
-    await page.getByText("회원가입이 필요합니다!").waitFor();
+    await page.getByText("여기부터는 로그인이 필요해요").waitFor();
   }
   await save(page, name);
   assertClean();
@@ -277,7 +277,7 @@ async function mobileGateAndLogin(browser) {
   await gate.page.getByLabel("기업명 또는 종목코드 6자리").fill("삼성전자");
   await gate.page.getByRole("button", { name: /살펴보기/ }).click();
   await gate.page.getByRole("button", { name: "왜 이렇게 판단했나요?" }).click();
-  await gate.page.getByText("회원가입이 필요합니다!").waitFor();
+  await gate.page.getByText("여기부터는 로그인이 필요해요").waitFor();
   await assertNoOverflow(gate.page, "mobile-gate");
   const fits = await gate.page.evaluate(() => {
     const rect = document.querySelector(".guest-gate__card")?.getBoundingClientRect();

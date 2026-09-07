@@ -28,13 +28,13 @@ const copy = {
   },
   news: {
     title: "최신 뉴스",
-    footer: "원문 링크 제공 · 제목만으로 원인 단정 금지",
+    footer: "원문 링크 제공 · 제목만 보고 판단하지 않게 주의하세요",
     failedBody: "뉴스 데이터를 불러오지 못해 이 부분은 뺐어요. 남은 공식 자료만으로 정리했어요.",
     failedFooter: "뉴스 부분 실패 · status: partial_success",
   },
   disclosure: {
     title: "기업보고서 · 공시",
-    footer: "공식 자료와 AI 해석은 구분 표시",
+    footer: "기업의 공식 발표와 AI 요약을 나눠서 보여줘요",
     failedBody: "공시 데이터를 불러오지 못해 이 부분은 뺐어요. 뉴스와 가격 흐름만으로 정리했어요.",
     failedFooter: "공시 부분 실패 · status: partial_success",
   },

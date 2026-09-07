@@ -46,7 +46,7 @@ export function GuestGate({ companyName, query }: GuestGateProps) {
       </div>
       <div className="guest-gate__card">
         <Mascot state="reveal" size={88} />
-        <h2>회원가입이 필요합니다!</h2>
+        <h2>여기부터는 로그인이 필요해요</h2>
         <p>근거와 내 성향에 맞춘 확인 포인트는<br />로그인한 회원에게만 보여드려요.</p>
         <button type="button" onClick={() => navigate(preparePendingReturn(query))}>
           <Lock size={18} aria-hidden="true" />
