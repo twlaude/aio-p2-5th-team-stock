@@ -14,7 +14,8 @@ async def snapshot() -> tuple[dict, dict]:
                    round(pg_database_size(d.oid) / 1048576.0, 2)::double precision AS size_mb,
                    (SELECT count(*) FROM pg_stat_activity a WHERE a.datid = d.oid) AS connections
             FROM pg_database d
-            WHERE NOT d.datistemplate AND d.datname <> 'postgres'
+            -- 같은 서버에 다른 프로젝트 DB도 있으므로 팀 DB(현재 DB + *_team)만 보여준다.
+            WHERE NOT d.datistemplate AND (d.datname = current_database() OR d.datname LIKE '%\_team')
             ORDER BY d.datname
         """)
         databases = await cur.fetchall()
