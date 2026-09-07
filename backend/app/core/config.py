@@ -1,7 +1,7 @@
 from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-# 공통 계약(shared/CONNECTION_CONTRACT.md) 확정 포트. mcp_client_url과 같은 호스트에 떠 있다고 가정한다.
+# 공통 계약(docs/specs/CONNECTION_CONTRACT.md) 확정 포트. mcp_client_url과 같은 호스트에 떠 있다고 가정한다.
 _MCP_SERVER_PORTS = {
     "price_mcp": 8020,
     "news_mcp": 8021,

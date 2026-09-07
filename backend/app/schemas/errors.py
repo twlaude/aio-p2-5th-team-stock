@@ -14,7 +14,7 @@ class ErrorResponse(BaseModel):
     error: ErrorDetail
 
 
-# shared/contracts/errors/README.md의 HTTP 상태 표. 정의 안 된 상태는 500(내부 오류)으로 취급한다.
+# docs/specs/contracts/errors.md의 HTTP 상태 표. 정의 안 된 상태는 500(내부 오류)으로 취급한다.
 STATUS_HTTP_CODE: dict[str, int] = {
     "timeout": 504,
     "external_api_error": 500,

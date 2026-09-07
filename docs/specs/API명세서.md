@@ -529,8 +529,8 @@ Health는 `status:ok`, `service:community_mcp`, `mock` 여부를 반환합니다
 
 | 영역 | 파일 |
 |---|---|
-| 공통 계약 | [`shared/CONNECTION_CONTRACT.md`](../../shared/CONNECTION_CONTRACT.md), [`shared/contracts/errors/README.md`](../../shared/contracts/errors/README.md) |
-| Backend | [`shared/contracts/frontend_backend/README.md`](../../shared/contracts/frontend_backend/README.md), `backend/app/main.py`, `backend/app/routers/*/router.py`, `backend/app/schemas/*.py` |
-| MCP Client | [`shared/contracts/analysis/README.md`](../../shared/contracts/analysis/README.md), `mcp_client/app/api/routes.py`, `mcp_client/app/schemas/analysis.py` |
-| MCP Tool | [`shared/contracts/price/README.md`](../../shared/contracts/price/README.md), [`news`](../../shared/contracts/news/README.md), [`disclosure`](../../shared/contracts/disclosure/README.md), [`community`](../../shared/contracts/community/README.md), 각 `mcp_servers/*/app/tools/*.py` |
-| 투자 성향 | [`shared/contracts/user_profile/README.md`](../../shared/contracts/user_profile/README.md), `backend/app/schemas/profile.py` |
+| 공통 계약 | [`docs/specs/CONNECTION_CONTRACT.md`](CONNECTION_CONTRACT.md), [`docs/specs/contracts/errors.md`](contracts/errors.md) |
+| Backend | [`docs/specs/contracts/frontend_backend.md`](contracts/frontend_backend.md), `backend/app/main.py`, `backend/app/routers/*/router.py`, `backend/app/schemas/*.py` |
+| MCP Client | [`docs/specs/contracts/analysis.md`](contracts/analysis.md), `mcp_client/app/api/routes.py`, `mcp_client/app/schemas/analysis.py` |
+| MCP Tool | `mcp_servers/price_mcp/app/schemas/`, `mcp_servers/news_mcp/app/schemas/`, [`disclosure`](contracts/disclosure.md), [`community`](contracts/community.md), 각 `mcp_servers/*/app/tools/*.py` |
+| 투자 성향 | `backend/app/schemas/`, `backend/app/schemas/profile.py` |

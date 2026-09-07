@@ -10,7 +10,7 @@
 | 김인혜 | Disclosure MCP(OpenDART 수집·사업보고서 RAG·pgvector) |
 | 박성엽 | 사용자 관점 검수·피드백(화면 흐름 점검, 문구·설명 검토, 발표 리허설 피드백) |
 
-팀은 화면, 사용자·저장소, 분석 오케스트레이션, 데이터 제공 서버를 독립된 실행 단위로 나눠 개발합니다. 각 실행 단위의 연결은 `shared/CONNECTION_CONTRACT.md`와 `shared/contracts/`를 기준으로 맞춥니다.
+팀은 화면, 사용자·저장소, 분석 오케스트레이션, 데이터 제공 서버를 독립된 실행 단위로 나눠 개발합니다. 각 실행 단위의 연결은 `docs/specs/CONNECTION_CONTRACT.md`와 `docs/specs/contracts/`를 기준으로 맞춥니다.
 
 ---
 
@@ -106,7 +106,7 @@
 |---|---|
 | 브랜치 | `main`은 통합이 끝난 상태로 유지합니다. 기능 작업은 별도 브랜치에서 진행하고 PR 리뷰 후 병합합니다 |
 | 담당 범위 | 서비스별 폴더 주 담당을 지킵니다. 다른 담당의 파일을 바꿔야 하면 영향 범위와 계약 변경을 먼저 공유합니다 |
-| 연결 계약 | 포트·Endpoint·Tool·필드 변경은 `shared/CONNECTION_CONTRACT.md`와 `shared/contracts/`에서 먼저 합의하고 구현·테스트·문서를 함께 갱신합니다 |
+| 연결 계약 | 포트·Endpoint·Tool·필드 변경은 `docs/specs/CONNECTION_CONTRACT.md`와 `docs/specs/contracts/`에서 먼저 합의하고 구현·테스트·문서를 함께 갱신합니다 |
 | 사용자 정보 | MCP Client에는 성향 네 값만 전달할 수 있으며 사용자 ID·비밀번호·JWT·개인정보는 전달하지 않습니다. MCP 서버에는 성향도 전달하지 않습니다 |
 | 비밀 값 | 실제 `.env`, API Key, DB 비밀번호, 토큰은 커밋하지 않습니다. `.env.example`에는 이름과 예시 형식만 둡니다 |
 | 데이터 표현 | 확인하지 못한 값은 추측해 채우지 않습니다. 일부 소스 실패는 `partial_success`와 실패 목록으로 그대로 드러냅니다 |
@@ -138,5 +138,5 @@
 | 기본 브랜치 | `main` — 통합 검증과 리뷰가 끝난 결과만 반영합니다 |
 | 실행 단위 | Frontend, Backend, MCP Client, Price·News·Disclosure·Community MCP의 일곱 서비스 |
 | 필수 산출물 | `docs/specs/`의 API 명세서·DB 설계서·화면 설계서, `docs/planning/plan.md`, `docs/architecture/diagrams/`의 Mermaid 원본, `docs/architecture/agent-architecture.md`·`docs/reports/agent-test-report.md`, 루트 `README.md` |
-| 기준 문서 | `docs/architecture/FINAL_ARCHITECTURE.md`, `shared/CONNECTION_CONTRACT.md`, `shared/contracts/` |
+| 기준 문서 | `docs/architecture/FINAL_ARCHITECTURE.md`, `docs/specs/CONNECTION_CONTRACT.md`, `docs/specs/contracts/` |
 | 최종 확인 | 문서 경로·링크, 고정 포트, 데모 계정, 비밀 값 미포함, Mermaid 문법, 전체 왕복과 미지원·부분 실패 시나리오를 확인합니다 |
