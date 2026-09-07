@@ -27,10 +27,12 @@ const SearchContext = createContext<SearchStore | null>(null);
 
 interface SearchProviderProps {
   token: string | undefined;
+  /** 사용자가 직접 로그아웃한 시각. 바뀌면 결과를 비우고 초기 화면으로 돌아간다 (토큰 만료 자가치유와 구분). */
+  logoutAt?: number;
   children: ReactNode;
 }
 
-export function SearchProvider({ token, children }: SearchProviderProps) {
+export function SearchProvider({ token, logoutAt = 0, children }: SearchProviderProps) {
   const [query, setQuery] = useState("");
   const [submittedQuery, setSubmittedQuery] = useState<string | null>(null);
   const [status, setStatus] = useState<SearchStatus>("idle");
@@ -85,18 +87,26 @@ export function SearchProvider({ token, children }: SearchProviderProps) {
     clearPendingQuery();
   }, []);
 
-  // 로그인/로그아웃(토큰 변화) 시: 보류된 종목이 있으면 자동 재분석 (로그인 후 원래 종목 상세로 복귀)
+  // 토큰 변화 시: 로그인(또는 만료 자가치유로 토큰이 사라진 경우)은 보류 종목을 자동 재분석해 원래 화면으로 복귀.
+  // 사용자가 직접 로그아웃한 경우(logoutAt 갱신)는 결과를 비우고 초기 화면으로 돌아간다.
   const previousToken = useRef(token);
+  const previousLogoutAt = useRef(logoutAt);
   useEffect(() => {
     if (previousToken.current === token) {
       return;
     }
     previousToken.current = token;
+    if (!token && logoutAt !== previousLogoutAt.current) {
+      previousLogoutAt.current = logoutAt;
+      reset();
+      setQuery("");
+      return;
+    }
     const pending = submittedQuery ?? readPendingQuery();
     if (pending) {
       void submit(pending);
     }
-  }, [token, submit, submittedQuery]);
+  }, [token, logoutAt, submit, reset, submittedQuery]);
 
   const value = useMemo<SearchStore>(
     () => ({ query, submittedQuery, status, result, error, runId, setQuery, submit, retry, reset }),

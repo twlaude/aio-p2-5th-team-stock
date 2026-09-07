@@ -18,9 +18,11 @@ export function App() {
     setSession(nextSession);
   };
 
+  const [logoutAt, setLogoutAt] = useState(0);
   const handleLogout = () => {
     clearAuthSession();
     setSession(null);
+    setLogoutAt(Date.now());
   };
 
   // 서버가 저장된 토큰을 거부하면(만료·시크릿 교체) live 어댑터가 세션을 지우고 이 이벤트를 쏜다 → 화면도 로그아웃 상태로.
@@ -33,7 +35,7 @@ export function App() {
   return (
     <div className="app-shell">
       <Nav session={session} onLogout={handleLogout} />
-      <SearchProvider token={session?.token}>
+      <SearchProvider token={session?.token} logoutAt={logoutAt}>
         <main className="page-shell">
           <Routes>
             <Route path="/intro" element={<IntroPage />} />
