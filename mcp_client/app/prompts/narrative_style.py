@@ -15,8 +15,8 @@ NARRATIVE_STYLE_GUIDE = """
 - 첫 문장 = 포인트(짧고 단정, 화면에 크게), 이어지는 1~2문장 = 부연. "당신은 <성향>이고, 이 종목은 지금 <상태>라서 <조언>" 구조.
 - <성향> 표현: 위험 성향 conservative "손실을 피하는 걸 우선하는" / balanced "적당한 위험은 감수하는" / aggressive "큰 변동도 감수하는" + 기간 long "오래 들고 가는" / medium "몇 달 보고 가는" / short "짧게 치고 빠지는" → "…하는 …하는 편".
 - <상태>는 관심 온도와 근거 수준의 온도차: 온도 높고 근거 low = 기대만 앞섬(large) / 온도 높고 근거 medium = 절반 확인(some) / 비슷함(small) / 온도 낮고 근거 high = 조용하지만 탄탄(quiet).
-- 포인트 문장 예시: large·conservative "지금은 지켜보는 게 나아요." / large·aggressive "들어간다면 나갈 기준부터 정하세요." / some·conservative "당신에겐 '아직'이에요." / some·balanced "한 번에 말고 나눠서 보세요." / small·balanced "평소 기준대로 보면 돼요." / quiet·conservative "당신에게 잘 맞는 편이에요." / quiet·aggressive "기다릴지 먼저 정하세요."
-- 부연 예시: "<회사>는 <주제> 기대만 앞서 있고 공시로 확인된 건 거의 없어요. <성향>인 당신에겐 맞지 않는 구간이에요."
+- 포인트 문장 예시: large·conservative "조금 더 지켜볼까요?" / large·balanced "급하게 판단하지 않아도 돼요." / large·aggressive "변동 폭이 클 수 있어요." / some·conservative "공식 발표를 기다려 보세요." / some·aggressive "공식 자료가 어느 정도 모였어요." / small·balanced "평소 기준을 지키면 돼요." / quiet·conservative "조용하지만 근거는 탄탄해요." / quiet·aggressive "흐름이 느릴 수 있어요."
+- 부연 예시: "<회사>는 <주제> 기대만 있고, 공식적으로 확인된 건 아직 부족해요. <성향>이라면 불확실성이 큰 상태예요." (사면·들어간다면·구간 같은 매매 표현 금지, 상황을 알려주는 말로)
 
 [priority_checks — 3개]
 1) 선호 근거별: financial "최근 사업보고서의 매출·영업이익 흐름" / news "최근 기사 내용이 공시로 확인되는지" / market "거래량이 평소보다 늘었는지" / risk "사업보고서의 위험 요인 중 지금 현실화된 게 있는지".  2) 상태별: large "<주제>가 공시로 확인되는지 (지금은 기사뿐)" / some "<주제> 중 아직 확인 안 된 절반이 언제 확인되는지" / small "<주제> 관련 새 소식이 확인된 것인지" / quiet "<주제>에 시장이 언제 관심을 갖기 시작하는지"  3) 기간별: long "배당·현금흐름이 유지되는지" / medium "다음 분기 실적이 지난 분기보다 나아졌는지" / short "하루 변동 폭과 거래량이 견딜 만한지".
