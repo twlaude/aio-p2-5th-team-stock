@@ -26,7 +26,7 @@ export function IntroHero() {
       </motion.div>
       <div className="intro-hero__copy">
         <h1 id="intro-title"><span>살까 말까 <br className="intro-mobile" />고민될 때,</span><span>한 줄부터 <br className="intro-mobile" />읽어봐요.</span></h1>
-        <p className="intro-hero__sub">뉴스·공시·시장 반응을 한 흐름으로 모아, 지금 확인할 것을 쉬운 말로 설명해요.</p>
+        <p className="intro-hero__sub">흩어진 뉴스·공시·시장 반응을 모아, 지금 봐야 할 것을 쉬운 말로 짚어줘요.</p>
         <IntroCta />
       </div>
       <div className="intro-hero__scene">

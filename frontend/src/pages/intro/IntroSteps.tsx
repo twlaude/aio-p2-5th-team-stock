@@ -5,19 +5,19 @@ import "./intro-steps.css";
 
 const STEPS = [
   {
-    title: "모아요",
-    desktop: "현재가, 최근 뉴스, 전자공시, 커뮤니티 반응을 한 번에 가져와요.",
-    mobile: "현재가, 뉴스, 전자공시, 커뮤니티 반응을 한 번에.",
+    title: "흩어진 정보를 모아요",
+    desktop: "현재가, 최근 뉴스, 전자공시, 사람들의 반응까지 한곳에 모아요.",
+    mobile: "현재가, 뉴스, 공시, 사람들의 반응까지 한곳에.",
   },
   {
-    title: "한 줄로 정리해요",
-    desktop: "공식적으로 확인된 것과 반응만 있는 것을 구분해서, 지금 볼 것을 한 문장으로 말해요.",
-    mobile: "확인된 것과 반응만 있는 것을 구분해서 한 문장으로.",
+    title: "핵심만 한 줄로 정리해요",
+    desktop: "확인된 사실과 반응을 가려내고, 지금 꼭 봐야 할 것을 한 문장으로 짚어줘요.",
+    mobile: "확인된 사실과 반응을 가려내서 한 문장으로.",
   },
   {
-    title: "출처를 붙여요",
-    desktop: "어떤 자료를 봤는지, 언제 기준인지 문장 옆에 같이 보여줘요.",
-    mobile: "어떤 자료를 언제 기준으로 봤는지 함께.",
+    title: "출처를 남겨요",
+    desktop: "어떤 자료를 언제 봤는지, 문장 옆에 출처를 그대로 적어둬요.",
+    mobile: "어떤 자료를 언제 봤는지 출처를 적어둬요.",
   },
 ];
 const TAGS = ["뉴스 3건", "공시 1건", "커뮤니티 · 반응만", "09-01 15:30 기준"];
@@ -121,7 +121,7 @@ export function IntroSteps() {
   }, []);
   return (
     <section className="intro-steps intro-content" aria-labelledby="intro-steps-heading">
-      <p id="intro-steps-heading" className="intro-steps__eyebrow">하는 일은 세 가지예요</p>
+      <p id="intro-steps-heading" className="intro-steps__eyebrow">이렇게 도와드려요</p>
       <div className="intro-steps__layout">
         <div ref={rows} className="intro-steps__rows">
           <svg className="intro-steps__progress" viewBox="0 0 2 100" preserveAspectRatio="none" aria-hidden="true">
