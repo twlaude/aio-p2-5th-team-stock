@@ -10,7 +10,7 @@
 |---|---|---|
 | 랜딩 페이지 | http://159.223.75.71:8501/intro | 서비스 소개 |
 | 서비스 (검색·분석) | http://159.223.75.71:8501/ | 데모 계정으로 로그인하면 회원 화면까지 확인할 수 있습니다 |
-| 관리자 실황 페이지 | http://159.223.75.71:8001/api/v1/admin/live-status | Basic Auth (`backend/.env`의 `ADMIN_USERNAME` / `ADMIN_PASSWORD`) |
+| 관리자 실황 페이지 | http://159.223.75.71:8501/api/v1/admin/live-status | Basic Auth (`backend/.env`의 `ADMIN_USERNAME` / `ADMIN_PASSWORD`) |
 
 `살래? 말래?`는 종목 추천, 목표주가, 수익률 예측을 제공하지 않습니다. 관심 온도는 시장의 관심 정도를 나타낼 뿐 상승 가능성이나 매수 점수가 아닙니다.
 
