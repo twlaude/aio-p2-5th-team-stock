@@ -168,6 +168,7 @@ export function EvidenceSection() {
               evidenceLevel: detail.evidence_level.level,
               sources,
               changeRate: result.price.change_rate,
+              newsAttention: detail.market_temperature.components?.news_attention ?? null,
             })}
           />
           <EvidenceSubsection

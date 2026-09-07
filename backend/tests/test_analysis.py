@@ -54,6 +54,13 @@ def test_market_temperature_weight_covered_default_and_passthrough(payload, expe
     assert temperature.weight_covered == expected
 
 
+def test_market_temperature_passes_components_through():
+    temperature = MarketTemperature(score=60, label="보통", data_coverage=["price", "news"], components={"news_attention": 21})
+
+    assert temperature.components == {"news_attention": 21}
+    assert MarketTemperature(score=60, label="보통", data_coverage=["price"]).components == {}
+
+
 @pytest.mark.parametrize("weight_covered", [-1, 101])
 def test_market_temperature_rejects_out_of_range_weight_covered(weight_covered):
     with pytest.raises(ValueError):

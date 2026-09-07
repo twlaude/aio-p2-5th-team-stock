@@ -94,6 +94,15 @@ describe("deriveGapCheck — 환호 vs 근거", () => {
     expect(gap.signals.some((s) => s.text.includes("반복"))).toBe(true);
     expect(gap.signals.some((s) => s.text.includes("공시로 확인된 내용이 없어요"))).toBe(true);
   });
+  it("뉴스 신호는 출처 건수가 아니라 평소 대비 속도(news_attention)로 만든다", () => {
+    const base = { temperatureScore: 70, evidenceLevel: "medium" as const, sources: news(5), changeRate: 0 };
+    expect(deriveGapCheck(base).signals.some((s) => s.text.includes("뉴스"))).toBe(false);
+    expect(deriveGapCheck({ ...base, newsAttention: 9 }).signals.some((s) => s.text.includes("뉴스"))).toBe(false);
+    expect(deriveGapCheck({ ...base, newsAttention: 12 }).signals.map((s) => s.text)).toContain("관련 뉴스가 평소보다 빠르게 쌓이고 있어요");
+    const fast = deriveGapCheck({ ...base, newsAttention: 21 }).signals.find((s) => s.text.includes("훨씬"));
+    expect(fast?.tone).toBe("warn");
+    expect(deriveGapCheck({ ...base, temperatureScore: 50, newsAttention: 21 }).signals.find((s) => s.text.includes("훨씬"))?.tone).toBe("info");
+  });
   it("관심 낮고 공식 확인 높으면 조용한 편", () => {
     const gap = deriveGapCheck({ temperatureScore: 42, evidenceLevel: "high", sources: [], changeRate: 0.2 });
     expect(gap.level).toBe("quiet");
