@@ -6,7 +6,7 @@
 
 ```bash
 set -o pipefail
-PY=/root/.venvs/team5-mcp-client/bin/python
+PY=/srv/team5/venvs/mcp-client/bin/python
 $PY tests/scenarios/agent_eval/capture_fixtures.py 2>&1 | sed -u 's/^/[TEST] /'
 $PY -m pytest tests/scenarios/agent_eval/test_harness.py -q 2>&1 | sed -u 's/^/[TEST] /'
 $PY tests/scenarios/agent_eval/run_eval.py --mode off --repeat 2 --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
@@ -34,7 +34,7 @@ Agent 원본 서술과 Workflow 종료 상태를 분리합니다. off의 런타�
 
 ```bash
 set -o pipefail
-PY=/root/.venvs/team5-mcp-client/bin/python
+PY=/srv/team5/venvs/mcp-client/bin/python
 $PY tests/scenarios/agent_eval/run_eval.py --mode off --rescore-off tests/scenarios/agent_eval/results/round1/off.jsonl --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
 $PY tests/scenarios/agent_eval/run_eval.py --mode on --repeat 2 --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
 $PY tests/scenarios/agent_eval/report.py --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
@@ -59,7 +59,7 @@ v3는 수집한 해당 소스 원문과 일치하는 직접 인용 및 수치를
 
 ```bash
 set -o pipefail
-PY=/root/.venvs/team5-mcp-client/bin/python
+PY=/srv/team5/venvs/mcp-client/bin/python
 $PY -m pytest tests/scenarios/agent_eval/test_harness.py -q 2>&1 | sed -u 's/^/[TEST] /'
 $PY tests/scenarios/agent_eval/run_eval.py --mode off --detail-failure-probe --out tests/scenarios/agent_eval/results/context-v3 2>&1 | sed -u 's/^/[TEST] /'
 $PY tests/scenarios/agent_eval/run_eval.py --mode on --detail-failure-probe --out tests/scenarios/agent_eval/results/context-v3 2>&1 | sed -u 's/^/[TEST] /'
