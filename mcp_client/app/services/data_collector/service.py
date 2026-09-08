@@ -7,7 +7,7 @@ from app.clients.community import CommunityMCPClient
 from app.clients.disclosure import DisclosureMCPClient
 from app.clients.news import NewsMCPClient
 from app.clients.price import PriceMCPClient
-from app.schemas.analysis import CollectedData, CompanyRef, ToolFailure
+from app.schemas.analysis import CollectedData, CompanyRef, FilterStats, ToolFailure
 from app.services.progress_reporter import ProgressReporter
 
 
@@ -121,8 +121,6 @@ class DataCollector:
             *(run_one(name, service, job) for name, (service, job) in jobs.items())
         )
 
-        from app.schemas.analysis import FilterStats
-
         results: dict[str, dict[str, Any]] = {}
         failures: list[ToolFailure] = []
         completed_tools: list[str] = []
@@ -137,14 +135,7 @@ class DataCollector:
                 completed_tools.append(tool_name)
 
         annual_report_data = results["search_annual_report"]
-        total_retrieved = len(annual_report_data.get("matched_passages", []))
-        total_filtered_out = annual_report_data.get("filtered_out", 0)
-
-        report_filter_stats = FilterStats(
-            total_retrieved=total_retrieved,
-            total_filtered_out=total_filtered_out,
-            filter_threshold=0.7,
-        )
+        report_filter_stats = self._annual_report_filter_stats(annual_report_data)
 
         return CollectedData(
             price=results["get_stock_quote"],
@@ -157,4 +148,13 @@ class DataCollector:
             failures=failures,
             completed_tools=completed_tools,
             failed_tools=failed_tools,
+        )
+
+    def _annual_report_filter_stats(self, annual_report: dict[str, Any]) -> FilterStats:
+        passages = annual_report.get("matched_passages")
+        filtered_out = annual_report.get("filtered_out")
+        return FilterStats(
+            total_retrieved=len(passages) if isinstance(passages, list) else 0,
+            total_filtered_out=filtered_out if isinstance(filtered_out, int) else 0,
+            filter_threshold=self.disclosure.annual_report_min_score,
         )

@@ -7,8 +7,9 @@ REPORT_QUERY = "최근 사업 현황, 성장 계획, 주요 위험 요인, 실�
 
 
 class DisclosureMCPClient:
-    def __init__(self, client: MCPToolClient) -> None:
+    def __init__(self, client: MCPToolClient, annual_report_min_score: float = 0.0) -> None:
         self.client = client
+        self.annual_report_min_score = annual_report_min_score
 
     async def get_recent_disclosures(self, company_name: str, stock_code: str) -> dict[str, Any]:
         return await self.client.call_tool(
@@ -35,7 +36,7 @@ class DisclosureMCPClient:
             },
         )
 
-    async def search_annual_report(self, company_name: str, stock_code: str, min_score: float = 0.7) -> dict[str, Any]:
+    async def search_annual_report(self, company_name: str, stock_code: str) -> dict[str, Any]:
         return await self.client.call_tool(
             "search_annual_report",
             {
@@ -43,7 +44,7 @@ class DisclosureMCPClient:
                 "stock_code": stock_code,
                 "query": REPORT_QUERY,
                 "top_k": 5,
-                "min_score": min_score,
+                "min_score": self.annual_report_min_score,
             },
         )
 

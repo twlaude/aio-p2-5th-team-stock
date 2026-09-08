@@ -33,4 +33,5 @@ curl http://localhost:8010/internal/v1/mcp-status   # 네 MCP 연결 확인
 
 - `PRICE_MCP_URL` `NEWS_MCP_URL` `DISCLOSURE_MCP_URL` `COMMUNITY_MCP_URL` — 기본 8020~8023
 - `OPENAI_MODEL` · `OPENAI_REASONING_EFFORT` · `MAX_AGENT_STEPS` — Agent 실행 상한
+- `ANNUAL_REPORT_MIN_SCORE` — 사업보고서 벡터검색 유사도 하한(0~1, 기본 0.0=필터 없음). 실측 상위 점수가 0.35~0.51이라 0.5 이상은 결과가 비니 주의
 - `WORKFLOW_TIMEOUT_SECONDS` · `MCP_REQUEST_TIMEOUT_SECONDS` — 한 요청의 시간 제한
