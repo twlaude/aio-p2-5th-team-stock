@@ -121,6 +121,8 @@ class DataCollector:
             *(run_one(name, service, job) for name, (service, job) in jobs.items())
         )
 
+        from app.schemas.analysis import FilterStats
+
         results: dict[str, dict[str, Any]] = {}
         failures: list[ToolFailure] = []
         completed_tools: list[str] = []
@@ -134,13 +136,24 @@ class DataCollector:
                 results[tool_name] = result or {"status": "no_data"}
                 completed_tools.append(tool_name)
 
+        annual_report_data = results["search_annual_report"]
+        total_retrieved = len(annual_report_data.get("matched_passages", []))
+        total_filtered_out = annual_report_data.get("filtered_out", 0)
+
+        report_filter_stats = FilterStats(
+            total_retrieved=total_retrieved,
+            total_filtered_out=total_filtered_out,
+            filter_threshold=0.7,
+        )
+
         return CollectedData(
             price=results["get_stock_quote"],
             news=results["search_news"],
             disclosures=results["get_recent_disclosures"],
             material_disclosures=results["get_material_disclosures"],
-            annual_report=results["search_annual_report"],
+            annual_report=annual_report_data,
             community=results["get_community_reaction"],
+            report_filter_stats=report_filter_stats,
             failures=failures,
             completed_tools=completed_tools,
             failed_tools=failed_tools,
