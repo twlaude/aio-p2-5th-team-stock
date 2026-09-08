@@ -2,14 +2,14 @@
 
 > 뉴스·전자공시·커뮤니티 반응·현재가를 한 흐름으로 연결해, 지금 확인해야 할 정보를 근거와 함께 설명하는 주식 정보 도우미입니다.
 
-앙코르 AI 오케스트레이션 1기 · 2차 프로젝트 · 5팀
+엔코아 AI 오케스트레이션 1기 · 2차 프로젝트 · 5팀
 
 ### 접속 주소
 
-| 화면 | 주소 | 비고 |
-|---|---|---|
-| 랜딩 페이지 | http://159.223.75.71:8501/intro | 서비스 소개 |
-| 서비스 (검색·분석) | http://159.223.75.71:8501/ | 데모 계정으로 로그인하면 회원 화면까지 확인할 수 있습니다 |
+| 화면               | 주소                                               | 비고                                                              |
+| ------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
+| 랜딩 페이지        | http://159.223.75.71:8501/intro                    | 서비스 소개                                                       |
+| 서비스 (검색·분석) | http://159.223.75.71:8501/                         | 데모 계정으로 로그인하면 회원 화면까지 확인할 수 있습니다         |
 | 관리자 실황 페이지 | http://159.223.75.71:8501/api/v1/admin/live-status | Basic Auth (`backend/.env`의 `ADMIN_USERNAME` / `ADMIN_PASSWORD`) |
 
 `살래? 말래?`는 종목 추천, 목표주가, 수익률 예측을 제공하지 않습니다. 관심 온도는 시장의 관심 정도를 나타낼 뿐 상승 가능성이나 매수 점수가 아닙니다.
@@ -30,21 +30,21 @@
 
 <a href="docs/architecture/diagrams/service-flow.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/architecture/diagrams/service-flow-dark.svg"><img src="docs/architecture/diagrams/service-flow.svg" alt="종목 분석 요청 흐름" width="100%"></picture></a>
 
-| 단계 | 하는 일 |
-|---|---|
-| ① 종목 검색 | 기업명 또는 6자리 종목 코드를 입력합니다 |
-| ② 지원 여부 확인 | Backend가 `shared/supported_companies.json`의 KOSPI 시가총액 상위 20종목인지 먼저 확인합니다 |
-| ③ 자료 수집 | MCP Client가 현재가, 최근 뉴스, 정기공시, 최근 주요 공시, 사업보고서, 커뮤니티 반응의 6개 작업을 병렬 실행합니다 |
-| ④ 규칙 계산 | 거래량·뉴스·커뮤니티 활동과 FGI로 관심 온도를, 최근 30일 주요 공시와 현재 이슈의 매칭으로 근거 수준을 계산합니다 |
-| ⑤ Agent 설명 | `gpt-5.6-luna`가 수집된 근거를 설명하고, 필요할 때만 최근 공시 상세를 최대 2건 추가 조회합니다 |
-| ⑥ 접근 수준 적용 | 비회원은 가격과 한 줄 결론을 보고, 회원은 상세 근거와 성향별 확인 포인트까지 봅니다 |
+| 단계             | 하는 일                                                                                                          |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------- |
+| ① 종목 검색      | 기업명 또는 6자리 종목 코드를 입력합니다                                                                         |
+| ② 지원 여부 확인 | Backend가 `shared/supported_companies.json`의 KOSPI 시가총액 상위 20종목인지 먼저 확인합니다                     |
+| ③ 자료 수집      | MCP Client가 현재가, 최근 뉴스, 정기공시, 최근 주요 공시, 사업보고서, 커뮤니티 반응의 6개 작업을 병렬 실행합니다 |
+| ④ 규칙 계산      | 거래량·뉴스·커뮤니티 활동과 FGI로 관심 온도를, 최근 30일 주요 공시와 현재 이슈의 매칭으로 근거 수준을 계산합니다 |
+| ⑤ Agent 설명     | `gpt-5.6-luna`가 수집된 근거를 설명하고, 필요할 때만 최근 공시 상세를 최대 2건 추가 조회합니다                   |
+| ⑥ 접근 수준 적용 | 비회원은 가격과 한 줄 결론을 보고, 회원은 상세 근거와 성향별 확인 포인트까지 봅니다                              |
 
 ### 공개 범위
 
-| 사용자 | 제공 내용 |
-|---|---|
-| 비회원 | 기업명, 현재 가격·등락, 스파크라인, 공통 한 줄 설명 |
-| 회원 | 비회원 결과 + 관심 온도 + 근거 수준 + 뉴스·공시·커뮤니티 근거 + 성향별 확인 포인트 |
+| 사용자 | 제공 내용                                                                          |
+| ------ | ---------------------------------------------------------------------------------- |
+| 비회원 | 기업명, 현재 가격·등락, 스파크라인, 공통 한 줄 설명                                |
+| 회원   | 비회원 결과 + 관심 온도 + 근거 수준 + 뉴스·공시·커뮤니티 근거 + 성향별 확인 포인트 |
 
 비회원이 `왜 이렇게 판단했나요?`를 누르면 근거 영역 대신 로그인 게이트가 표시됩니다. 로그인 뒤에는 보던 종목으로 돌아와 회원 분석을 다시 실행합니다.
 
@@ -62,15 +62,15 @@ Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 
 
 ### 일곱 서비스의 책임
 
-| 서비스 | 포트 | 책임 |
-|---|---:|---|
-| Frontend | 8501 | 검색, 로그인, 공개 결과, 근거, 개인화 확인 포인트를 표시합니다 |
-| Backend | 8000 | 지원 기업, JWT, 투자 성향, Memory, 분석 이력과 접근 수준별 응답을 담당합니다 |
-| MCP Client | 8010 | 기본 Tool 병렬 호출, 규칙 계산, Agent 실행, 출처·부분 실패 취합을 담당합니다 |
-| Price MCP | 8020 | 한국투자증권 Open API의 현재가를 조회하고 종목별 60초 캐시를 적용합니다 |
-| News MCP | 8021 | NAVER API HUB의 최근 뉴스를 정제하고 중복·무관 기사를 제외합니다 |
-| Disclosure MCP | 8022 | OpenDART 공시와 사업보고서 RAG를 제공합니다 |
-| Community MCP | 8023 | 네이버 종목토론방 기반 반응 집계와 FGI를 정규화합니다 |
+| 서비스         | 포트 | 책임                                                                         |
+| -------------- | ---: | ---------------------------------------------------------------------------- |
+| Frontend       | 8501 | 검색, 로그인, 공개 결과, 근거, 개인화 확인 포인트를 표시합니다               |
+| Backend        | 8000 | 지원 기업, JWT, 투자 성향, Memory, 분석 이력과 접근 수준별 응답을 담당합니다 |
+| MCP Client     | 8010 | 기본 Tool 병렬 호출, 규칙 계산, Agent 실행, 출처·부분 실패 취합을 담당합니다 |
+| Price MCP      | 8020 | 한국투자증권 Open API의 현재가를 조회하고 종목별 60초 캐시를 적용합니다      |
+| News MCP       | 8021 | NAVER API HUB의 최근 뉴스를 정제하고 중복·무관 기사를 제외합니다             |
+| Disclosure MCP | 8022 | OpenDART 공시와 사업보고서 RAG를 제공합니다                                  |
+| Community MCP  | 8023 | 네이버 종목토론방 기반 반응 집계와 FGI를 정규화합니다                        |
 
 ### 요청 한 건의 흐름
 
@@ -84,28 +84,28 @@ Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 
 
 ### 설계 의도
 
-| 설계 | 이유 |
-|---|---|
-| Frontend의 단일 진입점 | 브라우저에 MCP 주소, DB 주소, 사용자 성향 원본과 비밀값을 노출하지 않습니다 |
-| 기본 조회와 Agent 분리 | 필수 자료는 Workflow가 항상 조회해 결과의 재현성을 확보하고, Agent의 Tool 선택 범위는 읽기 전용 공시 상세로 제한합니다 |
-| 데이터 MCP 분리 | 제공처별 인증·오류·캐시·정제 규칙을 독립적으로 관리합니다 |
-| 공통 분석과 개인화 분리 | 같은 종목의 공통 근거는 유지하고, 회원 성향은 확인 순서와 설명 난이도에만 사용합니다 |
-| 부분 성공 유지 | 뉴스·공시·커뮤니티 일부가 실패해도 확인된 결과와 실패 목록을 함께 반환합니다. 단, 현재가는 필수라 실패하면 분석을 중단합니다 |
-| 정형·벡터 검색 분리 | 지원 기업과 보고서 범위를 SQL로 먼저 좁힌 뒤 pgvector로 관련 구절만 검색합니다 |
-| 출처와 시간 유지 | 확인하지 못한 값을 추측하지 않고, 수집 시각과 공식 URL을 결과에 남깁니다 |
+| 설계                    | 이유                                                                                                                         |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Frontend의 단일 진입점  | 브라우저에 MCP 주소, DB 주소, 사용자 성향 원본과 비밀값을 노출하지 않습니다                                                  |
+| 기본 조회와 Agent 분리  | 필수 자료는 Workflow가 항상 조회해 결과의 재현성을 확보하고, Agent의 Tool 선택 범위는 읽기 전용 공시 상세로 제한합니다       |
+| 데이터 MCP 분리         | 제공처별 인증·오류·캐시·정제 규칙을 독립적으로 관리합니다                                                                    |
+| 공통 분석과 개인화 분리 | 같은 종목의 공통 근거는 유지하고, 회원 성향은 확인 순서와 설명 난이도에만 사용합니다                                         |
+| 부분 성공 유지          | 뉴스·공시·커뮤니티 일부가 실패해도 확인된 결과와 실패 목록을 함께 반환합니다. 단, 현재가는 필수라 실패하면 분석을 중단합니다 |
+| 정형·벡터 검색 분리     | 지원 기업과 보고서 범위를 SQL로 먼저 좁힌 뒤 pgvector로 관련 구절만 검색합니다                                               |
+| 출처와 시간 유지        | 확인하지 못한 값을 추측하지 않고, 수집 시각과 공식 URL을 결과에 남깁니다                                                     |
 
 ### 기술 스택
 
-| 구분 | 사용 기술 |
-|---|---|
-| Frontend | React 19, TypeScript, Vite 8, React Router, Motion, Lucide React |
-| Backend | Python 3.12, FastAPI, Pydantic v2, PyJWT, psycopg2, Redis |
-| MCP Client | FastAPI, FastMCP 4, OpenAI Responses API, `gpt-5.6-luna` |
-| MCP 서버 | FastMCP Streamable HTTP, HTTPX |
-| 데이터베이스 | PostgreSQL, pgvector, `text-embedding-3-small` 1536차원 |
-| 외부 데이터 | 한국투자증권 Open API, NAVER API HUB, OpenDART, 커뮤니티 FGI API |
-| 인프라 | 로컬 PostgreSQL·Redis Docker Compose, VPS 서비스별 systemd |
-| 테스트 | pytest, Vitest, Playwright Core |
+| 구분         | 사용 기술                                                        |
+| ------------ | ---------------------------------------------------------------- |
+| Frontend     | React 19, TypeScript, Vite 8, React Router, Motion, Lucide React |
+| Backend      | Python 3.12, FastAPI, Pydantic v2, PyJWT, psycopg2, Redis        |
+| MCP Client   | FastAPI, FastMCP 4, OpenAI Responses API, `gpt-5.6-luna`         |
+| MCP 서버     | FastMCP Streamable HTTP, HTTPX                                   |
+| 데이터베이스 | PostgreSQL, pgvector, `text-embedding-3-small` 1536차원          |
+| 외부 데이터  | 한국투자증권 Open API, NAVER API HUB, OpenDART, 커뮤니티 FGI API |
+| 인프라       | 로컬 PostgreSQL·Redis Docker Compose, VPS 서비스별 systemd       |
+| 테스트       | pytest, Vitest, Playwright Core                                  |
 
 ### 폴더 구조
 
@@ -201,33 +201,33 @@ MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`을 
 
 ## 4. 팀
 
-| 이름 | 담당 |
-|---|---|
+| 이름   | 담당                                                                                      |
+| ------ | ----------------------------------------------------------------------------------------- |
 | 문태웅 | 프론트엔드(React) 전체, Community MCP + 커뮤니티(FGI) 데이터 파이프라인, 통합 테스트·운영 |
 | 권오현 | 전체 기획·아키텍처·계약 문서, MCP Client(Agent Workflow), Price MCP(한국투자증권), 발표자 |
-| 윤기화 | Backend(인증·Memory·개인화·분석 API), DB·infra, News MCP |
-| 김인혜 | Disclosure MCP(OpenDART 수집·사업보고서 RAG·pgvector) |
-| 박성엽 | 사용자 관점 검수·피드백(화면 흐름 점검, 문구·설명 검토, 발표 리허설 피드백) |
+| 윤기화 | Backend(인증·Memory·개인화·분석 API), DB·infra, News MCP, 관리자페이지, MCP Inspector     |
+| 김인혜 | Disclosure MCP(OpenDART 수집·사업보고서 RAG·pgvector)                                     |
+| 박성엽 | 사용자 관점 검수·피드백(화면 흐름 점검, 문구·설명 검토, 발표 리허설 피드백)               |
 
 ---
 
 ## 5. 문서
 
-| 문서 | 내용 |
-|---|---|
-| [개발 계획](docs/planning/plan.md) | 팀원 역할, 작업 범위, 협업 규칙, 일정과 제출 기준 |
-| [API 명세서](docs/specs/API명세서.md) | Backend·MCP Client·MCP Tool Endpoint와 요청·응답·오류 |
-| [DB 설계서](docs/specs/DB설계서.md) | Backend DB와 Disclosure DB의 테이블·인덱스·벡터 검색 설계 |
-| [화면 설계서](docs/specs/화면설계서.md) | 단일 페이지 상태, 로그인, 공개·회원 화면과 이동 흐름 |
-| [최종 아키텍처](docs/architecture/FINAL_ARCHITECTURE.md) | 서비스 책임과 확정 연결 구조 |
-| [에이전트 아키텍처 설계서](docs/architecture/agent-architecture.md) | Profile, 노드·분기, State·Trace, Tool 정책, Memory, 성찰·폴백 |
-| [에이전트 시험 결과 보고서](docs/reports/agent-test-report.md) | 실제 off/on 비교, 검증기 v1→v2 개선 이력, VPS 7일 부분실패 집계 |
-| [Backend 서술 채택 시험](docs/reports/agent-test-result-report_narrative-source.md) | 윤기화 담당 narrative_source 성공·실패 분기 검증 |
-| [Agent 상태 흐름도](docs/architecture/diagrams/agent-state-flow.mmd) | Workflow 기본 수집과 Agent 선택 조회·성찰·종료 |
-| [서비스 연결 계약](docs/specs/CONNECTION_CONTRACT.md) | 포트, 시간 제한, 데이터 경계와 공통 표기 규칙 |
-| [세부 계약](docs/specs/contracts/README.md) | Frontend·Backend·분석·MCP Tool·성향·오류 계약 색인 |
-| [로컬 실행 체크리스트](docs/operations/LOCAL_RUN_ENV_CHECKLIST.md) | MCP 연결과 서비스별 환경변수·점검 명령 |
-| [Frontend 흐름](docs/specs/FRONTEND_FLOW.md) | 검색·로그인·근거·개인화 화면의 기준 흐름 |
+| 문서                                                                                | 내용                                                            |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| [개발 계획](docs/planning/plan.md)                                                  | 팀원 역할, 작업 범위, 협업 규칙, 일정과 제출 기준               |
+| [API 명세서](docs/specs/API명세서.md)                                               | Backend·MCP Client·MCP Tool Endpoint와 요청·응답·오류           |
+| [DB 설계서](docs/specs/DB설계서.md)                                                 | Backend DB와 Disclosure DB의 테이블·인덱스·벡터 검색 설계       |
+| [화면 설계서](docs/specs/화면설계서.md)                                             | 단일 페이지 상태, 로그인, 공개·회원 화면과 이동 흐름            |
+| [최종 아키텍처](docs/architecture/FINAL_ARCHITECTURE.md)                            | 서비스 책임과 확정 연결 구조                                    |
+| [에이전트 아키텍처 설계서](docs/architecture/agent-architecture.md)                 | Profile, 노드·분기, State·Trace, Tool 정책, Memory, 성찰·폴백   |
+| [에이전트 시험 결과 보고서](docs/reports/agent-test-report.md)                      | 실제 off/on 비교, 검증기 v1→v2 개선 이력, VPS 7일 부분실패 집계 |
+| [Backend 서술 채택 시험](docs/reports/agent-test-result-report_narrative-source.md) | 윤기화 담당 narrative_source 성공·실패 분기 검증                |
+| [Agent 상태 흐름도](docs/architecture/diagrams/agent-state-flow.mmd)                | Workflow 기본 수집과 Agent 선택 조회·성찰·종료                  |
+| [서비스 연결 계약](docs/specs/CONNECTION_CONTRACT.md)                               | 포트, 시간 제한, 데이터 경계와 공통 표기 규칙                   |
+| [세부 계약](docs/specs/contracts/README.md)                                         | Frontend·Backend·분석·MCP Tool·성향·오류 계약 색인              |
+| [로컬 실행 체크리스트](docs/operations/LOCAL_RUN_ENV_CHECKLIST.md)                  | MCP 연결과 서비스별 환경변수·점검 명령                          |
+| [Frontend 흐름](docs/specs/FRONTEND_FLOW.md)                                        | 검색·로그인·근거·개인화 화면의 기준 흐름                        |
 
 현재 구현과 연결 기준은 위 최종 문서와 실제 코드를 우선합니다.
 
@@ -235,13 +235,13 @@ MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`을 
 
 ## 6. 팀별 작성 영역
 
-| 항목 | 내용 |
-|---|---|
-| 팀명 | 엔코어 AI 오케스트레이션 1기 2차 프로젝트 5팀 |
-| 팀원 및 역할 | [개발 계획의 팀 구성·역할](docs/planning/plan.md#1-팀-구성), 위 4절 팀 표 |
-| 프로젝트 기간 | [개발 계획 일정](docs/planning/plan.md#6-일정) 기준 2026-08-31 착수~09-04 통합·문서화, 이후 발표 준비 기간 |
-| 저장소 | [twlaude/aio-p2-5th-team-stock](https://github.com/twlaude/aio-p2-5th-team-stock) |
-| 외부 API 및 도구 | 한국투자증권 Open API, NAVER API HUB, OpenDART, 커뮤니티 FGI API, OpenAI Responses·임베딩, FastMCP |
-| 필수 Agent 산출물 | [아키텍처 설계서](docs/architecture/agent-architecture.md), [시험 결과 보고서](docs/reports/agent-test-report.md) |
-| 추가 산출물 | API·DB·화면 설계서, 개발 계획, Mermaid 원본과 라이트/다크 SVG, [30케이스 하네스·원본 실측](tests/scenarios/agent_eval/README.md), Backend 서술 채택 시험 |
-| 제출 확인 근거 | 문서에 실제 구현·원본 지표·남은 한계를 기록하며, 성찰 브랜치 실측과 VPS 운영 이력을 구분합니다 |
+| 항목              | 내용                                                                                                                                                     |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 팀명              | 엔코어 AI 오케스트레이션 1기 2차 프로젝트 5팀                                                                                                            |
+| 팀원 및 역할      | [개발 계획의 팀 구성·역할](docs/planning/plan.md#1-팀-구성), 위 4절 팀 표                                                                                |
+| 프로젝트 기간     | [개발 계획 일정](docs/planning/plan.md#6-일정) 기준 2026-08-31 착수~09-04 통합·문서화, 이후 발표 준비 기간                                               |
+| 저장소            | [twlaude/aio-p2-5th-team-stock](https://github.com/twlaude/aio-p2-5th-team-stock)                                                                        |
+| 외부 API 및 도구  | 한국투자증권 Open API, NAVER API HUB, OpenDART, 커뮤니티 FGI API, OpenAI Responses·임베딩, FastMCP                                                       |
+| 필수 Agent 산출물 | [아키텍처 설계서](docs/architecture/agent-architecture.md), [시험 결과 보고서](docs/reports/agent-test-report.md)                                        |
+| 추가 산출물       | API·DB·화면 설계서, 개발 계획, Mermaid 원본과 라이트/다크 SVG, [30케이스 하네스·원본 실측](tests/scenarios/agent_eval/README.md), Backend 서술 채택 시험 |
+| 제출 확인 근거    | 문서에 실제 구현·원본 지표·남은 한계를 기록하며, 성찰 브랜치 실측과 VPS 운영 이력을 구분합니다                                                           |
