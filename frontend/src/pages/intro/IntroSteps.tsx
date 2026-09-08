@@ -55,7 +55,7 @@ function MiniStage({ step, inline = false }: { step: number; inline?: boolean })
   const playing = inView && !reduced;
   return (
     <div ref={ref} className="intro-stage" data-stage={step} aria-hidden="true">
-      <div className="intro-stage__header"><span>삼성전자</span><span>Mock</span></div>
+      <div className="intro-stage__header"><span>삼성전자</span><span>예시</span></div>
       <div className="intro-stage__body" key={playing ? "play" : "rest"}>
         {(step === 1 || playing) && (
           <div className="intro-stage__pieces">

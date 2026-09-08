@@ -2,9 +2,9 @@ export const INTRO_SENTENCE = "관심은 뜨겁지만, 공식적으로 확인된
 
 export function PhoneMock() {
   return (
-    <div className="intro-phone" role="img" aria-label={`Mock 화면. 삼성전자 78,500원, +3.2%. ${INTRO_SENTENCE}`}>
+    <div className="intro-phone" role="img" aria-label={`예시 화면. 삼성전자 78,500원, +3.2%. ${INTRO_SENTENCE}`}>
       <div className="intro-phone__brand" aria-hidden="true">
-        <b>살래<span>?</span> 말래<span>?</span></b><small>Mock</small>
+        <b>살래<span>?</span> 말래<span>?</span></b><small>예시</small>
       </div>
       <div className="intro-phone__price" aria-hidden="true">
         <small>005930 · KOSPI</small><strong>삼성전자</strong>
