@@ -50,7 +50,7 @@ export function GuestGate({ companyName, query }: GuestGateProps) {
         <p>근거와 내 성향에 맞춘 확인 포인트는<br />로그인한 회원에게만 보여드려요.</p>
         <button type="button" onClick={() => navigate(preparePendingReturn(query))}>
           <Lock size={18} aria-hidden="true" />
-          Mock 계정으로 로그인
+          데모 계정으로 로그인
         </button>
         <div>로그인하면 {companyName} 결과로 바로 돌아와요</div>
       </div>

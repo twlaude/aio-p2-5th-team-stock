@@ -26,7 +26,7 @@ export function IntroPage() {
       <IntroClosing />
       <footer className="intro-footer">
         <p>본 서비스는 투자 추천이 아닌 정보 제공을 목적으로 합니다.</p>
-        <p>앙코르 AI 오케스트레이션 1기 · 5팀 · 화면의 종목·가격·문장은 Mock 데이터예요.</p>
+        <p>앙코르 AI 오케스트레이션 1기 · 5팀 · 소개 화면의 종목·가격·문장은 예시예요.</p>
       </footer>
     </div>
   );
