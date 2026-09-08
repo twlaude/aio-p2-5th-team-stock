@@ -133,6 +133,12 @@ class ToolFailure(BaseModel):
     retryable: bool = False
 
 
+class FilterStats(BaseModel):
+    total_retrieved: int
+    total_filtered_out: int
+    filter_threshold: float = 0.7
+
+
 class CollectedData(BaseModel):
     price: dict[str, Any]
     news: dict[str, Any]
@@ -140,6 +146,7 @@ class CollectedData(BaseModel):
     annual_report: dict[str, Any]
     community: dict[str, Any]
     material_disclosures: dict[str, Any] = Field(default_factory=dict)
+    report_filter_stats: FilterStats = Field(default_factory=lambda: FilterStats(total_retrieved=0, total_filtered_out=0))
     failures: list[ToolFailure] = Field(default_factory=list)
     completed_tools: list[str] = Field(default_factory=list)
     failed_tools: list[str] = Field(default_factory=list)
