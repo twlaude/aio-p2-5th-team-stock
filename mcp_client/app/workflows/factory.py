@@ -26,7 +26,9 @@ def build_workflow(settings: Settings) -> AnalysisWorkflow:
     clients = _base_clients(settings)
     price = PriceMCPClient(clients["price"])
     news = NewsMCPClient(clients["news"])
-    disclosure = DisclosureMCPClient(clients["disclosure"])
+    disclosure = DisclosureMCPClient(
+        clients["disclosure"], annual_report_min_score=settings.annual_report_min_score
+    )
     community = CommunityMCPClient(clients["community"])
     collector = DataCollector(price, news, disclosure, community)
     provider = (
