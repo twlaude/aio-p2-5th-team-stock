@@ -11,7 +11,7 @@ import { WhyButton } from "../../components/stock/WhyButton";
 import { useSearch } from "../../state/searchStore";
 import "./result.css";
 
-/** 영역 B 소유 — 공개 결과(가격·스파크라인·한줄결론·why)·비회원 게이트. */
+/** 공개 분석 결과와 비회원 안내를 표시한다. */
 export function ResultSection() {
   const { query, result, runId, status, submittedQuery } = useSearch();
   const [gateOpen, setGateOpen] = useState(false);
@@ -37,7 +37,6 @@ export function ResultSection() {
   const ambientTopics = result.access_level === "member" ? deriveTopics(result.detail?.sources ?? []) : (result.topics_preview ?? []);
 
   const handleWhy = () => {
-    // motion 4b-9
     if (result.access_level === "member") {
       document.getElementById("evidence")?.scrollIntoView({ behavior: "smooth", block: "start" });
       return;
@@ -56,7 +55,6 @@ export function ResultSection() {
       animate={reducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      {/* motion 4b-4 */}
       <PriceHeader company={result.company} price={result.price} />
       <Sparkline stockCode={result.company.stock_code} changeRate={result.price.change_rate} />
       <ResultAmbient topics={ambientTopics} runId={runId}>

@@ -19,7 +19,6 @@ export function UnsupportedNotice({ query, message, onSelectCompany }: Unsupport
   // 목/서버 메시지가 제목 문장을 그대로 반복하면 설명은 기준 안내 문구만 보여준다
   const description = message && !message.startsWith(`아직 ${displayQuery}`) ? message : fallbackDescription;
 
-  // motion 4b-15
   return (
     <section className="notice-stage notice-stage--unsupported">
       <div className="unsupported-notice" role="alert">

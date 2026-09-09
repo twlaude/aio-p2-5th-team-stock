@@ -98,7 +98,7 @@ def collected_data() -> CollectedData:
                 "ratio": 2.0,
                 "baseline_days": 28,
             },
-            "source_name": "태웅님 커뮤니티 서버",
+            "source_name": "커뮤니티 FGI 서버(네이버 종목토론실)",
         },
         completed_tools=[
             "get_stock_quote",

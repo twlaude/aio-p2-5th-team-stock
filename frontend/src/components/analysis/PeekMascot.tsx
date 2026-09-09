@@ -51,7 +51,6 @@ export function PeekMascot() {
   }
 
   return (
-    // motion 4b-14
     <button className="analysis-peek-mascot" type="button" aria-label="맨 위로" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
       <Mascot state={winking ? "wink" : "peek"} size={72} />
     </button>

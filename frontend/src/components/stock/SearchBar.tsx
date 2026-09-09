@@ -41,7 +41,6 @@ export function SearchBar({ value, status, unsupported, onChange, onSubmit, onTy
     inputRef.current?.focus();
   };
 
-  // motion 4b-3, motion 4b-15, motion 4b-18
   return (
     <form className={`search-bar${focused ? " search-bar--focus" : ""}${unsupported ? " search-bar--shake" : ""}`} onClick={focusInput} onSubmit={submit}>
       <Search className="search-bar__icon" size={22} strokeWidth={2} aria-hidden="true" />

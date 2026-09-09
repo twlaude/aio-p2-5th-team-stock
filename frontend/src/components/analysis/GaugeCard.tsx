@@ -77,7 +77,6 @@ export function GaugeCard(props: GaugeCardProps) {
     const description = temperatureDescription(props.dataCoverage, props.weightCovered);
     const volumeDescription = lastSessionVolumeDescription(props.volumeBasis, props.volumeAsOf);
     return (
-      // motion 4b-10
       <div ref={ref} className={["analysis-gauge-card", inView ? "analysis-gauge-card--visible" : ""].join(" ")}>
         <div className="analysis-gauge-card__caption">시장 관심 온도</div>
         <div className="analysis-gauge-card__headline">
@@ -108,7 +107,6 @@ export function GaugeCard(props: GaugeCardProps) {
 
   const level = evidenceLevelText(props.level);
   return (
-    // motion 4b-10
     <div ref={ref} className={["analysis-gauge-card", inView ? "analysis-gauge-card--visible" : ""].join(" ")}>
       <div className="analysis-gauge-card__caption">뉴스 내용이 공시·보고서로 뒷받침되는 정도</div>
       <div className="analysis-gauge-card__headline">

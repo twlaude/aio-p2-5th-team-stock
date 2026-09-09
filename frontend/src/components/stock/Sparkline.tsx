@@ -48,7 +48,6 @@ export function Sparkline({ stockCode, changeRate }: SparklineProps) {
         animate={reducedMotion ? { opacity: 1 } : { pathLength: 1 }}
         transition={{ duration: reducedMotion ? 0.2 : 0.9, ease: "easeOut" }}
       />
-      {/* motion 4b-7 */}
       <motion.circle
         className="sparkline__dot"
         cx={lastPoint[0]}

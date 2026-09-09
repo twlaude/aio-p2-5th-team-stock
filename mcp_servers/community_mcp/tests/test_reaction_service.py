@@ -33,7 +33,7 @@ def test_success_sufficient_mapping_preserves_contract_fields():
         "sentiment": {"positive_count": 18, "neutral_count": 27, "negative_count": 55},
         "top_topics": {"expectations": ["수급 기대"], "concerns": ["하락 우려"]},
         "representative_evidence": [{"text": "요지", "sentiment": "negative", "posted_at": "2026-09-02T06:12:00Z"}],
-        "source_name": "태웅 종토방 FGI 서버 (네이버 종목토론실)",
+        "source_name": "커뮤니티 FGI 서버(네이버 종목토론실)",
         "collected_at": "2026-09-02T09:06:59Z",
         "fgi_mean": 41.02,
         "fgi_latest": {"fgi": 41.02, "label": "공포", "as_of": "2026-09-02T09:00:00Z", "post_count": 100, "valence_percentile": 0.22},
@@ -43,7 +43,7 @@ def test_success_sufficient_mapping_preserves_contract_fields():
 
     assert result["status"] == "success"
     assert result["sample_status"] == "sufficient"
-    assert result["source_name"] == "태웅님 커뮤니티 서버"
+    assert result["source_name"] == "커뮤니티 FGI 서버(네이버 종목토론실)"
     assert result["source_detail"] == upstream["source_name"]
     assert result["activity"] == upstream["activity"]
     assert result["fgi_mean"] == 41.02

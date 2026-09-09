@@ -11,7 +11,6 @@ import { UnsupportedNotice } from "../../components/stock/UnsupportedNotice";
 import { useSearch } from "../../state/searchStore";
 import "./hero.css";
 
-// motion 4b-1
 const heroContainer: Variants = {
   hidden: {},
   show: {
@@ -36,7 +35,6 @@ const heroItem: Variants = {
   },
 };
 
-/** 영역 A 소유 — 검색 히어로(마스코트·검색바·칩·20종목 시트·로딩·미지원·에러). 아래는 스텁. */
 export function HeroSection() {
   const { error, query, result, runId, status, submittedQuery, retry, setQuery, submit } = useSearch();
   const reducedMotion = useReducedMotion();
@@ -101,7 +99,6 @@ export function HeroSection() {
     priceHeader.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
   }, [reducedMotion, runId, status, unsupported]);
 
-  // motion 4b-4
   useEffect(() => {
     if (scenarioStarted.current || status !== "idle" || submittedQuery) {
       return;
@@ -128,7 +125,6 @@ export function HeroSection() {
 
   return (
     <section className={shellClassName}>
-      {/* motion 4b-2 */}
       <div className="hero__blob hero__blob--one" aria-hidden="true" />
       <div className="hero__blob hero__blob--two" aria-hidden="true" />
       <motion.div className="hero__content" initial={reducedMotion ? "show" : "hidden"} animate="show" variants={heroContainer}>

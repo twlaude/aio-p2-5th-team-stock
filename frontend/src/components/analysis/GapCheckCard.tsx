@@ -14,7 +14,7 @@ interface GapCheckCardProps {
 const LEVEL_LABEL = { large: "온도차 큼", some: "온도차 있음", small: "비슷함", quiet: "조용한 편" } as const;
 const TONE_ICON = { warn: AlertTriangle, ok: CheckCircle2, info: Info } as const;
 
-/** 분위기 vs 근거 — 시장 관심 온도와 공식 확인 정도의 온도차를 한눈에. 형 요청(2026-09-03): "남들이 다 환호하는데 실제로는 환호할 거리가 아니라면 주의". */
+/** 시장 관심에 비해 공식 근거가 부족한지 표시한다. */
 export function GapCheckCard({ id, gap, index }: GapCheckCardProps) {
   const { ref, inView } = useInView<HTMLElement>();
   const confirmPercent = [0, 28, 62, 96][gap.confirmSegments];

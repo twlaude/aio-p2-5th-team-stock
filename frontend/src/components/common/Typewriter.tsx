@@ -17,7 +17,6 @@ export function Typewriter({ text, speedMs = 28, startDelayMs = 0 }: TypewriterP
   const [done, setDone] = useState(true);
 
   useEffect(() => {
-    // motion 4b-8
     if (prefersReducedMotion()) {
       setVisibleCount(text.length);
       setDone(true);

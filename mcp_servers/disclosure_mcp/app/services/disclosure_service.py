@@ -63,7 +63,7 @@ class DisclosureService:
         )
         end_date = datetime.now(_SEOUL).date()
         begin_date = end_date - timedelta(days=lookback_days - 1)
-        # 팀 결정(2026-09-04): 기본값은 정기공시(A)만 유지한다.
+        # 기존 호출과 호환되도록 기본 조회 범위는 정기공시(A)로 유지한다.
         records_by_receipt: dict[str, DartDisclosureRecord] = {}
         for disclosure_type in requested_types:
             raw_response = self._dart_client.get_disclosures(

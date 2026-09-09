@@ -28,7 +28,6 @@
 .mascot__coin--one { transform-origin: 102px 40px; }
 .mascot__coin--two { transform-origin: 18px 48px; }
 
-/* motion 4a */
 .mascot--idle .mascot__body { animation: bob 2.8s ease-in-out infinite; }
 .mascot--idle .mascot__eye { animation: blink 4s infinite; transform-origin: center; }
 .mascot--idle .mascot__eyes { animation: glance 7s ease-in-out infinite; }
