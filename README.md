@@ -203,8 +203,8 @@ MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`을 
 
 | 이름   | 담당                                                                                      |
 | ------ | ----------------------------------------------------------------------------------------- |
+| 권오현 (팀장) | 전체 기획·아키텍처·계약 문서, MCP Client(Agent Workflow), Price MCP(한국투자증권), 발표자 |
 | 문태웅 | 프론트엔드(React) 전체, Community MCP + 커뮤니티(FGI) 데이터 파이프라인, 통합 테스트·운영 |
-| 권오현 | 전체 기획·아키텍처·계약 문서, MCP Client(Agent Workflow), Price MCP(한국투자증권), 발표자 |
 | 윤기화 | Backend(인증·Memory·async최적화), DB·infra, News MCP, 관리자페이지, MCP Inspector         |
 | 김인혜 | Disclosure MCP(OpenDART 수집·사업보고서 RAG·pgvector)                                     |
 | 박성엽 | 사용자 관점 검수·피드백(화면 흐름 점검, 문구·설명 검토, 발표 리허설 피드백)               |

@@ -189,11 +189,11 @@ Provider는 `parallel_tool_calls=False`, strict JSON Schema, `max_output_tokens=
 | `failed_tools`, `partial_failures` | context의 `list[str]`, `list[dict]` | on에서만 Workflow가 추가, 실패 제한 검사 |
 | `used`, `ordered`, `pending` | Runtime의 `set[str]`, `list[str]`, `list[ReflectionEvent]` | 번호 중복 차단·enum·해소 대기 오류 |
 
-off의 `llm_calls`는 성공적으로 회수한 turn 중심이며 초기 실패 시도를 누락할 수 있습니다. 하네스의 `llm_calls`는 실패 포함 Provider 진입 수로 따로 측정하므로 동일 명칭을 무조건 같은 계수로 해석하지 않습니다.
+off의 `llm_calls`는 정상적으로 회수한 turn 기준이라 초기 실패 시도가 빠질 수 있습니다. 하네스의 `llm_calls`는 실패를 포함한 Provider 호출 횟수를 따로 세므로, 이름이 같아도 두 수치를 같은 기준으로 읽으면 안 됩니다.
 
 ### 10.2 승인 Agent 추가 State
 
-조회 Tool만 있어 승인 State는 해당하지 않습니다. `pending_approval`, 승인 Snapshot, 승인 후 재개 API를 구현하지 않았습니다. `run_id`는 분석과 Trace 연결용이며 주문 승인을 나타내지 않습니다.
+조회 Tool만 있으므로 승인 State는 두지 않았습니다. `pending_approval`, 승인 Snapshot, 승인 후 재개 API를 구현하지 않았습니다. `run_id`는 분석과 Trace 연결용이며 주문 승인을 나타내지 않습니다.
 
 ## 11. Trace 설계
 
