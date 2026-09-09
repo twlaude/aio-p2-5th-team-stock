@@ -104,7 +104,7 @@ Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 
 | MCP 서버     | FastMCP Streamable HTTP, HTTPX                                   |
 | 데이터베이스 | PostgreSQL, pgvector, `text-embedding-3-small` 1536차원          |
 | 외부 데이터  | 한국투자증권 Open API, NAVER API HUB, OpenDART, 커뮤니티 FGI API |
-| 인프라       | 로컬 PostgreSQL·Redis Docker Compose, VPS 서비스별 systemd       |
+| 인프라       | PostgreSQL·Redis Docker Compose, 서비스 7개는 각각 독립 실행     |
 | 테스트       | pytest, Vitest, Playwright Core                                  |
 
 ### 폴더 구조
@@ -221,7 +221,7 @@ MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`을 
 | [화면 설계서](docs/specs/화면설계서.md)                                             | 단일 페이지 상태, 로그인, 공개·회원 화면과 이동 흐름            |
 | [최종 아키텍처](docs/architecture/FINAL_ARCHITECTURE.md)                            | 서비스 책임과 확정 연결 구조                                    |
 | [에이전트 아키텍처 설계서](docs/architecture/agent-architecture.md)                 | Profile, 노드·분기, State·Trace, Tool 정책, Memory, 성찰·폴백   |
-| [에이전트 시험 결과 보고서](docs/reports/agent-test-report.md)                      | 실제 off/on 비교, 검증기 v1→v2 개선 이력, VPS 7일 부분실패 집계 |
+| [에이전트 시험 결과 보고서](docs/reports/agent-test-report.md)                      | 실제 off/on 비교, 검증기 v1→v2 개선 이력, 운영 7일 부분실패 집계 |
 | [Backend 서술 채택 시험](docs/reports/agent-test-result-report_narrative-source.md) | 윤기화 담당 narrative_source 성공·실패 분기 검증                |
 | [Agent 상태 흐름도](docs/architecture/diagrams/agent-state-flow.mmd)                | Workflow 기본 수집과 Agent 선택 조회·성찰·종료                  |
 | [서비스 연결 계약](docs/specs/CONNECTION_CONTRACT.md)                               | 포트, 시간 제한, 데이터 경계와 공통 표기 규칙                   |
@@ -244,4 +244,4 @@ MCP 4개를 모두 로컬에서 실행하려면 각 폴더의 `.env.example`을 
 | 외부 API 및 도구  | 한국투자증권 Open API, NAVER API HUB, OpenDART, 커뮤니티 FGI API, OpenAI Responses·임베딩, FastMCP                                                       |
 | 필수 Agent 산출물 | [아키텍처 설계서](docs/architecture/agent-architecture.md), [시험 결과 보고서](docs/reports/agent-test-report.md)                                        |
 | 추가 산출물       | API·DB·화면 설계서, 개발 계획, Mermaid 원본과 라이트/다크 SVG, [30케이스 하네스·원본 실측](tests/scenarios/agent_eval/README.md), Backend 서술 채택 시험 |
-| 제출 확인 근거    | 문서에 실제 구현·원본 지표·남은 한계를 기록하며, 성찰 브랜치 실측과 VPS 운영 이력을 구분합니다                                                           |
+| 제출 확인 근거    | 문서에 실제 구현·원본 지표·남은 한계를 기록하며, 성찰 브랜치 실측과 시연 서버 운영 이력을 구분합니다                                                           |

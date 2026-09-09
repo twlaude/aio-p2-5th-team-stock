@@ -8,13 +8,13 @@ Backend가 다음 결정을 정확히 내리는지 확인합니다.
 
 - **Scenario 1**: MCP Client Agent가 서사(narrative) 생성에 성공하면, Backend는 그 결과를 그대로 사용자에게 전달하는가?
 - **Scenario 2**: Agent가 실패(`partial_failures`에 `service: "openai"` 존재)하면, Backend는 자체 규칙 기반 조립기(`compose_one_liner`, `compose_personal`)로 대체하는가?
-- **Scenario 3**: 실제 운영 서버(VPS)에서도 이 경계가 그대로 작동하는가?
+- **Scenario 3**: 실제 운영 서버(시연 서버)에서도 이 경계가 그대로 작동하는가?
 
 평가 흐름:
 
 ```text
 Scenario 작성
-→ POST /api/v1/analyses 실제 호출 (로컬 mock 모드 + VPS live 모드)
+→ POST /api/v1/analyses 실제 호출 (로컬 mock 모드 + 시연 서버 live 모드)
 → 응답 JSON과 pytest 결과 수집
 → 기대 결과와 실제 결과 비교
 → PASS 또는 FAIL 기록
@@ -29,7 +29,7 @@ Scenario 작성
 | 평가 코드 | `backend/tests/test_analysis.py`의 `test_agent_narrative_wins_when_agent_succeeded`, `test_backend_composes_when_agent_failed` |
 | Tool 연결 | `POST /api/v1/analyses` (HTTP, Backend → MCP Client) |
 | 로컬 환경 | `MCP_CLIENT_MODE=mock`, `NARRATIVE_SOURCE=agent_first`(기본값) |
-| VPS 환경 | `159.223.75.71:8501` (Frontend 프록시 경유), `MCP_CLIENT_MODE=live` |
+| 시연 서버 환경 | `159.223.75.71:8501` (Frontend 프록시 경유), `MCP_CLIENT_MODE=live` |
 | 실행 일시 | 2026-09-07 |
 | 실행자 | 윤기화 |
 
@@ -179,11 +179,11 @@ python -m pytest -q tests/test_analysis.py -k backend_composes
 - 가격(`current_price: 70000`)·소스 데이터는 Scenario 1과 동일하게 유지되는가(문장만 바뀌고 데이터는 안 바뀌는가): **예**
 - 실패했다면 최초로 기대와 달라진 Event: 해당 없음
 
-## 5. Scenario 3: 실제 VPS(live 모드)에서 재현
+## 5. Scenario 3: 실제 시연 서버(live 모드)에서 재현
 
 ### 5.1 배경
 
-2026-09 초 VPS 실황 페이지(`/api/v1/admin/live-status`)를 확인했을 때, 거의 모든 분석 요청에서 `partial_failures: [{"service": "openai", "status": "model_error"}]`가 관측되었다(별도 기록: 실황 페이지 스크린샷, 팀 내 공유). 즉 VPS는 그 시점 기준 **거의 항상 Scenario 2 경로**를 타고 있었다.
+2026-09 초 시연 서버 실황 페이지(`/api/v1/admin/live-status`)를 확인했을 때, 거의 모든 분석 요청에서 `partial_failures: [{"service": "openai", "status": "model_error"}]`가 관측되었다(별도 기록: 실황 페이지 스크린샷, 팀 내 공유). 즉 시연 서버는 그 시점 기준 **거의 항상 Scenario 2 경로**를 타고 있었다.
 
 ### 5.2 실행
 
@@ -200,11 +200,11 @@ r2 = httpx.post("http://159.223.75.71:8501/api/v1/analyses", json={"query": "삼
 | --- | --- | --- | --- |
 | `one_line_summary` 성격 | 짧고 정형화된 규칙 기반 문장 | 매우 구체적인 서술형 문장(뉴스 다건 종합, 공시 2건 교차 확인) | 변화 감지 |
 | `personalized_checkpoints` 성격 | 규칙 기반 템플릿(고정 문구 조합) | 사업보고서 수치(`DS 부문 매출 130조1,282억원, 영업이익 24조8,581억원`)까지 인용하는 상세 서술 | 변화 감지 |
-| `partial_failures`(openai) 직접 확인 | 실황 페이지에서 직접 확인함 | **확인 못 함** — VPS 관리자 비밀번호가 배포 시 변경되어 `/api/v1/admin/live-status` 접근 실패(401) | 미확인(제약) |
+| `partial_failures`(openai) 직접 확인 | 실황 페이지에서 직접 확인함 | **확인 못 함** — 시연 서버 관리자 비밀번호가 배포 시 변경되어 `/api/v1/admin/live-status` 접근 실패(401) | 미확인(제약) |
 
 최종 판정: **조건부 PASS** — 사용자 응답의 내용 품질로 미루어 Agent(OpenAI) 호출이 이번엔 성공한 것으로 보이나, `partial_failures` 필드를 직접 조회하지 못해 100% 확정은 아님.
 
-### 5.4 Trace 증거 (VPS 실제 응답, 2026-09-07, 일부 발췌)
+### 5.4 Trace 증거 (시연 서버 실제 응답, 2026-09-07, 일부 발췌)
 
 ```json
 {
@@ -278,7 +278,7 @@ asyncio.run(main())
 | --- | --- | --- |
 | Scenario 1: Agent 서사 성공 | 성공 시 원문 그대로 전달 | PASS |
 | Scenario 2: Agent 서사 실패 | 실패 시 규칙 기반 조립, 데이터는 유지 | PASS |
-| Scenario 3: VPS 실전 재현 | 실제 운영 서버에서도 같은 경계 작동 | 조건부 PASS(관측 제약 있음) |
+| Scenario 3: 시연 서버 실전 재현 | 실제 운영 서버에서도 같은 경계 작동 | 조건부 PASS(관측 제약 있음) |
 
 전체 결과: **PASS** (단, Scenario 3은 `partial_failures` 직접 확인 없이 응답 품질로 추정한 정황 증거 기반)
 
@@ -287,8 +287,8 @@ asyncio.run(main())
 ### 발견한 문제
 
 1. Backend의 `agent_first`/`backend` 안전망 자체는 의도대로 정확히 작동한다 — 이 부분은 문제 없음.
-2. **VPS의 OpenAI 연동 안정성은 여전히 불확실하다.** 2026-09 초에는 거의 매 요청마다 `openai: model_error`가 관측되었는데, 이번(2026-09-07) 표본 1건은 성공한 것으로 보인다. 실패율이 얼마나 되는지, 개선이 실제로 있었는지는 `partial_failures`를 다건 표본으로 다시 확인해야 한다.
-3. VPS 관리자 페이지(`/api/v1/admin/live-status`) 접근 정보가 팀 내에서 공유되지 않아, 이번 시험에서 Scenario 3의 `partial_failures`를 직접 확인하지 못했다.
+2. **시연 서버의 OpenAI 연동 안정성은 여전히 불확실하다.** 2026-09 초에는 거의 매 요청마다 `openai: model_error`가 관측되었는데, 이번(2026-09-07) 표본 1건은 성공한 것으로 보인다. 실패율이 얼마나 되는지, 개선이 실제로 있었는지는 `partial_failures`를 다건 표본으로 다시 확인해야 한다.
+3. 시연 서버 관리자 페이지(`/api/v1/admin/live-status`) 접근 정보가 팀 내에서 공유되지 않아, 이번 시험에서 Scenario 3의 `partial_failures`를 직접 확인하지 못했다.
 
 ### 원인
 
@@ -309,10 +309,10 @@ asyncio.run(main())
 
 ## 9. 결론
 
-Backend의 `narrative_source` 안전망(`agent_first` → 실패 시 `backend` 규칙 기반 조립)은 로컬 mock 환경에서 두 경로 모두 pytest와 실제 HTTP 호출로 검증했고, 두 경우 모두 PASS했다. VPS 실전 환경에서도 최소 1건은 Agent 성공 경로가 정상 작동함을 확인했다.
+Backend의 `narrative_source` 안전망(`agent_first` → 실패 시 `backend` 규칙 기반 조립)은 로컬 mock 환경에서 두 경로 모두 pytest와 실제 HTTP 호출로 검증했고, 두 경우 모두 PASS했다. 시연 서버 실전 환경에서도 최소 1건은 Agent 성공 경로가 정상 작동함을 확인했다.
 
 - 확인된 정상 행동: Agent 성공/실패 여부와 무관하게 사용자에게는 항상 자연스러운 문장이 나가고, 원본 데이터(가격·근거)는 두 경로에서 동일하게 보존된다.
-- 남아 있는 문제: VPS의 OpenAI 연동이 실제로 얼마나 자주 실패하는지 다건 표본으로 재확인 필요. 관리자 페이지 접근 정보 팀 공유 필요.
-- 다음에 추가할 Scenario: VPS에서 `partial_failures`를 여러 건(예: 10건) 연속 수집해 실패율 정량화 / `NARRATIVE_SOURCE=backend` 강제 설정 시 항상 규칙 기반으로만 가는지(이미 pytest에 `test_guest_one_liner_uses_frontend_rule`, `test_member_personal_summary_uses_risk_gap_rule`로 커버됨, 표에 추가 반영 검토) / mcp_client 자체가 완전히 응답 불가할 때(`MCPClientUnavailable`)의 사용자 노출 메시지 검증.
+- 남아 있는 문제: 시연 서버의 OpenAI 연동이 실제로 얼마나 자주 실패하는지 다건 표본으로 재확인 필요. 관리자 페이지 접근 정보 팀 공유 필요.
+- 다음에 추가할 Scenario: 시연 서버에서 `partial_failures`를 여러 건(예: 10건) 연속 수집해 실패율 정량화 / `NARRATIVE_SOURCE=backend` 강제 설정 시 항상 규칙 기반으로만 가는지(이미 pytest에 `test_guest_one_liner_uses_frontend_rule`, `test_member_personal_summary_uses_risk_gap_rule`로 커버됨, 표에 추가 반영 검토) / mcp_client 자체가 완전히 응답 불가할 때(`MCPClientUnavailable`)의 사용자 노출 메시지 검증.
 
-대표 Scenario가 통과했다는 사실만으로 VPS의 OpenAI 연동이 완전히 안정적이라고 결론 내리지 않는다. 실패율 재측정 결과가 나오면 이 문서에 이어서 기록한다.
+대표 Scenario가 통과했다는 사실만으로 시연 서버의 OpenAI 연동이 완전히 안정적이라고 결론 내리지 않는다. 실패율 재측정 결과가 나오면 이 문서에 이어서 기록한다.

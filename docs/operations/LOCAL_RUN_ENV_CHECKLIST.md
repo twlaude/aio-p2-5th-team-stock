@@ -1,17 +1,17 @@
-# 전체 스택 로컬 실행 · env 체크리스트 (2026-09-04 VPS 통합 테스트 기준)
+# 전체 스택 로컬 실행 · env 체크리스트 (2026-09-04 통합 테스트 기준)
 
 Frontend → Backend → MCP Client → MCP 4개를 한 컴퓨터에서 붙여 본 결과를 바탕으로, 다시 띄울 때 필요한 것만 적었다. Agent(MCP Client) 부분은 아직 다듬는 중이므로 이 문서는 "붙이는 데 필요한 것"에 한정한다.
 
 ## 0. 역할 정리 (2026-09-04 합의)
 
-- **MCP 서버 4개는 VPS에서 상시 실행** (systemd, 24/7). 팀원은 띄우지 않고 URL만 쓴다.
+- **MCP 서버 4개는 시연 서버에 떠 있다.** 팀원은 직접 띄우지 않고 URL만 써도 되고, 필요하면 각 폴더에서 `python server.py`로 자기 컴퓨터에 띄워 `localhost:802N`으로 바꿔 써도 된다.
 - **오현님**: `mcp_client`만 로컬에서 실행하며 Agent 마무리. 화면 보면서 하려면 backend + frontend도 로컬에 (infra compose로 PG·Redis).
-- **태웅**: VPS의 MCP 4개·데모 스택 운영, 프론트.
+- **태웅**: 시연 서버의 MCP 4개·데모 스택 운영, 프론트.
 
-| MCP | VPS 주소 (mcp_client `.env`에 그대로) | 상태 |
+| MCP | 시연 서버 주소 (mcp_client `.env`에 그대로) | 상태 |
 |---|---|---|
 | Price | `PRICE_MCP_URL=http://159.223.75.71:8020/mcp` | 실서버 (한국투자증권 Open API, 9/4) |
-| News | `NEWS_MCP_URL=http://159.223.75.71:8021/mcp` | NAVER API HUB 키 없음 → mock 3건. 키 생기면 VPS `.env`에 넣고 재시작 |
+| News | `NEWS_MCP_URL=http://159.223.75.71:8021/mcp` | NAVER API HUB 키 없음 → mock 3건. 키 생기면 news_mcp `.env`에 넣고 재시작 |
 | Disclosure | `DISCLOSURE_MCP_URL=http://159.223.75.71:8022/mcp` | 실데이터. DART 최근 공시 + 20종목 2025 사업보고서 색인 |
 | Community | `COMMUNITY_MCP_URL=http://159.223.75.71:8023/mcp` | 실데이터 (네이버 종토방 FGI) |
 
@@ -28,9 +28,9 @@ mcp_client/.env
   COMMUNITY_MCP_URL=http://159.223.75.71:8023/mcp
 ```
 
-그 외 키(DART·NAVER·커뮤니티 토큰)는 전부 VPS 쪽에 있으니 오현님은 필요 없다. 화면까지 보려면 `backend/.env`(`MCP_CLIENT_MODE=live`, `MCP_CLIENT_URL=http://localhost:8010`)와 `frontend/.env`(`VITE_API_MODE=live`)만 추가.
+그 외 키(DART·NAVER·커뮤니티 토큰)는 MCP 서버 쪽 `.env`에 있으니 오현님은 필요 없다. 화면까지 보려면 `backend/.env`(`MCP_CLIENT_MODE=live`, `MCP_CLIENT_URL=http://localhost:8010`)와 `frontend/.env`(`VITE_API_MODE=live`)만 추가.
 
-## 1. VPS 데모 (지금 붙어 있는 상태)
+## 1. 시연 서버 데모 (지금 붙어 있는 상태)
 
 - 화면: http://159.223.75.71:8501 (React, `VITE_API_MODE=live`)
 - 로그인: `demo001` ~ `demo010` / `Demo1234!` (db/seed.sql)
@@ -40,7 +40,7 @@ mcp_client/.env
 |---|---|
 | Price MCP | 실서버 (오현님 KIS 키, 9/4 적용) |
 | News MCP | NAVER API HUB 키 없음 → `NEWS_MOCK=auto`로 mock 3건 |
-| Community MCP | 실데이터 (태웅 VPS FGI API `:8877`, 네이버 종토방 집계) |
+| Community MCP | 실데이터 (커뮤니티 FGI API `:8877`, 네이버 종토방 집계) |
 | Disclosure MCP | 실데이터 (DART 최근 공시 + 삼성전자 2025 사업보고서 색인) |
 | MCP Client LLM | OpenAI 호출이 400으로 실패해 **규칙 기반 폴백 문장**이 나옴 (아래 4-②) |
 | Backend | 실코드 (PG `stock_insight_team`, Redis, JWT) |
@@ -81,7 +81,7 @@ frontend:   cd frontend && npm ci && npm run dev    (8501, .env에 VITE_API_MODE
 
 ## 4. 붙여 보면서 확인한 것 (Agent 다듬을 때 참고)
 
-1. **가격이 없으면 전부 실패한다.** (VPS는 KIS 키 적용돼 해결) `mcp_client/app/workflows/analysis.py`가 `price.status != success`면 `RequiredPriceError` → Backend 503. 계약대로지만 KIS 키 없는 PC에서는 아무 화면도 못 본다. 개발 편의로 `PRICE_MOCK` 같은 스위치를 둘지는 결정 필요.
+1. **가격이 없으면 전부 실패한다.** (시연 서버는 KIS 키 적용돼 해결) `mcp_client/app/workflows/analysis.py`가 `price.status != success`면 `RequiredPriceError` → Backend 503. 계약대로지만 KIS 키 없는 PC에서는 아무 화면도 못 본다. 개발 편의로 `PRICE_MOCK` 같은 스위치를 둘지는 결정 필요.
 2. **OpenAI Responses 400 — strict JSON schema.** `mcp_client/app/providers/openai.py`의 `_text_format()`이 `strict: true`인데 `Narrative.model_json_schema()`에 `additionalProperties: false`가 없어 400이 난다.
    오류 원문: `Invalid schema for response_format 'stock_information_analysis': In context=(), 'additionalProperties' is required to be supplied and to be false.`
    Narrative는 이미 `extra="forbid"`이고 중첩된 `PersonalizedCheckpoints`에 빠져 있다. 거기에 `model_config = ConfigDict(extra="forbid")`를 주면 pydantic이 `additionalProperties: false`를 넣어 준다. 이게 풀려야 Agent 서사·Tool 호출 루프가 실제로 돈다.
