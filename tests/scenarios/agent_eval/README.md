@@ -4,18 +4,18 @@
 
 실제 MCP 자료를 고정하고 동일한 30개 입력으로 자기 성찰 off/on을 비교합니다. 코드·프롬프트를 변경하지 않고 `AnalysisWorkflow`와 `StockAgentRuntime`의 실제 경로를 실행합니다. 모델은 `gpt-5.6-luna`입니다.
 
-저장소 루트에서 다음 명령을 순서대로 실행합니다. 환경변수는 `mcp_client/.env`에서 읽으며 인증값은 저장하지 않습니다. 모든 콘솔 출력에는 `[TEST]`를 붙입니다.
+저장소 루트에서 다음 명령을 순서대로 실행합니다. 환경변수는 `mcp_client/.env`에서 읽으며 인증값은 저장하지 않습니다.
 
 ```bash
 set -o pipefail
 PY=mcp_client/.venv/bin/python   # mcp_client README대로 만든 venv
-$PY tests/scenarios/agent_eval/capture_fixtures.py 2>&1 | sed -u 's/^/[TEST] /'
-$PY -m pytest tests/scenarios/agent_eval/test_harness.py -q 2>&1 | sed -u 's/^/[TEST] /'
-$PY tests/scenarios/agent_eval/run_eval.py --mode off --repeat 2 --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
-$PY tests/scenarios/agent_eval/run_eval.py --mode on --repeat 2 --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
-$PY tests/scenarios/agent_eval/run_eval.py --mode off --continuation-probe 2>&1 | sed -u 's/^/[TEST] /'
-$PY tests/scenarios/agent_eval/run_eval.py --mode on --continuation-probe 2>&1 | sed -u 's/^/[TEST] /'
-$PY tests/scenarios/agent_eval/report.py --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
+$PY tests/scenarios/agent_eval/capture_fixtures.py
+$PY -m pytest tests/scenarios/agent_eval/test_harness.py -q
+$PY tests/scenarios/agent_eval/run_eval.py --mode off --repeat 2 --out tests/scenarios/agent_eval/results
+$PY tests/scenarios/agent_eval/run_eval.py --mode on --repeat 2 --out tests/scenarios/agent_eval/results
+$PY tests/scenarios/agent_eval/run_eval.py --mode off --continuation-probe
+$PY tests/scenarios/agent_eval/run_eval.py --mode on --continuation-probe
+$PY tests/scenarios/agent_eval/report.py --out tests/scenarios/agent_eval/results
 ```
 
 `capture_fixtures.py`는 기본 Tool 6개의 `DataCollector` 결과와 허용 후보의 공시 상세를 함께 캡처합니다. 기본 조회는 기존 Collector가 병렬 처리하며 종목과 상세 조회는 순차 처리합니다. 저장되는 커뮤니티 근거는 서비스의 집계·요약 결과입니다. 계정 식별자·이메일·인증값은 제거합니다. 캡처는 외부 서비스 읽기를 수행하므로 기존 픽스처를 재사용할 때에는 첫 명령을 생략합니다.
@@ -37,9 +37,9 @@ Agent 원본 서술과 Workflow 종료 상태를 분리합니다. off의 런타�
 ```bash
 set -o pipefail
 PY=mcp_client/.venv/bin/python   # mcp_client README대로 만든 venv
-$PY tests/scenarios/agent_eval/run_eval.py --mode off --rescore-off tests/scenarios/agent_eval/results/round1/off.jsonl --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
-$PY tests/scenarios/agent_eval/run_eval.py --mode on --repeat 2 --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
-$PY tests/scenarios/agent_eval/report.py --out tests/scenarios/agent_eval/results 2>&1 | sed -u 's/^/[TEST] /'
+$PY tests/scenarios/agent_eval/run_eval.py --mode off --rescore-off tests/scenarios/agent_eval/results/round1/off.jsonl --out tests/scenarios/agent_eval/results
+$PY tests/scenarios/agent_eval/run_eval.py --mode on --repeat 2 --out tests/scenarios/agent_eval/results
+$PY tests/scenarios/agent_eval/report.py --out tests/scenarios/agent_eval/results
 ```
 
 `--rescore-off`는 Settings·Provider·Workflow를 생성하지 않아 인증값 없이 동작합니다. 원본 narrative·context·호출 수·소요 시간·종료 사유는 유지하며 `verifier`와 `rescoring`만 바꿉니다. `rescoring`에는 원본 파일 SHA-256, 재채점 시각, 추가 LLM/HTTP 호출 0회를 기록합니다. `report.py`는 round1이 있으면 v1/v2 비교 표와 보존된 Provider 후속 호출 링크를 함께 생성합니다. off의 일관성 상승은 규칙 변경의 효과이며 모델 응답 자체의 개선으로 해석하지 않습니다.
@@ -62,9 +62,9 @@ v3는 수집한 해당 소스 원문과 일치하는 직접 인용 및 수치를
 ```bash
 set -o pipefail
 PY=mcp_client/.venv/bin/python   # mcp_client README대로 만든 venv
-$PY -m pytest tests/scenarios/agent_eval/test_harness.py -q 2>&1 | sed -u 's/^/[TEST] /'
-$PY tests/scenarios/agent_eval/run_eval.py --mode off --detail-failure-probe --out tests/scenarios/agent_eval/results/context-v3 2>&1 | sed -u 's/^/[TEST] /'
-$PY tests/scenarios/agent_eval/run_eval.py --mode on --detail-failure-probe --out tests/scenarios/agent_eval/results/context-v3 2>&1 | sed -u 's/^/[TEST] /'
+$PY -m pytest tests/scenarios/agent_eval/test_harness.py -q
+$PY tests/scenarios/agent_eval/run_eval.py --mode off --detail-failure-probe --out tests/scenarios/agent_eval/results/context-v3
+$PY tests/scenarios/agent_eval/run_eval.py --mode on --detail-failure-probe --out tests/scenarios/agent_eval/results/context-v3
 ```
 
 각 모드는 1회만 실행하며 `--repeat`는 보조 Scenario에 적용하지 않습니다. 재실행은 새 출력 디렉터리가 필요합니다.

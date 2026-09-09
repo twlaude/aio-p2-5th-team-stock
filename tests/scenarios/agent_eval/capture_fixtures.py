@@ -94,7 +94,7 @@ async def capture(out, complete_details=False):
                        privacy="Credential and individual account fields/emails are removed.")
         payload = clean(payload, (settings.openai_api_key,))
         target.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
-        print(f"[TEST] capture {index}/{len(companies)} {company.stock_code} "
+        print(f"capture {index}/{len(companies)} {company.stock_code} "
               f"price={payload['data']['price'].get('status')} "
               f"failures={len(payload['data']['failures'])} details={len(details)}", flush=True)
     await workflow.agent.provider._client.close()

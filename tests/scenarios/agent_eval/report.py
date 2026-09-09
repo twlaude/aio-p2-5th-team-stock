@@ -208,4 +208,4 @@ if __name__ == "__main__":
             stream.write(f"\n중단된 초안 규칙의 완료 관측 {len(interrupted.read_text().splitlines())}행은 "
                          "[interrupted_on.jsonl](interrupted_on.jsonl)에 보존하며 모든 지표에서 제외합니다. "
                          "중단 사유와 미완결 실행은 [하네스 안내](../README.md#검증기-v2-재측정)에 기록했습니다.\n")
-    print(f"[TEST] report rows={len(rows)} paired_inputs=ok summary={args.out / 'summary.md'}")
+    print(f"report rows={len(rows)} paired_inputs=ok summary={args.out / 'summary.md'}")

@@ -12,13 +12,13 @@ const DESKTOP = { width: 1440, height: 960 };
 const MOBILE = { width: 390, height: 844 };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const log = (message) => console.log(`[TEST] ${message}`);
+const log = (message) => console.log(`${message}`);
 
 function pipe(stream, label) {
   stream.setEncoding("utf8");
   stream.on("data", (chunk) => {
     for (const line of chunk.split(/\r?\n/).filter(Boolean)) {
-      console.log(`[TEST:${label}] ${line}`);
+      console.log(`[${label}] ${line}`);
     }
   });
 }
@@ -46,8 +46,8 @@ async function startServer() {
   pipe(server.stdout, "dev");
   pipe(server.stderr, "dev");
   server.on("exit", (code, signal) => {
-    if (code && code !== 0) console.log(`[TEST:dev] exited with code ${code}`);
-    if (signal) console.log(`[TEST:dev] exited with signal ${signal}`);
+    if (code && code !== 0) console.log(`[dev] exited with code ${code}`);
+    if (signal) console.log(`[dev] exited with signal ${signal}`);
   });
   await waitForServer();
   return server;
@@ -348,6 +348,6 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error(`[TEST] ${error instanceof Error ? error.stack : String(error)}`);
+  console.error(`${error instanceof Error ? error.stack : String(error)}`);
   process.exitCode = 1;
 });

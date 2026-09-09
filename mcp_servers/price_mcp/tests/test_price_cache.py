@@ -125,5 +125,4 @@ def test_daily_price_retries_once_after_transient_failure(monkeypatch):
     assert client.daily_attempts == 2
     assert slept == [price_service._DAILY_RETRY_DELAY_SECONDS]
     assert result["warnings"] == []
-    print("[TEST] daily retry after transient KIS failure")
     assert client.calls == 2
