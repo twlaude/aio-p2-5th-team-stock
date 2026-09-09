@@ -28,13 +28,13 @@ const VIEWPORTS = ALL_VIEWPORTS.filter(({ width, height }) => (
 ));
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const log = (message) => String(message).split(/\r?\n/).forEach((line) => console.log(`[TEST] ${line}`));
+const log = (message) => String(message).split(/\r?\n/).forEach((line) => console.log(`${line}`));
 
 function pipe(stream, label) {
   stream.setEncoding("utf8");
   stream.on("data", (chunk) => {
     for (const line of chunk.split(/\r?\n/).filter(Boolean)) {
-      console.log(`[TEST] [${label}] ${line}`);
+      console.log(`[${label}] ${line}`);
     }
   });
 }
@@ -513,6 +513,6 @@ async function main() {
 
 main().catch((error) => {
   const detail = error instanceof Error ? error.stack : String(error);
-  for (const line of detail.split(/\r?\n/)) console.error(`[TEST] ${line}`);
+  for (const line of detail.split(/\r?\n/)) console.error(`${line}`);
   process.exitCode = 1;
 });

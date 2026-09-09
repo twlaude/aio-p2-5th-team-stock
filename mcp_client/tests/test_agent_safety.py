@@ -69,5 +69,5 @@ async def test_progress_owner_defaults():
         "mcp": ["tool_started", "tool_completed", "tool_failed"],
     }.items():
         for event in events:
-            await reporter.publish(event, "analyzing", "running", "[TEST] owner", 80)
+            await reporter.publish(event, "analyzing", "running", "owner", 80)
             assert reporter.events[-1]["owner"] == owner

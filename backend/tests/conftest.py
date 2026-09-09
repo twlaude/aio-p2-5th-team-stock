@@ -24,11 +24,3 @@ def client():
 def member_token(client: TestClient) -> str:
     response = client.post("/api/v1/auth/login", json={"username": "demo001", "password": "Demo1234!"})
     return response.json()["access_token"]
-
-
-def pytest_sessionstart(session):
-    print("[TEST] backend tests start")
-
-
-def pytest_sessionfinish(session, exitstatus):
-    print(f"[TEST] backend tests exitstatus={exitstatus}")

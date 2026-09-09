@@ -74,7 +74,7 @@ on의 과거 성찰 소진 1건은 그대로 미완료입니다. 재검사는 �
 - MCP Client: `cd mcp_client && .venv/bin/python -m pytest -q` → 183 passed, 기존 Starlette 의존성 경고 1건.
 - 계약: 저장소 루트 `.../python -m pytest tests/contract -q` → 2 passed.
 - 하네스: 저장소 루트 `.../python -m pytest tests/scenarios/agent_eval/test_harness.py -q` → 21 passed.
-- 위 계약·하네스의 최종 합동 실행은 23 passed입니다. 모든 출력에 `[TEST]`를 붙였습니다.
+- 위 계약·하네스의 최종 합동 실행은 23 passed입니다.
 - MockTransport 4건: off/on 정상 실패 안내, on 제한 누락 후 성찰 수정, off 후속 HTTP 400.
 - 실제 API 보조 실행 명령은 [하네스 README](../../../../tests/scenarios/agent_eval/README.md)의 v3 절에 있습니다. 기존 파일이 있으면 실행을 거부합니다.
 
@@ -97,7 +97,7 @@ for line in (root / 'context-v3/verifier_audit.jsonl').read_text().splitlines():
     narrative = row['narrative']
     violations = [asdict(v) for v in verify_narrative(Narrative.model_validate(narrative), row['context'])] if narrative else []
     assert violations == audit['verifier']['violations']
-print('[TEST] 120 offline verifier observations match source and current rules')
+print('120 offline verifier observations match source and current rules')
 PY
 ```
 

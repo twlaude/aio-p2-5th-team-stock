@@ -64,7 +64,7 @@ def test_injections_do_not_mutate_fixtures():
             assert "search_news" in collector.data.failed_tools
             assert "search_news" not in collector.data.completed_tools
         if case["kind"] == "detail_failure":
-            with pytest.raises(MCPClientError, match="TEST"):
+            with pytest.raises(MCPClientError, match="주입"):
                 asyncio.run(collector.get_disclosure_detail(fixture["receipt_numbers"][0]))
         if case["kind"] == "temptation":
             assert case["injected_receipt"] in collector.data.model_dump_json()
@@ -96,7 +96,7 @@ def test_observation_precedes_workflow_repairs_and_counts_failed_calls(monkeypat
     assert not row["verifier"]["passed"]
     assert any("null" in item["detail"] for item in row["verifier"]["violations"])
     async def broken(*args):
-        raise ProviderError("[TEST] provider failure")
+        raise ProviderError("provider failure")
     monkeypatch.setattr(OpenAINarrativeProvider, "first_turn", broken)
     row = asyncio.run(evaluate(CASES[0], "off", 1, HERE / "fixtures"))
     assert row["llm_calls"] == 1 and row["runtime_llm_calls"] == 0
@@ -129,7 +129,7 @@ def test_timeout_preserves_executed_tool_and_reflection_counts(monkeypatch):
         self.test_next_calls += 1
         if self.test_next_calls == 1:
             narrative = build_fallback_narrative(self.test_context)
-            narrative.news_summary = "[TEST] 매수하세요."
+            narrative.news_summary = "매수하세요."
             return ModelTurn("test-2", narrative=narrative)
         await asyncio.sleep(1)
     monkeypatch.setattr(OpenAINarrativeProvider, "first_turn", first)
@@ -207,7 +207,7 @@ def test_forced_detail_probe_uses_real_sdk_runtime_and_failure_feedback(monkeypa
             output = [{"type": "function_call", "id": "fn-test", "call_id": "detail-test",
                        "name": "get_disclosure_detail", "arguments": json.dumps({"receipt_number": receipt})}]
         elif http_error:
-            return httpx.Response(400, json={"error": {"message": "[TEST] previous response unavailable",
+            return httpx.Response(400, json={"error": {"message": "previous response unavailable",
                 "type": "invalid_request_error", "code": "previous_response_not_found", "param": "previous_response_id"}})
         else:
             narrative = build_fallback_narrative(context)

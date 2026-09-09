@@ -102,7 +102,7 @@ async def test_forbidden_tool_blocked_with_policy_trace(context, enabled):
 @pytest.mark.asyncio
 async def test_reflection_trace_distinguishes_model_and_policy(context):
     provider = ScriptProvider(ModelTurn("bad-call", calls=[call(arguments="{")]),
-                              ProviderError("[TEST] 형식 오류", "bad-json"), prose(context))
+                              ProviderError("형식 오류", "bad-json"), prose(context))
     reporter = ProgressReporter(Settings(llm_provider="mock", backend_event_url=""), "request", "run")
     result = await StockAgentRuntime(provider, Disclosure(), 3, reflection_enabled=True).run(context, RECEIPTS, reporter)
     assert result.termination_reason == "completed" and result.reflection_calls == 2
