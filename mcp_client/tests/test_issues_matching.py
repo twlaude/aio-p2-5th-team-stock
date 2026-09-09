@@ -114,4 +114,4 @@ def test_matched_report_name_collapses_padding_whitespace():
         ],
     }
     result = match_issues(["3분기 실적 기대"], payload)
-    assert result.matched and result.matched[0].report_name == "영업(잠정)실적(공정공시)"  # strip (#51)
+    assert result.matched and result.matched[0].report_name == "영업(잠정)실적(공정공시)"  # 공시명 앞뒤 공백 제거

@@ -38,7 +38,6 @@ export function CountUp({ value, durationMs = 800, format = formatDecimal }: Cou
   const [displayValue, setDisplayValue] = useState(() => (prefersReducedMotion() ? value : 0));
 
   useEffect(() => {
-    // motion 4b-6
     if (prefersReducedMotion()) {
       setDisplayValue(value);
       return;

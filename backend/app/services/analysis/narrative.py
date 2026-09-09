@@ -25,7 +25,7 @@ def josa(word: str, a: str, b: str) -> str:
 
 
 def gap_state(score: int, level: EvidenceLevelName) -> GapState:
-    # 온도 v2(평소=50, 라벨 40/60/80) 기준. 2026-09-04 20종목 실측(34~64)으로 70/65/78/50 → 60/60/80/45 재조정.
+    # 평소 관심도 50과 라벨 경계 40/60/80을 기준으로 공시 근거와의 차이를 구분한다.
     if score >= 60 and level == "low":
         return "large"
     if (score >= 60 and level == "medium") or (score >= 80 and level != "low"):

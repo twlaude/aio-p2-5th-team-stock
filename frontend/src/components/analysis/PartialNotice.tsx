@@ -15,7 +15,6 @@ export function PartialNotice({ failed }: { failed: FailedKind[] }) {
   const missing = failed.map((kind) => LABEL[kind]).join("·");
   const kept = ["가격", ...ALL.filter((kind) => !failed.includes(kind)).map((kind) => LABEL[kind])].join("·");
   return (
-    // motion 4b-17
     <div className="analysis-partial-notice">
       <AlertCircle size={18} strokeWidth={2} />
       <span>{`${missing} 데이터를 못 가져왔어요. ${kept}만으로 정리했어요.`}</span>

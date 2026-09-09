@@ -1,8 +1,4 @@
-"""OpenDART 원본 응답 스키마.
-
-이 파일의 필드명은 OpenDART 응답과 동일하다. MCP Tool 공개 응답용 모델은
-``search.py``에 두며, 서비스 계층이 이 원본 값을 공개 계약 형태로 변환한다.
-"""
+"""OpenDART 원본 필드명을 유지하는 응답 스키마. MCP 공개 응답은 ``search.py``에 둔다."""
 
 from typing import Literal, NotRequired, TypedDict
 

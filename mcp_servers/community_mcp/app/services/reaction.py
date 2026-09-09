@@ -31,7 +31,7 @@ def fgi_error_response(request: FGIRequest, code: str, message: str, retryable: 
         "fgi": None,
         "label": None,
         "warnings": [],
-        "source_name": "태웅님 커뮤니티 서버",
+        "source_name": "커뮤니티 FGI 서버(네이버 종목토론실)",
         "error": {"service": SERVICE_NAME, "code": code, "message": message, "retryable": retryable},
     }
 
@@ -41,7 +41,7 @@ def map_upstream_response(payload: dict[str, Any], request: ReactionRequest) -> 
         "status": payload.get("status", "internal_error"),
         "company_name": request["company_name"],
         "stock_code": payload.get("stock_code") or request["stock_code"],
-        "source_name": "태웅님 커뮤니티 서버",
+        "source_name": "커뮤니티 FGI 서버(네이버 종목토론실)",
     }
     if payload.get("source_name") is not None:
         response["source_detail"] = payload["source_name"]
@@ -86,7 +86,7 @@ def map_upstream_fgi_response(payload: dict[str, Any], request: FGIRequest) -> F
         "post_count": payload.get("post_count"),
         "summary": payload.get("summary") or payload.get("reason"),
         "warnings": payload.get("warnings") or [],
-        "source_name": "태웅님 커뮤니티 서버",
+        "source_name": "커뮤니티 FGI 서버(네이버 종목토론실)",
         "source_detail": payload.get("source_name", "15분 공포탐욕 지수"),
         "collected_at": payload.get("collected_at") or payload.get("as_of"),
     }

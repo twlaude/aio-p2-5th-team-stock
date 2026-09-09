@@ -39,7 +39,6 @@ export function PriceHeader({ company, price }: PriceHeaderProps) {
           {...changeMotion}
           transition={{ delay: reducedMotion ? 0 : 0.2, duration: 0.2 }}
         >
-          {/* motion 4b-6 */}
           {formatSignedDecimal(price.change)} ({formatSignedRate(price.change_rate)})
           <span className="price-header__time"> · {seoulTimeFormatter.format(new Date(price.as_of))} 기준</span>
         </motion.div>

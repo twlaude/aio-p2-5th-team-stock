@@ -27,7 +27,7 @@ def build_mock_reaction(company_name: str, stock_code: str) -> ReactionResponse:
                 "posted_at": "2026-09-01T01:00:00Z",
             }
         ],
-        "source_name": "태웅님 커뮤니티 서버",
+        "source_name": "커뮤니티 FGI 서버(네이버 종목토론실)",
         "source_detail": "mock",
         "collected_at": "2026-09-01T09:00:00Z",
         "fgi_mean": 52.5,
@@ -55,7 +55,7 @@ def build_mock_fgi(company_name: str, stock_code: str) -> FGIResponse:
         "post_count": 100,
         "summary": "Mock 공포탐욕 지수 응답이다.",
         "warnings": [],
-        "source_name": "태웅님 커뮤니티 서버",
+        "source_name": "커뮤니티 FGI 서버(네이버 종목토론실)",
         "source_detail": "mock",
         "collected_at": "2026-09-01T09:00:00Z",
         "mock": True,

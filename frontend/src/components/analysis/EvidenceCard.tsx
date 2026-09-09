@@ -89,7 +89,6 @@ export function EvidenceCard({ kind, summary, count, items = [], community, fail
   };
 
   return (
-    // motion 4b-11, motion 4b-12, motion 4b-17
     <div
       ref={ref}
       className={[

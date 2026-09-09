@@ -9,7 +9,6 @@ interface WhyButtonProps {
 export function WhyButton({ onClick }: WhyButtonProps) {
   return (
     <div className="why-button-wrap">
-      {/* motion 4b-9 / motion 4b-18 */}
       <button className="why-button" type="button" onClick={onClick}>
         <MessageCircleQuestion size={22} strokeWidth={2.2} aria-hidden="true" />
         <span>왜 이렇게 판단했나요?</span>

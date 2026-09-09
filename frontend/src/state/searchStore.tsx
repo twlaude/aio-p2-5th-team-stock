@@ -4,7 +4,7 @@ import { apiClient } from "../services/backend_api";
 import type { AnalysisResponse } from "../services/backend_api/client";
 import { clearPendingQuery, readPendingQuery, savePendingQuery } from "./search";
 
-/** 검색 흐름의 단일 진실 — 모든 섹션(Hero/Result/Evidence/Personal)이 이 훅으로 읽는다. 공유 기반: 수정 금지. */
+/** 모든 섹션이 공유하는 검색 상태. */
 export type SearchStatus = "idle" | "loading" | "ready" | "error";
 
 export interface SearchStore {

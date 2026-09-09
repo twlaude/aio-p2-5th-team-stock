@@ -23,7 +23,6 @@ export function UserCard({ user, selected, index, onSelect }: UserCardProps) {
       animate={reducedMotion ? { opacity: 1 } : { opacity: 1, y: 0, scale: selected ? 1.03 : 1 }}
       transition={{ delay: reducedMotion ? 0 : index * 0.04, duration: 0.2 }}
     >
-      {/* motion 4b-16 */}
       <span className="login-user-card__meta">
         <User size={18} strokeWidth={1.8} aria-hidden="true" />
         <span>{user.username}</span>

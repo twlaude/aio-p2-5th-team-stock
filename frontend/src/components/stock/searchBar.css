@@ -1,9 +1,7 @@
 .search-bar { display: flex; align-items: center; gap: 12px; width: min(720px, 100%); height: 68px; margin-top: 12px; padding: 0 12px 0 24px; border: 2px solid var(--c-primary); border-radius: var(--r-pill); background: var(--c-white); box-shadow: var(--shadow-glow); transition: box-shadow 250ms ease, transform 250ms ease; }
 
-/* motion 4b-3 */
 .search-bar--focus { box-shadow: var(--shadow-glow), 0 0 0 6px color-mix(in srgb, var(--c-primary) 13%, transparent); }
 
-/* motion 4b-15 */
 .search-bar--shake { animation: searchShake 300ms ease-in-out 1; }
 
 .search-bar__icon { flex: 0 0 auto; color: var(--c-ink); }
@@ -11,7 +9,6 @@
 .search-bar__input::placeholder { color: var(--c-mute); font-weight: 400; }
 .search-bar__button, .company-chip { border: 0; border-radius: var(--r-pill); transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease; }
 .search-bar__button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 120px; min-height: 46px; padding: 12px 22px; color: var(--c-white); background: var(--c-primary); font-size: 15px; font-weight: 700; }
-/* motion 4b-18 */
 .search-bar__button:active, .company-chip:active { transform: scale(0.97); }
 .search-bar__button:focus-visible, .company-chip:focus-visible { outline: 2px solid var(--c-primary); outline-offset: 2px; }
 .search-bar__button:disabled { cursor: wait; opacity: 0.72; }

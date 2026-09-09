@@ -41,13 +41,12 @@ export function PersonalCard({ checkpoints }: PersonalCardProps) {
   const session = readAuthSession();
   const username = session?.user.username ?? "회원";
   const checks = checkpoints.priority_checks.slice(0, 3);
-  // 첫 문장 = 포인트(크게), 나머지 = 부연(작게). 형 지시(9/3): "포인트 의견은 크게하고, 부연의견은 작은글씨로"
+  // 핵심인 첫 문장은 크게, 나머지 부연 설명은 작게 표시한다.
   const sentences = checkpoints.personal_summary.split(/(?<=[.!?])\s+/).filter(Boolean);
   const point = sentences[0] ?? checkpoints.personal_summary;
   const detail = sentences.slice(1).join(" ");
 
   return (
-    // motion 4b-13
     <div ref={ref} className={["analysis-personal-card", inView ? "analysis-personal-card--visible" : ""].join(" ")}>
       <div className="analysis-personal-card__header">
         <User size={20} strokeWidth={1.8} />

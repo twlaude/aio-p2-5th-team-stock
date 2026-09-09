@@ -47,7 +47,7 @@ describe("pendingQuery 복귀", () => {
 });
 
 describe("카운트업 포맷", () => {
-  it("숫자와 등락률을 계약대로 표시한다", () => {
+  it("숫자와 등락률을 구분 기호와 부호로 표시한다", () => {
     expect(formatDecimal(78500)).toBe("78,500");
     expect(formatSignedDecimal(2450)).toBe("+2,450");
     expect(formatSignedDecimal(-1200)).toBe("-1,200");

@@ -5,11 +5,7 @@ import type { TopicEvidence } from "../analysis/deriveEvidence";
 import { shortenTopic } from "./shortenTopic";
 import "./result-ambient.css";
 
-/**
- * 결과 한줄 결론 주변에 커뮤니티 주제 키워드가 "팍" 퍼졌다가(burst) 둥실둥실 떠 있는 레이어.
- * 형 지시(2026-09-03): "결과문 띄우자나. 그 주변에 팍 퍼지는 이팩트 주면서 둥실둥실 떠잇게".
- * 키워드는 집계 주제만(원문 댓글 아님 — 커뮤니티 계약). motion 4b-8 확장.
- */
+/** 한줄 결론 주변에 집계된 커뮤니티 주제 키워드를 펼친 뒤 부유 애니메이션을 적용한다. */
 
 interface ResultAmbientProps {
   topics: TopicEvidence[];
@@ -135,12 +131,8 @@ function overlapsTarget(chip: { x: number; y: number; halfW: number }, target: B
     && chip.y + CHIP_HALF_H + gap > target.top && chip.y - CHIP_HALF_H - gap < target.bottom;
 }
 
-/**
- * 링 배치: 캡션·말풍선·재료줄을 한 덩어리로 보고 그 바깥 타원 위에 키워드를 등간격(360°)으로 두른다.
- * 형 지시(2026-09-03): "주변으로 간격 일정하게 360도로 두르게". 아래 중앙(why 버튼) 근처 점은 바깥으로 밀고, 화면이 좁아 옆구리가 안 나오면 그 점은 뺀다.
- * 모바일은 네 귀퉁이만(위 2·아래 2). 랜덤은 부유 리듬에만.
- * 2026-09-04(오현님): 주제를 shortenTopic으로 축약하고, 칩 실제 폭을 재서 앞 칩과 겹치면 각도 방향으로 바깥으로 민다. 화면 밖까지 밀려야 하면 그 칩은 뺀다.
- */
+/** 결론 영역 바깥 타원에 축약한 주제를 등간격으로 배치한다.
+ * 칩 간 충돌은 바깥으로 밀어 해소하고, 화면을 벗어나는 칩은 제외한다. */
 function layout(topics: TopicEvidence[], bounds: Bounds, seed: number, halfWidths: number[], labels: string[]): Placed[] {
   const rand = mulberry32(seed);
   const { bubble, mobile, hostHalfH, containerHalf } = bounds;

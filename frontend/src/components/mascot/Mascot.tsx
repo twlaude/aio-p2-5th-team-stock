@@ -2,7 +2,7 @@ import "./mascot.css";
 
 import { mascotClassName } from "./mascotState";
 
-/** 마스코트 인터페이스 — 화면 흐름 상태 8종 + 공포탐욕 무드 4종(scared·worried·greedy·ecstatic). 내부 구현은 영역 A 소유. 다른 영역은 import만. */
+/** 화면 흐름 상태 8종과 공포탐욕 무드 4종(scared·worried·greedy·ecstatic)에 따른 마스코트 표현. */
 export type MascotState = "idle" | "typing" | "submit" | "thinking" | "reveal" | "peek" | "wink" | "oops" | "scared" | "worried" | "greedy" | "ecstatic";
 
 export interface MascotProps {

@@ -15,7 +15,6 @@ function prefersReducedMotion() {
 export function LoadingBlock() {
   const [completedCount, setCompletedCount] = useState(() => (prefersReducedMotion() ? progressItems.length : 0));
 
-  // motion 4b-5
   useEffect(() => {
     if (prefersReducedMotion()) {
       setCompletedCount(progressItems.length);

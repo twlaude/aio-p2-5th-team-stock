@@ -1,4 +1,4 @@
-"""Disclosure MCP의 세 공개 Tool 등록과 오류 경계."""
+"""Disclosure MCP 공개 Tool 등록과 오류 처리."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ from app.services.report_search_service import ReportSearchService
 
 
 def register_disclosure_tools(mcp: FastMCP) -> None:
-    """FastMCP 인스턴스에 팀 계약의 세 Tool만 등록한다."""
+    """FastMCP 인스턴스에 공시 조회·보고서 검색 Tool을 등록한다."""
 
     @mcp.tool()
     def get_recent_disclosures(

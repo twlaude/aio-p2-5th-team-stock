@@ -50,7 +50,6 @@ export function LoginPage({ onLogin, session }: LoginPageProps) {
       animate={{ opacity: 1 }}
       transition={{ duration: reducedMotion ? 0.01 : 0.2 }}
     >
-      {/* motion 4b-16 */}
       <Mascot state="idle" size={96} />
       <h1>누구로 들어갈까요?</h1>
       <p className="login-page__copy">
@@ -75,8 +74,8 @@ export function LoginPage({ onLogin, session }: LoginPageProps) {
       {error ? <div className="login-page__error">{error}</div> : null}
       <div className="login-page__caption">
         {pendingQuery
-          ? `로그인 후 보던 ${pendingQuery} 결과로 돌아가요 · 실제 회원가입은 이번 범위 아님`
-          : "실제 회원가입은 이번 범위 아님"}
+          ? `로그인 후 보던 ${pendingQuery} 결과로 돌아가요 · 회원가입 없이 데모 계정으로 로그인해요`
+          : "회원가입 없이 데모 계정으로 로그인해요"}
       </div>
     </motion.section>
   );
