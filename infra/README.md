@@ -1,6 +1,6 @@
 # infra — 로컬 인프라 (Docker Compose)
 
-PostgreSQL(pgvector 포함)과 Redis를 한 번에 띄웁니다. 배포 서버의 systemd 유닛·자동배포는 `docs/operations/`에 정리되어 있습니다.
+PostgreSQL(pgvector 포함)과 Redis를 한 번에 띄웁니다. 서비스를 여러 컴퓨터에 나눠 띄우는 방법과 발표 준비는 `docs/operations/`에 정리되어 있습니다.
 
 ```bash
 cp .env.example .env            # POSTGRES_DB / POSTGRES_USER / POSTGRES_PASSWORD

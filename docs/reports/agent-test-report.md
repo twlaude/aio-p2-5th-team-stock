@@ -19,7 +19,7 @@
 | 모델·설정 | `gpt-5.6-luna`, reasoning `low`, `max_steps=3`, `max_reflections=2`, workflow timeout 60초 |
 | Provider | Responses API, strict JSON Schema, `store=False`, `parallel_tool_calls=False`, 출력 상한 1200 tokens |
 | 환경 확인 | Python 3.12.3, openai 2.24.0, fastmcp 4.0.1, pydantic 2.12.5, pytest 9.1.1 |
-| 기본 자료 | VPS MCP 4개(8020~8023)의 DataCollector 결과를 20종목 파일로 캡처 |
+| 기본 자료 | 시연 서버 MCP 4개(8020~8023)의 DataCollector 결과를 20종목 파일로 캡처 |
 | 캡처 시각 | 2026-09-07 03:37:58.713392~03:47:54.302125 UTC |
 | v1 off 실행 시작 범위 | 2026-09-07 03:48:28.961808~03:54:19.079768 UTC |
 | v1 on 실행 시작 범위 | 2026-09-07 03:54:34.480085~04:03:17.695031 UTC |
@@ -193,9 +193,9 @@ v2는 매도벽·매수세·순매수·순매도·매수/매도 우위·기관 �
 
 각각 Provider/HTTP 2회인 v1 별도 실측 1행이며 본 Agent 지표에 포함하지 않습니다. 실제 상세 Tool 호출을 거친 같은 비교는 [v3 보조 실측](agent-eval-results/context-v3/summary.md)에 있으며 결과는 동일합니다(off 400, on 완료). off는 `store=False + previous_response_id`, on은 `store=False + 요청 내 입력·출력 재전송` 경로입니다. 상세 조회 후속 처리 전체나 실제 상세 오류 복구를 검증한 실험은 아닙니다.
 
-### 6.4 VPS 최근 7일 다건 표본
+### 6.4 시연 서버 최근 7일 다건 표본
 
-Backend 보고서의 “VPS OpenAI 실패율 다건 표본” 과제를 읽기 전용 SQL로 보완했습니다. `/srv/team5/deploy/backend/.env`의 접속정보를 프로그램 내부에서만 읽고 `stock_insight_team.public.analysis_runs`를 `REPEATABLE READ READ ONLY` 트랜잭션으로 집계한 후 rollback했습니다. 인증정보·사용자별 행은 보고서에 포함하지 않습니다.
+Backend 보고서의 “운영 OpenAI 실패율 다건 표본” 과제를 읽기 전용 SQL로 보완했습니다. 시연 서버 Backend `.env`의 접속정보를 프로그램 내부에서만 읽고 `stock_insight_team.public.analysis_runs`를 `REPEATABLE READ READ ONLY` 트랜잭션으로 집계한 후 rollback했습니다. 인증정보·사용자별 행은 보고서에 포함하지 않습니다.
 
 | 항목 | 실측 |
 | --- | --- |
@@ -302,9 +302,9 @@ off의 28.57%→76.79%는 같은 응답을 재채점한 효과이며 모델 개�
 
 ## 9. 관련 시험과 재현 검증
 
-[Backend narrative_source 분기 시험](agent-test-result-report_narrative-source.md)은 성공 서술 채택·실패 시 규칙 조립을 담당합니다. 해당 문서는 수정하지 않았습니다. 그 문서의 VPS 단일 표본 “조건부 PASS”를 재판정하지 않고, 미해결 다건 정량화를 이 보고서 6.4절에서 보완합니다.
+[Backend narrative_source 분기 시험](agent-test-result-report_narrative-source.md)은 성공 서술 채택·실패 시 규칙 조립을 담당합니다. 해당 문서는 수정하지 않았습니다. 그 문서의 시연 서버 단일 표본 “조건부 PASS”를 재판정하지 않고, 미해결 다건 정량화를 이 보고서 6.4절에서 보완합니다.
 
-이번 문서 확정 전 `/srv/team5/venvs/mcp-client/bin/python -m pytest -q`를 `mcp_client/`에서 실행해 122 passed, 같은 Python의 `-m pytest tests/contract -q`를 저장소 루트에서 실행해 2 passed를 확인했습니다. 모든 시험 출력에는 `[TEST]`를 붙였습니다. 서비스·Agent 코드는 이번 문서 작업에서 변경하지 않았습니다.
+이번 문서 확정 전 MCP Client venv의 `python -m pytest -q`를 `mcp_client/`에서 실행해 122 passed, 같은 Python의 `-m pytest tests/contract -q`를 저장소 루트에서 실행해 2 passed를 확인했습니다. 모든 시험 출력에는 `[TEST]`를 붙였습니다. 서비스·Agent 코드는 이번 문서 작업에서 변경하지 않았습니다.
 
 ## 10. 결론
 

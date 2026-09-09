@@ -1,6 +1,6 @@
 """로컬 백엔드에 동시 요청 + 의도적 에러를 쏴서 확인하는 스크립트.
 
-VPS가 아니라 로컬(Mock 모드)에서 돌린다 — 외부 API(NAVER/OpenDART/KIS/OpenAI)
+시연 서버가 아니라 로컬(Mock 모드)에서 돌린다 — 외부 API(NAVER/OpenDART/KIS/OpenAI)
 쿼터를 안 쓰고, 실제 팀 데모 데이터(analysis_runs)를 어지르지 않는다.
 
 사용법:

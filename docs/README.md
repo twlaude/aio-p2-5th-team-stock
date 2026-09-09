@@ -13,6 +13,6 @@
 | | `BACKEND_CONCURRENCY_FINDINGS.md` | 동시성 병목 재현과 개선 결과 |
 | `planning/` | `plan.md` | 팀 구성·역할·일정·제출 범위 |
 | `operations/` | `LOCAL_RUN_ENV_CHECKLIST.md` | 로컬 실행 환경 변수 체크리스트 |
-| | `DEPLOYMENT_AND_PRESENTATION.md` | 배포·발표 준비 |
+| | `DEPLOYMENT_AND_PRESENTATION.md` | 분산 실행·발표 준비 |
 
 실행 방법은 루트 `README.md` 3절을 따릅니다.

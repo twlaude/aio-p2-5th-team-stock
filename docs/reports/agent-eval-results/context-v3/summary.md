@@ -71,7 +71,7 @@ on의 과거 성찰 소진 1건은 그대로 미완료입니다. 재검사는 �
 
 ## 4. 검증·재현·한계
 
-- MCP Client: `cd mcp_client && /root/.venvs/team5-mcp-client/bin/python -m pytest -q` → 183 passed, 기존 Starlette 의존성 경고 1건.
+- MCP Client: `cd mcp_client && .venv/bin/python -m pytest -q` → 183 passed, 기존 Starlette 의존성 경고 1건.
 - 계약: 저장소 루트 `.../python -m pytest tests/contract -q` → 2 passed.
 - 하네스: 저장소 루트 `.../python -m pytest tests/scenarios/agent_eval/test_harness.py -q` → 21 passed.
 - 위 계약·하네스의 최종 합동 실행은 23 passed입니다. 모든 출력에 `[TEST]`를 붙였습니다.
@@ -81,7 +81,7 @@ on의 과거 성찰 소진 1건은 그대로 미완료입니다. 재검사는 �
 오프라인 재검사 파일은 다음과 같이 네트워크 없이 원본과 대조할 수 있습니다. 저장소 루트에서 실행합니다.
 
 ```bash
-PYTHONPATH=mcp_client /root/.venvs/team5-mcp-client/bin/python - <<'PY'
+PYTHONPATH=mcp_client mcp_client/.venv/bin/python - <<'PY'
 from pathlib import Path
 from dataclasses import asdict
 import hashlib, json
