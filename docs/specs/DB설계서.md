@@ -412,7 +412,7 @@ Disclosure MCP의 현재 구현은 다음 순서를 코드로 강제합니다.
 - [ ] Redis의 현재 구현은 분석 응답 전체 캐시가 아니라 회원별 최근 검색 상태 캐시입니다.
 - [ ] `analysis_runs.status`, `rag_chunks.doc_type`, `disclosures.category`에는 현재 DB CHECK 제약이 없습니다.
 - [ ] `analysis_runs.stock_code`와 `rag_chunks.stock_code`는 6자리 형식 CHECK나 종목 마스터 FK가 없습니다.
-- [ ] 두 DB 간 공통 `stock_code` 일치는 DB 제약이 아니라 `shared/supported_companies.json` 동기화 규칙에 의존합니다.
+- [ ] 두 DB의 `stock_code`가 일치하는지는 DB 제약이 아니라 `shared/supported_companies.json` 동기화 규칙으로 맞춥니다.
 - [ ] 벡터 ANN 인덱스는 아직 없습니다. 현재 규모에서는 선필터 후 정확 검색을 사용합니다.
 
 체크되지 않은 항목은 문서 누락이 아니라 현재 DDL 또는 접근 코드가 강제하지 않는 규칙입니다. 제약이나 저장 경로를 추가할 때는 DDL, 마이그레이션, 저장소 코드, 테스트와 이 문서를 함께 갱신해야 합니다.

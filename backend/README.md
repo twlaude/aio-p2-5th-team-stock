@@ -12,7 +12,7 @@ python run.py                   # 또는 uvicorn app.main:app --host 0.0.0.0 --p
 MCP_CLIENT_MODE=mock python -m pytest -q tests/
 ```
 
-`run.py`는 Windows에서 psycopg 비동기 모드가 SelectorEventLoop를 요구해서 둔 진입점이고, 배포는 `uvicorn app.main:app`을 그대로 씁니다. 테스트는 `MCP_CLIENT_MODE=mock`으로 돌려야 실제 MCP Client를 때리지 않습니다.
+`run.py`는 Windows에서 psycopg 비동기 모드가 SelectorEventLoop를 요구해서 둔 진입점이고, 배포는 `uvicorn app.main:app`을 그대로 씁니다. 테스트는 `MCP_CLIENT_MODE=mock`으로 실행해야 실제 MCP Client를 호출하지 않습니다.
 
 ## 폴더 지도
 
