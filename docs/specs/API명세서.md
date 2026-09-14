@@ -1,28 +1,28 @@
 # API 명세서
 
-주식 정보 도우미 **살래? 말래?**의 Backend REST API, MCP Client 내부 API, 네 MCP 서버의 Tool 명세입니다. 이 서비스는 종목을 추천하지 않으며 현재가·뉴스·전자공시·커뮤니티 반응을 연결해 사용자가 확인할 정보를 설명합니다.
+## 한눈에
 
-- 지원 범위: [`shared/supported_companies.json`](../../shared/supported_companies.json)의 2026년 9월 1일 기준 KOSPI 시가총액 상위 20개 보통주 기업
-- Backend: `http://BACKEND_HOST:8000` · Swagger: `/docs`
-- MCP Client: `http://MCP_CLIENT_HOST:8010`
-- MCP 서버: FastMCP Streamable HTTP `/mcp`
-- 명세 범위: Backend HTTP 9개, MCP Client HTTP 3개, MCP Tool 8개, MCP Health 4개
+**살래? 말래?**의 Backend REST API·MCP Client 내부 API·MCP Tool(서버 호출 도구) 명세입니다.
+현재가·뉴스·전자공시·커뮤니티를 연결해 확인할 정보를 설명합니다. 종목은 추천하지 않습니다.
+Backend HTTP 9개·MCP Client HTTP 3개·MCP Tool 8개·MCP Health 4개를 다룹니다.
 
-계약과 구현이 다르면 실행 코드를 기준으로 작성하고 차이는 [부록 A](#부록-a-계약과-현재-코드의-차이)에 기록했습니다.
+<img src="../images/api-request-flow.svg" alt="브라우저의 Frontend → Backend → MCP Client → Price·News·Disclosure·Community MCP" width="100%">
 
----
+지원 종목은 [`shared/supported_companies.json`](../../shared/supported_companies.json)의 2026년 9월 1일 기준 KOSPI 시가총액 상위 20개 보통주 기업입니다.
+
+| 접속 | 주소·방식 |
+|---|---|
+| Backend / Swagger | `http://localhost:8000` / `/docs` |
+| MCP Client | `http://localhost:8010` |
+| MCP 서버 | FastMCP Streamable HTTP(스트리밍 HTTP 연결) `/mcp` |
+
+구현 기준 명세입니다. 계약 차이는 [부록 A](#부록-a-계약과-현재-코드의-차이)를 봅니다.
 
 ## 1. 공통 규약
 
 ### 1.1 연결 구조와 포트
 
-```text
-Frontend --REST/JSON--> Backend --REST/JSON--> MCP Client
-                                              ├─ Streamable HTTP --> Price MCP
-                                              ├─ Streamable HTTP --> News MCP
-                                              ├─ Streamable HTTP --> Disclosure MCP
-                                              └─ Streamable HTTP --> Community MCP
-```
+Frontend → Backend → MCP Client는 REST/JSON, Client → MCP 4개는 Streamable HTTP입니다.
 
 | 서비스 | 포트 | Health | 주요 경로 |
 |---|---:|---|---|
@@ -33,7 +33,7 @@ Frontend --REST/JSON--> Backend --REST/JSON--> MCP Client
 | Disclosure MCP | 8022 | `GET /health` | `/mcp` |
 | Community MCP | 8023 | `GET /health` | `/mcp` |
 
-Frontend는 Backend만 호출합니다. Backend는 사용자 식별자 없이 선택적인 투자 성향 네 값만 MCP Client에 전달하며, MCP 서버에는 투자 성향도 전달하지 않습니다. `/mcp`는 일반 REST 경로가 아니라 MCP 프로토콜 진입점입니다.
+Frontend는 Backend만 호출합니다. Backend는 사용자 식별자 없이 선택적 성향 네 값만 MCP Client에 보냅니다. MCP 서버에는 성향도 보내지 않습니다. `/mcp`는 MCP 프로토콜 진입점이며 일반 REST 경로가 아닙니다.
 
 ### 1.2 데이터 표기
 
@@ -46,11 +46,11 @@ Frontend는 Backend만 호출합니다. Backend는 사용자 식별자 없이 �
 | 값 없음 | 목록은 `[]`, 단일 객체는 `null` |
 | 요청·실행 ID | `request_id`, `run_id`는 UUID 문자열로 생성 |
 
-Backend와 MCP Client는 공통 `data` 봉투를 사용하지 않으며 응답 모델의 필드가 JSON 최상위에 위치합니다.
+Backend·MCP Client 응답은 `data` 봉투 없이 모델 필드를 JSON 최상위에 둡니다.
 
 ### 1.3 인증
 
-회원 API는 `Authorization: Bearer <access_token>`을 사용합니다. 토큰은 HS256 JWT이며 기본 만료 시간은 24시간이고 `sub`에 `user_id`를 담습니다.
+회원 인증은 `Authorization: Bearer <access_token>`입니다. HS256 JWT(서명된 인증 토큰)의 기본 만료는 24시간이며 `sub`에 `user_id`를 담습니다.
 
 | API | 인증 |
 |---|---|
@@ -71,16 +71,16 @@ Backend와 MCP Client는 공통 `data` 봉투를 사용하지 않으며 응답 �
 | `external_api_error` | 외부 제공처 장애 |
 | `timeout` | 호출 시간 초과 |
 | `internal_error` | 내부 처리 실패 |
-| `error` | Community FGI 어댑터가 원본 오류를 통합한 상태 |
+| `error` | Community FGI(공포탐욕 지수) 어댑터가 원본 오류를 통합한 상태 |
 
-현재 코드는 오류 위치에 따라 두 형식을 사용합니다.
+오류 형식은 발생 경계에 따라 다릅니다.
 
 | 경계 | 형식 |
 |---|---|
 | FastAPI 인증·검증·`HTTPException` | `{"detail": ...}`. 입력 검증은 422 |
 | Backend 분석 서비스·MCP Tool 업무 오류 | `status`와 `error.service / code / message / retryable` |
 
-업무 오류 객체의 공통 필드는 다음과 같습니다.
+업무 오류 필드는 다음과 같습니다.
 
 | 필드 | 타입 | 설명 |
 |---|---|---|
@@ -91,7 +91,7 @@ Backend와 MCP Client는 공통 `data` 봉투를 사용하지 않으며 응답 �
 | `error.message` | string | 사용자에게 전달 가능한 설명 |
 | `error.retryable` | boolean | 같은 요청의 일시적 재시도 가능 여부 |
 
-MCP Tool의 업무 오류는 HTTP 상태가 아니라 Tool 반환 객체의 `status`로 전달합니다. API Key, 내부 Prompt, Stack Trace, DB 주소는 사용자 응답에 포함하지 않습니다.
+Tool 업무 오류는 HTTP 상태 대신 반환 객체의 `status`로 전달합니다. API Key·내부 Prompt·Stack Trace·DB 주소는 응답에서 제외합니다.
 
 ### 1.5 시간 제한
 
@@ -99,13 +99,11 @@ MCP Tool의 업무 오류는 HTTP 상태가 아니라 Tool 반환 객체의 `sta
 |---|---:|
 | Frontend 분석 요청 | 90초(계약값, 현재 live client는 자체 timeout 미적용) |
 | Backend → MCP Client | 75초 |
-| MCP Client Workflow | 60초 |
+| MCP Client Workflow(분석 처리 흐름) | 60초 |
 | MCP Tool 1회 | 15초 |
 | Agent | 최대 3단계 |
 
-현재 코드의 재시도 구현 여부는 부록 A에 별도로 명시했습니다.
-
----
+재시도 구현은 부록 A를 봅니다.
 
 ## 2. 전체 API 목록
 
@@ -132,18 +130,18 @@ MCP Tool의 업무 오류는 HTTP 상태가 아니라 Tool 반환 객체의 `sta
 | News | `search_news` | O | 최근 관련 뉴스 |
 | Disclosure | `get_recent_disclosures` | O | 최근 공시 목록 |
 | Disclosure | `get_disclosure_detail` | 조건부 | Agent가 선택한 공시 원문 앞부분 |
-| Disclosure | `search_annual_report` | O | 사업보고서 RAG 검색 |
+| Disclosure | `search_annual_report` | O | 사업보고서 RAG(검색 근거를 쓰는 생성) 검색 |
 | Disclosure | `search_periodic_report` | X | 사업·반기·분기보고서 유형별 RAG 검색 |
 | Community | `get_community_reaction` | O | 커뮤니티 집계·최신 FGI |
 | Community | `get_fear_greed_index` | X | 최신 15분 FGI 단건 |
 
----
+## 상세
 
 ## 3. Backend API
 
 ### 3.1 Health — `GET /health`
 
-`200 {"status":"ok"}`를 반환합니다. DB·Redis·MCP 연결까지 검사하지는 않습니다.
+`200 {"status":"ok"}`를 반환합니다. DB·Redis·MCP 연결은 검사하지 않습니다.
 
 ### 3.2 Auth — `/api/v1/auth`
 
@@ -154,7 +152,7 @@ MCP Tool의 업무 오류는 HTTP 상태가 아니라 Tool 반환 객체의 `sta
 | `username` | string | O | 로그인 사용자명 |
 | `password` | string | O | 원문은 응답·DB에 저장하지 않음 |
 
-성공 시 `200`과 다음 응답을 반환합니다.
+성공 응답은 `200`입니다.
 
 | 응답 필드 | 타입 | 설명 |
 |---|---|---|
@@ -164,7 +162,7 @@ MCP Tool의 업무 오류는 HTTP 상태가 아니라 Tool 반환 객체의 `sta
 | `user.username` / `user.display_name` | string | 사용자명 / 표시 이름 |
 | `profile_completed` | boolean | 투자 성향 존재 여부 |
 
-계정이 없거나 비밀번호가 틀리면 `401`입니다.
+계정 없음·비밀번호 불일치는 `401`입니다.
 
 #### `POST /api/v1/auth/signup`
 
@@ -176,7 +174,7 @@ MCP Tool의 업무 오류는 HTTP 상태가 아니라 Tool 반환 객체의 `sta
 | `profile.investment_horizon` | string | O | `short` / `medium` / `long` |
 | `profile.preferred_evidence` | string | O | `market` / `news` / `financial` / `risk` |
 
-사용자와 성향을 한 트랜잭션으로 생성하고 로그인과 같은 응답을 `200`으로 반환합니다. 비밀번호는 PBKDF2-SHA256 해시로 저장합니다. 사용자명 중복은 `400`, 누락·허용값 위반은 `422`입니다. 현재 요청 모델에는 문자열 길이·비밀번호 복잡도 제약이 없습니다.
+사용자·성향을 한 트랜잭션으로 생성합니다. 로그인과 같은 응답(`200`)입니다. 비밀번호는 PBKDF2-SHA256 해시로 저장합니다. 중복 사용자명은 `400`, 누락·허용값 위반은 `422`입니다. 문자열 길이·비밀번호 복잡도 제약은 없습니다.
 
 ### 3.3 Profile — `/api/v1/profile`
 
@@ -185,7 +183,7 @@ MCP Tool의 업무 오류는 HTTP 상태가 아니라 Tool 반환 객체의 `sta
 | GET | 없음 | 네 투자 성향 필드 | 성향 없음 404, 인증 실패 401 |
 | PUT | 네 투자 성향 필드 전체 | 저장된 네 필드 | 인증 단계의 사용자 없음 401, 검증 실패 422 |
 
-PUT은 기존 성향을 갱신하고 없으면 생성합니다. 투자 성향은 설명 난이도와 확인 순서에만 사용하며 매수·매도 적합도를 계산하지 않습니다.
+PUT은 성향을 갱신하고 없으면 생성합니다. 성향은 설명 난이도·확인 순서에만 쓰며 매수·매도 적합도는 계산하지 않습니다.
 
 ### 3.4 Memory — `/api/v1/memories/me`
 
@@ -194,7 +192,11 @@ PUT은 기존 성향을 갱신하고 없으면 생성합니다. 투자 성향은
 | GET | 200 | `user_id`, `long_term`, `short_term` 반환 |
 | DELETE | 204 | PostgreSQL 투자 성향과 Redis 단기 Memory를 함께 삭제, 본문 없음 |
 
-`long_term`은 `InvestmentProfile` 또는 `null`, `short_term`은 Redis 상태 또는 `{}`입니다. 회원 분석 성공 시 단기 Memory에 `recent_company_name`, `recent_stock_code`, `searched_at`을 기록합니다. DELETE 후에는 같은 JWT라도 투자 성향이 없으므로 회원 분석의 성향 조회가 `404`가 될 수 있습니다.
+| Memory 규칙 | 값·동작 |
+|---|---|
+| `long_term` / `short_term` | `InvestmentProfile` 또는 `null` / Redis 상태 또는 `{}` |
+| 회원 분석 성공 | 단기 Memory에 `recent_company_name`, `recent_stock_code`, `searched_at` 기록 |
+| DELETE 이후 | 같은 JWT라도 성향이 없어 회원 분석의 성향 조회가 `404`일 수 있음 |
 
 ### 3.5 Companies — `GET /api/v1/companies`
 
@@ -209,7 +211,7 @@ PUT은 기존 성향을 갱신하고 없으면 생성합니다. 투자 성향은
 
 ### 3.6 Analyses — `POST /api/v1/analyses`
 
-요청은 `{"query":"삼성전자"}` 한 필드입니다. 양 끝 공백을 제거한 값이 정식 기업명 또는 6자리 종목 코드와 정확히 일치해야 하며 자유 질문·날짜 범위·추천 지시는 받지 않습니다.
+요청은 `{"query":"삼성전자"}` 한 필드입니다. 앞뒤 공백을 뺀 값이 정식 기업명·6자리 코드와 정확히 일치해야 합니다. 자유 질문·날짜 범위·추천 지시는 받지 않습니다.
 
 #### 공통 성공 응답
 
@@ -232,7 +234,7 @@ PUT은 기존 성향을 갱신하고 없으면 생성합니다. 투자 성향은
 | `detail.sources` | 화면 출처 배열 |
 | `personalized_checkpoints` | `personal_summary`, `priority_checks`, `caution` |
 
-관심 온도 라벨은 점수 구간으로 확정합니다.
+관심 온도 라벨은 점수로 정합니다.
 
 | 점수 | `label` |
 |---:|---|
@@ -242,15 +244,19 @@ PUT은 기존 성향을 갱신하고 없으면 생성합니다. 투자 성향은
 | 60~79 | `관심 높음` |
 | 80~100 | `관심 매우 높음` |
 
-`detail.sources[]`는 MCP Client가 만든 `source_type`, `title`, 선택적 `url`, 선택적 `published_at`, 출처별 `meta`를 그대로 담습니다. `source_type`은 `price / news / disclosure / community`입니다.
+`detail.sources[]`는 MCP Client의 `source_type`, `title`, 선택적 `url`·`published_at`, 출처별 `meta`를 그대로 담습니다. `source_type`은 `price / news / disclosure / community`입니다.
 
-비회원 응답은 가격과 한 줄 설명까지만 제공하며 `detail`, `personalized_checkpoints`가 `null`입니다. 회원 분석은 상세·개인화를 채우고 최근 검색을 Redis에 기록합니다. 회원·비회원 모두 분석 실행 이력을 PostgreSQL에 저장하며 비회원 `user_id`는 `null`입니다.
+| 접근·저장 | 규칙 |
+|---|---|
+| 비회원 | 가격·한 줄 설명 제공. `detail`, `personalized_checkpoints`는 `null` |
+| 회원 | 상세·개인화 제공. 최근 검색은 Redis에 기록 |
+| 공통 | 실행 이력을 PostgreSQL에 저장. 비회원 `user_id`는 `null` |
 
-MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 실패 또는 `NARRATIVE_SOURCE=backend` 설정에서는 Backend 규칙으로 한 줄과 개인화를 조립합니다.
+MCP Client Agent 설명을 우선합니다. Agent 실패·`NARRATIVE_SOURCE=backend`이면 Backend 규칙으로 한 줄·개인화를 만듭니다.
 
 #### 미지원 기업과 오류
 
-미지원 query는 MCP Client를 호출하지 않으며 현재 코드는 HTTP `200`으로 다음 필드를 반환합니다.
+미지원 query는 MCP Client 호출 없이 HTTP `200`으로 응답합니다.
 
 | 필드 | 값 |
 |---|---|
@@ -265,11 +271,9 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 | request ID 불일치 등 신뢰 불가 응답 | 500 | `internal_error` / `MCP_CLIENT_INVALID_RESPONSE` |
 | 요청 검증 실패 | 422 | FastAPI `detail` |
 
----
-
 ## 4. MCP Client API
 
-`/internal/v1`은 서비스 역할상 내부 경로이지만 현재 라우터에는 별도 인증 의존성이 없습니다. 배포 시 접근 경계는 네트워크 구성으로 제한해야 합니다.
+`/internal/v1`은 내부 경로지만 라우터 인증은 없습니다. 네트워크로 접근을 제한해야 합니다.
 
 ### 4.1 `GET /health`
 
@@ -282,7 +286,7 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 
 ### 4.2 `GET /internal/v1/mcp-status`
 
-`services.price / news / disclosure / community`별 `status`와 실제 Tool 이름 배열을 반환합니다. 모두 연결되면 최상위 `connected`, 하나라도 실패하면 `partial`이며 실패 서비스는 `unavailable`, `tools:[]`입니다.
+`services.price / news / disclosure / community`별 `status`·실제 Tool 이름 배열을 반환합니다. 최상위 상태는 모두 연결 시 `connected`, 일부 실패 시 `partial`입니다. 실패 서비스는 `unavailable`, `tools:[]`입니다.
 
 ### 4.3 `POST /internal/v1/common-analyses`
 
@@ -311,7 +315,7 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 | `collected_at` | 취합 시각 |
 | `trace_summary` | Tool·LLM 호출 수, 성공·실패 Tool, `duration_ms` |
 
-`common_analysis.market_temperature`에는 `score`, `label`, `data_coverage`, 가용 입력의 최대 배점 합인 `weight_covered`, 실제 배점 구성인 `components`가 포함됩니다. `weight_covered`는 0~100이며 구버전 응답을 재검증하는 Backend에서는 필드가 없을 때 100을 기본값으로 사용합니다.
+`common_analysis.market_temperature` 필드는 아래 표와 같습니다. `weight_covered`는 가용 입력의 최대 배점 합입니다. Backend는 구버전 응답에 이 필드가 없으면 100으로 재검증합니다. `components`는 실제 배점 구성입니다.
 
 | 중첩 객체 | 필드 |
 |---|---|
@@ -331,18 +335,25 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 | `community_activity` | 지난 7일 글 수의 이전 28일 주간 평균 대비 비율 | `clamp(ratio / 3, 0, 1)` | 25 |
 | `fear_greed_intensity` | 공포탐욕 지수 | `abs(fgi - 50) / 50` | 20 |
 
-각 항목은 출처가 성공하고 필요 입력이 있을 때만 `components`에 담습니다. 미가용 항목은 빼고 `score = round(가용 항목 점수 합 / weight_covered × 100)`으로 재정규화하며, 가용 배점이 0이면 0점입니다. 공시 건수와 주가 등락률은 시장 관심 온도 산식에 사용하지 않습니다.
+출처 성공·필요 입력 확보 항목만 `components`에 담습니다. 미가용 항목을 빼고 `score = round(가용 항목 점수 합 / weight_covered × 100)`으로 재정규화합니다. 가용 배점이 0이면 0점입니다. 공시 건수·주가 등락률은 쓰지 않습니다.
 
-`evidence_level`은 자료 종류 수가 아니라 현재 이슈와 최근 30일 주요 비정기 공시의 연결 여부로 계산합니다. 커뮤니티 기대 3개·우려 2개를 우선하고 제목에 정식 회사명이 포함된 뉴스 2개를 보조 이슈로 사용합니다. 규칙 사전으로 연결된 공시가 있으면 `high`, 연결은 없지만 주요 공시가 있으면 `medium`, 주요 공시가 없으면 `low`이며, 공시 조회 실패도 사유를 밝힌 `low`입니다. 임베딩·유사도 하한은 사용하지 않습니다. `sources[].meta`의 `confirmed`/`unconfirmed`는 연결·미연결 이슈를, `disclosure_kind`는 `major`/`periodic`/`other`를 뜻합니다.
+`evidence_level`은 현재 이슈와 최근 30일 주요 비정기 공시의 연결로 계산합니다. 자료 종류 수·임베딩·유사도 하한은 쓰지 않습니다.
 
-현재 성공 응답에서 생성되는 종료 이유는 `completed`, `partial_completed`, `model_error`, `invalid_tool_call`, `max_steps_exceeded`입니다. Workflow 시간 초과는 응답 모델이 아니라 HTTP 504로 종료합니다.
+| 근거 수준 규칙 | 내용 |
+|---|---|
+| 이슈 | 커뮤니티 기대 3개·우려 2개 우선, 제목에 정식 회사명을 포함한 뉴스 2개 보조 |
+| `high` / `medium` / `low` | 규칙 사전으로 연결된 공시 있음 / 연결 없이 주요 공시 있음 / 주요 공시 없음 |
+| 공시 조회 실패 | 사유를 밝힌 `low` |
+| `sources[].meta` | `confirmed`/`unconfirmed`: 연결·미연결 이슈, `disclosure_kind`: `major`/`periodic`/`other` |
+
+성공 응답의 종료 이유는 `completed`, `partial_completed`, `model_error`, `invalid_tool_call`, `max_steps_exceeded`입니다. Workflow 시간 초과는 응답 모델 대신 HTTP 504로 끝납니다.
 
 #### 처리와 오류
 
-1. Price·News·정기공시·최근 30일 주요 비정기 공시·사업보고서·Community의 여섯 기본 Tool을 병렬 호출합니다.
-2. Price가 성공하지 않으면 필수 자료 누락으로 `503`을 반환합니다.
+1. Price·News·정기공시·최근 30일 주요 비정기 공시·사업보고서·Community의 기본 Tool 여섯 개를 병렬 호출합니다.
+2. 필수 Price 실패는 `503`으로 중단합니다.
 3. 선택 자료 실패는 성공 자료를 유지하고 `partial_success`로 표시합니다.
-4. 관심 온도·근거 수준을 규칙으로 계산하고 Agent가 설명합니다.
+4. 규칙으로 관심 온도·근거 수준을 계산하고 Agent가 설명합니다.
 5. Agent는 최근 목록의 접수번호로 공시 상세를 조건부 조회합니다.
 
 | 상황 | HTTP | 응답 |
@@ -351,8 +362,6 @@ MCP Client Agent의 서사가 정상 생성되면 우선 사용합니다. Agent 
 | Workflow 시간 초과 | 504 | `분석 시간이 초과되었습니다.` |
 | 필수 Price 실패 | 503 | `현재 가격을 확인하지 못했습니다.` |
 | 그 밖의 예외 | 500 | `분석 중 내부 오류가 발생했습니다.` |
-
----
 
 ## 5. MCP 서버와 Tool
 
@@ -370,7 +379,14 @@ Health는 `status:ok`, `service:price_mcp`, KIS 자격 증명 여부 `configured
 | 캐시 | 종목별 성공 응답, 계약 기본 TTL 60초 |
 | 결과 없음 | `no_data`와 기업명·코드·제공처·수집시각 |
 
-거래량 기준은 Asia/Seoul 시각과 일봉 `output2`의 오늘 행 존재 여부로 고른다. 거래일 장중(09:00~15:30 전)은 `intraday_pace`로 누적 거래량을 장 마감 페이스로 환산하고, 장 마감 뒤에는 `today_close`, 비거래일이나 장 시작 전에는 `last_session`을 사용한다. `volume_as_of`는 기준 거래일이며 `projected_volume`은 `intraday_pace`에서만 값이 있다. 일봉 조회 실패 시 세 필드는 모두 `null`이다.
+거래량 기준은 Asia/Seoul 시각과 일봉 `output2`의 오늘 행 유무로 정합니다.
+
+| 시점·필드 | 규칙 |
+|---|---|
+| 거래일 장중(09:00~15:30 전) | `intraday_pace`: 누적 거래량을 장 마감 페이스로 환산 |
+| 장 마감 뒤 / 비거래일·장 시작 전 | `today_close` / `last_session` |
+| `volume_as_of` / `projected_volume` | 기준 거래일 / `intraday_pace`에서만 값 존재 |
+| 일봉 조회 실패 | 세 필드 모두 `null` |
 
 | 상황 | `status` / `error.code` | 재시도 |
 |---|---|---|
@@ -397,11 +413,17 @@ Health는 `status:ok`, `service:news_mcp`, `mock` 여부를 반환합니다.
 | `articles[]` | `headline`, `publisher`, `published_at`, `summary`, `source_url`, `relevance` |
 | `mock` | Mock 모드 응답에 포함되는 boolean |
 
-기사가 없으면 `no_data`와 빈 배열을 반환합니다. 본문 전체를 크롤링하지 않으며 MCP Client는 최대 5건만 사용합니다. 오류 코드는 입력 `INVALID_REQUEST`, 인증 `NEWS_API_UNAUTHORIZED`, 시간 초과 `NEWS_API_TIMEOUT`, 장애 `NEWS_API_UNAVAILABLE`입니다.
+본문 전체는 크롤링하지 않습니다. MCP Client는 최대 5건만 사용합니다.
+
+| News 결과·오류 | 값 |
+|---|---|
+| 기사 없음 | `no_data`와 빈 배열 |
+| 입력 / 인증 | `INVALID_REQUEST` / `NEWS_API_UNAUTHORIZED` |
+| 시간 초과 / 장애 | `NEWS_API_TIMEOUT` / `NEWS_API_UNAVAILABLE` |
 
 ### 5.3 Disclosure MCP (`:8022/mcp`)
 
-Health는 `status:ok`, `service:disclosure_mcp`를 반환합니다. 성공 응답에는 `request_id`, `source_type:"dart"`가 추가되고 종목 기반 Tool은 입력 `stock_code`와 제공된 `company_name`도 추가합니다.
+Health는 `status:ok`, `service:disclosure_mcp`입니다. 성공 응답에는 `request_id`, `source_type:"dart"`를 추가합니다. 종목 Tool에는 입력 `stock_code`·제공된 `company_name`도 추가합니다.
 
 #### `get_recent_disclosures`
 
@@ -411,11 +433,19 @@ Health는 `status:ok`, `service:disclosure_mcp`를 반환합니다. 성공 응�
 | `company_name` | 선택, 제공 시 DB 정식명과 일치 |
 | `lookback_days` / `limit` | 30 / 20, 허용 1~365 / 1~100 |
 
-출력은 `status`, `disclosures[]`, `collected_at`입니다. 각 공시는 `report_name`, `receipt_number`, `published_at`, `document_type:"disclosure"`, `source_url`을 가집니다. 최신순으로 반환하고 메타데이터를 DB에 upsert하며, 결과 없음은 `no_data`와 빈 배열입니다.
+| 최근 공시 출력 | 필드·동작 |
+|---|---|
+| 응답 | `status`, `disclosures[]`, `collected_at` |
+| 각 공시 | `report_name`, `receipt_number`, `published_at`, `document_type:"disclosure"`, `source_url` |
+| 정렬·저장·빈 결과 | 최신순, DB 메타데이터 upsert(추가·갱신), `no_data`와 빈 배열 |
 
 #### `get_disclosure_detail`
 
-입력은 `receipt_number`입니다. 출력은 `status`, 선택적 `report_name / published_at`, `receipt_number`, `document_type`, `content`, `content_truncated`, `total_chars`, `summary`, `source_url`, `collected_at`입니다. 문단·표를 평탄화한 원문의 앞 3,000자만 반환합니다.
+| 공시 상세 | 필드·동작 |
+|---|---|
+| 입력 | `receipt_number` |
+| 출력 | `status`, 선택적 `report_name / published_at`, `receipt_number`, `document_type`, `content`, `content_truncated`, `total_chars`, `summary`, `source_url`, `collected_at` |
+| 원문 | 문단·표를 평탄화한 앞 3,000자 |
 
 #### `search_annual_report` · `search_periodic_report`
 
@@ -427,7 +457,11 @@ Health는 `status:ok`, `service:disclosure_mcp`를 반환합니다. 성공 응�
 | `top_k` | 기본 5, 1~5 | 동일 |
 | `report_year` | 선택, 기본 직전 연도 | 선택, 유형별 최근 보고 연도 |
 
-두 Tool은 `status`, `report_name`, `receipt_number`, `report_year`, `report_type`, `matched_passages`, `available_years`, `source_url`, `collected_at`을 반환합니다. 각 passage는 `section`, `text`, 소수점 6자리 `score`, `match_type:"vector"`입니다. 대상 보고서가 없으면 수집·청킹·임베딩 후 검색하며 관련 청크만 반환합니다.
+| 보고서 검색 출력 | 필드·동작 |
+|---|---|
+| 두 Tool 공통 | `status`, `report_name`, `receipt_number`, `report_year`, `report_type`, `matched_passages`, `available_years`, `source_url`, `collected_at` |
+| 각 passage(검색 구절) | `section`, `text`, 소수점 6자리 `score`, `match_type:"vector"` |
+| 보고서 없음 | 수집·청킹(문서 나누기)·임베딩(벡터 변환) 후 검색, 관련 청크만 반환 |
 
 | Disclosure 오류 | `status` / `error.code` | 재시도 |
 |---|---|---|
@@ -460,9 +494,20 @@ Health는 `status:ok`, `service:community_mcp`, `mock` 여부를 반환합니다
 | `note`, `supported_codes` | 원본에 있을 때만 포함 |
 | `mock` | Mock 모드 응답에 포함되는 boolean |
 
-`period`는 `from / to`, `sentiment`는 `positive_count / neutral_count / negative_count`, `top_topics`는 `expectations / concerns`를 사용합니다. 대표 근거에는 `text / posted_at`과 원본에 있는 `sentiment`가 전달되며, 최신 FGI에는 `fgi / label / as_of / post_count / valence_percentile`이 올 수 있습니다.
+| Community 중첩 객체 | 필드 |
+|---|---|
+| `period` | `from / to` |
+| `sentiment` | `positive_count / neutral_count / negative_count` |
+| `top_topics` | `expectations / concerns` |
+| 대표 근거 | `text / posted_at`, 원본에 있는 `sentiment` |
+| 최신 FGI | `fgi / label / as_of / post_count / valence_percentile`이 올 수 있음 |
 
-원문 게시글 전체는 MCP Client와 LLM에 전달하지 않습니다. 입력 오류는 `INVALID_REQUEST`, 인증·시간 초과·장애는 각각 `COMMUNITY_API_UNAUTHORIZED`, `COMMUNITY_API_TIMEOUT`, `COMMUNITY_API_UNAVAILABLE`입니다.
+게시글 원문 전체는 MCP Client·LLM에 보내지 않습니다.
+
+| Community 오류 | 코드 |
+|---|---|
+| 입력 / 인증 | `INVALID_REQUEST` / `COMMUNITY_API_UNAUTHORIZED` |
+| 시간 초과 / 장애 | `COMMUNITY_API_TIMEOUT` / `COMMUNITY_API_UNAVAILABLE` |
 
 #### `get_fear_greed_index`
 
@@ -476,9 +521,7 @@ Health는 `status:ok`, `service:community_mcp`, `mock` 여부를 반환합니다
 | `error` | `status:error` 또는 잘못된 입력일 때 오류 상세 |
 | `mock` | Mock 모드 응답에 포함되는 boolean |
 
-원본 `status:"empty"`는 사유에 `지원`이 있으면 `unsupported_company`, 그 외에는 `no_data`로 변환합니다. 원본 인증·장애·시간 초과는 `status:"error"`와 `error` 객체로 통합합니다.
-
----
+원본 `status:"empty"`의 사유에 `지원`이 있으면 `unsupported_company`, 없으면 `no_data`입니다. 원본 인증·장애·시간 초과는 `status:"error"`·`error` 객체로 통합합니다.
 
 ## 6. 설계 의도
 
@@ -491,18 +534,14 @@ Health는 `status:ok`, `service:community_mcp`, `mock` 여부를 반환합니다
 | 최소 원문 | 뉴스 최대 5건, 화면 공시 최대 2건, 보고서 청크 최대 5개, 커뮤니티 집계만 사용합니다. |
 | 추천 방지 | 성향은 설명 순서에만 사용하며 요청 모델에도 매수·매도 추천용 자유 질문 필드가 없습니다. |
 
----
-
 ## 7. 검증 체크리스트
 
-- [x] Backend `main.py`, 라우터 4개와 요청·응답 schemas를 대조했습니다.
-- [x] MCP Client HTTP 3개와 Workflow·응답 모델을 대조했습니다.
-- [x] MCP 서버 4개의 Health와 등록 Tool 8개를 실제 코드에서 확인했습니다.
-- [x] Tool 기본값·허용 범위·성공·결과 없음·오류 필드를 schemas와 services에서 교차 확인했습니다.
-- [x] 지원 기업 기준 파일과 문서 상대 링크가 실제 트리에 존재함을 확인했습니다.
-- [x] 계약 차이는 코드 우선으로 부록에 분리하고 추측 필드는 넣지 않았습니다.
-
----
+- [x] Backend `main.py`·라우터 4개·요청/응답 schemas 대조
+- [x] MCP Client HTTP 3개·Workflow·응답 모델 대조
+- [x] MCP 서버 4개 Health·등록 Tool 8개 코드 확인
+- [x] 기본값·범위·성공·결과 없음·오류 필드를 schemas·services로 확인
+- [x] 지원 기업 기준 파일·상대 링크 존재 확인
+- [x] 계약 차이는 코드 기준으로 부록에 기록, 추측 필드 제외
 
 ## 부록 A. 계약과 현재 코드의 차이
 
