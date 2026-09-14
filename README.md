@@ -119,7 +119,11 @@ docker compose -f compose.release.yml down -v    # DB·Redis 데이터까지 삭
 
 <img src="docs/images/architecture.svg" alt="브라우저 → Frontend → Backend → MCP Client → Price·News·Disclosure·Community MCP 4개, 각각 한국투자증권·NAVER·OpenDART·커뮤니티 API 담당" width="100%">
 
-더 자세한 흐름(시퀀스·ERD·Agent 상태)은 [서비스 구조](docs/architecture/SERVICE_OVERVIEW.md)와 [도식 폴더](docs/architecture/diagrams/)에 있습니다.
+데이터는 DB 두 개에 나뉩니다. Backend DB는 회원·성향·분석 이력을, Disclosure DB는 기업·공시·사업보고서를 벡터와 함께 저장합니다.
+
+<img src="docs/images/erd.svg" alt="Backend DB: 회원-투자 성향(1:1), 회원-분석 이력(1:N). Disclosure DB: 지원 기업-공시(1:N), 지원 기업-사업보고서(1:N), 사업보고서-보고서 조각(1:N)" width="100%">
+
+더 자세한 흐름(시퀀스·물리 ERD·Agent 상태)은 [서비스 구조](docs/architecture/SERVICE_OVERVIEW.md)와 [도식 폴더](docs/architecture/diagrams/)에 있습니다.
 
 ---
 
