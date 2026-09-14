@@ -7,6 +7,9 @@
 |---|---|
 | `architecture/` | [SERVICE_OVERVIEW.md](architecture/SERVICE_OVERVIEW.md): 책임·요청 흐름·설계 의도·기술·폴더 구조 / [FINAL_ARCHITECTURE.md](architecture/FINAL_ARCHITECTURE.md): 책임·확정 연결 / [agent-architecture.md](architecture/agent-architecture.md): Profile(역할)·노드·분기·안전장치 / [diagrams/](architecture/diagrams/): 시스템·서비스·DB·Agent Mermaid 원본·SVG |
 | `specs/` | [API명세서.md](specs/API명세서.md)·[DB설계서.md](specs/DB설계서.md)·[화면설계서.md](specs/화면설계서.md): 제출 3종 / [FRONTEND_FLOW.md](specs/FRONTEND_FLOW.md): 검색·로그인·근거·개인화 / [CONNECTION_CONTRACT.md](specs/CONNECTION_CONTRACT.md)·[contracts/](specs/contracts/): 포트·필드·오류 |
+| `specs/contracts/` | [계약 색인](specs/contracts/README.md) / [frontend_backend.md](specs/contracts/frontend_backend.md): 화면·API / [analysis.md](specs/contracts/analysis.md): 분석 / [disclosure.md](specs/contracts/disclosure.md): 공시 / [community.md](specs/contracts/community.md): 커뮤니티 / [errors.md](specs/contracts/errors.md): 상태·오류 |
 | `reports/` | [agent-test-report.md](reports/agent-test-report.md): off/on 비교 / [agent-test-result-report_narrative-source.md](reports/agent-test-result-report_narrative-source.md): Backend 서술 채택 / [BACKEND_CONCURRENCY_FINDINGS.md](reports/BACKEND_CONCURRENCY_FINDINGS.md): 동시성 병목 재현·개선 |
+| `reports/agent-eval-results/` | [summary.md](reports/agent-eval-results/summary.md)·[round1/summary.md](reports/agent-eval-results/round1/summary.md): 자기 성찰 전후 실측 / [context-v3/summary.md](reports/agent-eval-results/context-v3/summary.md): 검증기 v3·상세 실패 / [원본 결과](reports/agent-eval-results/): JSONL 기록 |
 | `planning/` | [plan.md](planning/plan.md): 팀·역할·일정·제출 |
 | `operations/` | [DEVELOPMENT.md](operations/DEVELOPMENT.md): `compose.yml` 소스 빌드·Docker 없이 서비스별 실행 / [LOCAL_RUN_ENV_CHECKLIST.md](operations/LOCAL_RUN_ENV_CHECKLIST.md): 환경변수 / [DEPLOYMENT_AND_PRESENTATION.md](operations/DEPLOYMENT_AND_PRESENTATION.md): 분산 실행·발표 |
+| `images/` | [이미지 폴더](images/): 설명 도식·시연 GIF·화면 캡처 |
