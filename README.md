@@ -4,17 +4,17 @@
 
 엔코아 AI 오케스트레이션 1기 · 2차 프로젝트 · 5팀
 
-### 접속 주소
+### 화면
 
-| 화면               | 주소                                               | 비고                                                              |
-| ------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
-| 랜딩 페이지        | http://159.223.75.71:8501/intro                    | 서비스 소개                                                       |
-| 서비스 (검색·분석) | http://159.223.75.71:8501/                         | 데모 계정으로 로그인하면 회원 화면까지 확인할 수 있습니다         |
-| 관리자 실황 페이지 | http://159.223.75.71:8501/api/v1/admin/live-status | Basic Auth (`backend/.env`의 `ADMIN_USERNAME` / `ADMIN_PASSWORD`) |
+Docker Compose로 실행하면(3절) 아래 주소로 접속합니다.
+
+| 화면               | 주소                                          | 비고                                                                 |
+| ------------------ | --------------------------------------------- | -------------------------------------------------------------------- |
+| 랜딩 페이지        | http://localhost:8501/intro                   | 서비스 소개                                                          |
+| 서비스 (검색·분석) | http://localhost:8501/                        | 데모 계정으로 로그인하면 회원 화면까지 확인할 수 있습니다            |
+| 관리자 실황 페이지 | http://localhost:8501/api/v1/admin/live-status | Basic Auth (`.env`의 `ADMIN_USERNAME` / `ADMIN_PASSWORD`, 기본 admin / change-me) |
 
 `살래? 말래?`는 종목 추천, 목표주가, 수익률 예측을 제공하지 않습니다. 관심 온도는 시장의 관심 정도를 나타낼 뿐 상승 가능성이나 매수 점수가 아닙니다.
-
-아래 실행 절은 로컬 개발 기준입니다.
 
 데모 로그인은 `demo001`부터 `demo010`까지이며 공통 비밀번호는 `Demo1234!`입니다.
 
@@ -134,11 +134,56 @@ Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 
 
 ---
 
-## 3. 빠른 실행
+## 3. 실행
+
+### 1) Docker Compose로 한 번에 실행 (권장)
+
+Docker Desktop(Compose v2)만 있으면 됩니다. 소스를 빌드하지 않고 Docker Hub의 이미지(`ykw492/team5-*`)를 받아 PostgreSQL·Redis까지 9개 컨테이너를 띄웁니다.
+
+```bash
+cp .env.example .env        # 아래 표의 값을 채운다
+docker compose -f compose.release.yml pull
+docker compose -f compose.release.yml up -d --wait
+```
+
+`http://localhost:8501`에 접속합니다. 종료는 `docker compose -f compose.release.yml down`, DB까지 지우려면 `down -v`입니다.
+
+**실행하는 사람이 직접 준비해야 하는 값** — 이 저장소에는 어떤 API 키도 들어 있지 않습니다. `.env`의 아래 항목은 각자 발급받아 채워야 하며, 비워 두면 표의 오른쪽처럼 동작합니다.
+
+| `.env` 항목                                        | 발급처                                                             | 비워 두면                                                                         |
+| -------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| `OPENAI_API_KEY`                                   | https://platform.openai.com/api-keys                               | Agent 설명이 규칙 기반 문장으로 대체되고, 사업보고서 검색(임베딩)이 빠집니다      |
+| `KIS_APP_KEY`, `KIS_APP_SECRET`                    | https://apiportal.koreainvestment.com (KIS Developers 앱 등록)      | 현재가는 필수 값이라 **모든 분석이 실패**합니다                                    |
+| `NAVER_NEWS_CLIENT_ID`, `NAVER_NEWS_CLIENT_SECRET` | NAVER Cloud 콘솔의 NAVER API HUB 검색(뉴스) API                     | 뉴스 근거가 빠집니다 (`NEWS_MOCK=auto`면 예시 기사로 대체)                         |
+| `DART_API_KEY`                                     | https://opendart.fss.or.kr (인증키 신청)                            | 공시 근거가 빠집니다                                                              |
+| `COMMUNITY_API_TOKEN`                              | 팀 커뮤니티 API 운영자에게 요청 (공개 발급 없음)                    | 커뮤니티 근거가 빠집니다 (`COMMUNITY_MOCK=auto`면 예시 반응으로 대체)              |
+| `JWT_SECRET_KEY`, `ADMIN_PASSWORD`                 | 직접 정하는 값                                                     | 개발용 기본값이 쓰입니다. 외부에 공개하는 서버라면 반드시 바꿉니다                 |
+
+알아둘 점:
+
+- 한국투자증권 접근 토큰은 앱 키당 **1분에 1회**만 발급됩니다. 같은 키를 여러 컴퓨터에서 쓰거나 컨테이너를 연달아 재시작하면 첫 분석이 "현재 가격을 확인하지 못했습니다"로 끝날 수 있습니다. 1분 뒤 다시 시도하면 됩니다.
+- 사업보고서 검색은 색인이 있어야 결과가 나옵니다. 처음 띄운 상태에서는 비어 있으며, 필요한 종목만 컨테이너 안에서 색인할 수 있습니다.
+  ```bash
+  docker compose -f compose.release.yml exec disclosure_mcp python scripts/sync_companies.py
+  docker compose -f compose.release.yml exec disclosure_mcp python scripts/ingest_annual_reports.py --stock 005930 --years 2025
+  ```
+- macOS는 8021 포트를 시스템 서비스(ftp-proxy)가 잡고 있어 뉴스 MCP가 뜨지 않습니다. `.env`에 `NEWS_MCP_PORT=18021`을 넣습니다.
+- 이미지는 `linux/amd64`로 올라가 있습니다. Apple Silicon Mac에서는 에뮬레이션으로 실행되어 시작이 느립니다.
+
+### 2) 소스에서 이미지를 직접 빌드
+
+`compose.yml`은 7개 서비스와 PostgreSQL 이미지(`infra/postgres.Dockerfile`)를 저장소 소스에서 빌드합니다. 각 서비스의 값은 서비스 폴더의 `.env`에서 읽으므로 `backend/`, `mcp_client/`, `mcp_servers/*/`의 `.env.example`을 `.env`로 복사해 채웁니다.
+
+```bash
+docker compose build
+docker compose up -d --wait
+```
+
+### 3) 서비스별로 직접 실행 (개발)
 
 Python 서비스는 의존성 버전이 서로 다를 수 있으므로 서비스별 가상환경을 사용하는 것이 안전합니다. 특히 Disclosure MCP의 OpenAI 패키지 범위와 MCP Client의 고정 버전은 다릅니다.
 
-### 1) PostgreSQL·Redis
+#### 1) PostgreSQL·Redis
 
 ```bash
 cd infra
@@ -148,7 +193,7 @@ docker compose up -d
 
 PostgreSQL Volume을 처음 만들 때 `db/schema.sql`과 `db/seed.sql`이 순서대로 적용됩니다. 기존 Volume에는 초기화 SQL이 자동으로 다시 적용되지 않습니다.
 
-### 2) MCP Client
+#### 2) MCP Client
 
 ```bash
 cd mcp_client
@@ -161,7 +206,7 @@ python server.py
 
 `mcp_client/.env`에는 `OPENAI_API_KEY`와 Price·News·Disclosure·Community MCP URL을 설정합니다. MCP 4개를 다른 컴퓨터에서 실행하면 그 주소로 바꿉니다.
 
-### 3) Backend
+#### 3) Backend
 
 ```bash
 cd backend
@@ -174,7 +219,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 실제 MCP Client를 호출하려면 `backend/.env`에서 `MCP_CLIENT_MODE=live`, `MCP_CLIENT_URL=http://localhost:8010`을 설정합니다. 배포 환경에서는 `JWT_SECRET_KEY`를 충분히 긴 무작위 값으로 바꿉니다.
 
-### 4) Frontend
+#### 4) Frontend
 
 ```bash
 cd frontend
@@ -185,7 +230,7 @@ npm run dev
 
 실제 Backend를 호출하려면 `frontend/.env`에서 `VITE_API_MODE=live`, `VITE_BACKEND_URL=http://localhost:8000`을 설정합니다. 개발 서버는 `http://localhost:8501`에서 열립니다.
 
-### 5) 연결 확인
+#### 5) 연결 확인
 
 ```bash
 curl http://localhost:8010/internal/v1/mcp-status

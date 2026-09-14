@@ -1,10 +1,11 @@
-backend/.venv
-backend/**/__pycache__
-backend/**/*.pyc
+# 빌드 컨텍스트가 저장소 루트라서 backend/와 shared/supported_companies.json 외에는 전부 제외한다.
+*
+!backend
+!shared/supported_companies.json
 backend/.env
+backend/.env.*
+backend/.venv
 backend/tests
-frontend
-mcp_client
-mcp_servers
-legacy
-.git
+backend/.pytest_cache
+**/__pycache__
+**/*.pyc
