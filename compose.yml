@@ -137,6 +137,8 @@ services:
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-stock_insight}
       REDIS_URL: redis://redis:6379/0
       MCP_CLIENT_URL: http://mcp_client:8010
+      # backend/.env.example 기본값은 mock이라, 컨테이너 스택에서는 항상 실제 MCP Client를 호출하게 고정한다.
+      MCP_CLIENT_MODE: live
     ports:
       - "8000:8000"
     depends_on:
