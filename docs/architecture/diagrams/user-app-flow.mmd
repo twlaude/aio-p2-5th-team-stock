@@ -28,7 +28,7 @@ flowchart TD
     DISCLOSURE --> PERSONAL["성향별 확인 포인트<br/>우선 확인 3개 · 주의점"]
     PERSONAL --> FOOTER["투자 추천이 아닌 정보 제공 고지"]
 
-    LOADING -. "partial_completed" .-> PARTIAL["부분 실패 안내<br/>실패 근거만 제외 · 다시 시도"]
+    LOADING -. "partial_success" .-> PARTIAL["부분 실패 안내<br/>실패 근거만 제외 · 다시 시도"]
     PARTIAL --> EVIDENCE
     EVIDENCE -->|"sticky 탭으로 섹션 이동"| GAP
     EVIDENCE -->|"sticky 탭으로 섹션 이동"| COMMUNITY

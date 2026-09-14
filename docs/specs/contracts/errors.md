@@ -1,5 +1,10 @@
 # 공통 상태와 오류 계약
 
+> **한눈에**
+> 결과 없음·호출 실패를 구분합니다.
+> HTTP 코드와 MCP 상태를 확인합니다.
+> MCP 4개 중 하나가 실패해도 확인된 결과는 유지합니다.
+
 ## 상태값
 
 ```text
@@ -14,7 +19,7 @@ timeout
 internal_error
 ```
 
-`no_data`는 정상 조회했지만 결과가 없는 상태이고 `external_api_error`는 외부 제공처 호출이 실패한 상태다. 두 상태를 같은 오류로 처리하지 않는다.
+`no_data`: 정상 조회·결과 없음. `external_api_error`: 외부 호출 실패.
 
 ## 오류 응답
 
@@ -31,7 +36,7 @@ internal_error
 }
 ```
 
-사용자 응답에는 API Key, 내부 Prompt, Stack Trace, DB 주소를 포함하지 않는다.
+API Key(인증키)·내부 Prompt(지시문)·Stack Trace(오류 추적)·DB 주소는 응답에서 숨깁니다.
 
 ## HTTP 상태
 
@@ -43,11 +48,9 @@ internal_error
 | 외부 서버 시간 초과 | 504 |
 | 처리하지 못한 내부 오류 | 500 |
 
-MCP Tool 자체 결과는 HTTP가 아니라 위 `status` 필드로 세부 상태를 전달한다.
+MCP Tool 세부 상태는 HTTP 대신 `status`로 전달합니다.
 
 ## 부분 성공
-
-네 MCP 중 하나가 실패해도 확인된 결과는 유지한다.
 
 ```json
 {

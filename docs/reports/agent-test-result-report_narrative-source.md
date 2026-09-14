@@ -1,16 +1,27 @@
 # 에이전트 시험 결과 보고서 — Backend `narrative_source` 분기
 
-> MCP Client Agent(Luna)가 만든 서사를 신뢰할지, Backend가 대신 규칙 기반으로 조립할지 판단하는 `app/services/analysis/service.py`의 `_agent_narrative_ok()` 로직을 실제 API 호출로 검증한 기록.
+> **한눈에** — Backend가 Agent 서술(설명 문장)을 채택하는 분기를 시험했습니다.
+> 로컬 성공·실패 경로는 PASS이며, 가격·근거는 유지됐습니다.
+> live는 표본 1건의 조건부 PASS입니다. 실패 필드는 직접 확인하지 못했습니다.
+
+## 7. 시험 결과 요약
+
+| Scenario | 핵심 평가 기준 | 결과 |
+| --- | --- | --- |
+| Scenario 1: Agent 서사 성공 | 성공 시 원문 그대로 전달 | PASS |
+| Scenario 2: Agent 서사 실패 | 실패 시 규칙 기반 조립, 데이터는 유지 | PASS |
+| Scenario 3: live 환경 재현 | live 환경에서도 같은 경계 작동 | 조건부 PASS(관측 제약 있음) |
+
+전체 **PASS**, Scenario 3은 `partial_failures` 미확인 추정입니다.
+
+## 9. 결론
+
+로컬은 pytest·HTTP로 확인했습니다. live 안정성은 미확정이며 실패율 재측정을 이어 기록합니다.
 
 ## 1. 시험 목적
 
-Backend가 다음 결정을 정확히 내리는지 확인합니다.
-
-- **Scenario 1**: MCP Client Agent가 서사(narrative) 생성에 성공하면, Backend는 그 결과를 그대로 사용자에게 전달하는가?
-- **Scenario 2**: Agent가 실패(`partial_failures`에 `service: "openai"` 존재)하면, Backend는 자체 규칙 기반 조립기(`compose_one_liner`, `compose_personal`)로 대체하는가?
-- **Scenario 3**: 실제 live 환경에서도 이 경계가 그대로 작동하는가?
-
-평가 흐름:
+`app/services/analysis/service.py`의 `_agent_narrative_ok()`가 MCP Client Agent(Luna) 서술 채택을 결정합니다.
+성공 시 원문, 실패 시 `compose_one_liner`·`compose_personal`을 확인합니다.
 
 ```text
 Scenario 작성
@@ -29,15 +40,24 @@ Scenario 작성
 | 평가 코드 | `backend/tests/test_analysis.py`의 `test_agent_narrative_wins_when_agent_succeeded`, `test_backend_composes_when_agent_failed` |
 | Tool 연결 | `POST /api/v1/analyses` (HTTP, Backend → MCP Client) |
 | 로컬 환경 | `MCP_CLIENT_MODE=mock`, `NARRATIVE_SOURCE=agent_first`(기본값) |
-| live 환경 | `<서버 주소>:8501` (Frontend 프록시 경유), `MCP_CLIENT_MODE=live` |
+| live 환경 | `localhost:8501` (Frontend 프록시 경유), `MCP_CLIENT_MODE=live` |
 | 실행 일시 | 2026-09-07 |
 | 실행자 | 윤기화 |
 
 ## 3. Scenario 1: Agent 서사 성공 → 그대로 사용
 
+### 3.3 결과 기록
+
+| 검사 항목 | 기대 결과 | 실제 결과 | 판정 |
+| --- | --- | --- | --- |
+| `one_line_summary` 접미사 | `(Mock).`로 끝남 | `"삼성전자의 최근 흐름을 뉴스·공시·커뮤니티 반응과 함께 정리했다(Mock)."` | PASS |
+| `personalized_checkpoints.personal_summary` 접두사 | `"장기 관점에서 보면"`으로 시작 | `"장기 관점에서 보면: 삼성전자의 최근 흐름을..."` | PASS |
+| pytest `test_agent_narrative_wins_when_agent_succeeded` | PASS | PASS | PASS |
+
 ### 3.1 시험하려는 행동
 
-`partial_failures`에 `service: "openai"` 항목이 없으면(=Agent가 서사 생성에 성공했다고 판단되면), Backend가 MCP Client의 `one_line_summary`·`personalized_checkpoints`를 가공 없이 그대로 사용자에게 전달하는지 확인합니다.
+`partial_failures`에 `service: "openai"`가 없으면 성공으로 판단합니다.
+`one_line_summary`·`personalized_checkpoints`를 가공 없이 전달하는지 확인합니다.
 
 ```python
 SCENARIO = {
@@ -62,22 +82,11 @@ cd ../backend && python run.py &
 python -m pytest -q tests/test_analysis.py -k agent_narrative
 ```
 
-수동 재현(HTTP 직접 호출):
 ```python
 r = httpx.post("http://localhost:8000/api/v1/auth/login", json={"username": "demo001", "password": "Demo1234!"})
 token = r.json()["access_token"]
 r2 = httpx.post("http://localhost:8000/api/v1/analyses", json={"query": "삼성전자"}, headers={"Authorization": f"Bearer {token}"})
 ```
-
-### 3.3 결과 기록
-
-| 검사 항목 | 기대 결과 | 실제 결과 | 판정 |
-| --- | --- | --- | --- |
-| `one_line_summary` 접미사 | `(Mock).`로 끝남 | `"삼성전자의 최근 흐름을 뉴스·공시·커뮤니티 반응과 함께 정리했다(Mock)."` | PASS |
-| `personalized_checkpoints.personal_summary` 접두사 | `"장기 관점에서 보면"`으로 시작 | `"장기 관점에서 보면: 삼성전자의 최근 흐름을..."` | PASS |
-| pytest `test_agent_narrative_wins_when_agent_succeeded` | PASS | PASS | PASS |
-
-최종 판정: **PASS**
 
 ### 3.4 Trace 증거 (실제 응답, 2026-09-07 로컬 실행)
 
@@ -105,17 +114,23 @@ r2 = httpx.post("http://localhost:8000/api/v1/analyses", json={"query": "삼성�
 }
 ```
 
-관찰 내용:
-
-- `one_line_summary`가 mcp_client(Mock)의 원문 그대로 전달되었는가: **예**
-- `personalized_checkpoints`가 규칙 기반 조립기(`compose_personal`)를 거치지 않고 원문 그대로 전달되었는가: **예** (`compose_personal` 특유의 "무리 없는 구간이에요" 같은 접두사가 없음)
-- 실패 여부: 해당 없음(정상 통과)
+mcp_client(Mock) 원문을 그대로 전달했습니다. `compose_personal`의 "무리 없는 구간이에요" 접두사가 없으며 실패도 없습니다.
 
 ## 4. Scenario 2: Agent 서사 실패 → Backend가 규칙 기반으로 조립
 
+### 4.3 결과 기록
+
+| 검사 항목 | 기대 결과 | 실제 결과 | 판정 |
+| --- | --- | --- | --- |
+| `one_line_summary` | 규칙 기반 문장(`compose_one_liner`) | `"뉴스는 HBM 메모리에 쏠려 있고, 공식 확인은 아직 조금이에요. 커뮤니티는 기대가 앞서요."` | PASS |
+| `personalized_checkpoints.personal_summary` | 규칙 기반 문장(`compose_personal`), "무리 없는 구간이에요."로 시작 | `"무리 없는 구간이에요. 삼성전자는 관심과 확인된 재료가 비슷해요..."` | PASS |
+| 원본 데이터(가격·소스) 유지 여부 | Mock 원본 그대로(current_price=70000 등) | 동일 | PASS |
+| pytest `test_backend_composes_when_agent_failed` | PASS | PASS | PASS |
+
 ### 4.1 시험하려는 행동
 
-`partial_failures`에 `{"service": "openai", "status": "model_error"}`가 있을 때, Backend가 `compose_one_liner()`/`compose_personal()`로 직접 문장을 조립해서 사용하는지 확인합니다. 이때도 원본 데이터(가격, 커뮤니티 토픽 등)는 그대로 유지되어야 합니다.
+`partial_failures`의 `{"service": "openai", "status": "model_error"}` 주입 시
+`compose_one_liner()`·`compose_personal()`이 조립하고 가격·커뮤니티 토픽을 유지하는지 확인합니다.
 
 ```python
 SCENARIO = {
@@ -140,18 +155,7 @@ SCENARIO = {
 python -m pytest -q tests/test_analysis.py -k backend_composes
 ```
 
-`mcp_client.fetch_common_analysis`를 monkeypatch해서 `partial_failures`에 `openai: model_error`를 주입한 뒤 `run_analysis()`를 직접 호출(재현 스크립트는 6절 참고).
-
-### 4.3 결과 기록
-
-| 검사 항목 | 기대 결과 | 실제 결과 | 판정 |
-| --- | --- | --- | --- |
-| `one_line_summary` | 규칙 기반 문장(`compose_one_liner`) | `"뉴스는 HBM 메모리에 쏠려 있고, 공식 확인은 아직 조금이에요. 커뮤니티는 기대가 앞서요."` | PASS |
-| `personalized_checkpoints.personal_summary` | 규칙 기반 문장(`compose_personal`), "무리 없는 구간이에요."로 시작 | `"무리 없는 구간이에요. 삼성전자는 관심과 확인된 재료가 비슷해요..."` | PASS |
-| 원본 데이터(가격·소스) 유지 여부 | Mock 원본 그대로(current_price=70000 등) | 동일 | PASS |
-| pytest `test_backend_composes_when_agent_failed` | PASS | PASS | PASS |
-
-최종 판정: **PASS**
+`mcp_client.fetch_common_analysis`를 monkeypatch(시험 중 대체)해 `openai: model_error`를 넣고 `run_analysis()`를 호출합니다(6절).
 
 ### 4.4 Trace 증거 (실제 응답, 2026-09-07 로컬 실행, `partial_failures` 인위 주입)
 
@@ -173,26 +177,9 @@ python -m pytest -q tests/test_analysis.py -k backend_composes
 }
 ```
 
-관찰 내용:
-
-- 사용자에게 "AI가 실패했다"는 티가 전혀 안 나고 자연스러운 문장으로 대체되는가: **예**
-- 가격(`current_price: 70000`)·소스 데이터는 Scenario 1과 동일하게 유지되는가(문장만 바뀌고 데이터는 안 바뀌는가): **예**
-- 실패했다면 최초로 기대와 달라진 Event: 해당 없음
+실패 노출 없이 자연스럽게 대체했습니다. `current_price: 70000`·소스는 동일하며 최초 실패 Event는 없습니다.
 
 ## 5. Scenario 3: live 환경에서 재현
-
-### 5.1 배경
-
-2026-09 초 live 환경 실황 페이지(`/api/v1/admin/live-status`)를 확인했을 때, 거의 모든 분석 요청에서 `partial_failures: [{"service": "openai", "status": "model_error"}]`가 관측되었다(별도 기록: 실황 페이지 스크린샷, 팀 내 공유). 즉 live 환경은 그 시점 기준 **거의 항상 Scenario 2 경로**를 타고 있었다.
-
-### 5.2 실행
-
-```python
-r = httpx.post("http://<서버 주소>:8501/api/v1/auth/login", json={"username": "demo001", "password": "Demo1234!"})
-token = r.json()["access_token"]
-r2 = httpx.post("http://<서버 주소>:8501/api/v1/analyses", json={"query": "삼성전자"},
-                headers={"Authorization": f"Bearer {token}"}, timeout=30.0)
-```
 
 ### 5.3 결과 기록 (2026-09-07 재실행)
 
@@ -202,7 +189,21 @@ r2 = httpx.post("http://<서버 주소>:8501/api/v1/analyses", json={"query": "�
 | `personalized_checkpoints` 성격 | 규칙 기반 템플릿(고정 문구 조합) | 사업보고서 수치(`DS 부문 매출 130조1,282억원, 영업이익 24조8,581억원`)까지 인용하는 상세 서술 | 변화 감지 |
 | `partial_failures`(openai) 직접 확인 | 실황 페이지에서 직접 확인함 | **확인 못 함** — live 환경 관리자 비밀번호가 배포 시 변경되어 `/api/v1/admin/live-status` 접근 실패(401) | 미확인(제약) |
 
-최종 판정: **조건부 PASS** — 사용자 응답의 내용 품질로 미루어 Agent(OpenAI) 호출이 이번엔 성공한 것으로 보이나, `partial_failures` 필드를 직접 조회하지 못해 100% 확정은 아님.
+**조건부 PASS**: OpenAI 성공 추정이며 필드 미조회로 100% 확정은 아닙니다.
+
+### 5.1 배경
+
+2026-09 초 `/api/v1/admin/live-status`에서 거의 매 요청에 `partial_failures: [{"service": "openai", "status": "model_error"}]`를 관측했습니다.
+당시는 거의 Scenario 2였습니다. 실황 스크린샷을 팀에 공유했습니다.
+
+### 5.2 실행
+
+```python
+r = httpx.post("http://localhost:8501/api/v1/auth/login", json={"username": "demo001", "password": "Demo1234!"})
+token = r.json()["access_token"]
+r2 = httpx.post("http://localhost:8501/api/v1/analyses", json={"query": "삼성전자"},
+                headers={"Authorization": f"Bearer {token}"}, timeout=30.0)
+```
 
 ### 5.4 Trace 증거 (live 환경 실제 응답, 2026-09-07, 일부 발췌)
 
@@ -236,11 +237,38 @@ r2 = httpx.post("http://<서버 주소>:8501/api/v1/analyses", json={"query": "�
 }
 ```
 
-관찰 내용:
+고정 어투("~에 쏠려 있고", "무리 없는 구간이에요")와 달리 `unmatched`·재무 수치를 담았습니다.
+규칙 조립기가 만들 수 없어 `_agent_narrative_ok()`의 `True` 경로로 추정합니다. 항상 성공한다는 증거는 아닙니다.
 
-- Scenario 2의 규칙 기반 문장(고정 어투: "~에 쏠려 있고", "무리 없는 구간이에요")과 이번 응답을 비교하면, 이번 응답은 `unmatched` 이슈 목록·구체적 재무 수치 인용 등 **규칙 기반 조립기가 만들 수 없는 내용**을 포함한다.
-- 이는 이번 요청에서는 `_agent_narrative_ok()`가 `True`(Agent 성공)로 판정되어 Scenario 1 경로로 처리됐다고 볼 수 있다.
-- 다만 `partial_failures`를 직접 조회하지 못했으므로, "이전엔 항상 실패했는데 지금은 항상 성공한다"는 결론은 **아직 확정할 수 없다** — 표본 1건으로 판단한 정황 증거일 뿐이다.
+## 8. 발견한 문제와 개선
+
+### 발견한 문제
+
+`agent_first`/`backend` 안전망은 정상입니다. live 실패율·개선 여부는 `partial_failures` 다건 확인이 필요합니다.
+배포 때 바뀐 관리자 비밀번호의 팀 공유가 없어 `/api/v1/admin/live-status`는 401로 확인하지 못했습니다.
+
+### 원인
+
+OpenAI 안정성은 Backend보다 mcp_client Agent/OpenAI 연동(권오현 담당) 문제로 추정합니다.
+관리자 접근 실패는 인증정보 공유 절차 누락입니다.
+
+### 수정 내용
+
+관측·검증만 했으며 코드는 수정하지 않았습니다.
+
+### 재시험 결과
+
+| 항목 | 수정 전 | 수정 후 |
+| --- | --- | --- |
+| 실패한 검사 | 없음 | - |
+| 최초 실패 Event | 없음 | - |
+| 최종 판정 | PASS | - |
+
+다음 Scenario는 live 10건 연속 수집으로 실패율을 정량화하는 것입니다.
+`NARRATIVE_SOURCE=backend` 강제 경로는 기존 pytest `test_guest_one_liner_uses_frontend_rule`·`test_member_personal_summary_uses_risk_gap_rule`을 결과 표에 반영 검토합니다.
+MCP Client 완전 응답 불가(`MCPClientUnavailable`)의 사용자 메시지도 검증합니다.
+
+## 상세
 
 ## 6. Scenario 2 재현 스크립트 (참고용)
 
@@ -271,48 +299,3 @@ async def main():
 
 asyncio.run(main())
 ```
-
-## 7. 시험 결과 요약
-
-| Scenario | 핵심 평가 기준 | 결과 |
-| --- | --- | --- |
-| Scenario 1: Agent 서사 성공 | 성공 시 원문 그대로 전달 | PASS |
-| Scenario 2: Agent 서사 실패 | 실패 시 규칙 기반 조립, 데이터는 유지 | PASS |
-| Scenario 3: live 환경 재현 | live 환경에서도 같은 경계 작동 | 조건부 PASS(관측 제약 있음) |
-
-전체 결과: **PASS** (단, Scenario 3은 `partial_failures` 직접 확인 없이 응답 품질로 추정한 정황 증거 기반)
-
-## 8. 발견한 문제와 개선
-
-### 발견한 문제
-
-1. Backend의 `agent_first`/`backend` 안전망 자체는 의도대로 정확히 작동한다 — 이 부분은 문제 없음.
-2. **live 환경의 OpenAI 연동 안정성은 여전히 불확실하다.** 2026-09 초에는 거의 매 요청마다 `openai: model_error`가 관측되었는데, 이번(2026-09-07) 표본 1건은 성공한 것으로 보인다. 실패율이 얼마나 되는지, 개선이 실제로 있었는지는 `partial_failures`를 다건 표본으로 다시 확인해야 한다.
-3. live 환경 관리자 페이지(`/api/v1/admin/live-status`) 접근 정보가 팀 내에서 공유되지 않아, 이번 시험에서 Scenario 3의 `partial_failures`를 직접 확인하지 못했다.
-
-### 원인
-
-- 1, 2는 Backend 코드 문제가 아니라 **mcp_client의 Agent/OpenAI 연동** 영역 문제로 추정된다(권오현님 담당 영역).
-- 3은 절차 문제(관리자 인증정보 공유 누락)다.
-
-### 수정 내용
-
-- 이번 시험에서는 코드 수정 없음(관측 및 검증 목적).
-
-### 재시험 결과
-
-| 항목 | 수정 전 | 수정 후 |
-| --- | --- | --- |
-| 실패한 검사 | 없음 | - |
-| 최초 실패 Event | 없음 | - |
-| 최종 판정 | PASS | - |
-
-## 9. 결론
-
-Backend의 `narrative_source` 안전망(`agent_first` → 실패 시 `backend` 규칙 기반 조립)은 로컬 mock 환경에서 두 경로 모두 pytest와 실제 HTTP 호출로 검증했고, 두 경우 모두 PASS했다. live 환경에서도 최소 1건은 Agent 성공 경로가 정상 작동함을 확인했다.
-
-- 확인된 정상 행동: Agent 성공/실패 여부와 무관하게 사용자에게는 항상 자연스러운 문장이 나가고, 원본 데이터(가격·근거)는 두 경로에서 동일하게 보존된다.
-- 남아 있는 문제: live 환경의 OpenAI 연동이 실제로 얼마나 자주 실패하는지 다건 표본으로 재확인 필요. 관리자 페이지 접근 정보 팀 공유 필요.
-- 다음에 추가할 Scenario: live 환경에서 `partial_failures`를 여러 건(예: 10건) 연속 수집해 실패율 정량화 / `NARRATIVE_SOURCE=backend` 강제 설정 시 항상 규칙 기반으로만 가는지(이미 pytest에 `test_guest_one_liner_uses_frontend_rule`, `test_member_personal_summary_uses_risk_gap_rule`로 커버됨, 표에 추가 반영 검토) / mcp_client 자체가 완전히 응답 불가할 때(`MCPClientUnavailable`)의 사용자 노출 메시지 검증.
-
-대표 Scenario가 통과했다는 사실만으로 live 환경의 OpenAI 연동이 완전히 안정적이라고 결론 내리지 않는다. 실패율 재측정 결과가 나오면 이 문서에 이어서 기록한다.

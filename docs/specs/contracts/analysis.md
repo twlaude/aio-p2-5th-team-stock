@@ -1,12 +1,16 @@
 # Backend ↔ MCP Client 분석 계약
 
+> **한눈에**
+> 회원 요청에는 성향 네 값을 보냅니다.
+> 온도·공시 근거는 규칙으로 계산합니다.
+> Agent는 설명과 공시 추가 조회를 맡습니다.
+
 ## 연결
 
 - 주소: `POST http://MCP_CLIENT_HOST:8010/internal/v1/common-analyses`
 - 방식: HTTP REST + JSON
 - 시간 제한: Backend 75초, MCP Client Workflow 60초
-- 사용자 ID, 로그인 토큰, 아이디·비밀번호, 대화 전체는 전송하지 않는다.
-- 회원 요청은 투자 성향 네 값을 함께 보낸다. 비회원은 `investment_profile`을 `null`로 보낸다.
+- 사용자 ID·로그인 토큰·아이디·비밀번호·대화 전체는 보내지 않습니다. 비회원은 `investment_profile: null`입니다.
 
 ## 요청 (회원)
 
@@ -41,9 +45,7 @@
 }
 ```
 
-Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 기업명과 6자리 종목 코드를 받는다. MCP Client가 받은 투자 성향은 Price·News·Disclosure·Community MCP에는 전달하지 않는다.
-
-이 서비스는 자유 질문형이 아니므로 MCP Client 요청에 `question`, `date_range`를 포함하지 않는다.
+Backend 검증 후 정식 기업명·6자리 코드를 받습니다. 성향은 Price·News·Disclosure·Community MCP에 보내지 않습니다. 자유 질문이 없어 `question`·`date_range`는 제외합니다.
 
 ## 성공 또는 부분 성공 응답
 
@@ -116,12 +118,12 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 }
 ```
 
-`personalized_checkpoints`는 요청에 `investment_profile`이 있을 때만 채운다. 비회원 요청(`investment_profile: null`)에는 이 필드를 생략하거나 `null`로 반환한다.
-`price.volume_basis`와 `price.volume_as_of`는 Price MCP가 선택한 거래량 기준과 기준 거래일을 전달한다. 구버전 Price 응답이나 일봉 실패에서는 두 필드를 생략하거나 `null`로 반환한다.
+`personalized_checkpoints`: `investment_profile`이 있을 때만 채웁니다. 비회원(`investment_profile: null`)은 생략 또는 `null`.
+`price.volume_basis`·`price.volume_as_of`: Price MCP의 거래량 기준·거래일. 구버전 응답·일봉 실패는 생략 또는 `null`.
 
 ## 시장 관심 온도 v2
 
-시장 관심 온도는 주가의 상승 가능성이나 매수 점수가 아니라, 거래량·뉴스·커뮤니티 활동이 평소보다 얼마나 활발한지와 공포탐욕 강도를 나타낸다. 각 항목은 다음 규칙으로 0~1 사이로 정규화한 뒤 배점을 곱한다.
+관심 온도 = 평소 대비 거래량·뉴스·커뮤니티 활동 + 공포탐욕 강도. 상승 가능성·매수 점수가 아닙니다. 입력을 0~1로 환산해 배점을 곱합니다.
 
 | `components` key | 입력 | 정규화 | 배점 |
 |---|---|---:|---:|
@@ -130,11 +132,12 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 | `community_activity` | `community.activity.ratio` | `clamp(ratio / 3, 0, 1)` | 25 |
 | `fear_greed_intensity` | `community.fgi_latest.fgi` | `abs(fgi - 50) / 50` | 20 |
 
-출처의 `status`가 `success`가 아니거나 입력값이 없으면 해당 항목은 미가용으로 처리하고 `components`에서 생략한다. 최종 `score`는 `round(가용 항목 점수 합 / 가용 항목 배점 합 * 100)`으로 재정규화하며, 가용 배점이 없으면 0이다. `weight_covered`는 가용 항목의 배점 합으로 0~100이다. `data_coverage`와 `label` 구간은 기존 의미를 유지한다.
+출처 `status` ≠ `success` 또는 입력 없음: 미가용으로 `components`에서 생략합니다.
+`score` = `round(가용 항목 점수 합 / 가용 항목 배점 합 * 100)`, 가용 배점이 없으면 0입니다. `weight_covered`는 가용 배점 합(0~100)입니다. `data_coverage`·`label` 구간은 유지합니다.
 
 ## 공시 근거 v2
 
-`evidence_level`은 자료 종류 수가 아니라 커뮤니티 중심의 현재 이슈와 최근 30일 주요 비정기 공시의 직접 연결 여부로 정한다. 뉴스 이슈는 제목에 정식 회사명이 포함된 기사만 보조로 사용하며 임베딩·유사도 점수는 쓰지 않는다.
+`evidence_level`: 자료 종류 수가 아닌 현재 이슈·최근 30일 주요 비정기 공시의 직접 연결입니다. 커뮤니티 중심, 제목에 정식 회사명이 있는 뉴스만 보조입니다. 임베딩(검색용 수치 변환)·유사도 점수는 쓰지 않습니다.
 
 | 단계 | 판정 |
 |---|---|
@@ -143,33 +146,25 @@ Backend가 지원 기업을 검증한 뒤 호출하므로 MCP Client는 정식 �
 | `low` | 최근 30일 주요 공시가 없음 |
 | `low` (실패) | 주요 비정기 공시 조회 상태가 `success` 또는 `no_data`가 아님 |
 
-`evidence_level.matched[]`는 `issue`, `report_name`, `receipt_number`, `published_at`을 담고, `unmatched[]`는 공시와 연결되지 않은 현재 이슈, `material_count`는 최근 30일 주요 공시 수다. `sources[]`의 공시 메타는 연결된 이슈를 `confirmed`, 미연결 이슈를 첫 공시 source의 `unconfirmed`에 중복 없이 싣고, `disclosure_kind`를 `major`, `periodic`, `other` 중 하나로 표시한다. 공시 source는 연결 주요 공시, 나머지 주요 공시 최대 1건, 정기공시 최대 1건, 사업보고서 순서이며 총 4건 이하다.
+- `evidence_level.matched[]`: `issue`·`report_name`·`receipt_number`·`published_at`. `unmatched[]`: 미연결 현재 이슈. `material_count`: 최근 30일 주요 공시 수.
+- `sources[]`: 연결 이슈는 `confirmed`, 미연결 이슈는 첫 공시 source의 `unconfirmed`에 중복 없이 담습니다. `disclosure_kind`: `major`·`periodic`·`other`.
+- 공시 source 순서(총 4건 이하): 연결 주요 공시 → 나머지 주요 공시 최대 1건 → 정기공시 최대 1건 → 사업보고서.
 
 ## MCP Client 책임
 
-1. Price·News·Disclosure·Community MCP의 여섯 기본 Tool(정기공시와 주요 비정기 공시 조회 포함)을 병렬로 호출한다.
-2. 외부 원본 API를 직접 호출하거나 원본 데이터를 저장하지 않는다.
-3. 뉴스 최대 5건, 연관 보고서 청크 3~5개, 커뮤니티 집계 결과만 LLM에 전달한다.
-4. 시장 관심 온도와 근거 확인 정도는 확정 규칙으로 계산하고 LLM은 이를 설명한다.
-5. Agent 최대 단계는 3으로 제한한다.
-6. 일부 Tool 실패 시 성공한 자료를 유지하고 `partial_success`로 반환한다.
-7. `investment_profile`을 받으면 공통 분석과 성향 네 값으로 `personalized_checkpoints`를 OpenAI `gpt-5.6-luna`로 생성한다. 이 값은 Price·News·Disclosure·Community MCP에 전달하지 않는다.
-8. 기본 조회는 AI가 선택하지 않는다. Luna Agent에는 최근 공시 상세 조회 Tool만 허용하고, 기본 조회에 포함된 접수번호를 최대 2건까지 사용할 수 있다.
+1. 네 MCP의 기본 Tool 6개(정기·주요 비정기 공시 포함)를 병렬 호출합니다. 외부 원본 API 직접 호출·원본 저장은 하지 않습니다.
+2. LLM(언어 모델)에는 뉴스 최대 5건·관련 보고서 청크(조각) 3~5개·커뮤니티 집계만 보냅니다. 온도·근거는 확정 규칙으로 계산하고 LLM은 설명합니다.
+3. Agent는 최대 3단계입니다. Tool 일부 실패 시 성공 자료를 유지해 `partial_success`로 반환합니다.
+4. `investment_profile`이 있으면 공통 분석·성향 네 값으로 OpenAI `gpt-5.6-luna`가 `personalized_checkpoints`를 만듭니다. 이 값은 네 MCP에 보내지 않습니다.
+5. 기본 조회는 AI가 고르지 않습니다. Luna Agent는 기본 조회 접수번호 중 최대 2건의 최근 공시 상세 Tool만 사용합니다.
 
-진행 이벤트 payload에는 판단·실행 주체를 나타내는 `owner` 필드(`runtime`, `mcp`, `ai_agent`, `policy`)가 추가됩니다.
+진행 이벤트 payload(전달 데이터)에 판단·실행 주체 `owner`(`runtime`, `mcp`, `ai_agent`, `policy`)를 추가합니다.
 
 ## 종료 이유
 
-성찰 기능은 기존 필드를 변경하지 않고 `trace_summary.reflections: int`를 추가합니다.
-이 값은 오류 피드백 때문에 실제 실행한 추가 LLM 호출 수이며, 기본값은 0입니다.
-0이면 직렬화에서 생략하므로 기존 off 응답은 동일한 필드·값을 유지합니다.
-한 응답에서 여러 오류가 발생해도 피드백 재호출이 한 번이면 1로 셉니다.
-상세 오류 이력은 Runtime의 `AgentResult.reflections`에만 남기고 분석 응답에는 원문·Prompt를 추가하지 않습니다.
-on에서는 스키마 검증에 실패한 호출과 실패한 Provider 호출도 `llm_calls`에 포함합니다.
-기존 off에서는 성공한 Provider 반환만 세는 기준을 유지합니다.
-성찰 예산은 기본 2회이고 기존 Agent 단계 상한 안에서 사용합니다.
-해소된 성찰 오류는 `partial_failures`에 추가하지 않으며, 기존 MCP 실패가 있으면 부분 성공을 유지합니다.
-`reflection_exhausted`는 성찰 예산 또는 단계 예산 부족, 스키마·서술 재검증 실패에 따른 폴백 종료입니다.
+성찰(오류 피드백 재호출)은 기존 필드 변경 없이 `trace_summary.reflections: int`를 추가합니다. 실제 추가 LLM 호출 수로 기본 0은 직렬화에서 생략(off 필드·값 유지)합니다. 여러 오류도 재호출 한 번이면 1입니다.
+Runtime의 `AgentResult.reflections`에만 상세 오류를 남깁니다. 응답에 원문·Prompt는 금지합니다. `llm_calls`: on은 스키마 검증·Provider 실패 포함, off는 성공한 Provider 반환만 셉니다.
+성찰 기본 2회는 기존 Agent 단계 상한 내에서 씁니다. 해소 오류는 `partial_failures` 제외, 기존 MCP 실패의 부분 성공은 유지합니다. `reflection_exhausted`: 성찰·단계 예산 부족 또는 스키마·서술 재검증 실패로 폴백(대체 응답) 종료.
 
 ```text
 completed
