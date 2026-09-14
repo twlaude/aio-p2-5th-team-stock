@@ -7,11 +7,11 @@
 
 | 경로 | 연결 |
 |---|---|
-| `frontend_backend/` | Frontend ↔ Backend |
-| `analysis/` | Backend ↔ MCP Client |
-| `price/` | MCP Client ↔ Price MCP |
-| `news/` | MCP Client ↔ News MCP |
-| `disclosure/` | MCP Client ↔ Disclosure MCP |
-| `community/` | MCP Client ↔ Community MCP |
-| `user_profile/` | Backend 투자 성향 |
-| `errors/` | 공통 상태와 오류 |
+| [frontend_backend.md](frontend_backend.md) | Frontend ↔ Backend |
+| [analysis.md](analysis.md) | Backend ↔ MCP Client |
+| [API 명세서 · Price Tool](../API명세서.md#get_stock_quote) | MCP Client ↔ Price MCP |
+| [API 명세서 · News Tool](../API명세서.md#search_news) | MCP Client ↔ News MCP |
+| [disclosure.md](disclosure.md) | MCP Client ↔ Disclosure MCP |
+| [community.md](community.md) | MCP Client ↔ Community MCP |
+| [API 명세서 · Profile](../API명세서.md#33-profile--apiv1profile) | Backend 투자 성향 |
+| [errors.md](errors.md) | 공통 상태와 오류 |

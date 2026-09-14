@@ -59,11 +59,11 @@ MCP 서버 → MCP Client → Backend → Frontend 순서로 연결합니다. �
 
 ## 세부 계약 문서
 
-- `contracts/frontend_backend/README.md`: Frontend와 Backend
-- `contracts/analysis/README.md`: Backend와 MCP Client
-- `contracts/price/README.md`: Price MCP Tool
-- `contracts/news/README.md`: News MCP Tool
-- `contracts/disclosure/README.md`: Disclosure MCP Tool
-- `contracts/community/README.md`: Community MCP Tool
-- `contracts/user_profile/README.md`: 투자 성향
-- `contracts/errors/README.md`: 상태와 오류
+- [Frontend와 Backend](contracts/frontend_backend.md)
+- [Backend와 MCP Client](contracts/analysis.md)
+- [Price MCP Tool](API명세서.md#get_stock_quote)
+- [News MCP Tool](API명세서.md#search_news)
+- [Disclosure MCP Tool](contracts/disclosure.md)
+- [Community MCP Tool](contracts/community.md)
+- [투자 성향](API명세서.md#33-profile--apiv1profile)
+- [상태와 오류](contracts/errors.md)
