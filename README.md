@@ -111,32 +111,15 @@ docker compose -f compose.release.yml down -v    # DB·Redis 데이터까지 삭
 
 ## 2. 어떻게 동작하나
 
-<a href="docs/architecture/diagrams/service-flow.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/architecture/diagrams/service-flow-dark.svg"><img src="docs/architecture/diagrams/service-flow.svg" alt="종목 분석 요청 흐름" width="100%"></picture></a>
+종목 하나를 검색하면 네 곳을 동시에 조회하고, 두 가지 점수를 계산한 뒤, 추천 없는 한 줄 결론을 만듭니다. 회원이면 저장된 투자 성향에 맞춰 먼저 볼 항목의 순서까지 붙습니다.
 
-| 단계             | 하는 일                                                                                                          |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------- |
-| ① 종목 검색      | 기업명 또는 6자리 종목 코드를 입력합니다                                                                         |
-| ② 지원 여부 확인 | Backend가 `shared/supported_companies.json`의 KOSPI 시가총액 상위 20종목인지 먼저 확인합니다                     |
-| ③ 자료 수집      | MCP Client가 현재가, 최근 뉴스, 정기공시, 최근 주요 공시, 사업보고서, 커뮤니티 반응의 6개 작업을 병렬 실행합니다 |
-| ④ 규칙 계산      | 거래량·뉴스·커뮤니티 활동과 FGI로 관심 온도를, 최근 30일 주요 공시와 현재 이슈의 매칭으로 근거 수준을 계산합니다 |
-| ⑤ Agent 설명     | `gpt-5.6-luna`가 수집된 근거를 설명하고, 필요할 때만 최근 공시 상세를 최대 2건 추가 조회합니다                   |
-| ⑥ 접근 수준 적용 | 비회원은 가격과 한 줄 결론을 보고, 회원은 상세 근거와 성향별 확인 포인트까지 봅니다                              |
+<img src="docs/images/how-it-works.svg" alt="종목 검색 → 현재가·뉴스·공시·커뮤니티 동시 조회 → 관심 온도·근거 수준 계산 → 한 줄 결론과 성향별 확인 순서" width="100%">
 
-비회원은 가격과 한 줄 결론까지, 회원은 관심 온도·근거 수준·뉴스/공시/커뮤니티 근거·성향별 확인 포인트까지 봅니다.
+서비스는 7개로 나뉘어 있고, 화면은 Backend만, Backend는 MCP Client만 부릅니다. 데이터별 MCP 서버 4개는 각자 외부 API 한 곳씩만 담당합니다.
 
-<a href="docs/architecture/diagrams/system-topology.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/architecture/diagrams/system-topology-dark.svg"><img src="docs/architecture/diagrams/system-topology.svg" alt="시스템 구성도" width="100%"></picture></a>
+<img src="docs/images/architecture.svg" alt="브라우저 → Frontend → Backend → MCP Client → Price·News·Disclosure·Community MCP 4개, 각각 한국투자증권·NAVER·OpenDART·커뮤니티 API 담당" width="100%">
 
-| 서비스         | 포트 | 책임                                                                         |
-| -------------- | ---: | ---------------------------------------------------------------------------- |
-| Frontend       | 8501 | 검색, 로그인, 공개 결과, 근거, 개인화 확인 포인트를 표시합니다               |
-| Backend        | 8000 | 지원 기업, JWT, 투자 성향, Memory, 분석 이력과 접근 수준별 응답을 담당합니다 |
-| MCP Client     | 8010 | 기본 Tool 병렬 호출, 규칙 계산, Agent 실행, 출처·부분 실패 취합을 담당합니다 |
-| Price MCP      | 8020 | 한국투자증권 Open API의 현재가를 조회하고 종목별 60초 캐시를 적용합니다      |
-| News MCP       | 8021 | NAVER API HUB의 최근 뉴스를 정제하고 중복·무관 기사를 제외합니다             |
-| Disclosure MCP | 8022 | OpenDART 공시와 사업보고서 RAG를 제공합니다                                  |
-| Community MCP  | 8023 | 네이버 종목토론방 기반 반응 집계와 FGI를 정규화합니다                        |
-
-Frontend는 Backend만, Backend는 MCP Client만 호출하고, 데이터별 MCP 서버는 서로 부르지 않습니다. 요청 흐름, Backend 계층, 설계 의도, 기술 스택, 폴더 구조, 보안 원칙은 [서비스 구조](docs/architecture/SERVICE_OVERVIEW.md)에 있습니다.
+더 자세한 흐름(시퀀스·ERD·Agent 상태)은 [서비스 구조](docs/architecture/SERVICE_OVERVIEW.md)와 [도식 폴더](docs/architecture/diagrams/)에 있습니다.
 
 ---
 
