@@ -1,5 +1,10 @@
 # Community MCP Tool 계약
 
+> **한눈에**
+> 반응과 공포탐욕 지수를 조회합니다.
+> 표본 수로 상태를 나눕니다.
+> 집계·주제·짧은 근거만 전달합니다.
+
 ## 연결과 Tool
 
 - MCP 주소: `http://COMMUNITY_MCP_HOST:8023/mcp`
@@ -70,16 +75,14 @@
 | 1~9 | `success` | `insufficient_sample` |
 | 10 이상 | `success` | `sufficient` |
 
-원문 100개 전체를 MCP Client와 LLM에 전달하지 않는다. 집계값, 주요 주제와 짧은 대표 근거만 전달한다.
+원문 100개 전체는 MCP Client·LLM(언어 모델)에 보내지 않습니다.
 
-`activity`는 최근 7일 글 수(`posts_7d`)를 직전 28일의 주간 평균
-(`weekly_avg_prev_28d`)과 비교한 활동량이다. `ratio`는 두 값의 비율이며 기준선이
-없으면 `null`이다. `baseline_days`는 `28`로 고정된다. 상류 응답에 `activity`가
-없으면 이 필드는 생략되며, 소비자는 미가용(`null`)으로 취급한다.
+`activity`의 `ratio` = 최근 7일 글 수(`posts_7d`) / 직전 28일 주간 평균(`weekly_avg_prev_28d`). 기준선 없음은 `null`, `baseline_days`는 `28` 고정입니다.
+상류에 `activity`가 없으면 생략하고 소비자는 미가용(`null`)으로 봅니다.
 
 ## Tool: get_fear_greed_index
 
-15분 버킷 공포탐욕 지수를 반환한다. 라벨은 최근 28일 분위수 기준선으로 `공포`, `중립`, `탐욕` 계열을 산출하며, 표본 부족이나 기준선 부족은 `warnings`에 포함한다.
+15분 단위 지수입니다. 최근 28일 분위수(분포 내 위치)로 `공포`·`중립`·`탐욕` 계열을 정합니다. 표본·기준선 부족: `warnings`.
 
 ### 입력
 
@@ -108,4 +111,4 @@
 }
 ```
 
-`status:"empty"` 원본 응답은 `no_data`로 변환한다. 원본 서버 인증 실패, 장애, 타임아웃은 `status:"error"`와 `error` 객체로 반환한다.
+원본 `status:"empty"` → `no_data`. 인증 실패·장애·타임아웃 → `status:"error"` + `error` 객체.

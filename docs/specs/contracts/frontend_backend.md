@@ -1,12 +1,16 @@
 # Frontend ↔ Backend 계약
 
+> **한눈에**
+> 비회원은 미리보기, 회원은 상세 분석입니다.
+> 공개 범위·로그인 여부로 화면을 나눕니다.
+> Endpoint(요청 경로)·JSON을 공유합니다.
+
 ## 공통 원칙
 
 - 기본 주소: `http://BACKEND_HOST:8000/api/v1`
 - 전송 방식: HTTP REST + JSON
 - 회원 API: `Authorization: Bearer <access_token>` 사용
-- 비회원도 지원 종목 분석을 요청할 수 있지만 공개 미리보기만 받는다.
-- Frontend는 응답의 `access_level`과 `requires_login`을 기준으로 화면을 구성한다.
+- 비회원도 지원 종목 분석을 요청합니다. 화면 기준은 `access_level`·`requires_login`입니다.
 
 ## Endpoint
 
@@ -46,11 +50,11 @@
 }
 ```
 
-DB에는 원문 비밀번호가 아니라 해시를 저장한다. `Demo1234!`는 발표용 데모 계정 10개가 함께 사용하는 비밀번호다.
+DB는 비밀번호 해시(일방향 변환값)를 저장합니다. 발표용 10개 계정의 공통 비밀번호는 `Demo1234!`입니다.
 
 ## 회원가입
 
-네 가지 투자 성향 응답을 모두 받아야 회원가입이 완료된다.
+가입에는 투자 성향 네 응답이 모두 필요합니다.
 
 ```json
 {
@@ -68,7 +72,7 @@ DB에는 원문 비밀번호가 아니라 해시를 저장한다. `Demo1234!`는
 
 ## 지원 기업 목록
 
-`GET /api/v1/companies`는 고정된 2026년 9월 1일 기준 지원 기업 목록을 반환한다.
+`GET /api/v1/companies`: 2026년 9월 1일 기준 고정 목록입니다.
 
 ```json
 {
@@ -85,9 +89,8 @@ DB에는 원문 비밀번호가 아니라 해시를 저장한다. `Demo1234!`는
 }
 ```
 
-정확한 20개 기업 데이터는 KRX 공식 자료를 내려받아 별도 Mock/Seed 데이터로 고정한다. 우선주·ETF·REIT는 제외하고 보통주 기업만 순위를 다시 매긴다.
-
-확정 목록은 `shared/supported_companies.json`이다(2026-09-02 확정, 20개). Backend Seed, Disclosure MCP 임베딩 대상, Community MCP 지원 종목, Price MCP 조회 대상은 모두 이 파일을 기준으로 한다.
+KRX 공식 자료에서 우선주·ETF·REIT를 빼고 보통주를 다시 순위 매긴 20개를 Mock/Seed(예시·초기 데이터)로 고정합니다.
+`shared/supported_companies.json`(2026-09-02 확정, 20개)이 Backend Seed·Disclosure MCP 임베딩·Community MCP 지원·Price MCP 조회 대상의 공통 기준입니다.
 
 ## 종목 분석 요청
 
@@ -97,7 +100,7 @@ DB에는 원문 비밀번호가 아니라 해시를 저장한다. `Demo1234!`는
 }
 ```
 
-`query`는 기업명 또는 종목 코드다. 사용자가 자유 질문을 입력하는 구조가 아니므로 별도 질문 필드는 받지 않는다. Backend는 기업명을 지원 기업의 정식 이름과 종목 코드로 변환하고, 로그인 상태면 투자 성향을 함께 실어 MCP Client를 호출한다.
+`query`: 기업명·종목 코드. 자유 질문 필드는 없습니다. Backend는 정식 지원 기업명·코드로 변환해 MCP Client를 호출하며, 로그인 시 성향도 보냅니다.
 
 ## 비회원 분석 응답
 
@@ -126,12 +129,12 @@ DB에는 원문 비밀번호가 아니라 해시를 저장한다. `Demo1234!`는
 }
 ```
 
-비회원 화면에는 기업정보, 현재 가격·등락, 공통 한 줄 설명만 표시한다. 상세 근거 버튼을 누르면 `회원가입이 필요합니다!`를 안내한다.
-`price.volume_basis`와 `price.volume_as_of`는 선택 필드다. 회원 상세 화면은 기준이 `last_session`이고 날짜가 있을 때만 관심 온도 설명 아래에 해당 거래일을 표시한다.
+비회원은 기업정보·현재 가격·등락·공통 한 줄만 봅니다. 상세 버튼은 `회원가입이 필요합니다!`를 안내합니다.
+`price.volume_basis`·`price.volume_as_of`는 선택 필드입니다. 회원 상세는 기준이 `last_session`이고 날짜가 있을 때만 관심 온도 설명 아래에 해당 거래일을 표시합니다.
 
 ## 회원 분석 응답
 
-회원 응답의 `company`, `price`, `one_line_summary`는 비회원과 같고 아래 필드가 추가된다.
+`company`·`price`·`one_line_summary`는 비회원과 같습니다. 아래 필드를 추가합니다.
 
 ```json
 {
@@ -162,7 +165,7 @@ DB에는 원문 비밀번호가 아니라 해시를 저장한다. `Demo1234!`는
 
 ## 지원하지 않는 기업
 
-Backend는 지원 여부를 먼저 확인하고 MCP Client를 호출하지 않는다.
+Backend가 지원 여부를 먼저 확인합니다. 미지원이면 MCP Client 호출은 없습니다.
 
 ```json
 {
