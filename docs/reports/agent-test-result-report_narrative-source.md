@@ -29,7 +29,7 @@ Scenario 작성
 | 평가 코드 | `backend/tests/test_analysis.py`의 `test_agent_narrative_wins_when_agent_succeeded`, `test_backend_composes_when_agent_failed` |
 | Tool 연결 | `POST /api/v1/analyses` (HTTP, Backend → MCP Client) |
 | 로컬 환경 | `MCP_CLIENT_MODE=mock`, `NARRATIVE_SOURCE=agent_first`(기본값) |
-| live 환경 | `159.223.75.71:8501` (Frontend 프록시 경유), `MCP_CLIENT_MODE=live` |
+| live 환경 | `<서버 주소>:8501` (Frontend 프록시 경유), `MCP_CLIENT_MODE=live` |
 | 실행 일시 | 2026-09-07 |
 | 실행자 | 윤기화 |
 
@@ -188,9 +188,9 @@ python -m pytest -q tests/test_analysis.py -k backend_composes
 ### 5.2 실행
 
 ```python
-r = httpx.post("http://159.223.75.71:8501/api/v1/auth/login", json={"username": "demo001", "password": "Demo1234!"})
+r = httpx.post("http://<서버 주소>:8501/api/v1/auth/login", json={"username": "demo001", "password": "Demo1234!"})
 token = r.json()["access_token"]
-r2 = httpx.post("http://159.223.75.71:8501/api/v1/analyses", json={"query": "삼성전자"},
+r2 = httpx.post("http://<서버 주소>:8501/api/v1/analyses", json={"query": "삼성전자"},
                 headers={"Authorization": f"Bearer {token}"}, timeout=30.0)
 ```
 

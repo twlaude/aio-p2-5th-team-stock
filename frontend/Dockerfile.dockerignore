@@ -1,0 +1,11 @@
+# 빌드 컨텍스트가 저장소 루트라서 frontend/와 shared/supported_companies.json 외에는 전부 제외한다.
+*
+!frontend
+!shared/supported_companies.json
+frontend/.env
+frontend/.env.*
+frontend/node_modules
+frontend/dist
+frontend/tests/shots
+**/*.tsbuildinfo
+frontend/tests

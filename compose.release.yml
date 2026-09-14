@@ -1,0 +1,195 @@
+# 소스 코드 없이도 그대로 돌아가는 완전히 독립된 배포용 파일이다.
+# compose.yml(개발용, build: 기반)의 오버레이가 아니다 — 이 파일 하나와
+# .env만 있으면 실행된다. compose.yml과 절대 같이(-f 두 개로) 쓰지 않는다.
+#
+#   docker compose -f compose.release.yml up -d
+#
+# 이미지는 Docker Hub(ykw492/team5-*)에서 받아온다. 태그를 바꾸려면:
+#   TAG=v1.2.0 docker compose -f compose.release.yml up -d
+#
+# 이미지는 Windows에서 빌드해 linux/amd64로만 올라가 있다. Apple Silicon
+# 맥에서 받으려면 platform: linux/amd64가 필요해서 전 서비스에 넣어뒀다
+# (인텔 맥/윈도우/리눅스는 이 값이 있어도 무방하다).
+#
+# 루트 .env에 아래 키들을 채워야 한다(.env.example 참고):
+#   POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD, DISCLOSURE_POSTGRES_DB
+#   OPENAI_API_KEY (mcp_client/disclosure_mcp/backend 공용)
+#   KIS_APP_KEY, KIS_APP_SECRET (price_mcp)
+#   NAVER_NEWS_CLIENT_ID, NAVER_NEWS_CLIENT_SECRET (news_mcp)
+#   DART_API_KEY (disclosure_mcp)
+#   COMMUNITY_API_TOKEN (community_mcp)
+#   JWT_SECRET_KEY, ADMIN_USERNAME, ADMIN_PASSWORD, CORS_ALLOWED_ORIGINS, MCP_PUBLIC_HOST (backend)
+
+x-logging: &default-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  postgres:
+    # db/schema.sql 등을 호스트에서 마운트하는 대신, 그 파일들을 이미지 안에
+    # 미리 구워넣은 전용 이미지를 쓴다(infra/postgres.Dockerfile로 빌드해 올림).
+    image: ykw492/team5-postgres:${TAG:-latest}
+    platform: linux/amd64
+    container_name: stock_insight_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-stock_insight}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      DISCLOSURE_POSTGRES_DB: ${DISCLOSURE_POSTGRES_DB:-stock_disclosure}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    logging: *default-logging
+
+  redis:
+    image: redis:7-alpine
+    container_name: stock_insight_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    logging: *default-logging
+
+  price_mcp:
+    image: ykw492/team5-price-mcp:${TAG:-latest}
+    platform: linux/amd64
+    container_name: price_mcp
+    restart: always
+    environment:
+      KIS_APP_KEY: ${KIS_APP_KEY}
+      KIS_APP_SECRET: ${KIS_APP_SECRET}
+    ports:
+      - "8020:8020"
+    logging: *default-logging
+
+  news_mcp:
+    image: ykw492/team5-news-mcp:${TAG:-latest}
+    platform: linux/amd64
+    container_name: news_mcp
+    restart: always
+    environment:
+      NAVER_NEWS_CLIENT_ID: ${NAVER_NEWS_CLIENT_ID}
+      NAVER_NEWS_CLIENT_SECRET: ${NAVER_NEWS_CLIENT_SECRET}
+      NEWS_MOCK: ${NEWS_MOCK:-false}
+    ports:
+      # macOS는 8021을 시스템 ftp-proxy가 쓰므로 .env에서 NEWS_MCP_PORT=18021 로 바꾼다.
+      - "${NEWS_MCP_PORT:-8021}:8021"
+    logging: *default-logging
+
+  disclosure_mcp:
+    image: ykw492/team5-disclosure-mcp:${TAG:-latest}
+    platform: linux/amd64
+    container_name: disclosure_mcp
+    restart: always
+    environment:
+      # disclosure_mcp는 backend와 다른 전용 DB를 쓴다(postgres 이미지가 시작 시 생성).
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${DISCLOSURE_POSTGRES_DB:-stock_disclosure}
+      DART_API_KEY: ${DART_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      EMBEDDING_PROVIDER: ${EMBEDDING_PROVIDER:-openai}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-text-embedding-3-small}
+    ports:
+      - "8022:8022"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    logging: *default-logging
+    # pgvector 임베딩 의존성 때문에 다른 서비스보다 무겁다. 단일 서버에서 다른
+    # 서비스의 메모리를 과점하지 않도록 상한을 둔다.
+    mem_limit: 768m
+
+  community_mcp:
+    image: ykw492/team5-community-mcp:${TAG:-latest}
+    platform: linux/amd64
+    container_name: community_mcp
+    restart: always
+    environment:
+      COMMUNITY_API_URL: ${COMMUNITY_API_URL:-http://159.223.75.71:8877}
+      COMMUNITY_API_TOKEN: ${COMMUNITY_API_TOKEN}
+      COMMUNITY_MOCK: ${COMMUNITY_MOCK:-false}
+    ports:
+      - "8023:8023"
+    logging: *default-logging
+
+  mcp_client:
+    image: ykw492/team5-mcp-client:${TAG:-latest}
+    platform: linux/amd64
+    container_name: mcp_client
+    restart: always
+    environment:
+      # 컨테이너 네트워크 안에서는 서비스 이름으로 서로를 찾는다(localhost 금지).
+      PRICE_MCP_URL: http://price_mcp:8020/mcp
+      NEWS_MCP_URL: http://news_mcp:8021/mcp
+      DISCLOSURE_MCP_URL: http://disclosure_mcp:8022/mcp
+      COMMUNITY_MCP_URL: http://community_mcp:8023/mcp
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5.6-luna}
+      OPENAI_REASONING_EFFORT: ${OPENAI_REASONING_EFFORT:-low}
+      MAX_AGENT_STEPS: ${MAX_AGENT_STEPS:-3}
+    ports:
+      - "8010:8010"
+    depends_on:
+      - price_mcp
+      - news_mcp
+      - disclosure_mcp
+      - community_mcp
+    logging: *default-logging
+
+  backend:
+    image: ykw492/team5-backend:${TAG:-latest}
+    platform: linux/amd64
+    container_name: backend
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-stock_insight}
+      REDIS_URL: redis://redis:6379/0
+      MCP_CLIENT_URL: http://mcp_client:8010
+      MCP_CLIENT_MODE: live
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      JWT_EXPIRES_MINUTES: ${JWT_EXPIRES_MINUTES:-1440}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS}
+      ADMIN_USERNAME: ${ADMIN_USERNAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      MCP_PUBLIC_HOST: ${MCP_PUBLIC_HOST:-localhost}
+      NARRATIVE_SOURCE: ${NARRATIVE_SOURCE:-agent_first}
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      mcp_client:
+        condition: service_started
+    logging: *default-logging
+
+  frontend:
+    image: ykw492/team5-frontend:${TAG:-latest}
+    platform: linux/amd64
+    container_name: frontend
+    restart: always
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    logging: *default-logging
+
+volumes:
+  postgres_data:
+  redis_data:
