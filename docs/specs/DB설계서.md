@@ -1,23 +1,19 @@
 # 데이터베이스 설계서
 
-- 서비스: **살래? 말래?**
-- DBMS: **PostgreSQL + pgvector** 2개 논리 경계, **Redis 7** 단기 상태 저장소 (`infra/docker-compose.yml`의 로컬 이미지는 `pgvector/pgvector:pg16`)
-- 관계형 테이블: Backend DB 4개 + Disclosure MCP 전용 DB 4개 = **총 8개**
-- 원본: `db/schema.sql`, `db/seed.sql`, `db/migrations/`, `mcp_servers/disclosure_mcp/db/schema.sql`
+> **한눈에**
+> 회원·성향·분석은 Backend, 공시·보고서 검색은 Disclosure MCP가 맡습니다.
+> PostgreSQL은 4개씩 총 8개 테이블, Redis 7은 최근 검색을 보관합니다.
+> pgvector(PostgreSQL 벡터 검색 확장)로 보고서에서 뜻이 비슷한 본문을 찾습니다.
 
-이 문서는 회원·투자 성향·분석 이력을 보관하는 Backend DB와 OpenDART 공시·정기보고서 RAG를 보관하는 Disclosure MCP 전용 DB의 데이터 구조를 정의합니다. 두 PostgreSQL 영역은 별도 `DATABASE_URL`을 사용하는 독립 경계여서 같은 `stock_code`에도 DB 간 FK가 없습니다. Redis는 회원별 최근 분석 상태용 단기 저장소이므로 ERD의 테이블 수에는 포함하지 않습니다.
+<img src="../images/erd.svg" alt="Backend의 회원·성향·분석과 Disclosure의 기업·공시·보고서·청크 관계" width="100%">
 
----
+**살래? 말래?**의 DB입니다. 두 DB는 별도 `DATABASE_URL`을 쓰며 `stock_code` 간 FK(외래 키)는 없습니다.
+`infra/docker-compose.yml`의 로컬 이미지는 `pgvector/pgvector:pg16`입니다. Redis는 ERD(테이블 관계도)의 테이블 수에서 제외합니다.
 
 ## 1. 시스템 업무 흐름
 
-<a href="../architecture/diagrams/db-business-flow.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="../architecture/diagrams/db-business-flow-dark.svg"><img src="../architecture/diagrams/db-business-flow.svg" alt="DB 업무 흐름" width="100%"></picture></a>
-
-[Mermaid 원본](../architecture/diagrams/db-business-flow.mmd)
-
-회원가입은 `users`·`user_profiles`를 같은 트랜잭션에서 생성합니다. 분석 결과는 `analysis_runs`, 회원의 최근 검색은 TTL 1,800초 Redis에 저장합니다. Disclosure MCP는 `companies`로 지원 기업을 확인하고 최근 공시는 `disclosures`에 upsert하며, 정기보고서는 `annual_reports` SQL 선필터 뒤 해당 `report_chunks.embedding`의 cosine distance top-k를 반환합니다.
-
----
+가입은 `users`·`user_profiles`를 한 트랜잭션으로 만듭니다. 결과·최근 검색은 2절 기준으로 저장합니다. TTL은 유효 시간입니다.
+Disclosure MCP는 `companies` 확인 → `disclosures` upsert(추가·갱신) → `annual_reports` SQL 선필터 → `report_chunks.embedding` cosine distance(코사인 거리) top-k(가까운 k건)로 조회합니다.
 
 ## 2. 저장소 경계와 책임
 
@@ -36,7 +32,7 @@
 | Disclosure 정형 | `companies`, `disclosures`, `annual_reports` | 기업 식별자, 공시 목록 캐시, 보고서 종류·연도·원문 메타데이터 | 종목·기간·보고서 종류 선필터 |
 | Disclosure 벡터 | `report_chunks` | 보고서 섹션 본문, 표 포함 여부, 해시, 1,536차원 벡터 | `annual_report_id` SQL 선필터 후 cosine distance top-k |
 
-`rag_chunks`는 공용 벡터 저장소로 DDL에 선언되어 있지만, 현재 Backend에는 이 테이블을 직접 적재하거나 검색하는 저장소 코드가 없습니다. 현재 동작이 코드로 확인되는 RAG 경로는 Disclosure MCP의 `annual_reports`·`report_chunks`입니다. 문서는 선언된 스키마와 실제 사용 경로를 구분하여 기록합니다.
+`rag_chunks`는 DDL(테이블 정의)만 있습니다. 실제 RAG(검색을 붙인 생성)는 `annual_reports`·`report_chunks`를 씁니다.
 
 ### 2.2 Redis 키 계약
 
@@ -50,19 +46,15 @@
 | 삭제 | Memory 삭제 시 투자 성향 행과 함께 해당 Redis 키 삭제 |
 | 장애 시 보존 범위 | Redis 값은 단기 상태이므로 사라져도 `users`, `user_profiles`, `analysis_runs`는 PostgreSQL에 남음 |
 
-현재 Redis 코드는 완성된 분석 응답 전체를 캐시하지 않습니다. 회원별 최근 검색 상태를 기존 JSON에 병합하고 TTL을 갱신하는 용도로 사용합니다.
-
----
+Redis는 응답 전체가 아닌 최근 검색을 기존 JSON에 병합하고 TTL을 갱신합니다.
 
 ## 3. 논리 ERD
 
-논리 ERD는 SQL 타입과 인덱스를 제외하고 업무 엔티티의 의미와 관계를 표현합니다. Backend DB와 Disclosure DB 사이에는 물리 FK가 없으므로 두 영역을 관계선 없이 나눕니다. `근거 청크`의 종목 코드는 논리적으로 기업을 식별하지만 현재 서로 다른 DB 경계이며 FK로 강제하지 않습니다.
-
-<a href="../architecture/diagrams/logical-erd.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="../architecture/diagrams/logical-erd-dark.svg"><img src="../architecture/diagrams/logical-erd.svg" alt="논리 ERD" width="100%"></picture></a>
-
-[Mermaid 원본](../architecture/diagrams/logical-erd.mmd)
+업무 관계만 표현합니다. SQL 타입·인덱스·DB 간 관계선은 생략합니다. `근거 청크`의 기업 FK도 없습니다.
 
 ### 3.1 업무별 카디널리티
+
+카디널리티는 연결 행 수입니다.
 
 | 부모·주체 | 자식·대상 | 카디널리티 | 업무 의미 | 실제 강제 규칙 |
 |---|---|---:|---|---|
@@ -72,21 +64,13 @@
 | 지원 기업 | 정기보고서 | 1:0..N | 기업별 사업·반기·분기보고서를 보관합니다 | `annual_reports.stock_code` NOT NULL FK입니다 |
 | 정기보고서 | 보고서 청크 | 1:0..N | 한 보고서를 검색 가능한 여러 섹션으로 나눕니다 | `report_chunks.annual_report_id` NOT NULL FK, 보고서 삭제 시 CASCADE입니다 |
 
-`rag_chunks`는 `stock_code`를 문자열로 저장하며 Backend DB 안에 종목 마스터 FK가 없습니다. 지원 기업의 공통 원본은 `shared/supported_companies.json`이고, Disclosure DB의 `companies`는 동기화 스크립트가 이 목록과 OpenDART `corp_code`를 결합해 채웁니다.
-
----
+`rag_chunks.stock_code`는 문자열이며 종목 마스터 FK가 없습니다. 동기화 스크립트는 `shared/supported_companies.json`과 OpenDART `corp_code`를 합쳐 `companies`를 채웁니다.
 
 ## 4. 물리 ERD
 
-물리 ERD는 `db/schema.sql`과 `mcp_servers/disclosure_mcp/db/schema.sql`에 선언된 실제 8개 테이블과 키를 나타냅니다. 도식은 모든 컬럼을 포함하며, 복합 UNIQUE·CHECK·기본값의 상세는 5장에 정의합니다.
+8개 테이블의 모든 컬럼·키를 표현합니다. UNIQUE·CHECK·기본값은 아래 표를 봅니다.
 
-<a href="../architecture/diagrams/physical-erd.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="../architecture/diagrams/physical-erd-dark.svg"><img src="../architecture/diagrams/physical-erd.svg" alt="물리 ERD" width="100%"></picture></a>
-
-[Mermaid 원본](../architecture/diagrams/physical-erd.mmd)
-
-`rag_chunks`와 Disclosure DB의 `companies` 사이에는 FK가 없고 Redis는 관계형 테이블이 아니므로 물리 ERD에서 제외합니다.
-
----
+## 상세
 
 ## 5. Backend DB 테이블 상세
 
@@ -147,8 +131,6 @@
 | `embedding` | vector(1536) | Y | | 본문 임베딩. DDL상 NULL 허용 |
 | `embedding_model` | text | N | `'text-embedding-3-small'` | 임베딩 모델 이름 |
 | `metadata` | jsonb | N | `'{}'` | 문서 종류별 부가 정보 |
-
----
 
 ## 6. Disclosure MCP 전용 DB 테이블 상세
 
@@ -214,8 +196,6 @@
 | `metadata` | jsonb | N | `'{}'` | 부가 정보 |
 | `created_at` | timestamptz | N | `now()` | 청크 생성 시각 |
 
----
-
 ## 7. 인덱스
 
 ### 7.1 Backend DB
@@ -247,13 +227,11 @@
 | UNIQUE 제약 | `report_chunks(annual_report_id, content_hash)` | 보고서 안의 동일 본문 중복 방지 |
 | `idx_report_chunks_report` | `annual_report_id, chunk_index` | 보고서 단위 청크 탐색 |
 
-두 벡터 테이블에는 현재 HNSW·IVFFlat 인덱스가 없습니다. 20개 지원 기업 규모에서는 SQL 선필터 뒤 정확한 거리 계산을 사용한다는 DDL 주석과 일치합니다.
-
----
+HNSW·IVFFlat 인덱스는 없습니다. DDL 주석대로 20개 기업은 선필터 후 정확 검색합니다.
 
 ## 8. SQL 원본과 핵심 발췌
 
-별도 SQL 파일을 만들지 않습니다. 스키마 적용과 시드의 단일 원본은 다음 경로입니다.
+스키마·시드 원본과 `db/migrations/` 적용 기준입니다.
 
 | 목적 | 원본 경로 | 적용 방식 |
 |---|---|---|
@@ -306,7 +284,7 @@ ORDER BY embedding <=> %s::vector
 LIMIT %s;
 ```
 
-`annual_report_id`는 앞 단계에서 `annual_reports`를 `stock_code`, `report_type`, 선택 `report_year`로 조회해 얻습니다. 즉 **기업·보고서 종류·연도 SQL 선필터 → 보고서 ID 범위 제한 → 벡터 cosine distance 정렬 → top-k** 순서입니다.
+`annual_reports`를 `stock_code`, `report_type`, 선택 `report_year`로 선필터한 뒤 `annual_report_id` 범위에서 거리순 top-k를 구합니다.
 
 ### 8.4 발표용 Seed와 정렬 Migration
 
@@ -319,54 +297,47 @@ ON CONFLICT (user_id) DO NOTHING;
 UPDATE users SET display_name = '안정형 장기 초보' WHERE user_id = 'demo-001';
 ```
 
-`db/seed.sql`은 `demo001`~`demo010` 회원·성향 각 10건과 삼성전자 분석 예시 1건을 넣습니다. Migration은 10명의 표시명과 성향을 `BEGIN`~`COMMIT` 안에서 정렬합니다. 비밀번호 해시 전체는 문서에 복제하지 않았습니다.
-
----
+`db/seed.sql`: `demo001`~`demo010` 회원·성향 각 10건, 삼성전자 분석 1건입니다. Migration은 `BEGIN`~`COMMIT`에서 10명의 표시명·성향을 정렬합니다. 비밀번호 해시 전체는 생략합니다.
 
 ## 9. 설계 의도
 
 ### 9.1 서비스별 DB 소유권 분리
 
-Backend는 사용자·개인화·분석 결과를, Disclosure MCP는 OpenDART 수집·RAG를 소유하며 각자 `DATABASE_URL`과 스키마 변경을 관리합니다. DB 간 FK 대신 `shared/supported_companies.json`을 공통 종목 원본으로 사용하고 Disclosure MCP가 이를 `companies`에 동기화합니다.
+각 서비스가 `DATABASE_URL`·스키마 변경을 관리합니다(2·3절).
 
 ### 9.2 정형 필터와 벡터 검색의 역할 분리
 
-기업·종목코드·보고연도·문서 종류·시각·상태는 정형 컬럼, 긴 문서의 의미 유사도는 `vector(1536)`로 둡니다. SQL로 업무상 가능한 후보를 줄인 뒤 top-k를 계산해 다른 기업·보고서 종류가 섞이는 것을 막습니다.
+기업·종목코드·보고연도·문서 종류·시각·상태는 정형 컬럼, 의미 유사도는 `vector(1536)`를 씁니다. 다른 기업·보고서 종류가 섞이지 않게 다음 순서를 강제합니다.
 
-Disclosure MCP의 현재 구현은 다음 순서를 코드로 강제합니다.
-
-1. `companies.stock_code`와 `is_supported = TRUE`로 지원 기업을 확인합니다.
-2. `annual_reports.stock_code`, `report_type`, 선택 `report_year`로 보고서를 한 건 선택합니다.
-3. 선택한 `annual_report_id`로 `report_chunks`를 제한합니다.
-4. `<=>` cosine distance 오름차순으로 정렬하고 `LIMIT top_k`를 적용합니다.
+1. `companies.stock_code`, `is_supported = TRUE`로 지원 여부를 확인합니다.
+2. `annual_reports.stock_code`·`report_type`·선택 `report_year`로 보고서 한 건을 고릅니다.
+3. `annual_report_id`로 청크를 제한하고 `<=>` 오름차순·`LIMIT top_k`를 적용합니다.
 
 ### 9.3 임베딩 모델 통일
 
-색인 본문과 검색 질의는 OpenAI `text-embedding-3-small`로 통일합니다. 두 DDL은 1,536차원과 같은 기본 모델명을 선언하며 Disclosure 설정은 다른 공급자·모델을 거부합니다. 모델·차원 변경 시 `report_chunks`와 `rag_chunks`를 같은 모델로 전체 재색인해야 합니다.
+본문·질의는 OpenAI `text-embedding-3-small`, 1,536차원으로 통일합니다. 두 DDL의 기본값도 같습니다. Disclosure는 다른 공급자·모델을 거부합니다. 변경 시 `report_chunks`·`rag_chunks`를 같은 모델로 전체 재색인합니다.
 
 ### 9.4 PostgreSQL 장기 Memory와 Redis 단기 상태
 
-장기 개인화에 필요한 네 값은 CHECK 제약이 있는 `user_profiles`에 보관합니다. 최근 검색 종목과 시각은 없어져도 원본 회원·성향·분석 이력을 훼손하지 않는 단기 정보이므로 Redis에 TTL과 함께 보관합니다. Memory 삭제 API는 두 저장소를 함께 정리하지만 계정과 과거 분석 스냅샷은 유지합니다.
+성향 네 값은 CHECK가 있는 `user_profiles`, 최근 검색·시각은 Redis에 둡니다. Memory 삭제는 둘을 정리하며 계정·과거 분석은 남깁니다.
 
 ### 9.5 JSONB와 스냅샷
 
-공급자·도구별 가변 값은 `analysis_runs`의 세 JSONB, `disclosures.raw_payload`, 청크 `metadata`에 저장하되 조회 조건은 정형 컬럼으로 둡니다. 기업명·결론·출처와 DART 원본 payload는 실행·수집 당시 값을 재현하는 스냅샷입니다.
+가변 값은 `analysis_runs`의 세 JSONB·`disclosures.raw_payload`·청크 `metadata`에 둡니다. 기업명·결론·출처·DART 원본 payload는 당시 값입니다.
 
 ### 9.6 중복 방지와 보고서 원자 교체
 
-분석 결과는 `request_id` UNIQUE와 `ON CONFLICT DO NOTHING`으로 같은 요청의 중복 저장을 막습니다. 최근 공시는 `receipt_number` 기준 upsert로 최신 메타데이터를 갱신합니다. 정기보고서는 기업·연도·종류별 기존 행을 삭제하고 새 보고서와 청크를 같은 연결의 트랜잭션에서 삽입하여 정정본의 메타데이터와 청크 집합이 어긋나지 않게 합니다.
-
----
+분석은 `request_id` UNIQUE·`ON CONFLICT DO NOTHING`, 공시는 `receipt_number` upsert를 씁니다. 보고서는 기업·연도·종류별 기존 행 삭제와 새 보고서·청크 삽입을 같은 연결의 트랜잭션으로 묶어 정정본 불일치를 막습니다.
 
 ## 10. 정규화 근거
 
 ### 10.1 제1정규형(1NF)
 
-한 행이 한 업무 개체를 나타내며, 보고서의 여러 섹션은 반복 컬럼이 아니라 `report_chunks` 여러 행으로 분리합니다. 가변 payload는 JSONB 문서로 보존하되 관계·검색 조건은 별도 컬럼입니다.
+한 행에 한 개체를 둡니다. 보고서 섹션은 `report_chunks` 여러 행, 가변 payload는 JSONB, 관계·검색 조건은 별도 컬럼입니다.
 
 ### 10.2 제2정규형(2NF)
 
-각 테이블은 단일 PK를 사용하므로 복합 PK 일부에만 종속되는 속성이 없습니다. 업무상 복합 식별이 필요한 `annual_reports(stock_code, report_year, report_type)`와 청크 중복 방지 조합은 PK가 아니라 UNIQUE 제약으로 둡니다.
+모든 PK(기본 키)는 단일 컬럼입니다. `annual_reports(stock_code, report_year, report_type)`·청크 중복 조합은 UNIQUE여서 복합 PK 일부에만 종속되는 속성이 없습니다.
 
 ### 10.3 제3정규형(3NF)
 
@@ -378,9 +349,7 @@ Disclosure MCP의 현재 구현은 다음 순서를 코드로 강제합니다.
 
 ### 10.4 의도적인 비정규화
 
-`analysis_runs` 결과 조각과 `disclosures.raw_payload`는 당시 값을 보존하는 스냅샷이고, `rag_chunks.document_id`·`title`·`source`는 별도 원문 테이블이 없어 청크에 함께 둡니다. 핵심 엔티티는 정규화하되 실행 재현·원본 추적에 필요한 값은 제한적으로 중복합니다.
-
----
+`analysis_runs`·`disclosures.raw_payload`는 당시 값을 보존합니다. `rag_chunks.document_id`·`title`·`source`는 원문 테이블이 없어 청크에 둡니다. 실행 재현·원본 추적에 필요한 중복만 허용합니다.
 
 ## 11. 논리 ERD와 물리 ERD 일치 여부
 
@@ -393,21 +362,10 @@ Disclosure MCP의 현재 구현은 다음 순서를 코드로 강제합니다.
 | Backend 종목과 Disclosure 기업 | 공통 `stock_code` 값 | 물리 관계 없음 | 독립 DB이며 `shared/supported_companies.json`을 통해 의미를 맞춥니다 |
 | 회원 단기 분석 상태 | Redis 키 | ERD 외 구현 | 관계형 테이블이 아니라 JSON 문자열+TTL입니다 |
 
----
-
 ## 12. 설계 검증 체크리스트
 
-- [x] `db/schema.sql`의 4개 테이블과 Disclosure MCP DDL의 4개 테이블을 물리 ERD와 상세 표에 모두 반영했습니다.
-- [x] 두 PostgreSQL DB의 소유 서비스와 별도 `DATABASE_URL` 경계를 구분했습니다.
-- [x] `users` 1:N `analysis_runs` 관계에서 비회원 분석의 NULL FK를 반영했습니다.
-- [x] `users` 1:0..1 `user_profiles` 관계와 ON DELETE CASCADE를 반영했습니다.
-- [x] 공시·정기보고서가 `companies.stock_code`를 참조하고 보고서 청크가 ON DELETE CASCADE임을 반영했습니다.
-- [x] 모든 실제 컬럼의 타입, NULL, 기본값, UNIQUE, FK, CHECK 제약을 현재 DDL과 대조했습니다.
-- [x] Backend 3개와 Disclosure 5개의 명시적 `CREATE INDEX`를 컬럼 순서까지 반영했습니다.
-- [x] Redis 키 형식, 실제 세 필드, JSON 값, 기본 TTL 1,800초와 삭제 흐름을 실제 코드로 확인했습니다.
-- [x] `text-embedding-3-small`과 `vector(1536)`의 색인·질의 통일 조건을 DDL·설정·클라이언트 코드로 확인했습니다.
-- [x] Disclosure 검색의 SQL 선필터 → `annual_report_id` 제한 → cosine distance → top-k 흐름을 실제 쿼리로 확인했습니다.
-- [x] `db/seed.sql`의 데모 계정 10개·성향 10개·분석 예시 1건과 현재 마이그레이션 목적을 확인했습니다.
+8개 테이블의 타입·NULL·기본값·제약과 Backend 3개·Disclosure 5개 `CREATE INDEX`의 컬럼 순서를 대조했습니다.
+
 - [ ] `rag_chunks`는 스키마만 선언되어 있고 현재 직접 적재·검색하는 Backend 코드가 없습니다.
 - [ ] Redis의 현재 구현은 분석 응답 전체 캐시가 아니라 회원별 최근 검색 상태 캐시입니다.
 - [ ] `analysis_runs.status`, `rag_chunks.doc_type`, `disclosures.category`에는 현재 DB CHECK 제약이 없습니다.
@@ -415,4 +373,12 @@ Disclosure MCP의 현재 구현은 다음 순서를 코드로 강제합니다.
 - [ ] 두 DB의 `stock_code`가 일치하는지는 DB 제약이 아니라 `shared/supported_companies.json` 동기화 규칙으로 맞춥니다.
 - [ ] 벡터 ANN 인덱스는 아직 없습니다. 현재 규모에서는 선필터 후 정확 검색을 사용합니다.
 
-체크되지 않은 항목은 문서 누락이 아니라 현재 DDL 또는 접근 코드가 강제하지 않는 규칙입니다. 제약이나 저장 경로를 추가할 때는 DDL, 마이그레이션, 저장소 코드, 테스트와 이 문서를 함께 갱신해야 합니다.
+미체크는 미강제 규칙입니다. 변경 시 DDL·마이그레이션·저장소 코드·테스트·문서를 함께 갱신합니다.
+
+### 상세 도식 원본
+
+| 도식 | 밝은 화면 | 어두운 화면 | Mermaid 원본 |
+|---|---|---|---|
+| 업무 흐름 | [SVG](../architecture/diagrams/db-business-flow.svg) | [SVG](../architecture/diagrams/db-business-flow-dark.svg) | [MMD](../architecture/diagrams/db-business-flow.mmd) |
+| 논리 ERD | [SVG](../architecture/diagrams/logical-erd.svg) | [SVG](../architecture/diagrams/logical-erd-dark.svg) | [MMD](../architecture/diagrams/logical-erd.mmd) |
+| 물리 ERD | [SVG](../architecture/diagrams/physical-erd.svg) | [SVG](../architecture/diagrams/physical-erd-dark.svg) | [MMD](../architecture/diagrams/physical-erd.mmd) |
