@@ -4,9 +4,9 @@
 
 Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 분리했습니다. Frontend는 Backend만 호출하고 Backend는 MCP Client 한 곳만 호출합니다. 데이터별 MCP 서버는 서로 직접 호출하지 않으며 사용자 정보도 받지 않습니다.
 
-<a href="docs/architecture/diagrams/system-topology.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/architecture/diagrams/system-topology-dark.svg"><img src="docs/architecture/diagrams/system-topology.svg" alt="시스템 구성도" width="100%"></picture></a>
+<a href="diagrams/system-topology.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="diagrams/system-topology-dark.svg"><img src="diagrams/system-topology.svg" alt="시스템 구성도" width="100%"></picture></a>
 
-[시스템 구성도 Mermaid 원본](docs/architecture/diagrams/system-topology.mmd)
+[시스템 구성도 Mermaid 원본](diagrams/system-topology.mmd)
 
 ### 일곱 서비스의 책임
 
@@ -22,13 +22,13 @@ Frontend, Backend, MCP Client, 네 MCP 서버를 각각 독립 실행 단위로 
 
 ### 요청 한 건의 흐름
 
-사용자 요청은 Frontend → Backend → MCP Client 순으로 이동합니다. MCP Client가 기본 Tool 6개를 병렬 호출하고 관심 온도·근거 수준을 계산한 뒤 Agent에 제한된 근거를 전달합니다. Agent가 선택하는 Tool은 `get_disclosure_detail` 하나입니다. 최신 분기·성찰·종료 조건과 논리 Tool/실제 MCP 이름의 구분은 [에이전트 설계서](docs/architecture/agent-architecture.md)와 [상태 흐름도](docs/architecture/diagrams/agent-state-flow.mmd)에 정리했습니다.
+사용자 요청은 Frontend → Backend → MCP Client 순으로 이동합니다. MCP Client가 기본 Tool 6개를 병렬 호출하고 관심 온도·근거 수준을 계산한 뒤 Agent에 제한된 근거를 전달합니다. Agent가 선택하는 Tool은 `get_disclosure_detail` 하나입니다. 최신 분기·성찰·종료 조건과 논리 Tool/실제 MCP 이름의 구분은 [에이전트 설계서](agent-architecture.md)와 [상태 흐름도](diagrams/agent-state-flow.mmd)에 정리했습니다.
 
 ### Backend 계층
 
-라우터는 HTTP 입력·출력을 처리하고, 서비스는 인증·성향·Memory·분석 조립을 수행합니다. 저장소와 외부 통신은 `repositories/`와 `clients/`로 분리했습니다. Pydantic Schema, Core, PostgreSQL·Redis·MCP Client의 자세한 연결은 [Backend 아키텍처](docs/architecture/diagrams/backend-architecture.mmd)에서 확인할 수 있습니다.
+라우터는 HTTP 입력·출력을 처리하고, 서비스는 인증·성향·Memory·분석 조립을 수행합니다. 저장소와 외부 통신은 `repositories/`와 `clients/`로 분리했습니다. Pydantic Schema, Core, PostgreSQL·Redis·MCP Client의 자세한 연결은 [Backend 아키텍처](diagrams/backend-architecture.mmd)에서 확인할 수 있습니다.
 
-<a href="docs/architecture/diagrams/backend-architecture.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/architecture/diagrams/backend-architecture-dark.svg"><img src="docs/architecture/diagrams/backend-architecture.svg" alt="Backend 계층 구조" width="100%"></picture></a>
+<a href="diagrams/backend-architecture.svg"><picture><source media="(prefers-color-scheme: dark)" srcset="diagrams/backend-architecture-dark.svg"><img src="diagrams/backend-architecture.svg" alt="Backend 계층 구조" width="100%"></picture></a>
 
 ### 설계 의도
 
